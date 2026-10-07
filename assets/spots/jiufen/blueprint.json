@@ -1,0 +1,59 @@
+{
+  "spotId": "jiufen",
+  "status": "references-collected",
+  "spotType": "urban",
+  "productionTier": "hero",
+  "hero": {
+    "name": "Jiufen hillside teahouse cluster",
+    "silhouette": "Steep stone stairway climbing between stacked wooden teahouses hung with rows of red lanterns, the town terracing down a slope toward the sea"
+  },
+  "crop": "The Shuqi Road stairway where it crosses Jishan Street: the lantern-lit teahouses on either side of the stairs and the slope dropping toward the sea. Not the whole mountain town.",
+  "heroScale": 1,
+  "orientation": "Town climbs the slope of Keelung Mountain and faces north toward the sea (verify: exact facing and where Keelung Mountain sits in frame)",
+  "lockedGeometry": [
+    "steep hillside slope",
+    "Shuqi Road stairway running straight up the slope",
+    "Jishan Street crossing the stairway roughly along the contour",
+    "densely stacked buildings terracing down the hill",
+    "sea visible below / beyond the town"
+  ],
+  "lockedIdentity": [
+    "red lanterns strung along the stairway and teahouse eaves",
+    "multi-storey wooden teahouse facades with balconies (verify: A-Mei Teahouse form)",
+    "narrow stone steps",
+    "dark tile roofs and weathered timber"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "Spirited Away bathhouse",
+    "pagodas",
+    "Japanese torii gates",
+    "castles",
+    "cable cars",
+    "wide flat plazas"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature visitors on the stairway",
+    "tea tables on teahouse balconies",
+    "light mist drifting over the slope"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Hillside lantern-lit teahouse cluster on a stepped slope",
+    "notes": "Lantern red must stay saturated even when the rest of the token is simplified."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

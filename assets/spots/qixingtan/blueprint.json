@@ -1,0 +1,57 @@
+{
+  "spotId": "qixingtan",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Qixingtan crescent bay",
+    "silhouette": "Long crescent-shaped pebble beach curving along a deep blue bay, with steep green mountains rising at its northern end"
+  },
+  "crop": "A central stretch of the crescent bay: pebble shore, the coastal bike path and the mountains at the bay's north end. Not the airport or the city.",
+  "heroScale": 1,
+  "orientation": "Bay opens east to the Pacific; mountains rise at the northern end of the crescent (verify)",
+  "lockedGeometry": [
+    "crescent curve of the shoreline",
+    "steep pebble beach profile",
+    "coastal bike path behind the beach",
+    "mountains at the northern end of the bay",
+    "open ocean to the east"
+  ],
+  "lockedIdentity": [
+    "grey and white rounded pebbles",
+    "deep blue water close to shore",
+    "mountain-meets-sea framing"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "sandy beach",
+    "palm trees",
+    "piers",
+    "beach resorts",
+    "airplanes from the nearby airport"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature visitors on the pebbles",
+    "cyclists on the path",
+    "small fishing boats offshore"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Crescent of pebble shore with a mountain at one end",
+    "notes": "Keep the curve strong; pebbles as texture only."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

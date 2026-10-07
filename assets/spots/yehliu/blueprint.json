@@ -1,0 +1,60 @@
+{
+  "spotId": "yehliu",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "hero",
+  "hero": {
+    "name": "Queen's Head",
+    "silhouette": "Mushroom (hoodoo) rock with a slender eroded neck and a head tilted like a profile facing the sea"
+  },
+  "crop": "The Queen's Head zone on the first section of the cape: the sandstone platform around the rock, the nearby hoodoo cluster and the shoreline on the sea side. Not the whole cape.",
+  "heroScale": 1,
+  "orientation": "Cape extends north-east into the sea; walking path runs along the platform from the park entrance toward the cape tip",
+  "lockedGeometry": [
+    "coastline direction",
+    "sandstone platform",
+    "Queen's Head approximate position",
+    "major walking path",
+    "rock-field distribution",
+    "vegetation boundary",
+    "sea orientation"
+  ],
+  "lockedIdentity": [
+    "Queen's Head silhouette",
+    "narrow neck",
+    "characteristic head orientation",
+    "Yehliu sandstone colour (warm ochre with darker banding)"
+  ],
+  "doNotInvent": [
+    "temples",
+    "random buildings",
+    "Taiwan flags",
+    "visitor centers",
+    "bridges",
+    "fountains",
+    "fictional plazas"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature visitors along the path",
+    "rope barrier around the Queen's Head",
+    "small waves breaking on the platform edge"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Queen's Head rock alone on a small sandstone base",
+    "notes": "Silhouette must read at 48px — keep the neck thin and the head tilt exaggerated slightly."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

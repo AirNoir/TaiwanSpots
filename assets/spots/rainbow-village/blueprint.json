@@ -1,0 +1,55 @@
+{
+  "spotId": "rainbow-village",
+  "status": "references-collected",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Rainbow Village painted houses",
+    "silhouette": "Small cluster of low single-storey dependents' village houses whose walls, doors and ground are entirely covered in bright naive paintings"
+  },
+  "crop": "The surviving painted house cluster and the painted lane between them. Not the surrounding park or neighbourhood.",
+  "heroScale": 1,
+  "orientation": "verify: layout and orientation of the remaining houses and the lane through them",
+  "lockedGeometry": [
+    "small number of surviving houses (verify count)",
+    "low single-storey building height",
+    "painted lane / ground between the houses",
+    "open surroundings beyond the cluster (verify: park landscaping)"
+  ],
+  "lockedIdentity": [
+    "saturated hand-painted murals on every surface",
+    "naive-style figures, animals and characters",
+    "painted ground and walkways"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "rainbow arches",
+    "high-rise apartments inside the cluster",
+    "large statues",
+    "carousels or amusement rides",
+    "a whole village of dozens of houses"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature visitors taking photos",
+    "potted plants by doorways"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Two painted houses on a painted ground patch",
+    "notes": "Patterns become colour blocks at token scale; keep the palette multicoloured."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

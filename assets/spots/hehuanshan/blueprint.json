@@ -1,0 +1,58 @@
+{
+  "spotId": "hehuanshan",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Hehuanshan and Wuling pass",
+    "silhouette": "Smooth, rounded high-mountain ridges blanketed in dwarf bamboo grass, with a switchback highway cresting the pass"
+  },
+  "crop": "The Wuling pass area on Provincial Highway 14A with the bamboo-grass slopes of the main peaks rising beside the road. Not the whole Hehuan massif.",
+  "heroScale": 1,
+  "orientation": "Highway 14A winds over the pass; Hehuan Main Peak and East Peak rise on either side (verify: which peak sits where relative to Wuling)",
+  "lockedGeometry": [
+    "rounded ridge-and-saddle terrain",
+    "Highway 14A switchbacks over the pass",
+    "Wuling pass position at the high point of the road",
+    "tree line: scattered conifers below the grass slopes",
+    "peak positions relative to the road"
+  ],
+  "lockedIdentity": [
+    "dwarf bamboo grassland covering the slopes",
+    "rounded summits (not jagged alpine peaks)",
+    "thin high-altitude clear sky",
+    "verify: Wuling marker stone form"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "ski lifts",
+    "cable cars",
+    "jagged Alpine peaks",
+    "alpine lakes",
+    "large hotels"
+  ],
+  "allowedMiniatureDetails": [
+    "a few cars and cyclists on the highway",
+    "miniature hikers on a ridge trail",
+    "optional light snow dusting for a winter variant"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Rounded bamboo-grass summit with a switchback road",
+    "notes": "Rounded profile is what separates it from generic mountains."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "spotId": "brown-avenue",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Mr. Brown Avenue and the Kaneshiro tree",
+    "silhouette": "Perfectly straight narrow road running through flat paddy fields, with a lone broad tree beside it and mountain ranges on both horizons"
+  },
+  "crop": "One stretch of the avenue through the paddies including the lone tree, with the mountains in the distance. Not the whole Chishang plain.",
+  "heroScale": 1,
+  "orientation": "Rice plain of the East Rift Valley; Central Mountain Range to the west, Coastal Mountain Range to the east (verify: avenue direction)",
+  "lockedGeometry": [
+    "straight road alignment",
+    "flat paddy field grid on both sides",
+    "lone tree position beside the road",
+    "mountain ranges on both sides of the valley"
+  ],
+  "lockedIdentity": [
+    "unbroken skyline with no utility poles",
+    "green or golden rice paddies depending on season",
+    "lone tree silhouette (verify: species and shape)"
+  ],
+  "doNotInvent": [
+    "motor vehicles on the pedestrian and cycling avenue",
+    "Taiwan flags",
+    "random buildings",
+    "utility poles and power lines",
+    "windmills",
+    "farmhouses along the avenue",
+    "rows of trees lining the road",
+    "billboards"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature cyclists on the road",
+    "a farm tractor in a paddy",
+    "egrets in the fields"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Lone tree beside a short straight road on a paddy patch",
+    "notes": "Tree and road only — the emptiness is the identity."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

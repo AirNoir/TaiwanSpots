@@ -24,13 +24,22 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
+    "eslint": "^9.0.0",
+    "eslint-config-expo": "~57.0.2",
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "assets:tokens": "python3 scripts/extract-world-tokens.py",
+    "assets:registry": "node scripts/generate-asset-registry.mjs",
+    "assets:check": "node scripts/validate-assets.mjs",
+    "assets:prompt": "node scripts/build-diorama-prompt.mjs",
+    "lint": "expo lint",
+    "assets:export": "node scripts/export-collection-assets.mjs",
+    "assets:gallery": "node scripts/build-asset-gallery.mjs"
   },
   "private": true
 }

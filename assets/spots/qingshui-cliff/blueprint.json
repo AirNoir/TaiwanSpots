@@ -1,0 +1,58 @@
+{
+  "spotId": "qingshui-cliff",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Qingshui Cliff",
+    "silhouette": "Towering, near-vertical mountain wall plunging straight into deep blue ocean, with a thin highway ledge and tunnels traced along its face"
+  },
+  "crop": "One headland stretch of the cliff as seen from the viewpoint: cliff face, Suhua Highway with tunnel portals, the narrow shore and the Pacific. Not the whole coastline.",
+  "heroScale": 1,
+  "orientation": "Cliffs face east onto the Pacific; Suhua Highway runs north–south along the cliff face",
+  "lockedGeometry": [
+    "coastline running north–south",
+    "cliff dropping almost directly into the sea",
+    "Suhua Highway ledge and tunnel portals along the cliff",
+    "narrow pebble shore at the base (verify)",
+    "Pacific to the east"
+  ],
+  "lockedIdentity": [
+    "sheer cliff wall scale",
+    "turquoise-to-deep-blue water gradient",
+    "thin road clinging to the cliff",
+    "green scrub on the upper slopes"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "sandy beaches",
+    "lighthouses",
+    "piers or harbours",
+    "resort hotels",
+    "arch bridges over the sea"
+  ],
+  "allowedMiniatureDetails": [
+    "a few cars and a bus on the highway",
+    "whitewater along the shore",
+    "a small boat offshore"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Cliff block with a road ledge dropping into blue water",
+    "notes": "Water gradient is the colour identity; keep it."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

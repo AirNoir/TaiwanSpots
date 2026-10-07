@@ -40,3 +40,9 @@ yarn-error.*
 /ios
 /android
 .claude/
+
+# Intermediate image-generation studies (keep locally; ship final assets only)
+assets/spots/*/reference/realistic-study.png
+assets/spots/*/reference/realistic-token.png
+assets/spots/*/collection/preview-v2.png
+assets/spots/*/collection/preview-cute-v3.png

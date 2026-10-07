@@ -1,0 +1,56 @@
+{
+  "spotId": "lukang",
+  "status": "references-collected",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Lukang old street (Putou / Yaolin Street)",
+    "silhouette": "Gently curving red-brick-paved street lined with low, deep shophouses with red brick facades and tiled roofs"
+  },
+  "crop": "One curving stretch of the Putou / Yaolin Street old street with its shophouse frontages. Not the temples, not the whole town.",
+  "heroScale": 1,
+  "orientation": "verify: street curve direction and orientation from map reference",
+  "lockedGeometry": [
+    "curving narrow street alignment",
+    "continuous low shophouse frontage on both sides",
+    "red brick paving",
+    "deep narrow lots behind the frontage"
+  ],
+  "lockedIdentity": [
+    "red brick facades and paving",
+    "Qing-era shophouse rooflines",
+    "craft shopfronts (verify: specific shops visible)"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "temples on the street",
+    "pagodas",
+    "night market canopies",
+    "rivers or canals",
+    "modern high-rises"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature pedestrians",
+    "shop banners and wooden signboards",
+    "lanterns at shopfronts"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Short curving red-brick street segment with two shophouses",
+    "notes": "The brick red and the curve are the identity."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "spotId": "ruisui",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Ruisui Ranch pasture",
+    "silhouette": "Gently sloping green pasture with grazing black-and-white dairy cows, backed by the forested ridges of the East Rift Valley"
+  },
+  "crop": "One pasture area of the ranch with the cows and the mountain backdrop. Not the hot spring village or the whole ranch.",
+  "heroScale": 1,
+  "orientation": "Ranch on the valley floor / lower slopes of the East Rift Valley; Central Range to the west, Coastal Range to the east (verify which backdrop faces camera)",
+  "lockedGeometry": [
+    "gentle pasture slope",
+    "pasture fence lines",
+    "mountain ridges framing the valley",
+    "verify: positions of barns / milking sheds"
+  ],
+  "lockedIdentity": [
+    "Holstein black-and-white dairy cows",
+    "lush green pasture",
+    "low mist on the mountain ridges"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "red American barns and silos",
+    "windmills",
+    "sheep",
+    "hot spring pools on the pasture",
+    "snow-capped peaks"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature visitors at the fence",
+    "a few cows grazing",
+    "trees at the pasture edge"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Two Holstein cows on a green pasture knoll",
+    "notes": "Black-and-white pattern must stay readable at 48px."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

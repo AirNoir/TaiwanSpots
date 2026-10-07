@@ -1,0 +1,58 @@
+{
+  "spotId": "gaomei",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Gaomei wind turbines and boardwalk",
+    "silhouette": "Line of tall white wind turbines along the shore behind a flat, mirror-like tidal flat crossed by a narrow wooden boardwalk"
+  },
+  "crop": "The boardwalk section of the wetland: the boardwalk running out onto the tidal flat, the seawall and the turbine row behind it. Not the whole coastline or Taichung Port.",
+  "heroScale": 1,
+  "orientation": "Taiwan Strait to the west (sunset side); turbines in a line along the coast; boardwalk runs from the seawall out onto the flats",
+  "lockedGeometry": [
+    "flat intertidal mudflat",
+    "boardwalk alignment from the seawall onto the flat",
+    "wind turbine row along the shoreline",
+    "seawall / embankment edge",
+    "sea to the west"
+  ],
+  "lockedIdentity": [
+    "white three-blade turbines in a line",
+    "reflective wet tidal flat",
+    "sunset sky reflected in the water",
+    "verify: red-and-white striped Gaomei lighthouse in or near the crop"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "Dutch windmills",
+    "sandy beaches",
+    "piers with boats",
+    "palm trees",
+    "cliffs"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature visitors on the boardwalk",
+    "wading birds on the flat",
+    "small fiddler-crab specks on the mud"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Two or three wind turbines on a strip of reflective tidal flat",
+    "notes": "Turbine blades thin but long; the reflection carries the wetland read."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "spotId": "anping",
+  "status": "references-collected",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Anping Old Fort observation tower",
+    "silhouette": "White Western-style lookout tower on a raised red-brick terrace, beside a fragment of old fortress brick wall entwined with banyan roots"
+  },
+  "crop": "The fort compound: the brick terrace with the white tower, the stairway up, and the remnant brick wall with banyans. Not Anping old streets or the harbour.",
+  "heroScale": 1,
+  "orientation": "verify: tower position on the terrace and location of the remnant wall within the compound",
+  "lockedGeometry": [
+    "raised brick terrace / bastion platform",
+    "tower position on the terrace",
+    "stairway up to the terrace",
+    "remnant fortress wall position",
+    "surrounding low town fabric (sea is no longer adjacent)"
+  ],
+  "lockedIdentity": [
+    "white observation tower with a small dome / cap (verify)",
+    "Dutch-era red brick",
+    "banyan roots growing over the wall"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "Dutch windmills",
+    "European castle turrets",
+    "moats",
+    "sea or harbour right at the fort walls",
+    "verify before adding: cannon displays"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature visitors on the terrace",
+    "banyan trees in the compound"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "White tower on a red-brick terrace block",
+    "notes": "The white-on-red-brick contrast is the read."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

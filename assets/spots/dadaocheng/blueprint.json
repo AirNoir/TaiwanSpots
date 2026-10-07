@@ -1,0 +1,58 @@
+{
+  "spotId": "dadaocheng",
+  "status": "references-collected",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Dihua Street shophouse facades",
+    "silhouette": "Continuous row of two-to-three-storey shophouses with ornate Baroque-style gabled facades and arcaded ground floors along a narrow street"
+  },
+  "crop": "One stretch of Dihua Street: the shophouse rows facing each other across the narrow street. Not the whole Dadaocheng district, not the wharf.",
+  "heroScale": 1,
+  "orientation": "Dihua Street runs roughly north–south parallel to the Tamsui River, which lies just to the west (outside the crop)",
+  "lockedGeometry": [
+    "narrow street running roughly north–south",
+    "continuous shophouse rows on both sides",
+    "arcade (qilou) walkways at street level",
+    "deep narrow lots behind the facades",
+    "verify: Xiahai City God Temple position relative to the chosen stretch"
+  ],
+  "lockedIdentity": [
+    "ornate Baroque / Western-style parapet facades",
+    "red brick and washed stucco",
+    "shop signboards and dried-goods displays",
+    "arcaded ground floor"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "Taipei 101 in the background",
+    "night market stalls",
+    "river ferries",
+    "modern high-rises on the street",
+    "wide boulevards"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature shoppers under the arcades",
+    "sacks of dried goods and tea at shopfronts",
+    "a few bicycles and scooters"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Short row of ornate Dihua Street shophouse facades",
+    "notes": "Three facades are enough; exaggerate the gable ornaments slightly."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

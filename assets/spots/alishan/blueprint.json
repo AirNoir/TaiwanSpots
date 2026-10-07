@@ -1,0 +1,58 @@
+{
+  "spotId": "alishan",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "hero",
+  "hero": {
+    "name": "Alishan Forest Railway train",
+    "silhouette": "Short narrow-gauge train of small locomotive and carriages on a single track winding through tall cypress forest"
+  },
+  "crop": "One stretch of the forest railway within the Alishan forest area: the track, the train and the giant cypress trees around it. Not the whole mountain line or the sunrise viewpoint.",
+  "heroScale": 1,
+  "orientation": "verify: which railway stretch (e.g. near Shenmu / Zhaoping stations) and track direction from map reference",
+  "lockedGeometry": [
+    "single narrow-gauge track alignment",
+    "mountain slope the track runs along",
+    "tall cypress / cedar forest on both sides",
+    "verify: station platform position if a station is included"
+  ],
+  "lockedIdentity": [
+    "verify: current train livery (red / orange body with cream trim)",
+    "small narrow-gauge proportions",
+    "towering old-growth red cypress trunks",
+    "cloud sea below the forest"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "Swiss-style rack railways",
+    "cable cars",
+    "snow",
+    "tea plantations inside the forest crop",
+    "temples",
+    "steel truss bridges"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature passengers at windows",
+    "ferns and moss on trunks",
+    "mist drifting between the trees"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Forest railway train on a short curve of track with two cypress trees",
+    "notes": "Train colour must be bold; trees frame but never hide it."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

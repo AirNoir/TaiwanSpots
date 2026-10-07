@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "islandia/scene-blueprint",
+  "title": "Islandia Scene Blueprint",
+  "description": "Per-spot production brief for a Collection Diorama (visual spec v0.2 §5). Not bundled into the app.",
+  "type": "object",
+  "required": ["spotId", "status", "spotType", "hero", "crop", "heroScale", "lockedGeometry", "lockedIdentity", "doNotInvent", "references", "worldToken"],
+  "additionalProperties": false,
+  "properties": {
+    "spotId": { "type": "string", "description": "Matches Spot.id and the folder name." },
+    "status": {
+      "enum": ["draft", "references-collected", "approved"],
+      "description": "draft = written from knowledge, NOT yet checked against real references."
+    },
+    "spotType": {
+      "enum": ["natural", "urban"],
+      "description": "Selects the priority order in spec §17."
+    },
+    "productionTier": { "enum": ["hero", "standard"] },
+    "hero": {
+      "type": "object",
+      "required": ["name", "silhouette"],
+      "properties": {
+        "name": { "type": "string" },
+        "silhouette": { "type": "string", "description": "What must be readable at 512px with no text." }
+      }
+    },
+    "crop": {
+      "type": "string",
+      "description": "The representative geographic slice (spec §7), not the whole area."
+    },
+    "heroScale": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 3,
+      "description": "Perceptual exaggeration of the hero landmark (spec §6)."
+    },
+    "orientation": {
+      "type": "string",
+      "description": "Which real-world direction faces the camera / where sea, mountains, roads sit."
+    },
+    "lockedGeometry": { "type": "array", "items": { "type": "string" }, "minItems": 3 },
+    "lockedIdentity": { "type": "array", "items": { "type": "string" }, "minItems": 2 },
+    "doNotInvent": { "type": "array", "items": { "type": "string" }, "minItems": 3 },
+    "allowedMiniatureDetails": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Style-only additions that exist in reality (visitors, boats, trees of the right species)."
+    },
+    "references": {
+      "type": "object",
+      "required": ["aerial", "ground", "map", "representative"],
+      "properties": {
+        "aerial": { "type": "array", "items": { "type": "string" } },
+        "ground": { "type": "array", "items": { "type": "string" } },
+        "map": { "type": "array", "items": { "type": "string" } },
+        "representative": { "type": "array", "items": { "type": "string" } }
+      },
+      "description": "File names under reference/ or URLs. Empty until collected."
+    },
+    "worldToken": {
+      "type": "object",
+      "required": ["element"],
+      "properties": {
+        "element": { "type": "string", "description": "The single iconic element kept for the Taiwan World token (spec §9 Asset B)." },
+        "notes": { "type": "string" }
+      }
+    },
+    "qa": {
+      "type": "object",
+      "description": "Filled in during Human QA (spec §16).",
+      "properties": {
+        "geographic": { "enum": ["pending", "pass", "fail"] },
+        "identity": { "enum": ["pending", "pass", "fail"] },
+        "style": { "enum": ["pending", "pass", "fail"] },
+        "collection": { "enum": ["pending", "pass", "fail"] },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "spotId": "cijin",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Cijin Lighthouse on Qihou Hill",
+    "silhouette": "White lighthouse on a small green hill at the tip of a long, narrow island beside the harbour entrance channel"
+  },
+  "crop": "The northern tip of Cijin: Qihou Hill with the lighthouse, the narrow harbour entrance channel, the ferry pier and the start of the west-coast beach. Not the whole elongated island.",
+  "heroScale": 1,
+  "orientation": "Island runs north-west to south-east parallel to the coast; Taiwan Strait on the west, Kaohsiung harbour on the east; Qihou Hill at the north tip faces the harbour entrance across from Shoushan",
+  "lockedGeometry": [
+    "narrow elongated island shape",
+    "Qihou Hill at the northern tip",
+    "harbour entrance channel to the north",
+    "ferry pier on the harbour (east) side",
+    "beach along the west (Strait) side"
+  ],
+  "lockedIdentity": [
+    "white lighthouse on the hilltop (verify: octagonal form)",
+    "dark-grey sand beach",
+    "passenger ferries crossing the harbour"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "cliffs",
+    "white sand beaches",
+    "palm-lined resorts",
+    "bridges to the mainland",
+    "large temples on the hill"
+  ],
+  "allowedMiniatureDetails": [
+    "small ferries and fishing boats",
+    "miniature visitors and bicycles",
+    "seafood street stalls near the pier"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Lighthouse on a small green hill",
+    "notes": "Lighthouse is simple; the hill-on-water silhouette does the work."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

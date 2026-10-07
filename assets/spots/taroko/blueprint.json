@@ -1,0 +1,58 @@
+{
+  "spotId": "taroko",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "hero",
+  "hero": {
+    "name": "Taroko Gorge",
+    "silhouette": "Deep, narrow marble gorge with sheer vertical walls nearly closing overhead and a river running at the bottom"
+  },
+  "crop": "The Swallow Grotto (Yanzikou) section: the narrow gorge, the Liwu River below and the highway cut into the cliff with tunnel openings. Not the whole national park.",
+  "heroScale": 1,
+  "orientation": "Liwu River runs west to east toward the Pacific; Central Cross-Island Highway follows the gorge wall on one side (verify: which bank in this section)",
+  "lockedGeometry": [
+    "narrow V/slot gorge profile",
+    "Liwu River at the bottom",
+    "highway ledge and tunnels cut into the cliff",
+    "gorge wall heights relative to river width",
+    "verify: suspension or road bridge positions in this section"
+  ],
+  "lockedIdentity": [
+    "grey-white banded marble walls",
+    "blue-grey / milky river water",
+    "pockmarked cliff (swallow holes)",
+    "verify: Indian Chief Rock profile"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "large waterfalls in this section",
+    "temples or shrines in the gorge (Eternal Spring Shrine is elsewhere)",
+    "red-painted suspension bridges unless in references",
+    "sandy riverbanks",
+    "pine-covered alpine peaks"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature hikers with helmets on the road ledge",
+    "a tour bus at a tunnel mouth",
+    "scrub clinging to the cliff"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Marble gorge slice with a river at the bottom",
+    "notes": "Walls should almost meet at the top; use depth and shadow rather than height alone."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

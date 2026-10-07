@@ -11,7 +11,7 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { TaiwanMap } from '../src/components/TaiwanMap';
+import { TaiwanWorld } from '../src/components/TaiwanWorld';
 import { useStore } from '../src/store';
 import { theme } from '../src/theme';
 
@@ -75,9 +75,8 @@ export default function OnboardingScreen() {
               </View>
             ) : (
               <View style={{ marginBottom: 32 }}>
-                <TaiwanMap
+                <TaiwanWorld
                   width={SCREEN_W * 0.56}
-                  height={SCREEN_W * 0.72}
                   collectedIds={new Set(['taipei-101', 'jiufen', 'sun-moon-lake', 'kenting', 'taroko', 'alishan'])}
                   interactive={false}
                 />

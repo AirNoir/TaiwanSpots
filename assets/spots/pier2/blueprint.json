@@ -1,0 +1,57 @@
+{
+  "spotId": "pier2",
+  "status": "references-collected",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Pier-2 warehouses",
+    "silhouette": "Row of long, low gable-roofed former harbour warehouses beside a waterfront with a light-rail track passing in front"
+  },
+  "crop": "One row of the converted warehouses with the light-rail line and harbour edge beside them. Not the whole art district or Kaohsiung harbour.",
+  "heroScale": 1,
+  "orientation": "Warehouses line the inner harbour edge; the Circular Light Rail runs alongside (verify: which side the water sits on relative to the chosen warehouse row)",
+  "lockedGeometry": [
+    "linear warehouse row alignment",
+    "light-rail track alignment beside the warehouses",
+    "harbour waterfront edge",
+    "open lawn / plaza spaces between buildings (verify)"
+  ],
+  "lockedIdentity": [
+    "industrial gable warehouses",
+    "painted murals on warehouse walls",
+    "light-rail tram",
+    "verify: specific large art installations / robot sculptures present"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "temples",
+    "night markets",
+    "giant container cranes in the crop",
+    "skyscrapers on the waterfront",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature visitors and cyclists",
+    "a light-rail tram",
+    "small outdoor art pieces that exist in references"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Two warehouses with a light-rail tram in front",
+    "notes": "Tram colour gives the read; keep warehouse murals as colour blocks."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

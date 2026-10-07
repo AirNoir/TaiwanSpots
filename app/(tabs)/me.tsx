@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ACHIEVEMENTS } from '../../src/achievements';
-import { SPOTS, spotById } from '../../src/data/spots';
+import { spotById } from '../../src/data/spots';
 import { distanceMeters } from '../../src/geo';
 import { useStore } from '../../src/store';
 import { categoryMeta, theme } from '../../src/theme';

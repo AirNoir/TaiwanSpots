@@ -1,19 +1,19 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Haptics from 'expo-haptics';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Animated,
   Dimensions,
   Easing,
+  Image,
   Modal,
   Pressable,
   StyleSheet,
   Text,
   View,
 } from 'react-native';
-import { Image } from 'react-native';
-import { DIORAMA_BG, DIORAMA_IMAGES } from '../data/dioramaImages';
+import { collectionImage, DIORAMA_BG } from '../data/spotAssets';
 import { Spot } from '../data/spots';
 import { theme } from '../theme';
 
@@ -28,16 +28,16 @@ const { width: SCREEN_W } = Dimensions.get('window');
 export function UnlockOverlay({ spot, visible, onDone }: Props) {
   const size = Math.min(SCREEN_W - 80, 300);
   const { art } = spot;
-  const image = DIORAMA_IMAGES[spot.id];
+  const image = collectionImage(spot.id);
 
-  const backdrop = useRef(new Animated.Value(0)).current;
-  const platform = useRef(new Animated.Value(0)).current;
-  const landmarkY = useRef(new Animated.Value(0)).current;
-  const landmarkOpacity = useRef(new Animated.Value(0)).current;
-  const decoScale = useRef(art.deco.map(() => new Animated.Value(0))).current;
-  const sparkle = useRef(new Animated.Value(0)).current;
-  const textY = useRef(new Animated.Value(0)).current;
-  const textOpacity = useRef(new Animated.Value(0)).current;
+  const [backdrop] = useState(() => new Animated.Value(0));
+  const [platform] = useState(() => new Animated.Value(0));
+  const [landmarkY] = useState(() => new Animated.Value(0));
+  const [landmarkOpacity] = useState(() => new Animated.Value(0));
+  const [decoScale] = useState(() => art.deco.map(() => new Animated.Value(0)));
+  const [sparkle] = useState(() => new Animated.Value(0));
+  const [textY] = useState(() => new Animated.Value(0));
+  const [textOpacity] = useState(() => new Animated.Value(0));
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -50,6 +50,8 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
     sparkle.setValue(0);
     textY.setValue(0);
     textOpacity.setValue(0);
+    // Reset the action when replaying the externally triggered unlock animation.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShowButton(false);
 
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
@@ -76,7 +78,7 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       setShowButton(true);
     });
-  }, [visible]);
+  }, [visible, backdrop, platform, landmarkY, landmarkOpacity, decoScale, sparkle, textY, textOpacity]);
 
   if (!visible) return null;
 

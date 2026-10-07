@@ -1,0 +1,17 @@
+{
+  "purpose": "Real photograph reference for first generated preview; not bundled into the app",
+  "sources": [
+    {
+      "page": "https://www.onenessarchitects.com/project/Taipei-101",
+      "image": "https://www.onenessarchitects.com/uploads/default/NS_project_relates/raw/cf06f7887927f99667ac51a2b451256c.jpg",
+      "local": "oneness-taipei-101.jpg",
+      "credit": "Oneness & Associates",
+      "observations": [
+        "Eight stacked flaring tower modules",
+        "Blue-green curtain wall with fine horizontal mullions",
+        "Narrow upper tower and needle spire",
+        "Flared lower tower connected to a wide low podium"
+      ]
+    }
+  ]
+}

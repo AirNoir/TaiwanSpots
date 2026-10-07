@@ -1,9 +1,11 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Animated, Easing, Image, StyleSheet, View } from 'react-native';
-import { DIORAMA_BG, DIORAMA_IMAGES } from '../data/dioramaImages';
+import { collectionImage, collectionThumbnail, DIORAMA_BG } from '../data/spotAssets';
 import { Spot } from '../data/spots';
+
+const THUMBNAIL_MAX = 160;
 
 interface Props {
   spot: Spot;
@@ -17,8 +19,8 @@ export function Diorama({ spot, size, locked = false, live = false, radius }: Pr
   const { art } = spot;
   const br = radius ?? size * 0.12;
 
-  const cloudX = useRef(new Animated.Value(0)).current;
-  const bobY = useRef(new Animated.Value(0)).current;
+  const [cloudX] = useState(() => new Animated.Value(0));
+  const [bobY] = useState(() => new Animated.Value(0));
 
   useEffect(() => {
     if (!live) return;
@@ -42,7 +44,8 @@ export function Diorama({ spot, size, locked = false, live = false, radius }: Pr
     };
   }, [live, cloudX, bobY]);
 
-  const image = DIORAMA_IMAGES[spot.id];
+  // Small cards (Passport grid, lists) use the 512px thumbnail when one exists.
+  const image = size <= THUMBNAIL_MAX ? collectionThumbnail(spot.id) : collectionImage(spot.id);
 
   if (image) {
     return (

@@ -1,0 +1,62 @@
+{
+  "spotId": "taipei-101",
+  "status": "references-collected",
+  "spotType": "urban",
+  "productionTier": "hero",
+  "hero": {
+    "name": "Taipei 101",
+    "silhouette": "Slender tower of eight stacked, outward-flaring segments (pagoda / bamboo-node rhythm) on a wider podium base, topped by a needle spire"
+  },
+  "crop": "The block around Taipei 101 in the Xinyi district grid: the tower and its mall podium, the plaza in front, the adjacent office towers and the street axis leading toward it. Not the whole of Xinyi, not the Taipei skyline.",
+  "heroScale": 1,
+  "orientation": "verify: tower sits at the south-east end of the Xinyi planned grid; main street axis and plaza side to be confirmed from aerial reference",
+  "lockedGeometry": [
+    "Xinyi district orthogonal street grid",
+    "Taipei 101 position at the edge of the grid",
+    "podium mall footprint at the tower base",
+    "plaza / open public space in front of the tower",
+    "adjacent major office and mall massing (verify: which neighbouring towers fall inside the crop)",
+    "main road orientation around the block"
+  ],
+  "lockedIdentity": [
+    "eight-segment stacked silhouette",
+    "needle spire",
+    "blue-green glass tone",
+    "clear height dominance over surrounding towers"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "temples",
+    "night markets",
+    "MRT trains or elevated tracks",
+    "rivers",
+    "bridges",
+    "mountains",
+    "traditional Taiwanese shophouses",
+    "fireworks"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature pedestrians on the plaza",
+    "street trees along the sidewalks",
+    "a few taxis and scooters on the roads"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "oneness-taipei-101.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Taipei 101 tower alone on a small plaza base",
+    "notes": "Keep the segment steps crisp — they are what makes it read at 48px rather than a generic skyscraper."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

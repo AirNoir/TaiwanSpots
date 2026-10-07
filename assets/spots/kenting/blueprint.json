@@ -1,0 +1,54 @@
+{
+  "spotId": "kenting",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Kenting Baisha Bay",
+    "silhouette": "Curved pale coral-sand beach between rocky green headlands and clear turquoise sea"
+  },
+  "crop": "A representative slice of Baisha Bay: curved beach, turquoise shallows and low vegetated headland, matching the collected real photo.",
+  "heroScale": 1,
+  "orientation": "Elevated three-quarter view from the shore toward the bay, based on the real photograph.",
+  "lockedGeometry": [
+    "curved sandy shore",
+    "ocean in front of the beach",
+    "low vegetation and rocky headland behind the shore"
+  ],
+  "lockedIdentity": [
+    "pale coral-sand beach",
+    "clear turquoise shallows and gentle surf",
+    "low green coastal headland"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "high-rise resort towers",
+    "piers and marinas",
+    "volcanoes",
+    "Eluanbi Lighthouse (outside the crop)",
+    "theme-park structures"
+  ],
+  "allowedMiniatureDetails": [
+    "beachgoers and parasols",
+    "scooters on the coastal road"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Compact curved pale sand beach with turquoise shallows and rocky green headland",
+    "notes": "Match the Baisha Bay reference: pale curved beach, turquoise shallows and low green headland."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

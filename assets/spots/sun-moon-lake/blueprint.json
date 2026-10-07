@@ -1,0 +1,59 @@
+{
+  "spotId": "sun-moon-lake",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "hero",
+  "hero": {
+    "name": "Lalu Island in Sun Moon Lake",
+    "silhouette": "Small low, tree-covered island sitting alone in a wide lake ringed by layered forested hills, with a slender pagoda on the southern hilltop"
+  },
+  "crop": "The middle of the lake around Lalu Island, with the near shoreline and the southern hill carrying Ci'en Pagoda. Not the whole lake perimeter.",
+  "heroScale": 1,
+  "orientation": "Lake ringed by mountains; Ci'en Pagoda on the hill south of the lake; Lalu Island sits between the eastern and western lobes (verify: exact island position)",
+  "lockedGeometry": [
+    "lake outline (sun lobe and moon lobe)",
+    "Lalu Island position in the lake",
+    "forested hills enclosing the lake on all sides",
+    "Ci'en Pagoda on the southern hill",
+    "verify: piers on the shoreline inside the crop (Shuishe / Ita Thao)"
+  ],
+  "lockedIdentity": [
+    "tiny wooded island alone in open water",
+    "calm blue-green lake",
+    "layered misty mountain ridges",
+    "Ci'en Pagoda silhouette on the hilltop"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "bridges to Lalu Island",
+    "buildings on Lalu Island",
+    "multiple islands",
+    "sandy beaches",
+    "snow-capped peaks",
+    "large temples on the shore"
+  ],
+  "allowedMiniatureDetails": [
+    "small tour boats on the lake",
+    "morning mist on the water",
+    "cyclists on a lakeside path"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Lalu Island in a small disc of lake with one forested hill behind",
+    "notes": "The island must read as small and alone; the water disc does the work."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

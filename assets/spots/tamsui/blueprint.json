@@ -1,0 +1,58 @@
+{
+  "spotId": "tamsui",
+  "status": "references-collected",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Tamsui riverfront with Guanyin Mountain",
+    "silhouette": "Broad river mouth with a waterfront promenade and ferry pier on the near bank, and the gently peaked profile of Guanyin Mountain on the far bank"
+  },
+  "crop": "The Tamsui Old Street riverfront stretch: promenade, ferry pier, the edge of the old street buildings, the river and Guanyin Mountain across it. Not Fisherman's Wharf, not Fort San Domingo, not the whole town.",
+  "heroScale": 1,
+  "orientation": "River flows north-west to the sea; the old street sits on the north-east bank, Guanyin Mountain across the river to the south-west; sunset over the river mouth",
+  "lockedGeometry": [
+    "river width and flow direction toward the sea",
+    "promenade running along the bank",
+    "ferry pier position on the promenade (verify)",
+    "old street buildings behind the promenade",
+    "Guanyin Mountain on the opposite bank"
+  ],
+  "lockedIdentity": [
+    "Guanyin Mountain profile across the water",
+    "low riverside shophouse frontage",
+    "ferries on the river",
+    "warm sunset light"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "Lover's Bridge (it is at Fisherman's Wharf, outside the crop)",
+    "large bridges spanning the river",
+    "sandy beaches",
+    "skyscrapers",
+    "temples on the waterfront"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature strollers and cyclists on the promenade",
+    "small passenger ferries",
+    "street food stalls along the promenade"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Riverfront pier with a ferry and Guanyin Mountain silhouette behind",
+    "notes": "Mountain profile is the identity at token scale; keep the ferry small."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

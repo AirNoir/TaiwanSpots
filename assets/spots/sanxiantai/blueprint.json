@@ -1,0 +1,58 @@
+{
+  "spotId": "sanxiantai",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Sanxiantai eight-arch footbridge",
+    "silhouette": "Undulating footbridge of eight arches crossing the sea from the shore to a small rocky offshore island"
+  },
+  "crop": "The shore end, the full eight-arch bridge and the near part of the offshore island. Not the whole island or coastline.",
+  "heroScale": 1,
+  "orientation": "Bridge runs from the shore eastward out to the island; Pacific to the east (sunrise side)",
+  "lockedGeometry": [
+    "shoreline position",
+    "eight-arch bridge span count and alignment",
+    "offshore island shape and position",
+    "reef / rocky platform around the island",
+    "open Pacific to the east"
+  ],
+  "lockedIdentity": [
+    "exactly eight arches with wave-like rhythm",
+    "rugged dark coral / volcanic rock",
+    "clear turquoise water over reef",
+    "verify: lighthouse on the island"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "temples on the island",
+    "sandy beaches",
+    "boats docking at the island",
+    "extra bridges",
+    "suspension cables"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature walkers on the bridge",
+    "waves breaking on the reef",
+    "sunrise glow"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Eight-arch bridge reaching a tiny rocky island",
+    "notes": "Count must stay eight even at token scale."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

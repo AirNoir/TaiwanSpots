@@ -1,0 +1,59 @@
+{
+  "spotId": "palace-museum",
+  "status": "references-collected",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "National Palace Museum main building",
+    "silhouette": "Long, symmetrical palace-style hall with a hip-and-gable roof, raised on a broad terrace reached by a wide central stairway, set against a wooded hill"
+  },
+  "crop": "The central axis of the museum: the entrance archway, the long approach and stairways rising to the main building, with the forested hillside directly behind it. Not the whole Shilin campus or surrounding gardens.",
+  "heroScale": 1,
+  "orientation": "Building backs onto the forested hills of Waishuangxi; the approach rises toward it along a single central axis (verify: compass direction of the axis)",
+  "lockedGeometry": [
+    "single symmetric central axis",
+    "entrance archway (pailou) at the foot of the axis",
+    "stepped terraces and stairways rising toward the building",
+    "main building position at the head of the axis",
+    "forested hillside directly behind the building",
+    "road / driveway approach at the bottom of the axis"
+  ],
+  "lockedIdentity": [
+    "palace-style roof silhouette",
+    "pale cream / white walls",
+    "verify: roof tile colour (green glazed tiles with yellow trim)",
+    "symmetrical facade"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "Forbidden City courtyards and gates",
+    "pagodas",
+    "red palace walls",
+    "lakes in front of the building",
+    "Taipei 101 or city skyline in the background"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature visitors on the stairways",
+    "tour buses at the foot of the approach",
+    "trimmed shrubs and pines along the axis"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "Palace Museum main hall on its stepped terrace",
+    "notes": "Roof line and the stepped terrace carry the identity; drop the archway at token scale."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

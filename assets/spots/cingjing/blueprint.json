@@ -1,0 +1,58 @@
+{
+  "spotId": "cingjing",
+  "status": "references-collected",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Cingjing Green Green Grassland",
+    "silhouette": "Rolling, steep green pasture slope dotted with a white flock of sheep, opening onto layered high mountain ridges"
+  },
+  "crop": "One section of the Green Green Grassland pasture slope with the sheep flock and the mountain ridges beyond. Not the B&B strip or the highway town.",
+  "heroScale": 1,
+  "orientation": "Pasture on a mountain slope at ~1,750 m; higher Central Mountain Range ridges in the background (verify: facing direction toward Hehuanshan)",
+  "lockedGeometry": [
+    "steep rolling pasture terrain",
+    "fence lines and walking path across the pasture",
+    "tree line at the pasture edges",
+    "distant layered mountain ridges",
+    "cloud / mist level below the ridges"
+  ],
+  "lockedIdentity": [
+    "bright green open grassland",
+    "white sheep flock",
+    "high-mountain mist"
+  ],
+  "doNotInvent": [
+    "Taiwan flags",
+    "random buildings",
+    "windmills",
+    "Swiss / European chalets on the pasture",
+    "castles",
+    "snow",
+    "lakes",
+    "alpacas"
+  ],
+  "allowedMiniatureDetails": [
+    "miniature visitors on the pasture path",
+    "wooden pasture fencing",
+    "low mist bands"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": [
+      "real-photo.jpg"
+    ]
+  },
+  "worldToken": {
+    "element": "A few sheep on a rounded green pasture knoll",
+    "notes": "Sheep must be chunky and white to read at 48px."
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -10,6 +10,8 @@ export type SpotCategory =
   | 'food'
   | 'hidden';
 export type Rarity = 'common' | 'rare' | 'epic' | 'legendary';
+export type WorldTier = 'anchor' | 'regional' | 'local';
+export type ProductionTier = 'hero' | 'standard';
 
 export interface DioramaArt {
   icon: string; // MaterialCommunityIcons name
@@ -32,10 +34,23 @@ export interface Spot {
   checkinRadius: number;
   description: string;
   rarity: Rarity;
-  art: DioramaArt;
+
+  // ── Taiwan World (visual spec v0.2 §9–§13) ──
+  worldId: string; // which WorldDef (src/data/world.ts) the spot belongs to
+  /** anchor = visible on the whole-island view; regional = appears once a region is opened. */
+  worldTier: WorldTier;
+  /** hero = premium diorama + custom token + enhanced unlock; standard = simpler pipeline. */
+  production: ProductionTier;
+  /** Relative size of the landmark token in the world view (default 1). */
+  tokenScale?: number;
+  /** Override of the projected lat/lng position; x/y in degrees, z = elevation (fraction of world width). */
+  worldPosition?: { lng?: number; lat?: number; z?: number };
+  active: boolean;
+
+  art: DioramaArt; // procedural fallback when no generated diorama exists
 }
 
-export const SPOTS: Spot[] = [
+export const ALL_SPOTS: Spot[] = [
   // ── 北部 ──────────────────────────────
   {
     id: 'taipei-101',
@@ -49,6 +64,11 @@ export const SPOTS: Spot[] = [
     checkinRadius: 300,
     description: '曾是世界第一高樓,台北天際線的核心。捷運、街口、机車與綠蔭圍繞的城市地標。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'anchor',
+    production: 'hero',
+    tokenScale: 1.3,
+    active: true,
     art: { icon: 'office-building', tint: '#3D5A80', deco: ['subway-variant', 'moped', 'tree'], sky: ['#7FB2E5', '#CFE6F5'], ground: '#8FBF6F', groundDark: '#6B9B52' },
   },
   {
@@ -63,6 +83,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 300,
     description: '收藏近七十萬件華夏文物的殿堂,依山而建的宮殿式建築。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'bank', tint: '#8C6A3F', deco: ['pine-tree', 'coach-lamp', 'tea'], sky: ['#9BC4E8', '#E4F0F8'], ground: '#9FBE77', groundDark: '#7A9A58' },
   },
   {
@@ -77,6 +101,11 @@ export const SPOTS: Spot[] = [
     checkinRadius: 400,
     description: '山城、紅燈籠、茶樓與石階,霧裡的老街俯瞰太平洋。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'anchor',
+    production: 'hero',
+    tokenScale: 1.15,
+    active: true,
     art: { icon: 'coach-lamp', tint: '#B33B2E', deco: ['image-filter-hdr', 'tea', 'stairs'], sky: ['#D98E6A', '#F5D7A8'], ground: '#A9825E', groundDark: '#82613F' },
   },
   {
@@ -91,6 +120,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 400,
     description: '河口夕陽、渡輪與阿給,百年港町的黃昏最美。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'weather-sunset', tint: '#C96A3B', deco: ['ferry', 'fish', 'bike'], sky: ['#E8936B', '#F8D9A0'], ground: '#D9B380', groundDark: '#B08D5B' },
   },
   {
@@ -105,6 +138,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 400,
     description: '迪化街的南北貨、茶行與洋樓立面,老台北的商業心臟。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'tea', tint: '#7A5230', deco: ['coach-lamp', 'storefront-outline', 'bike'], sky: ['#C9A227', '#F2E3B3'], ground: '#B5986A', groundDark: '#8E7549' },
   },
   {
@@ -119,6 +156,11 @@ export const SPOTS: Spot[] = [
     checkinRadius: 400,
     description: '女王頭與蕈狀岩,海蝕雕出的異星地景。',
     rarity: 'rare',
+    worldId: 'taiwan',
+    worldTier: 'anchor',
+    production: 'hero',
+    tokenScale: 1.2,
+    active: true,
     art: { icon: 'chess-queen', tint: '#8A7A5C', deco: ['waves', 'crown', 'fish'], sky: ['#6FA8C9', '#D6E9F2'], ground: '#C9B68E', groundDark: '#A08D65' },
   },
   // ── 中部 ──────────────────────────────
@@ -134,6 +176,11 @@ export const SPOTS: Spot[] = [
     checkinRadius: 600,
     description: '台灣最大的高山湖泊,晨霧、纜車與環湖自行車道。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'anchor',
+    production: 'hero',
+    tokenScale: 1.15,
+    active: true,
     art: { icon: 'sail-boat', tint: '#2E5F74', deco: ['gondola', 'image-filter-hdr', 'waves'], sky: ['#6FAFC9', '#DFF0F2'], ground: '#4F94B0', groundDark: '#3A7085' },
   },
   {
@@ -148,6 +195,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 500,
     description: '海拔 1,750 公尺的綿羊草原,雲霧裡的青青草原。',
     rarity: 'rare',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'sheep', tint: '#7A6A55', deco: ['image-filter-hdr', 'home-variant', 'sprout'], sky: ['#8FC1E3', '#EAF5EC'], ground: '#8FC97F', groundDark: '#6BA35C' },
   },
   {
@@ -162,6 +213,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 500,
     description: '風車、夕照與镜面般的潮間帶,台中最著名的黃昏。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'wind-turbine', tint: '#52707F', deco: ['weather-sunset', 'bird', 'waves'], sky: ['#E88A5D', '#F8E3B0'], ground: '#C2A977', groundDark: '#98824F' },
   },
   {
@@ -176,6 +231,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 300,
     description: '彩虹爺爺一筆一畫救下的眷村,整座村子就是畫布。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'palette', tint: '#B3527E', deco: ['brush', 'home-variant', 'format-paint'], sky: ['#8EB8E5', '#F5E6F0'], ground: '#D98EB5', groundDark: '#B06A91' },
   },
   {
@@ -190,6 +249,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 400,
     description: '一府二鹿三艋舺,紅磚巷弄裡的百年廟宇與手藝。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'storefront-outline', tint: '#7A5230', deco: ['coach-lamp', 'tea', 'temple-buddhist'], sky: ['#D9A05B', '#F5E6C4'], ground: '#B5885E', groundDark: '#8C663F' },
   },
   {
@@ -204,6 +267,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 800,
     description: '最容易親近的百岳,雪季與星空的聖地,武嶺就在身旁。',
     rarity: 'epic',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'image-filter-hdr', tint: '#7A8CA0', deco: ['snowflake', 'star-four-points', 'car'], sky: ['#5B7FB5', '#D9E6F2'], ground: '#A8B8C9', groundDark: '#7E92A8' },
   },
   // ── 南部 ──────────────────────────────
@@ -219,6 +286,11 @@ export const SPOTS: Spot[] = [
     checkinRadius: 800,
     description: '小火車、神木與雲海日出,台灣山林的代名詞。',
     rarity: 'rare',
+    worldId: 'taiwan',
+    worldTier: 'anchor',
+    production: 'hero',
+    tokenScale: 1.15,
+    active: true,
     art: { icon: 'train', tint: '#8C3B2E', deco: ['pine-tree', 'weather-sunset', 'flower'], sky: ['#E0885E', '#F7E0B5'], ground: '#5E8C5A', groundDark: '#436B40' },
   },
   {
@@ -233,6 +305,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 300,
     description: '1624 年熱蘭遮城,台灣歷史從這裡開始。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'castle', tint: '#8C6A3F', deco: ['anchor', 'tree', 'shield-outline'], sky: ['#8FBEDC', '#F2E8CE'], ground: '#C9A877', groundDark: '#A08354' },
   },
   {
@@ -247,6 +323,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 300,
     description: '紅瓦飛簷的普羅民遮城,府城三百年的記憶。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'temple-buddhist', tint: '#A04A32', deco: ['coach-lamp', 'fish', 'flower'], sky: ['#D98E6A', '#F5E3C4'], ground: '#B5885E', groundDark: '#8C663F' },
   },
   {
@@ -261,6 +341,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 400,
     description: '港邊倉庫群變身藝術聚落,輕軌穿過裝置藝術之間。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'warehouse', tint: '#5A6B7A', deco: ['tram', 'package-variant-closed', 'robot'], sky: ['#7FA8D9', '#EAF0F5'], ground: '#9BA3AD', groundDark: '#747C87' },
   },
   {
@@ -275,6 +359,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 500,
     description: '渡輪五分鐘抵達的小島,海產街、燈塔與黑沙灘。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'anchor',
+    production: 'standard',
+    active: true,
     art: { icon: 'ferry', tint: '#3E6B8C', deco: ['fish', 'waves', 'lighthouse'], sky: ['#6FAFD9', '#E0F0F8'], ground: '#4F94B0', groundDark: '#3A7085' },
   },
   {
@@ -289,6 +377,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 800,
     description: '國境之南,椰影、白沙與大街的夏天永不結束。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'anchor',
+    production: 'standard',
+    active: true,
     art: { icon: 'palm-tree', tint: '#3E7A52', deco: ['beach', 'waves', 'white-balance-sunny'], sky: ['#55A8D9', '#D9F0F8'], ground: '#E8D5A3', groundDark: '#C2AC74' },
   },
   // ── 東部 ──────────────────────────────
@@ -304,6 +396,11 @@ export const SPOTS: Spot[] = [
     checkinRadius: 800,
     description: '大理石峽谷與立霧溪,吊橋橫跨萬仞峭壁。',
     rarity: 'rare',
+    worldId: 'taiwan',
+    worldTier: 'anchor',
+    production: 'hero',
+    tokenScale: 1.2,
+    active: true,
     art: { icon: 'image-filter-hdr', tint: '#4E6B5E', deco: ['bridge', 'bus', 'waves'], sky: ['#6F9BC9', '#DCE9F0'], ground: '#8A9BA8', groundDark: '#66788A' },
   },
   {
@@ -318,6 +415,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 600,
     description: '千米斷崖直落太平洋,蘇花公路最震撼的一段藍。',
     rarity: 'epic',
+    worldId: 'taiwan',
+    worldTier: 'anchor',
+    production: 'standard',
+    active: true,
     art: { icon: 'road-variant', tint: '#4E6B7A', deco: ['waves', 'image-filter-hdr', 'dolphin'], sky: ['#4F8FC9', '#C9E6F2'], ground: '#3A7FA8', groundDark: '#2A5F80' },
   },
   {
@@ -332,6 +433,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 500,
     description: '月牙形的礫石海灣,山與海在這裡只隔一條自行車道。',
     rarity: 'common',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'beach', tint: '#7A8C96', deco: ['waves', 'bike', 'moon-waning-crescent'], sky: ['#5FA0D9', '#DFF0F8'], ground: '#A8B5BD', groundDark: '#808D96' },
   },
   {
@@ -346,6 +451,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 500,
     description: '稻浪中的筆直田間路,金城武樹下吹池上的風。',
     rarity: 'rare',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'grain', tint: '#8C7A3B', deco: ['bike', 'tree', 'bird'], sky: ['#8FC1E3', '#F2F0D9'], ground: '#A8C25B', groundDark: '#829B3E' },
   },
   {
@@ -360,6 +469,10 @@ export const SPOTS: Spot[] = [
     checkinRadius: 500,
     description: '八拱跨海步橋連向離岸小島,東海岸的日出聖地。',
     rarity: 'rare',
+    worldId: 'taiwan',
+    worldTier: 'anchor',
+    production: 'standard',
+    active: true,
     art: { icon: 'bridge', tint: '#8C5E3B', deco: ['waves', 'weather-sunset', 'fish'], sky: ['#5F9BD9', '#F0E0C2'], ground: '#4F94B0', groundDark: '#3A7085' },
   },
   {
@@ -374,8 +487,15 @@ export const SPOTS: Spot[] = [
     checkinRadius: 500,
     description: '縱谷裡的牧場與溫泉,鮮奶與山嵐一樣濃。',
     rarity: 'rare',
+    worldId: 'taiwan',
+    worldTier: 'regional',
+    production: 'standard',
+    active: true,
     art: { icon: 'cow', tint: '#7A5E46', deco: ['cup', 'sprout', 'image-filter-hdr'], sky: ['#8FC1E3', '#EAF5E3'], ground: '#8FC97F', groundDark: '#6BA35C' },
   },
 ];
 
-export const spotById = (id: string) => SPOTS.find((s) => s.id === id);
+/** Spots currently in the collection; inactive ones stay resolvable by id but are not listed. */
+export const SPOTS = ALL_SPOTS.filter((s) => s.active);
+
+export const spotById = (id: string) => ALL_SPOTS.find((s) => s.id === id);

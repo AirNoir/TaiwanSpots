@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
-import { TaiwanMap } from '../../src/components/TaiwanMap';
+import { TaiwanWorld } from '../../src/components/TaiwanWorld';
 import { SPOTS, spotById } from '../../src/data/spots';
 import { distanceMeters, formatDistance } from '../../src/geo';
 import { useStore } from '../../src/store';
@@ -54,7 +54,6 @@ export default function WorldScreen() {
 
   const latestSpot = latest ? spotById(latest.spotId) : null;
   const mapW = SCREEN_W - 48;
-  const mapH = mapW * 1.28;
 
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
@@ -64,7 +63,7 @@ export default function WorldScreen() {
 
         <View style={styles.worldCard}>
           <Text style={styles.worldLabel}>MY TAIWAN WORLD</Text>
-          <TaiwanMap width={mapW} height={mapH} collectedIds={collectedIds} />
+          <TaiwanWorld width={mapW} collectedIds={collectedIds} />
           <View style={styles.worldStats}>
             <Text style={styles.worldCount}>
               {count} <Text style={styles.worldTotal}>/ {SPOTS.length}</Text>
