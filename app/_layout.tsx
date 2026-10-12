@@ -1,25 +1,34 @@
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { theme } from '../src/theme';
+import React, { useEffect } from 'react';
+import { Appearance } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { useTheme } from '../src/theme';
 
 export default function RootLayout() {
+  const t = useTheme();
+
+  // Keep native UI (alerts, keyboard, share sheet) in step with the in-app theme.
+  useEffect(() => {
+    Appearance.setColorScheme(t.mode);
+  }, [t.mode]);
+
   return (
-    <>
-      <StatusBar style="light" />
+    <GestureHandlerRootView style={{ flex: 1, backgroundColor: t.bg }}>
+      <StatusBar style={t.statusBar} />
       <Stack
         screenOptions={{
           headerShown: false,
-          contentStyle: { backgroundColor: theme.bg },
+          contentStyle: { backgroundColor: t.bg },
         }}
       >
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="onboarding" options={{ gestureEnabled: false }} />
         <Stack.Screen
           name="spot/[id]"
-          options={{ presentation: 'modal', contentStyle: { backgroundColor: theme.bgElevated } }}
+          options={{ presentation: 'modal', contentStyle: { backgroundColor: t.bgElevated } }}
         />
       </Stack>
-    </>
+    </GestureHandlerRootView>
   );
 }

@@ -13,7 +13,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TaiwanWorld } from '../src/components/TaiwanWorld';
 import { useStore } from '../src/store';
-import { theme } from '../src/theme';
+import { makeStyles, Palette, useTheme } from '../src/theme';
 
 const { width: SCREEN_W } = Dimensions.get('window');
 
@@ -45,6 +45,8 @@ const PAGES = [
 ];
 
 export default function OnboardingScreen() {
+  const t = useTheme();
+  const styles = useStyles();
   const router = useRouter();
   const setOnboarded = useStore((s) => s.setOnboarded);
   const [page, setPage] = useState(0);
@@ -71,7 +73,7 @@ export default function OnboardingScreen() {
           <View key={p.key} style={styles.page}>
             {p.icon ? (
               <View style={styles.pageIcon}>
-                <MaterialCommunityIcons name={p.icon as any} size={72} color={theme.accent} />
+                <MaterialCommunityIcons name={p.icon as any} size={72} color={t.accent} />
               </View>
             ) : (
               <View style={{ marginBottom: 32 }}>
@@ -114,8 +116,9 @@ export default function OnboardingScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: theme.bg },
+const useStyles = makeStyles((t: Palette) =>
+  StyleSheet.create({
+  safe: { flex: 1, backgroundColor: t.bg },
   page: {
     width: SCREEN_W,
     alignItems: 'center',
@@ -126,22 +129,22 @@ const styles = StyleSheet.create({
     width: 140,
     height: 140,
     borderRadius: 70,
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 36,
   },
   title: {
-    color: theme.text,
+    color: t.text,
     fontSize: 28,
     fontWeight: '800',
     textAlign: 'center',
     lineHeight: 40,
   },
   body: {
-    color: theme.subtext,
+    color: t.subtext,
     fontSize: 15,
     textAlign: 'center',
     marginTop: 16,
@@ -149,23 +152,24 @@ const styles = StyleSheet.create({
   },
   footer: { paddingHorizontal: 32, paddingBottom: 24, alignItems: 'center' },
   dots: { flexDirection: 'row', gap: 8, marginBottom: 20 },
-  dot: { width: 8, height: 8, borderRadius: 4, backgroundColor: theme.locked },
-  dotActive: { backgroundColor: theme.accent, width: 20 },
+  dot: { width: 8, height: 8, borderRadius: 4, backgroundColor: t.locked },
+  dotActive: { backgroundColor: t.accent, width: 20 },
   cta: {
-    backgroundColor: theme.accent,
+    backgroundColor: t.accent,
     borderRadius: 28,
     paddingVertical: 16,
     alignSelf: 'stretch',
     alignItems: 'center',
   },
-  ctaText: { color: '#1B1405', fontSize: 16, fontWeight: '800', letterSpacing: 2 },
+  ctaText: { color: t.onAccent, fontSize: 16, fontWeight: '800', letterSpacing: 2 },
   next: {
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     borderRadius: 28,
     paddingVertical: 16,
     alignSelf: 'stretch',
     alignItems: 'center',
   },
-  nextText: { color: theme.text, fontSize: 16, fontWeight: '600' },
-});
+  nextText: { color: t.text, fontSize: 16, fontWeight: '600' },
+  }),
+);

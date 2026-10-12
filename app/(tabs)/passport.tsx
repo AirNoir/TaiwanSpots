@@ -13,7 +13,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
 import { SPOTS } from '../../src/data/spots';
 import { useStore } from '../../src/store';
-import { regionMeta, theme } from '../../src/theme';
+import { Palette, makeStyles, regionMeta, useTheme } from '../../src/theme';
 
 const { width: SCREEN_W } = Dimensions.get('window');
 const GAP = 12;
@@ -21,6 +21,8 @@ const COLS = 3;
 const CELL = (SCREEN_W - 40 - GAP * (COLS - 1)) / COLS;
 
 export default function PassportScreen() {
+  const t = useTheme();
+  const styles = useStyles();
   const router = useRouter();
   const collections = useStore((s) => s.collections);
   const count = Object.keys(collections).length;
@@ -59,11 +61,11 @@ export default function PassportScreen() {
                 <View key={region} style={styles.regionCell}>
                   <Text style={styles.regionLabel}>{regionMeta[region].zh}</Text>
                   <View style={{ flexDirection: 'row', alignItems: 'center', gap: 3, marginTop: 4 }}>
-                    <Text style={[styles.regionCount, got === total && { color: theme.accent }]}>
+                    <Text style={[styles.regionCount, got === total && { color: t.accent }]}>
                       {got}/{total}
                     </Text>
                     {got === total && (
-                      <MaterialCommunityIcons name={'trophy' as any} size={13} color={theme.accent} />
+                      <MaterialCommunityIcons name={'trophy' as any} size={13} color={t.accent} />
                     )}
                   </View>
                 </View>
@@ -79,7 +81,7 @@ export default function PassportScreen() {
               onPress={() => router.push(`/spot/${spot.id}`)}
             >
               <Diorama spot={spot} size={CELL} locked={!collected} radius={16} />
-              <Text style={[styles.cellName, !collected && { color: theme.faint }]} numberOfLines={1}>
+              <Text style={[styles.cellName, !collected && { color: t.faint }]} numberOfLines={1}>
                 {collected ? spot.name : '????'}
               </Text>
             </Pressable>
@@ -90,37 +92,39 @@ export default function PassportScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: theme.bg },
-  title: { color: theme.faint, fontSize: 12, letterSpacing: 4, marginTop: 12 },
-  country: { color: theme.text, fontSize: 30, fontWeight: '800', letterSpacing: 2, marginTop: 6 },
-  count: { color: theme.text, fontSize: 24, fontWeight: '700', marginTop: 14 },
-  countTotal: { color: theme.faint, fontSize: 17 },
+const useStyles = makeStyles((t: Palette) =>
+  StyleSheet.create({
+  safe: { flex: 1, backgroundColor: t.bg },
+  title: { color: t.faint, fontSize: 12, letterSpacing: 4, marginTop: 12 },
+  country: { color: t.text, fontSize: 30, fontWeight: '800', letterSpacing: 2, marginTop: 6 },
+  count: { color: t.text, fontSize: 24, fontWeight: '700', marginTop: 14 },
+  countTotal: { color: t.faint, fontSize: 17 },
   barTrack: {
     height: 8,
     borderRadius: 4,
-    backgroundColor: theme.locked,
+    backgroundColor: t.locked,
     marginTop: 10,
     overflow: 'hidden',
   },
-  barFill: { height: 8, borderRadius: 4, backgroundColor: theme.accent },
-  pct: { color: theme.accent, fontSize: 13, fontWeight: '700', marginTop: 6 },
+  barFill: { height: 8, borderRadius: 4, backgroundColor: t.accent },
+  pct: { color: t.accent, fontSize: 13, fontWeight: '700', marginTop: 6 },
   regionRow: {
     flexDirection: 'row',
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     marginTop: 16,
     paddingVertical: 12,
   },
   regionCell: { flex: 1, alignItems: 'center' },
-  regionLabel: { color: theme.subtext, fontSize: 11 },
-  regionCount: { color: theme.text, fontSize: 14, fontWeight: '700' },
+  regionLabel: { color: t.subtext, fontSize: 11 },
+  regionCount: { color: t.text, fontSize: 14, fontWeight: '700' },
   cellName: {
-    color: theme.text,
+    color: t.text,
     fontSize: 11,
     marginTop: 6,
     textAlign: 'center',
   },
-});
+  }),
+);

@@ -1,7 +1,9 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
+import { SPOTS } from './data/spots';
 import { LatLng } from './geo';
+import type { ThemeMode } from './theme';
 
 export interface CollectionEntry {
   spotId: string;
@@ -16,9 +18,13 @@ interface IslandiaState {
   onboarded: boolean;
   collections: Record<string, CollectionEntry>;
   devLocation: LatLng | null;
+  themeMode: ThemeMode;
+  setThemeMode: (mode: ThemeMode) => void;
   setOnboarded: () => void;
   setDevLocation: (loc: LatLng | null) => void;
   checkIn: (spotId: string) => CollectionEntry;
+  /** Dev: collect every active spot (keeps existing entries). */
+  unlockAll: () => void;
   reset: () => void;
 }
 
@@ -29,6 +35,8 @@ export const useStore = create<IslandiaState>()(
       onboarded: false,
       collections: {},
       devLocation: null,
+      themeMode: 'light',
+      setThemeMode: (mode) => set({ themeMode: mode }),
       setOnboarded: () => set({ onboarded: true }),
       setDevLocation: (loc) => set({ devLocation: loc }),
       checkIn: (spotId) => {
@@ -45,6 +53,17 @@ export const useStore = create<IslandiaState>()(
         set({ collections: { ...get().collections, [spotId]: entry } });
         return entry;
       },
+      unlockAll: () => {
+        const collections = { ...get().collections };
+        let order = Object.keys(collections).length;
+        const now = new Date().toISOString();
+        for (const s of SPOTS) {
+          if (collections[s.id]) continue;
+          order += 1;
+          collections[s.id] = { spotId: s.id, checkedInAt: now, variant: 'day', firstVisit: true, order };
+        }
+        set({ collections, onboarded: true });
+      },
       reset: () => set({ collections: {}, onboarded: false, devLocation: null }),
     }),
     {
@@ -54,6 +73,7 @@ export const useStore = create<IslandiaState>()(
         onboarded: s.onboarded,
         collections: s.collections,
         devLocation: s.devLocation,
+        themeMode: s.themeMode,
       }),
       onRehydrateStorage: () => () => {
         useStore.setState({ hydrated: true });

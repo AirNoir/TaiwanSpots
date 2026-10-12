@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Animated, Easing, Image, StyleSheet, View } from 'react-native';
 import { collectionImage, collectionThumbnail, DIORAMA_BG } from '../data/spotAssets';
 import { Spot } from '../data/spots';
+import { useTheme } from '../theme';
 
 const THUMBNAIL_MAX = 160;
 
@@ -16,6 +17,7 @@ interface Props {
 }
 
 export function Diorama({ spot, size, locked = false, live = false, radius }: Props) {
+  const t = useTheme();
   const { art } = spot;
   const br = radius ?? size * 0.12;
 
@@ -56,14 +58,14 @@ export function Diorama({ spot, size, locked = false, live = false, radius }: Pr
             width: size,
             height: size,
             borderRadius: br,
-            backgroundColor: locked ? '#141D30' : DIORAMA_BG,
+            backgroundColor: locked ? t.locked : DIORAMA_BG,
           },
         ]}
       >
         <Animated.View
           style={{
             flex: 1,
-            opacity: locked ? 0.2 : 1,
+            opacity: locked ? (t.mode === 'dark' ? 0.2 : 0.28) : 1,
             transform: [
               {
                 translateY: live
@@ -76,8 +78,8 @@ export function Diorama({ spot, size, locked = false, live = false, radius }: Pr
           <Image source={image} style={{ width: '100%', height: '100%' }} resizeMode="contain" />
         </Animated.View>
         {locked && (
-          <View style={styles.lockBadgeWrap}>
-            <MaterialCommunityIcons name={'lock' as any} size={size * 0.14} color="#8E9AAF" />
+          <View style={[styles.lockBadgeWrap, { backgroundColor: t.lockOverlay }]}>
+            <MaterialCommunityIcons name={'lock' as any} size={size * 0.14} color={t.lockedIcon} />
           </View>
         )}
       </View>

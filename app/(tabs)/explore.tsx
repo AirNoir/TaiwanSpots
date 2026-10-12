@@ -13,12 +13,14 @@ import { Diorama } from '../../src/components/Diorama';
 import { Region, SPOTS } from '../../src/data/spots';
 import { DEV_LOCATIONS, distanceMeters, formatDistance } from '../../src/geo';
 import { useStore } from '../../src/store';
-import { categoryMeta, rarityMeta, regionMeta, theme } from '../../src/theme';
+import { Palette, categoryMeta, makeStyles, rarityMeta, regionMeta, useTheme } from '../../src/theme';
 import { useLocation } from '../../src/useLocation';
 
 const REGION_FILTERS: (Region | 'all')[] = ['all', 'north', 'central', 'south', 'east'];
 
 export default function ExploreScreen() {
+  const t = useTheme();
+  const styles = useStyles();
   const router = useRouter();
   const collections = useStore((s) => s.collections);
   const devLocation = useStore((s) => s.devLocation);
@@ -46,7 +48,7 @@ export default function ExploreScreen() {
           <MaterialCommunityIcons
             name={(isDev ? 'flask-outline' : 'map-marker') as any}
             size={13}
-            color={theme.subtext}
+            color={t.subtext}
           />
           <Text style={styles.subtitle}>
             {isDev ? '模擬位置' : isFallback ? '預設位置(台北車站)' : '目前位置'}
@@ -105,7 +107,7 @@ export default function ExploreScreen() {
                     <MaterialCommunityIcons
                       name={'check-circle' as any}
                       size={15}
-                      color={theme.success}
+                      color={t.success}
                     />
                   )}
                 </View>
@@ -113,7 +115,7 @@ export default function ExploreScreen() {
                   <MaterialCommunityIcons
                     name={categoryMeta[spot.category].icon as any}
                     size={12}
-                    color={theme.subtext}
+                    color={t.subtext}
                   />
                   <Text style={styles.meta}>
                     {categoryMeta[spot.category].label} ・ {spot.city}
@@ -132,7 +134,7 @@ export default function ExploreScreen() {
                 </View>
               </View>
               <View style={{ alignItems: 'flex-end' }}>
-                <Text style={[styles.dist, inRange && { color: theme.success }]}>
+                <Text style={[styles.dist, inRange && { color: t.success }]}>
                   {formatDistance(dist)}
                 </Text>
                 {inRange && !collected && <Text style={styles.inRange}>● 可收藏</Text>}
@@ -145,11 +147,12 @@ export default function ExploreScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: theme.bg },
+const useStyles = makeStyles((t: Palette) =>
+  StyleSheet.create({
+  safe: { flex: 1, backgroundColor: t.bg },
   header: { paddingHorizontal: 20, paddingTop: 12 },
-  title: { color: theme.text, fontSize: 24, fontWeight: '800', letterSpacing: 3 },
-  subtitle: { color: theme.subtext, fontSize: 12, marginTop: 4 },
+  title: { color: t.text, fontSize: 24, fontWeight: '800', letterSpacing: 3 },
+  subtitle: { color: t.subtext, fontSize: 12, marginTop: 4 },
   devRow: {
     flexDirection: 'row',
     gap: 8,
@@ -161,11 +164,11 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderRadius: 14,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
   },
-  devChipActive: { backgroundColor: theme.accentSoft, borderColor: theme.accent },
-  devChipText: { color: theme.faint, fontSize: 12 },
-  devChipTextActive: { color: theme.accent, fontWeight: '600' },
+  devChipActive: { backgroundColor: t.accentSoft, borderColor: t.accent },
+  devChipText: { color: t.faint, fontSize: 12 },
+  devChipTextActive: { color: t.accent, fontWeight: '600' },
   filterRow: {
     flexDirection: 'row',
     gap: 8,
@@ -177,26 +180,27 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 7,
     borderRadius: 16,
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
   },
-  filterChipActive: { backgroundColor: theme.accent },
-  filterText: { color: theme.subtext, fontSize: 13 },
-  filterTextActive: { color: '#1B1405', fontWeight: '700' },
+  filterChipActive: { backgroundColor: t.accent },
+  filterText: { color: t.subtext, fontSize: 13 },
+  filterTextActive: { color: t.onAccent, fontWeight: '700' },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderRadius: 18,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     padding: 12,
     marginBottom: 10,
   },
-  name: { color: theme.text, fontSize: 16, fontWeight: '600' },
-  meta: { color: theme.subtext, fontSize: 11, marginTop: 3 },
+  name: { color: t.text, fontSize: 16, fontWeight: '600' },
+  meta: { color: t.subtext, fontSize: 11, marginTop: 3 },
   rarityRow: { flexDirection: 'row', alignItems: 'center', marginTop: 5, gap: 3 },
   rarityDot: { width: 5, height: 5, borderRadius: 3 },
   rarityLabel: { fontSize: 9, letterSpacing: 1.5, marginLeft: 4, fontWeight: '700' },
-  dist: { color: theme.subtext, fontSize: 13, fontWeight: '600' },
-  inRange: { color: theme.success, fontSize: 10, marginTop: 4 },
-});
+  dist: { color: t.subtext, fontSize: 13, fontWeight: '600' },
+  inRange: { color: t.success, fontSize: 10, marginTop: 4 },
+  }),
+);

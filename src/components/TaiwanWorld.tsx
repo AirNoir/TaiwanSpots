@@ -24,7 +24,7 @@ import Svg, {
 import { worldToken } from '../data/spotAssets';
 import { Spot, SPOTS } from '../data/spots';
 import { makeProjector, TAIWAN, WorldDef, worldAspect } from '../data/world';
-import { theme } from '../theme';
+import { makeStyles, Palette, useTheme } from '../theme';
 
 // Isometric miniature Taiwan (visual spec v0.2 §10–§11).
 // Unvisited land is desaturated and fogged; visited spots bloom colour into
@@ -48,23 +48,10 @@ const TOP_PAD = 0.1; // room above the north tip for token heads (× width)
 const SLAB = 0.028; // thickness of the display base (× width)
 const BOTTOM_PAD = 0.05;
 const MAX_ZOOM = 3.2;
-const TOKEN_ASPECT = 0.76; // height / width of the token box
+const TOKEN_ASPECT = 1; // world tokens are square, base resting at the bottom edge
+const TOKEN_BASE = 0.95; // where the plinth's floor sits in the token image (× height)
 const TOKEN_L1 = 0.135; // anchor token width on the island view (× width)
 const TOKEN_L2 = 0.17; // token width inside a region (× width)
-
-const C = {
-  landTop: '#56636B',
-  landBottom: '#46525A',
-  landEdge: '#76838A',
-  slab: '#2E2822',
-  slabDark: '#221D19',
-  bloom: '#8EC06C',
-  ridgeLit: ['#93C072', '#5F8E4B'],
-  ridgeFog: ['#68757D', '#505C64'],
-  river: '#6F9CC0',
-  fog: '#DCE4EC',
-  light: '#FFD27A',
-};
 
 function smoothClosed(pts: Pt[]) {
   const mid = (a: Pt, b: Pt) => ({ x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 });
@@ -98,6 +85,9 @@ export function worldHeight(width: number, world: WorldDef = TAIWAN) {
 }
 
 export function TaiwanWorld({ width, collectedIds, interactive = true, world = TAIWAN }: Props) {
+  const t = useTheme();
+  const C = t.world;
+  const styles = useStyles();
   const router = useRouter();
   const height = worldHeight(width, world);
   const [regionId, setRegionId] = useState<string | null>(null);
@@ -294,8 +284,8 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
             <Svg width={width} height={height}>
               <Defs>
                 <RadialGradient id="sea" cx="50%" cy="50%" r="50%">
-                  <Stop offset="0%" stopColor="#1E3350" stopOpacity={0.9} />
-                  <Stop offset="100%" stopColor="#1E3350" stopOpacity={0} />
+                  <Stop offset="0%" stopColor={C.sea} stopOpacity={0.9} />
+                  <Stop offset="100%" stopColor={C.sea} stopOpacity={0} />
                 </RadialGradient>
                 <LinearGradient id="land" x1="0" y1="0" x2="0" y2="1">
                   <Stop offset="0%" stopColor={C.landTop} />
@@ -315,7 +305,7 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
 
               {/* display base: shadow + slab thickness */}
               <G transform={`translate(0, ${width * SLAB * 1.9})`}>
-                <Path d={geo.island} fill="rgba(0,0,0,0.35)" />
+                <Path d={geo.island} fill={C.baseShadow} />
               </G>
               <G transform={`translate(0, ${width * SLAB})`}>
                 <Path d={geo.island} fill={C.slabDark} />
@@ -369,7 +359,7 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
               <Svg width={width} height={height}>
                 <Defs>
                   <RadialGradient id="fog" cx="50%" cy="50%" r="50%">
-                    <Stop offset="0%" stopColor={C.fog} stopOpacity={0.5} />
+                    <Stop offset="0%" stopColor={C.fog} stopOpacity={C.fogOpacity} />
                     <Stop offset="100%" stopColor={C.fog} stopOpacity={0} />
                   </RadialGradient>
                 </Defs>
@@ -427,7 +417,7 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
         {interactive && active && (
           <>
             <Pressable style={styles.back} onPress={() => setRegionId(null)} hitSlop={8}>
-              <MaterialCommunityIcons name={'chevron-left' as any} size={18} color={theme.text} />
+              <MaterialCommunityIcons name={'chevron-left' as any} size={18} color={t.text} />
               <Text style={styles.backText}>{world.name}</Text>
             </Pressable>
             <View style={styles.regionTag} pointerEvents="none">
@@ -495,6 +485,7 @@ function relax(list: Marker[], s: number, spread: number) {
 }
 
 function LandmarkToken({ spot, size }: { spot: Spot; size: number }) {
+  const styles = useStyles();
   const [rise] = useState(() => new Animated.Value(0));
   useEffect(() => {
     Animated.spring(rise, {
@@ -510,11 +501,11 @@ function LandmarkToken({ spot, size }: { spot: Spot; size: number }) {
   const h = size * TOKEN_ASPECT;
   // Anchored at the bottom-centre of the token base, which sits on the spot.
   return (
-    <View style={{ width: size, height: h, marginLeft: -size / 2, marginTop: -h * 0.88 }}>
+    <View style={{ width: size, height: h, marginLeft: -size / 2, marginTop: -h * TOKEN_BASE }}>
       <View
         style={[
           styles.tokenShadow,
-          { width: size * 0.8, height: size * 0.2, left: size * 0.1, top: h * 0.78, borderRadius: size },
+          { width: size * 0.7, height: size * 0.12, left: size * 0.15, top: h * TOKEN_BASE - size * 0.07, borderRadius: size },
         ]}
       />
       <Animated.View
@@ -540,6 +531,7 @@ function LandmarkToken({ spot, size }: { spot: Spot; size: number }) {
 }
 
 function Light({ pulse }: { pulse: Animated.Value }) {
+  const styles = useStyles();
   return (
     <View style={styles.lightWrap}>
       <Animated.View
@@ -557,6 +549,7 @@ function Light({ pulse }: { pulse: Animated.Value }) {
 }
 
 function PendingPin({ big }: { big: boolean }) {
+  const { pin } = useTheme().world;
   const d = big ? 14 : 5;
   return (
     <View
@@ -567,16 +560,17 @@ function PendingPin({ big }: { big: boolean }) {
         marginTop: -d / 2,
         borderRadius: d,
         borderWidth: big ? 1.5 : 0,
-        borderColor: 'rgba(220,228,236,0.55)',
-        backgroundColor: big ? 'rgba(220,228,236,0.12)' : 'rgba(220,228,236,0.35)',
+        borderColor: `rgba(${pin},0.55)`,
+        backgroundColor: big ? `rgba(${pin},0.12)` : `rgba(${pin},0.35)`,
       }}
     />
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((t: Palette) =>
+  StyleSheet.create({
   anchor: { position: 'absolute', left: 0, top: 0 },
-  tokenShadow: { position: 'absolute', backgroundColor: 'rgba(0,0,0,0.35)' },
+  tokenShadow: { position: 'absolute', backgroundColor: t.world.tokenShadow },
   tokenFallback: {
     flex: 1,
     alignItems: 'center',
@@ -592,8 +586,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  lightHalo: { position: 'absolute', width: 18, height: 18, borderRadius: 9, backgroundColor: C.light },
-  lightCore: { width: 6, height: 6, borderRadius: 3, backgroundColor: '#FFF4D6' },
+  lightHalo: { position: 'absolute', width: 18, height: 18, borderRadius: 9, backgroundColor: t.world.light },
+  lightCore: { width: 6, height: 6, borderRadius: 3, backgroundColor: t.world.lightCore },
   back: {
     position: 'absolute',
     left: 8,
@@ -604,21 +598,22 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     paddingLeft: 4,
     borderRadius: 14,
-    backgroundColor: 'rgba(11,18,32,0.7)',
+    backgroundColor: t.mode === 'dark' ? 'rgba(11,18,32,0.7)' : 'rgba(255,255,255,0.85)',
   },
-  backText: { color: theme.text, fontSize: 12, fontWeight: '600' },
+  backText: { color: t.text, fontSize: 12, fontWeight: '600' },
   regionTag: { position: 'absolute', right: 10, top: 8, alignItems: 'flex-end' },
-  regionName: { color: theme.text, fontSize: 15, fontWeight: '800' },
-  regionCount: { color: theme.accent, fontSize: 11, letterSpacing: 1, marginTop: 2 },
+  regionName: { color: t.text, fontSize: 15, fontWeight: '800' },
+  regionCount: { color: t.accent, fontSize: 11, letterSpacing: 1, marginTop: 2 },
   chips: { flexDirection: 'row', justifyContent: 'center', gap: 6, marginTop: 8, flexWrap: 'wrap' },
   chip: {
     paddingHorizontal: 10,
     paddingVertical: 5,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
   },
-  chipOn: { backgroundColor: theme.accentSoft, borderColor: theme.accent },
-  chipText: { color: theme.subtext, fontSize: 11, fontWeight: '600' },
-  chipTextOn: { color: theme.accent },
-});
+  chipOn: { backgroundColor: t.accentSoft, borderColor: t.accent },
+  chipText: { color: t.subtext, fontSize: 11, fontWeight: '600' },
+  chipTextOn: { color: t.accent },
+  }),
+);

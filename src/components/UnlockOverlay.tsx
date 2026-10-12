@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 import { collectionImage, DIORAMA_BG } from '../data/spotAssets';
 import { Spot } from '../data/spots';
-import { theme } from '../theme';
+import { makeStyles, Palette, useTheme } from '../theme';
 
 interface Props {
   spot: Spot;
@@ -26,6 +26,8 @@ interface Props {
 const { width: SCREEN_W } = Dimensions.get('window');
 
 export function UnlockOverlay({ spot, visible, onDone }: Props) {
+  const t = useTheme();
+  const styles = useStyles();
   const size = Math.min(SCREEN_W - 80, 300);
   const { art } = spot;
   const image = collectionImage(spot.id);
@@ -237,7 +239,7 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
                 <MaterialCommunityIcons
                   name={'star-four-points' as any}
                   size={size * (0.09 + i * 0.02)}
-                  color="#F5B14C"
+                  color={t.accent}
                 />
               </Animated.View>
             ))}
@@ -256,7 +258,7 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
             }}
           >
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 10 }}>
-              <MaterialCommunityIcons name={'star-four-points' as any} size={14} color={theme.accent} />
+              <MaterialCommunityIcons name={'star-four-points' as any} size={14} color={t.accent} />
               <Text style={styles.newLabel}>NEW LANDMARK</Text>
             </View>
             <Text style={styles.name}>{spot.nameEn}</Text>
@@ -277,45 +279,47 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((t: Palette) =>
+  StyleSheet.create({
   backdrop: {
     flex: 1,
-    backgroundColor: 'rgba(5,9,18,0.96)',
+    backgroundColor: t.backdrop,
     alignItems: 'center',
     justifyContent: 'center',
   },
   newLabel: {
-    color: theme.accent,
+    color: t.accent,
     fontSize: 13,
     fontWeight: '700',
     letterSpacing: 3,
   },
   name: {
-    color: theme.text,
+    color: t.text,
     fontSize: 26,
     fontWeight: '800',
     letterSpacing: 1.5,
   },
   nameZh: {
-    color: theme.subtext,
+    color: t.subtext,
     fontSize: 15,
     marginTop: 4,
   },
   date: {
-    color: theme.faint,
+    color: t.faint,
     fontSize: 13,
     marginTop: 10,
     letterSpacing: 2,
   },
   button: {
-    backgroundColor: theme.accent,
+    backgroundColor: t.accent,
     paddingHorizontal: 36,
     paddingVertical: 13,
     borderRadius: 26,
   },
   buttonText: {
-    color: '#1B1405',
+    color: t.onAccent,
     fontSize: 16,
     fontWeight: '700',
   },
-});
+  }),
+);

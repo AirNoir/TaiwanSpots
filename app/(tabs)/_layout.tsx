@@ -2,9 +2,10 @@ import { Ionicons } from '@expo/vector-icons';
 import { Redirect, Tabs } from 'expo-router';
 import React from 'react';
 import { useStore } from '../../src/store';
-import { theme } from '../../src/theme';
+import { useTheme } from '../../src/theme';
 
 export default function TabLayout() {
+  const t = useTheme();
   const hydrated = useStore((s) => s.hydrated);
   const onboarded = useStore((s) => s.onboarded);
 
@@ -16,11 +17,11 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: '#0A101D',
-          borderTopColor: '#1A2436',
+          backgroundColor: t.tabBar,
+          borderTopColor: t.tabBarBorder,
         },
-        tabBarActiveTintColor: theme.accent,
-        tabBarInactiveTintColor: theme.faint,
+        tabBarActiveTintColor: t.accent,
+        tabBarInactiveTintColor: t.faint,
         tabBarLabelStyle: { fontSize: 10, letterSpacing: 1.5, fontWeight: '600' },
       }}
     >

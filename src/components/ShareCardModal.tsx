@@ -12,7 +12,7 @@ import {
 import ViewShot from 'react-native-view-shot';
 import { Spot } from '../data/spots';
 import { CollectionEntry } from '../store';
-import { theme } from '../theme';
+import { makeStyles, Palette, useTheme } from '../theme';
 import { Diorama } from './Diorama';
 
 interface Props {
@@ -27,6 +27,8 @@ interface Props {
 const { width: SCREEN_W } = Dimensions.get('window');
 
 export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visible, onClose }: Props) {
+  const t = useTheme();
+  const styles = useStyles();
   const shotRef = useRef<any>(null);
   const [sharing, setSharing] = useState(false);
 
@@ -63,7 +65,7 @@ export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visibl
               <MaterialCommunityIcons
                 name={'white-balance-sunny' as any}
                 size={13}
-                color={theme.subtext}
+                color={t.subtext}
               />
               <Text style={[styles.meta, { marginTop: 0 }]}>{spot.city}</Text>
             </View>
@@ -89,37 +91,38 @@ export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visibl
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((t: Palette) =>
+  StyleSheet.create({
   backdrop: {
     flex: 1,
-    backgroundColor: 'rgba(5,9,18,0.94)',
+    backgroundColor: t.backdrop,
     alignItems: 'center',
     justifyContent: 'center',
   },
   card: {
-    backgroundColor: '#0E1626',
+    backgroundColor: t.bgElevated,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     padding: 24,
     alignItems: 'center',
   },
   name: {
-    color: theme.text,
+    color: t.text,
     fontSize: 22,
     fontWeight: '800',
     letterSpacing: 2,
     marginTop: 20,
   },
   serial: {
-    color: theme.accent,
+    color: t.accent,
     fontSize: 14,
     fontWeight: '700',
     letterSpacing: 2,
     marginTop: 6,
   },
   meta: {
-    color: theme.subtext,
+    color: t.subtext,
     fontSize: 13,
     marginTop: 6,
     letterSpacing: 1,
@@ -127,22 +130,22 @@ const styles = StyleSheet.create({
   divider: {
     width: 48,
     height: 1,
-    backgroundColor: theme.cardBorder,
+    backgroundColor: t.cardBorder,
     marginVertical: 16,
   },
   myTaiwan: {
-    color: theme.faint,
+    color: t.faint,
     fontSize: 11,
     letterSpacing: 3,
   },
   progress: {
-    color: theme.text,
+    color: t.text,
     fontSize: 18,
     fontWeight: '700',
     marginTop: 4,
   },
   brand: {
-    color: theme.faint,
+    color: t.faint,
     fontSize: 11,
     marginTop: 16,
     fontStyle: 'italic',
@@ -153,13 +156,13 @@ const styles = StyleSheet.create({
     marginTop: 28,
   },
   shareBtn: {
-    backgroundColor: theme.accent,
+    backgroundColor: t.accent,
     paddingHorizontal: 34,
     paddingVertical: 12,
     borderRadius: 24,
   },
   shareBtnText: {
-    color: '#1B1405',
+    color: t.onAccent,
     fontWeight: '700',
     fontSize: 15,
   },
@@ -168,10 +171,11 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
   },
   closeBtnText: {
-    color: theme.subtext,
+    color: t.subtext,
     fontSize: 15,
   },
-});
+  }),
+);

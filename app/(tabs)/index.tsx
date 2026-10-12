@@ -15,7 +15,7 @@ import { TaiwanWorld } from '../../src/components/TaiwanWorld';
 import { SPOTS, spotById } from '../../src/data/spots';
 import { distanceMeters, formatDistance } from '../../src/geo';
 import { useStore } from '../../src/store';
-import { theme } from '../../src/theme';
+import { makeStyles, Palette, useTheme } from '../../src/theme';
 import { useLocation } from '../../src/useLocation';
 
 const { width: SCREEN_W } = Dimensions.get('window');
@@ -29,6 +29,8 @@ function greeting() {
 }
 
 export default function WorldScreen() {
+  const t = useTheme();
+  const styles = useStyles();
   const router = useRouter();
   const collections = useStore((s) => s.collections);
   const { location } = useLocation();
@@ -85,7 +87,7 @@ export default function WorldScreen() {
               <Text style={styles.nearCity}>{spot.city}</Text>
             </View>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 3 }}>
-              <MaterialCommunityIcons name={'map-marker' as any} size={13} color={theme.accent} />
+              <MaterialCommunityIcons name={'map-marker' as any} size={13} color={t.accent} />
               <Text style={styles.nearDist}>{formatDistance(dist)}</Text>
             </View>
           </Pressable>
@@ -115,32 +117,33 @@ export default function WorldScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: theme.bg },
+const useStyles = makeStyles((t: Palette) =>
+  StyleSheet.create({
+  safe: { flex: 1, backgroundColor: t.bg },
   container: { padding: 24, paddingBottom: 48 },
-  greeting: { color: theme.text, fontSize: 28, fontWeight: '800' },
-  subGreeting: { color: theme.subtext, fontSize: 14, marginTop: 6, marginBottom: 20 },
+  greeting: { color: t.text, fontSize: 28, fontWeight: '800' },
+  subGreeting: { color: t.subtext, fontSize: 14, marginTop: 6, marginBottom: 20 },
   worldCard: {
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     padding: 12,
     alignItems: 'center',
   },
   worldLabel: {
-    color: theme.faint,
+    color: t.faint,
     fontSize: 11,
     letterSpacing: 3,
     marginTop: 8,
     marginBottom: 4,
   },
   worldStats: { alignItems: 'center', marginTop: 4, marginBottom: 10 },
-  worldCount: { color: theme.text, fontSize: 32, fontWeight: '800' },
-  worldTotal: { color: theme.faint, fontSize: 20, fontWeight: '600' },
-  worldExplored: { color: theme.accent, fontSize: 11, letterSpacing: 4, marginTop: 2 },
+  worldCount: { color: t.text, fontSize: 32, fontWeight: '800' },
+  worldTotal: { color: t.faint, fontSize: 20, fontWeight: '600' },
+  worldExplored: { color: t.accent, fontSize: 11, letterSpacing: 4, marginTop: 2 },
   sectionTitle: {
-    color: theme.faint,
+    color: t.faint,
     fontSize: 12,
     letterSpacing: 3,
     marginTop: 28,
@@ -149,32 +152,33 @@ const styles = StyleSheet.create({
   nearRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderRadius: 18,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     padding: 12,
     marginBottom: 10,
   },
-  nearName: { color: theme.text, fontSize: 16, fontWeight: '600' },
-  nearCity: { color: theme.subtext, fontSize: 12, marginTop: 2 },
-  nearDist: { color: theme.accent, fontSize: 13, fontWeight: '600' },
+  nearName: { color: t.text, fontSize: 16, fontWeight: '600' },
+  nearCity: { color: t.subtext, fontSize: 12, marginTop: 2 },
+  nearDist: { color: t.accent, fontSize: 13, fontWeight: '600' },
   latestCard: {
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     padding: 16,
     alignItems: 'center',
   },
-  latestName: { color: theme.text, fontSize: 18, fontWeight: '700', letterSpacing: 2, marginTop: 14 },
-  latestDate: { color: theme.subtext, fontSize: 12, marginTop: 4 },
+  latestName: { color: t.text, fontSize: 18, fontWeight: '700', letterSpacing: 2, marginTop: 14 },
+  latestDate: { color: t.subtext, fontSize: 12, marginTop: 4 },
   cta: {
-    backgroundColor: theme.accent,
+    backgroundColor: t.accent,
     borderRadius: 28,
     paddingVertical: 16,
     alignItems: 'center',
     marginTop: 32,
   },
-  ctaText: { color: '#1B1405', fontSize: 16, fontWeight: '700' },
-});
+  ctaText: { color: t.onAccent, fontSize: 16, fontWeight: '700' },
+  }),
+);

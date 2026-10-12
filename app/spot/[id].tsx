@@ -11,17 +11,20 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
+import { DioramaViewer } from '../../src/components/DioramaViewer';
 import { ShareCardModal } from '../../src/components/ShareCardModal';
 import { UnlockOverlay } from '../../src/components/UnlockOverlay';
 import { spotById, SPOTS } from '../../src/data/spots';
 import { distanceMeters, formatDistance } from '../../src/geo';
 import { useStore } from '../../src/store';
-import { categoryMeta, rarityMeta, theme } from '../../src/theme';
+import { Palette, categoryMeta, makeStyles, rarityMeta, useTheme } from '../../src/theme';
 import { useLocation } from '../../src/useLocation';
 
 const { width: SCREEN_W } = Dimensions.get('window');
 
 export default function SpotDetailScreen() {
+  const t = useTheme();
+  const styles = useStyles();
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const spot = spotById(id ?? '');
@@ -33,6 +36,7 @@ export default function SpotDetailScreen() {
 
   const [unlocking, setUnlocking] = useState(false);
   const [sharing, setSharing] = useState(false);
+  const [viewing, setViewing] = useState(false);
 
   const entry = spot ? collections[spot.id] : undefined;
   const collected = !!entry;
@@ -45,7 +49,7 @@ export default function SpotDetailScreen() {
   if (!spot) {
     return (
       <View style={[styles.safe, { alignItems: 'center', justifyContent: 'center' }]}>
-        <Text style={{ color: theme.subtext }}>找不到這個景點</Text>
+        <Text style={{ color: t.subtext }}>找不到這個景點</Text>
       </View>
     );
   }
@@ -70,11 +74,24 @@ export default function SpotDetailScreen() {
       <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
         <View style={styles.topBar}>
           <Pressable onPress={() => router.back()} hitSlop={12}>
-            <Ionicons name="chevron-down" size={26} color={theme.subtext} />
+            <Ionicons name="chevron-down" size={26} color={t.subtext} />
           </Pressable>
         </View>
 
-        <Diorama spot={spot} size={dioramaSize} locked={!collected} live={collected} radius={24} />
+        {/* Collected dioramas open full-screen for a closer look; locked ones stay a mystery. */}
+        <Pressable
+          disabled={!collected}
+          onPress={() => setViewing(true)}
+          accessibilityRole="imagebutton"
+          accessibilityLabel={`放大檢視 ${spot.name}`}
+        >
+          <Diorama spot={spot} size={dioramaSize} locked={!collected} live={collected} radius={24} />
+          {collected && (
+            <View style={styles.zoomBadge} pointerEvents="none">
+              <Ionicons name="expand" size={14} color={t.text} />
+            </View>
+          )}
+        </Pressable>
 
         <View style={styles.titleRow}>
           <View style={{ flex: 1 }}>
@@ -91,7 +108,7 @@ export default function SpotDetailScreen() {
 
         <View style={styles.tagRow}>
           <View style={[styles.tag, { flexDirection: 'row', alignItems: 'center', gap: 5 }]}>
-            <MaterialCommunityIcons name={category.icon as any} size={13} color={theme.subtext} />
+            <MaterialCommunityIcons name={category.icon as any} size={13} color={t.subtext} />
             <Text style={styles.tagText}>{category.label}</Text>
           </View>
           <View style={[styles.tag, { borderColor: rarity.color }]}>
@@ -118,12 +135,12 @@ export default function SpotDetailScreen() {
               <MaterialCommunityIcons
                 name={'white-balance-sunny' as any}
                 size={13}
-                color={theme.subtext}
+                color={t.subtext}
               />
               <Text style={[styles.collectedVariant, { marginTop: 0 }]}>DAY VARIANT</Text>
             </View>
             <Pressable style={styles.shareBtn} onPress={() => setSharing(true)}>
-              <Ionicons name="share-outline" size={16} color="#1B1405" />
+              <Ionicons name="share-outline" size={16} color={t.onAccent} />
               <Text style={styles.shareBtnText}>分享收藏卡</Text>
             </Pressable>
           </View>
@@ -134,7 +151,7 @@ export default function SpotDetailScreen() {
               <Text style={styles.inRangeText}>● 你已抵達收藏範圍</Text>
             ) : (
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 8 }}>
-                <MaterialCommunityIcons name={'lock' as any} size={12} color={theme.faint} />
+                <MaterialCommunityIcons name={'lock' as any} size={12} color={t.faint} />
                 <Text style={[styles.outRangeText, { marginTop: 0 }]}>
                   需進入 {spot.checkinRadius} m 範圍內才能收藏
                 </Text>
@@ -145,7 +162,7 @@ export default function SpotDetailScreen() {
               onPress={onCheckIn}
               disabled={!inRange}
             >
-              <Text style={[styles.checkinBtnText, !inRange && { color: theme.faint }]}>
+              <Text style={[styles.checkinBtnText, !inRange && { color: t.faint }]}>
                 留下足跡
               </Text>
             </Pressable>
@@ -165,6 +182,7 @@ export default function SpotDetailScreen() {
       </ScrollView>
 
       <UnlockOverlay spot={spot} visible={unlocking} onDone={onUnlockDone} />
+      {viewing && <DioramaViewer spot={spot} onClose={() => setViewing(false)} />}
       {collected && entry && (
         <ShareCardModal
           spot={spot}
@@ -179,75 +197,88 @@ export default function SpotDetailScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: theme.bgElevated },
+const useStyles = makeStyles((t: Palette) =>
+  StyleSheet.create({
+  zoomBadge: {
+    position: 'absolute',
+    right: 12,
+    bottom: 12,
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: t.mode === 'dark' ? 'rgba(11,18,32,0.6)' : 'rgba(255,255,255,0.85)',
+  },
+  safe: { flex: 1, backgroundColor: t.bgElevated },
   container: { padding: 24, paddingBottom: 48 },
   topBar: { marginBottom: 12 },
   titleRow: { flexDirection: 'row', alignItems: 'center', marginTop: 20 },
-  nameEn: { color: theme.accent, fontSize: 13, fontWeight: '700', letterSpacing: 3 },
-  name: { color: theme.text, fontSize: 26, fontWeight: '800', marginTop: 4 },
-  city: { color: theme.subtext, fontSize: 13, marginTop: 4 },
+  nameEn: { color: t.accent, fontSize: 13, fontWeight: '700', letterSpacing: 3 },
+  name: { color: t.text, fontSize: 26, fontWeight: '800', marginTop: 4 },
+  city: { color: t.subtext, fontSize: 13, marginTop: 4 },
   serialBadge: {
-    backgroundColor: theme.accentSoft,
+    backgroundColor: t.accentSoft,
     borderRadius: 12,
     paddingHorizontal: 12,
     paddingVertical: 8,
   },
-  serialText: { color: theme.accent, fontWeight: '800', fontSize: 15, letterSpacing: 1 },
+  serialText: { color: t.accent, fontWeight: '800', fontSize: 15, letterSpacing: 1 },
   tagRow: { flexDirection: 'row', gap: 8, marginTop: 14 },
   tag: {
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     borderRadius: 14,
     paddingHorizontal: 12,
     paddingVertical: 6,
   },
-  tagText: { color: theme.subtext, fontSize: 11, letterSpacing: 1, fontWeight: '600' },
-  description: { color: theme.subtext, fontSize: 14, lineHeight: 22, marginTop: 16 },
+  tagText: { color: t.subtext, fontSize: 11, letterSpacing: 1, fontWeight: '600' },
+  description: { color: t.subtext, fontSize: 14, lineHeight: 22, marginTop: 16 },
   collectedCard: {
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     padding: 20,
     alignItems: 'center',
     marginTop: 24,
   },
-  collectedLabel: { color: theme.success, fontSize: 11, letterSpacing: 4, fontWeight: '700' },
-  collectedDate: { color: theme.text, fontSize: 18, fontWeight: '700', marginTop: 8 },
-  collectedVariant: { color: theme.subtext, fontSize: 12, marginTop: 6, letterSpacing: 1 },
+  collectedLabel: { color: t.success, fontSize: 11, letterSpacing: 4, fontWeight: '700' },
+  collectedDate: { color: t.text, fontSize: 18, fontWeight: '700', marginTop: 8 },
+  collectedVariant: { color: t.subtext, fontSize: 12, marginTop: 6, letterSpacing: 1 },
   shareBtn: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
-    backgroundColor: theme.accent,
+    backgroundColor: t.accent,
     borderRadius: 22,
     paddingHorizontal: 24,
     paddingVertical: 11,
     marginTop: 16,
   },
-  shareBtnText: { color: '#1B1405', fontWeight: '700', fontSize: 14 },
+  shareBtnText: { color: t.onAccent, fontWeight: '700', fontSize: 14 },
   checkinCard: {
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     padding: 20,
     alignItems: 'center',
     marginTop: 24,
   },
-  distText: { color: theme.text, fontSize: 17, fontWeight: '700' },
-  inRangeText: { color: theme.success, fontSize: 13, marginTop: 8 },
-  outRangeText: { color: theme.faint, fontSize: 12, marginTop: 8 },
+  distText: { color: t.text, fontSize: 17, fontWeight: '700' },
+  inRangeText: { color: t.success, fontSize: 13, marginTop: 8 },
+  outRangeText: { color: t.faint, fontSize: 12, marginTop: 8 },
   checkinBtn: {
-    backgroundColor: theme.accent,
+    backgroundColor: t.accent,
     borderRadius: 26,
     paddingHorizontal: 44,
     paddingVertical: 14,
     marginTop: 16,
   },
-  checkinBtnDisabled: { backgroundColor: theme.locked },
-  checkinBtnText: { color: '#1B1405', fontSize: 16, fontWeight: '800', letterSpacing: 2 },
+  checkinBtnDisabled: { backgroundColor: t.locked },
+  checkinBtnText: { color: t.onAccent, fontSize: 16, fontWeight: '800', letterSpacing: 2 },
   devBtn: { marginTop: 14 },
-  devBtnText: { color: theme.faint, fontSize: 12 },
-});
+  devBtnText: { color: t.faint, fontSize: 12 },
+  }),
+);

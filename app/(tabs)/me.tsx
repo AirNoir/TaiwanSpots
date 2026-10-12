@@ -12,11 +12,21 @@ import { ACHIEVEMENTS } from '../../src/achievements';
 import { spotById } from '../../src/data/spots';
 import { distanceMeters } from '../../src/geo';
 import { useStore } from '../../src/store';
-import { categoryMeta, theme } from '../../src/theme';
+import { Palette, ThemeMode, categoryMeta, makeStyles, useTheme } from '../../src/theme';
+
+const THEME_OPTIONS: { mode: ThemeMode; label: string; icon: string }[] = [
+  { mode: 'light', label: '淺色', icon: 'white-balance-sunny' },
+  { mode: 'dark', label: '深色', icon: 'weather-night' },
+];
 
 export default function MeScreen() {
+  const t = useTheme();
+  const styles = useStyles();
   const collections = useStore((s) => s.collections);
   const reset = useStore((s) => s.reset);
+  const unlockAll = useStore((s) => s.unlockAll);
+  const themeMode = useStore((s) => s.themeMode);
+  const setThemeMode = useStore((s) => s.setThemeMode);
 
   const collected = useMemo(
     () =>
@@ -56,7 +66,7 @@ export default function MeScreen() {
     <SafeAreaView style={styles.safe} edges={['top']}>
       <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
         <View style={styles.avatar}>
-          <MaterialCommunityIcons name={'compass-rose' as any} size={40} color={theme.accent} />
+          <MaterialCommunityIcons name={'compass-rose' as any} size={40} color={t.accent} />
         </View>
         <Text style={styles.name}>TRAVELER</Text>
         <Text style={styles.role}>Taiwan Explorer</Text>
@@ -84,7 +94,7 @@ export default function MeScreen() {
                   <MaterialCommunityIcons
                     name={categoryMeta[cat].icon as any}
                     size={17}
-                    color={theme.subtext}
+                    color={t.subtext}
                   />
                   <Text style={styles.catName}>{categoryMeta[cat].zh}</Text>
                 </View>
@@ -103,7 +113,7 @@ export default function MeScreen() {
               <MaterialCommunityIcons
                 name={(done ? a.icon : 'lock') as any}
                 size={26}
-                color={done ? theme.accent : theme.faint}
+                color={done ? t.accent : t.faint}
               />
               <View style={{ flex: 1, marginLeft: 14 }}>
                 <Text style={styles.achTitle}>{a.title}</Text>
@@ -113,18 +123,42 @@ export default function MeScreen() {
                     style={[
                       styles.achBarFill,
                       { width: `${Math.min(100, (now / goal) * 100)}%` },
-                      done && { backgroundColor: theme.success },
+                      done && { backgroundColor: t.success },
                     ]}
                   />
                 </View>
               </View>
-              <Text style={[styles.achProgress, done && { color: theme.success }]}>
+              <Text style={[styles.achProgress, done && { color: t.success }]}>
                 {now}/{goal}
               </Text>
             </View>
           );
         })}
 
+        <Text style={styles.sectionTitle}>APPEARANCE</Text>
+        <View style={styles.segment}>
+          {THEME_OPTIONS.map((o) => {
+            const on = o.mode === themeMode;
+            return (
+              <Pressable
+                key={o.mode}
+                style={[styles.segmentItem, on && styles.segmentItemOn]}
+                onPress={() => setThemeMode(o.mode)}
+                accessibilityRole="button"
+                accessibilityState={{ selected: on }}
+              >
+                <MaterialCommunityIcons name={o.icon as any} size={16} color={on ? t.onAccent : t.subtext} />
+                <Text style={[styles.segmentText, on && styles.segmentTextOn]}>{o.label}</Text>
+              </Pressable>
+            );
+          })}
+        </View>
+
+        {__DEV__ && (
+          <Pressable style={styles.resetBtn} onPress={unlockAll}>
+            <Text style={styles.resetText}>解鎖全部景點（開發用）</Text>
+          </Pressable>
+        )}
         <Pressable style={styles.resetBtn} onPress={reset}>
           <Text style={styles.resetText}>重置示範資料</Text>
         </Pressable>
@@ -137,47 +171,48 @@ export default function MeScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: theme.bg },
+const useStyles = makeStyles((t: Palette) =>
+  StyleSheet.create({
+  safe: { flex: 1, backgroundColor: t.bg },
   container: { padding: 24, paddingBottom: 48, alignItems: 'stretch' },
   avatar: {
     width: 84,
     height: 84,
     borderRadius: 42,
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
     marginTop: 12,
   },
   name: {
-    color: theme.text,
+    color: t.text,
     fontSize: 22,
     fontWeight: '800',
     letterSpacing: 3,
     textAlign: 'center',
     marginTop: 14,
   },
-  role: { color: theme.subtext, fontSize: 13, textAlign: 'center', marginTop: 4 },
+  role: { color: t.subtext, fontSize: 13, textAlign: 'center', marginTop: 4 },
   statsRow: {
     flexDirection: 'row',
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     paddingVertical: 18,
     marginTop: 24,
   },
   statCell: { flex: 1, alignItems: 'center' },
-  statNum: { color: theme.text, fontSize: 22, fontWeight: '800' },
-  statLabel: { color: theme.faint, fontSize: 11, marginTop: 4 },
+  statNum: { color: t.text, fontSize: 22, fontWeight: '800' },
+  statLabel: { color: t.faint, fontSize: 11, marginTop: 4 },
   card: {
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     paddingVertical: 8,
     paddingHorizontal: 18,
     marginTop: 14,
@@ -187,30 +222,30 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingVertical: 8,
   },
-  catName: { color: theme.text, fontSize: 14 },
-  catCount: { color: theme.accent, fontSize: 14, fontWeight: '700' },
-  sectionTitle: { color: theme.faint, fontSize: 12, letterSpacing: 3, marginTop: 30, marginBottom: 12 },
+  catName: { color: t.text, fontSize: 14 },
+  catCount: { color: t.accent, fontSize: 14, fontWeight: '700' },
+  sectionTitle: { color: t.faint, fontSize: 12, letterSpacing: 3, marginTop: 30, marginBottom: 12 },
   achRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: theme.card,
+    backgroundColor: t.card,
     borderRadius: 18,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
     padding: 14,
     marginBottom: 10,
   },
-  achTitle: { color: theme.text, fontSize: 14, fontWeight: '700', letterSpacing: 1 },
-  achZh: { color: theme.subtext, fontSize: 12, marginTop: 2 },
+  achTitle: { color: t.text, fontSize: 14, fontWeight: '700', letterSpacing: 1 },
+  achZh: { color: t.subtext, fontSize: 12, marginTop: 2 },
   achBarTrack: {
     height: 4,
     borderRadius: 2,
-    backgroundColor: theme.locked,
+    backgroundColor: t.locked,
     marginTop: 8,
     overflow: 'hidden',
   },
-  achBarFill: { height: 4, borderRadius: 2, backgroundColor: theme.accent },
-  achProgress: { color: theme.subtext, fontSize: 12, fontWeight: '600', marginLeft: 10 },
+  achBarFill: { height: 4, borderRadius: 2, backgroundColor: t.accent },
+  achProgress: { color: t.subtext, fontSize: 12, fontWeight: '600', marginLeft: 10 },
   resetBtn: {
     alignSelf: 'center',
     marginTop: 28,
@@ -218,15 +253,37 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 18,
     borderWidth: 1,
-    borderColor: theme.cardBorder,
+    borderColor: t.cardBorder,
   },
-  resetText: { color: theme.faint, fontSize: 13 },
+  resetText: { color: t.faint, fontSize: 13 },
+  segment: {
+    flexDirection: 'row',
+    backgroundColor: t.card,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: t.cardBorder,
+    padding: 4,
+    gap: 4,
+  },
+  segmentItem: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    paddingVertical: 10,
+    borderRadius: 12,
+  },
+  segmentItemOn: { backgroundColor: t.accent },
+  segmentText: { color: t.subtext, fontSize: 14, fontWeight: '600' },
+  segmentTextOn: { color: t.onAccent },
   footer: {
-    color: theme.faint,
+    color: t.faint,
     fontSize: 12,
     textAlign: 'center',
     marginTop: 32,
     lineHeight: 18,
     fontStyle: 'italic',
   },
-});
+  }),
+);
