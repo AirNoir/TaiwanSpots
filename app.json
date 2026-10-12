@@ -12,7 +12,8 @@
       "supportsTablet": false,
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Islandia 需要你的位置,才能在你抵達景點時解鎖收藏。"
-      }
+      },
+      "bundleIdentifier": "com.airnoir.islandia"
     },
     "android": {
       "adaptiveIcon": {
@@ -35,7 +36,29 @@
         {
           "locationWhenInUsePermission": "Islandia 需要你的位置,才能在你抵達景點時解鎖收藏。"
         }
-      ]
+      ],
+      [
+        "expo-widgets",
+        {
+          "widgets": [
+            {
+              "name": "IslandiaWidget",
+              "displayName": "Islandia",
+              "description": "每天一個收藏模型，以及你的收集進度。",
+              "ios": {
+                "supportedFamilies": [
+                  "systemSmall",
+                  "systemMedium",
+                  "accessoryRectangular",
+                  "accessoryInline"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "expo-asset",
+      "expo-font"
     ]
   }
 }

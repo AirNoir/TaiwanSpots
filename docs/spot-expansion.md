@@ -45,3 +45,12 @@
 
 新景點只有資料和 blueprint。App 會顯示 procedural diorama、地圖用一般標記，也不能放大檢視。
 生圖照 `docs/art-pipeline.md`：`npm run assets:prompt -- <id>` 取 prompt，搭配 MASTER_STYLE_REFERENCE 和參考照片生成，放好圖後把 blueprint 改成 `references-collected`。
+
+## 每日排程（Claude Code routine）
+
+用 Claude Code 的 `/schedule` 建立每天一次的 routine（repo：`AirNoir/TaiwanSpots`），prompt：
+
+> 在 `spots/expansion` 分支工作（不存在就從 `main` 建立；存在就先 merge `origin/main`）。
+> 依照 `docs/spot-expansion.md` 新增 `docs/spot-roadmap.json` 裡 `status: "planned"` 且 `batch` 最小的那一批景點。
+> 所有檢查通過後 commit 並 push 到 `spots/expansion`；若還沒有從 `spots/expansion` 到 `main` 的 PR 就開一個，已經有就在 PR 留言列出今天新增的景點和需要人工確認的座標。
+> 如果 roadmap 已經沒有 planned 的景點，什麼都不做並回報「全部完成」。

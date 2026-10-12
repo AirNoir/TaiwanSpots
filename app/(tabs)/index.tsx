@@ -17,6 +17,7 @@ import { distanceMeters, formatDistance } from '../../src/geo';
 import { useStore } from '../../src/store';
 import { makeStyles, Palette, useTheme } from '../../src/theme';
 import { useLocation } from '../../src/useLocation';
+import { useWidgetSync } from '../../src/widgets/sync';
 
 const { width: SCREEN_W } = Dimensions.get('window');
 
@@ -33,7 +34,8 @@ export default function WorldScreen() {
   const styles = useStyles();
   const router = useRouter();
   const collections = useStore((s) => s.collections);
-  const { location } = useLocation();
+  const { location, isFallback } = useLocation();
+  useWidgetSync(location, !isFallback);
 
   const collectedIds = useMemo(() => new Set(Object.keys(collections)), [collections]);
   const count = collectedIds.size;
