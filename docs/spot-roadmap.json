@@ -1,0 +1,1221 @@
+{
+  "target": 159,
+  "batchSize": 15,
+  "spots": [
+    {
+      "batch": 1,
+      "id": "xiangshan",
+      "name": "象山",
+      "city": "台北・信義",
+      "region": "north",
+      "category": "mountain",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "longshan-temple",
+      "name": "艋舺龍山寺",
+      "city": "台北・萬華",
+      "region": "north",
+      "category": "historic",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "cks-memorial",
+      "name": "中正紀念堂",
+      "city": "台北・中正",
+      "region": "north",
+      "category": "landmark",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "ximending",
+      "name": "西門町",
+      "city": "台北・萬華",
+      "region": "north",
+      "category": "culture",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "shengxing-station",
+      "name": "勝興車站",
+      "city": "苗栗・三義",
+      "region": "central",
+      "category": "transport",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "longteng-bridge",
+      "name": "龍騰斷橋",
+      "city": "苗栗・三義",
+      "region": "central",
+      "category": "historic",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "sanyi-woodcarving",
+      "name": "三義木雕老街",
+      "city": "苗栗・三義",
+      "region": "central",
+      "category": "culture",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "nanzhuang",
+      "name": "南庄老街",
+      "city": "苗栗・南庄",
+      "region": "central",
+      "category": "culture",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "hinoki-village",
+      "name": "檜意森活村",
+      "city": "嘉義・東區",
+      "region": "south",
+      "category": "historic",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "fenqihu",
+      "name": "奮起湖",
+      "city": "嘉義・竹崎",
+      "region": "south",
+      "category": "transport",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "dongshi",
+      "name": "東石漁人碼頭",
+      "city": "嘉義・東石",
+      "region": "south",
+      "category": "ocean",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "npm-southern",
+      "name": "故宮南院",
+      "city": "嘉義・太保",
+      "region": "south",
+      "category": "culture",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "guishan-island",
+      "name": "龜山島",
+      "city": "宜蘭・頭城",
+      "region": "east",
+      "category": "ocean",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "waiao",
+      "name": "外澳沙灘",
+      "city": "宜蘭・頭城",
+      "region": "east",
+      "category": "ocean",
+      "status": "added"
+    },
+    {
+      "batch": 1,
+      "id": "jiaoxi",
+      "name": "礁溪溫泉",
+      "city": "宜蘭・礁溪",
+      "region": "east",
+      "category": "nature",
+      "status": "added"
+    },
+    {
+      "batch": 2,
+      "id": "shilin-night-market",
+      "name": "士林夜市",
+      "city": "台北・士林",
+      "region": "north",
+      "category": "food",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "beitou-thermal-valley",
+      "name": "北投地熱谷",
+      "city": "台北・北投",
+      "region": "north",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "qingtiangang",
+      "name": "擎天崗",
+      "city": "台北・陽明山",
+      "region": "north",
+      "category": "mountain",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "maokong",
+      "name": "貓空纜車",
+      "city": "台北・文山",
+      "region": "north",
+      "category": "transport",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "baishatun",
+      "name": "白沙屯拱天宮",
+      "city": "苗栗・通霄",
+      "region": "central",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "huoyanshan",
+      "name": "火炎山",
+      "city": "苗栗・三義",
+      "region": "central",
+      "category": "mountain",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "taichung-opera",
+      "name": "台中國家歌劇院",
+      "city": "台中・西屯",
+      "region": "central",
+      "category": "landmark",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "miyahara",
+      "name": "宮原眼科",
+      "city": "台中・中區",
+      "region": "central",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "wenhua-night-market",
+      "name": "文化路夜市",
+      "city": "嘉義・西區",
+      "region": "south",
+      "category": "food",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "tainan-confucius",
+      "name": "台南孔廟",
+      "city": "台南・中西",
+      "region": "south",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "shennong-street",
+      "name": "神農街",
+      "city": "台南・中西",
+      "region": "south",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "anping-treehouse",
+      "name": "安平樹屋",
+      "city": "台南・安平",
+      "region": "south",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "nccta",
+      "name": "國立傳統藝術中心",
+      "city": "宜蘭・五結",
+      "region": "east",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "luodong-night-market",
+      "name": "羅東夜市",
+      "city": "宜蘭・羅東",
+      "region": "east",
+      "category": "food",
+      "status": "planned"
+    },
+    {
+      "batch": 2,
+      "id": "taipingshan",
+      "name": "太平山",
+      "city": "宜蘭・大同",
+      "region": "east",
+      "category": "mountain",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "huashan-1914",
+      "name": "華山1914文創園區",
+      "city": "台北・中正",
+      "region": "north",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "sun-yat-sen-memorial",
+      "name": "國父紀念館",
+      "city": "台北・信義",
+      "region": "north",
+      "category": "landmark",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "raohe-night-market",
+      "name": "饒河街夜市",
+      "city": "台北・松山",
+      "region": "north",
+      "category": "food",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "baoan-temple",
+      "name": "大龍峒保安宮",
+      "city": "台北・大同",
+      "region": "north",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "fengjia",
+      "name": "逢甲夜市",
+      "city": "台中・西屯",
+      "region": "central",
+      "category": "food",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "shenji-village",
+      "name": "審計新村",
+      "city": "台中・西區",
+      "region": "central",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "luce-chapel",
+      "name": "路思義教堂",
+      "city": "台中・西屯",
+      "region": "central",
+      "category": "landmark",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "wufeng-lin",
+      "name": "霧峰林家花園",
+      "city": "台中・霧峰",
+      "region": "central",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "chimei-museum",
+      "name": "奇美博物館",
+      "city": "台南・仁德",
+      "region": "south",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "qigu-salt",
+      "name": "七股鹽山",
+      "city": "台南・七股",
+      "region": "south",
+      "category": "hidden",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "jingzaijiao",
+      "name": "井仔腳瓦盤鹽田",
+      "city": "台南・北門",
+      "region": "south",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "sicao",
+      "name": "四草綠色隧道",
+      "city": "台南・安南",
+      "region": "south",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "nanfangao",
+      "name": "南方澳漁港",
+      "city": "宜蘭・蘇澳",
+      "region": "east",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "jimmy-square",
+      "name": "幾米廣場",
+      "city": "宜蘭・宜蘭市",
+      "region": "east",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 3,
+      "id": "suao-cold-spring",
+      "name": "蘇澳冷泉",
+      "city": "宜蘭・蘇澳",
+      "region": "east",
+      "category": "hidden",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "pingxi",
+      "name": "平溪天燈老街",
+      "city": "新北・平溪",
+      "region": "north",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "shifen-waterfall",
+      "name": "十分瀑布",
+      "city": "新北・平溪",
+      "region": "north",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "houtong",
+      "name": "猴硐貓村",
+      "city": "新北・瑞芳",
+      "region": "north",
+      "category": "hidden",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "jinguashi",
+      "name": "金瓜石黃金博物館",
+      "city": "新北・瑞芳",
+      "region": "north",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "dajia-jenn-lann",
+      "name": "大甲鎮瀾宮",
+      "city": "台中・大甲",
+      "region": "central",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "wuqi-port",
+      "name": "梧棲漁港",
+      "city": "台中・梧棲",
+      "region": "central",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "xinshe",
+      "name": "新社花海",
+      "city": "台中・新社",
+      "region": "central",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "guguan",
+      "name": "谷關溫泉",
+      "city": "台中・和平",
+      "region": "central",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "wushantou",
+      "name": "烏山頭水庫",
+      "city": "台南・官田",
+      "region": "south",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "hayashi",
+      "name": "林百貨",
+      "city": "台南・中西",
+      "region": "south",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "lotus-pond",
+      "name": "蓮池潭龍虎塔",
+      "city": "高雄・左營",
+      "region": "south",
+      "category": "landmark",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "fo-guang-shan",
+      "name": "佛光山",
+      "city": "高雄・大樹",
+      "region": "south",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "lanyang-museum",
+      "name": "蘭陽博物館",
+      "city": "宜蘭・頭城",
+      "region": "east",
+      "category": "landmark",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "dongdamen",
+      "name": "東大門夜市",
+      "city": "花蓮・花蓮市",
+      "region": "east",
+      "category": "food",
+      "status": "planned"
+    },
+    {
+      "batch": 4,
+      "id": "pine-garden",
+      "name": "松園別館",
+      "city": "花蓮・花蓮市",
+      "region": "east",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "yinyang-sea",
+      "name": "水湳洞陰陽海",
+      "city": "新北・瑞芳",
+      "region": "north",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "bitou-cape",
+      "name": "鼻頭角步道",
+      "city": "新北・瑞芳",
+      "region": "north",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "fulong",
+      "name": "福隆海水浴場",
+      "city": "新北・貢寮",
+      "region": "north",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "sanxia-zushi",
+      "name": "三峽祖師廟",
+      "city": "新北・三峽",
+      "region": "north",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "wuling-farm",
+      "name": "武陵農場",
+      "city": "台中・和平",
+      "region": "central",
+      "category": "mountain",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "roundhouse",
+      "name": "彰化扇形車庫",
+      "city": "彰化・彰化市",
+      "region": "central",
+      "category": "transport",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "baguashan-buddha",
+      "name": "八卦山大佛",
+      "city": "彰化・彰化市",
+      "region": "central",
+      "category": "landmark",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "tianwei",
+      "name": "田尾公路花園",
+      "city": "彰化・田尾",
+      "region": "central",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "formosa-boulevard",
+      "name": "美麗島站光之穹頂",
+      "city": "高雄・新興",
+      "region": "south",
+      "category": "transport",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "british-consulate",
+      "name": "打狗英國領事館",
+      "city": "高雄・鼓山",
+      "region": "south",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "sizihwan",
+      "name": "西子灣",
+      "city": "高雄・鼓山",
+      "region": "south",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "liuhe",
+      "name": "六合夜市",
+      "city": "高雄・新興",
+      "region": "south",
+      "category": "food",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "liyu-lake",
+      "name": "鯉魚潭",
+      "city": "花蓮・壽豐",
+      "region": "east",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "liushidan",
+      "name": "六十石山",
+      "city": "花蓮・富里",
+      "region": "east",
+      "category": "mountain",
+      "status": "planned"
+    },
+    {
+      "batch": 5,
+      "id": "lintianshan",
+      "name": "林田山林業文化園區",
+      "city": "花蓮・鳳林",
+      "region": "east",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "yingge",
+      "name": "鶯歌陶瓷老街",
+      "city": "新北・鶯歌",
+      "region": "north",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "wulai",
+      "name": "烏來瀑布",
+      "city": "新北・烏來",
+      "region": "north",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "shimen-cave",
+      "name": "石門洞",
+      "city": "新北・石門",
+      "region": "north",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "keelung-miaokou",
+      "name": "基隆廟口夜市",
+      "city": "基隆・仁愛",
+      "region": "north",
+      "category": "food",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "wanggong",
+      "name": "王功漁港",
+      "city": "彰化・芳苑",
+      "region": "central",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "jiji-station",
+      "name": "集集車站",
+      "city": "南投・集集",
+      "region": "central",
+      "category": "transport",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "checheng",
+      "name": "車埕車站",
+      "city": "南投・水里",
+      "region": "central",
+      "category": "transport",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "xitou",
+      "name": "溪頭自然教育園區",
+      "city": "南投・鹿谷",
+      "region": "central",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "moon-world",
+      "name": "田寮月世界",
+      "city": "高雄・田寮",
+      "region": "south",
+      "category": "hidden",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "meinong",
+      "name": "美濃",
+      "city": "高雄・美濃",
+      "region": "south",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "weiwuying",
+      "name": "衛武營國家藝術文化中心",
+      "city": "高雄・鳳山",
+      "region": "south",
+      "category": "landmark",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "qishan",
+      "name": "旗山老街",
+      "city": "高雄・旗山",
+      "region": "south",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "shitiping",
+      "name": "石梯坪",
+      "city": "花蓮・豐濱",
+      "region": "east",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "tropic-cancer-hualien",
+      "name": "北回歸線標誌公園",
+      "city": "花蓮・瑞穗",
+      "region": "east",
+      "category": "landmark",
+      "status": "planned"
+    },
+    {
+      "batch": 6,
+      "id": "mukumugi",
+      "name": "慕谷慕魚",
+      "city": "花蓮・秀林",
+      "region": "east",
+      "category": "hidden",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "zhengbin-port",
+      "name": "正濱漁港彩色屋",
+      "city": "基隆・中正",
+      "region": "north",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "heping-island",
+      "name": "和平島公園",
+      "city": "基隆・中正",
+      "region": "north",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "lin-family-garden",
+      "name": "林本源園邸",
+      "city": "新北・板橋",
+      "region": "north",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "daxi",
+      "name": "大溪老街",
+      "city": "桃園・大溪",
+      "region": "north",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "sun-link-sea",
+      "name": "杉林溪",
+      "city": "南投・竹山",
+      "region": "central",
+      "category": "mountain",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "paper-dome",
+      "name": "埔里紙教堂",
+      "city": "南投・埔里",
+      "region": "central",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "formosan-aboriginal-village",
+      "name": "九族文化村",
+      "city": "南投・魚池",
+      "region": "central",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "maolin",
+      "name": "茂林紫蝶幽谷",
+      "city": "高雄・茂林",
+      "region": "south",
+      "category": "hidden",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "dapeng-bay",
+      "name": "大鵬灣",
+      "city": "屏東・東港",
+      "region": "south",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "xiaoliuqiu",
+      "name": "小琉球花瓶岩",
+      "city": "屏東・琉球",
+      "region": "south",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "donggang",
+      "name": "東港華僑市場",
+      "city": "屏東・東港",
+      "region": "south",
+      "category": "food",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "chike-mountain",
+      "name": "赤科山",
+      "city": "花蓮・玉里",
+      "region": "east",
+      "category": "mountain",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "tiehua-village",
+      "name": "鐵花村",
+      "city": "台東・台東市",
+      "region": "east",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "taitung-forest-park",
+      "name": "台東森林公園",
+      "city": "台東・台東市",
+      "region": "east",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 7,
+      "id": "duoliang",
+      "name": "多良車站",
+      "city": "台東・太麻里",
+      "region": "east",
+      "category": "transport",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "shimen-reservoir",
+      "name": "石門水庫",
+      "city": "桃園・龍潭",
+      "region": "north",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "lalashan",
+      "name": "拉拉山神木區",
+      "city": "桃園・復興",
+      "region": "north",
+      "category": "mountain",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "xiaowulai",
+      "name": "小烏來天空步道",
+      "city": "桃園・復興",
+      "region": "north",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "hsinchu-chenghuang",
+      "name": "新竹都城隍廟",
+      "city": "新竹・北區",
+      "region": "north",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "aowanda",
+      "name": "奧萬大",
+      "city": "南投・仁愛",
+      "region": "central",
+      "category": "mountain",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "yushan",
+      "name": "玉山主峰",
+      "city": "南投・信義",
+      "region": "central",
+      "category": "mountain",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "beigang-chaotian",
+      "name": "北港朝天宮",
+      "city": "雲林・北港",
+      "region": "central",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "eluanbi",
+      "name": "鵝鑾鼻燈塔",
+      "city": "屏東・恆春",
+      "region": "south",
+      "category": "landmark",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "longpan",
+      "name": "龍磐公園",
+      "city": "屏東・恆春",
+      "region": "south",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "maobitou",
+      "name": "貓鼻頭",
+      "city": "屏東・恆春",
+      "region": "south",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "hengchun-old-town",
+      "name": "恆春古城",
+      "city": "屏東・恆春",
+      "region": "south",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "jialulan",
+      "name": "加路蘭",
+      "city": "台東・台東市",
+      "region": "east",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "water-flowing-up",
+      "name": "水往上流",
+      "city": "台東・東河",
+      "region": "east",
+      "category": "hidden",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "xiaoyeliu",
+      "name": "小野柳",
+      "city": "台東・台東市",
+      "region": "east",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 8,
+      "id": "luye-highland",
+      "name": "鹿野高台",
+      "city": "台東・鹿野",
+      "region": "east",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "neiwan",
+      "name": "內灣老街",
+      "city": "新竹・橫山",
+      "region": "north",
+      "category": "transport",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "beipu",
+      "name": "北埔老街",
+      "city": "新竹・北埔",
+      "region": "north",
+      "category": "historic",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "nanliao",
+      "name": "南寮漁港",
+      "city": "新竹・北區",
+      "region": "north",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "smangus",
+      "name": "司馬庫斯",
+      "city": "新竹・尖石",
+      "region": "north",
+      "category": "hidden",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "gukeng",
+      "name": "古坑綠色隧道",
+      "city": "雲林・古坑",
+      "region": "central",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "xiluo-bridge",
+      "name": "西螺大橋",
+      "city": "雲林・西螺",
+      "region": "central",
+      "category": "transport",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "caoling",
+      "name": "草嶺",
+      "city": "雲林・古坑",
+      "region": "central",
+      "category": "hidden",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "wutai",
+      "name": "霧台",
+      "city": "屏東・霧台",
+      "region": "south",
+      "category": "hidden",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "sichongxi",
+      "name": "四重溪溫泉",
+      "city": "屏東・車城",
+      "region": "south",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "nmmba",
+      "name": "海生館",
+      "city": "屏東・車城",
+      "region": "south",
+      "category": "culture",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "houbihu",
+      "name": "後壁湖漁港",
+      "city": "屏東・恆春",
+      "region": "south",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "zhiben",
+      "name": "知本溫泉",
+      "city": "台東・卑南",
+      "region": "east",
+      "category": "nature",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "jinzun",
+      "name": "金樽漁港",
+      "city": "台東・東河",
+      "region": "east",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "green-island",
+      "name": "綠島",
+      "city": "台東・綠島",
+      "region": "east",
+      "category": "ocean",
+      "status": "planned"
+    },
+    {
+      "batch": 9,
+      "id": "lanyu",
+      "name": "蘭嶼",
+      "city": "台東・蘭嶼",
+      "region": "east",
+      "category": "hidden",
+      "status": "planned"
+    }
+  ]
+}

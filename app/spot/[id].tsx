@@ -14,6 +14,7 @@ import { Diorama } from '../../src/components/Diorama';
 import { DioramaViewer } from '../../src/components/DioramaViewer';
 import { ShareCardModal } from '../../src/components/ShareCardModal';
 import { UnlockOverlay } from '../../src/components/UnlockOverlay';
+import { collectionImage } from '../../src/data/spotAssets';
 import { spotById, SPOTS } from '../../src/data/spots';
 import { distanceMeters, formatDistance } from '../../src/geo';
 import { useStore } from '../../src/store';
@@ -58,6 +59,8 @@ export default function SpotDetailScreen() {
   const rarity = rarityMeta[spot.rarity];
   const category = categoryMeta[spot.category];
   const dioramaSize = SCREEN_W - 48;
+  // Spots whose art is still pending only have the procedural diorama — nothing to zoom into.
+  const zoomable = collected && !!collectionImage(spot.id);
 
   const onCheckIn = () => {
     if (!inRange || collected) return;
@@ -80,13 +83,13 @@ export default function SpotDetailScreen() {
 
         {/* Collected dioramas open full-screen for a closer look; locked ones stay a mystery. */}
         <Pressable
-          disabled={!collected}
+          disabled={!zoomable}
           onPress={() => setViewing(true)}
           accessibilityRole="imagebutton"
           accessibilityLabel={`放大檢視 ${spot.name}`}
         >
           <Diorama spot={spot} size={dioramaSize} locked={!collected} live={collected} radius={24} />
-          {collected && (
+          {zoomable && (
             <View style={styles.zoomBadge} pointerEvents="none">
               <Ionicons name="expand" size={14} color={t.text} />
             </View>

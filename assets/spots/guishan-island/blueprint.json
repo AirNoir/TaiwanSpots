@@ -1,0 +1,48 @@
+{
+  "spotId": "guishan-island",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Guishan Island",
+    "silhouette": "Volcanic island shaped like a turtle with a high head peak and low tail"
+  },
+  "crop": "The island seen from the sea with its turtle shape. Not the mainland coast.",
+  "heroScale": 1,
+  "orientation": "verify: turtle head points east/south-east",
+  "lockedGeometry": [
+    "steep head peak",
+    "low tail extending west",
+    "small lagoon and harbour on the south side"
+  ],
+  "lockedIdentity": [
+    "turtle-shaped profile",
+    "green slopes with cliff faces",
+    "sulphur plume at the turtle head"
+  ],
+  "doNotInvent": [
+    "bridges to the mainland",
+    "buildings on the summit",
+    "sandy beaches around the island"
+  ],
+  "allowedMiniatureDetails": [
+    "small tour boats",
+    "dolphins",
+    "waves"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Turtle-shaped green island with a small plume"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

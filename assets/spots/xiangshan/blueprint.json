@@ -1,0 +1,48 @@
+{
+  "spotId": "xiangshan",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Six Giant Rocks viewpoint",
+    "silhouette": "Cluster of large rounded boulders on a forested ridge with Taipei 101 rising across the valley"
+  },
+  "crop": "The Six Giant Rocks viewpoint on Elephant Mountain with the city and Taipei 101 behind it. Not the whole trail network.",
+  "heroScale": 1,
+  "orientation": "verify: Taipei 101 sits north-west of the viewpoint, across the Xinyi district",
+  "lockedGeometry": [
+    "forested ridge top",
+    "stone stairs climbing the slope",
+    "city basin below to the north-west"
+  ],
+  "lockedIdentity": [
+    "six large sandstone boulders",
+    "Taipei 101 clearly visible as the backdrop"
+  ],
+  "doNotInvent": [
+    "cable cars",
+    "temples on the summit",
+    "lakes",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny hikers on boulders",
+    "photographers with tripods",
+    "subtropical broadleaf trees"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "The boulder cluster with a small Taipei 101 behind it"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

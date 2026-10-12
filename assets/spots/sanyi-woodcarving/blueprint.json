@@ -1,0 +1,46 @@
+{
+  "spotId": "sanyi-woodcarving",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Sanyi Wood Sculpture Museum",
+    "silhouette": "Low modern museum with a wooden facade among shophouses selling carvings"
+  },
+  "crop": "The woodcarving street with the museum at its end. Not the whole township.",
+  "heroScale": 1,
+  "orientation": "verify: museum position relative to the old street",
+  "lockedGeometry": [
+    "old street lined with low shophouses",
+    "museum building at the end of the street",
+    "hills around the town"
+  ],
+  "lockedIdentity": [
+    "large wooden carvings displayed outside shops",
+    "camphor wood colour palette"
+  ],
+  "doNotInvent": [
+    "temples as the hero",
+    "skyscrapers",
+    "rivers"
+  ],
+  "allowedMiniatureDetails": [
+    "carvers at work",
+    "wooden figures and furniture outside shops"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Big carved wooden figure in front of a little shop"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

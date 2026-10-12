@@ -1,0 +1,47 @@
+{
+  "spotId": "ximending",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "The Red House",
+    "silhouette": "Octagonal red-brick building with a white-trimmed facade at the entrance of a pedestrian district"
+  },
+  "crop": "The Red House and the start of the Ximen pedestrian street. Not the whole shopping district.",
+  "heroScale": 1,
+  "orientation": "verify: Red House sits at the west end of Chengdu Road plaza",
+  "lockedGeometry": [
+    "octagonal building beside a plaza",
+    "pedestrian streets fanning out",
+    "MRT exit near the plaza"
+  ],
+  "lockedIdentity": [
+    "red brick octagon with cross-shaped hall behind",
+    "white decorative bands"
+  ],
+  "doNotInvent": [
+    "temples",
+    "neon skyscrapers",
+    "rivers"
+  ],
+  "allowedMiniatureDetails": [
+    "crowds of tiny shoppers",
+    "street performers",
+    "signboards without readable text"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "The red-brick octagonal Red House"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

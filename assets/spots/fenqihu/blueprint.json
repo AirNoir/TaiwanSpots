@@ -1,0 +1,48 @@
+{
+  "spotId": "fenqihu",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Fenqihu station and old street",
+    "silhouette": "Mountain railway station with a steam locomotive in a garage among cypress and bamboo"
+  },
+  "crop": "The station area of the forest railway with the old street and fog. Not the high Alishan forest.",
+  "heroScale": 1,
+  "orientation": "verify: old street sits uphill from the station",
+  "lockedGeometry": [
+    "narrow-gauge tracks at the station",
+    "steep forested slope",
+    "old street close to the station"
+  ],
+  "lockedIdentity": [
+    "small red/orange forest railway train",
+    "steam locomotive garage",
+    "bamboo and cedar forest"
+  ],
+  "doNotInvent": [
+    "snow",
+    "large lakes",
+    "temples"
+  ],
+  "allowedMiniatureDetails": [
+    "passengers with lunchboxes",
+    "mist",
+    "railway workers"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Small red forest train at a mountain platform"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "spotId": "dongshi",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Dongshi Fisherman's Wharf",
+    "silhouette": "Harbour boardwalk with a seaside promenade facing oyster racks in a lagoon"
+  },
+  "crop": "The wharf and lagoon with oyster racks. Not the whole coastline.",
+  "heroScale": 1,
+  "orientation": "verify: lagoon faces west to the Taiwan Strait",
+  "lockedGeometry": [
+    "flat harbour edge",
+    "lagoon with oyster racks",
+    "sandbar islands offshore"
+  ],
+  "lockedIdentity": [
+    "rows of bamboo oyster racks",
+    "small fishing boats",
+    "sunset over the strait"
+  ],
+  "doNotInvent": [
+    "cliffs",
+    "mountains near the sea",
+    "large ships"
+  ],
+  "allowedMiniatureDetails": [
+    "fishermen with oysters",
+    "seabirds",
+    "bicycles"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Fishing boat beside a bamboo oyster rack"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

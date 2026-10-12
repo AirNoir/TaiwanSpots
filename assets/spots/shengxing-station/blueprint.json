@@ -1,0 +1,48 @@
+{
+  "spotId": "shengxing-station",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Shengxing Station building",
+    "silhouette": "Small Japanese-era wooden station house with a dark tiled roof beside a single track"
+  },
+  "crop": "The station house, platform and track with the old-street slope behind. Not the tunnels or the bridge ruins.",
+  "heroScale": 1,
+  "orientation": "verify: platform and track run along the hillside",
+  "lockedGeometry": [
+    "single disused track along the platform",
+    "hillside old street rising behind",
+    "forested hills around"
+  ],
+  "lockedIdentity": [
+    "dark grey tiled roof on wooden walls",
+    "station name board without readable text",
+    "highest-point marker beside the track"
+  ],
+  "doNotInvent": [
+    "running modern trains",
+    "overhead wires",
+    "steel bridges"
+  ],
+  "allowedMiniatureDetails": [
+    "tourists posing on the rails",
+    "hakka lei-cha shops",
+    "tung blossoms"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Wooden station house with a short piece of track"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

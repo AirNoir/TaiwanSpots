@@ -1,0 +1,47 @@
+{
+  "spotId": "jiaoxi",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Jiaoxi Hot Spring Park",
+    "silhouette": "Park with wooden foot-bath pools and Japanese-style bathhouses under trees"
+  },
+  "crop": "The hot-spring park with its foot baths. Not the whole hotel district.",
+  "heroScale": 1,
+  "orientation": "verify: park position relative to the main street",
+  "lockedGeometry": [
+    "public park with paths",
+    "shallow foot-bath pools",
+    "low wooden buildings"
+  ],
+  "lockedIdentity": [
+    "steaming foot-bath pools",
+    "wooden Japanese-style bath houses"
+  ],
+  "doNotInvent": [
+    "mountain peaks right next to the park",
+    "beaches",
+    "skyscrapers"
+  ],
+  "allowedMiniatureDetails": [
+    "people soaking their feet",
+    "steam",
+    "trees with lanterns"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Steaming wooden foot-bath tub"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

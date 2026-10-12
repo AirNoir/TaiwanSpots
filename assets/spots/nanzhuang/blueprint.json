@@ -1,0 +1,48 @@
+{
+  "spotId": "nanzhuang",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Nanzhuang old post office and Osmanthus Alley",
+    "silhouette": "Narrow stone-stepped alley of low tiled houses beside a wooden post office"
+  },
+  "crop": "The old street area by the stream, including Osmanthus Alley and the post office. Not the outlying hills.",
+  "heroScale": 1,
+  "orientation": "verify: stream runs along the old street",
+  "lockedGeometry": [
+    "narrow alley with steps",
+    "stream with a small bridge",
+    "hills rising behind"
+  ],
+  "lockedIdentity": [
+    "old Japanese-era wooden post office",
+    "osmanthus trees",
+    "low clay-tile shophouses"
+  ],
+  "doNotInvent": [
+    "big temples",
+    "high-rise buildings",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors with osmanthus drinks",
+    "small lanterns",
+    "stone steps"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Wooden post office with an osmanthus tree"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

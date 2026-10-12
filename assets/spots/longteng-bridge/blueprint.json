@@ -1,0 +1,47 @@
+{
+  "spotId": "longteng-bridge",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Longteng bridge ruins",
+    "silhouette": "Row of tall red-brick arch piers standing alone in a green valley"
+  },
+  "crop": "The broken brick arch piers and the valley beneath them. Not the newer railway bridge.",
+  "heroScale": 1,
+  "orientation": "verify: orientation of the pier row relative to the road viewpoint",
+  "lockedGeometry": [
+    "valley floor with stream",
+    "row of free-standing brick piers",
+    "forested slopes on both sides"
+  ],
+  "lockedIdentity": [
+    "red brick arches with broken spans",
+    "tall slender piers"
+  ],
+  "doNotInvent": [
+    "intact deck on top",
+    "steel truss",
+    "waterfalls"
+  ],
+  "allowedMiniatureDetails": [
+    "tung blossoms",
+    "small visitors on the viewpoint",
+    "moss on the bricks"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Two or three broken red-brick arch piers"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

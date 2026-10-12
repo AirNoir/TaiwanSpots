@@ -1,0 +1,47 @@
+{
+  "spotId": "npm-southern",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "NPM Southern Branch museum",
+    "silhouette": "Curving dark museum building over water linked by a zig-zag bridge"
+  },
+  "crop": "The museum building, lake and the curved bridges. Not the whole park.",
+  "heroScale": 1,
+  "orientation": "verify: bridge approach direction from the map",
+  "lockedGeometry": [
+    "artificial lake around the museum",
+    "curved and zig-zag bridges",
+    "flat parkland"
+  ],
+  "lockedIdentity": [
+    "dark curved building in ink-wash tones",
+    "zig-zag pedestrian bridge"
+  ],
+  "doNotInvent": [
+    "palace-style roofs",
+    "pagodas",
+    "mountains"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors on the bridge",
+    "water plants",
+    "birds"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "The curved dark museum on a small lake"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

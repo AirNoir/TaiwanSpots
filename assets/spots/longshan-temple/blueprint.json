@@ -1,0 +1,49 @@
+{
+  "spotId": "longshan-temple",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Longshan Temple front hall",
+    "silhouette": "Southern Min temple with sweeping swallowtail roof ridges covered in colourful jiannian figures"
+  },
+  "crop": "The temple front courtyard with the waterfall wall and the front hall. Not the surrounding Wanhua streets.",
+  "heroScale": 1,
+  "orientation": "verify: main gate faces south onto Guangzhou Street",
+  "lockedGeometry": [
+    "rectangular walled courtyard",
+    "front hall, main hall and rear hall on one axis",
+    "waterfall feature beside the entrance"
+  ],
+  "lockedIdentity": [
+    "curved swallowtail ridges with dragon jiannian",
+    "dragon pillars in bronze/stone",
+    "incense burners in the courtyard"
+  ],
+  "doNotInvent": [
+    "Japanese torii",
+    "pagodas",
+    "Taipei 101",
+    "gold-painted roofs"
+  ],
+  "allowedMiniatureDetails": [
+    "worshippers with incense",
+    "lanterns",
+    "offering tables"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Front hall roof with swallowtail ridges and a lantern"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

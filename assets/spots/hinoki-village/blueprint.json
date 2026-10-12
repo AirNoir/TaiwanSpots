@@ -1,0 +1,48 @@
+{
+  "spotId": "hinoki-village",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Hinoki Village dormitories",
+    "silhouette": "Rows of Japanese-style wooden houses with dark tiled roofs among gardens"
+  },
+  "crop": "A cluster of the restored wooden dormitories and their lanes. Not the whole Chiayi forestry area.",
+  "heroScale": 1,
+  "orientation": "verify: dormitory row direction from the map",
+  "lockedGeometry": [
+    "rows of single-storey houses",
+    "gravel lanes and gardens",
+    "tall trees between houses"
+  ],
+  "lockedIdentity": [
+    "hinoki wood walls",
+    "dark Japanese tile roofs",
+    "sliding wooden doors"
+  ],
+  "doNotInvent": [
+    "temples",
+    "skyscrapers",
+    "torii gates"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors in the lanes",
+    "potted plants",
+    "bicycles"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "One wooden Japanese house with a tree"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -76,17 +76,21 @@ for (const id of spotIds) {
   const warnings = [];
 
   const bpFile = join(dir, 'blueprint.json');
+  let bpStatus;
   if (!existsSync(bpFile)) errors.push('no blueprint.json');
   else {
     try {
-      checkBlueprint(JSON.parse(readFileSync(bpFile, 'utf8')), id, errors, warnings);
+      const bp = JSON.parse(readFileSync(bpFile, 'utf8'));
+      bpStatus = bp.status;
+      checkBlueprint(bp, id, errors, warnings);
     } catch (e) {
       errors.push(`blueprint.json: ${e.message}`);
     }
   }
 
   const day = findImage(join(dir, 'collection'), 'day');
-  if (!day) errors.push('no collection/day image');
+  // A draft spot is data-only until its art is generated; the app falls back to the procedural diorama.
+  if (!day) (bpStatus === 'draft' ? warnings : errors).push('no collection/day image (art pending)');
   else {
     const s = imageSize(day);
     if (s && Math.max(s.w, s.h) < SIZE.collection) warnings.push(`collection/day is ${s.w}×${s.h} (target ${SIZE.collection}²)`);

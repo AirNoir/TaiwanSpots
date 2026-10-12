@@ -1,0 +1,48 @@
+{
+  "spotId": "waiao",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Wai'ao black-sand beach",
+    "silhouette": "Long grey-black sand beach with surfboards facing an island offshore"
+  },
+  "crop": "A stretch of Wai'ao beach with surfers and Guishan Island on the horizon. Not the whole Toucheng coast.",
+  "heroScale": 1,
+  "orientation": "verify: Guishan Island sits east-south-east offshore",
+  "lockedGeometry": [
+    "long straight beach",
+    "coastal road and railway behind",
+    "hills rising behind the road"
+  ],
+  "lockedIdentity": [
+    "grey-black sand",
+    "Guishan Island on the horizon",
+    "surfers and boards"
+  ],
+  "doNotInvent": [
+    "white sand",
+    "palm-tree resorts",
+    "cliffs on the beach"
+  ],
+  "allowedMiniatureDetails": [
+    "paragliders",
+    "surf shacks",
+    "beach umbrellas"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Surfboard stuck in black sand"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

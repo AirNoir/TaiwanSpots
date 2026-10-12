@@ -1,0 +1,48 @@
+{
+  "spotId": "cks-memorial",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Chiang Kai-shek Memorial Hall",
+    "silhouette": "White octagonal hall with a blue glazed tile roof on a stepped white base"
+  },
+  "crop": "The memorial hall and the start of the long boulevard in front of it. Not the whole Liberty Square.",
+  "heroScale": 1,
+  "orientation": "verify: hall faces west toward Liberty Square archway",
+  "lockedGeometry": [
+    "white stepped platform with long central stairway",
+    "straight boulevard lined with trees",
+    "hall at the east end of the plaza"
+  ],
+  "lockedIdentity": [
+    "blue octagonal double roof",
+    "89 steps leading up",
+    "white marble walls"
+  ],
+  "doNotInvent": [
+    "red roofs on the hall",
+    "fountains in front of the stairs",
+    "skyscrapers next to the hall"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny visitors on the stairs",
+    "pigeons",
+    "manicured shrubs"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Blue-roofed white hall on its stepped base"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}
