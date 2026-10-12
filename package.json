@@ -42,7 +42,8 @@
     "assets:prompt": "node scripts/build-diorama-prompt.mjs",
     "lint": "expo lint",
     "assets:export": "node scripts/export-collection-assets.mjs",
-    "assets:gallery": "node scripts/build-asset-gallery.mjs"
+    "assets:gallery": "node scripts/build-asset-gallery.mjs",
+    "spots:check": "node scripts/check-spots.mjs"
   },
   "private": true
 }
