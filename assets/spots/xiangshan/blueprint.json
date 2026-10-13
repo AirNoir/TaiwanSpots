@@ -1,6 +1,6 @@
 {
   "spotId": "xiangshan",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
@@ -12,7 +12,7 @@
   "orientation": "verify: Taipei 101 sits north-west of the viewpoint, across the Xinyi district",
   "lockedGeometry": [
     "forested ridge top",
-    "stone stairs climbing the slope",
+    "stone staircase descending away from the high foreground viewpoint between boulders toward a lower landing and the distant city; never invert this slope",
     "city basin below to the north-west"
   ],
   "lockedIdentity": [
@@ -32,17 +32,23 @@
   ],
   "references": {
     "aerial": [],
-    "ground": [],
+    "ground": [
+      "real-photo-city.jpg",
+      "real-photo-steps.jpg"
+    ],
     "map": [],
-    "representative": []
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "The boulder cluster with a small Taipei 101 behind it"
   },
   "qa": {
-    "geographic": "pending",
+    "geographic": "fail",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "Original collection/master.png sample has an inverted stair slope, identified by user; not approved. Three real photographs now corroborate the descending path. Crystal sphere concept is a separate preview, pending user review; do not replace the production master until accepted. Full six-rock layout and cardinal bearing remain unconfirmed."
   }
 }

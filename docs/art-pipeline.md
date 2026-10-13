@@ -39,6 +39,7 @@ App 只透過 `src/data/spotAssets.ts` 取圖。實際的 `require()` 對照表 
 
 1. **Select Spot**：在 `src/data/spots.ts` 新增，設定 `worldTier`（anchor / regional / local）與 `production`（hero / standard）。
 2. **Collect References**：放進 `<id>/reference/`，並把檔名填進 blueprint 的 `references`。
+   新景點至少使用兩張不同角度的實景照片；以多張照片交叉確認階梯升降、地形高低、主體輪廓與遠近關係。可愛風格只能簡化材質和細節，不能反轉坡向或改造場景。無法確認的配置保留待確認，不以生成結果當作證據。
 3. **Analyze Geography → 4. Scene Blueprint**：補完 `blueprint.json`。標有 `verify:` 的項目要拿參考圖確認。收到來源後把 `status` 改成 `references-collected`；完整人工審核才改成 `approved`。
 5. **Representative Crop / 6. Hero Scale**：blueprint 的 `crop`、`heroScale`。本系列使用 1，保留地標輪廓，再柔化細節。
 7. **Generate Master Diorama**：`assets:prompt` 產出的文字，**加上** `MASTER_STYLE_REFERENCE.png` 與參考圖一起送出。只用文字無法維持一致性。

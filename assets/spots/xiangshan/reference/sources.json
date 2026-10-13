@@ -1,0 +1,27 @@
+{
+  "id": "xiangshan",
+  "title": "View from Xiangshan — Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:View_from_Xiangshan.jpg",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/View_from_Xiangshan.jpg",
+  "description": "Stone stairs between large sandstone boulders on the forested Xiangshan ridge, overlooking Taipei 101 and the Xinyi skyline. The photograph does not establish the complete six-rock arrangement or cardinal direction.",
+  "author": "Mliu92",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "referenceFileUnmodified": true,
+  "supplementary": [
+    {
+      "file": "real-photo-city.jpg",
+      "title": "登高望遠觀夕陽 象山再添絕美賞景勝地",
+      "page": "https://www.geo.gov.taipei/News_Content.aspx?n=23285747C0511EC4&s=40D73EEE2FD289DB&sms=72544237BBE4C5F6",
+      "image": "https://www-ws.gov.taipei/001/Upload/public/Attachment/4931755733.jpg",
+      "description": "Side view of a large sandstone boulder with the stone stairway descending around it, railings and Taipei skyline beyond. Published by Taipei City Geotechnical Engineering Office."
+    },
+    {
+      "file": "real-photo-steps.jpg",
+      "title": "Ultimate Guide to Elephant Mountain in Taipei (象山, Xiangshan)",
+      "page": "https://www.uponarriving.com/elephant-mountain-taipei/",
+      "image": "https://i0.wp.com/uponarriving.com/wp-content/uploads/2019/06/Elephant-Mountain-boulders-3-960x720.jpg",
+      "description": "A view looking downhill into the stone stair trench between two large boulders, with Taipei 101 visible in the background."
+    }
+  ]
+}
