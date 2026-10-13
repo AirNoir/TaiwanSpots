@@ -200,7 +200,8 @@ const trafficBox = $('#traffic'); if (reduced) trafficBox.checked = false;
 // ── load the Blender export ──
 const lanes = []; let city = { phi: 0.5, cx: 0.3, cy: 2.3 };
 const stats = { bld: 0, car: 0, scooter: 0 };
-new GLTFLoader().load('xiangshan.glb', (gltf) => {
+const MODEL_B64 = null; // artifact build swaps in 'xiangshan.glb.txt'
+const onLoad = (gltf) => {
   const root = gltf.scene; scene.add(root);
   const extras = gltf.scenes[0] && gltf.scenes[0].userData;
   if (extras && extras.city) city = extras.city;
@@ -252,8 +253,23 @@ new GLTFLoader().load('xiangshan.glb', (gltf) => {
   goView('hero', true);
   $('#st-bld').textContent = stats.bld + ' 棟';
   $('#st-car').textContent = stats.car + ' 輛車 · ' + stats.scooter + ' 台機車';
-}, (ev) => { if (ev.total) bar.style.width = Math.round(ev.loaded / ev.total * 100) + '%'; },
-   (err) => { loading.textContent = '模型載入失敗：' + (err.message || err); });
+};
+const onProgress = (loaded, total) => { if (total) bar.style.width = Math.round(loaded / total * 100) + '%'; };
+const onError = (err) => { loading.textContent = '模型載入失敗：' + (err && err.message ? err.message : err); };
+const loader = new GLTFLoader();
+if (MODEL_B64) {
+  fetch(MODEL_B64).then(async (r) => {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const total = +r.headers.get('content-length') || 0; const reader = r.body.getReader(); const chunks = []; let got = 0;
+    for (;;) { const { done, value } = await reader.read(); if (done) break; chunks.push(value); got += value.length; onProgress(got, total); }
+    const all = new Uint8Array(got); let o = 0; for (const c of chunks) { all.set(c, o); o += c.length; }
+    const bin = atob(new TextDecoder().decode(all).replace(/\s+/g, '')); const buf = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) buf[i] = bin.charCodeAt(i);
+    loader.parse(buf.buffer, '', onLoad, onError);
+  }).catch(onError);
+} else {
+  loader.load('xiangshan.glb', onLoad, (ev) => onProgress(ev.loaded, ev.total), onError);
+}
 
 // ── traffic: each vehicle slides along its lane in city-local coordinates and wraps at the slab edge ──
 function stepTraffic(dt) {
