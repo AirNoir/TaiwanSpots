@@ -8,7 +8,10 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..', 'assets/spots')
 for (const id of readdirSync(root).filter((name) => statSync(join(root, name)).isDirectory())) {
   const collection = join(root, id, 'collection');
   const master = join(collection, 'master.png');
-  if (!existsSync(master)) throw new Error(`${id}: missing generated master`);
+  if (!existsSync(master)) {
+    console.log(`${id}: no master yet, skipped`);
+    continue;
+  }
   for (const [name, size] of [['day', 1024], ['thumbnail', 512]]) {
     execFileSync('sips', ['-Z', String(size), master, '--out', join(collection, `${name}.png`)], { stdio: 'pipe' });
   }
