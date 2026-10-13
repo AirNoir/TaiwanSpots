@@ -1,0 +1,47 @@
+{
+  "spotId": "miyahara",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Miyahara building",
+    "silhouette": "Red-brick Japanese-era building with arched windows on a street corner"
+  },
+  "crop": "The red-brick facade on Zhongshan Road and the canal nearby. Not the whole downtown.",
+  "heroScale": 1,
+  "orientation": "verify: Green River runs just east of the building",
+  "lockedGeometry": [
+    "corner building on a city street",
+    "canal close by",
+    "low downtown buildings"
+  ],
+  "lockedIdentity": [
+    "red brick facade with arches",
+    "dark bookcase-style interior visible"
+  ],
+  "doNotInvent": [
+    "towers",
+    "temples",
+    "mountains"
+  ],
+  "allowedMiniatureDetails": [
+    "queues for ice cream",
+    "shopping bags",
+    "street trees"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Red-brick facade with an ice-cream cone"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

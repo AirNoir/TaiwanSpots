@@ -1,0 +1,48 @@
+{
+  "spotId": "jinguashi",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Jinguashi Gold Museum",
+    "silhouette": "Mountain mining settlement with wooden Japanese houses and mine entrances"
+  },
+  "crop": "The museum area with Japanese houses and the Benshan mine tunnel. Not the whole coast.",
+  "heroScale": 1,
+  "orientation": "verify: sea lies to the north",
+  "lockedGeometry": [
+    "steep hillside",
+    "terraced paths",
+    "mine tunnel entrance"
+  ],
+  "lockedIdentity": [
+    "wooden Japanese-era houses",
+    "mine cart track",
+    "golden brick"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "lakes",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny visitors",
+    "mine carts",
+    "helmets"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Mine cart with a gold bar"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

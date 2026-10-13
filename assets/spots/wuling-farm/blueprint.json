@@ -1,0 +1,47 @@
+{
+  "spotId": "wuling-farm",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Wuling Farm valley",
+    "silhouette": "High mountain valley with cherry trees along a stream and orchards on slopes"
+  },
+  "crop": "The valley farm with cherry blossoms. Not the high peaks.",
+  "heroScale": 1,
+  "orientation": "verify: Qijiawan Creek flows along the valley floor",
+  "lockedGeometry": [
+    "high valley",
+    "stream along the floor",
+    "orchards on terraces"
+  ],
+  "lockedIdentity": [
+    "pink cherry blossoms",
+    "Formosan landlocked salmon stream"
+  ],
+  "doNotInvent": [
+    "beaches",
+    "cities",
+    "lakes"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "orchards",
+    "mist"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Pink cherry tree by a stream"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

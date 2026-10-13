@@ -1,0 +1,47 @@
+{
+  "spotId": "shennong-street",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Shennong Street",
+    "silhouette": "Narrow lane of two-storey old shophouses strung with red lanterns"
+  },
+  "crop": "The lane with its shophouses and the small temple at the west end. Not the wider district.",
+  "heroScale": 1,
+  "orientation": "verify: Yaowang Temple at the west end of the street",
+  "lockedGeometry": [
+    "one narrow straight lane",
+    "two-storey row houses on both sides",
+    "small temple closing the lane"
+  ],
+  "lockedIdentity": [
+    "old wooden shopfronts",
+    "red lanterns across the lane"
+  ],
+  "doNotInvent": [
+    "cars filling the lane",
+    "high-rises",
+    "rivers"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny strollers",
+    "bicycles",
+    "potted plants"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Narrow lane with red lanterns"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

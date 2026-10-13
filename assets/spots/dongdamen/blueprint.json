@@ -1,0 +1,47 @@
+{
+  "spotId": "dongdamen",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Dongdamen night market",
+    "silhouette": "Open-air market of lit stalls and gates near an old railway park"
+  },
+  "crop": "The market gates and stall rows. Not the whole city.",
+  "heroScale": 1,
+  "orientation": "verify: railway culture park lies to the east",
+  "lockedGeometry": [
+    "open plaza",
+    "rows of stalls",
+    "gates at each zone"
+  ],
+  "lockedIdentity": [
+    "Aboriginal food street",
+    "grilled meat smoke"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "mountains in the market",
+    "rivers"
+  ],
+  "allowedMiniatureDetails": [
+    "crowds",
+    "singers",
+    "lanterns"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Grill with smoke under a market gate"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

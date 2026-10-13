@@ -1,0 +1,47 @@
+{
+  "spotId": "luce-chapel",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Luce Memorial Chapel",
+    "silhouette": "Tent-like chapel of four curved hyperbolic shells meeting at the top"
+  },
+  "crop": "The chapel on its lawn in the campus. Not the whole university.",
+  "heroScale": 1,
+  "orientation": "verify: chapel stands on the main campus lawn",
+  "lockedGeometry": [
+    "open lawn",
+    "single small building",
+    "trees around the lawn"
+  ],
+  "lockedIdentity": [
+    "curving yellow diamond-tile shells",
+    "glazed slit along the ridge"
+  ],
+  "doNotInvent": [
+    "steeples",
+    "crosses on top",
+    "stained glass domes"
+  ],
+  "allowedMiniatureDetails": [
+    "students",
+    "trees",
+    "walkways"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Yellow curved tent chapel"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

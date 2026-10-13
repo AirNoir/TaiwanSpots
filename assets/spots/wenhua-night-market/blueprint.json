@@ -1,0 +1,47 @@
+{
+  "spotId": "wenhua-night-market",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Wenhua Road night market",
+    "silhouette": "Long straight street lined with food stalls leading from a fountain roundabout"
+  },
+  "crop": "The section of Wenhua Road with stalls and the fountain roundabout at one end. Not the whole city.",
+  "heroScale": 1,
+  "orientation": "verify: OSM has no POI; exact market section along Wenhua Road needs confirmation",
+  "lockedGeometry": [
+    "straight street closed to traffic at night",
+    "roundabout with fountain at the end",
+    "low shophouses on both sides"
+  ],
+  "lockedIdentity": [
+    "turkey rice stalls",
+    "fountain roundabout statue"
+  ],
+  "doNotInvent": [
+    "rivers",
+    "temples as hero",
+    "skyscrapers"
+  ],
+  "allowedMiniatureDetails": [
+    "crowds",
+    "scooters parked",
+    "steaming pots"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "A bowl of turkey rice by a little fountain"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

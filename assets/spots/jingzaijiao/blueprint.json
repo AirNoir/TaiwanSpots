@@ -1,0 +1,48 @@
+{
+  "spotId": "jingzaijiao",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Jingzaijiao tile salt pans",
+    "silhouette": "Grid of shallow mirror-like salt pans paved with broken pottery tiles"
+  },
+  "crop": "The tiled salt pans and their small salt heaps at sunset. Not the coast beyond.",
+  "heroScale": 1,
+  "orientation": "verify: sea lies to the west",
+  "lockedGeometry": [
+    "flat grid of pans",
+    "narrow earth dikes",
+    "small viewing platform"
+  ],
+  "lockedIdentity": [
+    "broken tile mosaic floors",
+    "white salt heaps",
+    "sunset reflections"
+  ],
+  "doNotInvent": [
+    "mountains",
+    "buildings",
+    "boats"
+  ],
+  "allowedMiniatureDetails": [
+    "salt workers with rakes",
+    "visitors",
+    "birds"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Tiled salt pan with a white salt heap"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

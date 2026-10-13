@@ -1,0 +1,48 @@
+{
+  "spotId": "tainan-confucius",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Dacheng Hall",
+    "silhouette": "Red-walled hall with a swallowtail roof in a quiet courtyard under banyans"
+  },
+  "crop": "The Dacheng Hall courtyard and its red walls. Not the surrounding streets.",
+  "heroScale": 1,
+  "orientation": "verify: main axis runs north-south, hall faces south",
+  "lockedGeometry": [
+    "walled courtyard compound",
+    "hall raised on a platform",
+    "big banyan trees"
+  ],
+  "lockedIdentity": [
+    "vermilion walls",
+    "swallowtail roof ridges",
+    "first-academy gate"
+  ],
+  "doNotInvent": [
+    "incense crowds",
+    "pagodas",
+    "gold roofs"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny visitors",
+    "students",
+    "stone lanterns"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Red hall with a swallowtail roof under a banyan"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

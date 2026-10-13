@@ -1,0 +1,47 @@
+{
+  "spotId": "wushantou",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Wushantou Reservoir",
+    "silhouette": "Branching coral-shaped reservoir among low wooded hills behind an earth dam"
+  },
+  "crop": "The dam, lake and Hatta Yoichi memorial area. Not the whole irrigation system.",
+  "heroScale": 1,
+  "orientation": "verify: dam sits at the west end of the lake",
+  "lockedGeometry": [
+    "branching lake arms",
+    "low hills",
+    "earth dam"
+  ],
+  "lockedIdentity": [
+    "coral-shaped shoreline",
+    "Hatta statue"
+  ],
+  "doNotInvent": [
+    "mountains with snow",
+    "beaches",
+    "skyscrapers"
+  ],
+  "allowedMiniatureDetails": [
+    "boats",
+    "birds",
+    "tiny visitors"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Coral-shaped lake with a tiny boat"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

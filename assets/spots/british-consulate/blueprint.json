@@ -1,0 +1,47 @@
+{
+  "spotId": "british-consulate",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Former British Consulate residence",
+    "silhouette": "Red-brick colonial house with arched verandas on a hill above a harbour"
+  },
+  "crop": "The residence on the hilltop and the stairway from below. Not the harbour city.",
+  "heroScale": 1,
+  "orientation": "verify: harbour mouth and Qijin lie to the south",
+  "lockedGeometry": [
+    "small hilltop",
+    "stairway climbing up",
+    "harbour below"
+  ],
+  "lockedIdentity": [
+    "red brick arches",
+    "colonial veranda"
+  ],
+  "doNotInvent": [
+    "skyscrapers next to it",
+    "temples",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors with tea",
+    "ships",
+    "birds"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Red-brick arched house on a hill"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

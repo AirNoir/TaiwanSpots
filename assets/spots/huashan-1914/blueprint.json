@@ -1,0 +1,48 @@
+{
+  "spotId": "huashan-1914",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Huashan winery warehouses",
+    "silhouette": "Row of red-brick factory buildings with chimneys facing a lawn"
+  },
+  "crop": "The brick warehouses and lawn. Not the surrounding city blocks.",
+  "heroScale": 1,
+  "orientation": "verify: lawn sits on the east side toward Bade Road",
+  "lockedGeometry": [
+    "row of long warehouses",
+    "open lawn",
+    "plaza between buildings"
+  ],
+  "lockedIdentity": [
+    "red brick walls",
+    "old chimney",
+    "pipes and gantries"
+  ],
+  "doNotInvent": [
+    "temples",
+    "skyscrapers inside the park",
+    "rivers"
+  ],
+  "allowedMiniatureDetails": [
+    "market stalls",
+    "performers",
+    "visitors"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Red-brick warehouse with a chimney"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

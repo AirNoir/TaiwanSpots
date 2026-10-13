@@ -1,0 +1,48 @@
+{
+  "spotId": "taipingshan",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Taipingshan Villa",
+    "silhouette": "Mountain lodge on a misty ridge with a long stairway and old forest railway"
+  },
+  "crop": "The villa area, central stairway and logging rail line. Not the whole forest reserve.",
+  "heroScale": 1,
+  "orientation": "verify: Bong Bong train line runs east from the villa",
+  "lockedGeometry": [
+    "steep ridge",
+    "long stairway up to the lodge",
+    "narrow logging rail on a contour"
+  ],
+  "lockedIdentity": [
+    "cypress and hemlock forest",
+    "sea of clouds",
+    "small Bong Bong train"
+  ],
+  "doNotInvent": [
+    "snowfields",
+    "lakes at the lodge",
+    "cities"
+  ],
+  "allowedMiniatureDetails": [
+    "hikers",
+    "mist",
+    "mossy logs"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Tiny forest train in mist and cypress"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

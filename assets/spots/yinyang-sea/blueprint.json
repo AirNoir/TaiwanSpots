@@ -1,0 +1,47 @@
+{
+  "spotId": "yinyang-sea",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Yin-Yang Sea",
+    "silhouette": "Bay split into golden-brown and deep blue water below a mountain with mining ruins"
+  },
+  "crop": "The two-coloured bay and the smelter ruins on the slope. Not the whole coast.",
+  "heroScale": 1,
+  "orientation": "verify: Thirteen Levels ruins rise south of the bay",
+  "lockedGeometry": [
+    "small bay",
+    "steep mountain slope",
+    "coastal road"
+  ],
+  "lockedIdentity": [
+    "two-coloured sea",
+    "terraced smelter ruins"
+  ],
+  "doNotInvent": [
+    "beaches with umbrellas",
+    "skyscrapers",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "fishing boats",
+    "waves",
+    "visitors"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Bay half gold, half blue"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

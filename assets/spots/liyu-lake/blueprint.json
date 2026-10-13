@@ -1,0 +1,47 @@
+{
+  "spotId": "liyu-lake",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Liyu Lake",
+    "silhouette": "Calm green lake below a forested mountain with swan pedal boats"
+  },
+  "crop": "The lake and Liyu Mountain. Not the whole Hualien valley.",
+  "heroScale": 1,
+  "orientation": "verify: Liyu Mountain rises on the west shore",
+  "lockedGeometry": [
+    "oval lake",
+    "forested mountain beside it",
+    "lakeside path"
+  ],
+  "lockedIdentity": [
+    "swan boats",
+    "mountain reflection"
+  ],
+  "doNotInvent": [
+    "snow",
+    "buildings on the lake",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "cyclists",
+    "boats",
+    "fireflies"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Swan boat on a green lake"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

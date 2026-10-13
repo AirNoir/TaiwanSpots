@@ -1,0 +1,47 @@
+{
+  "spotId": "maokong",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Maokong gondola station",
+    "silhouette": "Gondola cabins gliding over terraced tea hills to a hilltop station"
+  },
+  "crop": "The Maokong top station, cables and tea terraces around it. Not the zoo or the lower stations.",
+  "heroScale": 1,
+  "orientation": "verify: cable line descends north-west toward Taipei Zoo",
+  "lockedGeometry": [
+    "hillside station building",
+    "cable line dropping down the valley",
+    "terraced tea fields"
+  ],
+  "lockedIdentity": [
+    "small gondola cabins on a cable",
+    "tea bushes in neat rows"
+  ],
+  "doNotInvent": [
+    "ski lifts",
+    "snow",
+    "skyscrapers next to the station"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors drinking tea",
+    "teahouse terraces",
+    "mist"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "A gondola cabin above tea rows"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

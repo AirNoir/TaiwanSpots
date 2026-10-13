@@ -1,0 +1,47 @@
+{
+  "spotId": "lanyang-museum",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Lanyang Museum",
+    "silhouette": "Angular wedge-shaped building rising from wetland like a tilted rock"
+  },
+  "crop": "The museum and its wetland pond. Not the harbour.",
+  "heroScale": 1,
+  "orientation": "verify: Wushi harbour lies to the east",
+  "lockedGeometry": [
+    "building tilting out of a pond",
+    "wetland",
+    "coast nearby"
+  ],
+  "lockedIdentity": [
+    "cuesta-shaped angled roof",
+    "stone-like facade"
+  ],
+  "doNotInvent": [
+    "domes",
+    "classical columns",
+    "mountains next to it"
+  ],
+  "allowedMiniatureDetails": [
+    "birds",
+    "visitors",
+    "reflections"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Tilted rock-shaped building over water"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

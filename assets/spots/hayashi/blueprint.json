@@ -1,0 +1,47 @@
+{
+  "spotId": "hayashi",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Hayashi Department Store",
+    "silhouette": "Five-storey Japanese-era building with a rooftop shrine and rounded corner"
+  },
+  "crop": "The building on its street corner. Not the whole downtown.",
+  "heroScale": 1,
+  "orientation": "verify: corner faces the intersection of Zhongyi and Zhongzheng roads",
+  "lockedGeometry": [
+    "corner building",
+    "city street grid",
+    "arcaded sidewalk along the street"
+  ],
+  "lockedIdentity": [
+    "cream-yellow facade",
+    "rooftop shrine",
+    "old elevator"
+  ],
+  "doNotInvent": [
+    "towers",
+    "temples",
+    "rivers"
+  ],
+  "allowedMiniatureDetails": [
+    "shoppers",
+    "street trees"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Rooftop shrine on a cream building"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

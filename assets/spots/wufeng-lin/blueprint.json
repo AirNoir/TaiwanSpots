@@ -1,0 +1,47 @@
+{
+  "spotId": "wufeng-lin",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Lin family mansion and garden",
+    "silhouette": "Cluster of courtyard mansions with curved roofs and an opera stage at the foot of a hill"
+  },
+  "crop": "The Gongbaodi courtyard houses and garden stage. Not the whole Wufeng township.",
+  "heroScale": 1,
+  "orientation": "verify: hills rise to the east",
+  "lockedGeometry": [
+    "multiple courtyards in a row",
+    "garden with pond",
+    "hill behind"
+  ],
+  "lockedIdentity": [
+    "curved Min-style roofs",
+    "opera stage in the flower hall"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "temples as hero",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny visitors",
+    "lanterns",
+    "garden plants"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Courtyard roofs with an opera stage"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

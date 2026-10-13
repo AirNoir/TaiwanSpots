@@ -1,0 +1,47 @@
+{
+  "spotId": "wuqi-port",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Wuqi fishing harbour",
+    "silhouette": "Flat harbour basin with fishing boats and a large fish market hall"
+  },
+  "crop": "The fishing harbour basin and market. Not the industrial Taichung port.",
+  "heroScale": 1,
+  "orientation": "verify: OSM places the basin in Qingshui district; sunset west over the strait",
+  "lockedGeometry": [
+    "flat reclaimed coast",
+    "rectangular harbour basin",
+    "market hall on the quay"
+  ],
+  "lockedIdentity": [
+    "fishing boats",
+    "seafood market stalls"
+  ],
+  "doNotInvent": [
+    "cliffs",
+    "mountains near the sea",
+    "cruise ships"
+  ],
+  "allowedMiniatureDetails": [
+    "seagulls",
+    "buyers",
+    "sunset"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Fishing boat with a fish"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "spotId": "pingxi",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Pingxi old street",
+    "silhouette": "Small rail line crossing above a steep old street in a forested valley"
+  },
+  "crop": "The old street, rail bridge and sky lanterns. Not the whole district.",
+  "heroScale": 1,
+  "orientation": "verify: rail line passes on a bridge above the street",
+  "lockedGeometry": [
+    "steep valley",
+    "narrow street climbing the slope",
+    "rail viaduct above"
+  ],
+  "lockedIdentity": [
+    "sky lanterns rising",
+    "small Pingxi line train"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "people releasing lanterns",
+    "shops"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Glowing sky lantern over a little train"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

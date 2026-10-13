@@ -1,0 +1,47 @@
+{
+  "spotId": "houtong",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Houtong cat village",
+    "silhouette": "Hillside village of small houses reached by a footbridge over railway tracks"
+  },
+  "crop": "The station footbridge and hillside lanes. Not the coal plant ruins.",
+  "heroScale": 1,
+  "orientation": "verify: village sits on the north side of the station",
+  "lockedGeometry": [
+    "railway station in a valley",
+    "footbridge over tracks",
+    "hillside houses"
+  ],
+  "lockedIdentity": [
+    "many cats on walls",
+    "cat-shaped footbridge"
+  ],
+  "doNotInvent": [
+    "beaches",
+    "skyscrapers",
+    "temples as hero"
+  ],
+  "allowedMiniatureDetails": [
+    "cats",
+    "visitors",
+    "coal carts"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "A cat on a little roof"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

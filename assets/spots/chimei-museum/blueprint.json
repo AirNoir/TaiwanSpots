@@ -1,0 +1,48 @@
+{
+  "spotId": "chimei-museum",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Chimei Museum",
+    "silhouette": "White neoclassical palace with a dome behind a fountain and statue-lined bridge"
+  },
+  "crop": "The museum, Apollo fountain and Olympus bridge. Not the whole Tainan Metropolitan Park.",
+  "heroScale": 1,
+  "orientation": "verify: bridge approaches from the north",
+  "lockedGeometry": [
+    "long axis from bridge to building",
+    "lake on one side",
+    "formal gardens"
+  ],
+  "lockedIdentity": [
+    "white columned facade with dome",
+    "Apollo fountain",
+    "bridge with statues"
+  ],
+  "doNotInvent": [
+    "Chinese roofs",
+    "skyscrapers",
+    "mountains"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "swans",
+    "topiary"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "White domed palace with a fountain"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

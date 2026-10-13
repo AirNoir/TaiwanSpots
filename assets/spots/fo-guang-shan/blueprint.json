@@ -1,0 +1,47 @@
+{
+  "spotId": "fo-guang-shan",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Fo Guang Shan Buddha Museum",
+    "silhouette": "Long avenue flanked by eight pagodas leading to a giant seated bronze Buddha"
+  },
+  "crop": "The Buddha Museum avenue and statue. Not the monastery complex.",
+  "heroScale": 1,
+  "orientation": "verify: Buddha faces east toward the avenue",
+  "lockedGeometry": [
+    "long straight avenue",
+    "pagodas in two rows",
+    "hills behind"
+  ],
+  "lockedIdentity": [
+    "eight pagodas",
+    "giant bronze Buddha"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "lotus",
+    "bells"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Seated Buddha with a pagoda"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

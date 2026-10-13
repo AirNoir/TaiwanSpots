@@ -1,0 +1,47 @@
+{
+  "spotId": "shifen-waterfall",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Shifen Waterfall",
+    "silhouette": "Wide curtain waterfall over a tilted rock ledge into a round pool"
+  },
+  "crop": "The waterfall and its pool with the viewing deck. Not the old street.",
+  "heroScale": 1,
+  "orientation": "verify: viewing deck on the north side",
+  "lockedGeometry": [
+    "wide rock ledge",
+    "round plunge pool",
+    "forested valley"
+  ],
+  "lockedIdentity": [
+    "curtain-shaped falls",
+    "rainbow in the spray"
+  ],
+  "doNotInvent": [
+    "tall cliffs",
+    "ice",
+    "buildings"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors on the deck",
+    "spray",
+    "suspension bridge"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Wide waterfall with a rainbow"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

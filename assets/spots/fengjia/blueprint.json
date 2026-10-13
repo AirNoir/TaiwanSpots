@@ -1,0 +1,47 @@
+{
+  "spotId": "fengjia",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Fengjia night market",
+    "silhouette": "Grid of crowded lanes full of neon stalls next to a university"
+  },
+  "crop": "The stall lanes beside Feng Chia University. Not the campus.",
+  "heroScale": 1,
+  "orientation": "verify: university campus lies to the south-west",
+  "lockedGeometry": [
+    "grid of narrow lanes",
+    "low buildings with shops",
+    "university at one edge"
+  ],
+  "lockedIdentity": [
+    "neon stalls",
+    "bubble tea shops"
+  ],
+  "doNotInvent": [
+    "temples as hero",
+    "rivers",
+    "mountains"
+  ],
+  "allowedMiniatureDetails": [
+    "crowds",
+    "skewers",
+    "signboards without readable text"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Bubble tea and a neon stall"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

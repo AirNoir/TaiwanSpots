@@ -1,0 +1,47 @@
+{
+  "spotId": "nanfangao",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Nanfangao harbour",
+    "silhouette": "Crescent harbour crowded with colourful fishing boats below green hills"
+  },
+  "crop": "The harbour basin, boats and Nantian Temple. Not the whole Su'ao coast.",
+  "heroScale": 1,
+  "orientation": "verify: harbour mouth opens east to the Pacific",
+  "lockedGeometry": [
+    "curved harbour basin",
+    "hills enclosing it",
+    "town packed along the quay"
+  ],
+  "lockedIdentity": [
+    "rows of colourful fishing boats",
+    "Nantian Temple"
+  ],
+  "doNotInvent": [
+    "cruise ships",
+    "skyscrapers",
+    "sandy beach in the harbour"
+  ],
+  "allowedMiniatureDetails": [
+    "fishermen",
+    "fish market crates",
+    "seagulls"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "A colourful fishing boat"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

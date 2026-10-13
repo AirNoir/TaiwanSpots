@@ -1,0 +1,47 @@
+{
+  "spotId": "taichung-opera",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "National Taichung Theater",
+    "silhouette": "Box-like white building pierced by curving cave-like openings"
+  },
+  "crop": "The theater building and its front lawn. Not the surrounding high-rises.",
+  "heroScale": 1,
+  "orientation": "verify: main entrance faces Huilai Road to the east",
+  "lockedGeometry": [
+    "rectangular block with flat roof",
+    "glass facades between curved walls",
+    "lawn and plaza in front"
+  ],
+  "lockedIdentity": [
+    "flowing curved concrete openings",
+    "white walls with glass"
+  ],
+  "doNotInvent": [
+    "domes",
+    "columns",
+    "classical roofs"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny visitors",
+    "trees on the roof garden",
+    "reflecting pools"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "White box with curved cave openings"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

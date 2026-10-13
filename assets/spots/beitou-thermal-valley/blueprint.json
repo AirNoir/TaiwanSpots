@@ -1,0 +1,48 @@
+{
+  "spotId": "beitou-thermal-valley",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Beitou Thermal Valley pond",
+    "silhouette": "Steaming jade-green hot-spring pond in a small wooded valley"
+  },
+  "crop": "The steaming pond and the railed walkway around it. Not the Beitou hotel district.",
+  "heroScale": 1,
+  "orientation": "verify: walkway enters from the south-west",
+  "lockedGeometry": [
+    "small enclosed valley",
+    "pond filling the valley floor",
+    "railed walkway along the edge"
+  ],
+  "lockedIdentity": [
+    "jade-green acidic water",
+    "thick white steam",
+    "rocky banks"
+  ],
+  "doNotInvent": [
+    "bathers in the pond",
+    "waterfalls",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors at the railing",
+    "subtropical trees",
+    "wooden signposts"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "A pocket of green steaming water with white vapour"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "spotId": "dajia-jenn-lann",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Jenn Lann Temple",
+    "silhouette": "Grand Mazu temple with layered ornate roofs on a town street"
+  },
+  "crop": "The temple facade and front street. Not the whole Dajia district.",
+  "heroScale": 1,
+  "orientation": "verify: temple faces Shuntian Road",
+  "lockedGeometry": [
+    "temple on a busy street",
+    "front plaza",
+    "low town buildings"
+  ],
+  "lockedIdentity": [
+    "multi-tiered swallowtail roofs",
+    "Mazu pilgrimage palanquin"
+  ],
+  "doNotInvent": [
+    "pagodas",
+    "high-rises",
+    "mountains"
+  ],
+  "allowedMiniatureDetails": [
+    "pilgrims",
+    "firecracker smoke",
+    "flags"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Temple roof with firecracker smoke"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "spotId": "luodong-night-market",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Luodong night market",
+    "silhouette": "Ring of food stalls wrapped around a small city park"
+  },
+  "crop": "The market streets around Zhongshan Park. Not the whole town.",
+  "heroScale": 1,
+  "orientation": "verify: market surrounds the park block",
+  "lockedGeometry": [
+    "square park block",
+    "stall-lined streets around it",
+    "low town buildings"
+  ],
+  "lockedIdentity": [
+    "scallion pancake stalls",
+    "park trees and pond in the middle"
+  ],
+  "doNotInvent": [
+    "rivers",
+    "mountains",
+    "temples as hero"
+  ],
+  "allowedMiniatureDetails": [
+    "crowds",
+    "steam",
+    "lanterns"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Scallion pancake stall beside a park tree"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

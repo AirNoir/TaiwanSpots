@@ -1,0 +1,47 @@
+{
+  "spotId": "shenji-village",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Shenji New Village",
+    "silhouette": "Rows of small concrete dormitory houses turned into shops along a lane"
+  },
+  "crop": "The dormitory rows and the lawn market. Not the surrounding streets.",
+  "heroScale": 1,
+  "orientation": "verify: lawn sits at the north end",
+  "lockedGeometry": [
+    "rows of two-storey houses",
+    "narrow lanes between rows",
+    "small lawn"
+  ],
+  "lockedIdentity": [
+    "plain 1960s dormitory facades",
+    "tiny shopfronts with plants"
+  ],
+  "doNotInvent": [
+    "temples",
+    "high-rises",
+    "rivers"
+  ],
+  "allowedMiniatureDetails": [
+    "market tents",
+    "visitors",
+    "potted plants"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Little dormitory shop with plants"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

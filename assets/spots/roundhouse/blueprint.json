@@ -1,0 +1,47 @@
+{
+  "spotId": "roundhouse",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Changhua roundhouse",
+    "silhouette": "Fan-shaped locomotive shed with tracks radiating from a turntable"
+  },
+  "crop": "The roundhouse and turntable. Not the station.",
+  "heroScale": 1,
+  "orientation": "verify: shed opens to the west toward the turntable",
+  "lockedGeometry": [
+    "fan-shaped shed",
+    "turntable in front",
+    "tracks radiating"
+  ],
+  "lockedIdentity": [
+    "twelve bays",
+    "turntable",
+    "old locomotives"
+  ],
+  "doNotInvent": [
+    "passenger crowds",
+    "skyscrapers",
+    "mountains"
+  ],
+  "allowedMiniatureDetails": [
+    "railway workers",
+    "locomotives"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Locomotive on a turntable"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "spotId": "raohe-night-market",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Raohe market gate and Ciyou Temple",
+    "silhouette": "Ornate lit gateway in front of a tall temple at the head of a stall street"
+  },
+  "crop": "The market gate, the temple and the start of the stall street. Not the riverside.",
+  "heroScale": 1,
+  "orientation": "verify: Ciyou Temple sits at the east entrance",
+  "lockedGeometry": [
+    "single straight street",
+    "gateway arch at the end",
+    "temple next to the gate"
+  ],
+  "lockedIdentity": [
+    "lit decorative gate",
+    "pepper bun ovens",
+    "Ciyou Temple tower"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "mountains",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "crowds",
+    "steam",
+    "lanterns"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Lit market gate with a pepper bun oven"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

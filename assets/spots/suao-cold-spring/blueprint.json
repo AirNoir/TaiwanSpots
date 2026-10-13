@@ -1,0 +1,47 @@
+{
+  "spotId": "suao-cold-spring",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Su'ao Cold Spring pool",
+    "silhouette": "Outdoor pool of clear fizzy cold water under trees"
+  },
+  "crop": "The cold spring park pools. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: park entrance faces Lengquan Road",
+  "lockedGeometry": [
+    "outdoor pool",
+    "small park",
+    "low buildings"
+  ],
+  "lockedIdentity": [
+    "clear bubbling water",
+    "bathers"
+  ],
+  "doNotInvent": [
+    "steam",
+    "snow",
+    "mountains"
+  ],
+  "allowedMiniatureDetails": [
+    "bathers",
+    "trees",
+    "bathhouse"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Clear bubbling pool"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

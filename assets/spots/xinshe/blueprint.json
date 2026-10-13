@@ -1,0 +1,46 @@
+{
+  "spotId": "xinshe",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Xinshe flower fields",
+    "silhouette": "Broad terraces of colourful flower beds on a plateau with hills behind"
+  },
+  "crop": "The flower festival fields. Not the whole Xinshe plateau.",
+  "heroScale": 1,
+  "orientation": "verify: hills rise to the east",
+  "lockedGeometry": [
+    "flat plateau fields",
+    "hills behind",
+    "farm lanes between the fields"
+  ],
+  "lockedIdentity": [
+    "colourful flower stripes",
+    "sunflowers and cosmos"
+  ],
+  "doNotInvent": [
+    "tulip windmills",
+    "snow",
+    "lakes"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "flower arches"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Stripes of colourful flowers"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

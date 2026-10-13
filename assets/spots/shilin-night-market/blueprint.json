@@ -1,0 +1,47 @@
+{
+  "spotId": "shilin-night-market",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Shilin Night Market lanes",
+    "silhouette": "Dense grid of narrow lanes packed with lit food stalls around a small temple"
+  },
+  "crop": "The lanes around Cixian Temple and the market entrance. Not the whole Shilin district.",
+  "heroScale": 1,
+  "orientation": "verify: Cixian Temple sits at the south end of the lanes",
+  "lockedGeometry": [
+    "narrow intersecting lanes",
+    "low shophouses with stalls in front",
+    "small temple at one end"
+  ],
+  "lockedIdentity": [
+    "glowing food stalls with steam",
+    "Cixian Temple roof among the stalls"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "rivers",
+    "mountains in the lanes"
+  ],
+  "allowedMiniatureDetails": [
+    "crowds of tiny diners",
+    "fried chicken stalls",
+    "signboards without readable text"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "A lit food stall with steam and a temple roof behind"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

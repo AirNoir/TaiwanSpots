@@ -1,0 +1,47 @@
+{
+  "spotId": "baishatun",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Gongtian Temple",
+    "silhouette": "Southern Min temple with ornate roof ridges near the coast"
+  },
+  "crop": "The temple and its front plaza in Baishatun village. Not the whole coastline.",
+  "heroScale": 1,
+  "orientation": "verify: temple faces the sea to the west",
+  "lockedGeometry": [
+    "temple plaza on a village street",
+    "coast a short distance west",
+    "low village houses around"
+  ],
+  "lockedIdentity": [
+    "Mazu temple roof with swallowtail ridges",
+    "pilgrimage flags and palanquin"
+  ],
+  "doNotInvent": [
+    "pagodas",
+    "high-rises",
+    "mountains behind"
+  ],
+  "allowedMiniatureDetails": [
+    "pilgrims with flags",
+    "firecracker smoke",
+    "offering tables"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Temple roof with a pilgrimage flag"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

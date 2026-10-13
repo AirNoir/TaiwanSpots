@@ -144,7 +144,7 @@
       "city": "台北・士林",
       "region": "north",
       "category": "food",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -153,7 +153,7 @@
       "city": "台北・北投",
       "region": "north",
       "category": "nature",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -162,7 +162,7 @@
       "city": "台北・陽明山",
       "region": "north",
       "category": "mountain",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -171,7 +171,7 @@
       "city": "台北・文山",
       "region": "north",
       "category": "transport",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -180,7 +180,7 @@
       "city": "苗栗・通霄",
       "region": "central",
       "category": "historic",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -189,7 +189,7 @@
       "city": "苗栗・三義",
       "region": "central",
       "category": "mountain",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -198,7 +198,7 @@
       "city": "台中・西屯",
       "region": "central",
       "category": "landmark",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -207,7 +207,7 @@
       "city": "台中・中區",
       "region": "central",
       "category": "culture",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -216,7 +216,7 @@
       "city": "嘉義・西區",
       "region": "south",
       "category": "food",
-      "status": "planned"
+      "status": "needs-review"
     },
     {
       "batch": 2,
@@ -225,7 +225,7 @@
       "city": "台南・中西",
       "region": "south",
       "category": "historic",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -234,7 +234,7 @@
       "city": "台南・中西",
       "region": "south",
       "category": "culture",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -243,7 +243,7 @@
       "city": "台南・安平",
       "region": "south",
       "category": "historic",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -252,7 +252,7 @@
       "city": "宜蘭・五結",
       "region": "east",
       "category": "culture",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -261,7 +261,7 @@
       "city": "宜蘭・羅東",
       "region": "east",
       "category": "food",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 2,
@@ -270,7 +270,7 @@
       "city": "宜蘭・大同",
       "region": "east",
       "category": "mountain",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -279,7 +279,7 @@
       "city": "台北・中正",
       "region": "north",
       "category": "culture",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -288,7 +288,7 @@
       "city": "台北・信義",
       "region": "north",
       "category": "landmark",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -297,7 +297,7 @@
       "city": "台北・松山",
       "region": "north",
       "category": "food",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -306,7 +306,7 @@
       "city": "台北・大同",
       "region": "north",
       "category": "historic",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -315,7 +315,7 @@
       "city": "台中・西屯",
       "region": "central",
       "category": "food",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -324,7 +324,7 @@
       "city": "台中・西區",
       "region": "central",
       "category": "culture",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -333,7 +333,7 @@
       "city": "台中・西屯",
       "region": "central",
       "category": "landmark",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -342,7 +342,7 @@
       "city": "台中・霧峰",
       "region": "central",
       "category": "historic",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -351,7 +351,7 @@
       "city": "台南・仁德",
       "region": "south",
       "category": "culture",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -360,7 +360,7 @@
       "city": "台南・七股",
       "region": "south",
       "category": "hidden",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -369,7 +369,7 @@
       "city": "台南・北門",
       "region": "south",
       "category": "ocean",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -378,7 +378,7 @@
       "city": "台南・安南",
       "region": "south",
       "category": "nature",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -387,7 +387,7 @@
       "city": "宜蘭・蘇澳",
       "region": "east",
       "category": "ocean",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -396,7 +396,7 @@
       "city": "宜蘭・宜蘭市",
       "region": "east",
       "category": "culture",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 3,
@@ -405,7 +405,7 @@
       "city": "宜蘭・蘇澳",
       "region": "east",
       "category": "hidden",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -414,7 +414,7 @@
       "city": "新北・平溪",
       "region": "north",
       "category": "culture",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -423,7 +423,7 @@
       "city": "新北・平溪",
       "region": "north",
       "category": "nature",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -432,7 +432,7 @@
       "city": "新北・瑞芳",
       "region": "north",
       "category": "hidden",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -441,7 +441,7 @@
       "city": "新北・瑞芳",
       "region": "north",
       "category": "historic",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -450,7 +450,7 @@
       "city": "台中・大甲",
       "region": "central",
       "category": "historic",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -459,7 +459,7 @@
       "city": "台中・梧棲",
       "region": "central",
       "category": "ocean",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -468,7 +468,7 @@
       "city": "台中・新社",
       "region": "central",
       "category": "nature",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -477,7 +477,7 @@
       "city": "台中・和平",
       "region": "central",
       "category": "nature",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -486,7 +486,7 @@
       "city": "台南・官田",
       "region": "south",
       "category": "nature",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -495,7 +495,7 @@
       "city": "台南・中西",
       "region": "south",
       "category": "historic",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -504,7 +504,7 @@
       "city": "高雄・左營",
       "region": "south",
       "category": "landmark",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -513,7 +513,7 @@
       "city": "高雄・大樹",
       "region": "south",
       "category": "culture",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -522,7 +522,7 @@
       "city": "宜蘭・頭城",
       "region": "east",
       "category": "landmark",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -531,7 +531,7 @@
       "city": "花蓮・花蓮市",
       "region": "east",
       "category": "food",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 4,
@@ -540,7 +540,7 @@
       "city": "花蓮・花蓮市",
       "region": "east",
       "category": "historic",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 5,
@@ -549,7 +549,7 @@
       "city": "新北・瑞芳",
       "region": "north",
       "category": "ocean",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 5,
@@ -585,7 +585,7 @@
       "city": "台中・和平",
       "region": "central",
       "category": "mountain",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 5,
@@ -594,7 +594,7 @@
       "city": "彰化・彰化市",
       "region": "central",
       "category": "transport",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 5,
@@ -630,7 +630,7 @@
       "city": "高雄・鼓山",
       "region": "south",
       "category": "historic",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 5,
@@ -657,7 +657,7 @@
       "city": "花蓮・壽豐",
       "region": "east",
       "category": "nature",
-      "status": "planned"
+      "status": "added"
     },
     {
       "batch": 5,

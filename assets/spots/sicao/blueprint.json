@@ -1,0 +1,47 @@
+{
+  "spotId": "sicao",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Sicao mangrove tunnel",
+    "silhouette": "Narrow waterway roofed by arching mangrove branches with a bamboo raft"
+  },
+  "crop": "The mangrove channel with rafts. Not the wider wetland park.",
+  "heroScale": 1,
+  "orientation": "verify: channel runs from the Dazhong Temple dock",
+  "lockedGeometry": [
+    "narrow straight water channel",
+    "mangroves on both banks",
+    "wetland flats beyond the mangroves"
+  ],
+  "lockedIdentity": [
+    "arching mangrove canopy",
+    "bamboo raft with passengers"
+  ],
+  "doNotInvent": [
+    "mountains",
+    "buildings",
+    "waterfalls"
+  ],
+  "allowedMiniatureDetails": [
+    "egrets",
+    "fiddler crabs",
+    "tiny passengers"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Bamboo raft under a green arch"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

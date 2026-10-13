@@ -1,0 +1,47 @@
+{
+  "spotId": "huoyanshan",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Huoyanshan eroded ridges",
+    "silhouette": "Jagged red gravel ridges and gullies topped with pines"
+  },
+  "crop": "The eroded ridge and gullies with the river below. Not the whole Sanyi hill range.",
+  "heroScale": 1,
+  "orientation": "verify: Da'an River lies to the south",
+  "lockedGeometry": [
+    "sharp eroded ridgeline",
+    "deep gullies",
+    "river plain below"
+  ],
+  "lockedIdentity": [
+    "red-brown conglomerate cliffs",
+    "Masson pines on the ridge"
+  ],
+  "doNotInvent": [
+    "snow",
+    "lakes",
+    "temples"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny hikers on the ridge",
+    "rope sections",
+    "sunset glow"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Red jagged ridge with a pine"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

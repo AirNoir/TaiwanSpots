@@ -1,0 +1,47 @@
+{
+  "spotId": "lotus-pond",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Dragon and Tiger Pagodas",
+    "silhouette": "Twin seven-storey pagodas with dragon and tiger gates on a zigzag bridge over a lake"
+  },
+  "crop": "The two pagodas and zigzag bridge. Not the whole lake.",
+  "heroScale": 1,
+  "orientation": "verify: pagodas stand on the west shore",
+  "lockedGeometry": [
+    "lake",
+    "zigzag bridge from shore",
+    "two pagodas side by side"
+  ],
+  "lockedIdentity": [
+    "dragon mouth and tiger mouth entrances",
+    "red and yellow pagodas"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "mountains",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "lotus",
+    "boats"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Two little pagodas on a zigzag bridge"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

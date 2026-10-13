@@ -1,0 +1,47 @@
+{
+  "spotId": "sun-yat-sen-memorial",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Sun Yat-sen Memorial Hall",
+    "silhouette": "Square hall with a sweeping upturned yellow-tile roof on columns"
+  },
+  "crop": "The hall, its plaza and Cuihu pond. Not Taipei 101 in the background.",
+  "heroScale": 1,
+  "orientation": "verify: Taipei 101 rises to the south-east",
+  "lockedGeometry": [
+    "square hall on a platform",
+    "wide plaza around it",
+    "pond on the north side"
+  ],
+  "lockedIdentity": [
+    "yellow glazed roof with upturned eaves",
+    "grey columns"
+  ],
+  "doNotInvent": [
+    "blue roofs",
+    "fountains on the steps",
+    "pagodas"
+  ],
+  "allowedMiniatureDetails": [
+    "kites",
+    "dancers",
+    "tiny visitors"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Yellow upturned roof on grey columns"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

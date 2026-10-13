@@ -1,0 +1,46 @@
+{
+  "spotId": "pine-garden",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Pine Garden villa",
+    "silhouette": "Two-storey Japanese-era building with arched verandas among old pines on a hill"
+  },
+  "crop": "The villa and its pines. Not the city below.",
+  "heroScale": 1,
+  "orientation": "verify: sea and harbour lie to the east",
+  "lockedGeometry": [
+    "small hilltop",
+    "villa on the crest",
+    "winding path up the hill from the street"
+  ],
+  "lockedIdentity": [
+    "white arched verandas",
+    "old Ryukyu pines"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "temples",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "birds"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Arched villa among pines"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

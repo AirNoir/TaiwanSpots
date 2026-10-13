@@ -1,0 +1,48 @@
+{
+  "spotId": "baoan-temple",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Baoan Temple front hall",
+    "silhouette": "Southern Min temple with richly carved wooden beams and painted walls"
+  },
+  "crop": "The temple front hall and its courtyard. Not the Confucius Temple next door.",
+  "heroScale": 1,
+  "orientation": "verify: Confucius Temple lies to the north across the street",
+  "lockedGeometry": [
+    "walled courtyard",
+    "front hall and main hall on one axis",
+    "street on the south"
+  ],
+  "lockedIdentity": [
+    "swallowtail roof ridges",
+    "dense jiannian figures",
+    "painted door gods"
+  ],
+  "doNotInvent": [
+    "pagodas",
+    "gold roofs",
+    "high-rises"
+  ],
+  "allowedMiniatureDetails": [
+    "worshippers",
+    "lanterns",
+    "offering tables"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Temple roof with colourful jiannian"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

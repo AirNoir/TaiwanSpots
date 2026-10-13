@@ -1,0 +1,47 @@
+{
+  "spotId": "anping-treehouse",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Anping Tree House",
+    "silhouette": "Roofless brick warehouse overgrown by banyan roots and canopy"
+  },
+  "crop": "The warehouse ruin and walkways inside the banyan. Not the Tait & Co. building beside it.",
+  "heroScale": 1,
+  "orientation": "verify: Tait & Co. merchant house sits to the east",
+  "lockedGeometry": [
+    "brick warehouse walls",
+    "elevated walkways through the ruin",
+    "canal nearby"
+  ],
+  "lockedIdentity": [
+    "banyan roots covering walls",
+    "canopy acting as roof"
+  ],
+  "doNotInvent": [
+    "intact roofs",
+    "waterfalls",
+    "modern buildings"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny visitors on the walkway",
+    "dappled light",
+    "moss"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Brick wall swallowed by banyan roots"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "spotId": "nccta",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Traditional arts old street",
+    "silhouette": "Recreated Qing-style shop street with a temple and stage beside a river"
+  },
+  "crop": "The old street, temple and opera stage by the Dongshan River. Not the whole park.",
+  "heroScale": 1,
+  "orientation": "verify: river runs along the east side",
+  "lockedGeometry": [
+    "straight old street",
+    "riverbank promenade",
+    "open-air stage"
+  ],
+  "lockedIdentity": [
+    "red-brick shopfronts",
+    "Wenchang temple",
+    "opera stage"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "mountains close by",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "puppet shows",
+    "craft stalls",
+    "visitors"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Little opera stage with a puppet"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

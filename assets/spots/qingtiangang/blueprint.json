@@ -1,0 +1,48 @@
+{
+  "spotId": "qingtiangang",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Qingtiangang grassland",
+    "silhouette": "Rolling open grass plateau on a volcanic ridge with distant peaks"
+  },
+  "crop": "The grassy plateau with the trail and grazing buffalo. Not the whole Yangmingshan park.",
+  "heroScale": 1,
+  "orientation": "verify: Qixing Mountain rises to the west",
+  "lockedGeometry": [
+    "broad rolling grassland",
+    "stone-paved trail crossing it",
+    "volcanic peaks around"
+  ],
+  "lockedIdentity": [
+    "short silvergrass meadow",
+    "water buffalo grazing",
+    "fog drifting over the ridge"
+  ],
+  "doNotInvent": [
+    "forests on the plateau",
+    "buildings",
+    "lakes"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny hikers",
+    "buffalo",
+    "wooden fence posts"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Grassy hill with a little water buffalo"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "spotId": "qigu-salt",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Qigu Salt Mountain",
+    "silhouette": "Large white mound of salt with stairs up its side beside flat salt pans"
+  },
+  "crop": "The salt mound and salt fields around it. Not the lagoon.",
+  "heroScale": 1,
+  "orientation": "verify: salt pans extend to the west",
+  "lockedGeometry": [
+    "single big white mound",
+    "flat salt fields",
+    "sea not far west"
+  ],
+  "lockedIdentity": [
+    "brilliant white salt",
+    "stairs on the slope"
+  ],
+  "doNotInvent": [
+    "real snow",
+    "mountains",
+    "forests"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny climbers",
+    "salt carts",
+    "sunset"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "White salt mound with tiny steps"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

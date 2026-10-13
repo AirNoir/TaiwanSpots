@@ -1,0 +1,47 @@
+{
+  "spotId": "guguan",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Guguan hot spring village",
+    "silhouette": "Small hot spring town in a deep river gorge with a red suspension bridge"
+  },
+  "crop": "The village, river and suspension bridge. Not the surrounding peaks.",
+  "heroScale": 1,
+  "orientation": "verify: Dajia River flows west through the gorge",
+  "lockedGeometry": [
+    "deep gorge",
+    "river with boulders",
+    "village on the terrace"
+  ],
+  "lockedIdentity": [
+    "red suspension bridge",
+    "steaming baths"
+  ],
+  "doNotInvent": [
+    "beaches",
+    "high-rises",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "bathers",
+    "hikers",
+    "steam"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Steaming tub by a red bridge"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

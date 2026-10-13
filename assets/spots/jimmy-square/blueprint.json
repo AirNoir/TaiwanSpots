@@ -1,0 +1,47 @@
+{
+  "spotId": "jimmy-square",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Jimmy Square",
+    "silhouette": "Small plaza beside a station with picture-book sculptures and a train car lifted into the air"
+  },
+  "crop": "The plaza with sculptures next to Yilan Station. Not the whole town.",
+  "heroScale": 1,
+  "orientation": "verify: station platform lies just east",
+  "lockedGeometry": [
+    "small plaza beside rail station",
+    "old warehouses",
+    "street trees"
+  ],
+  "lockedIdentity": [
+    "flying train carriage sculpture",
+    "picture-book character sculptures"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "temples",
+    "rivers"
+  ],
+  "allowedMiniatureDetails": [
+    "children",
+    "luggage",
+    "tiny travellers"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "A little train car floating in the sky"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}
