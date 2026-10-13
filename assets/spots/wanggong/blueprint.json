@@ -1,0 +1,47 @@
+{
+  "spotId": "wanggong",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Wanggong lighthouse",
+    "silhouette": "Black-and-white striped octagonal lighthouse on flat tidal coast with oyster beds"
+  },
+  "crop": "The lighthouse and tidal flats. Not the village.",
+  "heroScale": 1,
+  "orientation": "verify: sea lies to the west",
+  "lockedGeometry": [
+    "flat coast",
+    "tidal flats",
+    "harbour with bridge"
+  ],
+  "lockedIdentity": [
+    "black-and-white striped lighthouse",
+    "oyster racks"
+  ],
+  "doNotInvent": [
+    "cliffs",
+    "mountains",
+    "cruise ships"
+  ],
+  "allowedMiniatureDetails": [
+    "ox carts on the flats",
+    "fishermen",
+    "sunset"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Striped lighthouse on the flats"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

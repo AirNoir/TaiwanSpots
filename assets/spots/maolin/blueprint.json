@@ -1,0 +1,47 @@
+{
+  "spotId": "maolin",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Purple butterfly valley",
+    "silhouette": "Forest valley where trees glitter with clusters of purple butterflies"
+  },
+  "crop": "The valley forest with butterflies. Not the village.",
+  "heroScale": 1,
+  "orientation": "verify: valley runs east",
+  "lockedGeometry": [
+    "forest valley",
+    "stream",
+    "path"
+  ],
+  "lockedIdentity": [
+    "purple crow butterflies",
+    "dense forest"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "butterflies",
+    "ferns"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Purple butterflies on a tree"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

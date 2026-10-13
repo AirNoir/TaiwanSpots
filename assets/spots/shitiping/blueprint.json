@@ -1,0 +1,47 @@
+{
+  "spotId": "shitiping",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Shitiping terraces",
+    "silhouette": "Stepped white coral-rock terraces on the shore with potholes and waves"
+  },
+  "crop": "The rock terraces and shore. Not the campground.",
+  "heroScale": 1,
+  "orientation": "verify: mountains rise to the west",
+  "lockedGeometry": [
+    "stepped rock platforms",
+    "sea to the east",
+    "green slopes behind"
+  ],
+  "lockedIdentity": [
+    "white terrace rocks",
+    "potholes"
+  ],
+  "doNotInvent": [
+    "beaches",
+    "buildings on the rocks",
+    "bridges"
+  ],
+  "allowedMiniatureDetails": [
+    "fishermen",
+    "tidepools",
+    "waves"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "White stepped rocks with waves"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

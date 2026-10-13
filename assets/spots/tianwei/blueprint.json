@@ -1,0 +1,47 @@
+{
+  "spotId": "tianwei",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Tianwei garden lanes",
+    "silhouette": "Country lanes lined with nursery greenhouses and flower beds"
+  },
+  "crop": "A crossroads of the garden lanes with nurseries. Not the whole township.",
+  "heroScale": 1,
+  "orientation": "verify: main road runs north-south",
+  "lockedGeometry": [
+    "grid of country lanes",
+    "greenhouses",
+    "flat farmland"
+  ],
+  "lockedIdentity": [
+    "colourful nursery beds",
+    "potted plants rows"
+  ],
+  "doNotInvent": [
+    "mountains",
+    "lakes",
+    "high-rises"
+  ],
+  "allowedMiniatureDetails": [
+    "cyclists",
+    "flower carts",
+    "greenhouses"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Bicycle by a flower bed"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

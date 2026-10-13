@@ -1,0 +1,47 @@
+{
+  "spotId": "bitou-cape",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Bitou Cape headland and lighthouse",
+    "silhouette": "Grassy sandstone headland with sea cliffs and a small white lighthouse near its tip"
+  },
+  "crop": "The tip of the cape with the cliff trail and lighthouse. Not the fishing village.",
+  "heroScale": 1,
+  "orientation": "verify: lighthouse sits on the north-east side of the cape",
+  "lockedGeometry": [
+    "narrow headland pointing into the sea",
+    "sea cliffs and wave-cut platforms",
+    "trail along the ridge"
+  ],
+  "lockedIdentity": [
+    "small white lighthouse",
+    "eroded sandstone cliffs"
+  ],
+  "doNotInvent": [
+    "big harbours",
+    "beach resorts",
+    "temples"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny hikers",
+    "fishermen on rocks",
+    "waves"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "White lighthouse on a grassy cliff"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

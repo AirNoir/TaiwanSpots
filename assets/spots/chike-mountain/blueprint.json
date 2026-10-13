@@ -1,0 +1,47 @@
+{
+  "spotId": "chike-mountain",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Chike Mountain daylily fields",
+    "silhouette": "Mountain ridge of orange daylily fields with small huts and rising mist"
+  },
+  "crop": "The daylily ridge. Not the valley.",
+  "heroScale": 1,
+  "orientation": "verify: valley lies to the west",
+  "lockedGeometry": [
+    "ridge",
+    "terraces",
+    "valley below"
+  ],
+  "lockedIdentity": [
+    "orange daylilies",
+    "small huts"
+  ],
+  "doNotInvent": [
+    "snow",
+    "lakes",
+    "temples"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "mist",
+    "farmers"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Orange flowers on a misty ridge"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

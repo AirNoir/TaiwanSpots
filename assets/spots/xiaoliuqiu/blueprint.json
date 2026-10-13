@@ -1,0 +1,47 @@
+{
+  "spotId": "xiaoliuqiu",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Vase Rock",
+    "silhouette": "Coral rock with a narrow base and wide top covered in plants on a shallow shore"
+  },
+  "crop": "The rock and shallow shore. Not the harbour.",
+  "heroScale": 1,
+  "orientation": "verify: harbour lies to the south",
+  "lockedGeometry": [
+    "shallow rocky shore",
+    "single rock",
+    "coast road"
+  ],
+  "lockedIdentity": [
+    "vase-shaped rock with greenery",
+    "green sea turtles"
+  ],
+  "doNotInvent": [
+    "beaches",
+    "buildings",
+    "bridges"
+  ],
+  "allowedMiniatureDetails": [
+    "snorkellers",
+    "turtles",
+    "waves"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Vase rock with a turtle"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

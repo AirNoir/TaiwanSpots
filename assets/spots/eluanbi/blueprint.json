@@ -1,0 +1,47 @@
+{
+  "spotId": "eluanbi",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Eluanbi Lighthouse",
+    "silhouette": "Tall white cylindrical lighthouse among lawns and tropical trees near the coast"
+  },
+  "crop": "The lighthouse and park. Not the whole cape.",
+  "heroScale": 1,
+  "orientation": "verify: sea lies east and south",
+  "lockedGeometry": [
+    "lawn park",
+    "coast",
+    "paths"
+  ],
+  "lockedIdentity": [
+    "white lighthouse",
+    "tropical trees"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "temples",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "palms",
+    "waves"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "White lighthouse with palms"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

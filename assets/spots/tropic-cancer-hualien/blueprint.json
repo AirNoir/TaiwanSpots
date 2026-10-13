@@ -1,0 +1,47 @@
+{
+  "spotId": "tropic-cancer-hualien",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Tropic of Cancer marker",
+    "silhouette": "Tall white slender monument marking the tropic line in rural valley"
+  },
+  "crop": "The marker and its small park. Not the valley.",
+  "heroScale": 1,
+  "orientation": "verify: road runs north-south past the park",
+  "lockedGeometry": [
+    "small park",
+    "road",
+    "farmland around"
+  ],
+  "lockedIdentity": [
+    "white spire marker",
+    "line on the ground"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "temples",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "fields",
+    "sun"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "White spire marker"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

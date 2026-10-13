@@ -1,0 +1,47 @@
+{
+  "spotId": "moon-world",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Moon World badlands",
+    "silhouette": "Grey mudstone badland ridges with sharp gullies around a small pond"
+  },
+  "crop": "The badland ridges and pond with the walkway. Not the farmland.",
+  "heroScale": 1,
+  "orientation": "verify: pond sits in the centre of the ridges",
+  "lockedGeometry": [
+    "eroded ridges",
+    "small pond",
+    "walkway"
+  ],
+  "lockedIdentity": [
+    "grey bare mudstone",
+    "sharp ridges"
+  ],
+  "doNotInvent": [
+    "forests on ridges",
+    "snow",
+    "buildings"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "pavilion",
+    "sparse grass"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Grey sharp ridges around a pond"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

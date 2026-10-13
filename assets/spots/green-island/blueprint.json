@@ -1,0 +1,47 @@
+{
+  "spotId": "green-island",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Green Island lighthouse",
+    "silhouette": "White lighthouse on the coast of a green volcanic island"
+  },
+  "crop": "The lighthouse and coast. Not the whole island.",
+  "heroScale": 1,
+  "orientation": "verify: lighthouse on the north-west coast",
+  "lockedGeometry": [
+    "coast",
+    "grass slope",
+    "road"
+  ],
+  "lockedIdentity": [
+    "white lighthouse",
+    "volcanic rocks"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "bridges",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "scooters",
+    "divers",
+    "waves"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "White lighthouse on a green island"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

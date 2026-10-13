@@ -1,0 +1,47 @@
+{
+  "spotId": "lanyu",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Orchid Island shore",
+    "silhouette": "Volcanic island shore with carved wooden canoes on a pebble beach"
+  },
+  "crop": "The beach and canoes near the harbour. Not the whole island.",
+  "heroScale": 1,
+  "orientation": "verify: Kaiyuan harbour on the west coast",
+  "lockedGeometry": [
+    "rocky shore",
+    "pebble beach",
+    "mountains behind"
+  ],
+  "lockedIdentity": [
+    "tatala canoes with red, white and black carvings",
+    "Tao underground houses with low stone walls"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "bridges",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "villagers",
+    "flying fish",
+    "goats"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Carved canoe on a pebble beach"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

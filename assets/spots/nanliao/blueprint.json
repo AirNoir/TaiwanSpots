@@ -1,0 +1,47 @@
+{
+  "spotId": "nanliao",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Nanliao harbour lawn",
+    "silhouette": "Harbour with a big lawn full of kites and a bike path"
+  },
+  "crop": "The harbour and lawn. Not the city.",
+  "heroScale": 1,
+  "orientation": "verify: sea lies to the west",
+  "lockedGeometry": [
+    "harbour",
+    "lawn",
+    "bike path"
+  ],
+  "lockedIdentity": [
+    "kites",
+    "fishing boats"
+  ],
+  "doNotInvent": [
+    "cliffs",
+    "high-rises",
+    "mountains"
+  ],
+  "allowedMiniatureDetails": [
+    "cyclists",
+    "kites",
+    "boats"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Kites over a harbour lawn"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "spotId": "baguashan-buddha",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Baguashan Great Buddha",
+    "silhouette": "Giant dark seated Buddha statue on a hilltop with lions at its base"
+  },
+  "crop": "The Buddha statue and plaza on the hill. Not the city below.",
+  "heroScale": 1,
+  "orientation": "verify: Buddha faces west over the city",
+  "lockedGeometry": [
+    "hilltop plaza",
+    "stairs up the slope",
+    "city below"
+  ],
+  "lockedIdentity": [
+    "dark grey seated Buddha",
+    "stone lions"
+  ],
+  "doNotInvent": [
+    "gold paint",
+    "pagodas",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "trees",
+    "pigeons"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Dark seated Buddha on a hill"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

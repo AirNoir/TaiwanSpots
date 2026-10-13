@@ -1,0 +1,47 @@
+{
+  "spotId": "lintianshan",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Lintianshan forestry village",
+    "silhouette": "Hillside village of dark wooden Japanese houses with a small logging train"
+  },
+  "crop": "The village lanes, houses and rail. Not the forest beyond.",
+  "heroScale": 1,
+  "orientation": "verify: village climbs the slope eastward",
+  "lockedGeometry": [
+    "gentle slope",
+    "rows of houses",
+    "rail track"
+  ],
+  "lockedIdentity": [
+    "dark cypress wooden houses",
+    "small logging train"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "temples",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "logs",
+    "bicycles"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Wooden house with a logging cart"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

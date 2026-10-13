@@ -1,0 +1,47 @@
+{
+  "spotId": "weiwuying",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Weiwuying",
+    "silhouette": "Huge low building with a flowing white wave roof sheltering an open plaza"
+  },
+  "crop": "The arts centre building and surrounding park. Not the city.",
+  "heroScale": 1,
+  "orientation": "verify: park surrounds the building on all sides",
+  "lockedGeometry": [
+    "long low building",
+    "park",
+    "open plaza underneath"
+  ],
+  "lockedIdentity": [
+    "white wavy roof",
+    "open banyan-like plaza"
+  ],
+  "doNotInvent": [
+    "domes",
+    "columns",
+    "pagodas"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "skateboarders",
+    "trees"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "White wavy roof"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

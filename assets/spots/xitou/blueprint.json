@@ -1,0 +1,47 @@
+{
+  "spotId": "xitou",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "University Pond",
+    "silhouette": "Small pond in a tall cedar forest crossed by an arched bamboo bridge"
+  },
+  "crop": "The pond and bamboo bridge in the forest. Not the whole park.",
+  "heroScale": 1,
+  "orientation": "verify: bridge crosses the pond east-west",
+  "lockedGeometry": [
+    "small pond",
+    "tall forest around",
+    "path"
+  ],
+  "lockedIdentity": [
+    "arched bamboo bridge",
+    "tall Japanese cedars"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "snow",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "mist",
+    "ducks"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Bamboo arch bridge over a pond"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

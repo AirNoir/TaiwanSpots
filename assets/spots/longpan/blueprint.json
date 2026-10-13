@@ -1,0 +1,47 @@
+{
+  "spotId": "longpan",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Longpan grassland cliffs",
+    "silhouette": "Flat grassy coral terrace ending in steep cliffs over the Pacific"
+  },
+  "crop": "The grassland and cliff edge. Not the road.",
+  "heroScale": 1,
+  "orientation": "verify: cliffs face east",
+  "lockedGeometry": [
+    "flat terrace",
+    "cliffs",
+    "sea"
+  ],
+  "lockedIdentity": [
+    "grassland",
+    "cliff edge"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "trees on the terrace",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "stargazers",
+    "visitors",
+    "waves"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Grassy cliff over the sea"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

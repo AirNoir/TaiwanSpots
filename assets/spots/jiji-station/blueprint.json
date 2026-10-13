@@ -1,0 +1,47 @@
+{
+  "spotId": "jiji-station",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Jiji Station",
+    "silhouette": "Small Japanese-era cypress wood station with a dark tiled roof"
+  },
+  "crop": "The station and its forecourt. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: track runs east-west",
+  "lockedGeometry": [
+    "small station",
+    "forecourt",
+    "track behind"
+  ],
+  "lockedIdentity": [
+    "dark wooden station",
+    "small train"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "temples",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "cyclists",
+    "trees",
+    "travellers"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Wooden station with a tree"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

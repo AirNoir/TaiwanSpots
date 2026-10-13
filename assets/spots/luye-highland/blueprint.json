@@ -1,0 +1,47 @@
+{
+  "spotId": "luye-highland",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Luye Highland",
+    "silhouette": "Grassy plateau with tea fields and hot-air balloons rising"
+  },
+  "crop": "The plateau and balloon field. Not the valley.",
+  "heroScale": 1,
+  "orientation": "verify: valley lies to the south",
+  "lockedGeometry": [
+    "plateau",
+    "grass field",
+    "tea fields"
+  ],
+  "lockedIdentity": [
+    "hot-air balloons",
+    "paragliders"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "lakes",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "balloons",
+    "tea"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Hot-air balloon over tea"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

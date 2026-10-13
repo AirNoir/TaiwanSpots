@@ -1,0 +1,47 @@
+{
+  "spotId": "xiluo-bridge",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Xiluo Bridge",
+    "silhouette": "Long red steel truss bridge over a wide river"
+  },
+  "crop": "The bridge over the river. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: bridge runs north-south",
+  "lockedGeometry": [
+    "wide river",
+    "long bridge",
+    "farmland"
+  ],
+  "lockedIdentity": [
+    "red steel trusses",
+    "many repeating truss spans across a wide gravel riverbed"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "mountains",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "cyclists",
+    "cars",
+    "birds"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Red truss bridge"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

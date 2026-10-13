@@ -1,0 +1,47 @@
+{
+  "spotId": "neiwan",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Neiwan Station and old street",
+    "silhouette": "Small mountain terminus station beside an old street and suspension bridge"
+  },
+  "crop": "The station, street and bridge. Not the hills.",
+  "heroScale": 1,
+  "orientation": "verify: suspension bridge crosses the river south of the street",
+  "lockedGeometry": [
+    "valley",
+    "station",
+    "street"
+  ],
+  "lockedIdentity": [
+    "small train",
+    "old theatre"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "shops",
+    "trains"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Small train at a mountain station"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

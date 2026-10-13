@@ -1,0 +1,47 @@
+{
+  "spotId": "donggang",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Huaqiao fish market",
+    "silhouette": "Large market hall full of seafood stalls beside a fishing harbour"
+  },
+  "crop": "The market and harbour edge. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: harbour lies to the west",
+  "lockedGeometry": [
+    "market hall",
+    "harbour",
+    "boats"
+  ],
+  "lockedIdentity": [
+    "bluefin tuna",
+    "seafood stalls"
+  ],
+  "doNotInvent": [
+    "mountains",
+    "high-rises",
+    "temples"
+  ],
+  "allowedMiniatureDetails": [
+    "buyers",
+    "fish",
+    "boats"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Tuna on a market stall"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

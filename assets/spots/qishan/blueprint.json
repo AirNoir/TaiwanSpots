@@ -1,0 +1,47 @@
+{
+  "spotId": "qishan",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Qishan old street",
+    "silhouette": "Row of baroque arcade shophouse facades and an old station"
+  },
+  "crop": "The arcade street and the old Qishan station. Not the hills.",
+  "heroScale": 1,
+  "orientation": "verify: old station sits at the north end",
+  "lockedGeometry": [
+    "straight street",
+    "arcade shophouses",
+    "old station"
+  ],
+  "lockedIdentity": [
+    "baroque facades",
+    "banana ice desserts"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "bananas",
+    "scooters"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Baroque shopfront with banana ice"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

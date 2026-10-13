@@ -1,0 +1,47 @@
+{
+  "spotId": "zhiben",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Zhiben hot spring valley",
+    "silhouette": "River valley lined with hot spring inns and forest"
+  },
+  "crop": "The valley and baths. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: river flows east",
+  "lockedGeometry": [
+    "river valley",
+    "inns",
+    "forest"
+  ],
+  "lockedIdentity": [
+    "hot spring pools",
+    "steam"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "bathers",
+    "steam",
+    "bridge"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Steaming pool in a valley"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

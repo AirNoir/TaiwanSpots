@@ -1,0 +1,47 @@
+{
+  "spotId": "formosa-boulevard",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Dome of Light",
+    "silhouette": "Circular underground concourse under a huge stained-glass dome, entrances like hands in prayer"
+  },
+  "crop": "The glass station entrances and the dome beneath, shown as a cutaway. Not the street grid.",
+  "heroScale": 1,
+  "orientation": "verify: four glass entrances at the roundabout corners",
+  "lockedGeometry": [
+    "round roundabout above",
+    "station concourse below",
+    "glass entrance pavilions"
+  ],
+  "lockedIdentity": [
+    "colourful stained-glass dome",
+    "prayer-hands glass entrances"
+  ],
+  "doNotInvent": [
+    "trains on the surface",
+    "skyscrapers next to it",
+    "temples"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny commuters",
+    "escalators",
+    "lights"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Colourful glass dome"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

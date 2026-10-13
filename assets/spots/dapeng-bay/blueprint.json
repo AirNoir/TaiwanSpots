@@ -1,0 +1,47 @@
+{
+  "spotId": "dapeng-bay",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Dapeng Bay lagoon",
+    "silhouette": "Large calm lagoon with a bascule bridge and bike path"
+  },
+  "crop": "The lagoon and bridge. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: lagoon mouth opens to the south-west",
+  "lockedGeometry": [
+    "large lagoon",
+    "narrow outlet",
+    "bridge"
+  ],
+  "lockedIdentity": [
+    "bascule bridge",
+    "oyster racks"
+  ],
+  "doNotInvent": [
+    "mountains",
+    "high-rises",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "sailboats",
+    "cyclists",
+    "birds"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Bascule bridge over a lagoon"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

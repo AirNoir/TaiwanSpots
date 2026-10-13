@@ -1,0 +1,48 @@
+{
+  "spotId": "liuhe",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Liuhe night market",
+    "silhouette": "Wide straight road filled with stalls under neon signs at night"
+  },
+  "crop": "The market street. Not the station.",
+  "heroScale": 1,
+  "orientation": "verify: market runs east-west along Liuhe 2nd Road",
+  "lockedGeometry": [
+    "one wide straight street",
+    "low buildings on both sides",
+    "stalls down the middle"
+  ],
+  "lockedIdentity": [
+    "papaya milk stalls",
+    "seafood stalls",
+    "neon gate"
+  ],
+  "doNotInvent": [
+    "temples",
+    "rivers",
+    "mountains"
+  ],
+  "allowedMiniatureDetails": [
+    "crowds",
+    "scooters",
+    "steam"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Papaya milk cup with a stall"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

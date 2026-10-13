@@ -1,0 +1,47 @@
+{
+  "spotId": "yushan",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Yushan summit",
+    "silhouette": "Rocky alpine summit with a stone marker above a sea of clouds"
+  },
+  "crop": "The summit and ridge. Not the trailhead.",
+  "heroScale": 1,
+  "orientation": "verify: summit ridge runs north-south",
+  "lockedGeometry": [
+    "rocky peak",
+    "ridges",
+    "cloud sea"
+  ],
+  "lockedIdentity": [
+    "summit stone marker",
+    "sea of clouds"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "lakes",
+    "forests on the summit"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny hikers",
+    "sunrise",
+    "juniper"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Rocky peak above clouds"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

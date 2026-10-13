@@ -1,0 +1,47 @@
+{
+  "spotId": "beipu",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Beipu old street",
+    "silhouette": "Hakka village street around a temple with brick houses"
+  },
+  "crop": "The temple and old lanes. Not the hills.",
+  "heroScale": 1,
+  "orientation": "verify: Citian Temple sits at the centre",
+  "lockedGeometry": [
+    "temple plaza",
+    "lanes",
+    "brick houses"
+  ],
+  "lockedIdentity": [
+    "Citian Temple",
+    "persimmon drying racks"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "lei-cha bowls",
+    "persimmons"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Persimmons by a Hakka house"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

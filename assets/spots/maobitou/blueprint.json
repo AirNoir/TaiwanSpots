@@ -1,0 +1,47 @@
+{
+  "spotId": "maobitou",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Cat Nose Rock",
+    "silhouette": "Coral rock shaped like a crouching cat on a rugged headland"
+  },
+  "crop": "The cat rock and headland. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: rock sits at the tip facing south",
+  "lockedGeometry": [
+    "headland",
+    "coral reefs",
+    "viewing platform"
+  ],
+  "lockedIdentity": [
+    "cat-shaped rock",
+    "rugged coast"
+  ],
+  "doNotInvent": [
+    "beaches",
+    "buildings",
+    "bridges"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "waves",
+    "fishermen"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Cat-shaped rock by the sea"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

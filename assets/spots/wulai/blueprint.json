@@ -1,0 +1,48 @@
+{
+  "spotId": "wulai",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Wulai Waterfall",
+    "silhouette": "Tall slender waterfall down a forested cliff across a river gorge"
+  },
+  "crop": "The waterfall seen from the trolley terminus across the gorge. Not the hot-spring street.",
+  "heroScale": 1,
+  "orientation": "verify: falls on the east side of the river",
+  "lockedGeometry": [
+    "steep forested cliff",
+    "river gorge",
+    "trolley line"
+  ],
+  "lockedIdentity": [
+    "tall white falls",
+    "small push trolley",
+    "cable car line above"
+  ],
+  "doNotInvent": [
+    "lakes",
+    "buildings on the cliff",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "trolley passengers",
+    "mist",
+    "ferns"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Tall waterfall with a little trolley"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

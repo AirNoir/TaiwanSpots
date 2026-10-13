@@ -1,0 +1,48 @@
+{
+  "spotId": "checheng",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Checheng station and log pond",
+    "silhouette": "Wooden terminus station beside a log pond and old timber factory under hills"
+  },
+  "crop": "The station, log pond and wooden factory. Not the dam.",
+  "heroScale": 1,
+  "orientation": "verify: log pond lies north of the station",
+  "lockedGeometry": [
+    "valley terminus",
+    "log pond",
+    "hills around"
+  ],
+  "lockedIdentity": [
+    "wooden station",
+    "timber factory",
+    "log pond reflections"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "logs",
+    "small train"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Wooden station by a log pond"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

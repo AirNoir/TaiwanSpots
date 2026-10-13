@@ -1,0 +1,47 @@
+{
+  "spotId": "wutai",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Wutai village",
+    "silhouette": "Mountain village of slate houses on a steep slope"
+  },
+  "crop": "The village. Not the road.",
+  "heroScale": 1,
+  "orientation": "verify: village faces south",
+  "lockedGeometry": [
+    "steep slope",
+    "terraces",
+    "village"
+  ],
+  "lockedIdentity": [
+    "slate houses",
+    "lily motifs"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "villagers",
+    "flowers",
+    "mist"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Slate house with lilies"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

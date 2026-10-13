@@ -1,0 +1,48 @@
+{
+  "spotId": "meinong",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Meinong East Gate tower",
+    "silhouette": "Hakka gate tower beside rice fields with tobacco barns and paper umbrellas"
+  },
+  "crop": "The East Gate tower and nearby fields. Not the whole township.",
+  "heroScale": 1,
+  "orientation": "verify: Meinong Creek runs past the gate",
+  "lockedGeometry": [
+    "town edge",
+    "rice fields",
+    "creek"
+  ],
+  "lockedIdentity": [
+    "East Gate tower",
+    "tobacco barns",
+    "oil-paper umbrellas"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "umbrella makers",
+    "farmers",
+    "cyclists"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Oil-paper umbrella beside a gate tower"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

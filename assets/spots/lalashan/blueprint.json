@@ -1,0 +1,47 @@
+{
+  "spotId": "lalashan",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Lalashan giant cypress",
+    "silhouette": "Huge ancient red cypress trunks in a misty forest with a boardwalk"
+  },
+  "crop": "The giant trees and boardwalk. Not the orchards.",
+  "heroScale": 1,
+  "orientation": "verify: trail loops north of the station",
+  "lockedGeometry": [
+    "forest",
+    "boardwalk",
+    "ridge"
+  ],
+  "lockedIdentity": [
+    "giant red cypress trees",
+    "moss"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "lakes",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "hikers",
+    "ferns",
+    "mist"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Giant tree trunk in mist"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

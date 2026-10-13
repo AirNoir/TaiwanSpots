@@ -1,0 +1,47 @@
+{
+  "spotId": "zhengbin-port",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Zhengbin color houses",
+    "silhouette": "Row of narrow colourful houses along a harbour quay"
+  },
+  "crop": "The colour houses and harbour water. Not the whole port.",
+  "heroScale": 1,
+  "orientation": "verify: houses face the harbour to the north",
+  "lockedGeometry": [
+    "harbour quay",
+    "row of houses",
+    "boats"
+  ],
+  "lockedIdentity": [
+    "bright painted facades",
+    "reflections"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "beaches",
+    "temples"
+  ],
+  "allowedMiniatureDetails": [
+    "boats",
+    "fishermen",
+    "visitors"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Colourful houses by the water"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

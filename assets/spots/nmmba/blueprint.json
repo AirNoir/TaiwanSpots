@@ -1,0 +1,47 @@
+{
+  "spotId": "nmmba",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Marine biology museum",
+    "silhouette": "Coastal museum with blue curved roofs and a huge aquarium tunnel"
+  },
+  "crop": "The museum and aquarium. Not the coast.",
+  "heroScale": 1,
+  "orientation": "verify: sea lies to the west",
+  "lockedGeometry": [
+    "coastal complex",
+    "buildings",
+    "lawn"
+  ],
+  "lockedIdentity": [
+    "aquarium tunnel",
+    "blue roofs"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "mountains",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "rays",
+    "whales"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Aquarium tunnel with a ray"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

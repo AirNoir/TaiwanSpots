@@ -1,0 +1,47 @@
+{
+  "spotId": "tiehua-village",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Tiehua Music Village",
+    "silhouette": "Small outdoor stage among old railway dorms with lantern balloons in trees"
+  },
+  "crop": "The stage and lantern trees. Not the railway park.",
+  "heroScale": 1,
+  "orientation": "verify: OSM point is the adjacent Railway Art Village; confirm the stage location",
+  "lockedGeometry": [
+    "small lawn",
+    "stage",
+    "old dorms"
+  ],
+  "lockedIdentity": [
+    "glowing balloon lanterns",
+    "outdoor stage"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "temples",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "musicians",
+    "audience",
+    "lights"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Glowing lantern over a small stage"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

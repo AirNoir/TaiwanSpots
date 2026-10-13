@@ -1,0 +1,47 @@
+{
+  "spotId": "aowanda",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Aowanda maple forest",
+    "silhouette": "Valley forest of red maples with a suspension bridge"
+  },
+  "crop": "The maple forest and bridge. Not the whole reserve.",
+  "heroScale": 1,
+  "orientation": "verify: suspension bridge crosses the river east-west",
+  "lockedGeometry": [
+    "valley",
+    "river",
+    "suspension bridge"
+  ],
+  "lockedIdentity": [
+    "red maples",
+    "suspension bridge"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "lakes",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "hikers",
+    "leaves",
+    "mist"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Red maple tree by a bridge"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

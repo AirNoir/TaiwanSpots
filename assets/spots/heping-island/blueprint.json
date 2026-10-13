@@ -1,0 +1,47 @@
+{
+  "spotId": "heping-island",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Heping Island coast",
+    "silhouette": "Rocky coast of tofu rocks and hoodoos with a seawater pool"
+  },
+  "crop": "The rock platform and pool. Not the harbour.",
+  "heroScale": 1,
+  "orientation": "verify: open sea lies to the north-east",
+  "lockedGeometry": [
+    "rock platform",
+    "seawater pool",
+    "green hill"
+  ],
+  "lockedIdentity": [
+    "tofu-grid rocks",
+    "mushroom rocks"
+  ],
+  "doNotInvent": [
+    "beaches",
+    "buildings",
+    "bridges"
+  ],
+  "allowedMiniatureDetails": [
+    "swimmers",
+    "visitors",
+    "waves"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Tofu rocks by a sea pool"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

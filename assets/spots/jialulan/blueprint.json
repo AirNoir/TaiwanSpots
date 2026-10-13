@@ -1,0 +1,47 @@
+{
+  "spotId": "jialulan",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Jialulan coast",
+    "silhouette": "Grassy coastal terrace with driftwood art and a mountain behind"
+  },
+  "crop": "The terrace and shore. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: Dulan Mountain lies to the north-west",
+  "lockedGeometry": [
+    "grass terrace",
+    "shore",
+    "mountain"
+  ],
+  "lockedIdentity": [
+    "driftwood installations",
+    "sea"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "kites",
+    "waves"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Driftwood art on grass"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "spotId": "taitung-forest-park",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Taitung Forest Park lakes",
+    "silhouette": "Coastal forest of casuarina trees around two lakes near the sea"
+  },
+  "crop": "The lakes and forest paths. Not the city.",
+  "heroScale": 1,
+  "orientation": "verify: sea lies to the east",
+  "lockedGeometry": [
+    "forest",
+    "lakes",
+    "bike path"
+  ],
+  "lockedIdentity": [
+    "casuarina trees",
+    "Pipa Lake"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "mountains",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "cyclists",
+    "birds",
+    "swimmers"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Lake among casuarina trees"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

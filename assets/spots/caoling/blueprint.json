@@ -1,0 +1,47 @@
+{
+  "spotId": "caoling",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Caoling cliffs",
+    "silhouette": "Mountain village with steep cliffs and bamboo forest"
+  },
+  "crop": "The cliffs and valley. Not the road.",
+  "heroScale": 1,
+  "orientation": "verify: valley lies to the east",
+  "lockedGeometry": [
+    "steep cliffs",
+    "valley",
+    "village"
+  ],
+  "lockedIdentity": [
+    "bare cliff faces",
+    "bamboo forest"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "lakes",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "hikers",
+    "mist",
+    "bamboo"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Cliff with bamboo"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

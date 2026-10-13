@@ -1,0 +1,47 @@
+{
+  "spotId": "gukeng",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Gukeng green tunnel",
+    "silhouette": "Long path under arching mango trees along an old sugar railway"
+  },
+  "crop": "The tunnel path. Not the village.",
+  "heroScale": 1,
+  "orientation": "verify: path runs north-south",
+  "lockedGeometry": [
+    "straight path",
+    "trees on both sides",
+    "old rail"
+  ],
+  "lockedIdentity": [
+    "arching mango trees",
+    "straight old sugar-railway alignment under the canopy"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "lakes",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "cyclists",
+    "walkers",
+    "coffee stalls"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Mango tree arch"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "spotId": "sizihwan",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Sizihwan beach",
+    "silhouette": "Small sandy bay at the foot of a green hill with a breakwater and sunset sea"
+  },
+  "crop": "The beach, breakwater and hill edge. Not the university campus.",
+  "heroScale": 1,
+  "orientation": "verify: harbour mouth lies to the south",
+  "lockedGeometry": [
+    "small curved bay",
+    "green hill to the north",
+    "breakwater"
+  ],
+  "lockedIdentity": [
+    "sunset over the strait",
+    "breakwater"
+  ],
+  "doNotInvent": [
+    "high-rise hotels on the beach",
+    "cliffs",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "tiny couples on the breakwater",
+    "ships on the horizon",
+    "monkeys"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Breakwater at sunset"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

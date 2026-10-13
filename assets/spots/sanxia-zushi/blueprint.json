@@ -1,0 +1,47 @@
+{
+  "spotId": "sanxia-zushi",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Qingshui Zushi Temple",
+    "silhouette": "Temple densely carved with stone pillars and bronze reliefs beside a river"
+  },
+  "crop": "The temple front and courtyard by the Sanxia River. Not the old street.",
+  "heroScale": 1,
+  "orientation": "verify: temple faces the river to the south-west",
+  "lockedGeometry": [
+    "temple beside the river",
+    "plaza in front",
+    "old street behind"
+  ],
+  "lockedIdentity": [
+    "carved stone dragon pillars",
+    "bronze and gold roof decoration"
+  ],
+  "doNotInvent": [
+    "pagodas",
+    "high-rises",
+    "mountains close behind"
+  ],
+  "allowedMiniatureDetails": [
+    "worshippers",
+    "lanterns",
+    "arched bridge"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Carved stone pillar with a temple roof"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

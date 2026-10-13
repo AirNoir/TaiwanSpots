@@ -1,0 +1,47 @@
+{
+  "spotId": "shimen-cave",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Shimen sea arch",
+    "silhouette": "Natural rock arch on the shore with grass on top and a beach beyond"
+  },
+  "crop": "The arch and the rocky beach. Not the coastal town.",
+  "heroScale": 1,
+  "orientation": "verify: road runs along the inland side",
+  "lockedGeometry": [
+    "rock arch on the shore",
+    "rocky beach",
+    "coastal road"
+  ],
+  "lockedIdentity": [
+    "natural stone arch",
+    "grass on top"
+  ],
+  "doNotInvent": [
+    "bridges",
+    "temples",
+    "high-rises"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "waves",
+    "tidepools"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Rock arch with grass on top"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

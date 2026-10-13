@@ -1,0 +1,47 @@
+{
+  "spotId": "fulong",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Fulong Beach sandbar",
+    "silhouette": "Long golden sandbar between a river mouth and the sea, linked by a footbridge"
+  },
+  "crop": "The sandbar beach, river mouth and the rainbow footbridge. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: river runs inland of the sandbar to the south-west",
+  "lockedGeometry": [
+    "sandbar separating river and sea",
+    "river mouth",
+    "footbridge to the sandbar"
+  ],
+  "lockedIdentity": [
+    "golden sand",
+    "rainbow-arched footbridge"
+  ],
+  "doNotInvent": [
+    "cliffs on the beach",
+    "high-rise hotels",
+    "palm resorts"
+  ],
+  "allowedMiniatureDetails": [
+    "sandcastles",
+    "beach umbrellas",
+    "tiny swimmers"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Golden sandbar with a rainbow bridge"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

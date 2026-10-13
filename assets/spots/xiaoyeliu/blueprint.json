@@ -1,0 +1,47 @@
+{
+  "spotId": "xiaoyeliu",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Xiaoyeliu rocks",
+    "silhouette": "Coastal sandstone platforms carved into tofu and honeycomb shapes"
+  },
+  "crop": "The rocky shore. Not the campground.",
+  "heroScale": 1,
+  "orientation": "verify: Green Island visible to the east",
+  "lockedGeometry": [
+    "rock platforms",
+    "shore",
+    "sea"
+  ],
+  "lockedIdentity": [
+    "tofu rocks",
+    "honeycomb rocks"
+  ],
+  "doNotInvent": [
+    "beaches",
+    "buildings",
+    "bridges"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "waves",
+    "crabs"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Honeycomb rock by the sea"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

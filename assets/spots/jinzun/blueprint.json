@@ -1,0 +1,47 @@
+{
+  "spotId": "jinzun",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Jinzun harbour and tombolo",
+    "silhouette": "Small harbour sheltered by a tombolo islet with a curved surf beach"
+  },
+  "crop": "The harbour, tombolo and bay. Not the road.",
+  "heroScale": 1,
+  "orientation": "verify: bay faces east",
+  "lockedGeometry": [
+    "curved bay",
+    "tombolo islet",
+    "harbour"
+  ],
+  "lockedIdentity": [
+    "tombolo",
+    "surf beach"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "mountains close",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "surfers",
+    "boats",
+    "coffee stall"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Islet and curved bay"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

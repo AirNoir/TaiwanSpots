@@ -1,0 +1,48 @@
+{
+  "spotId": "yingge",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Yingge Old Street",
+    "silhouette": "Pedestrian street of red-brick shops selling pottery with a kiln chimney"
+  },
+  "crop": "The old street and a kiln chimney. Not the museum.",
+  "heroScale": 1,
+  "orientation": "verify: street runs along Jianshanpu Road",
+  "lockedGeometry": [
+    "pedestrian street",
+    "low brick shops",
+    "chimney at one end"
+  ],
+  "lockedIdentity": [
+    "red brick",
+    "pottery displays",
+    "kiln chimney"
+  ],
+  "doNotInvent": [
+    "temples",
+    "skyscrapers",
+    "rivers"
+  ],
+  "allowedMiniatureDetails": [
+    "potters",
+    "vases",
+    "visitors"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Vase beside a kiln chimney"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "spotId": "keelung-miaokou",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Miaokou night market",
+    "silhouette": "Street of stalls under rows of yellow lanterns leading to a temple"
+  },
+  "crop": "The lantern-lined stall street and Dianji Temple. Not the harbour.",
+  "heroScale": 1,
+  "orientation": "verify: Dianji Temple sits at the centre of the market",
+  "lockedGeometry": [
+    "narrow street",
+    "stalls in rows",
+    "temple"
+  ],
+  "lockedIdentity": [
+    "rows of yellow lanterns with numbers",
+    "Dianji Temple"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "mountains",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "crowds",
+    "steam",
+    "rain umbrellas"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Yellow lanterns over a stall"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

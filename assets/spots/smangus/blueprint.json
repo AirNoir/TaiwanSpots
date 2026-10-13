@@ -1,0 +1,47 @@
+{
+  "spotId": "smangus",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Smangus village",
+    "silhouette": "Remote mountain village on a ridge with giant cypress forest"
+  },
+  "crop": "The village and forest trail. Not the road.",
+  "heroScale": 1,
+  "orientation": "verify: giant tree trail heads east",
+  "lockedGeometry": [
+    "ridge village",
+    "forest",
+    "trail"
+  ],
+  "lockedIdentity": [
+    "wooden houses",
+    "giant trees"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "beaches",
+    "lakes"
+  ],
+  "allowedMiniatureDetails": [
+    "villagers",
+    "hikers",
+    "mist"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Village on a misty ridge"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

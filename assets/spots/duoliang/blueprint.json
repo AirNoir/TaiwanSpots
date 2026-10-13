@@ -1,0 +1,47 @@
+{
+  "spotId": "duoliang",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Duoliang Station",
+    "silhouette": "Small station platform on a cliff above the Pacific with a train tunnel"
+  },
+  "crop": "The platform and tracks above the sea. Not the village.",
+  "heroScale": 1,
+  "orientation": "verify: tracks run north-south along the cliff",
+  "lockedGeometry": [
+    "cliff platform",
+    "rail line",
+    "tunnel"
+  ],
+  "lockedIdentity": [
+    "blue sea view",
+    "train"
+  ],
+  "doNotInvent": [
+    "beaches with resorts",
+    "high-rises",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "flowers",
+    "trains"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Train by the blue sea"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "spotId": "paper-dome",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Paper Dome",
+    "silhouette": "Oval hall of paper tubes inside a glass box beside a pond"
+  },
+  "crop": "The dome and pond. Not the eco village.",
+  "heroScale": 1,
+  "orientation": "verify: pond lies in front of the dome",
+  "lockedGeometry": [
+    "small building",
+    "pond",
+    "garden"
+  ],
+  "lockedIdentity": [
+    "paper tube columns",
+    "glass walls"
+  ],
+  "doNotInvent": [
+    "steeples",
+    "domes",
+    "skyscrapers"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "frogs",
+    "plants"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Paper tube hall"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

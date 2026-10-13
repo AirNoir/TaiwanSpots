@@ -1,0 +1,47 @@
+{
+  "spotId": "liushidan",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Liushidan daylily fields",
+    "silhouette": "Rolling hilltop covered in orange daylily flowers with small pavilions"
+  },
+  "crop": "The daylily fields on the ridge with the valley edge. Not the whole range.",
+  "heroScale": 1,
+  "orientation": "verify: valley lies to the west",
+  "lockedGeometry": [
+    "rounded hilltop",
+    "terraced fields",
+    "valley below"
+  ],
+  "lockedIdentity": [
+    "orange daylily blooms",
+    "small wooden pavilions"
+  ],
+  "doNotInvent": [
+    "snow",
+    "lakes",
+    "temples"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "farm huts",
+    "mist"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Orange daylily field on a hill"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

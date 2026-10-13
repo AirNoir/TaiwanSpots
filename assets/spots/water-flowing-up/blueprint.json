@@ -1,0 +1,47 @@
+{
+  "spotId": "water-flowing-up",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Water flowing upward canal",
+    "silhouette": "Small irrigation channel that seems to run uphill through fields"
+  },
+  "crop": "The channel and fields. Not the coast.",
+  "heroScale": 1,
+  "orientation": "verify: channel runs east toward the hill",
+  "lockedGeometry": [
+    "canal",
+    "fields",
+    "slope"
+  ],
+  "lockedIdentity": [
+    "concrete irrigation ditch",
+    "water visibly running up a gentle slope"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "lakes",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "farmers",
+    "grass"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Little canal on a slope"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

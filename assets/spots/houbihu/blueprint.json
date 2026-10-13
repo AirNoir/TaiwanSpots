@@ -1,0 +1,47 @@
+{
+  "spotId": "houbihu",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Houbihu harbour",
+    "silhouette": "Harbour with fishing boats, yachts and a seafood market"
+  },
+  "crop": "The harbour and market. Not the beaches.",
+  "heroScale": 1,
+  "orientation": "verify: harbour opens to the south",
+  "lockedGeometry": [
+    "harbour",
+    "quay",
+    "market"
+  ],
+  "lockedIdentity": [
+    "fishing boats",
+    "yachts"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "mountains",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "fishermen",
+    "diners",
+    "boats"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Boat with a fish"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

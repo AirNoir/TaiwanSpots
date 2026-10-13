@@ -1,0 +1,47 @@
+{
+  "spotId": "sun-link-sea",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Sun Link Sea forest",
+    "silhouette": "Mountain valley of tall cedars with flower gardens and a waterfall"
+  },
+  "crop": "The forest garden area. Not the road.",
+  "heroScale": 1,
+  "orientation": "verify: valley runs north-south",
+  "lockedGeometry": [
+    "mountain valley",
+    "gardens",
+    "stream"
+  ],
+  "lockedIdentity": [
+    "tall cedars",
+    "hydrangeas and peonies"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "mist",
+    "flowers"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Cedar forest with flowers"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

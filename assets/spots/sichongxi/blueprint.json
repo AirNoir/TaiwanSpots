@@ -1,0 +1,47 @@
+{
+  "spotId": "sichongxi",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Sichongxi hot spring park",
+    "silhouette": "Riverside park with foot baths and hot spring inns"
+  },
+  "crop": "The park and baths. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: river runs west",
+  "lockedGeometry": [
+    "park",
+    "river",
+    "inns"
+  ],
+  "lockedIdentity": [
+    "foot baths",
+    "steam"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "bathers",
+    "trees",
+    "steam"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Steaming foot bath"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

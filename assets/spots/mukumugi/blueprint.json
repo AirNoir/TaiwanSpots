@@ -1,0 +1,47 @@
+{
+  "spotId": "mukumugi",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Mukumugi gorge",
+    "silhouette": "Emerald river through a marble gorge crossed by a suspension bridge"
+  },
+  "crop": "The gorge, river and bridge. Not the village.",
+  "heroScale": 1,
+  "orientation": "verify: river flows east",
+  "lockedGeometry": [
+    "deep gorge",
+    "river with boulders",
+    "suspension bridge"
+  ],
+  "lockedIdentity": [
+    "emerald water",
+    "white marble boulders"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "lakes",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "hikers",
+    "bridge",
+    "mist"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Emerald river under a suspension bridge"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

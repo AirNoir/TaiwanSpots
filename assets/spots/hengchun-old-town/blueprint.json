@@ -1,0 +1,47 @@
+{
+  "spotId": "hengchun-old-town",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Hengchun South Gate",
+    "silhouette": "Qing dynasty brick city gate in a roundabout"
+  },
+  "crop": "The South Gate and wall. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: gate stands in a roundabout",
+  "lockedGeometry": [
+    "roundabout",
+    "gate",
+    "wall segments"
+  ],
+  "lockedIdentity": [
+    "brick gate tower",
+    "city walls"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "scooters",
+    "visitors",
+    "trees"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Brick city gate"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "spotId": "shimen-reservoir",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Shimen Dam",
+    "silhouette": "Large earth dam holding a green lake among hills"
+  },
+  "crop": "The dam and lake. Not the whole catchment.",
+  "heroScale": 1,
+  "orientation": "verify: dam sits at the north end of the lake",
+  "lockedGeometry": [
+    "dam",
+    "lake",
+    "hills"
+  ],
+  "lockedIdentity": [
+    "curved dam wall",
+    "spillway"
+  ],
+  "doNotInvent": [
+    "buildings on the lake",
+    "snow",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "boats",
+    "maple trees",
+    "visitors"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Dam and green lake"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

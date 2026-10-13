@@ -1,0 +1,48 @@
+{
+  "spotId": "lin-family-garden",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Lin Family Garden",
+    "silhouette": "Classical garden of pavilions, corridors, rockeries and ponds"
+  },
+  "crop": "The garden pond and pavilions. Not the mansion.",
+  "heroScale": 1,
+  "orientation": "verify: garden lies west of the mansion",
+  "lockedGeometry": [
+    "walled garden",
+    "pond",
+    "corridors"
+  ],
+  "lockedIdentity": [
+    "pavilions",
+    "rockery",
+    "moon gates"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "pagodas",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "koi",
+    "lanterns"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Garden pavilion by a pond"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

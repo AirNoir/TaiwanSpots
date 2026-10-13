@@ -1,0 +1,47 @@
+{
+  "spotId": "hsinchu-chenghuang",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Hsinchu City God Temple",
+    "silhouette": "Temple with ornate roofs surrounded by food stalls in its courtyard"
+  },
+  "crop": "The temple and its food court. Not the city.",
+  "heroScale": 1,
+  "orientation": "verify: temple faces Zhongshan Road",
+  "lockedGeometry": [
+    "temple",
+    "covered courtyard",
+    "street"
+  ],
+  "lockedIdentity": [
+    "ornate roof",
+    "food stalls"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "pagodas",
+    "beaches"
+  ],
+  "allowedMiniatureDetails": [
+    "diners",
+    "worshippers",
+    "lanterns"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Temple roof over a noodle stall"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

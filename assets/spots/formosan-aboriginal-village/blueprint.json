@@ -1,0 +1,47 @@
+{
+  "spotId": "formosan-aboriginal-village",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Aboriginal culture village",
+    "silhouette": "Hillside village of traditional houses with a gondola line"
+  },
+  "crop": "The village slope and gondola. Not the lake.",
+  "heroScale": 1,
+  "orientation": "verify: gondola heads east toward Sun Moon Lake",
+  "lockedGeometry": [
+    "hillside",
+    "traditional houses",
+    "gondola"
+  ],
+  "lockedIdentity": [
+    "traditional aboriginal houses",
+    "gondola cabins"
+  ],
+  "doNotInvent": [
+    "skyscrapers",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "dancers",
+    "flowers"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Gondola over traditional houses"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

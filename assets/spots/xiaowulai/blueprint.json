@@ -1,0 +1,47 @@
+{
+  "spotId": "xiaowulai",
+  "status": "draft",
+  "spotType": "natural",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Xiaowulai Skywalk",
+    "silhouette": "Glass-floored walkway projecting from a cliff above a waterfall"
+  },
+  "crop": "The skywalk and waterfall. Not the village.",
+  "heroScale": 1,
+  "orientation": "verify: waterfall drops to the north of the skywalk",
+  "lockedGeometry": [
+    "cliff edge",
+    "waterfall",
+    "gorge"
+  ],
+  "lockedIdentity": [
+    "glass skywalk",
+    "waterfall"
+  ],
+  "doNotInvent": [
+    "buildings",
+    "lakes",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "mist",
+    "trees"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Glass walkway over a waterfall"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

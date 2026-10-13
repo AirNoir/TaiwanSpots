@@ -1,0 +1,47 @@
+{
+  "spotId": "daxi",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Daxi old street",
+    "silhouette": "Street of baroque facades on a river terrace above a bridge"
+  },
+  "crop": "The old street and river view. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: river lies west below the street",
+  "lockedGeometry": [
+    "street on a terrace",
+    "river below",
+    "bridge"
+  ],
+  "lockedIdentity": [
+    "baroque facades",
+    "dried tofu shops"
+  ],
+  "doNotInvent": [
+    "high-rises",
+    "beaches",
+    "snow"
+  ],
+  "allowedMiniatureDetails": [
+    "visitors",
+    "shops",
+    "bridge"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Baroque facade above a river"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}

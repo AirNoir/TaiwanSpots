@@ -1,0 +1,47 @@
+{
+  "spotId": "beigang-chaotian",
+  "status": "draft",
+  "spotType": "urban",
+  "productionTier": "standard",
+  "hero": {
+    "name": "Chaotian Temple",
+    "silhouette": "Grand Mazu temple with layered roofs on a busy main street"
+  },
+  "crop": "The temple and front street. Not the town.",
+  "heroScale": 1,
+  "orientation": "verify: temple faces Zhongshan Road to the south",
+  "lockedGeometry": [
+    "temple",
+    "main street",
+    "plaza"
+  ],
+  "lockedIdentity": [
+    "multi-tiered roofs",
+    "Mazu palanquin"
+  ],
+  "doNotInvent": [
+    "pagodas",
+    "high-rises",
+    "mountains"
+  ],
+  "allowedMiniatureDetails": [
+    "pilgrims",
+    "firecracker smoke",
+    "flags"
+  ],
+  "references": {
+    "aerial": [],
+    "ground": [],
+    "map": [],
+    "representative": []
+  },
+  "worldToken": {
+    "element": "Temple roof with firecracker smoke"
+  },
+  "qa": {
+    "geographic": "pending",
+    "identity": "pending",
+    "style": "pending",
+    "collection": "pending"
+  }
+}
