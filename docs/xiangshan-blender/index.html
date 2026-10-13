@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>象山六巨石 微縮山城</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a specimen card — masthead, one-line intro, a tall viewer panel, a control strip, a spec ledger, production notes. */
+:root {
+  --bg: #e9ede6; --fg: #212823; --muted: #65705f; --panel: #f6f7f2; --line: #cfd6c9;
+  --accent: #2a6b57; --accent-ink: #ffffff; --btn: #ffffff; --btn-hover: #e3ece4;
+  --sky-top: #dfe9ea; --sky-bottom: #f3f2ea; --haze: #e2e9e8; --shadow: rgba(35, 48, 40, 0.16);
+  --font-display: "LXGW WenKai TC", "Noto Serif TC", serif;
+  --font-body: "Noto Sans TC", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151a16; --fg: #e3e7de; --muted: #96a092; --panel: #1e241f; --line: #323a33;
+    --accent: #8fcbb3; --accent-ink: #0f1a15; --btn: #262d27; --btn-hover: #31392f;
+    --sky-top: #20292b; --sky-bottom: #181d19; --haze: #28312f; --shadow: rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151a16; --fg: #e3e7de; --muted: #96a092; --panel: #1e241f; --line: #323a33;
+  --accent: #8fcbb3; --accent-ink: #0f1a15; --btn: #262d27; --btn-hover: #31392f;
+  --sky-top: #20292b; --sky-bottom: #181d19; --haze: #28312f; --shadow: rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.6; }
+.page { max-width: 1100px; margin: 0 auto; padding-inline: 16px; padding-block: 18px 40px; display: grid; gap: 18px; }
+.masthead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+.brand { font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: 0.22em; }
+.brand span { font-weight: 400; letter-spacing: 0.08em; font-size: 14px; color: var(--muted); margin-left: 10px; }
+.edition { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; color: var(--muted); text-transform: uppercase; }
+.intro { display: grid; gap: 4px; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; color: var(--accent); margin: 0; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(26px, 4.2vw, 38px); margin: 0; line-height: 1.25; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 62ch; }
+.stage { position: relative; width: 100%; aspect-ratio: 5 / 4; max-height: 78vh; min-height: 380px; border-radius: 14px; overflow: hidden;
+  background: linear-gradient(180deg, var(--sky-top), var(--sky-bottom)); box-shadow: 0 18px 50px -24px var(--shadow); touch-action: none; outline: none; }
+@media (max-width: 640px) { .stage { aspect-ratio: 4 / 5; } }
+.stage:focus-visible { box-shadow: 0 0 0 3px var(--accent); }
+.stage canvas { display: block; width: 100%; height: 100%; }
+#loading { position: absolute; inset: 0; display: grid; place-content: center; gap: 10px; text-align: center; font-family: var(--font-mono); font-size: 13px; color: var(--muted); background: linear-gradient(180deg, var(--sky-top), var(--sky-bottom)); transition: opacity 0.4s; }
+#loading .bar { width: 180px; height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; margin: 0 auto; }
+#loading .bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.2s; }
+.controls { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.views, .zoom { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+button { font: inherit; font-size: 14px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--btn); color: var(--fg); cursor: pointer; }
+button:hover { background: var(--btn-hover); }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.zoom button { min-width: 42px; }
+.toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); }
+.hint { margin: -6px 0 0; font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.ledger { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 0; padding: 12px 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
+.ledger div { display: grid; gap: 2px; min-width: 0; }
+.ledger dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+.ledger dd { margin: 0; font-variant-numeric: tabular-nums; }
+details { border-top: 1px solid var(--line); padding-top: 12px; }
+summary { cursor: pointer; font-weight: 500; }
+.notes { display: grid; gap: 8px; max-width: 70ch; color: var(--muted); }
+.notes ul { margin: 0; padding-left: 20px; }
+a { color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { #loading { transition: none; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="brand">ISLANDIA <span>小島收藏室</span></div>
+    <div class="edition">Taipei · Xiangshan · Blender build</div>
+  </header>
+  <section class="intro">
+    <p class="eyebrow">象山步道 · 六巨石觀景區</p>
+    <h1>石縫裡的信義區</h1>
+    <p class="lede">六顆砂岩巨石夾著一道往下走的石階，階梯盡頭是台北 101、南山廣場，和一座有街道、有車流、有機車的城市。Blender 程序建模與烘焙，瀏覽器裡可以轉。</p>
+  </section>
+  <div id="stage" class="stage" tabindex="0" role="application" aria-label="象山六巨石微縮模型，拖曳旋轉，滾輪或雙指縮放">
+    <canvas id="c"></canvas>
+    <div id="loading"><div>正在搬運山城⋯</div><div class="bar"><i id="bar"></i></div></div>
+  </div>
+  <div class="controls">
+    <div class="views" role="group" aria-label="視角">
+      <button type="button" data-view="hero" class="on">收藏視角</button>
+      <button type="button" data-view="rocks">六巨石</button>
+      <button type="button" data-view="street">街道車流</button>
+      <button type="button" data-view="back">背面</button>
+    </div>
+    <div class="zoom">
+      <button type="button" id="zin" aria-label="放大">＋</button>
+      <button type="button" id="zout" aria-label="縮小">－</button>
+      <button type="button" id="reset">重設</button>
+      <label class="toggle"><input type="checkbox" id="traffic" checked> 車流</label>
+    </div>
+  </div>
+  <p class="hint">拖曳旋轉 · 滾輪或雙指縮放 · 右鍵或雙指拖曳平移 · 方向鍵、＋－、Home</p>
+  <dl class="ledger">
+    <div><dt>岩石</dt><dd>6 顆，程序砂岩 + 烘焙法線</dd></div>
+    <div><dt>建築</dt><dd id="st-bld">—</dd></div>
+    <div><dt>車輛</dt><dd id="st-car">—</dd></div>
+    <div><dt>三角形</dt><dd id="st-tri">—</dd></div>
+    <div><dt>Draw calls</dt><dd id="st-dc">—</dd></div>
+  </dl>
+  <details>
+    <summary>製作說明與參考</summary>
+    <div class="notes">
+      <p>整個場景由一支 Blender Python 腳本程序生成：地形板塊、六顆超橢球加噪聲位移的砂岩、沿步道高度剖面鋪的石階、木欄杆、Q 版登山客，以及旋轉 28° 的街廓網格（人行道、雙黃線、斑馬線、右側通行的車流、路邊機車、行道樹）。台北 101 有 25 層底座、八段外擴塔身、如意飾與尖塔；南山廣場為切角塔身與分段冠部。</p>
+      <p>主視角圖以 Cycles 路徑追蹤渲染；這個網頁載入的是同一個場景匯出的 glTF，岩石與地形的顏色和法線已烘焙成貼圖，其餘為平面材質。車流在瀏覽器端沿各自車道前進。</p>
+      <ul>
+        <li><a href="https://commons.wikimedia.org/wiki/File:View_from_Xiangshan.jpg" target="_blank" rel="noreferrer">Mliu92／Wikimedia：階梯與巨石（CC BY-SA 4.0）</a></li>
+        <li><a href="https://www.uponarriving.com/elephant-mountain-taipei/" target="_blank" rel="noreferrer">UponArriving：岩石與步道近景</a></li>
+        <li><a href="https://www.geo.gov.taipei/News_Content.aspx?n=23285747C0511EC4&s=40D73EEE2FD289DB&sms=72544237BBE4C5F6" target="_blank" rel="noreferrer">臺北市大地工程處：步道側面</a></li>
+      </ul>
+      <p>限制：城市距離與比例經過壓縮；六石的完整配置與背面為藝術推演，未經現地測繪；一般街廓非實際建物。</p>
+    </div>
+  </details>
+</div>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+
+const $ = (s) => document.querySelector(s);
+const stage = $('#stage'), canvas = $('#c'), loading = $('#loading'), bar = $('#bar');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 120);
+scene.add(new THREE.HemisphereLight(0xe9f1f6, 0x5f6a46, 1.0));
+const sun = new THREE.DirectionalLight(0xfff2de, 2.6); sun.position.set(-6.5, 12, 8); sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048); Object.assign(sun.shadow.camera, { left: -7, right: 7, top: 7, bottom: -7, near: 2, far: 40 });
+sun.shadow.bias = -0.0002; sun.shadow.normalBias = 0.02; scene.add(sun); scene.add(sun.target);
+const fill = new THREE.DirectionalLight(0xd4e4ee, 0.7); fill.position.set(9, 7, 7); scene.add(fill);
+const rim = new THREE.DirectionalLight(0xfff7e6, 0.5); rim.position.set(-4, 6, -9); scene.add(rim);
+
+// soft contact shadow on the page under the slab
+{
+  const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d');
+  const gr = g.createRadialGradient(128, 128, 20, 128, 128, 128); gr.addColorStop(0, 'rgba(0,0,0,0.45)'); gr.addColorStop(0.7, 'rgba(0,0,0,0.12)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+  g.fillStyle = gr; g.fillRect(0, 0, 256, 256);
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(12.5, 11), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(c), transparent: true, depthWrite: false }));
+  m.rotation.x = -Math.PI / 2; m.position.y = -0.52; scene.add(m);
+}
+
+function applyTheme() {
+  const haze = getComputedStyle(document.documentElement).getPropertyValue('--haze').trim() || '#e2e9e8';
+  scene.fog = new THREE.Fog(new THREE.Color(haze), 16, 36);
+}
+applyTheme();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+new MutationObserver(applyTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+// ── controls & views (Blender X,Y,Z → three X,Z,-Y) ──
+const controls = new OrbitControls(camera, stage);
+controls.enableDamping = true; controls.dampingFactor = 0.08; controls.minDistance = 1.2; controls.maxDistance = 30;
+controls.maxPolarAngle = 1.52; controls.screenSpacePanning = true;
+const V = (x, y, z) => new THREE.Vector3(x, z, -y);
+const VIEWS = {
+  hero: { pos: V(2.2, -10.2, 6.8), target: V(0.0, -0.3, 1.3) },
+  rocks: { pos: V(1.7, -5.6, 3.9), target: V(0.1, -2.3, 2.3) },
+  street: { pos: V(2.6, 1.2, 0.7), target: V(-0.6, 2.5, 0.3) },
+  back: { pos: V(-2.0, 11.5, 7.5), target: V(0.0, 0.2, 1.0) },
+};
+let tween = null;
+const fitFactor = () => (camera.aspect < 1 ? 1 + (1 - camera.aspect) * 0.7 : 1);
+function goView(name, instant = false) {
+  const v = VIEWS[name]; const pos = v.target.clone().add(v.pos.clone().sub(v.target).multiplyScalar(fitFactor()));
+  document.querySelectorAll('[data-view]').forEach((b) => b.classList.toggle('on', b.dataset.view === name));
+  if (instant || reduced) { camera.position.copy(pos); controls.target.copy(v.target); controls.update(); return; }
+  tween = { p0: camera.position.clone(), t0: controls.target.clone(), p1: pos, t1: v.target.clone(), start: performance.now(), dur: 900 };
+}
+document.querySelectorAll('[data-view]').forEach((b) => b.addEventListener('click', () => goView(b.dataset.view)));
+$('#reset').addEventListener('click', () => goView('hero'));
+function dolly(f) { const d = camera.position.clone().sub(controls.target); const L = THREE.MathUtils.clamp(d.length() * f, controls.minDistance, controls.maxDistance); camera.position.copy(controls.target).add(d.setLength(L)); }
+function orbit(a) { camera.position.sub(controls.target).applyAxisAngle(new THREE.Vector3(0, 1, 0), a).add(controls.target); }
+$('#zin').addEventListener('click', () => dolly(0.8));
+$('#zout').addEventListener('click', () => dolly(1.25));
+stage.addEventListener('keydown', (e) => {
+  const k = e.key; let used = true;
+  if (k === '+' || k === '=') dolly(0.85); else if (k === '-' || k === '_') dolly(1.18); else if (k === 'Home') goView('hero');
+  else if (k === 'ArrowLeft') orbit(0.08); else if (k === 'ArrowRight') orbit(-0.08); else used = false;
+  if (used) e.preventDefault();
+});
+const trafficBox = $('#traffic'); if (reduced) trafficBox.checked = false;
+
+// ── load the Blender export ──
+const lanes = []; let city = { phi: 0.5, cx: 0.3, cy: 2.3 };
+const stats = { bld: 0, car: 0, scooter: 0 };
+new GLTFLoader().load('xiangshan.glb', (gltf) => {
+  const root = gltf.scene; scene.add(root);
+  const extras = gltf.scenes[0] && gltf.scenes[0].userData;
+  if (extras && extras.city) city = extras.city;
+  root.updateMatrixWorld(true);
+  const c = Math.cos(city.phi), s = Math.sin(city.phi);
+  const meshes = [];
+  root.traverse((o) => {
+    if (/^(Hill)?Bld\d*$/.test(o.name)) stats.bld++;
+    if (o.userData && o.userData.lane) {
+      const l = o.userData.lane;
+      const X = o.position.x - city.cx, Y = -o.position.z - city.cy;   // three → Blender world → city-local
+      const xl = X * c + Y * s, yl = -X * s + Y * c;
+      const scooter = o.name.startsWith('Scooter'); const bus = o.name.startsWith('Bus');
+      if (scooter) stats.scooter++; else stats.car++;
+      lanes.push({ node: o, axis: l.axis, dir: l.dir, a: l.a, b: l.b, s: l.axis === 'V' ? yl : xl, fixed: l.axis === 'V' ? xl : yl,
+        speed: (bus ? 0.26 : scooter ? 0.5 : 0.36) * (0.8 + Math.random() * 0.4), y: o.position.y, parts: [] });
+    }
+    if (o.isMesh) meshes.push(o);
+  });
+  // meshes that share geometry + material become one InstancedMesh (grass, trees, scooters, cars…)
+  const groups = new Map();
+  for (const m of meshes) {
+    const key = m.geometry.uuid + '|' + m.material.uuid;
+    if (!groups.has(key)) groups.set(key, { geo: m.geometry, mat: m.material, items: [] });
+    groups.get(key).items.push(m);
+  }
+  const slot = new Map(); const statics = new Map();
+  for (const g of groups.values()) {
+    if (g.mat.map) g.mat.map.anisotropy = 4;
+    if (g.items.length < 2) {
+      // unique static mesh (a building, a landmark part): merge by material to cut draw calls
+      const m = g.items[0]; const sig = g.mat.uuid + '|' + Object.keys(m.geometry.attributes).sort().join(',') + (m.geometry.index ? '|i' : '');
+      if (!statics.has(sig)) statics.set(sig, { mat: g.mat, geos: [], items: [] });
+      statics.get(sig).geos.push(m.geometry.clone().applyMatrix4(m.matrixWorld)); statics.get(sig).items.push(m);
+      continue;
+    }
+    const im = new THREE.InstancedMesh(g.geo, g.mat, g.items.length); im.castShadow = im.receiveShadow = true; im.name = 'inst:' + g.items[0].name;
+    g.items.forEach((m, i) => { im.setMatrixAt(i, m.matrixWorld); m.visible = false; slot.set(m, { im, i, mesh: m }); });
+    scene.add(im);
+  }
+  for (const st of statics.values()) {
+    if (st.geos.length < 2) { st.items[0].castShadow = st.items[0].receiveShadow = true; continue; }
+    const merged = mergeGeometries(st.geos, false); if (!merged) { st.items.forEach((m) => { m.castShadow = m.receiveShadow = true; }); continue; }
+    const mm = new THREE.Mesh(merged, st.mat); mm.castShadow = mm.receiveShadow = true; mm.name = 'merged:' + st.items[0].name; scene.add(mm);
+    st.items.forEach((m) => { m.visible = false; });
+  }
+  for (const L of lanes) L.node.traverse((m) => { if (m.isMesh && slot.has(m)) L.parts.push(slot.get(m)); });
+  loading.style.opacity = '0'; setTimeout(() => { loading.hidden = true; }, 400);
+  goView('hero', true);
+  $('#st-bld').textContent = stats.bld + ' 棟';
+  $('#st-car').textContent = stats.car + ' 輛車 · ' + stats.scooter + ' 台機車';
+}, (ev) => { if (ev.total) bar.style.width = Math.round(ev.loaded / ev.total * 100) + '%'; },
+   (err) => { loading.textContent = '模型載入失敗：' + (err.message || err); });
+
+// ── traffic: each vehicle slides along its lane in city-local coordinates and wraps at the slab edge ──
+function stepTraffic(dt) {
+  const c = Math.cos(city.phi), s = Math.sin(city.phi);
+  for (const L of lanes) {
+    L.s += L.dir * L.speed * dt;
+    if (L.s > L.b) L.s = L.a; else if (L.s < L.a) L.s = L.b;
+    const xl = L.axis === 'V' ? L.fixed : L.s, yl = L.axis === 'V' ? L.s : L.fixed;
+    const X = city.cx + xl * c - yl * s, Y = city.cy + xl * s + yl * c;
+    L.node.position.set(X, L.y, -Y); L.node.updateMatrixWorld(true);
+    for (const p of L.parts) { p.im.setMatrixAt(p.i, p.mesh.matrixWorld); p.im.instanceMatrix.needsUpdate = true; }
+  }
+}
+
+// ── frame loop ──
+const clock = new THREE.Clock(); let statDone = false;
+function resize() {
+  const w = stage.clientWidth, h = stage.clientHeight; if (!w || !h) return;
+  renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+}
+new ResizeObserver(resize).observe(stage); resize();
+function loop() {
+  const dt = Math.min(clock.getDelta(), 0.05);
+  if (tween) { const k = Math.min(1, (performance.now() - tween.start) / tween.dur); const e = k * k * (3 - 2 * k); camera.position.lerpVectors(tween.p0, tween.p1, e); controls.target.lerpVectors(tween.t0, tween.t1, e); if (k >= 1) tween = null; }
+  if (trafficBox.checked) stepTraffic(dt);
+  controls.update(); renderer.render(scene, camera);
+  if (!statDone && lanes.length) { statDone = true; $('#st-tri').textContent = renderer.info.render.triangles.toLocaleString(); $('#st-dc').textContent = String(renderer.info.render.calls); }
+}
+renderer.setAnimationLoop(loop);
+document.addEventListener('visibilitychange', () => renderer.setAnimationLoop(document.hidden ? null : loop));
+</script>
+</body>
+</html>
