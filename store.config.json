@@ -67,7 +67,9 @@
       "gambling": false,
       "unrestrictedWebAccess": false,
       "kidsAgeBand": null,
-      "seventeenPlus": false
+      "ageRatingOverride": "NONE",
+      "koreaAgeRatingOverride": "NONE",
+      "lootBox": false
     },
     "review": {
       "firstName": "Tyrese",
