@@ -38,8 +38,12 @@
     "mist drifting between the trees"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
+    "aerial": [
+      "google-aerial-review.jpg"
+    ],
+    "ground": [
+      "google-ground-review.jpg"
+    ],
     "map": [],
     "representative": [
       "real-photo.jpg"
@@ -53,6 +57,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "Near-Shenmu forest rail scene, classic red/cream train from primary real photo. Current livery and exact canopy-hidden rail positions not verified; no cloud-sea invented. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3."
   }
 }

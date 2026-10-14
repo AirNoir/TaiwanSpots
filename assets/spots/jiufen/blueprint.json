@@ -41,7 +41,10 @@
   "references": {
     "aerial": [],
     "ground": [],
-    "map": [],
+    "map": [
+      "google-teahouse-side.jpg",
+      "google-coast-view.jpg"
+    ],
     "representative": [
       "real-photo.jpg"
     ]
@@ -54,6 +57,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": " Google Maps panorama observations added (historical captures). Review variants pending manual geographic approval. review-v1.png tests proposed physical coastal backdrop card (B); card artwork is simulated, not exact coastline; teahouse massing and stair placement remain stylized and need manual verification. review-v2.png applies diagonal elevated camera and square rounded-corner base with physical scenery card. Camera is artistic, not calibrated; geography still pending. review-v3.png: background card held by visible short posts/clips and ivory separation curb. Visual mounting edit only; Google Maps street/aerial re-audit and geographic regeneration remain incomplete. Base aspect ratio and mounting gap still require review; not approved. review-v5.png: backdrop orientation revised; matching short ivory posts and slim brass clips use Tamsui review-v3 as the common hardware image reference. Geographic QA remains pending; visual perspective and mounting are artistic approximations, not measured geometry."
   }
 }

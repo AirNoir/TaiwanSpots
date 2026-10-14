@@ -36,10 +36,15 @@
     "lanterns at shopfronts"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
+    "aerial": [
+      "google-aerial-review.jpg"
+    ],
+    "ground": [
+      "google-ground-review.jpg"
+    ],
     "map": [],
     "representative": [
+      "google-ground-review.jpg",
       "real-photo.jpg"
     ]
   },
@@ -51,6 +56,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "Actual Butou Street ground selected after rejecting temple panorama. Existing real-photo is Moru Lane and is not evidence of the selected Putou Street layout; Putou street layout relies on Google Street View/aerial. Exact shop/roof details remain simplified. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3."
   }
 }

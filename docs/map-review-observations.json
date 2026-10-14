@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-14",
+  "palace": {
+    "url": "https://www.google.com/maps/place/National+Palace+Museum/@25.101867,121.548743,42a,75y,90h,43.72t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgICMqPmuWA!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_cNTH1t75TscGHQzZJ8OeJLZDV9GL5gNe0Gn884U0UlYz-Cl-Xh5S021fgsaiRMcmaFmt7hYvj107bYIRcatwSIvkMIp1CdGAmWEe6C5l8uJrBXQ1ScQ89cs9pVKwjnoos46ZZ%3Dw900-h600-k-no-pi46.27504766749837-ya114.3703002929688-ro0-fo100!7i12000!8i6000!4m9!3m8!1s0x3442ac3acd404a7d:0x5d6d7018397a09c1!8m2!3d25.1023554!4d121.5484925!10e5!14m1!1BCgIgARICCAI!16zL20vMGhod2w?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+    "provider": "National Palace Museum via Google Maps",
+    "capture": "2019-07 (image footer), uploaded 2019-08",
+    "kind": "AIR panorama",
+    "observed": [
+      "Main central tiled roof pavilion is surrounded by flat grey roof decks",
+      "Side plaza has open paving, rectangular planting beds and grass strips"
+    ],
+    "limitations": "Historical panorama; not a freely orbiting photogrammetry reconstruction"
+  },
+  "jiufen": {
+    "url": "https://www.google.com/maps/place/A-Mei+Teahouse/@25.1087686,121.8434308,3a,75y,326.19h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDGx5-NWA!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-7uHcbHANfGQnwteNxJbbDSPgkIcRiSjLE6C_19UUfy2iCc5rCPUBfgzBfk4Rv4zTDzxM-8AO8Cw8EBRSlsDvz4Ia_4D2yOJjC23EabcQhUclrVIA2SvJjElxLNvgKytQ_5oHA%3Dw900-h600-k-no-pi0-ya180.81522504861923-ro0-fo100!7i4096!8i2048!4m9!3m8!1s0x345d4517e02d26b1:0x11ec86c737ace0aa!8m2!3d25.1085634!4d121.8436065!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1tfbl0yp?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+    "provider": "HY LIN via Google Maps",
+    "capture": "2021-12",
+    "kind": "Ground panorama",
+    "observed": [
+      "Dark staggered A-Mei balconies and sloped roofs",
+      "Green mountain slope separating hilltop town from distant coast"
+    ],
+    "limitations": "No aerial orbit verified; nearby gallery also includes a different teahouse (九戸茶語), do not misidentify it as A-Mei"
+  },
+  "recommendedSeaTreatment": "B: visible printed coastal scenery card mounted in miniature base; foreground structures remain physical"
+}

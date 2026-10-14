@@ -21,7 +21,7 @@
   "lockedIdentity": [
     "palace-style roof silhouette",
     "pale cream / white walls",
-    "verify: roof tile colour (green glazed tiles with yellow trim)",
+    "green glazed roof tiles with orange-gold ridge trim, confirmed in frontal and overview photographs",
     "symmetrical facade"
   ],
   "doNotInvent": [
@@ -40,8 +40,13 @@
   ],
   "references": {
     "aerial": [],
-    "ground": [],
-    "map": [],
+    "ground": [
+      "real-photo-overview.jpg"
+    ],
+    "map": [
+      "google-air-overview.jpg",
+      "google-air-side.jpg"
+    ],
     "representative": [
       "real-photo.jpg"
     ]
@@ -54,6 +59,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "review-v1.png uses latest Xiangshan-style miniature product finish. Front facade, skylight and flanking stairs checked against two real angles. Geographic and identity review remain pending: entrance archway appears to have excess openings/rooflets compared with official six-pillar five-opening five-rooflet description; lower terraces and landscaping are simplified. Overview photo dated 2007. Preview only; original master/day/token preserved. Google Maps panorama observations added (historical captures). Review variants pending manual geographic approval. review-v2.png improves visible flat roof decks from AIR panorama; pailou still appears to have excess openings, remains unresolved."
   }
 }

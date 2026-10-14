@@ -34,8 +34,12 @@
     "scooters on the coastal road"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
+    "aerial": [
+      "google-aerial-review.jpg"
+    ],
+    "ground": [
+      "google-ground-review.jpg"
+    ],
     "map": [],
     "representative": [
       "real-photo.jpg"
@@ -49,6 +53,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "Baisha Bay reference used instead of app Kenting-town marker. Sandy coast distinct from pebble beach; vegetation, umbrella arrangement and far headland contours remain simplified. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3."
   }
 }

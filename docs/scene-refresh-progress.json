@@ -1,0 +1,175 @@
+{
+  "updated": "2026-10-14",
+  "scope": "Existing 25 image-equipped spots; review previews, not automatic master approval",
+  "template": "tamsui/collection/review-v3.png",
+  "spots": [
+    {
+      "id": "palace-museum",
+      "status": "preview-revised-map-audit-pending",
+      "preview": "review-v2.png"
+    },
+    {
+      "id": "jiufen",
+      "status": "preview-revised-map-audit-pending",
+      "preview": "review-v5.png"
+    },
+    {
+      "id": "tamsui",
+      "status": "preview-revised-map-audit-pending",
+      "preview": "review-v3.png"
+    },
+    {
+      "id": "dadaocheng",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "yehliu",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "sun-moon-lake",
+      "status": "preview-revised-map-audit-pending",
+      "preview": "review-v6.png"
+    },
+    {
+      "id": "cingjing",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "gaomei",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "rainbow-village",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "lukang",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "hehuanshan",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "alishan",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "anping",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "chihkan",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "pier2",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "cijin",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "kenting",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "taroko",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v2.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "qingshui-cliff",
+      "status": "preview-revised-map-audit-pending",
+      "preview": "review-v4.png"
+    },
+    {
+      "id": "qixingtan",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "brown-avenue",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "sanxiantai",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v2.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "ruisui",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "taipei-101",
+      "status": "new-preview-real-reference-audit-recorded-qa-pending",
+      "preview": "review-v1.png",
+      "groundAndAerialSaved": true
+    },
+    {
+      "id": "xiangshan",
+      "status": "preview-revised-map-audit-pending",
+      "preview": "urban-detail-preview.png"
+    }
+  ],
+  "batch": {
+    "ids": [
+      "taipei-101",
+      "dadaocheng",
+      "yehliu",
+      "cingjing",
+      "gaomei",
+      "rainbow-village",
+      "lukang",
+      "hehuanshan",
+      "alishan",
+      "anping",
+      "chihkan",
+      "pier2",
+      "cijin",
+      "kenting",
+      "taroko",
+      "qixingtan",
+      "brown-avenue",
+      "sanxiantai",
+      "ruisui"
+    ],
+    "remainingOldPreviews": []
+  }
+}

@@ -3,5 +3,33 @@
   "title": "『高雄 旗津風景区散策(旗後砲台・旗後灯台・鴨角活海産店) 2010/4/29』高雄(台湾)の旅行記・ブログ by 台湾見聞録さんciteフォートラベル",
   "page": "https://4travel.jp/travelogue/11098089",
   "image": "https://cdn.4travel.jp/img/thumbnails/imk/travelogue_album/11/09/80/650x_11098089.jpg?updated_at=1550321077",
-  "description": " Cihou Lighthouse at Cijin Scenic Area\n\nA pristine white lighthouse building crowns a series of broad stone steps, flanked by neatly trimmed bushes and a lone flagpole bearing Taiwan’s flag. The cylindrical lantern room, topped with a black dome and encircled by a metal balcony, overlooks the coastal landscape beyond. Overcast skies cast a soft, diffused light across the scene, emphasizing the lighthouse’s clean lines and historic character.\n\nThis image captures the Cihou Lighthouse, part of the Cijin Scenic Area in Kaohsiung, Taiwan. Visitors often reach the site by taking the KMRT to Sizihwan Station, walking to Gushan Ferry Pier, and crossing to Cijin Island by ferry. After exploring nearby attractions like Cihou Fort and wandering along the seafood street, travelers pause at the lighthouse to admire its maritime heritage and coastal views."
+  "description": " Cihou Lighthouse at Cijin Scenic Area\n\nA pristine white lighthouse building crowns a series of broad stone steps, flanked by neatly trimmed bushes and a lone flagpole bearing Taiwan’s flag. The cylindrical lantern room, topped with a black dome and encircled by a metal balcony, overlooks the coastal landscape beyond. Overcast skies cast a soft, diffused light across the scene, emphasizing the lighthouse’s clean lines and historic character.\n\nThis image captures the Cihou Lighthouse, part of the Cijin Scenic Area in Kaohsiung, Taiwan. Visitors often reach the site by taking the KMRT to Sizihwan Station, walking to Gushan Ferry Pier, and crossing to Cijin Island by ferry. After exploring nearby attractions like Cihou Fort and wandering along the seafood street, travelers pause at the lighthouse to admire its maritime heritage and coastal views.",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Kaohsiung+Lighthouse/@22.6155918,120.2650699,3a,75y,239.89h,90.11t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICv1Y-NtQE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8tkijF36oXksyYpUllhMMSPCKCkz7wgrwWaec0B1vRBhdTr5LQTQBwG9qB2JJZqcRCCBtGbPRVJBeYQ3qSBETbURiWOIFUznyH6hYay6iY8tifn5HsjaYXMO-rwiMB4i-DWVdlsA%3Dw900-h600-k-no-pi-0.11253999999999564-ya239.88747-ro0-fo100!7i5952!8i2976!4m9!3m8!1s0x346e03f0f7fef989:0x4acca539f4901d4d!8m2!3d22.6155918!4d120.2650699!10e5!14m1!1BCgIgARICCAI!16s%2Fm%2F010gn63r?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Alfred Wong via Google Maps",
+      "capture": "2024-12",
+      "observations": [
+        "White low annex linked to squat cylindrical lantern tower with dark cap",
+        "Terrace stairs and white rails, hillside planting and courtyard"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@22.6155918,120.2650699,396m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Lighthouse on wooded north cap of Qihou Hill",
+        "Open sea west and harbor entrance north/east; piers beyond compact lighthouse crop"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }

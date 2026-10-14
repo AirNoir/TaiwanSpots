@@ -3,5 +3,34 @@
   "title": "Fate of 'Queen's Head' uncertain despite efforts to save it - Focus Taiwan",
   "page": "https://focustaiwan.tw/society/201505250028",
   "image": "https://imgcdn.cna.com.tw/Eng/WebEngPhotos/1024/2015/20150525/201505250028t0001.jpg",
-  "description": " Queen’s Head at Yehliu Geopark\n\nThe Queen’s Head, a honey‑colored sandstone formation, stands on a flat coastal shelf in northern Taiwan. Its narrow neck supports a larger, weather‑eroded head, marked by pockmarks and wind‑sculpted textures. Warm afternoon light accentuates the rock’s golden hues and the smooth, undulating surface of the surrounding platform.\n\nAuthorities have implemented reinforcement measures to protect the Queen’s Head from further thinning and potential collapse. Despite these efforts, ongoing natural erosion and visitor impact continue to pose risks to this emblematic landmark."
+  "description": " Queen’s Head at Yehliu Geopark\n\nThe Queen’s Head, a honey‑colored sandstone formation, stands on a flat coastal shelf in northern Taiwan. Its narrow neck supports a larger, weather‑eroded head, marked by pockmarks and wind‑sculpted textures. Warm afternoon light accentuates the rock’s golden hues and the smooth, undulating surface of the surrounding platform.\n\nAuthorities have implemented reinforcement measures to protect the Queen’s Head from further thinning and potential collapse. Despite these efforts, ongoing natural erosion and visitor impact continue to pose risks to this emblematic landmark.",
+  "supplementary": [
+    {
+      "local": "google-ground-queen.jpg",
+      "page": "https://www.google.com/maps/@25.2088047,121.6931021,3a,75y,351.9h,90.23t/data=!3m4!1e1!3m2!1sCIHM0ogKEICAgICkhMXe-gE!2e10",
+      "credit": "Yun-Chi Liao via Google Maps",
+      "capture": "2016-08",
+      "accessed": "2026-10-14",
+      "kind": "ground panorama",
+      "observations": [
+        "Slender lighter sandstone neck and dark porous asymmetrical head",
+        "Broad bare rock platform, nearby raised visitor path"
+      ],
+      "limitations": "Historical; erosion since capture not measured"
+    },
+    {
+      "local": "google-satellite-queen.jpg",
+      "page": "https://www.google.com/maps/@25.2088029,121.6931077,19z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "accessed": "2026-10-14",
+      "capture": "Not exposed",
+      "kind": "satellite overhead",
+      "observations": [
+        "Cape and path run southwest-northeast",
+        "Queen head rock-zone lies northwest of main path",
+        "Sea borders bare ochre sandstone field, larger vegetation patch southeast of queen"
+      ],
+      "usage": "Reference only, not final texture"
+    }
+  ]
 }

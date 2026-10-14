@@ -9,7 +9,7 @@
   },
   "crop": "The block around Taipei 101 in the Xinyi district grid: the tower and its mall podium, the plaza in front, the adjacent office towers and the street axis leading toward it. Not the whole of Xinyi, not the Taipei skyline.",
   "heroScale": 1,
-  "orientation": "verify: tower sits at the south-east end of the Xinyi planned grid; main street axis and plaza side to be confirmed from aerial reference",
+  "orientation": "Verified from Google Maps overhead viewed 2026-10-14: Xinyi Road south, City Hall Road west, Songzhi Road east, Songlian Road north. Low mall extends north of tower; south entrance plaza verified in July 2017 Street View. Current fine landscaping remains pending.",
   "lockedGeometry": [
     "Xinyi district orthogonal street grid",
     "Taipei 101 position at the edge of the grid",
@@ -42,8 +42,12 @@
     "a few taxis and scooters on the roads"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
+    "aerial": [
+      "google-satellite-block.jpg"
+    ],
+    "ground": [
+      "google-street-south.jpg"
+    ],
     "map": [],
     "representative": [
       "oneness-taipei-101.jpg"
@@ -57,6 +61,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "New generation from architect aerial + Google 2017 south Street View + satellite footprint; tower segments/teal facade recognizable, north mall and south entrance retained. Fine mall roof treatment and current landscaping remain unverified; no distant-card needed in single-block crop. Preview review-v1.png only; no automatic master approval."
   }
 }

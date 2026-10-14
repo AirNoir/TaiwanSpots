@@ -1,0 +1,4 @@
+interface:
+  display_name: "spot-review 景點模型調整"
+  short_description: "依真實照片逐一修訂 Islandia 微縮收藏模型，套用最新象山風格並更新比較頁"
+  default_prompt: "使用 $spot-review 依最新象山風格調整指定景點，核對實景照片並更新比較預覽。"

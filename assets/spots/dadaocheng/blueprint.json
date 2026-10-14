@@ -38,8 +38,12 @@
     "a few bicycles and scooters"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
+    "aerial": [
+      "google-satellite-street.jpg"
+    ],
+    "ground": [
+      "google-ground-street.jpg"
+    ],
     "map": [],
     "representative": [
       "real-photo.jpg"
@@ -53,6 +57,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "New generation from real ornate facade photograph + Google ground panorama + satellite street grid; carved brick/stucco facade and narrow street recognizable. Repeated facade ornament, opposite facade arrangement and rear roofs are simplifications; exact facade-to-map match pending; panorama geotag inconsistent. Preview review-v1.png only; no automatic master approval."
   }
 }

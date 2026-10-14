@@ -12,6 +12,34 @@
         "Narrow upper tower and needle spire",
         "Flared lower tower connected to a wide low podium"
       ]
+    },
+    {
+      "local": "google-street-south.jpg",
+      "page": "https://www.google.com/maps/@?api=1&map_action=pano&pano=-ceGMxbAYkavkr5W2ehdrA",
+      "credit": "Google Street View",
+      "capture": "2017-07",
+      "accessed": "2026-10-14",
+      "kind": "ground panorama",
+      "observations": [
+        "South entrance faces Xinyi Road",
+        "Broad paved forecourt with street-side trees",
+        "Adjacent low mall wing"
+      ],
+      "usage": "Research reference only; UI/attribution retained, never final texture"
+    },
+    {
+      "local": "google-satellite-block.jpg",
+      "page": "https://www.google.com/maps/@25.0336752,121.5648831,18z/data=!3m1!1e3",
+      "credit": "Google Maps; Airbus/CNES/Maxar attribution",
+      "capture": "Not exposed; copyright 2026 is not capture date",
+      "accessed": "2026-10-14",
+      "kind": "satellite overhead",
+      "observations": [
+        "Xinyi Road south, City Hall Road west, Songzhi Road east, Songlian Road north",
+        "Mall sits north of tower; not a symmetrical tower-centered mall",
+        "Nanshan Plaza farther east across Songzhi Road; not attached to 101"
+      ],
+      "usage": "Research reference only"
     }
   ]
 }

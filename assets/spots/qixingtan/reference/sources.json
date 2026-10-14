@@ -11,6 +11,34 @@
       "image": "https://www.mytaiwan.org/skin/mytaiwan/images/pictures/qixingtan-beach5.jpg",
       "description": " Tranquil Pebble Beach Stone Stack\n\nA carefully balanced stack of smooth, pale stones sits atop a bed of rounded pebbles, framed by the vibrant turquoise waters of Qixingtan Beach in Hualien, Taiwan. The stones, worn by the ocean’s ebb and flow, contrast with the deep blue sea and the soft white clouds scattered across the sky. This minimalist arrangement highlights the natural textures and colors of the coastal landscape.\n\nVisitors to Qixingtan Beach often stroll along the pebble shore, enjoying the rhythmic sound of waves and the gentle sea breeze. The site is renowned for its fault-formed curved bay and offers free access year-round, with peak season from April to October. Popular pastimes include watching sunrises and sunsets, stacking stones for good luck, cycling along the coastal path, and sampling local snacks from nearby vendors.",
       "file": "context-photo.jpg"
+    },
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Qixingtan+Beach/@24.032438,121.6286741,3a,75y,320.3h,92.14t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICk4OKoYg!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-mibR8byLh5V60DS0KRBnrsMDdqcz_jssvQ7rs0z7KO2xE9ekqoUxFdYgRa6tPtPebioCRGtYfltUiiyHBXZRUkuWFT3vCcEMDwaL-lWHEZDvtzJj8PHghsB00VD5HHJyKIIbB%3Dw900-h600-k-no-pi-2.138840000000002-ya320.3002-ro0-fo100!7i6080!8i3040!4m9!3m8!1s0x34689d87e68820f5:0xd027880d5fd378a!8m2!3d24.0430498!4d121.6224926!10e5!14m1!1BCgIgARICCAI!16s%2Fm%2F0100fx_c?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "吳丹升 via Google Maps",
+      "capture": "2019-03",
+      "observations": [
+        "Grey rounded pebble beach, energetic white surf",
+        "Bay curves toward distant northern mountain flank"
+      ],
+      "limitations": "Historical shore; fine bike-path arrangement not in this angle",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@24.03,121.625,1569m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Pebble shore and ocean east, paths on landward side",
+        "Curving coast beside airport, airport excluded from model crop"
+      ],
+      "limitations": "Northern mountain profile not verified from this central overhead crop",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
     }
   ]
 }

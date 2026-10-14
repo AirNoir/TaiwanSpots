@@ -3,5 +3,35 @@
   "title": "Explore Hualien’s Stunning Taroko National Park on a Day Tour",
   "page": "https://www.willflyforfood.net/take-a-day-tour-of-gorge-ous-taroko-national-park-in-hualien-taiwan/",
   "image": "https://www.willflyforfood.net/wp-content/uploads/2018/03/swallow-grotto9.jpg.webp",
-  "description": " Taroko Gorge’s Meandering River\n\nA vivid turquoise river carves its way through steep marble walls, revealing the raw power of the Liwu River over centuries. Pebble-strewn banks contrast with the smooth, striated rock faces, while patches of greenery cling to the cliffs above. High on the left, a narrow walkway and tunnel—part of the Swallow Grotto trail—offer visitors a close-up view of the gorge’s dramatic contours.\n\nThis section of Taroko National Park showcases the interplay of water and stone that earned it the nickname “Marble Gorge.” The vibrant blue-green water, shaped by mineral-rich marble, flows steadily through the narrow canyon. Visitors often pause on the cliffside path to photograph the swirling currents and towering rock formations, making this spot one of the park’s most photographed vistas."
+  "description": " Taroko Gorge’s Meandering River\n\nA vivid turquoise river carves its way through steep marble walls, revealing the raw power of the Liwu River over centuries. Pebble-strewn banks contrast with the smooth, striated rock faces, while patches of greenery cling to the cliffs above. High on the left, a narrow walkway and tunnel—part of the Swallow Grotto trail—offer visitors a close-up view of the gorge’s dramatic contours.\n\nThis section of Taroko National Park showcases the interplay of water and stone that earned it the nickname “Marble Gorge.” The vibrant blue-green water, shaped by mineral-rich marble, flows steadily through the narrow canyon. Visitors often pause on the cliffside path to photograph the swirling currents and towering rock formations, making this spot one of the park’s most photographed vistas.",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Yanzikou+Trail/@24.1735718,121.5636453,3a,75y,79.89h,90.11t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICJraLBRw!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U9-rXXE5mBCFkhU8qQThaPTfypUNQlms4OOK8LOrN-9TVBrZ8z4nhQnmN4S1wRea1JP6OMDn5H4zNRD2KHJqE3djudk_sLza0jQGkyRn3dV2mtsZPOvhnjpBeFOYpqtCMRQi7Y%3Dw900-h600-k-no-pi-0.11257000000000517-ya179.88743-ro0-fo100!7i8704!8i4352!4m13!1m2!2m1!1z5aSq6a2v6ZajIOeHleWtkOWPow!3m9!1s0x34688406253f06c5:0x68def2c2805ede45!8m2!3d24.1735718!4d121.5636453!10e5!14m1!1BCgIgARICCAI!15sChPlpKrpra_plqMg54eV5a2Q5Y-jkgENbmF0aW9uYWxfcGFya-ABAA!16s%2Fg%2F1tj_2_5c?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "黃薇臻 via Google Maps",
+      "capture": "2023-07",
+      "observations": [
+        "Narrow paved cliff-side road with rail over gorge",
+        "Exposed grey marble walls and vegetation in cracks"
+      ],
+      "limitations": "Historical 2023 image; current wall/road condition not verified",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@24.1735718,121.5636453,392m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Narrow Liwu river gorge flanked by steep slopes",
+        "Yanzikou old cliff road follows gorge alongside separate Highway8 alignment"
+      ],
+      "limitations": "Dark gorge shadow hides river/road details; map overlay is not measured exposed geometry",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }

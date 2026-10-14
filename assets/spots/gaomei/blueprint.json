@@ -38,8 +38,12 @@
     "small fiddler-crab specks on the mud"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
+    "aerial": [
+      "google-satellite-boardwalk.jpg"
+    ],
+    "ground": [
+      "google-ground-boardwalk.jpg"
+    ],
     "map": [],
     "representative": [
       "real-photo.jpg"
@@ -53,6 +57,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "Google ground 2017 and overhead checked 2026-10-14; meandering boardwalk and muddy tidal flat confirmed. Lighthouse outside compact crop; turbine spacing/scale compressed artistically, exact current turbine count unresolved. New review-v1.png boardwalk and wet mudflat are tactile foreground; turbine line is printed distant horizon rather than physical turbine excerpt. Fine boardwalk width/height, marsh distribution and geographic compression remain pending; preview only."
   }
 }

@@ -3,5 +3,33 @@
   "title": "『全７都市巡る台湾縦断』台北(台湾)の旅行記・ブログ by edih7さんciteフォートラベル",
   "page": "https://4travel.jp/travelogue/11971353/",
   "image": "https://cdn.4travel.jp/img/thumbnails/imk/travelogue_pict/85/65/25/650x_85652590.jpg?updated_at=1744357622",
-  "description": " Taichung’s Rainbow Village\n\nA group of visitors strolls along a narrow lane in Taichung’s Rainbow Village, marveling at the riot of color that envelops every surface. The humble row of single-story houses has been transformed into a vibrant open-air gallery by an elderly local artist, whose whimsical designs feature flowers, animals, and smiling faces in bold primary hues. Under a bright midday sun, the painted walls and ground patterns create a cheerful, immersive environment that draws photographers and art lovers alike.\n\nThis stop was part of a larger seven-city Taiwan tour, which included Taipei’s iconic 101 observatory, the lantern-lit sky of Shifen, and the nostalgic alleys of Jiufen. Travelers rated the overall experience highly for sightseeing and transportation, noting the ease of bus and high-speed rail connections. The Rainbow Village stands out as a testament to individual creativity, turning a once-forgotten military settlement into one of central Taiwan’s most Instagrammed landmarks."
+  "description": " Taichung’s Rainbow Village\n\nA group of visitors strolls along a narrow lane in Taichung’s Rainbow Village, marveling at the riot of color that envelops every surface. The humble row of single-story houses has been transformed into a vibrant open-air gallery by an elderly local artist, whose whimsical designs feature flowers, animals, and smiling faces in bold primary hues. Under a bright midday sun, the painted walls and ground patterns create a cheerful, immersive environment that draws photographers and art lovers alike.\n\nThis stop was part of a larger seven-city Taiwan tour, which included Taipei’s iconic 101 observatory, the lantern-lit sky of Shifen, and the nostalgic alleys of Jiufen. Travelers rated the overall experience highly for sightseeing and transportation, noting the ease of bus and high-speed rail connections. The Rainbow Village stands out as a testament to individual creativity, turning a once-forgotten military settlement into one of central Taiwan’s most Instagrammed landmarks.",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Rainbow+Village/@24.1336514,120.6098856,3a,75y,359.89h,90.11t/data=!3m8!1e1!3m6!1sCIABIhCYlKxEzwcreH5jWOnWlmuH!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_eMZu5FVXUgUPSMN43nKvzxr1ukzr_hyhzncSFgty02UnAh7QHEVJvT_RfLLimQys6kICFmaNrYyjBZRrQHcMtNaSrfhfaDnccHMZPHTiu0KsIBfDYLlP68WrfkI-bXlNQwOMsWbLcLXKC%3Dw900-h600-k-no-pi-0.11253999999999564-ya359.88745-ro0-fo100!7i5888!8i2944!4m9!3m8!1s0x34693e87f82595db:0x9a8836cb8c007336!8m2!3d24.1337152!4d120.6098437!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11cls6p_by?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Sanctum Realm via Google Maps",
+      "capture": "2025-07",
+      "observations": [
+        "Low painted courtyard/lane",
+        "Weathered white/red naive figures, painted red ground, shallow canopy"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@24.1337152,120.6098437,98m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Small surviving cluster around narrow lane; not a complete village",
+        "Open surroundings and nearby apartment blocks outside crop"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }

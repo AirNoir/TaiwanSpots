@@ -36,8 +36,12 @@
     "banyan trees in the compound"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
+    "aerial": [
+      "google-aerial-review.jpg"
+    ],
+    "ground": [
+      "google-ground-review.jpg"
+    ],
     "map": [],
     "representative": [
       "real-photo.jpg"
@@ -51,6 +55,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "White square observation tower with broad glazed hipped-roof top, brick terrace and stairs retained. Ruin wall/banyan placement and current garden changes pending. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3."
   }
 }

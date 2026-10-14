@@ -3,5 +3,34 @@
   "title": "阿里山國家森林遊樂區 > 觀光景點 > 交通部觀光署",
   "page": "https://www.taiwan.net.tw/m1.aspx?id=10949&sNo=0001016",
   "image": "https://www.taiwan.net.tw/att/1/big_scenic_spots/pic_10949_24.jpg",
-  "description": " Alishan Forest Railway Train\n\nA bright red narrow-gauge train winds its way through the dense cedar forests of Taiwan’s Alishan National Forest Recreation Area. The vintage carriages, painted in red and white, stand out against the lush greenery and towering trees. Alongside the tracks, a moss-covered stone wall and wooden railing guide the path, enhancing the historic atmosphere.\n\nAlishan is famed for its forest railway, built during the Japanese colonial era to transport timber. Today, it offers visitors a tranquil ride through ancient woods, misty valleys, and scenic mountain landscapes. The legend of Chief Abali, who first hunted in these forests over 250 years ago, lends cultural depth to this natural wonder."
+  "description": " Alishan Forest Railway Train\n\nA bright red narrow-gauge train winds its way through the dense cedar forests of Taiwan’s Alishan National Forest Recreation Area. The vintage carriages, painted in red and white, stand out against the lush greenery and towering trees. Alongside the tracks, a moss-covered stone wall and wooden railing guide the path, enhancing the historic atmosphere.\n\nAlishan is famed for its forest railway, built during the Japanese colonial era to transport timber. Today, it offers visitors a tranquil ride through ancient woods, misty valleys, and scenic mountain landscapes. The legend of Chief Abali, who first hunted in these forests over 250 years ago, lends cultural depth to this natural wonder.",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Sacred+Tree+Station/@23.519144,120.806633,3a,75y,280h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgID4xK6yQg!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_rkB-kDH0YpO_-ZqmdNKoDVUMIKiaxFTHfq2NZ2OtTMUjDWwIYckZV4BjYpwgh2jCLOfEWm0ZsY5-eIY_l9-p2puIOLc74_Zl0J6Cdem7UhLFP0wLyxo5QFDYkL6q8S6ePsFam%3Dw900-h600-k-no-pi0-ya160-ro0-fo100!7i9728!8i4864!4m9!3m8!1s0x346edea230e424b9:0xcb9ae78ab4298e3d!8m2!3d23.519174!4d120.80668!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F155q0z5s?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "CJ via Google Maps",
+      "capture": "2015-06 footer; uploaded 2015-07",
+      "observations": [
+        "Dense tall conifer trunks, ferns, steep forest slope",
+        "Wooden walking steps beside station; no tea fields"
+      ],
+      "limitations": "Train geometry uses existing real photo; historical station surroundings",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@23.519174,120.80668,394m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Shenmu rail area entirely dense forest with curved transport alignment"
+      ],
+      "limitations": "Canopy hides precise rails and train location; map overlay is not exposed track evidence",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }

@@ -38,8 +38,12 @@
     "sunrise glow"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
+    "aerial": [
+      "google-aerial-review.jpg"
+    ],
+    "ground": [
+      "google-ground-review.jpg"
+    ],
     "map": [],
     "representative": [
       "real-photo.jpg"
@@ -53,6 +57,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "Eight visible sequential bridge humps inspected; support/rail detail and current condition pending. Google references show coastal context, precise bridge geometry uses primary real aerial. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3. review-v2: Raised background card and visible ivory separation curb; eight arch sequence retained in visual inspection. Geometry QA remains pending."
   }
 }

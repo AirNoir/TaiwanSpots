@@ -1,0 +1,382 @@
+{
+  "accessed": "2026-10-14",
+  "scope": "Real Google Maps ground/360 and aerial evidence for 14 remaining preview refreshes",
+  "sources": [
+    {
+      "id": "rainbow-village",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Rainbow+Village/@24.1336514,120.6098856,3a,75y,359.89h,90.11t/data=!3m8!1e1!3m6!1sCIABIhCYlKxEzwcreH5jWOnWlmuH!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_eMZu5FVXUgUPSMN43nKvzxr1ukzr_hyhzncSFgty02UnAh7QHEVJvT_RfLLimQys6kICFmaNrYyjBZRrQHcMtNaSrfhfaDnccHMZPHTiu0KsIBfDYLlP68WrfkI-bXlNQwOMsWbLcLXKC%3Dw900-h600-k-no-pi-0.11253999999999564-ya359.88745-ro0-fo100!7i5888!8i2944!4m9!3m8!1s0x34693e87f82595db:0x9a8836cb8c007336!8m2!3d24.1337152!4d120.6098437!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11cls6p_by?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Sanctum Realm via Google Maps",
+      "capture": "2025-07",
+      "observations": [
+        "Low painted courtyard/lane",
+        "Weathered white/red naive figures, painted red ground, shallow canopy"
+      ]
+    },
+    {
+      "id": "rainbow-village",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@24.1337152,120.6098437,98m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Small surviving cluster around narrow lane; not a complete village",
+        "Open surroundings and nearby apartment blocks outside crop"
+      ]
+    },
+    {
+      "id": "lukang",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@24.056301,120.4325817,196m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Putou Street curves through narrow deep lots",
+        "Yaolin Street continues south; no temple in compact street crop"
+      ]
+    },
+    {
+      "id": "lukang",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/@24.056488,120.4325276,7a,75y,307.75h,90t/data=!3m7!1e1!3m5!1sqfnP1bVEgQyU5uaYU8ia5A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DqfnP1bVEgQyU5uaYU8ia5A%26yaw%3D307.750880132954!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Street View",
+      "capture": "2019-03",
+      "observations": [
+        "16 Butou Street: narrow curved red-brick paving",
+        "Continuous brick/stucco shophouses, deep lots, doors/awnings/lanterns"
+      ]
+    },
+    {
+      "id": "hehuanshan",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Wuling/@24.1371278,121.2757098,3a,75y,54.6h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICMpIbbZg!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-p9W8hCY4kFOCr0B5jON94wJeg4GhuNUhlcXTnsJnkeu2o3t65pnw1F33xZPRqimKM_zbs1b9eLdlwoq61z9KFARvGA8Wtn8ZFVepqcmHgHNyLVzdHu81GalXugkJXvxRnXy4%3Dw900-h600-k-no-pi0-ya54.598072-ro0-fo100!7i8192!8i4096!4m9!3m8!1s0x3468933811b3eeb5:0xc95761a7402da803!8m2!3d24.1371281!4d121.275739!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F155r96dm?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "李承泰 via Google Maps",
+      "capture": "2019-10 footer; uploaded 2019-11",
+      "observations": [
+        "Rounded bamboo-grass ridges, exposed grey rock and contour highway",
+        "No Alpine jagged peaks or lakes"
+      ]
+    },
+    {
+      "id": "hehuanshan",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@24.1371281,121.275739,784m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Wuling at saddle, Highway14A traverses western grass slope toward eastern forested bend",
+        "Main Peak trail west/northwest, East Peak southeast; grass and forest bands"
+      ]
+    },
+    {
+      "id": "alishan",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Sacred+Tree+Station/@23.519144,120.806633,3a,75y,280h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgID4xK6yQg!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_rkB-kDH0YpO_-ZqmdNKoDVUMIKiaxFTHfq2NZ2OtTMUjDWwIYckZV4BjYpwgh2jCLOfEWm0ZsY5-eIY_l9-p2puIOLc74_Zl0J6Cdem7UhLFP0wLyxo5QFDYkL6q8S6ePsFam%3Dw900-h600-k-no-pi0-ya160-ro0-fo100!7i9728!8i4864!4m9!3m8!1s0x346edea230e424b9:0xcb9ae78ab4298e3d!8m2!3d23.519174!4d120.80668!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F155q0z5s?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "CJ via Google Maps",
+      "capture": "2015-06 footer; uploaded 2015-07",
+      "observations": [
+        "Dense tall conifer trunks, ferns, steep forest slope",
+        "Wooden walking steps beside station; no tea fields"
+      ],
+      "limitations": "Train geometry uses existing real photo; historical station surroundings"
+    },
+    {
+      "id": "alishan",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@23.519174,120.80668,394m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Shenmu rail area entirely dense forest with curved transport alignment"
+      ],
+      "limitations": "Canopy hides precise rails and train location; map overlay is not exposed track evidence"
+    },
+    {
+      "id": "anping",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Anping+Fort/@23.0013593,120.1607278,4a,75y,19.17h,110.15t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIC4tM34MA!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-nitbsbqThFutXkEVrf4xXIO0yN73by_fbFfIxy3XWQJiTZujCV6a0yYOJVsxpZqXJlU5fwOVxgJLpe9W3VhyjivH8Y5_O5E__sp9tDlkPxCUsZ1h93YIU9GLoRkx7sSS7QFM%3Dw900-h600-k-no-pi-20.150090000000006-ya309.63410924414063-ro0-fo100!7i13312!8i6656!4m9!3m8!1s0x346e767378e3e467:0x9b1e15dd6ac9adf1!8m2!3d23.0015093!4d120.1606244!10e5!14m1!1BCgIgARICCAI!16zL20vMDMyZHg5?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Geoforce群立科技 via Google Maps",
+      "capture": "2016-01 footer; uploaded2017-09",
+      "observations": [
+        "Elevated brick terrace, central stairs, mature trees",
+        "White observation tower with broad glass top and red tiled hipped roof"
+      ]
+    },
+    {
+      "id": "anping",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/place/Anping+Old+Street/@23.0015093,120.1606244,198m/data=!3m1!1e3!4m6!3m5!1s0x346e7603ffffffff:0xe8fc95e1f2a8e820!8m2!3d23.0007174!4d120.1616449!16s%2Fg%2F1thg85qw?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Observation tower inside raised rectangular compound",
+        "Steps and mature trees around terrace, street outside fort"
+      ],
+      "limitations": "Fine ruin walls under tree canopy partly hidden"
+    },
+    {
+      "id": "chihkan",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Chihkan+Tower/@22.9973876,120.2025364,15a,75y,31.25h,94.83t/data=!3m7!1e1!3m5!1sJ21lYp64O_UgkXtLKg-jRw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-4.8283540000000045%26panoid%3DJ21lYp64O_UgkXtLKg-jRw%26yaw%3D31.252092!7i13312!8i6656!4m9!3m8!1s0x346e7661777b896d:0xf2656ec0c86f579c!8m2!3d22.997478!4d120.2025433!10e5!14m1!1BCgIgARICCAI!16zL20vMDc5c3Fj?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Street View",
+      "capture": "2017-05",
+      "observations": [
+        "Stone turtle-based steles in row before raised brick pavilion",
+        "Two-storey traditional red-tile eaves, stone columns and pierced brick parapet"
+      ]
+    },
+    {
+      "id": "chihkan",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@22.997478,120.2025433,99m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Two pavilions aligned along long axis of platform, not a symmetric gate complex",
+        "Garden/open space adjacent, trees at compound edge"
+      ]
+    },
+    {
+      "id": "pier2",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/The+Pier2+Art+Center/@22.6195538,120.2820494,3a,75y,260h,110t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICE4LGtOQ!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8BtQ1oxYGOPwQbRP_OSdxmFDGjxoWjfa0l1jYJjBNWJzHHlTP7GT3CGZndZpUC2k-BV_yTGv5b9SLnU8Tpp0DCOJCwc_mNno-51skWZYGi8mHA9Dq3sisuWNHy15llWfXEUjVV%3Dw900-h600-k-no-pi-20-ya145.5561294555664-ro0-fo100!7i13312!8i6656!4m9!3m8!1s0x346e047620e1c45b:0xe6d6d1bd1c764df2!8m2!3d22.6199803!4d120.2815287!10e5!14m1!1BCgIgARICCAI!16s%2Fm%2F010glgxt?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Iclick Inc 愛點科技 via Google Maps",
+      "capture": "2015-11 footer; uploaded2017-08",
+      "observations": [
+        "Low grey warehouses with gabled corrugated roofs",
+        "Tree-lined paved space and existing rail tracks nearby"
+      ],
+      "limitations": "Historical tram configuration, no train vehicle verified"
+    },
+    {
+      "id": "pier2",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/place/Dayi+Pier-2/@22.6199803,120.2815287,396m/data=!3m1!1e3!4m6!3m5!1s0x346e03883c3cce59:0x2713f46653c84c50!8m2!3d22.618553!4d120.284154!16s%2Fg%2F11b7jryrgs?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Warehouse rows north of harbor edge",
+        "Green light-rail corridor along harbor side, orthogonal surrounding street grid"
+      ]
+    },
+    {
+      "id": "cijin",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Kaohsiung+Lighthouse/@22.6155918,120.2650699,3a,75y,239.89h,90.11t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICv1Y-NtQE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8tkijF36oXksyYpUllhMMSPCKCkz7wgrwWaec0B1vRBhdTr5LQTQBwG9qB2JJZqcRCCBtGbPRVJBeYQ3qSBETbURiWOIFUznyH6hYay6iY8tifn5HsjaYXMO-rwiMB4i-DWVdlsA%3Dw900-h600-k-no-pi-0.11253999999999564-ya239.88747-ro0-fo100!7i5952!8i2976!4m9!3m8!1s0x346e03f0f7fef989:0x4acca539f4901d4d!8m2!3d22.6155918!4d120.2650699!10e5!14m1!1BCgIgARICCAI!16s%2Fm%2F010gn63r?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Alfred Wong via Google Maps",
+      "capture": "2024-12",
+      "observations": [
+        "White low annex linked to squat cylindrical lantern tower with dark cap",
+        "Terrace stairs and white rails, hillside planting and courtyard"
+      ]
+    },
+    {
+      "id": "cijin",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@22.6155918,120.2650699,396m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Lighthouse on wooded north cap of Qihou Hill",
+        "Open sea west and harbor entrance north/east; piers beyond compact lighthouse crop"
+      ]
+    },
+    {
+      "id": "kenting",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Kenting+Baishawan/@21.9796601,120.7785259,3a,75y,40h,100t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDcl-OGMQ!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-3yxCssjT10k9XmaVgYqbKzeIL59JKz_1brvhFdFZheixGCJ19Q6uKdw9vCV38P6PacAMxfKnu4djI2YOnrVD3EVS4dSY2P86_awuSk_dkSmp6WA2Zkr3-iMI30wZQyId9W37M%3Dw900-h600-k-no-pi-10-ya249-ro0-fo100!7i10240!8i5120!4m9!3m8!1s0x3471b003e209ef77:0x291dd68fcb88a0da!8m2!3d21.9343521!4d120.7178407!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1q5bl20vj?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Nick Siu via Google Maps",
+      "capture": "2015-04",
+      "observations": [
+        "Pale sandy beach texture and landward mixed coastal trees",
+        "Small umbrella beach area; not rocky east-coast pebble beach"
+      ],
+      "limitations": "Historical temporary umbrella layout not locked"
+    },
+    {
+      "id": "kenting",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@21.9343521,120.7178407,398m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Pale curved southwest-facing beach, turquoise shallow band",
+        "Low vegetated landward edge and rocky ends; narrow beachfront strip"
+      ]
+    },
+    {
+      "id": "taroko",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Yanzikou+Trail/@24.1735718,121.5636453,3a,75y,79.89h,90.11t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICJraLBRw!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U9-rXXE5mBCFkhU8qQThaPTfypUNQlms4OOK8LOrN-9TVBrZ8z4nhQnmN4S1wRea1JP6OMDn5H4zNRD2KHJqE3djudk_sLza0jQGkyRn3dV2mtsZPOvhnjpBeFOYpqtCMRQi7Y%3Dw900-h600-k-no-pi-0.11257000000000517-ya179.88743-ro0-fo100!7i8704!8i4352!4m13!1m2!2m1!1z5aSq6a2v6ZajIOeHleWtkOWPow!3m9!1s0x34688406253f06c5:0x68def2c2805ede45!8m2!3d24.1735718!4d121.5636453!10e5!14m1!1BCgIgARICCAI!15sChPlpKrpra_plqMg54eV5a2Q5Y-jkgENbmF0aW9uYWxfcGFya-ABAA!16s%2Fg%2F1tj_2_5c?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "黃薇臻 via Google Maps",
+      "capture": "2023-07",
+      "observations": [
+        "Narrow paved cliff-side road with rail over gorge",
+        "Exposed grey marble walls and vegetation in cracks"
+      ],
+      "limitations": "Historical 2023 image; current wall/road condition not verified"
+    },
+    {
+      "id": "taroko",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@24.1735718,121.5636453,392m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Narrow Liwu river gorge flanked by steep slopes",
+        "Yanzikou old cliff road follows gorge alongside separate Highway8 alignment"
+      ],
+      "limitations": "Dark gorge shadow hides river/road details; map overlay is not measured exposed geometry"
+    },
+    {
+      "id": "qixingtan",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Qixingtan+Beach/@24.032438,121.6286741,3a,75y,320.3h,92.14t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICk4OKoYg!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-mibR8byLh5V60DS0KRBnrsMDdqcz_jssvQ7rs0z7KO2xE9ekqoUxFdYgRa6tPtPebioCRGtYfltUiiyHBXZRUkuWFT3vCcEMDwaL-lWHEZDvtzJj8PHghsB00VD5HHJyKIIbB%3Dw900-h600-k-no-pi-2.138840000000002-ya320.3002-ro0-fo100!7i6080!8i3040!4m9!3m8!1s0x34689d87e68820f5:0xd027880d5fd378a!8m2!3d24.0430498!4d121.6224926!10e5!14m1!1BCgIgARICCAI!16s%2Fm%2F0100fx_c?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "吳丹升 via Google Maps",
+      "capture": "2019-03",
+      "observations": [
+        "Grey rounded pebble beach, energetic white surf",
+        "Bay curves toward distant northern mountain flank"
+      ],
+      "limitations": "Historical shore; fine bike-path arrangement not in this angle"
+    },
+    {
+      "id": "qixingtan",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@24.03,121.625,1569m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Pebble shore and ocean east, paths on landward side",
+        "Curving coast beside airport, airport excluded from model crop"
+      ],
+      "limitations": "Northern mountain profile not verified from this central overhead crop"
+    },
+    {
+      "id": "brown-avenue",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/place/Takeshi+Kaneshiro+Tree/@23.0973841,121.2044414,3a,75y,20h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDE8M6xEw!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8KpQEy1ZEbobtUKjF2JwvprOXlDyKNEMOq1AQPetrJz2U5FGg4gMr6zJUOZI-jXfh6N03vZoBLaF933ZkOWoRiKrM_WgcVSOfPKnoQ9O5hRG0BevG8SO0GSU6rvW6xwxi6ZuA9%3Dw900-h600-k-no-pi0-ya20-ro0-fo100!7i8192!8i4096!4m9!3m8!1s0x346f0b8246375e45:0x8d0f5fceb49ea742!8m2!3d23.0974397!4d121.2045098!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11b6bmqwtc?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "李庫柏 via Google Maps",
+      "capture": "2019-01",
+      "observations": [
+        "Actual aerial panorama over regular field plots and narrow lanes",
+        "Mountain ridge beyond flat farmland, flooded winter paddies"
+      ],
+      "limitations": "Season differs from green-rice reference; field conditions not mixed literally"
+    },
+    {
+      "id": "brown-avenue",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Takeshi+Kaneshiro+Tree/@23.0973228,121.2049085,3a,75y,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgID2z9jvbQ!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8DMTW8ixz6vLowBBiJHxXG7xbqAHegXlOmYXAPT72j-dB0f0SzA7UVlY6cKVcZUf5lWkDOsi6O8YS9Pbwxwt68yWLGZpmGVFMwTL97YWjCG1F19Q0n-QxSr7dRjIVd0t_mNUuo%3Dw900-h600-k-no-pi0-ya91-ro0-fo100!7i8704!8i4352!4m9!3m8!1s0x346f0b8246375e45:0x8d0f5fceb49ea742!8m2!3d23.0974397!4d121.2045098!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11b6bmqwtc?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "陳阿祿 via Google Maps",
+      "capture": "2022-05",
+      "observations": [
+        "Single tree at narrow rural lane intersection, simple bench",
+        "Flat rice paddies and low concrete field/channel borders"
+      ]
+    },
+    {
+      "id": "sanxiantai",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/place/Sanxiantai+Arch+Bridge/@23.12367,121.4129019,3a,75y,112.01h,59.56t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDu5fzMUg!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U9-K8sL4etcR8H1RQIg3cAl766itJIHmZ2D_ClN6RMn3cfDV2xowJO9-LKs5PLqK9XlmZdGxggqIVuW811wCFDXED1YMuweooAbuQw9ABG5TxvoAru11Ccx3cYE62QLY7-XG6K0%3Dw900-h600-k-no-pi30.438206341019544-ya112.00964-ro0-fo100!7i14400!8i7200!4m9!3m8!1s0x346f70462616d475:0xc34ae38fdb8d25f7!8m2!3d23.12367!4d121.4129019!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1q629jtbb?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "盧家倫 via Google Maps",
+      "capture": "2022-08",
+      "observations": [
+        "Actual aerial panorama over sea toward mainland curved coastline and mountain ridge"
+      ],
+      "limitations": "Bridge not visible in this selected heading; bridge count/geometry uses primary aerial photo"
+    },
+    {
+      "id": "sanxiantai",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Sanxiantai+Arch+Bridge/@23.12367,121.4129019,3a,75y,179.89h,90.11t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDF1_TMRw!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-nOMtzbfR8yB_HMeuJh8RjHswW1sBDQTXkzQDZPVwMOhlb9qXnbPfe9PdH3Awwe5YTjmQeGnkfDZe52UDYPuKsCxfs8Cf44MG0CT9YR_msBlzG40IANtIZb2ZzGG-wqepRZWA%3Dw900-h600-k-no-pi-0.11253999999999564-ya179.88747-ro0-fo100!7i6080!8i3040!4m9!3m8!1s0x346f70462616d475:0xc34ae38fdb8d25f7!8m2!3d23.12367!4d121.4129019!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1q629jtbb?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Mei Sei via Google Maps",
+      "capture": "2023-10 footer; uploaded2023-11",
+      "observations": [
+        "Dark jagged shore reef with pools and low vegetation",
+        "Mainland mountain coastline behind sea"
+      ],
+      "limitations": "Bridge outside selected ground heading; no exact railing survey"
+    },
+    {
+      "id": "ruisui",
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Ruisui+Ranch/@23.4792558,121.3458869,155a,75y,66.15h,90t/data=!3m7!1e1!3m5!1sH1pIHvLjMtNuSQQGFvGNKA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DH1pIHvLjMtNuSQQGFvGNKA%26yaw%3D66.14690195949692!7i13312!8i6656!4m9!3m8!1s0x346f4672fc907d47:0xb5cd184ff4bf44!8m2!3d23.4792093!4d121.3459565!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F121r_8lf?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Street View",
+      "capture": "2012-08",
+      "observations": [
+        "Flat green pasture beyond simple white fence",
+        "Tree-lined visitor boundary, low wooded hill beyond"
+      ],
+      "limitations": "Trees partly screen pasture; cow form/count uses primary real photo, not this historical panorama"
+    },
+    {
+      "id": "ruisui",
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@23.4792093,121.3459565,394m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Broad flat pasture near visitor lane and farm sheds",
+        "Wooded hills immediately on west/south; fields not terraced mountain pasture"
+      ],
+      "limitations": "Herd position/current population not visible"
+    }
+  ]
+}

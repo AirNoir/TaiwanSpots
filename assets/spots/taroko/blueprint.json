@@ -38,8 +38,12 @@
     "scrub clinging to the cliff"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
+    "aerial": [
+      "google-aerial-review.jpg"
+    ],
+    "ground": [
+      "google-ground-review.jpg"
+    ],
     "map": [],
     "representative": [
       "real-photo.jpg"
@@ -53,6 +57,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "Historical 2023 cliff-road reference, not a claim about current condition. Tunnel opening and road height simplified; modern wall/road condition pending. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3. review-v2: Removed extra distant terrain behind physical base, cream background through rear gap. Geometry QA remains pending."
   }
 }

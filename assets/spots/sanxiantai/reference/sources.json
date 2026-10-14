@@ -3,5 +3,34 @@
   "title": "Coastal Range > Tourism Administration, Republic of China (Taiwan)",
   "page": "https://eng.taiwan.net.tw/m1.aspx?sNo=0042815",
   "image": "https://eng.taiwan.net.tw/userfiles/image/2022mountainTourism/5-3.jpg",
-  "description": " Sanxiantai’s Iconic Eight-Arch Bridge\n\nA sinuous footbridge of eight arches stretches from the rocky Taiwanese shoreline out to a small offshore island, its red railings contrasting with the turquoise sea below. Dark volcanic rocks dot the shallow waters, where gentle waves break along the coast. In the distance, lush green hills rise toward misty mountain peaks under a sky streaked with white clouds.\n\nThis aerial perspective captures the unique geography of Sanxiantai, part of Taiwan’s Coastal Range. The bridge provides pedestrian access to the island, inviting visitors to explore tide pools and coastal flora. The vivid hues of the ocean, the rugged shoreline, and the verdant backdrop showcase the region’s dramatic natural scenery."
+  "description": " Sanxiantai’s Iconic Eight-Arch Bridge\n\nA sinuous footbridge of eight arches stretches from the rocky Taiwanese shoreline out to a small offshore island, its red railings contrasting with the turquoise sea below. Dark volcanic rocks dot the shallow waters, where gentle waves break along the coast. In the distance, lush green hills rise toward misty mountain peaks under a sky streaked with white clouds.\n\nThis aerial perspective captures the unique geography of Sanxiantai, part of Taiwan’s Coastal Range. The bridge provides pedestrian access to the island, inviting visitors to explore tide pools and coastal flora. The vivid hues of the ocean, the rugged shoreline, and the verdant backdrop showcase the region’s dramatic natural scenery.",
+  "supplementary": [
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/place/Sanxiantai+Arch+Bridge/@23.12367,121.4129019,3a,75y,112.01h,59.56t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDu5fzMUg!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U9-K8sL4etcR8H1RQIg3cAl766itJIHmZ2D_ClN6RMn3cfDV2xowJO9-LKs5PLqK9XlmZdGxggqIVuW811wCFDXED1YMuweooAbuQw9ABG5TxvoAru11Ccx3cYE62QLY7-XG6K0%3Dw900-h600-k-no-pi30.438206341019544-ya112.00964-ro0-fo100!7i14400!8i7200!4m9!3m8!1s0x346f70462616d475:0xc34ae38fdb8d25f7!8m2!3d23.12367!4d121.4129019!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1q629jtbb?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "盧家倫 via Google Maps",
+      "capture": "2022-08",
+      "observations": [
+        "Actual aerial panorama over sea toward mainland curved coastline and mountain ridge"
+      ],
+      "limitations": "Bridge not visible in this selected heading; bridge count/geometry uses primary aerial photo",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Sanxiantai+Arch+Bridge/@23.12367,121.4129019,3a,75y,179.89h,90.11t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDF1_TMRw!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-nOMtzbfR8yB_HMeuJh8RjHswW1sBDQTXkzQDZPVwMOhlb9qXnbPfe9PdH3Awwe5YTjmQeGnkfDZe52UDYPuKsCxfs8Cf44MG0CT9YR_msBlzG40IANtIZb2ZzGG-wqepRZWA%3Dw900-h600-k-no-pi-0.11253999999999564-ya179.88747-ro0-fo100!7i6080!8i3040!4m9!3m8!1s0x346f70462616d475:0xc34ae38fdb8d25f7!8m2!3d23.12367!4d121.4129019!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1q629jtbb?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Mei Sei via Google Maps",
+      "capture": "2023-10 footer; uploaded2023-11",
+      "observations": [
+        "Dark jagged shore reef with pools and low vegetation",
+        "Mainland mountain coastline behind sea"
+      ],
+      "limitations": "Bridge outside selected ground heading; no exact railing survey",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }

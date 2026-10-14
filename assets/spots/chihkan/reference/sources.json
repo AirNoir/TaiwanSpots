@@ -3,5 +3,33 @@
   "title": "Tainan Film Studio",
   "page": "https://asc.tainan.gov.tw/index_en.php?id=35&modify=place",
   "image": "https://asc.tainan.gov.tw/upload/place/702c5af152a9ac1d6bfb7388764a21d5.JPG",
-  "description": " Chihkan Tower Pavilion\n\nA two-tiered red brick pavilion rises above a neatly trimmed garden at Chihkan Tower in Tainan, Taiwan. The building’s tiled roofs curve upward at the corners, and a balcony on the upper floor offers visitors panoramic views of the grounds. In front of the pavilion, a row of stone steles rests on the backs of sculpted tortoises, while lush hedges and flowering shrubs add vibrant greenery to the scene.\n\nChihkan Tower began as the Dutch Fort Provintia in 1653 and later served under Koxinga, the Qing Dynasty, and Japanese rule. Its architecture today combines reinforced concrete with traditional wooden details, preserving the original appearance of the historic site. Designated a national first-grade historic site in 1982, it remains open daily for tourists, accessible by city bus or car."
+  "description": " Chihkan Tower Pavilion\n\nA two-tiered red brick pavilion rises above a neatly trimmed garden at Chihkan Tower in Tainan, Taiwan. The building’s tiled roofs curve upward at the corners, and a balcony on the upper floor offers visitors panoramic views of the grounds. In front of the pavilion, a row of stone steles rests on the backs of sculpted tortoises, while lush hedges and flowering shrubs add vibrant greenery to the scene.\n\nChihkan Tower began as the Dutch Fort Provintia in 1653 and later served under Koxinga, the Qing Dynasty, and Japanese rule. Its architecture today combines reinforced concrete with traditional wooden details, preserving the original appearance of the historic site. Designated a national first-grade historic site in 1982, it remains open daily for tourists, accessible by city bus or car.",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Chihkan+Tower/@22.9973876,120.2025364,15a,75y,31.25h,94.83t/data=!3m7!1e1!3m5!1sJ21lYp64O_UgkXtLKg-jRw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-4.8283540000000045%26panoid%3DJ21lYp64O_UgkXtLKg-jRw%26yaw%3D31.252092!7i13312!8i6656!4m9!3m8!1s0x346e7661777b896d:0xf2656ec0c86f579c!8m2!3d22.997478!4d120.2025433!10e5!14m1!1BCgIgARICCAI!16zL20vMDc5c3Fj?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Street View",
+      "capture": "2017-05",
+      "observations": [
+        "Stone turtle-based steles in row before raised brick pavilion",
+        "Two-storey traditional red-tile eaves, stone columns and pierced brick parapet"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@22.997478,120.2025433,99m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Two pavilions aligned along long axis of platform, not a symmetric gate complex",
+        "Garden/open space adjacent, trees at compound edge"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }

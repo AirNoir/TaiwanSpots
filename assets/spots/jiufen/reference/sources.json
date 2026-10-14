@@ -3,5 +3,33 @@
   "title": "The Taiwan of Hou Hsiao-Hsien and Edward Yang – Taiwan Scene",
   "page": "https://taiwan-scene.com/2024/02/05/the-taiwan-of-hou-hsiao-hsien-and-edward-yang/",
   "image": "https://taiwan-scene.com/app/uploads/2024/02/IMG_7163-1160x773.jpg",
-  "description": " Jiufen’s Iconic Tea House\n\nNestled on a ridge overlooking Taiwan’s northeast coast, this multi‑story tea house in Jiufen is clad in dark wood and festooned with red lanterns and Chinese banners reading “阿妹茶樓.” The narrow stairways and balconies bustle with visitors, while potted greenery softens the traditional architecture. \n\nFamous as a filming location for Hou Hsiao‑Hsien’s A City of Sadness, the tea house retains its historic charm. Open windows reveal cozy interior seating, and the surrounding misty hills hint at the town’s former mining heritage and timeless allure."
+  "description": " Jiufen’s Iconic Tea House\n\nNestled on a ridge overlooking Taiwan’s northeast coast, this multi‑story tea house in Jiufen is clad in dark wood and festooned with red lanterns and Chinese banners reading “阿妹茶樓.” The narrow stairways and balconies bustle with visitors, while potted greenery softens the traditional architecture. \n\nFamous as a filming location for Hou Hsiao‑Hsien’s A City of Sadness, the tea house retains its historic charm. Open windows reveal cozy interior seating, and the surrounding misty hills hint at the town’s former mining heritage and timeless allure.",
+  "supplementary": [
+    {
+      "file": "google-teahouse-side.jpg",
+      "title": "九份茶樓與面海方向全景（Google Maps）",
+      "page": "https://www.google.com/maps/place/A-Mei+Teahouse/@25.1087686,121.8434308,3a,75y,326.19h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDGx5-NWA!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-7uHcbHANfGQnwteNxJbbDSPgkIcRiSjLE6C_19UUfy2iCc5rCPUBfgzBfk4Rv4zTDzxM-8AO8Cw8EBRSlsDvz4Ia_4D2yOJjC23EabcQhUclrVIA2SvJjElxLNvgKytQ_5oHA%3Dw900-h600-k-no-pi0-ya180.81522504861923-ro0-fo100!7i4096!8i2048!4m9!3m8!1s0x345d4517e02d26b1:0x11ec86c737ace0aa!8m2!3d25.1085634!4d121.8436065!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1tfbl0yp?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "author": "HY LIN via Google Maps",
+      "captureDate": "2021-12",
+      "description": "Ground panorama; UI screenshot for geographic review; attribution retained. No aerial orbit verified; nearby gallery also includes a different teahouse (九戸茶語), do not misidentify it as A-Mei",
+      "usage": "Reference observation only; not an App texture or publishable model asset."
+    },
+    {
+      "file": "google-coast-view.jpg",
+      "title": "九份茶樓與面海方向全景（Google Maps）",
+      "page": "https://www.google.com/maps/place/A-Mei+Teahouse/@25.1087686,121.8434308,3a,75y,326.19h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDGx5-NWA!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-7uHcbHANfGQnwteNxJbbDSPgkIcRiSjLE6C_19UUfy2iCc5rCPUBfgzBfk4Rv4zTDzxM-8AO8Cw8EBRSlsDvz4Ia_4D2yOJjC23EabcQhUclrVIA2SvJjElxLNvgKytQ_5oHA%3Dw900-h600-k-no-pi0-ya180.81522504861923-ro0-fo100!7i4096!8i2048!4m9!3m8!1s0x345d4517e02d26b1:0x11ec86c737ace0aa!8m2!3d25.1085634!4d121.8436065!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1tfbl0yp?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "author": "HY LIN via Google Maps",
+      "captureDate": "2021-12",
+      "description": "Ground panorama; UI screenshot for geographic review; attribution retained. No aerial orbit verified; nearby gallery also includes a different teahouse (九戸茶語), do not misidentify it as A-Mei",
+      "usage": "Reference observation only; not an App texture or publishable model asset."
+    },
+    {
+      "file": "google-street-teahouse.jpg",
+      "title": "Nearby 九戸茶語 facade; not A-Mei",
+      "page": "https://www.google.com/maps/search/?api=1&query=A-Mei+Teahouse+Jiufen",
+      "author": "chichuen wong via Google Maps",
+      "captureDate": "2015-08",
+      "description": "Nearby building shown in place gallery; retain distinction from A-Mei."
+    }
+  ]
 }

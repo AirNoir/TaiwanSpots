@@ -38,8 +38,12 @@
     "low mist bands"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
+    "aerial": [
+      "google-satellite-pasture.jpg"
+    ],
+    "ground": [
+      "google-ground-pasture.jpg"
+    ],
     "map": [],
     "representative": [
       "real-photo.jpg"
@@ -53,6 +57,7 @@
     "geographic": "pending",
     "identity": "pending",
     "style": "pending",
-    "collection": "pending"
+    "collection": "pending",
+    "notes": "New generation from real sheep pasture + Google 2020 ground panorama + satellite. Sheep wool, grassy slope and treeline retained with distant mountain card. Miniature slope compressed; precise pasture sector/ridge names and fence layout pending. Preview review-v1.png only; no automatic master approval."
   }
 }

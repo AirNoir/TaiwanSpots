@@ -3,5 +3,33 @@
   "title": "景觀相簿(第2頁列表) - 清境民宿_雲濛仙境民宿",
   "page": "https://www.misting.com.tw/album/all/2.htm",
   "image": "https://www.misting.com.tw/upload/20170104214807.png",
-  "description": " Pastoral Scene at Cingjing Farm\n\nA flock of woolly sheep peacefully grazes on a verdant hillside, their creamy coats standing out against the bright green grass. Beyond the meadow, a dense line of trees gives way to a cluster of houses perched on rolling hills, while misty mountains stretch into the distance under a soft, overcast sky.\n\nThis photograph captures the tranquil beauty of Cingjing Farm in Taiwan, known for its highland pastures and scenic vistas. The layered landscape—from the grazing sheep to the distant mountain peaks—highlights the region’s serene, rural charm."
+  "description": " Pastoral Scene at Cingjing Farm\n\nA flock of woolly sheep peacefully grazes on a verdant hillside, their creamy coats standing out against the bright green grass. Beyond the meadow, a dense line of trees gives way to a cluster of houses perched on rolling hills, while misty mountains stretch into the distance under a soft, overcast sky.\n\nThis photograph captures the tranquil beauty of Cingjing Farm in Taiwan, known for its highland pastures and scenic vistas. The layered landscape—from the grazing sheep to the distant mountain peaks—highlights the region’s serene, rural charm.",
+  "supplementary": [
+    {
+      "local": "google-ground-pasture.jpg",
+      "page": "https://www.google.com/maps/@24.0572668,121.1624901,3a,75y,280h,84.67t/data=!3m4!1e1!3m2!1sCIHM0ogKEICAgID87a_1bw!2e10",
+      "credit": "Dorcas Shih via Google Maps",
+      "capture": "2020-07",
+      "accessed": "2026-10-14",
+      "kind": "ground panorama",
+      "observations": [
+        "Sloping open pasture",
+        "Edge conifer tree line and low wooden fence along path",
+        "Layered distant ridges"
+      ],
+      "limitations": "Exact distant ridge names unverified"
+    },
+    {
+      "local": "google-satellite-pasture.jpg",
+      "page": "https://www.google.com/maps/@24.0585107,121.1628284,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "accessed": "2026-10-14",
+      "capture": "Not exposed",
+      "kind": "satellite overhead",
+      "observations": [
+        "Open grassland patches with tree bands and paths",
+        "Winding Renhe Road beside pasture; not town crop"
+      ]
+    }
+  ]
 }

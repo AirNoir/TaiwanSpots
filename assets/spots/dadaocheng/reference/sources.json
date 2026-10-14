@@ -3,5 +3,33 @@
   "title": "大稻埕實景導覽照片",
   "page": "https://www.mtttour.com.tw/dadaocheng/",
   "image": "https://www.mtttour.com.tw/material-alias/%E5%B0%8E%E8%A6%BD/%E5%A4%A7%E7%A8%BB%E5%9F%95%E8%8A%B1%E7%B5%AE/IMG_9068.JPG",
-  "description": " Red Brick Arcade and Parked Scooters\n\nA two‑story red brick arcade building stands along Dihua Street in Taipei’s Datong District, showcasing a row of elegant arches on the ground floor and large, multi‑pane windows above. The façade features decorative stone panels and traditional Chinese characters reading “豐濱,” hinting at the building’s historical or commercial significance. \n\nIn front of the arcade, a neat line of motor scooters occupies the street parking spaces, reflecting the daily rhythm of urban commuters. The contrast between the vintage brick architecture and the modern scooters captures the blend of heritage and contemporary life in Taipei. The bright daylight illuminates the scene, emphasizing the textures of the brickwork and the vibrant colors of the parked vehicles."
+  "description": " Red Brick Arcade and Parked Scooters\n\nA two‑story red brick arcade building stands along Dihua Street in Taipei’s Datong District, showcasing a row of elegant arches on the ground floor and large, multi‑pane windows above. The façade features decorative stone panels and traditional Chinese characters reading “豐濱,” hinting at the building’s historical or commercial significance. \n\nIn front of the arcade, a neat line of motor scooters occupies the street parking spaces, reflecting the daily rhythm of urban commuters. The contrast between the vintage brick architecture and the modern scooters captures the blend of heritage and contemporary life in Taipei. The bright daylight illuminates the scene, emphasizing the textures of the brickwork and the vibrant colors of the parked vehicles.",
+  "supplementary": [
+    {
+      "local": "google-ground-street.jpg",
+      "page": "https://www.google.com/maps/@25.068666,121.510865,3a,90y,275.3h,90t/data=!3m4!1e1!3m2!1sCIHM0ogKEICAgIDEr5XOygE!2e10",
+      "credit": "Super 720 via Google Maps",
+      "capture": "2015-04 footer; uploaded 2016-08",
+      "accessed": "2026-10-14",
+      "kind": "ground panorama",
+      "observations": [
+        "Visible Xiahai temple courtyard and continuous adjoining street shops",
+        "Arcade, shop awnings, low street facades; narrow street"
+      ],
+      "limitations": "Uploader geotag appears inconsistent with visible Xiahai scene; do not use coordinates to establish actual location"
+    },
+    {
+      "local": "google-satellite-street.jpg",
+      "page": "https://www.google.com/maps/@25.0551019,121.509983,19z/data=!3m1!1e3",
+      "credit": "Google Maps",
+      "accessed": "2026-10-14",
+      "capture": "Not exposed",
+      "kind": "satellite overhead",
+      "observations": [
+        "Dihua north-south street, narrow deep shop lots west",
+        "Yongle Market east/south; Xiahai temple northeast of selected marker"
+      ],
+      "limitations": "Exact representative brick-building match remains pending"
+    }
+  ]
 }

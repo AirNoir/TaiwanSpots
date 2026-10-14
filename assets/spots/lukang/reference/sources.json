@@ -11,6 +11,32 @@
       "image": "https://cdn.thothcdn.com/cache/changhua-travel/images/upload_file/dsc_5614_compressed-xeletv.jpg",
       "description": " Lukang Old Street Alley\n\nA quiet, narrow alley in Lukang Old Street showcases red-brick facades and a row of parked scooters along a tiled pathway. Overhead electrical wires crisscross above, while a small wooden lantern affixed to the wall evokes the district’s historic charm. Potted greenery and glimpses of traditional doorways further enrich the scene.\n\nThis setting is part of a guided tour in Changhua County that highlights the preservation of century-old buildings, local crafts, and cultural heritage. Visitors explore sites like Tianhou Temple, half-wells, and restored residences, learning how sustainable practices and adaptive reuse keep Lukang’s stories alive.",
       "file": "context-photo.jpg"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@24.056301,120.4325817,196m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Putou Street curves through narrow deep lots",
+        "Yaolin Street continues south; no temple in compact street crop"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/@24.056488,120.4325276,7a,75y,307.75h,90t/data=!3m7!1e1!3m5!1sqfnP1bVEgQyU5uaYU8ia5A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DqfnP1bVEgQyU5uaYU8ia5A%26yaw%3D307.750880132954!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Street View",
+      "capture": "2019-03",
+      "observations": [
+        "16 Butou Street: narrow curved red-brick paving",
+        "Continuous brick/stucco shophouses, deep lots, doors/awnings/lanterns"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
     }
   ]
 }

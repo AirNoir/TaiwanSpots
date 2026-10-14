@@ -3,5 +3,34 @@
   "title": "台南安平｜台南一日遊懶人包！拜訪文青咖啡廳、大啖美食小吃～漫遊古都，欣賞浪漫夕陽-輕旅行",
   "page": "https://travel.yam.com/article/124879",
   "image": "https://pimg.1px.tw/gtchao/1626675677-323526121-g.jpg",
-  "description": " Anping Fort Watchtower\n\nA sturdy red-brick wall with patterned crenellations forms the base of Anping Fort, its weathered surface bearing the marks of centuries. Above the wall, a white-painted watchtower capped with a red-tiled roof peeks out from behind a canopy of lush green trees, offering a striking contrast against the clear blue sky.\n\nOriginally built by the Dutch in the 17th century and later reconstructed under Japanese rule, the fort’s current appearance includes a restored lookout tower that visitors can ascend. The surrounding banyan trees and historic masonry evoke the site’s layered past, from colonial stronghold to modern tourist landmark."
+  "description": " Anping Fort Watchtower\n\nA sturdy red-brick wall with patterned crenellations forms the base of Anping Fort, its weathered surface bearing the marks of centuries. Above the wall, a white-painted watchtower capped with a red-tiled roof peeks out from behind a canopy of lush green trees, offering a striking contrast against the clear blue sky.\n\nOriginally built by the Dutch in the 17th century and later reconstructed under Japanese rule, the fort’s current appearance includes a restored lookout tower that visitors can ascend. The surrounding banyan trees and historic masonry evoke the site’s layered past, from colonial stronghold to modern tourist landmark.",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Anping+Fort/@23.0013593,120.1607278,4a,75y,19.17h,110.15t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIC4tM34MA!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-nitbsbqThFutXkEVrf4xXIO0yN73by_fbFfIxy3XWQJiTZujCV6a0yYOJVsxpZqXJlU5fwOVxgJLpe9W3VhyjivH8Y5_O5E__sp9tDlkPxCUsZ1h93YIU9GLoRkx7sSS7QFM%3Dw900-h600-k-no-pi-20.150090000000006-ya309.63410924414063-ro0-fo100!7i13312!8i6656!4m9!3m8!1s0x346e767378e3e467:0x9b1e15dd6ac9adf1!8m2!3d23.0015093!4d120.1606244!10e5!14m1!1BCgIgARICCAI!16zL20vMDMyZHg5?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Geoforce群立科技 via Google Maps",
+      "capture": "2016-01 footer; uploaded2017-09",
+      "observations": [
+        "Elevated brick terrace, central stairs, mature trees",
+        "White observation tower with broad glass top and red tiled hipped roof"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/place/Anping+Old+Street/@23.0015093,120.1606244,198m/data=!3m1!1e3!4m6!3m5!1s0x346e7603ffffffff:0xe8fc95e1f2a8e820!8m2!3d23.0007174!4d120.1616449!16s%2Fg%2F1thg85qw?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Observation tower inside raised rectangular compound",
+        "Steps and mature trees around terrace, street outside fort"
+      ],
+      "limitations": "Fine ruin walls under tree canopy partly hidden",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }

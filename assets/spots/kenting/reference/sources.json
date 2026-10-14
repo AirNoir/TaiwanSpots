@@ -3,5 +3,34 @@
   "title": "9 Best Beaches in Kenting Taiwan (2026 Winners)",
   "page": "https://www.asiaodysseytravel.com/taiwan/kenting-beaches.html",
   "image": "https://www.asiaodysseytravel.com/images/china-tours/group-tours/kenting-baisha-bay-700.jpg",
-  "description": " Kenting Baisha Bay Beach Stroll\n\nA pristine golden beach stretches beneath a clear blue sky, where two visitors walk along the shoreline, their footprints trailing behind them. The water is a vivid turquoise, gently rolling onto the soft sand. In the distance, a verdant tree line marks the edge of the coast, offering a lush backdrop to the sunlit scene.\n\nThis photograph captures the serene atmosphere of Kenting Baisha Bay in Taiwan, one of the top-rated beaches for swimming and relaxation. The calm waves and bright sunlight create an inviting setting for beachgoers seeking a peaceful seaside escape. With its fine sand and crystal-clear water, this bay exemplifies the natural beauty that draws travelers to Kenting’s renowned coastline."
+  "description": " Kenting Baisha Bay Beach Stroll\n\nA pristine golden beach stretches beneath a clear blue sky, where two visitors walk along the shoreline, their footprints trailing behind them. The water is a vivid turquoise, gently rolling onto the soft sand. In the distance, a verdant tree line marks the edge of the coast, offering a lush backdrop to the sunlit scene.\n\nThis photograph captures the serene atmosphere of Kenting Baisha Bay in Taiwan, one of the top-rated beaches for swimming and relaxation. The calm waves and bright sunlight create an inviting setting for beachgoers seeking a peaceful seaside escape. With its fine sand and crystal-clear water, this bay exemplifies the natural beauty that draws travelers to Kenting’s renowned coastline.",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Kenting+Baishawan/@21.9796601,120.7785259,3a,75y,40h,100t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDcl-OGMQ!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-3yxCssjT10k9XmaVgYqbKzeIL59JKz_1brvhFdFZheixGCJ19Q6uKdw9vCV38P6PacAMxfKnu4djI2YOnrVD3EVS4dSY2P86_awuSk_dkSmp6WA2Zkr3-iMI30wZQyId9W37M%3Dw900-h600-k-no-pi-10-ya249-ro0-fo100!7i10240!8i5120!4m9!3m8!1s0x3471b003e209ef77:0x291dd68fcb88a0da!8m2!3d21.9343521!4d120.7178407!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1q5bl20vj?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Nick Siu via Google Maps",
+      "capture": "2015-04",
+      "observations": [
+        "Pale sandy beach texture and landward mixed coastal trees",
+        "Small umbrella beach area; not rocky east-coast pebble beach"
+      ],
+      "limitations": "Historical temporary umbrella layout not locked",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@21.9343521,120.7178407,398m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Pale curved southwest-facing beach, turquoise shallow band",
+        "Low vegetated landward edge and rocky ends; narrow beachfront strip"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }

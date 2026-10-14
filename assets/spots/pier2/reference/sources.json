@@ -3,5 +3,34 @@
   "title": "駁二蓬萊倉庫群-高雄駱駝",
   "page": "https://csyoutw2001.pixnet.net/blog/posts/9567587628",
   "image": "https://pimg.1px.tw/csyoutw2001/1669223100-3636890816-g.jpg",
-  "description": " Penglai Warehouse Complex at Pier-2 Art Center\n\nThe Penglai warehouse complex, known locally as the Kaohsiung Camel, features a row of aged grey brick buildings with pitched roofs lining a spacious brick courtyard. Each warehouse displays weathered facades, peeling paint, and exposed red brick foundations, reflecting their industrial heritage. A large metal rolling door and a pair of trash bins are positioned against the nearest building, while the overcast sky and soft daylight highlight the muted tones of the scene.\n\nTaken on October 26, 2022, in Gushan District, Kaohsiung City, this photograph captures the historic atmosphere of the Pier-2 Art Center’s Penglai warehouses. The site’s address is No. 99, Penglai Road, and the temperature was 26°C under cloudy skies."
+  "description": " Penglai Warehouse Complex at Pier-2 Art Center\n\nThe Penglai warehouse complex, known locally as the Kaohsiung Camel, features a row of aged grey brick buildings with pitched roofs lining a spacious brick courtyard. Each warehouse displays weathered facades, peeling paint, and exposed red brick foundations, reflecting their industrial heritage. A large metal rolling door and a pair of trash bins are positioned against the nearest building, while the overcast sky and soft daylight highlight the muted tones of the scene.\n\nTaken on October 26, 2022, in Gushan District, Kaohsiung City, this photograph captures the historic atmosphere of the Pier-2 Art Center’s Penglai warehouses. The site’s address is No. 99, Penglai Road, and the temperature was 26°C under cloudy skies.",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/The+Pier2+Art+Center/@22.6195538,120.2820494,3a,75y,260h,110t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICE4LGtOQ!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8BtQ1oxYGOPwQbRP_OSdxmFDGjxoWjfa0l1jYJjBNWJzHHlTP7GT3CGZndZpUC2k-BV_yTGv5b9SLnU8Tpp0DCOJCwc_mNno-51skWZYGi8mHA9Dq3sisuWNHy15llWfXEUjVV%3Dw900-h600-k-no-pi-20-ya145.5561294555664-ro0-fo100!7i13312!8i6656!4m9!3m8!1s0x346e047620e1c45b:0xe6d6d1bd1c764df2!8m2!3d22.6199803!4d120.2815287!10e5!14m1!1BCgIgARICCAI!16s%2Fm%2F010glgxt?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Iclick Inc 愛點科技 via Google Maps",
+      "capture": "2015-11 footer; uploaded2017-08",
+      "observations": [
+        "Low grey warehouses with gabled corrugated roofs",
+        "Tree-lined paved space and existing rail tracks nearby"
+      ],
+      "limitations": "Historical tram configuration, no train vehicle verified",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/place/Dayi+Pier-2/@22.6199803,120.2815287,396m/data=!3m1!1e3!4m6!3m5!1s0x346e03883c3cce59:0x2713f46653c84c50!8m2!3d22.618553!4d120.284154!16s%2Fg%2F11b7jryrgs?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Warehouse rows north of harbor edge",
+        "Green light-rail corridor along harbor side, orthogonal surrounding street grid"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }

@@ -3,5 +3,33 @@
   "title": "[Charter Recommendation] Cingjing & Hualien Two-way Charter One-Day Tour | Departing from Taroko & Hehuan Mountain & Wuling | Hualien City or Cingjing - KKday",
   "page": "https://www.kkday.com/en-us/product/2131",
   "image": "https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_2131/20150826085146_8zmmX/jpg",
-  "description": " Mountain Pass Road with Guardrails\n\nA narrow mountain road curves sharply along a steep hillside, protected by vivid yellow and red guardrails. Light snow covers parts of the grassy slope and roadside, indicating a chilly, high-altitude environment. In the distance, rolling green hills stretch beneath a partly cloudy sky, creating a sense of remoteness and natural beauty.\n\nThis image illustrates a segment of the chartered one-day tour route between Cingjing and Hualien, which traverses Taiwan’s highest highways. Travelers on this eight-hour excursion can expect winding roads, snow-dusted peaks, and panoramic views of Taroko Gorge, Hehuan Mountain, and Wuling, all accessible via private or shared vehicles with flexible departure and return options."
+  "description": " Mountain Pass Road with Guardrails\n\nA narrow mountain road curves sharply along a steep hillside, protected by vivid yellow and red guardrails. Light snow covers parts of the grassy slope and roadside, indicating a chilly, high-altitude environment. In the distance, rolling green hills stretch beneath a partly cloudy sky, creating a sense of remoteness and natural beauty.\n\nThis image illustrates a segment of the chartered one-day tour route between Cingjing and Hualien, which traverses Taiwan’s highest highways. Travelers on this eight-hour excursion can expect winding roads, snow-dusted peaks, and panoramic views of Taroko Gorge, Hehuan Mountain, and Wuling, all accessible via private or shared vehicles with flexible departure and return options.",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Wuling/@24.1371278,121.2757098,3a,75y,54.6h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICMpIbbZg!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-p9W8hCY4kFOCr0B5jON94wJeg4GhuNUhlcXTnsJnkeu2o3t65pnw1F33xZPRqimKM_zbs1b9eLdlwoq61z9KFARvGA8Wtn8ZFVepqcmHgHNyLVzdHu81GalXugkJXvxRnXy4%3Dw900-h600-k-no-pi0-ya54.598072-ro0-fo100!7i8192!8i4096!4m9!3m8!1s0x3468933811b3eeb5:0xc95761a7402da803!8m2!3d24.1371281!4d121.275739!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F155r96dm?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "李承泰 via Google Maps",
+      "capture": "2019-10 footer; uploaded 2019-11",
+      "observations": [
+        "Rounded bamboo-grass ridges, exposed grey rock and contour highway",
+        "No Alpine jagged peaks or lakes"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@24.1371281,121.275739,784m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Wuling at saddle, Highway14A traverses western grass slope toward eastern forested bend",
+        "Main Peak trail west/northwest, East Peak southeast; grass and forest bands"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }

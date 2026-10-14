@@ -3,5 +3,35 @@
   "title": "台9線花東縱谷公路",
   "page": "https://thbu4.thb.gov.tw/News_Photo_Content.aspx?n=5064&s=75748",
   "image": "https://ws.thb.gov.tw/001/upload/OldFile/resource/thbu4/upload/Album/1944E6FA-911B-45D3-AA16-CB11C8ED55FD.jpg",
-  "description": " Ruisui Ranch Dairy Pasture\n\nA herd of Holstein cows relaxes and grazes on a broad, muddy field at Ruisui Ranch in Hualien County’s East Rift Valley. The pasture is framed by lush, forested hills under an overcast sky, reflecting the region’s fertile landscape between the Coastal and Central Mountain Ranges.\n\nRuisui Ranch encompasses multiple dairy farms across 40 hectares, housing nearly 300 Holstein cows. The area benefits from pristine water sources, fresh air, and abundant grasslands, producing rich and flavorful milk. This pastoral setting is part of the scenic Tai 9 Line green corridor, celebrated for its varied agricultural vistas and natural beauty."
+  "description": " Ruisui Ranch Dairy Pasture\n\nA herd of Holstein cows relaxes and grazes on a broad, muddy field at Ruisui Ranch in Hualien County’s East Rift Valley. The pasture is framed by lush, forested hills under an overcast sky, reflecting the region’s fertile landscape between the Coastal and Central Mountain Ranges.\n\nRuisui Ranch encompasses multiple dairy farms across 40 hectares, housing nearly 300 Holstein cows. The area benefits from pristine water sources, fresh air, and abundant grasslands, producing rich and flavorful milk. This pastoral setting is part of the scenic Tai 9 Line green corridor, celebrated for its varied agricultural vistas and natural beauty.",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Ruisui+Ranch/@23.4792558,121.3458869,155a,75y,66.15h,90t/data=!3m7!1e1!3m5!1sH1pIHvLjMtNuSQQGFvGNKA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DH1pIHvLjMtNuSQQGFvGNKA%26yaw%3D66.14690195949692!7i13312!8i6656!4m9!3m8!1s0x346f4672fc907d47:0xb5cd184ff4bf44!8m2!3d23.4792093!4d121.3459565!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F121r_8lf?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Street View",
+      "capture": "2012-08",
+      "observations": [
+        "Flat green pasture beyond simple white fence",
+        "Tree-lined visitor boundary, low wooded hill beyond"
+      ],
+      "limitations": "Trees partly screen pasture; cow form/count uses primary real photo, not this historical panorama",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/@23.4792093,121.3459565,394m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "Google Maps / Airbus/CNES/Maxar",
+      "capture": "Not exposed",
+      "observations": [
+        "Broad flat pasture near visitor lane and farm sheds",
+        "Wooded hills immediately on west/south; fields not terraced mountain pasture"
+      ],
+      "limitations": "Herd position/current population not visible",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }

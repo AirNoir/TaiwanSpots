@@ -3,5 +3,34 @@
   "title": "Jinchengwu Tree (Takeshi Kaneshiro Tree) - All You SHOULD Know Before Going 2026 (with Reviews)",
   "page": "https://www.tripadvisor.com/Attraction_Review-g13795606-d17595482-Reviews-Jinchengwu_Tree_Takeshi_Kaneshiro_Tree-Chishang_Taitung.html",
   "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/49/76/26/caption.jpg?h=1200&s=1&w=1200",
-  "description": " Takeshi Kaneshiro Tree in Chishang\n\nA solitary bishop tree anchors a quiet stretch of Brown Avenue, surrounded by endless emerald rice fields. Visitors on foot and bicycle gather beneath its wide canopy, capturing photos against the backdrop of mist-draped mountains and a clear blue sky. The tree’s fame stems from a 2013 EVA Airlines commercial featuring actor Takeshi Kaneshiro, which transformed this rural landmark into a must-see attraction.\n\nCyclists often rent bikes near Chishang train station to explore the scenic trails that lace through Taiwan’s Eastern Rift Valley. The area’s peaceful paddies, framed by mountains to the east and west, offer a tranquil escape. While the tree itself is the main draw, travelers appreciate the broader countryside’s serene beauty and the ease of access along Brown Avenue."
+  "description": " Takeshi Kaneshiro Tree in Chishang\n\nA solitary bishop tree anchors a quiet stretch of Brown Avenue, surrounded by endless emerald rice fields. Visitors on foot and bicycle gather beneath its wide canopy, capturing photos against the backdrop of mist-draped mountains and a clear blue sky. The tree’s fame stems from a 2013 EVA Airlines commercial featuring actor Takeshi Kaneshiro, which transformed this rural landmark into a must-see attraction.\n\nCyclists often rent bikes near Chishang train station to explore the scenic trails that lace through Taiwan’s Eastern Rift Valley. The area’s peaceful paddies, framed by mountains to the east and west, offer a tranquil escape. While the tree itself is the main draw, travelers appreciate the broader countryside’s serene beauty and the ease of access along Brown Avenue.",
+  "supplementary": [
+    {
+      "local": "google-aerial-review.jpg",
+      "kind": "aerial",
+      "page": "https://www.google.com/maps/place/Takeshi+Kaneshiro+Tree/@23.0973841,121.2044414,3a,75y,20h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDE8M6xEw!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8KpQEy1ZEbobtUKjF2JwvprOXlDyKNEMOq1AQPetrJz2U5FGg4gMr6zJUOZI-jXfh6N03vZoBLaF933ZkOWoRiKrM_WgcVSOfPKnoQ9O5hRG0BevG8SO0GSU6rvW6xwxi6ZuA9%3Dw900-h600-k-no-pi0-ya20-ro0-fo100!7i8192!8i4096!4m9!3m8!1s0x346f0b8246375e45:0x8d0f5fceb49ea742!8m2!3d23.0974397!4d121.2045098!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11b6bmqwtc?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "李庫柏 via Google Maps",
+      "capture": "2019-01",
+      "observations": [
+        "Actual aerial panorama over regular field plots and narrow lanes",
+        "Mountain ridge beyond flat farmland, flooded winter paddies"
+      ],
+      "limitations": "Season differs from green-rice reference; field conditions not mixed literally",
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    },
+    {
+      "local": "google-ground-review.jpg",
+      "kind": "ground",
+      "page": "https://www.google.com/maps/place/Takeshi+Kaneshiro+Tree/@23.0973228,121.2049085,3a,75y,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgID2z9jvbQ!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8DMTW8ixz6vLowBBiJHxXG7xbqAHegXlOmYXAPT72j-dB0f0SzA7UVlY6cKVcZUf5lWkDOsi6O8YS9Pbwxwt68yWLGZpmGVFMwTL97YWjCG1F19Q0n-QxSr7dRjIVd0t_mNUuo%3Dw900-h600-k-no-pi0-ya91-ro0-fo100!7i8704!8i4352!4m9!3m8!1s0x346f0b8246375e45:0x8d0f5fceb49ea742!8m2!3d23.0974397!4d121.2045098!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11b6bmqwtc?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D",
+      "accessed": "2026-10-14",
+      "credit": "陳阿祿 via Google Maps",
+      "capture": "2022-05",
+      "observations": [
+        "Single tree at narrow rural lane intersection, simple bench",
+        "Flat rice paddies and low concrete field/channel borders"
+      ],
+      "usage": "Research reference only; Google attribution/UI retained, never final image texture"
+    }
+  ]
 }
