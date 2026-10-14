@@ -5,6 +5,12 @@
 
 唯一不能在背景完成的步驟是 **Apple ID 登入（2FA）**，所以下面的指令要由你在終端機跑一次；之後 EAS 會把憑證存在伺服器，以後都可以非互動。
 
+> 一定要在**真正的終端機**（Terminal / iTerm）裡執行，不能用 Claude Code 的 `!` 前綴。
+> eas-cli 只要發現 stdin 不是 TTY（或環境有 `CI=1`）就自動切成非互動模式，
+> 到建立 Distribution Certificate 時會直接失敗：
+> `Distribution Certificate is not validated for non-interactive builds`。
+> 失敗的那次仍會把遠端 buildNumber 加一，沒關係，下次會接著往上數。
+
 ## 1. 建置並自動上傳 TestFlight
 
 ```bash
