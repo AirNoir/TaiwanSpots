@@ -43,7 +43,8 @@ npx eas-cli metadata:push
 ## 檢查清單
 
 - [x] 憑證、ASC App、API Key 建好
-- [ ] Build 5 成功並出現在 TestFlight
+- [x] Build 5 成功（2026-10-14 17:22）並由 EAS Submit 上傳到 ASC；等 Apple 處理完出現在 TestFlight
+- [x] `metadata:push` 已同步（名稱、文案、分類、年齡分級）
 - [ ] 決定最終 App 名稱（「Islandia」不能用）
 - [ ] TestFlight 裝到實機，確認：定位打卡、Widget（小／中／鎖定畫面）、走近景點的 Live Activity
 - [ ] 審核聯絡資料填好、上傳截圖（送審才需要）
