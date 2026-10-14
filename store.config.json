@@ -3,23 +3,48 @@
   "apple": {
     "version": "0.1.0",
     "copyright": "2026 AirNoir",
-    "categories": ["TRAVEL", "ENTERTAINMENT"],
+    "categories": [
+      "TRAVEL",
+      "ENTERTAINMENT"
+    ],
     "info": {
       "zh-Hant": {
         "title": "Islandia 小島收藏室",
         "subtitle": "走到景點，收藏一座微縮台灣",
         "description": "Islandia 把台灣做成一座可以收藏的小島。\n\n走到景點、用定位打卡，就能解鎖那個地方的可愛微縮模型：台北 101、九份老街、日月潭、太魯閣、蘭嶼⋯⋯全台 159 個景點，北中南東都有。\n\n・地圖上看自己走過哪裡、還有哪些沒去\n・收藏後可以放大看模型細節\n・主畫面 Widget 每天輪播一個收藏，顯示收集進度\n・走到景點附近時，鎖定畫面會提醒你可以打卡\n\n適合喜歡旅行、喜歡收集、想把台灣走一遍的人。",
-        "keywords": ["台灣", "景點", "打卡", "收藏", "旅遊", "微縮模型", "地圖", "小島", "Widget", "Taiwan"],
+        "keywords": [
+          "台灣",
+          "景點",
+          "打卡",
+          "收藏",
+          "旅遊",
+          "微縮模型",
+          "地圖",
+          "小島",
+          "Widget",
+          "Taiwan"
+        ],
         "releaseNotes": "第一個 TestFlight 版本：159 個景點、淺色與深色主題、模型放大檢視、主畫面 Widget。",
         "promoText": "走到景點就解鎖一座微縮模型，把台灣收進口袋。",
         "supportUrl": "https://github.com/AirNoir/TaiwanSpots",
         "privacyPolicyUrl": "https://github.com/AirNoir/TaiwanSpots/blob/main/docs/privacy.md"
       },
       "en-US": {
-        "title": "Islandia",
-        "subtitle": "Collect Taiwan, one spot at a time",
+        "title": "Islandia: Collect Taiwan",
+        "subtitle": "Collect Taiwan, spot by spot",
         "description": "Islandia turns Taiwan into an island you can collect.\n\nWalk to a landmark, check in with your location, and unlock a cute miniature diorama of that place: Taipei 101, Jiufen, Sun Moon Lake, Taroko, Orchid Island and more. 159 spots across the north, centre, south and east.\n\n• See on the map where you have been and what is left\n• Zoom into every diorama you have collected\n• A home-screen widget rotates through your collection and shows your progress\n• A Live Activity reminds you when a spot is close enough to check in\n\nMade for travellers and collectors who want to walk the whole island.",
-        "keywords": ["Taiwan", "travel", "check-in", "collection", "diorama", "map", "landmarks", "widget", "island", "Taipei"],
+        "keywords": [
+          "Taiwan",
+          "travel",
+          "check-in",
+          "collection",
+          "diorama",
+          "map",
+          "landmarks",
+          "widget",
+          "island",
+          "Taipei"
+        ],
         "releaseNotes": "First TestFlight build: 159 spots, light and dark themes, zoomable dioramas, home-screen widget.",
         "promoText": "Walk to a landmark, unlock its miniature. Put Taiwan in your pocket.",
         "supportUrl": "https://github.com/AirNoir/TaiwanSpots",
