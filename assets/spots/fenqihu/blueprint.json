@@ -51,8 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pass",
-    "collection": "pass",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Real engine-shed photo and satellite track/old-street relationship used. Exact station/garage architecture, switch count and tree species require manual review; no operating locomotive invented. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
+    "style": "pending",
+    "collection": "pending",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Real engine-shed photo and satellite track/old-street relationship used. Exact station/garage architecture, switch count and tree species require manual review; no operating locomotive invented. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-15 review-v2.png: Imported user review repair: 模型的水平跟底座沒有對齊, 看起來地板向下凹陷 Self-check: Platform and rails now read as supported on one terrain slab; no unsupported sagging surface found. User must still confirm the perceived horizontal alignment. Genuine wooded slope remains behind platform; exact shed/track geometry is pending. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
   }
 }

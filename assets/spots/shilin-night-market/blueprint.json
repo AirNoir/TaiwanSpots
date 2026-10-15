@@ -4,25 +4,33 @@
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
-    "name": "Shilin Night Market lanes",
-    "silhouette": "Dense grid of narrow lanes packed with lit food stalls around a small temple"
+    "name": "Jiantan-side Shilin Night Market approach with Taipei Performing Arts Center",
+    "silhouette": "Dense market entrance street blocks beside TPAC dark ribbed cube, projecting silver spherical theater and raised pale rectangular theater, with Jiantan station entrance at southeast"
   },
-  "crop": "The lanes around Cixian Temple and the market entrance. Not the whole Shilin district.",
+  "crop": "Bounded miniature of the Jiantan-side southern market approach: TPAC forecourt and theater to the west/northwest of Jiantan station; station entrance and short elevated rail section at southeast/east; busy market approach and low-rise commercial lanes extend north. Exclude the farther north Cixian Temple crop. Distances compressed uniformly for a collectible, not a survey model.",
   "heroScale": 1,
-  "orientation": "Cixian Temple lies north of the selected market lanes around Danan Road; not at their south end (satellite).",
+  "orientation": "Google satellite viewed 2026-10-15 confirms TPAC west/northwest of Jiantan station and the elevated line along its east side; market approaches extend north along Jihe/Wenlin corridor. verify: exact shop footprints, station roof profile and entrance sightline at current date.",
   "lockedGeometry": [
-    "narrow intersecting lanes",
-    "low shophouses with stalls in front",
-    "small temple at one end"
+    "TPAC dark central cube with ribbed glass facade, projecting silver sphere and raised pale box",
+    "Silver sphere on the southern/southwestern side of TPAC complex, supported by angled columns",
+    "Jiantan station southeast/east of TPAC, elevated railway beside TPAC east side",
+    "Market approach and dense commercial blocks north of theater/station, retain road separations",
+    "Striped TPAC plaza pavement and supported ground floor, not floating building"
   ],
   "lockedIdentity": [
-    "glowing food stalls with steam",
-    "Cixian Temple roof among the stalls"
+    "Recognizable silver spherical TPAC theater connected to dark cube",
+    "Lively night-market approach with low-rise shop fronts and food stalls",
+    "Jiantan red entrance fascia and concrete elevated station infrastructure"
   ],
   "doNotInvent": [
-    "skyscrapers",
-    "rivers",
-    "mountains in the lanes"
+    "Cixian Temple in this southern crop",
+    "fictional temple or ceremonial market entrance arch",
+    "Taipei 101 or unrelated skyscrapers",
+    "river",
+    "mountains inside street lanes",
+    "market stalls across active railway tracks",
+    "floating unsupported sphere",
+    "full station roof profile without evidence"
   ],
   "allowedMiniatureDetails": [
     "crowds of tiny diners",
@@ -31,17 +39,22 @@
   ],
   "references": {
     "aerial": [
-      "google-satellite-review.jpg"
+      "google-satellite-review.jpg",
+      "google-satellite-entrance-review.jpg"
     ],
     "ground": [
       "real-photo.jpg",
-      "google-ground-review.jpg"
+      "google-ground-review.jpg",
+      "google-ground-tpac-review.jpg",
+      "google-ground-jiantan-review.jpg",
+      "real-photo-jiantan-market-2018.jpg"
     ],
     "map": [
       "google-satellite-review.jpg"
     ],
     "representative": [
-      "real-photo.jpg"
+      "real-photo-jiantan-market-2018.jpg",
+      "google-ground-tpac-review.jpg"
     ]
   },
   "worldToken": {
@@ -50,8 +63,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pass",
-    "collection": "pass",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Real Cixian Temple facade plus satellite lanes used; temple corrected to north of lanes. Surrounding stall/shop details are generalized, not traced individual businesses. Original 360 glimpse partial; complete lane-level audit remains pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
+    "style": "fail",
+    "collection": "fail",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Real Cixian Temple facade plus satellite lanes used; temple corrected to north of lanes. Surrounding stall/shop details are generalized, not traced individual businesses. Original 360 glimpse partial; complete lane-level audit remains pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | New user-requested southern entrance crop researched on 2026-10-15. Previous temple references retained for history, not used for the new crop. Google TPAC exterior panorama July 2022, station entrance photo May 2025 and current satellite UI checked. Market approach photo published 2018 is historical; current shop signage/roofs and precise spacing remain pending. | 2026-10-15 review-v2.png: Imported user review repair: 地點不太對, 不應該有這座宮廟,  我的印象是捷運劍潭站那附近,還有臺北表演藝術中心, 以及夜市入口會比較具代表性 Self-check: New southern crop replaces temple; TPAC sphere/cube/raised box, station entrance and busy market approach recognizable. FAILED containment: right-hand rail end projects beyond plinth and support outline has an inset notch. Exact station form, road spacing and current shop geography pending. Handoff preview, not approved. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
   }
 }

@@ -51,8 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pass",
-    "collection": "pass",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Actual pastel arcaded shop facade and satellite harbor/oyster-bed arrangement used. Forecourt panorama reviewed but lacked water; selected new photo adds facade evidence. Rack spacing and crop compression are approximate. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
+    "style": "pending",
+    "collection": "pending",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Actual pastel arcaded shop facade and satellite harbor/oyster-bed arrangement used. Forecourt panorama reviewed but lacked water; selected new photo adds facade evidence. Rack spacing and crop compression are approximate. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-15 review-v2.png: Imported user review repair: 底座非方形, 有點不規則, 跟其他圖不一樣 Self-check: Removed extra corner kink and revised straight square perimeter; pastel arcade, oyster racks and boats retained. Harbor crop is compressed and not measured geography. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
   }
 }

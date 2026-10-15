@@ -51,8 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pass",
-    "collection": "pass",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Square white body corrected from draft’s octagonal-body error; blue octagonal roof and west-facing stairs retained. Exact roof facets, facade proportions and 89 individual stair treads require manual review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
+    "style": "fail",
+    "collection": "fail",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Square white body corrected from draft’s octagonal-body error; blue octagonal roof and west-facing stairs retained. Exact roof facets, facade proportions and 89 individual stair treads require manual review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-15 review-v3.png: Imported user review repair: 底座非方形, 有點不規則, 跟其他圖不一樣 Self-check: Second repair still has an extra clipped corner along front-right outer outline. NOT passed base-shape QA; saved as handoff preview requiring another square-base correction. Hall silhouette and stairs preserved. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
   }
 }

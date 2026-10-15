@@ -51,8 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pass",
-    "collection": "pass",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Timber post office, pale upper gable and entry-side palms checked. No fictional stream through this crop. Exact alley shop arrangement and rear roof geometry remain simplified. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
+    "style": "pending",
+    "collection": "pending",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Timber post office, pale upper gable and entry-side palms checked. No fictional stream through this crop. Exact alley shop arrangement and rear roof geometry remain simplified. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-15 review-v2.png: Imported user review repair: 靠近邊緣的建築與樹木部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍 Self-check: Scaled whole crop down; timber building eaves, palms and foliage remain inside square footprint. Existing post-office scene retained; exact neighboring shops are simplified. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
   }
 }

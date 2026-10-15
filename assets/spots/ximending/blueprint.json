@@ -50,8 +50,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pass",
-    "collection": "pass",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Real exterior photo replaces panorama facing away. Octagonal facade and cruciform west wing checked; rear details and neighboring stalls simplified. Exterior Street View/360 audit remains pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
+    "style": "pending",
+    "collection": "pending",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Real exterior photo replaces panorama facing away. Octagonal facade and cruciform west wing checked; rear details and neighboring stalls simplified. Exterior Street View/360 audit remains pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-15 review-v2.png: Imported user review repair: 底座的邊緣厚度跟其他模型差異太大 Self-check: Narrowed oversized rim and reduced plinth height; Red House masonry/octagonal body and plaza retained. Roof cap details remain unverified. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
   }
 }

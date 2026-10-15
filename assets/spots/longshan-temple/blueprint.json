@@ -52,8 +52,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pass",
-    "collection": "pass",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Front hall roof/dragon columns and south-facing entrance compared with real panorama and satellite. Rear roof massing and waterfall scale are simplified, not measured. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
+    "style": "pending",
+    "collection": "pending",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Front hall roof/dragon columns and south-facing entrance compared with real panorama and satellite. Rear roof massing and waterfall scale are simplified, not measured. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-15 review-v3.png: Imported user review repair: 底座非方形, 有點不規則, 跟其他圖不一樣 Self-check: Second attempt removes polygon corner cuts; temple and forecourt now on straight square support. Roof decoration and stone details remain recognizable; exact layout still pending geographic approval. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
   }
 }

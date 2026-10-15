@@ -58,6 +58,6 @@
     "identity": "pending",
     "style": "pending",
     "collection": "pending",
-    "notes": "Historical 2023 cliff-road reference, not a claim about current condition. Tunnel opening and road height simplified; modern wall/road condition pending. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3. review-v2: Removed extra distant terrain behind physical base, cream background through rear gap. Geometry QA remains pending."
+    "notes": "Historical 2023 cliff-road reference, not a claim about current condition. Tunnel opening and road height simplified; modern wall/road condition pending. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3. review-v2: Removed extra distant terrain behind physical base, cream background through rear gap. Geometry QA remains pending. | 2026-10-15 review-v3.png: Imported user review repair: 靠近邊緣的高山部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍 Self-check: Exterior mountain sides now form a finite cutaway, hero gorge and tunnel preserved; no literal glass. River/road positions are still artistic compression. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
   }
 }

@@ -32,7 +32,53 @@
       "observations": "Loaded satellite view confirms Cixian Temple north of main market lanes, Danan Road and dense low-rise blocks. Crop excludes elevated road.",
       "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
       "usage": "Reference only, not final texture"
+    },
+    {
+      "file": "google-ground-tpac-review.jpg",
+      "title": "TPAC exterior Street View / 360",
+      "page": "https://www.google.com/maps/@25.0846973,121.5244011,3a,90y,340h,118.62t/data=!3m4!1e1!3m2!1sCIHM0ogKEICAgIDOv7K6Hg!2e0",
+      "author": "張永翔 via Google Maps",
+      "captureDate": "2022-07",
+      "reviewedAt": "2026-10-15",
+      "license": "Copyright respective contributor; reference observation only; not an App texture",
+      "description": "Loaded panorama; silver sphere on angled supports, dark ribbed cube, raised pale theater box and striped forecourt."
+    },
+    {
+      "file": "google-satellite-entrance-review.jpg",
+      "title": "TPAC / Jiantan / southern market approach satellite",
+      "page": "https://www.google.com/maps/place/Taipei+Performing+Arts+Center/@25.0851242,121.5243691,389m/data=!3m1!1e3",
+      "author": "Google; Airbus, CNES / Airbus, Maxar Technologies",
+      "reviewedAt": "2026-10-15",
+      "captureDate": "not exposed; copyright 2026 does not establish imagery capture date",
+      "license": "Reference observation only; attribution retained",
+      "description": "TPAC west/northwest of Jiantan, elevated line east, market corridor north; dimensions are not surveyed."
+    },
+    {
+      "file": "google-ground-jiantan-review.jpg",
+      "title": "Jiantan station entrance",
+      "page": "https://www.google.com/maps/place/Jiantan/@25.0842798,121.5249762,3a,75y,90t/data=!3m4!1e2!3m2!1sCIHM0ogKEPql4PHk9dnsTg!2e10",
+      "author": "Andy Yang via Google Maps",
+      "captureDate": "2025-05",
+      "reviewedAt": "2026-10-15",
+      "license": "Copyright respective contributor; reference observation only",
+      "description": "Red entrance fascia and columns, entrance corridor; full external station roof not shown."
+    },
+    {
+      "file": "real-photo-jiantan-market-2018.jpg",
+      "title": "劍潭站出口的夜市景象",
+      "page": "https://tw.tripperway.com/tap.php?p=123654700",
+      "image": "https://pix1.tripperway.com/001/original/123654700.jpg",
+      "author": "Tripper Way contributor (name not exposed in search result)",
+      "date": "2018-07-18 publication; exact capture date unknown",
+      "license": "Not stated; reference observation only, no photo redistribution in runtime",
+      "description": "Historical southern commercial approach and broad crossing; predates TPAC opening, used only for street/storefront character, not current theater absence."
     }
   ],
-  "officialContext": []
+  "officialContext": [],
+  "activeReviewCrop": "Jiantan / TPAC / southern night-market approach",
+  "architectureSources": [
+    "https://tpac.org.taipei/traffic-mrt",
+    "https://tpac.org.taipei/tour-groupTour",
+    "https://www.travel.taipei/zh-tw/attraction/details/1536?ccms_cs=1"
+  ]
 }

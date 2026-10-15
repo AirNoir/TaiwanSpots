@@ -50,8 +50,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pass",
-    "collection": "pass",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Actual enclosed cabins and cable corridor photo plus upper-station satellite used. Default 360 showed unrelated tea patio and is rejected. Station exterior/360 remains pending; no unverified adjacent tea terrace added. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
+    "style": "pending",
+    "collection": "pending",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Actual enclosed cabins and cable corridor photo plus upper-station satellite used. Default 360 showed unrelated tea patio and is rejected. Station exterior/360 remains pending; no unverified adjacent tea terrace added. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-15 review-v2.png: Imported user review repair: 纜車的話, 那個連接線好像憑空長出來, 要有模型的感覺 Self-check: Loose cable ends replaced by supported in-base display return wheel and station machinery. Return fixture is a model presentation device, not a claim that this tourist installation exists there; upper station facade remains unverified. User acceptance pending. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
   }
 }

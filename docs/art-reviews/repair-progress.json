@@ -1,0 +1,396 @@
+{
+  "scope": "23 presentation/crop repairs; preview only; approved scenes preserved; user acceptance pending",
+  "items": [
+    {
+      "id": "palace-museum",
+      "name": "故宮博物院",
+      "note": "底座的 border 寬度不一致",
+      "previous": "review-v7.png",
+      "output": "review-v8.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/palace-museum/collection/review-v8-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Uniform narrow perimeter replaces broad rear/side flange; shallow square support and scene footprint visually coherent. Museum, roofs and stairs preserved. Gate opening-count detail remains unresolved; not geographic approval.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "yehliu",
+      "name": "野柳地質公園",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "previous": "review-v4.png",
+      "output": "review-v5.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/yehliu/collection/review-v5-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Square plinth long edges and narrow continuous rim checked; sandstone and Queen Head/adult scale preserved. Exact physical measurements remain unverified.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "sun-moon-lake",
+      "name": "日月潭",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "previous": "review-v7.png",
+      "output": "review-v8.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/sun-moon-lake/collection/review-v8-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Revised continuous four-sided ivory support; lake outline remains internal. Lalu floating planted ring preserved from real photo. Base appearance awaits user review; regional distances are compressed, not measured geography.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "cingjing",
+      "name": "清境農場",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣, 人行道的部分已經超過了底座的範圍",
+      "previous": "review-v2.png",
+      "output": "review-v3.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/cingjing/collection/review-v3-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Removed stepped irregular base notch; outer edges now straight and path end/railing sit within the rim. Pasture slope, sheep, trees preserved.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "gaomei",
+      "name": "高美濕地",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "previous": "review-v2.png",
+      "output": "review-v3.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/gaomei/collection/review-v3-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Continuous straight square support checked; wetland vegetation and finite boardwalk preserved. Actual boardwalk distances remain simplified.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "lukang",
+      "name": "鹿港老街",
+      "note": "接到看起來是可以無限延伸, 但因為這是微縮模型, 理論上應該會有個極限～目前看起來不真實",
+      "previous": "review-v1.png",
+      "output": "review-v3.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/lukang/collection/review-v3-prompt.txt",
+      "rejectedAttempts": [
+        {
+          "file": "review-v2.png",
+          "reason": "Low camera and receding shop rows still read as endless street; needs a clearly bounded elevated crop."
+        }
+      ],
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Second attempt raises camera and shows finite six-house architectural section with visible rear end of lane against cream studio. Street no longer recedes into an unbounded background. Individual storefront mapping remains simplified.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "hehuanshan",
+      "name": "合歡山",
+      "note": "靠近邊緣的高山部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍",
+      "previous": "review-v2.png",
+      "output": "review-v3.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/hehuanshan/collection/review-v3-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Added visible finite rock/soil cut faces along outer terrain boundary; grassy peaks and winding highway retained. No glass added; slope positions remain artistic simplification.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "pier2",
+      "name": "駁二藝術特區",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "previous": "review-v2.png",
+      "output": "review-v3.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/pier2/collection/review-v3-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Continuous square support replaces inset/offset outer edge; warehouses, rail traces and harbor water preserved. Distant crop excluded.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "kenting",
+      "name": "墾丁",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "previous": "review-v2.png",
+      "output": "review-v3.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/kenting/collection/review-v3-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Straight perimeter replaces shoreline-shaped notch at rear/right; sand, wave edge and foliage remain inside outer support.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "taroko",
+      "name": "太魯閣",
+      "note": "靠近邊緣的高山部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍",
+      "previous": "review-v2.png",
+      "output": "review-v3.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/taroko/collection/review-v3-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Exterior mountain sides now form a finite cutaway, hero gorge and tunnel preserved; no literal glass. River/road positions are still artistic compression.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "brown-avenue",
+      "name": "伯朗大道",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "previous": "review-v2.png",
+      "output": "review-v3.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/brown-avenue/collection/review-v3-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Square straight-edged support and continuous rim revised; rice plots, avenue and single large tree retained; farm vehicle stays in field, not pedestrian avenue.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "sanxiantai",
+      "name": "三仙台",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "previous": "review-v3.png",
+      "output": "review-v5.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/sanxiantai/collection/review-v5-prompt.txt",
+      "rejectedAttempts": [
+        {
+          "file": "review-v4.png",
+          "reason": "Outer support retains clipped polygon corners and unequal sides; rejected after visual inspection."
+        }
+      ],
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Second attempt replaces polygon outline with four-sided square support; bridge/ocean contained. Arch count and exact island spacing still need manual geographic review.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "xiangshan",
+      "name": "象山",
+      "note": "底座的邊緣厚度跟其他模型差異太大",
+      "previous": "review-v4.png",
+      "output": "review-v5.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/xiangshan/collection/review-v5-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Reduced oversized ivory perimeter and thickness; rock-side trees and descending steps retained, city contained. City scale compression and exact six-rock mapping remain unresolved geographic QA.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "longshan-temple",
+      "name": "艋舺龍山寺",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "previous": "review-v1.png",
+      "output": "review-v3.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/longshan-temple/collection/review-v3-prompt.txt",
+      "rejectedAttempts": [
+        {
+          "file": "review-v2.png",
+          "reason": "Support still has extra clipped polygon corner segments; needs rebuilding on approved square support."
+        }
+      ],
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Second attempt removes polygon corner cuts; temple and forecourt now on straight square support. Roof decoration and stone details remain recognizable; exact layout still pending geographic approval.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "cks-memorial",
+      "name": "中正紀念堂",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "previous": "review-v1.png",
+      "output": "review-v3.png",
+      "state": "needs-follow-up",
+      "prompt": "assets/spots/cks-memorial/collection/review-v3-prompt.txt",
+      "rejectedAttempts": [
+        {
+          "file": "review-v2.png",
+          "reason": "Support still has extra clipped polygon corner segments; needs rebuilding on approved square support."
+        }
+      ],
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Second repair still has an extra clipped corner along front-right outer outline. NOT passed base-shape QA; saved as handoff preview requiring another square-base correction. Hall silhouette and stairs preserved.",
+      "userAcceptance": "pending",
+      "presentationQa": "fail"
+    },
+    {
+      "id": "ximending",
+      "name": "西門町",
+      "note": "底座的邊緣厚度跟其他模型差異太大",
+      "previous": "review-v1.png",
+      "output": "review-v2.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/ximending/collection/review-v2-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Narrowed oversized rim and reduced plinth height; Red House masonry/octagonal body and plaza retained. Roof cap details remain unverified.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "shengxing-station",
+      "name": "勝興車站",
+      "note": "靠近邊緣的建築與樹木部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍",
+      "previous": "review-v1.png",
+      "output": "review-v2.png",
+      "state": "needs-follow-up",
+      "prompt": "assets/spots/shengxing-station/collection/review-v2-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Scene scale reduced and tree/eave footprint pulled inside; however front corner now has an extra clipped segment, so square-base QA remains failed and needs follow-up. Hero facade and rails preserved.",
+      "userAcceptance": "pending",
+      "presentationQa": "fail"
+    },
+    {
+      "id": "longteng-bridge",
+      "name": "龍騰斷橋",
+      "note": "靠近邊緣的景物部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍",
+      "previous": "review-v1.png",
+      "output": "review-v2.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/longteng-bridge/collection/review-v2-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Reduced common scene footprint; ruin shoulders and tree crowns visibly contained by plinth boundary. No glass or intact bridge deck added. Pier counts and exact alignment remain pending.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "nanzhuang",
+      "name": "南庄老街",
+      "note": "靠近邊緣的建築與樹木部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍",
+      "previous": "review-v1.png",
+      "output": "review-v2.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/nanzhuang/collection/review-v2-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Scaled whole crop down; timber building eaves, palms and foliage remain inside square footprint. Existing post-office scene retained; exact neighboring shops are simplified.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "fenqihu",
+      "name": "奮起湖",
+      "note": "模型的水平跟底座沒有對齊, 看起來地板向下凹陷",
+      "previous": "review-v1.png",
+      "output": "review-v2.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/fenqihu/collection/review-v2-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Platform and rails now read as supported on one terrain slab; no unsupported sagging surface found. User must still confirm the perceived horizontal alignment. Genuine wooded slope remains behind platform; exact shed/track geometry is pending.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "dongshi",
+      "name": "東石漁人碼頭",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "previous": "review-v1.png",
+      "output": "review-v2.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/dongshi/collection/review-v2-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Removed extra corner kink and revised straight square perimeter; pastel arcade, oyster racks and boats retained. Harbor crop is compressed and not measured geography.",
+      "userAcceptance": "pending"
+    },
+    {
+      "id": "shilin-night-market",
+      "name": "士林夜市",
+      "note": "地點不太對, 不應該有這座宮廟,  我的印象是捷運劍潭站那附近,還有臺北表演藝術中心, 以及夜市入口會比較具代表性",
+      "previous": "review-v1.png",
+      "output": "review-v2.png",
+      "state": "needs-follow-up",
+      "prompt": "assets/spots/shilin-night-market/collection/review-v2-prompt.txt",
+      "research": "Fresh TPAC exterior panorama, southern satellite, station entry photo, historical market approach photo. Full station roof and exact current shops pending.",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "New southern crop replaces temple; TPAC sphere/cube/raised box, station entrance and busy market approach recognizable. FAILED containment: right-hand rail end projects beyond plinth and support outline has an inset notch. Exact station form, road spacing and current shop geography pending. Handoff preview, not approved.",
+      "userAcceptance": "pending",
+      "presentationQa": "fail"
+    },
+    {
+      "id": "maokong",
+      "name": "貓空纜車",
+      "note": "纜車的話, 那個連接線好像憑空長出來, 要有模型的感覺",
+      "previous": "review-v1.png",
+      "output": "review-v2.png",
+      "state": "self-reviewed-preview",
+      "prompt": "assets/spots/maokong/collection/review-v2-prompt.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Loose cable ends replaced by supported in-base display return wheel and station machinery. Return fixture is a model presentation device, not a claim that this tourist installation exists there; upper station facade remains unverified. User acceptance pending.",
+      "userAcceptance": "pending"
+    }
+  ],
+  "summary": {
+    "spots": 23,
+    "generatedImages": 27,
+    "selectedPreviews": 23,
+    "needsFollowUp": [
+      "cks-memorial",
+      "shengxing-station",
+      "shilin-night-market"
+    ],
+    "userAcceptance": "pending for all new versions",
+    "runtimePromotion": false
+  },
+  "validation": {
+    "lint": "pass",
+    "typecheck": "pass",
+    "assetsCheck": "159 spots / 0 errors / 517 existing warnings",
+    "spotsCheck": "159 spots / 0 errors"
+  }
+}

@@ -1,0 +1,84 @@
+
+> taiwanspots@1.0.0 assets:prompt
+> node scripts/build-diorama-prompt.mjs hehuanshan
+
+COLLECTION DIORAMA — Hehuanshan and Wuling pass (hehuanshan)
+
+Use the approved latest Jiufen miniature as a STYLE ONLY reference; use this spot's real photographs for geometry. Never copy another spot's landmarks.
+This is a STYLE TRANSFORMATION ONLY of a real place. Do not redesign the place.
+
+ART DIRECTION
+- Cute Q-proportion premium physical miniature collectible, macro product photography
+- Common base reference is Tamsui collection/review-v3.png: match ONLY ivory base thickness, rim width and rounded bevels, never its backdrop card or hardware
+- Consistent 45-degree downward camera elevation, diagonally above a front corner; two sides of the base clearly visible
+- Handcrafted collectible miniature
+- Compact self-contained world
+- Accurate landmark geometry from real photographic references
+- Gently rounded Q forms with realistic miniature-scale material surfaces: stone grain, worn paving, glazed tiles, wood grain, restrained glass and metal
+- Slightly chubby miniature proportions, preserving the landmark silhouette
+- Soft diffused studio daylight and restrained tilt-shift focus matched to the approved Jiufen review style
+- Gently restrained color saturation, about 12% softer than the previously vivid previews; preserve realistic material hues and tonal detail, avoid neon greens and oversaturated cyan, do not darken the image or wash it out
+- Ambient occlusion
+- Very soft shadows
+- Clean background
+- Warm cream palette and ONE shallow square ivory plinth with rounded corners, equal-length sides in world space; not a circle, oval or elongated rectangle
+- Manufactured base perimeter has FOUR straight sides and FOUR right-angle corners with modest soft corner radius visually matched to Tamsui review-v3 (about 6% of side length), with long straight sides retained; natural shoreline is contained inside, never defines the plinth outline
+- Camera pulled back: entire square base and all subject tops visible with 10–15% clean outer margin
+- Foreground and middle-distance objects are tactile physical models, grounded on the same base
+- Scale the COMPLETE scene footprint, including every building, terrain mass, tree crown and rock, to fit INSIDE the square base with a visible continuous ivory perimeter buffer; nothing floats outside or spills over the plinth edge. If the content is too large, reduce the entire coherent miniature scale rather than clipping landmarks or extending the terrain beyond the base
+- No backdrop boards, scenery cards, printed panels, clip posts or background hardware anywhere
+- Only actual foreground and middle-distance terrain in the photographed crop is modeled; omit distant mountains, sky or skyline outside the crop rather than turning them into walls or moving them next to the hero
+- Water and terrain terminate cleanly inside the square ivory rim; plain warm cream studio background beyond the base on all sides
+- Base top is horizontal, camera roll is zero and architectural verticals are upright. Buildings, flat courtyards and corresponding plinth edges share one coherent perspective; no tilted roofs, skewed ground planes or unrelated vanishing points
+- Keep real hills, curving roads and deliberately oblique building footprints; do not flatten authentic slopes or rotate real geography merely to align every object to a grid
+- Human figures and natural landmarks share one consistent miniature scale; never enlarge a hero rock into a monumental tower for emphasis
+- Clear hero landmark
+- Premium collectible feel
+
+HERO (must be recognisable at 512px without text)
+Hehuanshan and Wuling pass: Smooth, rounded high-mountain ridges blanketed in dwarf bamboo grass, with a switchback highway cresting the pass
+Hero scale: keep the real landmark silhouette, with gentle toy-like proportions and coherent miniature scale.
+
+CROP (one representative slice, not the whole area)
+The Wuling pass area on Provincial Highway 14A with the bamboo-grass slopes of the main peaks rising beside the road. Not the whole Hehuan massif.
+
+ORIENTATION (verify markers remain unresolved unless backed by real references)
+Highway 14A winds over the pass; Hehuan Main Peak and East Peak rise on either side (verify: which peak sits where relative to Wuling)
+
+LOCKED GEOMETRY — keep exactly as in the references
+- rounded ridge-and-saddle terrain
+- Highway 14A switchbacks over the pass
+- Wuling pass position at the high point of the road
+- tree line: scattered conifers below the grass slopes
+- peak positions relative to the road
+
+LOCKED IDENTITY
+- dwarf bamboo grassland covering the slopes
+- rounded summits (not jagged alpine peaks)
+- thin high-altitude clear sky
+- verify: Wuling marker stone form
+
+PRIORITY ORDER
+1. terrain silhouette
+2. landmark identity
+3. geographic relationship
+4. vegetation
+5. human structures
+6. decorative details
+
+DO NOT INVENT
+- Taiwan flags
+- random buildings
+- ski lifts
+- cable cars
+- jagged Alpine peaks
+- alpine lakes
+- large hotels
+
+ALLOWED MINIATURE DETAILS
+- a few cars and cyclists on the highway
+- miniature hikers on a ridge trail
+- optional light snow dusting for a winter variant
+
+OUTPUT
+Square PNG at native generator resolution (at least 1024²). Entire physical miniature on a square rounded-corner ivory base; 45-degree diagonal elevated camera; plain cream studio background. Realistic materials but unmistakably cute scale-model proportions. No hand-painted brushwork, rough blocks, crystal globe, support pillar, captions or watermarks. No map UI copied into output. Preserve slope direction and recognizable landmark silhouette; uncertain details are simplified, never invented.

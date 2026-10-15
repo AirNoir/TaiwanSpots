@@ -57,6 +57,6 @@
     "identity": "pending",
     "style": "pending",
     "collection": "pending",
-    "notes": "Actual Butou Street ground selected after rejecting temple panorama. Existing real-photo is Moru Lane and is not evidence of the selected Putou Street layout; Putou street layout relies on Google Street View/aerial. Exact shop/roof details remain simplified. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3."
+    "notes": "Actual Butou Street ground selected after rejecting temple panorama. Existing real-photo is Moru Lane and is not evidence of the selected Putou Street layout; Putou street layout relies on Google Street View/aerial. Exact shop/roof details remain simplified. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3. | 2026-10-15 review-v3.png: Imported user review repair: 接到看起來是可以無限延伸, 但因為這是微縮模型, 理論上應該會有個極限～目前看起來不真實 Self-check: Second attempt raises camera and shows finite six-house architectural section with visible rear end of lane against cream studio. Street no longer recedes into an unbounded background. Individual storefront mapping remains simplified. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
   }
 }
