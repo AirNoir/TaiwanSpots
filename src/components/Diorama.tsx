@@ -7,6 +7,7 @@ import { isWet, Season, seasonWash, Sky } from '../atmosphere';
 import { collectionImage, collectionThumbnail, DIORAMA_BG } from '../data/spotAssets';
 import { Spot } from '../data/spots';
 import { useTheme } from '../theme';
+import { lightningLoop } from './lightning';
 
 const THUMBNAIL_MAX = 160;
 
@@ -86,7 +87,7 @@ export function Diorama({ spot, size, locked = false, live = false, radius, atmo
         </Animated.View>
         {wash && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: wash }]} />}
         {night && <NightOverlay size={size} />}
-        {raining && <Rain size={size} />}
+        {raining && <Rain size={size} thunder={atmosphere?.sky === 'thunder'} />}
         {locked && (
           <View style={[styles.lockBadgeWrap, { backgroundColor: t.lockOverlay }]}>
             <MaterialCommunityIcons name={'lock' as any} size={size * 0.14} color={t.lockedIcon} />
@@ -238,7 +239,7 @@ export function Diorama({ spot, size, locked = false, live = false, radius, atmo
       </Animated.View>
       {wash && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: wash }]} />}
       {night && <NightOverlay size={size} stars={false} strength={0.3} />}
-      {raining && <Rain size={size} />}
+      {raining && <Rain size={size} thunder={atmosphere?.sky === 'thunder'} />}
       {locked && (
         <View style={styles.lockBadgeWrap}>
           <MaterialCommunityIcons name={'lock' as any} size={size * 0.14} color="#8E9AAF" />
@@ -282,16 +283,22 @@ function NightOverlay({ size, stars = true, strength = 0.5 }: { size: number; st
   );
 }
 
-/** Thin streaks falling over a live diorama. */
-function Rain({ size }: { size: number }) {
+/** Thin streaks falling over a live diorama; in a thunderstorm the whole card flashes now and then. */
+function Rain({ size, thunder = false }: { size: number; thunder?: boolean }) {
   const [fall] = useState(() => new Animated.Value(0));
+  const [flash] = useState(() => new Animated.Value(0));
   useEffect(() => {
     const a = Animated.loop(
       Animated.timing(fall, { toValue: 1, duration: 700, easing: Easing.linear, useNativeDriver: true }),
     );
     a.start();
-    return () => a.stop();
-  }, [fall]);
+    const b = thunder ? lightningLoop(flash) : null;
+    b?.start();
+    return () => {
+      a.stop();
+      b?.stop();
+    };
+  }, [fall, flash, thunder]);
   const drops = useMemo(
     () =>
       Array.from({ length: 16 }, (_, k) => ({
@@ -302,22 +309,27 @@ function Rain({ size }: { size: number }) {
     [size],
   );
   return (
-    <Animated.View
-      pointerEvents="none"
-      style={[
-        StyleSheet.absoluteFill,
-        {
-          opacity: fall.interpolate({ inputRange: [0, 0.2, 0.8, 1], outputRange: [0, 0.6, 0.6, 0] }),
-          transform: [{ translateY: fall.interpolate({ inputRange: [0, 1], outputRange: [-size * 0.04, size * 0.06] }) }],
-        },
-      ]}
-    >
-      <Svg width={size} height={size}>
-        {drops.map((d, k) => (
-          <Path key={k} d={`M ${d.x} ${d.y} l ${-d.l * 0.25} ${d.l}`} stroke="#8FB8D8" strokeWidth={1.2} strokeLinecap="round" />
-        ))}
-      </Svg>
-    </Animated.View>
+    <>
+      <Animated.View
+        pointerEvents="none"
+        style={[
+          StyleSheet.absoluteFill,
+          {
+            opacity: fall.interpolate({ inputRange: [0, 0.2, 0.8, 1], outputRange: [0, 0.6, 0.6, 0] }),
+            transform: [{ translateY: fall.interpolate({ inputRange: [0, 1], outputRange: [-size * 0.04, size * 0.06] }) }],
+          },
+        ]}
+      >
+        <Svg width={size} height={size}>
+          {drops.map((d, k) => (
+            <Path key={k} d={`M ${d.x} ${d.y} l ${-d.l * 0.25} ${d.l}`} stroke="#8FB8D8" strokeWidth={1.2} strokeLinecap="round" />
+          ))}
+        </Svg>
+      </Animated.View>
+      {thunder && (
+        <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: '#FFF6D5', opacity: flash }]} />
+      )}
+    </>
   );
 }
 

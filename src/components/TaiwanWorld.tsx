@@ -26,6 +26,7 @@ import { worldToken } from '../data/spotAssets';
 import { Spot, SPOTS } from '../data/spots';
 import { makeProjector, TAIWAN, WorldDef, worldAspect } from '../data/world';
 import { makeStyles, Palette, seasonTints, useTheme } from '../theme';
+import { lightningLoop } from './lightning';
 
 // Isometric miniature Taiwan (visual spec v0.2 §10–§11).
 // Unvisited land is desaturated and fogged; visited spots bloom colour into
@@ -267,6 +268,16 @@ export function TaiwanWorld({
     return () => a.stop();
   }, [precip, fall]);
 
+  // lightning flashes over any region in a thunderstorm
+  const thunder = !!weather && Object.values(weather).some((w) => w?.sky === 'thunder');
+  const [flash] = useState(() => new Animated.Value(0));
+  useEffect(() => {
+    if (!thunder) return;
+    const a = lightningLoop(flash);
+    a.start();
+    return () => a.stop();
+  }, [thunder, flash]);
+
   // ── what sits on the map at this level ────────────────────
   // `size` is the on-screen token width; markers are not scaled by the zoom.
   const markers = useMemo<Marker[]>(() => {
@@ -507,6 +518,32 @@ export function TaiwanWorld({
                           />
                         );
                       });
+                    })}
+                  </Svg>
+                </Animated.View>
+              )}
+              {thunder && (
+                <Animated.View style={[StyleSheet.absoluteFill, { opacity: flash }]}>
+                  <Svg width={width} height={height}>
+                    {regionStats.map((r) => {
+                      const w = weather[r.id];
+                      if (w?.sky !== 'thunder') return null;
+                      const bx = r.center.x + width * 0.02;
+                      const by = r.center.y - width * 0.05;
+                      const bw = width * 0.03;
+                      const bh = width * 0.055;
+                      return (
+                        <G key={r.id}>
+                          {/* sheet lightning lights the whole region, then a bolt drops from the cloud */}
+                          <Ellipse cx={r.center.x} cy={r.center.y - width * 0.02} rx={width * 0.2} ry={width * 0.14} fill="#FFF7D6" opacity={0.8} />
+                          <Path
+                            d={`M ${bx} ${by} l ${-bw * 0.5} ${bh * 0.55} l ${bw * 0.35} 0 l ${-bw * 0.4} ${bh * 0.45} l ${bw * 0.95} ${-bh * 0.6} l ${-bw * 0.4} 0 l ${bw * 0.3} ${-bh * 0.4} Z`}
+                            fill="#FFD54A"
+                            stroke="#FFF3B0"
+                            strokeWidth={0.8}
+                          />
+                        </G>
+                      );
                     })}
                   </Svg>
                 </Animated.View>
