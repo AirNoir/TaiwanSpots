@@ -47,6 +47,8 @@ interface Props {
   season?: Season;
   /** Current weather per region id. Missing or null regions draw no weather. */
   weather?: Record<string, Weather | null>;
+  /** After dark: a veil over the map, stars, and brighter landmark lights. */
+  night?: boolean;
 }
 
 const TOP_PAD = 0.1; // room above the north tip for token heads (× width)
@@ -85,6 +87,9 @@ const hash = (n: number) => {
   return s - Math.floor(s);
 };
 
+// Fixed star field (fractions of width / height) so the sky doesn't twinkle on re-render.
+const STARS = Array.from({ length: 18 }, (_, k) => [hash(k * 3 + 1), hash(k * 3 + 2) * 0.9, 0.0025 + hash(k * 3 + 3) * 0.003]);
+
 export function worldHeight(width: number, world: WorldDef = TAIWAN) {
   return width * (TOP_PAD + worldAspect(world) + SLAB + BOTTOM_PAD);
 }
@@ -96,6 +101,7 @@ export function TaiwanWorld({
   world = TAIWAN,
   season: seasonProp,
   weather,
+  night = false,
 }: Props) {
   const t = useTheme();
   const C = t.world;
@@ -301,6 +307,9 @@ export function TaiwanWorld({
   };
 
   const active = regionStats.find((r) => r.id === regionId);
+  // A near-complete collection puts a light on almost every spot; shrink the halos so terrain stays visible.
+  const lightCount = markers.filter((m) => m.kind === 'light').length;
+  const lightDim = lightCount > 80 ? 0.55 : lightCount > 40 ? 0.75 : 1;
   const fogShift = drift.interpolate({ inputRange: [0, 1], outputRange: [-width * 0.025, width * 0.025] });
   const fallShift = fall.interpolate({ inputRange: [0, 1], outputRange: [-width * 0.012, width * 0.012] });
   const fallFade = fall.interpolate({ inputRange: [0, 0.15, 0.85, 1], outputRange: [0, 1, 1, 0] });
@@ -506,6 +515,17 @@ export function TaiwanWorld({
           )}
         </Pressable>
 
+        {/* night: veil the terrain and weather, leave the landmarks and their lights above it */}
+        {night && (
+          <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: C.nightVeil }]}>
+            <Svg width={width} height={height}>
+              {STARS.map(([sx, sy, r], k) => (
+                <Ellipse key={k} cx={sx * width} cy={sy * height} rx={r * width} ry={r * width} fill={C.star} opacity={0.8} />
+              ))}
+            </Svg>
+          </View>
+        )}
+
         {/* landmarks, lights and pending pins — repositioned by the zoom, never scaled */}
         {markers.map((m) => {
           const pos = animatedPos(m.at);
@@ -525,7 +545,7 @@ export function TaiwanWorld({
                 {m.kind === 'token' ? (
                   <LandmarkToken spot={m.spot} size={m.size} />
                 ) : m.kind === 'light' ? (
-                  <Light pulse={pulse} />
+                  <Light pulse={pulse} night={night} dim={lightDim} />
                 ) : (
                   <PendingPin big={!!regionId} />
                 )}
@@ -660,16 +680,16 @@ function LandmarkToken({ spot, size }: { spot: Spot; size: number }) {
   );
 }
 
-function Light({ pulse }: { pulse: Animated.Value }) {
+function Light({ pulse, night, dim }: { pulse: Animated.Value; night: boolean; dim: number }) {
   const styles = useStyles();
   return (
-    <View style={styles.lightWrap}>
+    <View style={[styles.lightWrap, { transform: [{ scale: dim }] }]}>
       <Animated.View
         style={[
           styles.lightHalo,
           {
-            opacity: pulse.interpolate({ inputRange: [0, 1], outputRange: [0.25, 0.6] }),
-            transform: [{ scale: pulse.interpolate({ inputRange: [0, 1], outputRange: [0.8, 1.25] }) }],
+            opacity: pulse.interpolate({ inputRange: [0, 1], outputRange: night ? [0.45, 0.8] : [0.25, 0.6] }),
+            transform: [{ scale: pulse.interpolate({ inputRange: [0, 1], outputRange: night ? [0.95, 1.4] : [0.8, 1.25] }) }],
           },
         ]}
       />

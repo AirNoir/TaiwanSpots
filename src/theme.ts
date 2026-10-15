@@ -24,6 +24,8 @@ export interface WorldPalette {
   cloud: string; // weather clouds over a region
   rain: string; // rain streaks
   snow: string; // snow caps and flakes
+  nightVeil: string; // laid over the whole map after dark
+  star: string;
 }
 
 /** Seasonal recolouring of discovered terrain; undiscovered land stays fogged grey. */
@@ -117,6 +119,8 @@ const dark: Palette = {
     cloud: '#8A96A6',
     rain: '#9CC0E0',
     snow: '#F4F7FA',
+    nightVeil: 'rgba(2,6,18,0.5)',
+    star: '#E8EEF8',
   },
 };
 
@@ -164,6 +168,8 @@ const light: Palette = {
     cloud: '#C3CAD3',
     rain: '#5F8FB8',
     snow: '#FFFFFF',
+    nightVeil: 'rgba(14,22,52,0.46)',
+    star: '#FFFFFF',
   },
 };
 

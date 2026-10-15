@@ -46,6 +46,12 @@ export const skyMeta: Record<Sky, { zh: string; icon: string; nightIcon?: string
   snow: { zh: '雪', icon: 'weather-snowy' },
 };
 
+/** Local-clock fallback for night when no weather service answer is at hand. */
+export const isNightAt = (date: Date = new Date()) => {
+  const h = date.getHours();
+  return h < 6 || h >= 18;
+};
+
 export const skyIcon = (w: Weather) => (!w.isDay && skyMeta[w.sky].nightIcon) || skyMeta[w.sky].icon;
 export const isWet = (sky: Sky) => sky === 'drizzle' || sky === 'rain' || sky === 'thunder';
 export const describeWeather = (w: Weather) => `${skyMeta[w.sky].zh} ${w.temperature}°`;

@@ -14,6 +14,7 @@ import { Diorama } from '../../src/components/Diorama';
 import { SPOTS } from '../../src/data/spots';
 import { entrySeason, useStore } from '../../src/store';
 import { Palette, makeStyles, regionMeta, useTheme } from '../../src/theme';
+import { useAtmosphereOverride, useNight } from '../../src/useAtmosphere';
 
 const { width: SCREEN_W } = Dimensions.get('window');
 const GAP = 12;
@@ -25,6 +26,8 @@ export default function PassportScreen() {
   const styles = useStyles();
   const router = useRouter();
   const collections = useStore((s) => s.collections);
+  const override = useAtmosphereOverride();
+  const night = useNight();
   const count = Object.keys(collections).length;
   const pct = Math.round((count / SPOTS.length) * 100);
 
@@ -87,7 +90,7 @@ export default function PassportScreen() {
                 size={CELL}
                 locked={!collected}
                 radius={16}
-                atmosphere={entry ? { season: entrySeason(entry) } : undefined}
+                atmosphere={entry ? { season: override.season ?? entrySeason(entry), night } : undefined}
               />
               <Text style={[styles.cellName, !collected && { color: t.faint }]} numberOfLines={1}>
                 {collected ? spot.name : '????'}

@@ -12,8 +12,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
 import { Region, SPOTS } from '../../src/data/spots';
 import { checkinRadius, DEV_LOCATIONS, distanceMeters, formatDistance } from '../../src/geo';
-import { useStore } from '../../src/store';
+import { entrySeason, useStore } from '../../src/store';
 import { Palette, categoryMeta, makeStyles, rarityMeta, regionMeta, useTheme } from '../../src/theme';
+import { useAtmosphereOverride, useNight } from '../../src/useAtmosphere';
 import { useLocation } from '../../src/useLocation';
 
 const REGION_FILTERS: (Region | 'all')[] = ['all', 'north', 'central', 'south', 'east'];
@@ -27,6 +28,8 @@ export default function ExploreScreen() {
   const setDevLocation = useStore((s) => s.setDevLocation);
   const { location, isDev, isFallback } = useLocation();
   const [region, setRegion] = useState<Region | 'all'>('all');
+  const override = useAtmosphereOverride();
+  const night = useNight();
 
   const rows = useMemo(
     () =>
@@ -99,7 +102,13 @@ export default function ExploreScreen() {
           const inRange = dist <= checkinRadius(spot);
           return (
             <Pressable style={styles.row} onPress={() => router.push(`/spot/${spot.id}`)}>
-              <Diorama spot={spot} size={64} locked={!collected} radius={16} />
+              <Diorama
+                spot={spot}
+                size={64}
+                locked={!collected}
+                radius={16}
+                atmosphere={collected ? { season: override.season ?? entrySeason(collections[spot.id]), night } : undefined}
+              />
               <View style={{ flex: 1, marginLeft: 14 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
                   <Text style={styles.name}>{spot.name}</Text>

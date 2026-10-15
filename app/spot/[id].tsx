@@ -14,13 +14,14 @@ import { Diorama } from '../../src/components/Diorama';
 import { DioramaViewer } from '../../src/components/DioramaViewer';
 import { ShareCardModal } from '../../src/components/ShareCardModal';
 import { UnlockOverlay } from '../../src/components/UnlockOverlay';
-import { describeWeather, seasonMeta, seasonOf, skyIcon, skyMeta, useWeather } from '../../src/atmosphere';
+import { describeWeather, seasonMeta, skyIcon, skyMeta, useWeather } from '../../src/atmosphere';
 import { collectionImage } from '../../src/data/spotAssets';
 import { spotById, SPOTS } from '../../src/data/spots';
 import { checkinRadius, distanceMeters, formatDistance } from '../../src/geo';
 import { openDirections, travelModeFor } from '../../src/maps';
 import { entrySeason, useStore } from '../../src/store';
 import { Palette, categoryMeta, makeStyles, rarityMeta, useTheme } from '../../src/theme';
+import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
 import { useLocation } from '../../src/useLocation';
 
 const { width: SCREEN_W } = Dimensions.get('window');
@@ -49,7 +50,12 @@ export default function SpotDetailScreen() {
     [location, spot]
   );
   // Weather at the spot itself (a fixed public coordinate — never the traveller's position).
-  const [weather] = useWeather(useMemo(() => (spot ? [spot] : []), [spot]));
+  const [fetchedWeather] = useWeather(useMemo(() => (spot ? [spot] : []), [spot]));
+  // Dev preview can force season / sky / night; in production the override is always empty.
+  const override = useAtmosphereOverride();
+  const weather = overrideWeather(fetchedWeather, override);
+  const season = useSeason();
+  const night = useNight(weather);
 
   if (!spot) {
     return (
@@ -68,9 +74,8 @@ export default function SpotDetailScreen() {
   const zoomable = collected && !!collectionImage(spot.id);
 
   // A collected diorama keeps the season (and sky) it was collected in; a locked one shows today's.
-  const season = seasonOf();
-  const shownSeason = entry ? entrySeason(entry) : season;
-  const atmosphere = { season: shownSeason, sky: entry ? entry.sky : weather?.sky };
+  const shownSeason = entry && !override.season ? entrySeason(entry) : season;
+  const atmosphere = { season: shownSeason, sky: entry && !override.sky ? entry.sky : weather?.sky, night };
   const travelMode = travelModeFor(dist);
 
   const onCheckIn = () => {
@@ -140,13 +145,18 @@ export default function SpotDetailScreen() {
           {/* today's season, and the weather at the spot once it has loaded */}
           <View style={[styles.tag, { flexDirection: 'row', alignItems: 'center', gap: 5 }]}>
             <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={13} color={t.subtext} />
-            <Text style={styles.tagText}>{seasonMeta[season].zh}</Text>
-            {weather && (
+            <Text style={styles.tagText}>
+              {seasonMeta[season].zh}
+              {night ? '夜' : '日'}
+            </Text>
+            {weather ? (
               <>
                 <MaterialCommunityIcons name={skyIcon(weather) as any} size={13} color={t.subtext} />
                 <Text style={styles.tagText}>{describeWeather(weather)}</Text>
               </>
-            )}
+            ) : night ? (
+              <MaterialCommunityIcons name={'weather-night' as any} size={13} color={t.subtext} />
+            ) : null}
           </View>
         </View>
 

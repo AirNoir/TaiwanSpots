@@ -16,8 +16,8 @@ interface Props {
   locked?: boolean;
   live?: boolean; // subtle "living diorama" motion
   radius?: number;
-  /** Season wash over the model; rain falls on live dioramas when the sky is wet. */
-  atmosphere?: { season: Season; sky?: Sky };
+  /** Season wash over the model; night darkens it under a few stars; rain falls on live dioramas when the sky is wet. */
+  atmosphere?: { season: Season; sky?: Sky; night?: boolean };
 }
 
 export function Diorama({ spot, size, locked = false, live = false, radius, atmosphere }: Props) {
@@ -25,6 +25,7 @@ export function Diorama({ spot, size, locked = false, live = false, radius, atmo
   const { art } = spot;
   const br = radius ?? size * 0.12;
   const wash = !locked && atmosphere ? seasonWash[atmosphere.season] : null;
+  const night = !locked && !!atmosphere?.night;
   const raining = !locked && live && !!atmosphere?.sky && isWet(atmosphere.sky);
 
   const [cloudX] = useState(() => new Animated.Value(0));
@@ -84,6 +85,7 @@ export function Diorama({ spot, size, locked = false, live = false, radius, atmo
           <Image source={image} style={{ width: '100%', height: '100%' }} resizeMode="contain" />
         </Animated.View>
         {wash && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: wash }]} />}
+        {night && <NightOverlay size={size} />}
         {raining && <Rain size={size} />}
         {locked && (
           <View style={[styles.lockBadgeWrap, { backgroundColor: t.lockOverlay }]}>
@@ -94,7 +96,7 @@ export function Diorama({ spot, size, locked = false, live = false, radius, atmo
     );
   }
 
-  const sky: [string, string] = locked ? ['#161F31', '#1C2537'] : art.sky;
+  const sky: [string, string] = locked ? ['#161F31', '#1C2537'] : night ? NIGHT_SKY : art.sky;
   const ground = locked ? '#222E44' : art.ground;
   const groundDark = locked ? '#1A2436' : art.groundDark;
   const mainColor = locked ? '#3A4A63' : art.tint;
@@ -131,8 +133,8 @@ export function Diorama({ spot, size, locked = false, live = false, radius, atmo
   return (
     <View style={[styles.box, { width: size, height: size, borderRadius: br }]}>
       <LinearGradient colors={sky} style={StyleSheet.absoluteFill} />
-      {/* sun glow */}
-      {!locked && (
+      {/* sun glow by day, a crescent moon at night */}
+      {!locked && !night && (
         <View
           style={{
             position: 'absolute',
@@ -143,6 +145,14 @@ export function Diorama({ spot, size, locked = false, live = false, radius, atmo
             borderRadius: size * 0.07,
             backgroundColor: 'rgba(255,245,200,0.55)',
           }}
+        />
+      )}
+      {!locked && night && (
+        <MaterialCommunityIcons
+          name={'moon-waning-crescent' as any}
+          size={size * 0.13}
+          color="#F6EFD2"
+          style={{ position: 'absolute', right: size * 0.12, top: size * 0.09 }}
         />
       )}
       {/* cloud */}
@@ -227,6 +237,7 @@ export function Diorama({ spot, size, locked = false, live = false, radius, atmo
         <MaterialCommunityIcons name={art.icon as any} size={size * 0.3} color={mainColor} />
       </Animated.View>
       {wash && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: wash }]} />}
+      {night && <NightOverlay size={size} stars={false} strength={0.3} />}
       {raining && <Rain size={size} />}
       {locked && (
         <View style={styles.lockBadgeWrap}>
@@ -242,6 +253,34 @@ const hash = (n: number) => {
   const s = Math.sin(n * 127.1) * 43758.5453;
   return s - Math.floor(s);
 };
+
+const NIGHT_SKY: [string, string] = ['#0F1A33', '#22304F'];
+// Fixed star field over the top third of the card (fractions of size).
+const STAR_FIELD = Array.from({ length: 7 }, (_, k) => [hash(k + 101), hash(k + 202) * 0.32, 0.006 + hash(k + 303) * 0.006]);
+
+/** Deep-blue wash for night, with a few stars over the sky of a rendered scene. */
+function NightOverlay({ size, stars = true, strength = 0.5 }: { size: number; stars?: boolean; strength?: number }) {
+  return (
+    <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: `rgba(16,26,60,${strength})` }]}>
+      {stars &&
+        STAR_FIELD.map(([x, y, d], k) => (
+          <View
+            key={k}
+            style={{
+              position: 'absolute',
+              left: x * size,
+              top: y * size,
+              width: d * size,
+              height: d * size,
+              borderRadius: d * size,
+              backgroundColor: '#FFFFFF',
+              opacity: 0.75,
+            }}
+          />
+        ))}
+    </View>
+  );
+}
 
 /** Thin streaks falling over a live diorama. */
 function Rain({ size }: { size: number }) {

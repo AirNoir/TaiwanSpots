@@ -28,12 +28,21 @@ export interface Atmosphere {
 export const entrySeason = (e: CollectionEntry): Season =>
   e.season ?? seasonOf(new Date(e.checkedInAt));
 
+/** Dev preview: force season / sky / night everywhere. Empty = automatic. Ignored in production. */
+export interface AtmosphereOverride {
+  season?: Season;
+  sky?: Sky;
+  night?: boolean;
+}
+
 interface IslandiaState {
   hydrated: boolean;
   onboarded: boolean;
   collections: Record<string, CollectionEntry>;
   devLocation: LatLng | null;
   themeMode: ThemeMode;
+  atmosphereOverride: AtmosphereOverride;
+  setAtmosphereOverride: (o: AtmosphereOverride) => void;
   setThemeMode: (mode: ThemeMode) => void;
   setOnboarded: () => void;
   setDevLocation: (loc: LatLng | null) => void;
@@ -51,6 +60,8 @@ export const useStore = create<IslandiaState>()(
       collections: {},
       devLocation: null,
       themeMode: 'light',
+      atmosphereOverride: {},
+      setAtmosphereOverride: (o) => set({ atmosphereOverride: o }),
       setThemeMode: (mode) => set({ themeMode: mode }),
       setOnboarded: () => set({ onboarded: true }),
       setDevLocation: (loc) => set({ devLocation: loc }),
@@ -93,6 +104,7 @@ export const useStore = create<IslandiaState>()(
         collections: s.collections,
         devLocation: s.devLocation,
         themeMode: s.themeMode,
+        atmosphereOverride: s.atmosphereOverride,
       }),
       onRehydrateStorage: () => () => {
         useStore.setState({ hydrated: true });
@@ -100,3 +112,7 @@ export const useStore = create<IslandiaState>()(
     }
   )
 );
+
+// Development only: lets a debugger or automation drive the app, e.g.
+// __islandia.getState().setAtmosphereOverride({ season: 'winter', night: true }).
+if (__DEV__) (globalThis as any).__islandia = useStore;

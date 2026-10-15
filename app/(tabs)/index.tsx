@@ -10,14 +10,15 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { describeWeather, seasonMeta, seasonOf, skyIcon, useWeather } from '../../src/atmosphere';
+import { describeWeather, seasonMeta, skyIcon, useWeather } from '../../src/atmosphere';
 import { Diorama } from '../../src/components/Diorama';
 import { TaiwanWorld } from '../../src/components/TaiwanWorld';
 import { SPOTS, spotById } from '../../src/data/spots';
 import { TAIWAN } from '../../src/data/world';
 import { distanceMeters, formatDistance, LatLng } from '../../src/geo';
-import { useStore } from '../../src/store';
+import { entrySeason, useStore } from '../../src/store';
 import { makeStyles, Palette, useTheme } from '../../src/theme';
+import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
 import { useLocation } from '../../src/useLocation';
 import { useWidgetSync } from '../../src/widgets/sync';
 
@@ -45,8 +46,9 @@ export default function WorldScreen() {
   const collectedIds = useMemo(() => new Set(Object.keys(collections)), [collections]);
   const count = collectedIds.size;
 
-  const season = seasonOf();
-  const regionWeather = useWeather(REGION_POINTS);
+  const season = useSeason();
+  const override = useAtmosphereOverride();
+  const regionWeather = useWeather(REGION_POINTS).map((w) => overrideWeather(w, override));
   const weatherByRegion = Object.fromEntries(TAIWAN.regions.map((r, i) => [r.id, regionWeather[i]]));
   // The region whose city centre is closest to the traveller (computed on-device).
   const nearRegion = useMemo(
@@ -60,6 +62,7 @@ export default function WorldScreen() {
     [location],
   );
   const hereWeather = weatherByRegion[nearRegion.id];
+  const night = useNight(hereWeather);
 
   const nearby = useMemo(
     () =>
@@ -87,7 +90,10 @@ export default function WorldScreen() {
         <Text style={styles.subGreeting}>去過的地方,會成為你的世界。</Text>
         <View style={styles.atmosRow}>
           <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={13} color={t.subtext} />
-          <Text style={styles.atmosText}>{seasonMeta[season].zh}天</Text>
+          <Text style={styles.atmosText}>
+            {seasonMeta[season].zh}
+            {night ? '夜' : '天'}
+          </Text>
           {hereWeather && (
             <>
               <Text style={styles.atmosText}>·</Text>
@@ -101,7 +107,7 @@ export default function WorldScreen() {
 
         <View style={styles.worldCard}>
           <Text style={styles.worldLabel}>MY TAIWAN WORLD</Text>
-          <TaiwanWorld width={mapW} collectedIds={collectedIds} season={season} weather={weatherByRegion} />
+          <TaiwanWorld width={mapW} collectedIds={collectedIds} season={season} weather={weatherByRegion} night={night} />
           <View style={styles.worldStats}>
             <Text style={styles.worldCount}>
               {count} <Text style={styles.worldTotal}>/ {SPOTS.length}</Text>
@@ -136,7 +142,12 @@ export default function WorldScreen() {
               style={styles.latestCard}
               onPress={() => router.push(`/spot/${latestSpot.id}`)}
             >
-              <Diorama spot={latestSpot} size={SCREEN_W - 80} radius={20} />
+              <Diorama
+                spot={latestSpot}
+                size={SCREEN_W - 80}
+                radius={20}
+                atmosphere={{ season: override.season ?? entrySeason(latest), night }}
+              />
               <Text style={styles.latestName}>{latestSpot.nameEn}</Text>
               <Text style={styles.latestDate}>
                 {new Date(latest.checkedInAt).toLocaleDateString('zh-TW')}

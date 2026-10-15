@@ -1,9 +1,12 @@
-import { Stack } from 'expo-router';
+import { router, Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import { Appearance } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useTheme } from '../src/theme';
+
+// Development only: lets a debugger or automation navigate, e.g. __islandiaRouter.push('/passport').
+if (__DEV__) (globalThis as any).__islandiaRouter = router;
 
 export default function RootLayout() {
   const t = useTheme();

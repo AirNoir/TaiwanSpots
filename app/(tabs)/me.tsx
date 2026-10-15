@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ACHIEVEMENTS } from '../../src/achievements';
+import { SEASONS, seasonMeta, Sky, skyMeta } from '../../src/atmosphere';
 import { spotById } from '../../src/data/spots';
 import { distanceMeters } from '../../src/geo';
 import { useStore } from '../../src/store';
@@ -19,6 +20,9 @@ const THEME_OPTIONS: { mode: ThemeMode; label: string; icon: string }[] = [
   { mode: 'dark', label: '深色', icon: 'weather-night' },
 ];
 
+// Dev preview choices (value '' = automatic). Skies limited to the ones that look different.
+const PREVIEW_SKIES: Sky[] = ['clear', 'cloudy', 'overcast', 'fog', 'rain', 'thunder', 'snow'];
+
 export default function MeScreen() {
   const t = useTheme();
   const styles = useStyles();
@@ -27,6 +31,8 @@ export default function MeScreen() {
   const unlockAll = useStore((s) => s.unlockAll);
   const themeMode = useStore((s) => s.themeMode);
   const setThemeMode = useStore((s) => s.setThemeMode);
+  const override = useStore((s) => s.atmosphereOverride);
+  const setOverride = useStore((s) => s.setAtmosphereOverride);
 
   const collected = useMemo(
     () =>
@@ -155,9 +161,63 @@ export default function MeScreen() {
         </View>
 
         {__DEV__ && (
-          <Pressable style={styles.resetBtn} onPress={unlockAll}>
-            <Text style={styles.resetText}>解鎖全部景點（開發用）</Text>
-          </Pressable>
+          <>
+            {/* Preview any season / time of day / sky; forces every screen until set back to 自動. */}
+            <Text style={styles.sectionTitle}>DEV · 預覽季節 / 日夜 / 天氣</Text>
+            <Text style={styles.devLabel}>季節</Text>
+            <View style={styles.chipRow}>
+              {[['', '自動'], ...SEASONS.map((s) => [s, seasonMeta[s].zh])].map(([v, label]) => {
+                const on = (override.season ?? '') === v;
+                return (
+                  <Pressable
+                    key={v}
+                    style={[styles.chip, on && styles.chipOn]}
+                    onPress={() => setOverride({ ...override, season: (v || undefined) as typeof override.season })}
+                  >
+                    <Text style={[styles.chipText, on && styles.chipTextOn]}>{label}</Text>
+                  </Pressable>
+                );
+              })}
+            </View>
+            <Text style={styles.devLabel}>日夜</Text>
+            <View style={styles.chipRow}>
+              {[
+                ['', '自動'],
+                ['day', '白天'],
+                ['night', '夜晚'],
+              ].map(([v, label]) => {
+                const cur = override.night == null ? '' : override.night ? 'night' : 'day';
+                const on = cur === v;
+                return (
+                  <Pressable
+                    key={v}
+                    style={[styles.chip, on && styles.chipOn]}
+                    onPress={() => setOverride({ ...override, night: v === '' ? undefined : v === 'night' })}
+                  >
+                    <Text style={[styles.chipText, on && styles.chipTextOn]}>{label}</Text>
+                  </Pressable>
+                );
+              })}
+            </View>
+            <Text style={styles.devLabel}>天氣</Text>
+            <View style={styles.chipRow}>
+              {[['', '自動'], ...PREVIEW_SKIES.map((s) => [s, skyMeta[s].zh])].map(([v, label]) => {
+                const on = (override.sky ?? '') === v;
+                return (
+                  <Pressable
+                    key={v}
+                    style={[styles.chip, on && styles.chipOn]}
+                    onPress={() => setOverride({ ...override, sky: (v || undefined) as Sky | undefined })}
+                  >
+                    <Text style={[styles.chipText, on && styles.chipTextOn]}>{label}</Text>
+                  </Pressable>
+                );
+              })}
+            </View>
+            <Pressable style={styles.resetBtn} onPress={unlockAll}>
+              <Text style={styles.resetText}>解鎖全部景點（開發用）</Text>
+            </Pressable>
+          </>
         )}
         <Pressable style={styles.resetBtn} onPress={reset}>
           <Text style={styles.resetText}>重置示範資料</Text>
@@ -277,6 +337,19 @@ const useStyles = makeStyles((t: Palette) =>
   segmentItemOn: { backgroundColor: t.accent },
   segmentText: { color: t.subtext, fontSize: 14, fontWeight: '600' },
   segmentTextOn: { color: t.onAccent },
+  devLabel: { color: t.faint, fontSize: 11, letterSpacing: 2, marginTop: 10, marginBottom: 6 },
+  chipRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+  chip: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: t.cardBorder,
+    backgroundColor: t.card,
+  },
+  chipOn: { backgroundColor: t.accentSoft, borderColor: t.accent },
+  chipText: { color: t.subtext, fontSize: 12 },
+  chipTextOn: { color: t.accent, fontWeight: '600' },
   footer: {
     color: t.faint,
     fontSize: 12,

@@ -163,6 +163,12 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     },
     world: require('../../assets/spots/taroko/world/landmark.png'),
   },
+  'xiangshan': {
+    collection: {
+      day: require('../../assets/spots/xiangshan/collection/day.png'),
+      thumbnail: require('../../assets/spots/xiangshan/collection/thumbnail.png'),
+    },
+  },
   'yehliu': {
     collection: {
       day: require('../../assets/spots/yehliu/collection/day.png'),

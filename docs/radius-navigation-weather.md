@@ -68,10 +68,23 @@
 - 舊資料沒有 `season` 欄位，用 `entrySeason(entry)` 從打卡日期推回去，不需要 migration。
 - 新成就「FOUR SEASONS 春夏秋冬都留下足跡」。
 
+### 日夜
+
+- 夜晚判定順序：開發用覆寫 → Open-Meteo 的 `is_day` → 本機時鐘（18:00–06:00）。
+- 世界地圖：整張蓋一層深藍紗（`nightVeil`）加星點，地標 token 和光點在紗上面；夜晚光點更亮，但收藏數超過 40／80 個時光點會縮小，免得蓋住地形。
+- 微縮模型：深藍色罩 + 幾顆星；程序式（還沒生圖的）模型把天空換成夜空、太陽換成月亮。
+- 景點頁和首頁的季節標籤會變成「秋夜」「春日」這種寫法。
+
+### 開發預覽：四季 × 日夜 × 天氣
+
+- ME 分頁最下面（只在開發版出現）有三排 chip：季節（自動／春／夏／秋／冬）、日夜（自動／白天／夜晚）、天氣（自動／晴／多雲／陰／霧／雨／雷雨／雪）。選了之後所有畫面都跟著變，包括已收藏模型的季節色；回到「自動」就恢復。
+- 深連結：`exp://<host>/--/dev/atmosphere?season=winter&night=1&sky=snow`，`?reset=1` 清除。**不要在 Expo Go 還在打包時連續丟深連結**，會卡白畫面；要用就等它載完再一個一個開。
+- 自動化（截圖、測試）走 Metro 的 Hermes inspector：開發版會把 `useStore` 掛在 `globalThis.__islandia`、expo-router 的 `router` 掛在 `globalThis.__islandiaRouter`，用 CDP `Runtime.evaluate` 就能切狀態和換頁，不需要重新載入。連線時 `Origin` 要帶 `http://127.0.0.1:8081`，否則 inspector proxy 回 401。
+- 正式版（`__DEV__` 為 false）這些覆寫和全域變數都不存在。
+
 ## 沒做、可以接著做
 
 - Widget 顯示天氣（需要把天氣寫進 App Group，順手可做）。
-- 夜晚變體：Open-Meteo 已回傳 `is_day`，資料都在，只差視覺。
 - 季節限定收藏（例如某景點只在冬天解鎖「雪景」版本）。
 - 天氣查詢的開關（目前沒有設定可關，隱私政策已揭露）。
 
