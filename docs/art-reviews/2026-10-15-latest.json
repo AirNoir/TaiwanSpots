@@ -1,0 +1,405 @@
+{
+  "exportedAt": "2026-10-15T08:02:08.783Z",
+  "colorPreview": {
+    "saturation": 0.88,
+    "scope": "model-display-only"
+  },
+  "reviews": [
+    {
+      "id": "palace-museum",
+      "name": "故宮博物院",
+      "status": "adjust",
+      "note": "底座的 border 寬度不一致\n",
+      "model": "review-v7.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:27:14.745Z"
+    },
+    {
+      "id": "taipei-101",
+      "name": "台北 101",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "oneness-taipei-101.jpg",
+      "updatedAt": "2026-10-15T07:26:26.595Z"
+    },
+    {
+      "id": "jiufen",
+      "name": "九份老街",
+      "status": "approved",
+      "note": "",
+      "model": "review-v6.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:27:30.215Z"
+    },
+    {
+      "id": "tamsui",
+      "name": "淡水老街",
+      "status": "approved",
+      "note": "",
+      "model": "review-v4.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:27:33.781Z"
+    },
+    {
+      "id": "dadaocheng",
+      "name": "大稻埕",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:27:47.874Z"
+    },
+    {
+      "id": "yehliu",
+      "name": "野柳地質公園",
+      "status": "adjust",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "model": "review-v4.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:28:25.181Z"
+    },
+    {
+      "id": "sun-moon-lake",
+      "name": "日月潭",
+      "status": "adjust",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "model": "review-v7.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:28:45.790Z"
+    },
+    {
+      "id": "cingjing",
+      "name": "清境農場",
+      "status": "adjust",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣, 人行道的部分已經超過了底座的範圍",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:29:22.108Z"
+    },
+    {
+      "id": "gaomei",
+      "name": "高美濕地",
+      "status": "adjust",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:29:31.604Z"
+    },
+    {
+      "id": "lukang",
+      "name": "鹿港老街",
+      "status": "adjust",
+      "note": "接到看起來是可以無限延伸, 但因為這是微縮模型, 理論上應該會有個極限～目前看起來不真實",
+      "model": "review-v1.png",
+      "photo": "google-ground-review.jpg",
+      "updatedAt": "2026-10-15T07:30:35.890Z"
+    },
+    {
+      "id": "hehuanshan",
+      "name": "合歡山",
+      "status": "adjust",
+      "note": "靠近邊緣的高山部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:31:59.383Z"
+    },
+    {
+      "id": "alishan",
+      "name": "阿里山",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:32:15.462Z"
+    },
+    {
+      "id": "anping",
+      "name": "安平古堡",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:32:19.388Z"
+    },
+    {
+      "id": "chihkan",
+      "name": "赤崁樓",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:32:26.242Z"
+    },
+    {
+      "id": "pier2",
+      "name": "駁二藝術特區",
+      "status": "adjust",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:33:18.037Z"
+    },
+    {
+      "id": "kenting",
+      "name": "墾丁",
+      "status": "adjust",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:33:12.899Z"
+    },
+    {
+      "id": "cijin",
+      "name": "旗津",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:33:14.975Z"
+    },
+    {
+      "id": "taroko",
+      "name": "太魯閣",
+      "status": "adjust",
+      "note": "靠近邊緣的高山部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:34:14.585Z"
+    },
+    {
+      "id": "qingshui-cliff",
+      "name": "清水斷崖",
+      "status": "approved",
+      "note": "",
+      "model": "review-v5.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:34:16.767Z"
+    },
+    {
+      "id": "qixingtan",
+      "name": "七星潭",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:34:21.778Z"
+    },
+    {
+      "id": "brown-avenue",
+      "name": "伯朗大道",
+      "status": "adjust",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:34:46.862Z"
+    },
+    {
+      "id": "sanxiantai",
+      "name": "三仙台",
+      "status": "adjust",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:34:50.354Z"
+    },
+    {
+      "id": "ruisui",
+      "name": "瑞穗牧場",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:35:24.189Z"
+    },
+    {
+      "id": "xiangshan",
+      "name": "象山",
+      "status": "adjust",
+      "note": "底座的邊緣厚度跟其他模型差異太大",
+      "model": "review-v4.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:35:39.336Z"
+    },
+    {
+      "id": "longshan-temple",
+      "name": "艋舺龍山寺",
+      "status": "adjust",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:53:12.628Z"
+    },
+    {
+      "id": "cks-memorial",
+      "name": "中正紀念堂",
+      "status": "adjust",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:53:18.318Z"
+    },
+    {
+      "id": "ximending",
+      "name": "西門町",
+      "status": "adjust",
+      "note": "底座的邊緣厚度跟其他模型差異太大",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:54:25.134Z"
+    },
+    {
+      "id": "shengxing-station",
+      "name": "勝興車站",
+      "status": "adjust",
+      "note": "靠近邊緣的建築與樹木部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:54:22.084Z"
+    },
+    {
+      "id": "longteng-bridge",
+      "name": "龍騰斷橋",
+      "status": "adjust",
+      "note": "靠近邊緣的景物部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:54:45.182Z"
+    },
+    {
+      "id": "sanyi-woodcarving",
+      "name": "三義木雕老街",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:55:27.584Z"
+    },
+    {
+      "id": "nanzhuang",
+      "name": "南庄老街",
+      "status": "adjust",
+      "note": "靠近邊緣的建築與樹木部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:56:04.711Z"
+    },
+    {
+      "id": "hinoki-village",
+      "name": "檜意森活村",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:56:00.396Z"
+    },
+    {
+      "id": "fenqihu",
+      "name": "奮起湖",
+      "status": "adjust",
+      "note": "模型的水平跟底座沒有對齊, 看起來地板向下凹陷",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:56:33.809Z"
+    },
+    {
+      "id": "dongshi",
+      "name": "東石漁人碼頭",
+      "status": "pending",
+      "note": "底座非方形, 有點不規則, 跟其他圖不一樣",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:56:52.069Z"
+    },
+    {
+      "id": "npm-southern",
+      "name": "故宮南院",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:57:22.464Z"
+    },
+    {
+      "id": "guishan-island",
+      "name": "龜山島",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo-overview.jpg",
+      "updatedAt": "2026-10-15T07:57:30.451Z"
+    },
+    {
+      "id": "waiao",
+      "name": "外澳沙灘",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:57:50.466Z"
+    },
+    {
+      "id": "jiaoxi",
+      "name": "礁溪溫泉",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T07:57:56.254Z"
+    },
+    {
+      "id": "shilin-night-market",
+      "name": "士林夜市",
+      "status": "adjust",
+      "note": "地點不太對, 不應該有這座宮廟,  我的印象是捷運劍潭站那附近,還有臺北表演藝術中心, 以及夜市入口會比較具代表性",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T08:00:37.421Z"
+    },
+    {
+      "id": "beitou-thermal-valley",
+      "name": "北投地熱谷",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T08:00:43.956Z"
+    },
+    {
+      "id": "qingtiangang",
+      "name": "擎天崗",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T08:00:51.602Z"
+    },
+    {
+      "id": "maokong",
+      "name": "貓空纜車",
+      "status": "adjust",
+      "note": "纜車的話, 那個連接線好像憑空長出來, 要有模型的感覺",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T08:01:36.513Z"
+    },
+    {
+      "id": "baishatun",
+      "name": "白沙屯拱天宮",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T08:01:51.938Z"
+    },
+    {
+      "id": "huoyanshan",
+      "name": "火炎山",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-15T08:01:59.336Z"
+    }
+  ]
+}

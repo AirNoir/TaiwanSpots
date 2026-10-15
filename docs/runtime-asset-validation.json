@@ -1,0 +1,23 @@
+{
+  "unitTests": 6,
+  "lint": "pass",
+  "typecheck": "pass",
+  "assetsCheck": "159 spots; 0 errors; 517 existing draft/preview warnings",
+  "spotsCheck": "159 spots; 0 errors",
+  "nativeJsExports": [
+    "ios",
+    "android"
+  ],
+  "exportedSpotImages": 74,
+  "allSpotImagesAreWebP": true,
+  "sourceHashesUnchanged": true,
+  "nativeDeviceRendering": "UIKit UIImage(data:) decode passed for all 74 WebPs plus a PNG-named widget copy on an existing iPhone 16 Pro iOS 18.3 simulator; not a full installed-app UI or physical-device test",
+  "note": "Metro/Hermes export verifies packaging, not an IPA/APK size or physical-device rendering.",
+  "uikitDecodedFiles": 75,
+  "browserVisualReview": [
+    "alishan",
+    "qingshui-cliff",
+    "yehliu",
+    "taipei-101"
+  ]
+}

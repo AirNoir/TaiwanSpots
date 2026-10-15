@@ -1,0 +1,1137 @@
+{
+  "scope": "Runtime derivatives only; source byte totals are not an IPA/APK size measurement.",
+  "encoder": "Pillow 11.3.0",
+  "sourceMode": "runtime",
+  "spec": {
+    "collection": {
+      "maxSize": 1024,
+      "quality": 90
+    },
+    "thumbnail": {
+      "maxSize": 512,
+      "quality": 88
+    },
+    "world": {
+      "maxSize": 512,
+      "lossless": true
+    },
+    "method": 6,
+    "notes": "Offline static WebP derivatives only. Keep PNG sources and review previews unchanged. 512px thumbnails cover 160pt cards on 3x screens and the iOS widget. Map tokens retain exact RGBA pixels at their original 512px resolution."
+  },
+  "files": 74,
+  "sourceBytes": 58335191,
+  "outputBytes": 11055680,
+  "reductionPercent": 81.05,
+  "assets": [
+    {
+      "family": "collection",
+      "source": "assets/spots/alishan/collection/day.png",
+      "output": "assets/spots/alishan/collection/day.webp",
+      "sourceSha256": "52aac83ec16e90d140c1c4fed8d6a45b9fea634689925d0c321b3e25b2cf2c5e",
+      "outputSha256": "672e64acee8d0673a3fd1d8081473cbd860bfdd2c26f34f45debb02e730ef40d",
+      "sourceBytes": 1767919,
+      "outputBytes": 222806,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/alishan/collection/thumbnail.png",
+      "output": "assets/spots/alishan/collection/thumbnail.webp",
+      "sourceSha256": "945d58c5cac3ddeffe6321bb171c7fc011b01fe1e7bbe919b0aa0255870c54e0",
+      "outputSha256": "3b59a6c92348ff8d2e0caaa3ca24b02aed0a49a14861b8e29400f532843a8178",
+      "sourceBytes": 490213,
+      "outputBytes": 72102,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/alishan/world/landmark.png",
+      "output": "assets/spots/alishan/world/landmark.webp",
+      "sourceSha256": "d0880419ade9b4897c2a7851e617d121e5f5a64bedf6916756579597493bc624",
+      "outputSha256": "30a3423370e291e84e98a9ad5f8256387d33882d7c087643e24aebf75bf8672d",
+      "sourceBytes": 395319,
+      "outputBytes": 268796,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/anping/collection/day.png",
+      "output": "assets/spots/anping/collection/day.webp",
+      "sourceSha256": "a54e93ac3a00599c7c2f2807b60cf328b456167282403953231d341a691a8812",
+      "outputSha256": "a696aaaa7fa6baaa0d91db849c818181d800c2e56ff5c218b7ec429f09a8f032",
+      "sourceBytes": 1582814,
+      "outputBytes": 167648,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/anping/collection/thumbnail.png",
+      "output": "assets/spots/anping/collection/thumbnail.webp",
+      "sourceSha256": "e908e04e8cb9cf5692876da9a955edee53904df6abd60657c755cff8066f646c",
+      "outputSha256": "870844ed5b6b59f4e36ddbcaddce0ab76f7cd25b34bcf4ae21901f9d576c88ea",
+      "sourceBytes": 427869,
+      "outputBytes": 52696,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/anping/world/landmark.png",
+      "output": "assets/spots/anping/world/landmark.webp",
+      "sourceSha256": "49ac9abf114a016e534c4bd33ce93072910abf8d107defea2d1501ee2e36a052",
+      "outputSha256": "d320519bc087a97c9b1a591464f70ae8bf12f22d8908d92b145c859392565c8d",
+      "sourceBytes": 324644,
+      "outputBytes": 213374,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/brown-avenue/collection/day.png",
+      "output": "assets/spots/brown-avenue/collection/day.webp",
+      "sourceSha256": "f1fd69d455e9e61f18a9cf62526fc60e2d9bb0782dea5dc1cefb1e1dac5c0929",
+      "outputSha256": "bf1f132e24ee5f1118056824cd9f40857f7a2723e93b89bf1c9555c845a4be36",
+      "sourceBytes": 1442162,
+      "outputBytes": 135276,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/brown-avenue/collection/thumbnail.png",
+      "output": "assets/spots/brown-avenue/collection/thumbnail.webp",
+      "sourceSha256": "6eb93c94dd845b6c9bc40ae30116be92cdba8e98169b81522b2d0480cacb3f1d",
+      "outputSha256": "cb706d57d1c771ad26bd54ae6758040d22ec045f4d6c049842fed3cf5524136c",
+      "sourceBytes": 396368,
+      "outputBytes": 44022,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/brown-avenue/world/landmark.png",
+      "output": "assets/spots/brown-avenue/world/landmark.webp",
+      "sourceSha256": "04833f167ca906a7f64b29cd91bb92b393744b32aa575b3fc1f674770a82acb0",
+      "outputSha256": "a6a238d4eca021636decc2411db0482d366fb21ec10deb71b2c9bd48b80580d5",
+      "sourceBytes": 308587,
+      "outputBytes": 210000,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/chihkan/collection/day.png",
+      "output": "assets/spots/chihkan/collection/day.webp",
+      "sourceSha256": "3bc0a53ef7f3d26101d0f9ac704a8e952d69594bfe31ed30078f236847d60293",
+      "outputSha256": "aebff007aae591f4ea710fd3b1a43220105a760dd737ea63633977e22a3bf3b2",
+      "sourceBytes": 1646903,
+      "outputBytes": 197022,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/chihkan/collection/thumbnail.png",
+      "output": "assets/spots/chihkan/collection/thumbnail.webp",
+      "sourceSha256": "1beedda055a22511efab457c927339a3aeca245d67a1b6e20c8f8b8764c6cd2a",
+      "outputSha256": "a1e09563ff5f70b7490f2cb19c3b2922b5b69791dd9e7611757ee90b493e2a03",
+      "sourceBytes": 451291,
+      "outputBytes": 60514,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/chihkan/world/landmark.png",
+      "output": "assets/spots/chihkan/world/landmark.webp",
+      "sourceSha256": "dde42fa5ddee6fbd50d52d7ee9541cb73108181a0e53f1d1db061aa1897e9af1",
+      "outputSha256": "a4836bebb4a823f3b83cc620624162cccb31a87c8a69318c0361be8b62f7262f",
+      "sourceBytes": 374640,
+      "outputBytes": 257292,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/cijin/collection/day.png",
+      "output": "assets/spots/cijin/collection/day.webp",
+      "sourceSha256": "5c49dc6de664ae3c16d21d186e5987c9d42502915a04b031eabb92b6dead0223",
+      "outputSha256": "934cac22de3e7a90fdc61bdf8f9137f77e60e364b2707417a2c7c32521817f04",
+      "sourceBytes": 1538898,
+      "outputBytes": 169786,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/cijin/collection/thumbnail.png",
+      "output": "assets/spots/cijin/collection/thumbnail.webp",
+      "sourceSha256": "69d233e9b838bf92e9c21ea1eac3d42c0eef533ccc394115debd5e66dba43722",
+      "outputSha256": "a0ba7d7722297696c09ff54bd265c2527651f275728bb6bfce93bdff1bd53cf4",
+      "sourceBytes": 421103,
+      "outputBytes": 52638,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/cijin/world/landmark.png",
+      "output": "assets/spots/cijin/world/landmark.webp",
+      "sourceSha256": "c3375365f334b6590c738f44f49b4dc917ccded551fcca43d2c704e5449a6c3a",
+      "outputSha256": "a01813d5a99e9017d125e60fb60807510ddd8aad0755e44a63819b8aa2f70011",
+      "sourceBytes": 299513,
+      "outputBytes": 193394,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/cingjing/collection/day.png",
+      "output": "assets/spots/cingjing/collection/day.webp",
+      "sourceSha256": "037b64e9aefd2c9f6227956d85a69cfa7369e04cc8481b64dbbfb39897aac89f",
+      "outputSha256": "cbeb573c4444ac37a885c43044a479250445b3453675930c5b9edf0e595d2181",
+      "sourceBytes": 1591997,
+      "outputBytes": 171964,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/cingjing/collection/thumbnail.png",
+      "output": "assets/spots/cingjing/collection/thumbnail.webp",
+      "sourceSha256": "79597114d5dc5da14bc420a6e00913d19e398a4f6d9c88a710ec6a1837957655",
+      "outputSha256": "a7ba8108350f299303481328efa780879714e4f0df1e8176c1858971a7cd19a6",
+      "sourceBytes": 443393,
+      "outputBytes": 58452,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/cingjing/world/landmark.png",
+      "output": "assets/spots/cingjing/world/landmark.webp",
+      "sourceSha256": "1e643a3fe4d42174ca9a65e4214d1fd88e1e3166cbe9ead0b3abae237a98fdad",
+      "outputSha256": "13fcd6aa72772476f812721eaf9e901e3544fbb05f865c38f845f8b359f90096",
+      "sourceBytes": 331572,
+      "outputBytes": 219570,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/dadaocheng/collection/day.png",
+      "output": "assets/spots/dadaocheng/collection/day.webp",
+      "sourceSha256": "4a18dafc8bf26e93e8b67e3a5b6e87d1c4115585e4c6375f74f0713e3440b498",
+      "outputSha256": "18b4720ce51cc51db0cdf555447c23f7dbedc2e1d0d53046e44c68ba9d83e20a",
+      "sourceBytes": 1731416,
+      "outputBytes": 221626,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/dadaocheng/collection/thumbnail.png",
+      "output": "assets/spots/dadaocheng/collection/thumbnail.webp",
+      "sourceSha256": "e1d2d8405fbb772fcc5de80fa9657462d9a99eb089002edde57454cf3ac804d0",
+      "outputSha256": "2d1712b7319c876c769b2a828bcd0e2882d21e168c9e48b37efaf86732f231ec",
+      "sourceBytes": 470307,
+      "outputBytes": 66552,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/dadaocheng/world/landmark.png",
+      "output": "assets/spots/dadaocheng/world/landmark.webp",
+      "sourceSha256": "18cc03387c7158840fed0c6b476c3fe9639d4a3c74f7810ce66f8fbda7fe8da0",
+      "outputSha256": "4cb1a23117c5be268c8b2b1399c8ea501ab2196f2d7e874984a40e82b34390bd",
+      "sourceBytes": 367251,
+      "outputBytes": 244720,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/gaomei/collection/day.png",
+      "output": "assets/spots/gaomei/collection/day.webp",
+      "sourceSha256": "4d0240f1a21d09ba6f3ee967a8bcab085e4a186948b16597a8b6a4913b0c65d1",
+      "outputSha256": "54d3729b7eb5912162d13e606db23d74c06e2ed1b2dcfc874e30efbd5461c30a",
+      "sourceBytes": 1459065,
+      "outputBytes": 145522,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/gaomei/collection/thumbnail.png",
+      "output": "assets/spots/gaomei/collection/thumbnail.webp",
+      "sourceSha256": "32f1bdf966e4dd241333bbc2207af9107a96172f80242f9730cad460690f4300",
+      "outputSha256": "9db72d0aad60b1a5daace01a46286c410034ca4fbbbf194aa402cb6804ae50e9",
+      "sourceBytes": 397068,
+      "outputBytes": 47074,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/gaomei/world/landmark.png",
+      "output": "assets/spots/gaomei/world/landmark.webp",
+      "sourceSha256": "e6b0d3b15b3d496ecf3d0b53978a56036238ecd30ff581a84c9c9b62520b5771",
+      "outputSha256": "7f04f4a00861967518a2bfa22bfeee88ebe9da83985e1b495e0910d166cf9ad9",
+      "sourceBytes": 250602,
+      "outputBytes": 168904,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/hehuanshan/collection/day.png",
+      "output": "assets/spots/hehuanshan/collection/day.webp",
+      "sourceSha256": "093ad92a3bfb45a9eb5b6494797bdde81f1714b7658fe4ab9ed74dcb12a94e28",
+      "outputSha256": "afcebabb1ac663fbf3cda406456b21ad746d84ee4de91d6eb696196957918821",
+      "sourceBytes": 1585740,
+      "outputBytes": 171746,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/hehuanshan/collection/thumbnail.png",
+      "output": "assets/spots/hehuanshan/collection/thumbnail.webp",
+      "sourceSha256": "cdd558a7ea9c26a31b7f4b618a397a40642151cc0af5dce4e4e081903d1c9451",
+      "outputSha256": "a86f402b6a94c122b51a1d760130c05427de9f972d8fec505bf612417616dafb",
+      "sourceBytes": 428453,
+      "outputBytes": 54730,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/hehuanshan/world/landmark.png",
+      "output": "assets/spots/hehuanshan/world/landmark.webp",
+      "sourceSha256": "663e886690fb5e062a97eaa255c64f5efdee5670fd8f6f059df2269d124c571e",
+      "outputSha256": "d24d9c11ac3c036d57b84a7b4663d570d9c47f15b47e01b17fe1ff4f0527e73a",
+      "sourceBytes": 353163,
+      "outputBytes": 239306,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/jiufen/collection/day.png",
+      "output": "assets/spots/jiufen/collection/day.webp",
+      "sourceSha256": "9112f56ce2338cf4ab83ba7b7c41e99a4bad12a3fdf0f2ecf0f68fa675b8e88b",
+      "outputSha256": "d8a0a87352abca2a59ce0c3391941433af46e081153cb77746f867cd1cfd3f99",
+      "sourceBytes": 1731732,
+      "outputBytes": 228588,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/jiufen/collection/thumbnail.png",
+      "output": "assets/spots/jiufen/collection/thumbnail.webp",
+      "sourceSha256": "ee097af5237c87c87890fc78a18087be6b9870aaa3743458b8b5c8ec527b71b6",
+      "outputSha256": "490502e7e5fca5045345ca984a5fcf3c2252d863af37b26d896dfd504d04d7c6",
+      "sourceBytes": 478394,
+      "outputBytes": 71530,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/jiufen/world/landmark.png",
+      "output": "assets/spots/jiufen/world/landmark.webp",
+      "sourceSha256": "3eac8562f606afb50d77ea73824d5d47cf53265b7731c95f35b4c7a3621b67d6",
+      "outputSha256": "8874242a8fbc7dc0aa37b93b8722b06659a0d8e3d51e45d4d2cfcee7aabeaf62",
+      "sourceBytes": 456804,
+      "outputBytes": 319714,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/kenting/collection/day.png",
+      "output": "assets/spots/kenting/collection/day.webp",
+      "sourceSha256": "4ac659b52a730353665a1ea8a72e64df809912136e79c17d2d15eba8531730c3",
+      "outputSha256": "fe313de6fe6c0f178afee75822e0b1822bf50562704c5e4b33c92f1ada57e86a",
+      "sourceBytes": 1489163,
+      "outputBytes": 146324,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/kenting/collection/thumbnail.png",
+      "output": "assets/spots/kenting/collection/thumbnail.webp",
+      "sourceSha256": "193a1eed1d7651eb3311d76e51887716c02376207c2dd9e1baf6643348346b52",
+      "outputSha256": "3d3e8b2b15407fd8877a50f274b152cab7b7358e47834a1d6ebe5ab0eff7f8be",
+      "sourceBytes": 407564,
+      "outputBytes": 49224,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/kenting/world/landmark.png",
+      "output": "assets/spots/kenting/world/landmark.webp",
+      "sourceSha256": "13189d6a55d210b87a54a180b77f47b920dbdada9d7cd95ef2f5893e3b93f3a8",
+      "outputSha256": "34732df3305f369a5af73eb64a5e99211681ce53d9f64b61a1bceb8822154c06",
+      "sourceBytes": 336197,
+      "outputBytes": 229532,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/lukang/collection/day.png",
+      "output": "assets/spots/lukang/collection/day.webp",
+      "sourceSha256": "dc1029f9e6a8a490eeef2de528e840950104acc88d29d29daea797c908d4d341",
+      "outputSha256": "f23617ba43c96336e7a4b65c1c6c14723436a4a077edadcfa43741ff9fec24d8",
+      "sourceBytes": 1628188,
+      "outputBytes": 185860,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/lukang/collection/thumbnail.png",
+      "output": "assets/spots/lukang/collection/thumbnail.webp",
+      "sourceSha256": "68265abd1f846d5fd166b430892089506034b054cd46232b49a2dc946ba79144",
+      "outputSha256": "34b2e2c6241750a5403ab398478204f9f7a6ebdadd5df6a585318c0e337b58a3",
+      "sourceBytes": 449832,
+      "outputBytes": 59172,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/lukang/world/landmark.png",
+      "output": "assets/spots/lukang/world/landmark.webp",
+      "sourceSha256": "f77545bd8b6c70955867773b2120ccec10b07cd3d04a442940c1a82771d7d81a",
+      "outputSha256": "c43029e8b7f5ea708e3574afb5100c438a400cdfb55b38cbd9c932973b05f314",
+      "sourceBytes": 391318,
+      "outputBytes": 266132,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/palace-museum/collection/day.png",
+      "output": "assets/spots/palace-museum/collection/day.webp",
+      "sourceSha256": "8ede20a03bfb5734a7322366bb9aa97569906e7e0007d42ceb7e734eaf69264b",
+      "outputSha256": "1a2e8289c2e4ed74cd94b3ce6c7a6168224d6d6ae16afcbc0fb87a0dfc25fbfc",
+      "sourceBytes": 1696835,
+      "outputBytes": 217346,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/palace-museum/collection/thumbnail.png",
+      "output": "assets/spots/palace-museum/collection/thumbnail.webp",
+      "sourceSha256": "0f859a96528a5842d54281a7401099a7f1dafb09ff33289bea2ea0a1f85d91cf",
+      "outputSha256": "12158ee4f4e4a22ca8039f62ae012482396e9c1d0018835728fe833559c6852d",
+      "sourceBytes": 463789,
+      "outputBytes": 68510,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/palace-museum/world/landmark.png",
+      "output": "assets/spots/palace-museum/world/landmark.webp",
+      "sourceSha256": "4a5efde3e47dfb22672584d311100d6e80e4dd4a6e5a7ec73388d74ae8b69eca",
+      "outputSha256": "3a5443a6297c283c2fb934719d265e420392ec2939f64a7261e5bdfdf8ecae74",
+      "sourceBytes": 245159,
+      "outputBytes": 158950,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/pier2/collection/day.png",
+      "output": "assets/spots/pier2/collection/day.webp",
+      "sourceSha256": "63d874215b7682243a9583b9b403abb774ff3ef3ce6c68fbf6b99ba6b8a6b31e",
+      "outputSha256": "62638e677304c4792c850b8a32f61e845ecc7902d087f7a33f64ef219dd2d742",
+      "sourceBytes": 1653794,
+      "outputBytes": 196634,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/pier2/collection/thumbnail.png",
+      "output": "assets/spots/pier2/collection/thumbnail.webp",
+      "sourceSha256": "faa2fe9750ad7054fcff4a27314434d42bc5136eff7eaff511e1ba7a3640b62f",
+      "outputSha256": "2fccc6d32e319c36754bb0fca35d4d1b7b23c07a453148afb096e5a89084ba2d",
+      "sourceBytes": 453981,
+      "outputBytes": 61424,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/pier2/world/landmark.png",
+      "output": "assets/spots/pier2/world/landmark.webp",
+      "sourceSha256": "ccb34f7b6e8d0dc398c1e1c4ac8b688e516366b8d9ab03c21d1c02091668c076",
+      "outputSha256": "92bea61b3ab641f139b6fec36ab88f3cad4fa4063b25854079351b603bd7fd73",
+      "sourceBytes": 356474,
+      "outputBytes": 234686,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/qingshui-cliff/collection/day.png",
+      "output": "assets/spots/qingshui-cliff/collection/day.webp",
+      "sourceSha256": "17d3c94cc5fc1b744d0cdec7acbd391b50a4238c5d46fdf714fac5f95799c7c4",
+      "outputSha256": "6bcf7a2a39198bfcb1c98c2aac42b2ce9f2f633d1d76d6e8f897d0bcaf4dd012",
+      "sourceBytes": 1709535,
+      "outputBytes": 213730,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/qingshui-cliff/collection/thumbnail.png",
+      "output": "assets/spots/qingshui-cliff/collection/thumbnail.webp",
+      "sourceSha256": "7eaa0f79bbaa9397c9250acf102d3acd122bbab225cbe64c2d3d8946ede9712f",
+      "outputSha256": "36a760aa8541b25b04031cfe02f331232545bfdf3656b66c34ac832ac9df0126",
+      "sourceBytes": 468477,
+      "outputBytes": 66900,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/qingshui-cliff/world/landmark.png",
+      "output": "assets/spots/qingshui-cliff/world/landmark.webp",
+      "sourceSha256": "29d38d62d3a7defdc1dc031aa0020b7434c0a5de969bb071cbc795f6faf7dce8",
+      "outputSha256": "f74837951067c2a0954ce2ae3bc97380bf64799f0cadf07b478e691759b2e849",
+      "sourceBytes": 381192,
+      "outputBytes": 257608,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/qixingtan/collection/day.png",
+      "output": "assets/spots/qixingtan/collection/day.webp",
+      "sourceSha256": "1ef6ab22ba51032736089128ebe7fd8e13e7f01e10953744bb31f2a4248d37be",
+      "outputSha256": "bcd2c0139cdb13d7d14757fceb197609fe0a1f3f04f2db762eb43c19f2fa4bd9",
+      "sourceBytes": 1606560,
+      "outputBytes": 195018,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/qixingtan/collection/thumbnail.png",
+      "output": "assets/spots/qixingtan/collection/thumbnail.webp",
+      "sourceSha256": "574abf93bf2648302b96de9c8c45fe2d4fd91493cdcf2a4fe0d798c5d0f84213",
+      "outputSha256": "44214b5a5a38220865379a6d88303be15c3a77a40dd2c9deb44ab96feedd0b68",
+      "sourceBytes": 434713,
+      "outputBytes": 57880,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/qixingtan/world/landmark.png",
+      "output": "assets/spots/qixingtan/world/landmark.webp",
+      "sourceSha256": "c5223a6bf5e5a65a2a6303a6366d71457e401c1945b056810ba35342b8881a80",
+      "outputSha256": "df189d24531178709755cfe9be339d893672cae3b04b021a4a39f6575938859a",
+      "sourceBytes": 357333,
+      "outputBytes": 238380,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/rainbow-village/collection/day.png",
+      "output": "assets/spots/rainbow-village/collection/day.webp",
+      "sourceSha256": "259f5ec67e12122488c185ee58f46afd2bef348c4ccdcddb5ddf7b64aad37192",
+      "outputSha256": "f8224ffc918bd96c4e1820911facbf8fd024f6559ffa40716ece64b5bc889ffa",
+      "sourceBytes": 1575162,
+      "outputBytes": 169098,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/rainbow-village/collection/thumbnail.png",
+      "output": "assets/spots/rainbow-village/collection/thumbnail.webp",
+      "sourceSha256": "778c45d804d2ee81aa8c263c600b640b9c568ac2eee5010f2242f1241dca766c",
+      "outputSha256": "5ffa8a1592f945f1283bc5ad79d9a1c83f9b8e1dc8cabe8921d4c123f9caf8d2",
+      "sourceBytes": 431834,
+      "outputBytes": 52808,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/rainbow-village/world/landmark.png",
+      "output": "assets/spots/rainbow-village/world/landmark.webp",
+      "sourceSha256": "7804c98d9179af423b1f2b6bd869485db1a7b1e3adc860b6d08ac2dcf9f96fd1",
+      "outputSha256": "2cc34283dd06d5b9368bce60d1fc2133b26a341f85ef14b006df59043b203efc",
+      "sourceBytes": 416190,
+      "outputBytes": 295436,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/ruisui/collection/day.png",
+      "output": "assets/spots/ruisui/collection/day.webp",
+      "sourceSha256": "0f74d0b1a20529e37d40988a7898a3e50cc00508d108f058b273f4e93a97d0ee",
+      "outputSha256": "47187f28ae0fa6ca14ea6733a7e0f045619a03bffa867c1fc3aa2ff91d1f5fa2",
+      "sourceBytes": 1385186,
+      "outputBytes": 114018,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/ruisui/collection/thumbnail.png",
+      "output": "assets/spots/ruisui/collection/thumbnail.webp",
+      "sourceSha256": "27178c96fd60d9abc941d14b69f5f5d12477eb3352074f397c79623166963dc8",
+      "outputSha256": "11af8946a669d83e2eda6c048fb476bcadf58dd6b459e6193c7755b5e36a8179",
+      "sourceBytes": 376889,
+      "outputBytes": 38184,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/ruisui/world/landmark.png",
+      "output": "assets/spots/ruisui/world/landmark.webp",
+      "sourceSha256": "fab2b8f90d7bb0a33e83984875a5f1aa981183b9321ae74f8b749976492ccb9d",
+      "outputSha256": "ccbd2ab23494b8ff8baa39c8243ef84386761543c5d4ed4f3c98190f83f31c80",
+      "sourceBytes": 282865,
+      "outputBytes": 183610,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/sanxiantai/collection/day.png",
+      "output": "assets/spots/sanxiantai/collection/day.webp",
+      "sourceSha256": "8e2a7da6e854d4c01a96297e1729dc797ae57eafe25a394bb69c94411fc83c18",
+      "outputSha256": "8eb99f4b6563d5985b3d4551db2aaa595686a2c9ba7294846614865bf085d36e",
+      "sourceBytes": 1501773,
+      "outputBytes": 144430,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/sanxiantai/collection/thumbnail.png",
+      "output": "assets/spots/sanxiantai/collection/thumbnail.webp",
+      "sourceSha256": "889256724290ab6f734c6d86ef84a06c41f09144a3336a86e722cc25484b1331",
+      "outputSha256": "dc30f64c9d5d0bae249fffa2fe215f267a06a32f63e6d7ec9970d5de4ac34d5b",
+      "sourceBytes": 408029,
+      "outputBytes": 47450,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/sanxiantai/world/landmark.png",
+      "output": "assets/spots/sanxiantai/world/landmark.webp",
+      "sourceSha256": "ffad80fcd6590285dd38823bc08b94259e3b622fbb30901f04c4b1ea31751dc1",
+      "outputSha256": "a18a986d6f436a4d7510d326a5a97e3958a8c6549017e7f95e5ebf05bfd5a02b",
+      "sourceBytes": 319811,
+      "outputBytes": 218170,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/sun-moon-lake/collection/day.png",
+      "output": "assets/spots/sun-moon-lake/collection/day.webp",
+      "sourceSha256": "d409cc55ac232d36ba181774ba51155a2bf0bfc32ca17da59e94664ff96d7021",
+      "outputSha256": "d68a086300df40b8a126e2cce3ad9a7ae70a3bcf573b2a0b2c8a3a77ba71b935",
+      "sourceBytes": 1597297,
+      "outputBytes": 169006,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/sun-moon-lake/collection/thumbnail.png",
+      "output": "assets/spots/sun-moon-lake/collection/thumbnail.webp",
+      "sourceSha256": "4f1d2e1b9287998352d28e0c85309f35a2290e7978a244b5e20bdb261a42bcc0",
+      "outputSha256": "343d156671e8d30b045a5fbeae2d1134192717cadf4dfb84ecc83b07d2c81c30",
+      "sourceBytes": 433967,
+      "outputBytes": 53440,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/sun-moon-lake/world/landmark.png",
+      "output": "assets/spots/sun-moon-lake/world/landmark.webp",
+      "sourceSha256": "c76dc5c15113c7017e95df73f9d90bbcff57b7e761a7e070c499c4505b48c7f1",
+      "outputSha256": "42bc29f43a0db7354d6637e025de6655b5f884f6688e33950e45fb466c2d0a5e",
+      "sourceBytes": 295994,
+      "outputBytes": 197324,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/taipei-101/collection/day.png",
+      "output": "assets/spots/taipei-101/collection/day.webp",
+      "sourceSha256": "3b5729c03ce4ef24dc26700b4d0483f2beb6ad1f0ff3da2412e2f4e7c44eef2b",
+      "outputSha256": "78c51fc665e6c7ec1163c9ad9f50cc097520a237fc1453bace98ff06175a0fe4",
+      "sourceBytes": 1404724,
+      "outputBytes": 116856,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/taipei-101/collection/thumbnail.png",
+      "output": "assets/spots/taipei-101/collection/thumbnail.webp",
+      "sourceSha256": "999ea7d6fb03b4f7ce5f7dbd388a64939c8cb49e9a65fc98f68ccdc1d71c52a1",
+      "outputSha256": "96f8ccc30604b12ce92327c5f0e2bbade4f2280cbb35a09a885718dffa8b2bf8",
+      "sourceBytes": 377131,
+      "outputBytes": 37662,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/taipei-101/world/landmark.png",
+      "output": "assets/spots/taipei-101/world/landmark.webp",
+      "sourceSha256": "6d53cddcb3b761ecca38e93f1ae5688c06bc5b0335be036bcbadf385ad43c56d",
+      "outputSha256": "5b452d72d7a39a05ae27753b8f20b8927b162ccabab433bd58e4989b54521cc5",
+      "sourceBytes": 128726,
+      "outputBytes": 82506,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/tamsui/collection/day.png",
+      "output": "assets/spots/tamsui/collection/day.webp",
+      "sourceSha256": "88a76ed13184ae2cfc5c1590e95b984d1c27801ef4eb820010180303a7cc2827",
+      "outputSha256": "53d87bc63af20a81e3aac65f2d44e741fb986063e53e18fbd6d80b8fe73a2eae",
+      "sourceBytes": 1497288,
+      "outputBytes": 157018,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/tamsui/collection/thumbnail.png",
+      "output": "assets/spots/tamsui/collection/thumbnail.webp",
+      "sourceSha256": "1aa90a58e6240b9f60a8b9d6cd291d1a972b64d13b732bfe3f19ba79a2c99089",
+      "outputSha256": "6d95fe91d7cd99b336a2ab1593821f89283448b1a2d50d90f3afff52a49f6054",
+      "sourceBytes": 410660,
+      "outputBytes": 51970,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/tamsui/world/landmark.png",
+      "output": "assets/spots/tamsui/world/landmark.webp",
+      "sourceSha256": "8ecb5678321b289d7094c12c614aa1a8de7ab5ea0c19bd345f5fa1718f3b2d59",
+      "outputSha256": "a615f7af0c26d8f84b8ea371ec202a5b85dfbca835620f66db4b0a956dea5af8",
+      "sourceBytes": 311873,
+      "outputBytes": 218622,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/taroko/collection/day.png",
+      "output": "assets/spots/taroko/collection/day.webp",
+      "sourceSha256": "14abe3b0ecf919296ce0b90c8629515ccb1fee28a603af2cda4bae69f56e733b",
+      "outputSha256": "510d65f8aed81214a1437e35c5af8c2d006134359cb76f67db19b7e8ba277f3f",
+      "sourceBytes": 1762703,
+      "outputBytes": 209126,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/taroko/collection/thumbnail.png",
+      "output": "assets/spots/taroko/collection/thumbnail.webp",
+      "sourceSha256": "8df18536b1c63fcd704df1a6e2943c2e727687ccb9095b555f03117ba63d7033",
+      "outputSha256": "a5e08d4a2daaa2755673e827bc7855ddfd95dbd25b71515848ce3e3b14a641dc",
+      "sourceBytes": 495064,
+      "outputBytes": 71558,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/taroko/world/landmark.png",
+      "output": "assets/spots/taroko/world/landmark.webp",
+      "sourceSha256": "f87557097ff7bcfa15c07ac054462d589e4b3ace53e1a759beb7dc9b82cdeb53",
+      "outputSha256": "3698e19e20bd50778d6d746d345dc33f78ca6b2d50b122682596171d63a711f2",
+      "sourceBytes": 438214,
+      "outputBytes": 290032,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/xiangshan/collection/day.png",
+      "output": "assets/spots/xiangshan/collection/day.webp",
+      "sourceSha256": "e9fbaf97d1abdaee52a272c50e5f301c46a733518dbb99377ad91805ee72efaa",
+      "outputSha256": "826d3b18c051e777a4e0f72e83a548efd1fef8443d53f6f300b33f422ae65ed5",
+      "sourceBytes": 1546321,
+      "outputBytes": 142366,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/xiangshan/collection/thumbnail.png",
+      "output": "assets/spots/xiangshan/collection/thumbnail.webp",
+      "sourceSha256": "1218eb39e8222922066fc4b6278622bca529ed26119ce9439f8a514303982643",
+      "outputSha256": "c09e02a568f4de1ba3054928c6fd7c9f5dd2a615fc776dc05c5889a41d949f1b",
+      "sourceBytes": 421795,
+      "outputBytes": 45284,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/yehliu/collection/day.png",
+      "output": "assets/spots/yehliu/collection/day.webp",
+      "sourceSha256": "4eb397d0c26a719eab4d87127aca19af62c482de89498031d6eb61135c9fc4d1",
+      "outputSha256": "f9298d840f89b016761d2a7e557ac7fbadc038aa16579ec4344ae08a026549cc",
+      "sourceBytes": 1447356,
+      "outputBytes": 131738,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/yehliu/collection/thumbnail.png",
+      "output": "assets/spots/yehliu/collection/thumbnail.webp",
+      "sourceSha256": "6c7ebd56e9586dd85f02544abbc5095e07b58c70a812e56c8381959d8713d95d",
+      "outputSha256": "8cc18b095f2eaf1e560bf900d1e31b07e9b093495d33449de57274124ad9b06d",
+      "sourceBytes": 392039,
+      "outputBytes": 42046,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88
+    },
+    {
+      "family": "world",
+      "source": "assets/spots/yehliu/world/landmark.png",
+      "output": "assets/spots/yehliu/world/landmark.webp",
+      "sourceSha256": "667b8fb30861ca9eefaa94e09f5bcc6b5926f2c79400acaa28c275b5a4f4c31a",
+      "outputSha256": "b3af2cc45cb7291beb481d7b8285afe5bb578f5d1a59dce02fb3f8b22da8c28a",
+      "sourceBytes": 200996,
+      "outputBytes": 125248,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": true,
+      "quality": null
+    }
+  ]
+}

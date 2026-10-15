@@ -4,176 +4,176 @@ import type { SpotAssetSet } from './spotAssets';
 export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
   'alishan': {
     collection: {
-      day: require('../../assets/spots/alishan/collection/day.png'),
-      thumbnail: require('../../assets/spots/alishan/collection/thumbnail.png'),
+      day: require('../../assets/spots/alishan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/alishan/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/alishan/world/landmark.png'),
+    world: require('../../assets/spots/alishan/world/landmark.webp'),
   },
   'anping': {
     collection: {
-      day: require('../../assets/spots/anping/collection/day.png'),
-      thumbnail: require('../../assets/spots/anping/collection/thumbnail.png'),
+      day: require('../../assets/spots/anping/collection/day.webp'),
+      thumbnail: require('../../assets/spots/anping/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/anping/world/landmark.png'),
+    world: require('../../assets/spots/anping/world/landmark.webp'),
   },
   'brown-avenue': {
     collection: {
-      day: require('../../assets/spots/brown-avenue/collection/day.png'),
-      thumbnail: require('../../assets/spots/brown-avenue/collection/thumbnail.png'),
+      day: require('../../assets/spots/brown-avenue/collection/day.webp'),
+      thumbnail: require('../../assets/spots/brown-avenue/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/brown-avenue/world/landmark.png'),
+    world: require('../../assets/spots/brown-avenue/world/landmark.webp'),
   },
   'chihkan': {
     collection: {
-      day: require('../../assets/spots/chihkan/collection/day.png'),
-      thumbnail: require('../../assets/spots/chihkan/collection/thumbnail.png'),
+      day: require('../../assets/spots/chihkan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/chihkan/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/chihkan/world/landmark.png'),
+    world: require('../../assets/spots/chihkan/world/landmark.webp'),
   },
   'cijin': {
     collection: {
-      day: require('../../assets/spots/cijin/collection/day.png'),
-      thumbnail: require('../../assets/spots/cijin/collection/thumbnail.png'),
+      day: require('../../assets/spots/cijin/collection/day.webp'),
+      thumbnail: require('../../assets/spots/cijin/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/cijin/world/landmark.png'),
+    world: require('../../assets/spots/cijin/world/landmark.webp'),
   },
   'cingjing': {
     collection: {
-      day: require('../../assets/spots/cingjing/collection/day.png'),
-      thumbnail: require('../../assets/spots/cingjing/collection/thumbnail.png'),
+      day: require('../../assets/spots/cingjing/collection/day.webp'),
+      thumbnail: require('../../assets/spots/cingjing/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/cingjing/world/landmark.png'),
+    world: require('../../assets/spots/cingjing/world/landmark.webp'),
   },
   'dadaocheng': {
     collection: {
-      day: require('../../assets/spots/dadaocheng/collection/day.png'),
-      thumbnail: require('../../assets/spots/dadaocheng/collection/thumbnail.png'),
+      day: require('../../assets/spots/dadaocheng/collection/day.webp'),
+      thumbnail: require('../../assets/spots/dadaocheng/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/dadaocheng/world/landmark.png'),
+    world: require('../../assets/spots/dadaocheng/world/landmark.webp'),
   },
   'gaomei': {
     collection: {
-      day: require('../../assets/spots/gaomei/collection/day.png'),
-      thumbnail: require('../../assets/spots/gaomei/collection/thumbnail.png'),
+      day: require('../../assets/spots/gaomei/collection/day.webp'),
+      thumbnail: require('../../assets/spots/gaomei/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/gaomei/world/landmark.png'),
+    world: require('../../assets/spots/gaomei/world/landmark.webp'),
   },
   'hehuanshan': {
     collection: {
-      day: require('../../assets/spots/hehuanshan/collection/day.png'),
-      thumbnail: require('../../assets/spots/hehuanshan/collection/thumbnail.png'),
+      day: require('../../assets/spots/hehuanshan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/hehuanshan/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/hehuanshan/world/landmark.png'),
+    world: require('../../assets/spots/hehuanshan/world/landmark.webp'),
   },
   'jiufen': {
     collection: {
-      day: require('../../assets/spots/jiufen/collection/day.png'),
-      thumbnail: require('../../assets/spots/jiufen/collection/thumbnail.png'),
+      day: require('../../assets/spots/jiufen/collection/day.webp'),
+      thumbnail: require('../../assets/spots/jiufen/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/jiufen/world/landmark.png'),
+    world: require('../../assets/spots/jiufen/world/landmark.webp'),
   },
   'kenting': {
     collection: {
-      day: require('../../assets/spots/kenting/collection/day.png'),
-      thumbnail: require('../../assets/spots/kenting/collection/thumbnail.png'),
+      day: require('../../assets/spots/kenting/collection/day.webp'),
+      thumbnail: require('../../assets/spots/kenting/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/kenting/world/landmark.png'),
+    world: require('../../assets/spots/kenting/world/landmark.webp'),
   },
   'lukang': {
     collection: {
-      day: require('../../assets/spots/lukang/collection/day.png'),
-      thumbnail: require('../../assets/spots/lukang/collection/thumbnail.png'),
+      day: require('../../assets/spots/lukang/collection/day.webp'),
+      thumbnail: require('../../assets/spots/lukang/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/lukang/world/landmark.png'),
+    world: require('../../assets/spots/lukang/world/landmark.webp'),
   },
   'palace-museum': {
     collection: {
-      day: require('../../assets/spots/palace-museum/collection/day.png'),
-      thumbnail: require('../../assets/spots/palace-museum/collection/thumbnail.png'),
+      day: require('../../assets/spots/palace-museum/collection/day.webp'),
+      thumbnail: require('../../assets/spots/palace-museum/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/palace-museum/world/landmark.png'),
+    world: require('../../assets/spots/palace-museum/world/landmark.webp'),
   },
   'pier2': {
     collection: {
-      day: require('../../assets/spots/pier2/collection/day.png'),
-      thumbnail: require('../../assets/spots/pier2/collection/thumbnail.png'),
+      day: require('../../assets/spots/pier2/collection/day.webp'),
+      thumbnail: require('../../assets/spots/pier2/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/pier2/world/landmark.png'),
+    world: require('../../assets/spots/pier2/world/landmark.webp'),
   },
   'qingshui-cliff': {
     collection: {
-      day: require('../../assets/spots/qingshui-cliff/collection/day.png'),
-      thumbnail: require('../../assets/spots/qingshui-cliff/collection/thumbnail.png'),
+      day: require('../../assets/spots/qingshui-cliff/collection/day.webp'),
+      thumbnail: require('../../assets/spots/qingshui-cliff/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/qingshui-cliff/world/landmark.png'),
+    world: require('../../assets/spots/qingshui-cliff/world/landmark.webp'),
   },
   'qixingtan': {
     collection: {
-      day: require('../../assets/spots/qixingtan/collection/day.png'),
-      thumbnail: require('../../assets/spots/qixingtan/collection/thumbnail.png'),
+      day: require('../../assets/spots/qixingtan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/qixingtan/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/qixingtan/world/landmark.png'),
+    world: require('../../assets/spots/qixingtan/world/landmark.webp'),
   },
   'rainbow-village': {
     collection: {
-      day: require('../../assets/spots/rainbow-village/collection/day.png'),
-      thumbnail: require('../../assets/spots/rainbow-village/collection/thumbnail.png'),
+      day: require('../../assets/spots/rainbow-village/collection/day.webp'),
+      thumbnail: require('../../assets/spots/rainbow-village/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/rainbow-village/world/landmark.png'),
+    world: require('../../assets/spots/rainbow-village/world/landmark.webp'),
   },
   'ruisui': {
     collection: {
-      day: require('../../assets/spots/ruisui/collection/day.png'),
-      thumbnail: require('../../assets/spots/ruisui/collection/thumbnail.png'),
+      day: require('../../assets/spots/ruisui/collection/day.webp'),
+      thumbnail: require('../../assets/spots/ruisui/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/ruisui/world/landmark.png'),
+    world: require('../../assets/spots/ruisui/world/landmark.webp'),
   },
   'sanxiantai': {
     collection: {
-      day: require('../../assets/spots/sanxiantai/collection/day.png'),
-      thumbnail: require('../../assets/spots/sanxiantai/collection/thumbnail.png'),
+      day: require('../../assets/spots/sanxiantai/collection/day.webp'),
+      thumbnail: require('../../assets/spots/sanxiantai/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/sanxiantai/world/landmark.png'),
+    world: require('../../assets/spots/sanxiantai/world/landmark.webp'),
   },
   'sun-moon-lake': {
     collection: {
-      day: require('../../assets/spots/sun-moon-lake/collection/day.png'),
-      thumbnail: require('../../assets/spots/sun-moon-lake/collection/thumbnail.png'),
+      day: require('../../assets/spots/sun-moon-lake/collection/day.webp'),
+      thumbnail: require('../../assets/spots/sun-moon-lake/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/sun-moon-lake/world/landmark.png'),
+    world: require('../../assets/spots/sun-moon-lake/world/landmark.webp'),
   },
   'taipei-101': {
     collection: {
-      day: require('../../assets/spots/taipei-101/collection/day.png'),
-      thumbnail: require('../../assets/spots/taipei-101/collection/thumbnail.png'),
+      day: require('../../assets/spots/taipei-101/collection/day.webp'),
+      thumbnail: require('../../assets/spots/taipei-101/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/taipei-101/world/landmark.png'),
+    world: require('../../assets/spots/taipei-101/world/landmark.webp'),
   },
   'tamsui': {
     collection: {
-      day: require('../../assets/spots/tamsui/collection/day.png'),
-      thumbnail: require('../../assets/spots/tamsui/collection/thumbnail.png'),
+      day: require('../../assets/spots/tamsui/collection/day.webp'),
+      thumbnail: require('../../assets/spots/tamsui/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/tamsui/world/landmark.png'),
+    world: require('../../assets/spots/tamsui/world/landmark.webp'),
   },
   'taroko': {
     collection: {
-      day: require('../../assets/spots/taroko/collection/day.png'),
-      thumbnail: require('../../assets/spots/taroko/collection/thumbnail.png'),
+      day: require('../../assets/spots/taroko/collection/day.webp'),
+      thumbnail: require('../../assets/spots/taroko/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/taroko/world/landmark.png'),
+    world: require('../../assets/spots/taroko/world/landmark.webp'),
   },
   'xiangshan': {
     collection: {
-      day: require('../../assets/spots/xiangshan/collection/day.png'),
-      thumbnail: require('../../assets/spots/xiangshan/collection/thumbnail.png'),
+      day: require('../../assets/spots/xiangshan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/xiangshan/collection/thumbnail.webp'),
     },
   },
   'yehliu': {
     collection: {
-      day: require('../../assets/spots/yehliu/collection/day.png'),
-      thumbnail: require('../../assets/spots/yehliu/collection/thumbnail.png'),
+      day: require('../../assets/spots/yehliu/collection/day.webp'),
+      thumbnail: require('../../assets/spots/yehliu/collection/thumbnail.webp'),
     },
-    world: require('../../assets/spots/yehliu/world/landmark.png'),
+    world: require('../../assets/spots/yehliu/world/landmark.webp'),
   },
 };

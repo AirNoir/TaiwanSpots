@@ -5,25 +5,14 @@
 import { existsSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { pickRuntimeImage as pick } from './spot-asset-files.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const spotsDir = join(root, 'assets/spots');
 const outFile = join(root, 'src/data/spotAssets.generated.ts');
 
 const IMAGE = /\.(png|webp|jpe?g|avif)$/i;
-// Preferred runtime formats first (spec §14: WebP/AVIF runtime, PNG master).
-const EXT_ORDER = ['webp', 'avif', 'png', 'jpg', 'jpeg'];
 const COLLECTION_VARIANTS = ['day', 'sunset', 'night', 'thumbnail'];
-
-function pick(dir, base) {
-  if (!existsSync(dir)) return null;
-  const files = readdirSync(dir).filter((f) => IMAGE.test(f));
-  for (const ext of EXT_ORDER) {
-    const hit = files.find((f) => f.toLowerCase() === `${base}.${ext}`);
-    if (hit) return hit;
-  }
-  return null;
-}
 
 function firstImage(dir) {
   if (!existsSync(dir)) return null;

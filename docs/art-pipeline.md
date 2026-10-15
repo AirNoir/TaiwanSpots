@@ -31,7 +31,7 @@ App 只透過 `src/data/spotAssets.ts` 取圖。實際的 `require()` 對照表 
 | `npm run assets:prompt -- <id> --token` | 組出 World Token 生成 prompt |
 | `npm run assets:tokens [-- <id>…]` | 從 `collection/day` 去背裁切出暫用 token（跳過有 `.final` 的） |
 | `npm run assets:registry` | 掃描資料夾、重產 `spotAssets.generated.ts`（**新增或改名任何圖之後都要跑**） |
-| `npm run assets:export` | 用 macOS sips 從原始檔輸出 1024² 收藏圖和 512² 縮圖 |
+| `npm run assets:export` | 用 Pillow 輸出 1024² 收藏 WebP、512² 縮圖及透明圖標 WebP；PNG 原檔保留 |
 | `npm run assets:gallery` | 建立 `docs/asset-gallery.html`，並排檢視收藏圖、地圖圖標和來源 |
 | `npm run assets:check` | 檢查 blueprint 格式、缺圖、尺寸是否達標；有 error 時 exit 1 |
 
@@ -97,3 +97,17 @@ Q 版化是輕度圓潤比例，擬真的是材質與環境：石材、屋瓦、
 `npm run assets:prompt -- <id>` 使用此規格。逐張的完整提示詞保存在 collection/review-vN-prompt.txt 與 docs/cute-diorama-prompts.json。prompt 更新不等於圖片已通過 QA；舊 master/day/token 仍是正式 App 資產，預覽須經使用者逐張確認後再套用。
 
 新增景點可先交付審查預覽：來源收集後設為 `references-collected`，將原生 `review-vN.png` 加入 `docs/asset-review-selections.json`，更新比較頁。此階段不產生 day、thumbnail 或 token，也不註冊進 App。`assets:check` 對已明確選定且寬高均達 1024px 的審查圖，將缺 day 列為「待核准」警告；沒有有效預覽的非 draft 景點仍報錯，`approved` 景點也仍必須有正式 day。
+
+## App 圖片瘦身（2026-10-15）
+
+`docs/asset-runtime-spec.json` 定義收藏大圖 1024px／WebP 品質 90、縮圖 512px／品質 88、地圖圖標 512px／無損 WebP。縮圖保留 512px，支援 160pt 的 3 倍螢幕卡片與 iOS 小工具。所有衍生圖內建於 App，沒有新增網路下載流程，也不烘焙比較頁的 88% 顯示調色。
+
+第一次瘦身預設以現有 `day.png`、`thumbnail.png` 為來源；沒有 day 時才使用 master，完全不讀取 review-vN 作為正式來源。原始 PNG、參考照片、review 版本及 `.final` 均保留。明確要正式套用新的 master 時使用 `npm run assets:export -- --source masters`；來源模式會記錄在報告中，後續直接 export 會沿用，避免下次壓縮切回舊 day。需要明確回到 PNG runtime 來源可用 `--source runtime`。
+
+輸出後執行 `npm run assets:registry`。登錄與驗證共用相同的檔案優先序，先選 WebP，避免驗證了 PNG、App 卻讀另一個檔案。只被登錄與程式引用的正式資產會被 Metro 打包；母版、參考照片和歷史 review 不會因為放在 assets 目錄就一起打包。
+
+Python 工具依賴 Pillow，版本見 `scripts/requirements-art.txt`。可在自己的 Python 虛擬環境安裝後，以 `ISLANDIA_PYTHON=/path/to/venv/bin/python npm run assets:export` 執行。測試：`PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts -p test_runtime_assets.py`。
+
+容量／來源 SHA-256／輸出尺寸／編碼參數記錄於 `docs/runtime-asset-report.json`，驗證結果見 `docs/runtime-asset-validation.json`。本次 74 張正式圖片由 58.34 MB 降為 11.06 MB（減少 81.05%）；這是圖片檔案總量，不是 IPA/APK 或安裝後大小。[畫質比較](runtime-image-comparison.html) 可放大檢查。
+
+iOS 與 Android Metro/Hermes 匯出通過，asset map 確認只有 74 張景點 WebP，沒有 PNG／master／reference／review。另在既有 iPhone 16 Pro（iOS 18.3）模擬器以 UIKit `UIImage(data:)` 解碼 74 張 WebP 與小工具的 PNG 檔名複製檔，75 項皆通過。檢查程式為 `scripts/check-runtime-webp.m`。這不代表已完成實體裝置或整個 App UI 驗收。

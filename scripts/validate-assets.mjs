@@ -7,6 +7,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { pickRuntimeImage } from './spot-asset-files.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const spotsDir = join(root, 'assets/spots');
@@ -42,8 +43,7 @@ function imageSize(file) {
 }
 
 function findImage(dir, base) {
-  if (!existsSync(dir)) return null;
-  const f = readdirSync(dir).find((n) => n.replace(/\.(png|webp|avif|jpe?g)$/i, '') === base);
+  const f = pickRuntimeImage(dir, base);
   return f ? join(dir, f) : null;
 }
 
