@@ -82,9 +82,50 @@
 - 自動化（截圖、測試）走 Metro 的 Hermes inspector：開發版會把 `useStore` 掛在 `globalThis.__islandia`、expo-router 的 `router` 掛在 `globalThis.__islandiaRouter`，用 CDP `Runtime.evaluate` 就能切狀態和換頁，不需要重新載入。連線時 `Origin` 要帶 `http://127.0.0.1:8081`，否則 inspector proxy 回 401。
 - 正式版（`__DEV__` 為 false）這些覆寫和全域變數都不存在。
 
+## 天氣視覺 v2：PNG 貼圖疊層（待做）
+
+2026-10-15 實測結論：SVG 畫的天氣（橢圓雲、線段雨、多邊形閃電）和手繪模型放在一起太假。資料流、覆寫、閃電時序、季節色罩、夜紗都留著，**只換視覺層**：改成透明 PNG 貼圖用 `Image` 疊上去，動畫只做位移／縮放／透明度（native driver），質感交給貼圖本身。
+
+### 貼圖清單（放 `assets/weather/`，1024² 透明 PNG，每張 100–250 KB）
+
+| 檔名 | 內容 | 備註 |
+|---|---|---|
+| cloud-a / cloud-b / cloud-c | 三種形狀的積雲團 | 柔邊、白到淺灰、45° 俯視、光源左上，跟模型同一套 |
+| cloud-dark | 灰藍雲團 | 陰天、雷雨 |
+| fog | 橫向拉長的淡霧帶 | 霧 |
+| rain-sheet | 斜向雨絲片 | **上下可無縫平鋪** |
+| snow-sheet | 雪點片 | **上下可無縫平鋪** |
+| bolt | 一道閃電，帶柔光暈 | 雷雨 |
+| sun-glow（可選） | 晴天暖光 | |
+
+8 張約 1.5 MB，一次性成本，相對 150 個景點的圖可忽略。
+
+### 生成提示詞方向
+
+跟 diorama 同一套風格：「isolated fluffy cumulus cloud, soft matte clay miniature style, seen from 45° above, soft edges, light from upper left, pure transparent background, no ground, no cast shadow」，一次出三個形狀。雨／雪片加「seamless, tileable vertically, thin diagonal streaks, 70% transparent」。出圖後用 `sips`／pngquant 壓到 1024²、PNG-8 帶 alpha。
+
+### 地圖怎麼用（取代 `TaiwanWorld.tsx` 現在的 SVG 天氣層，位置不變：霧之上、地標之下）
+
+- 每區 2–3 朵雲：中心 + hash 偏移，寬 0.18–0.26 畫寬，`Animated.Image` 左右漂移 7–12 秒，每朵速度不同做視差。多雲 1–2 朵白雲，陰天 3 朵灰雲，雷雨灰雲 + bolt。
+- 雨／雪：`rain-sheet` 兩張接龍往下捲（translateY 0 → −圖高，linear loop），裁在區域範圍內（`overflow: hidden` 的圓角 View 就夠，要更準用 `@react-native-masked-view/masked-view`）。這樣沒有現在那種來回抖。雪速度慢、加一點左右搖。
+- 閃電：`bolt` 放雲下，opacity 走現有 `lightningLoop`；整區泛白改成在雲上疊一張同形狀的白雲短暫變亮。
+- 夜晚：雲加 `tintColor` 或疊深藍 wash，閃電不變。
+
+### 模型怎麼用（`Diorama.tsx`）
+
+- 景點頁的活模型：上緣放一朵小而淡的雲，雨片整張平鋪往下捲，閃電整張泛白（現有）。
+- 護照格子、列表不動。
+
+### 再往上的選項
+
+- Lottie（`lottie-react-native`，Expo 支援）做真正的雨雪動畫，檔案小、效果好，但要另外做動畫檔。
+- 請圖片模型直接生「整張天氣背景層」疊在地圖上，最省工但最沒彈性。
+
+先做 PNG 貼圖，最貼近現有的美術流程。
+
 ## 沒做、可以接著做
 
-- Widget 顯示天氣（需要把天氣寫進 App Group，順手可做）。
+- Widget 顯示天氣（天氣要寫進 App Group，順手可做）。
 - 季節限定收藏（例如某景點只在冬天解鎖「雪景」版本）。
 - 天氣查詢的開關（目前沒有設定可關，隱私政策已揭露）。
 
