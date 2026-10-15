@@ -1,0 +1,40 @@
+{
+  "id": "baishatun",
+  "title": "白沙屯拱天宮 — real photographic reference",
+  "page": "https://www.google.com/maps/place/Baishatun+Gongtian+Temple/@24.5714321,120.7092177,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhC6ohozDQoWVjqu96YQovAw!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLcmonttsSuH-rsJfhk7dEOQ1A8CeyGTstOkAg3tt68nf-F-NatQeAby4FCbJyXW8Hgi1WHer45p2R2ZM_du10b8AU9XZpW-ulIiEWzAqsfAaugRUlPINBaVE3iF72FHUafpcHKAIIkGyDas%3Dw114-h86-k-no!7i16320!8i12240!4m11!1m2!2m1!1z55m95rKZ5bGv5oux5aSp5a6u!3m7!1s0x3469a61f30000001:0x9f68a130a38afea8!8m2!3d24.5714321!4d120.7092177!10e5!15sChLnmb3mspnlsa_mi7HlpKnlrq5aFyIV55m95rKZIOWxryDmi7Eg5aSp5a6ukgEQcGxhY2Vfb2Zfd29yc2hpcJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyeG9lVnB0TVZWVFJYUktWMnM0ZEZreFpEUmtSWFJzWlVkMGMxUlZSUkFC4AEA-gEECAAQEQ!16s%2Fg%2F11_yymt06?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+  "image": "https://lh3.googleusercontent.com/grass-cs/AABkmLcmonttsSuH-rsJfhk7dEOQ1A8CeyGTstOkAg3tt68nf-F-NatQeAby4FCbJyXW8Hgi1WHer45p2R2ZM_du10b8AU9XZpW-ulIiEWzAqsfAaugRUlPINBaVE3iF72FHUafpcHKAIIkGyDas=w1200-h900-k-no",
+  "local": "real-photo.jpg",
+  "author": "はせがわたくみ via Google Maps",
+  "capture": "2025-07",
+  "accessed": "2026-10-15",
+  "description": "Actual temple facade plus satellite small Gongtian roof cluster used, distinguishing adjacent larger Tiande Temple. Default interior panorama replaced by public exterior photo; exterior 360 audit, rear halls and exact approach remain pending.",
+  "usage": "Reference only; never used as final texture or bundled in App. Photographer/provider retains copyright; no license clearance is asserted.",
+  "method": "Public Google Maps source photograph, larger server rendition (not upscaled locally)",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "page": "https://www.google.com/maps/place/Baishatun+Gongtian+Temple/@24.5714321,120.7092177,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhC6ohozDQoWVjqu96YQovAw!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLcmonttsSuH-rsJfhk7dEOQ1A8CeyGTstOkAg3tt68nf-F-NatQeAby4FCbJyXW8Hgi1WHer45p2R2ZM_du10b8AU9XZpW-ulIiEWzAqsfAaugRUlPINBaVE3iF72FHUafpcHKAIIkGyDas%3Dw114-h86-k-no!7i16320!8i12240!4m11!1m2!2m1!1z55m95rKZ5bGv5oux5aSp5a6u!3m7!1s0x3469a61f30000001:0x9f68a130a38afea8!8m2!3d24.5714321!4d120.7092177!10e5!15sChLnmb3mspnlsa_mi7HlpKnlrq5aFyIV55m95rKZIOWxryDmi7Eg5aSp5a6ukgEQcGxhY2Vfb2Zfd29yc2hpcJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyeG9lVnB0TVZWVFJYUktWMnM0ZEZreFpEUmtSWFJzWlVkMGMxUlZSUkFC4AEA-gEECAAQEQ!16s%2Fg%2F11_yymt06?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "ground",
+      "credit": "はせがわたくみ via Google Maps",
+      "capture": "2025-07",
+      "accessed": "2026-10-15",
+      "observations": "Public real exterior photo はせがわたくみ Jul 2025, ornate multicolored dragon roof, grey carved pillars, red lanterns, small entry plaza; no mountain behind. Replaces interior default panorama. Exterior streetview angle remains pending.",
+      "limitations": "Actual temple facade plus satellite small Gongtian roof cluster used, distinguishing adjacent larger Tiande Temple. Default interior panorama replaced by public exterior photo; exterior 360 audit, rear halls and exact approach remain pending.",
+      "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.5714321,120.7092177,195m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "satellite",
+      "credit": "Google Maps / credited imagery providers",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "observations": "Loaded: small red-roof Gongtian Temple between village buildings and narrow west-facing forecourt, NOT neighboring larger Tiande temple.",
+      "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
+      "usage": "Reference only, not final texture"
+    }
+  ],
+  "officialContext": [
+    "https://www.taiwan.net.tw/m1.aspx?id=A12-00649&sNo=0001016"
+  ]
+}

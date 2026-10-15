@@ -1,0 +1,40 @@
+{
+  "id": "longteng-bridge",
+  "title": "龍騰斷橋 — real photographic reference",
+  "page": "https://www.google.com/maps/place/%E9%BE%8D%E9%A8%B0%E6%96%B7%E6%A9%8B%7C%E9%AD%9A%E8%97%A4%E5%9D%AA%E6%A9%8B%E9%81%BA%E5%9D%80/@24.5877778,120.8902778,3a,75y,315.8h,117.58t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICk1N3rNA!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U--ux7k9Wcbx74E5I1jOYvKtxG3n_UViE-tQRt6IeOACJm40qNKOL7VEOk_9mTTjT50wfw6UQSlgyNPRFI73JWgB_ZXahESgr7GTdD8KvGUKI4ncB0QFy_2IW9gjRpoKvZG6qdY%3Dw900-h600-k-no-pi-27.579735-ya325.79736-ro0-fo100!7i6912!8i3456!4m13!1m2!2m1!1z6b6N6aiw5pa35qmL!3m9!1s0x34690418138a927f:0x4e258aa69595ff3f!8m2!3d24.3585179!4d120.7740367!10e5!14m1!1BCgIgARICCAI!15sCgzpvo3pqLDmlrfmqYtaECIO6b6N6aiwIOaWtyDmqYuSARFoZXJpdGFnZV9idWlsZGluZ5oBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyMTBWMkZITlUxTlJUVXpZMFZPVDFkdVpFeFdWMFpoWVZkYVdrNHlZeEFC4AEA-gEECAAQGQ!16s%2Fg%2F121ffg9y?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+  "image": "https://lh3.googleusercontent.com/gpms-cs-s/AM4Q-U--ux7k9Wcbx74E5I1jOYvKtxG3n_UViE-tQRt6IeOACJm40qNKOL7VEOk_9mTTjT50wfw6UQSlgyNPRFI73JWgB_ZXahESgr7GTdD8KvGUKI4ncB0QFy_2IW9gjRpoKvZG6qdY=w900-h600-k-no-pi-27.579735-ya325.79736-ro0-fo100",
+  "local": "real-photo.jpg",
+  "author": "danny chang via Google Maps",
+  "capture": "2018-05",
+  "accessed": "2026-10-15",
+  "description": "Broken arch shoulders and freestanding redbrick piers retained; no intact deck. Exact surviving pier count, bridge-axis angle and valley-channel position require manual review.",
+  "usage": "Reference only; never used as final texture or bundled in App. Photographer/provider retains copyright; no license clearance is asserted.",
+  "method": "Google Maps visible public panorama preview image",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "page": "https://www.google.com/maps/place/%E9%BE%8D%E9%A8%B0%E6%96%B7%E6%A9%8B%7C%E9%AD%9A%E8%97%A4%E5%9D%AA%E6%A9%8B%E9%81%BA%E5%9D%80/@24.5877778,120.8902778,3a,75y,315.8h,117.58t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICk1N3rNA!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U--ux7k9Wcbx74E5I1jOYvKtxG3n_UViE-tQRt6IeOACJm40qNKOL7VEOk_9mTTjT50wfw6UQSlgyNPRFI73JWgB_ZXahESgr7GTdD8KvGUKI4ncB0QFy_2IW9gjRpoKvZG6qdY%3Dw900-h600-k-no-pi-27.579735-ya325.79736-ro0-fo100!7i6912!8i3456!4m13!1m2!2m1!1z6b6N6aiw5pa35qmL!3m9!1s0x34690418138a927f:0x4e258aa69595ff3f!8m2!3d24.3585179!4d120.7740367!10e5!14m1!1BCgIgARICCAI!15sCgzpvo3pqLDmlrfmqYtaECIO6b6N6aiwIOaWtyDmqYuSARFoZXJpdGFnZV9idWlsZGluZ5oBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyMTBWMkZITlUxTlJUVXpZMFZPVDFkdVpFeFdWMFpoWVZkYVdrNHlZeEFC4AEA-gEECAAQGQ!16s%2Fg%2F121ffg9y?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "ground",
+      "credit": "danny chang via Google Maps",
+      "capture": "2018-05",
+      "accessed": "2026-10-15",
+      "observations": "Broken arch shoulders and freestanding redbrick piers retained; no intact deck. Exact surviving pier count, bridge-axis angle and valley-channel position require manual review.",
+      "limitations": "Broken arch shoulders and freestanding redbrick piers retained; no intact deck. Exact surviving pier count, bridge-axis angle and valley-channel position require manual review.",
+      "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.3585179,120.7740367,18z/data=!3m1!1e3",
+      "kind": "satellite",
+      "credit": "Google Maps / credited imagery providers",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "observations": "Broken arch shoulders and freestanding redbrick piers retained; no intact deck. Exact surviving pier count, bridge-axis angle and valley-channel position require manual review.",
+      "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
+      "usage": "Reference only, not final texture"
+    }
+  ],
+  "officialContext": [
+    "https://www.taiwan.net.tw/m1.aspx?id=C100_342&sNo=0001016"
+  ]
+}

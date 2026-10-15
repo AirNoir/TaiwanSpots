@@ -1,19 +1,19 @@
 {
   "spotId": "npm-southern",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "NPM Southern Branch museum",
-    "silhouette": "Curving dark museum building over water linked by a zig-zag bridge"
+    "silhouette": "Fluid dark modern museum with curving glass curtain walls and a curved white Zhimei Bridge across the lake"
   },
   "crop": "The museum building, lake and the curved bridges. Not the whole park.",
   "heroScale": 1,
-  "orientation": "verify: bridge approach direction from the map",
+  "orientation": "Zhimei Bridge curves north from the southern lake bank toward the museum; lake also extends east of the building (satellite and museum official introduction).",
   "lockedGeometry": [
-    "artificial lake around the museum",
-    "curved and zig-zag bridges",
-    "flat parkland"
+    "artificial lake south and east of the museum",
+    "flowing curved Zhimei Bridge approaching from the south",
+    "flat landscaped parkland"
   ],
   "lockedIdentity": [
     "dark curved building in ink-wash tones",
@@ -30,10 +30,19 @@
     "birds"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg",
+      "google-ground-review.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "The curved dark museum on a small lake"
@@ -41,7 +50,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Draft zigzag bridge corrected to flowing curved Zhimei Bridge. Real glass/vertical-fin facade and satellite lake/bridge relationship used. Full roof shape, bridge structure and exact bank geometry remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

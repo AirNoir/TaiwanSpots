@@ -1,6 +1,6 @@
 {
   "spotId": "shilin-night-market",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
@@ -9,7 +9,7 @@
   },
   "crop": "The lanes around Cixian Temple and the market entrance. Not the whole Shilin district.",
   "heroScale": 1,
-  "orientation": "verify: Cixian Temple sits at the south end of the lanes",
+  "orientation": "Cixian Temple lies north of the selected market lanes around Danan Road; not at their south end (satellite).",
   "lockedGeometry": [
     "narrow intersecting lanes",
     "low shophouses with stalls in front",
@@ -30,10 +30,19 @@
     "signboards without readable text"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg",
+      "google-ground-review.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "A lit food stall with steam and a temple roof behind"
@@ -41,7 +50,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Real Cixian Temple facade plus satellite lanes used; temple corrected to north of lanes. Surrounding stall/shop details are generalized, not traced individual businesses. Original 360 glimpse partial; complete lane-level audit remains pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

@@ -1,0 +1,40 @@
+{
+  "id": "ximending",
+  "title": "西門町 — real photographic reference",
+  "page": "https://www.google.com/maps/place/The+Red+House/@25.0420139,121.5068592,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgICxqvL5NQ!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLdvyxv7QtUujKTxRsYLV59imQEKwMZJZp2KGK0Lacr7McLz59-PqXQaNiFGeKU6liq2VgHPpO_pCKJ7S4EW0THTgOwLya0K7ffhGhsM1emiUdDheV6F_oXDG5vqalazpPuHhYQ%3Dw114-h86-k-no!7i4032!8i3024!4m11!1m2!2m1!1z6KW_6ZaA57SF5qiT!3m7!1s0x3442a909a4acec8b:0x7c34275cfedcc1c5!8m2!3d25.0420139!4d121.5068592!10e5!15sCgzopb_ploDntIXmqJNaDyIN6KW_6ZaAIOe0heaok5IBEWhlcml0YWdlX2J1aWxkaW5nmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJhYkhSSVpqRlJSUkFC4AEA-gEECAAQEg!16s%2Fm%2F02qfxx9?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+  "image": "https://lh3.googleusercontent.com/grass-cs/AABkmLdvyxv7QtUujKTxRsYLV59imQEKwMZJZp2KGK0Lacr7McLz59-PqXQaNiFGeKU6liq2VgHPpO_pCKJ7S4EW0THTgOwLya0K7ffhGhsM1emiUdDheV6F_oXDG5vqalazpPuHhYQ=w1200-h900-k-no",
+  "local": "real-photo.jpg",
+  "author": "chanshu via Google Maps",
+  "capture": "2023-05",
+  "accessed": "2026-10-15",
+  "description": "Real exterior photo replaces panorama facing away. Octagonal facade and cruciform west wing checked; rear details and neighboring stalls simplified. Exterior Street View/360 audit remains pending.",
+  "usage": "Reference only; never used as final texture or bundled in App. Photographer/provider retains copyright; no license clearance is asserted.",
+  "method": "Public Google Maps source photograph, larger server rendition (not upscaled locally)",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "page": "https://www.google.com/maps/place/The+Red+House/@25.0420139,121.5068592,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgICxqvL5NQ!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLdvyxv7QtUujKTxRsYLV59imQEKwMZJZp2KGK0Lacr7McLz59-PqXQaNiFGeKU6liq2VgHPpO_pCKJ7S4EW0THTgOwLya0K7ffhGhsM1emiUdDheV6F_oXDG5vqalazpPuHhYQ%3Dw114-h86-k-no!7i4032!8i3024!4m11!1m2!2m1!1z6KW_6ZaA57SF5qiT!3m7!1s0x3442a909a4acec8b:0x7c34275cfedcc1c5!8m2!3d25.0420139!4d121.5068592!10e5!15sCgzopb_ploDntIXmqJNaDyIN6KW_6ZaAIOe0heaok5IBEWhlcml0YWdlX2J1aWxkaW5nmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJhYkhSSVpqRlJSUkFC4AEA-gEECAAQEg!16s%2Fm%2F02qfxx9?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "ground",
+      "credit": "chanshu via Google Maps",
+      "capture": "2023-05",
+      "accessed": "2026-10-15",
+      "observations": "Public real exterior photo chanshu May 2023, octagonal redbrick Red House with white bands, tall black arched windows and raised gable dormers. Replaces streetview heading facing away. Exterior StreetView angle remains pending.",
+      "limitations": "Real exterior photo replaces panorama facing away. Octagonal facade and cruciform west wing checked; rear details and neighboring stalls simplified. Exterior Street View/360 audit remains pending.",
+      "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@25.0420139,121.5068592,195m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "satellite",
+      "credit": "Google Maps / credited imagery providers",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "observations": "Loaded satellite confirms octagonal Red House entry at east end, cruciform rear wing west and forecourts; no river.",
+      "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
+      "usage": "Reference only, not final texture"
+    }
+  ],
+  "officialContext": [
+    "https://culture.gov.taipei/cp.aspx?n=EAA3D79E3A42931C"
+  ]
+}

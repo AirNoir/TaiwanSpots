@@ -1,6 +1,6 @@
 {
   "spotId": "qingtiangang",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
@@ -9,7 +9,7 @@
   },
   "crop": "The grassy plateau with the trail and grazing buffalo. Not the whole Yangmingshan park.",
   "heroScale": 1,
-  "orientation": "verify: Qixing Mountain rises to the west",
+  "orientation": "Open grassland crossed by trails; remote Qixing Mountain is outside the selected miniature crop (satellite).",
   "lockedGeometry": [
     "broad rolling grassland",
     "stone-paved trail crossing it",
@@ -31,10 +31,19 @@
     "wooden fence posts"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg",
+      "google-ground-review.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Grassy hill with a little water buffalo"
@@ -42,7 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Open grassy terrain, path/fence and satellite trail network checked. Buffalo and hikers are scale cues; exact trail section, grazing positions and grass species remain interpretive. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

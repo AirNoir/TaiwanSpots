@@ -1,15 +1,15 @@
 {
   "spotId": "waiao",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Wai'ao black-sand beach",
     "silhouette": "Long grey-black sand beach with surfboards facing an island offshore"
   },
-  "crop": "A stretch of Wai'ao beach with surfers and Guishan Island on the horizon. Not the whole Toucheng coast.",
+  "crop": "A stretch of grey-black Wai’ao surf beach, coastal road/railway and immediate inland hill. Guishan Island is distant outside this crop and omitted under the no-backdrop series rule.",
   "heroScale": 1,
-  "orientation": "verify: Guishan Island sits east-south-east offshore",
+  "orientation": "Sea is east, grey-black beach west of the water, with highway/railway and inland hill farther west; distant Guishan Island is outside this crop (satellite).",
   "lockedGeometry": [
     "long straight beach",
     "coastal road and railway behind",
@@ -31,10 +31,19 @@
     "beach umbrellas"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg",
+      "google-ground-review.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Surfboard stuck in black sand"
@@ -42,7 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Grey-black sand, surf and coast-road/rail/hill sequence checked. Distant Guishan omitted rather than moved adjacent. Beach width, shoreline armoring and transport details require manual geographic review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

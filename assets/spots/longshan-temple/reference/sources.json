@@ -1,0 +1,40 @@
+{
+  "id": "longshan-temple",
+  "title": "艋舺龍山寺 — real photographic reference",
+  "page": "https://www.google.com/maps/place/Lungshan+Temple/@25.0369219,121.499959,3a,75y,0.9h,103.51t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgID4yor48wE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U99VKB5-hTUhFYX8B8iAuMEaDGDeew_Sb_6odY6RZWCWghdjDo0loZKgTkg5O_wCMAV13wgxmvIL8Wih-QG3gRq8qjEWB8mu9RUE5_PV-C_4G1tDVK3moM2iNB1TP2K5LSmmmTbHQ%3Dw900-h600-k-no-pi-13.508439999999993-ya2.900562799999989-ro0-fo100!7i8704!8i4352!4m9!3m8!1s0x3442a9a8d7e7de09:0xf8e8335e58c41c8a!8m2!3d25.0373106!4d121.4998654!10e5!14m1!1BCgIgARICCAI!16zL20vMDM0Mms0?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+  "image": "https://lh3.googleusercontent.com/gpms-cs-s/AM4Q-U99VKB5-hTUhFYX8B8iAuMEaDGDeew_Sb_6odY6RZWCWghdjDo0loZKgTkg5O_wCMAV13wgxmvIL8Wih-QG3gRq8qjEWB8mu9RUE5_PV-C_4G1tDVK3moM2iNB1TP2K5LSmmmTbHQ=w900-h600-k-no-pi-13.508439999999993-ya2.900562799999989-ro0-fo100",
+  "local": "real-photo.jpg",
+  "author": "Shen Andy via Google Maps",
+  "capture": "2017-01",
+  "accessed": "2026-10-15",
+  "description": "Front hall roof/dragon columns and south-facing entrance compared with real panorama and satellite. Rear roof massing and waterfall scale are simplified, not measured.",
+  "usage": "Reference only; never used as final texture or bundled in App. Photographer/provider retains copyright; no license clearance is asserted.",
+  "method": "Google Maps visible public panorama preview image",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "page": "https://www.google.com/maps/place/Lungshan+Temple/@25.0369219,121.499959,3a,75y,0.9h,103.51t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgID4yor48wE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U99VKB5-hTUhFYX8B8iAuMEaDGDeew_Sb_6odY6RZWCWghdjDo0loZKgTkg5O_wCMAV13wgxmvIL8Wih-QG3gRq8qjEWB8mu9RUE5_PV-C_4G1tDVK3moM2iNB1TP2K5LSmmmTbHQ%3Dw900-h600-k-no-pi-13.508439999999993-ya2.900562799999989-ro0-fo100!7i8704!8i4352!4m9!3m8!1s0x3442a9a8d7e7de09:0xf8e8335e58c41c8a!8m2!3d25.0373106!4d121.4998654!10e5!14m1!1BCgIgARICCAI!16zL20vMDM0Mms0?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "ground",
+      "credit": "Shen Andy via Google Maps",
+      "capture": "2017-01",
+      "accessed": "2026-10-15",
+      "observations": "Ornate red terracotta swallowtail front hall, dark carved columns, red lanterns and paved forecourt; rear hall through the central opening.",
+      "limitations": "Front hall roof/dragon columns and south-facing entrance compared with real panorama and satellite. Rear roof massing and waterfall scale are simplified, not measured.",
+      "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@25.0373106,121.4998654,195m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "satellite",
+      "credit": "Google Maps / credited imagery providers",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "observations": "North-up rectangular temple compound with sequential north-south halls; open forecourt south at Guangzhou Street; Joshin Waterfall marked on east side of front courtyard.",
+      "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
+      "usage": "Reference only, not final texture"
+    }
+  ],
+  "officialContext": [
+    "https://taiwangods.moi.gov.tw/Religious_Culture/html/landscape/1_0011.aspx?i=15"
+  ]
+}

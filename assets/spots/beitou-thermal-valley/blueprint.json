@@ -1,6 +1,6 @@
 {
   "spotId": "beitou-thermal-valley",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
@@ -9,7 +9,7 @@
   },
   "crop": "The steaming pond and the railed walkway around it. Not the Beitou hotel district.",
   "heroScale": 1,
-  "orientation": "verify: walkway enters from the south-west",
+  "orientation": "Small elongated pond occupies wooded valley with perimeter visitor walkway; verify: exact southwest entry connection beneath tree canopy.",
   "lockedGeometry": [
     "small enclosed valley",
     "pond filling the valley floor",
@@ -31,10 +31,19 @@
     "wooden signposts"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg",
+      "google-ground-review.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "A pocket of green steaming water with white vapour"
@@ -42,7 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Actual jade pond, steam, rock bank and wooded satellite valley checked. Visitors stay on rail walkway; no bathers. Exact shore contour and entrance path under canopy remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

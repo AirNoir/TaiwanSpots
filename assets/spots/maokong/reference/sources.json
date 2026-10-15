@@ -1,0 +1,38 @@
+{
+  "id": "maokong",
+  "title": "貓空纜車 — real photographic reference",
+  "page": "https://www.google.com/maps/place/Maokong+Station/@24.96872,121.58826,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgICZzpTPAw!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLffimzxfzOay_WO9HgNX95Qs7vxQkT73plajxXZ1hpXAW8beN5Zq3dgE2uwRObNOP-T8hkET3cdCiohWO2B3xI6w6cDxAf5owqdOqYMYiqNxJs9fZ2b-fGUq9Ft5-Q94s3Vvcc_%3Dw114-h86-k-no!7i4032!8i3024!4m11!1m2!2m1!1z6LKT56m656uZ!3m7!1s0x3468002de3128d4d:0x647f75546764cbc9!8m2!3d24.96872!4d121.58826!10e5!15sCgnospPnqbrnq5mSARRnb25kb2xhX2xpZnRfc3RhdGlvbuABAA!16s%2Fg%2F1v3gpnb3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+  "image": "https://lh3.googleusercontent.com/grass-cs/AABkmLffimzxfzOay_WO9HgNX95Qs7vxQkT73plajxXZ1hpXAW8beN5Zq3dgE2uwRObNOP-T8hkET3cdCiohWO2B3xI6w6cDxAf5owqdOqYMYiqNxJs9fZ2b-fGUq9Ft5-Q94s3Vvcc_=w1200-h900-k-no",
+  "local": "real-photo.jpg",
+  "author": "TH YANG via Google Maps",
+  "capture": "2023-09",
+  "accessed": "2026-10-15",
+  "description": "Actual enclosed cabins and cable corridor photo plus upper-station satellite used. Default 360 showed unrelated tea patio and is rejected. Station exterior/360 remains pending; no unverified adjacent tea terrace added.",
+  "usage": "Reference only; never used as final texture or bundled in App. Photographer/provider retains copyright; no license clearance is asserted.",
+  "method": "Public Google Maps source photograph, larger server rendition (not upscaled locally)",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "page": "https://www.google.com/maps/place/Maokong+Station/@24.96872,121.58826,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgICZzpTPAw!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLffimzxfzOay_WO9HgNX95Qs7vxQkT73plajxXZ1hpXAW8beN5Zq3dgE2uwRObNOP-T8hkET3cdCiohWO2B3xI6w6cDxAf5owqdOqYMYiqNxJs9fZ2b-fGUq9Ft5-Q94s3Vvcc_%3Dw114-h86-k-no!7i4032!8i3024!4m11!1m2!2m1!1z6LKT56m656uZ!3m7!1s0x3468002de3128d4d:0x647f75546764cbc9!8m2!3d24.96872!4d121.58826!10e5!15sCgnospPnqbrnq5mSARRnb25kb2xhX2xpZnRfc3RhdGlvbuABAA!16s%2Fg%2F1v3gpnb3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "ground",
+      "credit": "TH YANG via Google Maps",
+      "capture": "2023-09",
+      "accessed": "2026-10-15",
+      "observations": "Public real photo TH YANG Sep 2023: red/white enclosed gondola above broadleaf forest; cables and pylons follow valley. Station exterior not visible, remains pending; do not invent tea terraces.",
+      "limitations": "Actual enclosed cabins and cable corridor photo plus upper-station satellite used. Default 360 showed unrelated tea patio and is rejected. Station exterior/360 remains pending; no unverified adjacent tea terrace added.",
+      "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.96872,121.58826,18z/data=!3m1!1e3",
+      "kind": "satellite",
+      "credit": "Google Maps / credited imagery providers",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "observations": "Actual enclosed cabins and cable corridor photo plus upper-station satellite used. Default 360 showed unrelated tea patio and is rejected. Station exterior/360 remains pending; no unverified adjacent tea terrace added.",
+      "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
+      "usage": "Reference only, not final texture"
+    }
+  ],
+  "officialContext": []
+}

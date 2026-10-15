@@ -11,6 +11,9 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const spotsDir = join(root, 'assets/spots');
 const schema = JSON.parse(readFileSync(join(spotsDir, 'blueprint.schema.json'), 'utf8'));
+const reviewSelectionsPath = join(root, 'docs/asset-review-selections.json');
+const reviewSelections = existsSync(reviewSelectionsPath)
+  ? JSON.parse(readFileSync(reviewSelectionsPath, 'utf8')) : {};
 
 const spotsSrc = readFileSync(join(root, 'src/data/spots.ts'), 'utf8');
 const spotIds = [...spotsSrc.matchAll(/^\s{4}id: '([^']+)'/gm)].map((m) => m[1]);
@@ -89,8 +92,17 @@ for (const id of spotIds) {
   }
 
   const day = findImage(join(dir, 'collection'), 'day');
-  // A draft spot is data-only until its art is generated; the app falls back to the procedural diorama.
-  if (!day) (bpStatus === 'draft' ? warnings : errors).push('no collection/day image (art pending)');
+  // Reference collection and review previews do not approve art for the runtime.
+  // Only an explicit, full-size review selection may remain preview-only;
+  // approved spots must always have a runtime day image.
+  const reviewFile = reviewSelections[id];
+  const reviewPath = typeof reviewFile === 'string' && /^review-v\d+\.png$/.test(reviewFile)
+    ? join(dir, 'collection', reviewFile) : null;
+  const reviewSize = reviewPath && existsSync(reviewPath) ? imageSize(reviewPath) : null;
+  const previewOnly = bpStatus === 'references-collected'
+    && reviewSize && reviewSize.w >= SIZE.collection && reviewSize.h >= SIZE.collection;
+  if (!day) (bpStatus === 'draft' || previewOnly ? warnings : errors)
+    .push(previewOnly ? 'selected review preview only; collection/day awaits approval' : 'no collection/day image (art pending)');
   else {
     const s = imageSize(day);
     if (s && Math.max(s.w, s.h) < SIZE.collection) warnings.push(`collection/day is ${s.w}×${s.h} (target ${SIZE.collection}²)`);

@@ -1,6 +1,6 @@
 {
   "spotId": "shengxing-station",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
@@ -9,7 +9,7 @@
   },
   "crop": "The station house, platform and track with the old-street slope behind. Not the tunnels or the bridge ruins.",
   "heroScale": 1,
-  "orientation": "verify: platform and track run along the hillside",
+  "orientation": "Rail corridor runs roughly north-northwest to south-southeast, with old-street buildings east of the tracks and wooded slopes west (satellite).",
   "lockedGeometry": [
     "single disused track along the platform",
     "hillside old street rising behind",
@@ -31,10 +31,18 @@
     "tung blossoms"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Wooden station house with a short piece of track"
@@ -42,7 +50,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Official Tourism Administration facade photograph plus satellite plan used. Default panorama failed to load and is excluded; usable station-exterior Street View audit remains pending. Rail count/platform details require review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

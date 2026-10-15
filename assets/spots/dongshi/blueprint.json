@@ -1,19 +1,19 @@
 {
   "spotId": "dongshi",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Dongshi Fisherman's Wharf",
     "silhouette": "Harbour boardwalk with a seaside promenade facing oyster racks in a lagoon"
   },
-  "crop": "The wharf and lagoon with oyster racks. Not the whole coastline.",
+  "crop": "A selected flat wharf promenade with its actual pastel arcaded shops and nearby harbor/oyster-cultivation water. Distant sandbars and the rest of the coastline are outside the crop.",
   "heroScale": 1,
-  "orientation": "verify: lagoon faces west to the Taiwan Strait",
+  "orientation": "Open oyster-cultivation water lies west/south of the wharf and sheltered mooring water east (satellite).",
   "lockedGeometry": [
-    "flat harbour edge",
-    "lagoon with oyster racks",
-    "sandbar islands offshore"
+    "flat paved wharf and waterfront retail row",
+    "sheltered harbor east of the wharf",
+    "oyster-cultivation racks in water west and south of the wharf"
   ],
   "lockedIdentity": [
     "rows of bamboo oyster racks",
@@ -31,10 +31,19 @@
     "bicycles"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg",
+      "google-ground-review.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Fishing boat beside a bamboo oyster rack"
@@ -42,7 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Actual pastel arcaded shop facade and satellite harbor/oyster-bed arrangement used. Forecourt panorama reviewed but lacked water; selected new photo adds facade evidence. Rack spacing and crop compression are approximate. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

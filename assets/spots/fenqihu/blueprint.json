@@ -1,6 +1,6 @@
 {
   "spotId": "fenqihu",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
@@ -9,7 +9,7 @@
   },
   "crop": "The station area of the forest railway with the old street and fog. Not the high Alishan forest.",
   "heroScale": 1,
-  "orientation": "verify: old street sits uphill from the station",
+  "orientation": "Tracks run southwest–northeast in this crop, with compact old-street buildings southeast and the engine shed at the northeastern rail-yard end (satellite); verify: detailed platform elevations.",
   "lockedGeometry": [
     "narrow-gauge tracks at the station",
     "steep forested slope",
@@ -31,10 +31,19 @@
     "railway workers"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg",
+      "google-ground-review.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Small red forest train at a mountain platform"
@@ -42,7 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Real engine-shed photo and satellite track/old-street relationship used. Exact station/garage architecture, switch count and tree species require manual review; no operating locomotive invented. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

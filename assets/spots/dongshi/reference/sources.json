@@ -1,0 +1,40 @@
+{
+  "id": "dongshi",
+  "title": "東石漁人碼頭 — real photographic reference",
+  "page": "https://www.google.com/maps/place/Dongshi+Fisherman's+Wharf/@23.4487536,120.1352728,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhB2xy2o9dbuY9QM8NJElzej!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FANWiy9QouivbAT25P52yHmSU8mNdtZJCHd1wvURCD1hfqgP8H9ygd57N2BFFfex5xLGHeYdcFrTDT0L3zK5Ry-1TymOYMylAsMH6cDRuRNCMnfligUOxdCDnDq9Eqv5hTC0hDozQXtK_v5VPBaVV%3Dw203-h160-k-no!7i3511!8i2778!4m11!1m2!2m1!1z5p2x55-z5ryB5Lq656K86aCt!3m7!1s0x346c27984877e6a3:0x2b32771cf58d476e!8m2!3d23.4487536!4d120.1352728!10e5!15sChLmnbHnn7PmvIHkurrnorzpoK1aFyIV5p2x55-zIOa8gSDkurog56K86aCtkgEMZmlzaGluZ19waWVymgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5TYzBscGFWOTNSUkFC4AEA-gEECAAQDA!16s%2Fg%2F11b6yst96b?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+  "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QouivbAT25P52yHmSU8mNdtZJCHd1wvURCD1hfqgP8H9ygd57N2BFFfex5xLGHeYdcFrTDT0L3zK5Ry-1TymOYMylAsMH6cDRuRNCMnfligUOxdCDnDq9Eqv5hTC0hDozQXtK_v5VPBaVV=w1200-h900-k-no",
+  "local": "real-photo.jpg",
+  "author": "周吉美 via Google Maps",
+  "capture": "2025-10",
+  "accessed": "2026-10-15",
+  "description": "Actual pastel arcaded shop facade and satellite harbor/oyster-bed arrangement used. Forecourt panorama reviewed but lacked water; selected new photo adds facade evidence. Rack spacing and crop compression are approximate.",
+  "usage": "Reference only; never used as final texture or bundled in App. Photographer/provider retains copyright; no license clearance is asserted.",
+  "method": "Public Google Maps source photograph, larger server rendition (not upscaled locally)",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "page": "https://www.google.com/maps/place/Dongshi+Fisherman's+Wharf/@23.4487536,120.1352728,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhB2xy2o9dbuY9QM8NJElzej!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FANWiy9QouivbAT25P52yHmSU8mNdtZJCHd1wvURCD1hfqgP8H9ygd57N2BFFfex5xLGHeYdcFrTDT0L3zK5Ry-1TymOYMylAsMH6cDRuRNCMnfligUOxdCDnDq9Eqv5hTC0hDozQXtK_v5VPBaVV%3Dw203-h160-k-no!7i3511!8i2778!4m11!1m2!2m1!1z5p2x55-z5ryB5Lq656K86aCt!3m7!1s0x346c27984877e6a3:0x2b32771cf58d476e!8m2!3d23.4487536!4d120.1352728!10e5!15sChLmnbHnn7PmvIHkurrnorzpoK1aFyIV5p2x55-zIOa8gSDkurog56K86aCtkgEMZmlzaGluZ19waWVymgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5TYzBscGFWOTNSUkFC4AEA-gEECAAQDA!16s%2Fg%2F11b6yst96b?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "ground",
+      "credit": "周吉美 via Google Maps",
+      "capture": "2025-10",
+      "accessed": "2026-10-15",
+      "observations": "Public real photo 周吉美 Oct 2025: actual low pink/yellow/purple arcaded wharf retail facades, flat paved waterfront. Water/oyster beds placement from satellite, no cliffs/mountains. Earlier Google StreetView plaza reviewed.",
+      "limitations": "Actual pastel arcaded shop facade and satellite harbor/oyster-bed arrangement used. Forecourt panorama reviewed but lacked water; selected new photo adds facade evidence. Rack spacing and crop compression are approximate.",
+      "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@23.4487536,120.1352728,394m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "satellite",
+      "credit": "Google Maps / credited imagery providers",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "observations": "Loaded: flat polygonal wharf, harbor east, oyster aquaculture west/south, small moored boats. Omit distant sandbar outside crop.",
+      "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
+      "usage": "Reference only, not final texture"
+    }
+  ],
+  "officialContext": [
+    "https://www.taiwan.net.tw/m1.aspx?id=a12-00355&sno=0001016"
+  ]
+}

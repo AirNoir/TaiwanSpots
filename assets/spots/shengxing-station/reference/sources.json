@@ -1,0 +1,27 @@
+{
+  "id": "shengxing-station",
+  "title": "勝興車站 — real photographic reference",
+  "page": "https://www.taiwan.net.tw/m1.aspx?id=C100_341&sNo=0001110.",
+  "image": "https://www.taiwan.net.tw/att/1/big_scenic_spots/pic_C100_341_12.JPG",
+  "local": "real-photo.jpg",
+  "author": "Tourism Administration / source photo",
+  "capture": "Capture date unconfirmed; EXIF edit timestamp 2019-05-02",
+  "accessed": "2026-10-15",
+  "description": "Official Tourism Administration facade photograph plus satellite plan used. Default panorama failed to load and is excluded; usable station-exterior Street View audit remains pending. Rail count/platform details require review.",
+  "usage": "Reference only; never used as final texture or bundled in App. Photographer/provider retains copyright; no license clearance is asserted.",
+  "method": "Tourism Administration source photo",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.388064,120.782003,19z/data=!3m1!1e3",
+      "kind": "satellite",
+      "credit": "Google Maps / credited imagery providers",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "observations": "Captured for subsequent visual audit; acquisition date not displayed.",
+      "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
+      "usage": "Reference only, not final texture"
+    }
+  ],
+  "officialContext": []
+}

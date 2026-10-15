@@ -1,19 +1,19 @@
 {
   "spotId": "huoyanshan",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Huoyanshan eroded ridges",
     "silhouette": "Jagged red gravel ridges and gullies topped with pines"
   },
-  "crop": "The eroded ridge and gullies with the river below. Not the whole Sanyi hill range.",
+  "crop": "The eroded conglomerate ridge and dry branching gullies. Distant Da’an River plain is outside this selected crop.",
   "heroScale": 1,
-  "orientation": "verify: Da'an River lies to the south",
+  "orientation": "Selected exposed badlands are south of the mapped summit; dry gullies descend toward the southern Da’an plain, which is omitted (satellite and Forestry landscape source).",
   "lockedGeometry": [
-    "sharp eroded ridgeline",
-    "deep gullies",
-    "river plain below"
+    "sharp dissected eroded ridges",
+    "deep dry conglomerate gullies",
+    "mixed wooded crests with sparse gully vegetation"
   ],
   "lockedIdentity": [
     "red-brown conglomerate cliffs",
@@ -30,10 +30,18 @@
     "sunset glow"
   ],
   "references": {
-    "aerial": [],
+    "aerial": [
+      "google-satellite-review.jpg",
+      "real-photo.jpg",
+      "google-ground-review.jpg"
+    ],
     "ground": [],
-    "map": [],
-    "representative": []
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Red jagged ridge with a pine"
@@ -41,7 +49,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Real drone360 and satellite actual badlands used. Gravel/conglomerate texture and dry gullies retained. Drone image is aerial, not street-level: ground viewpoint remains pending; exact ridge elevations and scale unmeasured. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

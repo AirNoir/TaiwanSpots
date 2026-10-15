@@ -1,6 +1,6 @@
 {
   "spotId": "baishatun",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
@@ -9,7 +9,7 @@
   },
   "crop": "The temple and its front plaza in Baishatun village. Not the whole coastline.",
   "heroScale": 1,
-  "orientation": "verify: temple faces the sea to the west",
+  "orientation": "Gongtian Temple fronts the narrow west/southwest village approach; distinguish it from the larger Tiande Temple northeast (satellite); verify: precise entrance azimuth.",
   "lockedGeometry": [
     "temple plaza on a village street",
     "coast a short distance west",
@@ -30,10 +30,19 @@
     "offering tables"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg",
+      "google-ground-review.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Temple roof with a pilgrimage flag"
@@ -41,7 +50,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Actual temple facade plus satellite small Gongtian roof cluster used, distinguishing adjacent larger Tiande Temple. Default interior panorama replaced by public exterior photo; exterior 360 audit, rear halls and exact approach remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

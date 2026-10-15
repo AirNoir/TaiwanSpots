@@ -1,0 +1,79 @@
+{
+  "id": "guishan-island",
+  "title": "龜山島 — real photographic reference",
+  "page": "https://events.necoast-nsa.gov.tw/coast/Articles.aspx?a=2656",
+  "image": "https://www.necoast-nsa.gov.tw/UserFiles/image/guishan-info-01.jpg",
+  "local": "real-photo-overview.jpg",
+  "author": "Northeast and Yilan Coast National Scenic Area official page; individual photographer not exposed",
+  "capture": "Not exposed",
+  "accessed": "2026-10-15",
+  "description": "Seaward head cliff, summit head view and whole-island satellite cross-checked. Island elevations, western harbor and lagoon proportions are approximate; not a surveyed island model.",
+  "usage": "Reference only; never used as final texture or bundled in App. Photographer/provider retains copyright; no license clearance is asserted.",
+  "method": "Official source photograph of complete island profile",
+  "supplementary": [
+    {
+      "page": "https://www.google.com/maps/place/Guishan+Island/@24.8423735,121.9501551,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhC47OYC7brWY2suoWtp2OBQ!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FANWiy9Sqofvq27kIXzCIXHwnzOms73XuBg5vmO6gSGdr9HozdiJXI_tc6q1gccVIZfmEDLIPZ0xuIUftSfE2C9PQ2f66xvBMWDgraQtXdK0aKmTxzqC8QLEfY81hDg4Xcar7yANc7raBMz5raL-u%3Dw203-h152-k-no!7i4032!8i3024!4m7!3m6!1s0x3467f4f99dff7663:0x950a58aaa1e59ebc!8m2!3d24.8423735!4d121.9501551!10e5!16zL20vMDVwbXd3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Sqofvq27kIXzCIXHwnzOms73XuBg5vmO6gSGdr9HozdiJXI_tc6q1gccVIZfmEDLIPZ0xuIUftSfE2C9PQ2f66xvBMWDgraQtXdK0aKmTxzqC8QLEfY81hDg4Xcar7yANc7raBMz5raL-u=w1200-h900-k-no",
+      "local": "real-photo.jpg",
+      "author": "Jimmy Chen via Google Maps",
+      "capture": "2025-07",
+      "method": "Public Google Maps source photograph, larger server rendition (not upscaled locally)",
+      "kind": "seaward head photograph"
+    },
+    {
+      "local": "google-ground-review.jpg",
+      "page": "https://www.google.com/maps/place/Guishan+Island/@24.8423735,121.9501551,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhC47OYC7brWY2suoWtp2OBQ!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FANWiy9Sqofvq27kIXzCIXHwnzOms73XuBg5vmO6gSGdr9HozdiJXI_tc6q1gccVIZfmEDLIPZ0xuIUftSfE2C9PQ2f66xvBMWDgraQtXdK0aKmTxzqC8QLEfY81hDg4Xcar7yANc7raBMz5raL-u%3Dw203-h152-k-no!7i4032!8i3024!4m7!3m6!1s0x3467f4f99dff7663:0x950a58aaa1e59ebc!8m2!3d24.8423735!4d121.9501551!10e5!16zL20vMDVwbXd3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "ground",
+      "credit": "Jimmy Chen via Google Maps",
+      "capture": "2025-07",
+      "accessed": "2026-10-15",
+      "observations": "Public real seaward photo Jimmy Chen Jul 2025, steep eastern head cliff, lower saddle west and vegetated slopes; full island plan from satellite and extra summit view. Earlier Google sea-level360 reviewed too.",
+      "limitations": "Seaward head cliff, summit head view and whole-island satellite cross-checked. Island elevations, western harbor and lagoon proportions are approximate; not a surveyed island model.",
+      "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.8431,121.9516,6236m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "satellite",
+      "credit": "Google Maps / credited imagery providers",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "observations": "Entire volcanic island outline: low western turtle tail and lagoon, high central wooded body, projecting southeastern head and pale-blue water by the head.",
+      "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
+      "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "google-head-view-review.jpg",
+      "page": "https://www.google.com/maps/place/Guishan+Island/@24.8423735,121.9501551,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhCrponmv20W_QRzudLGnfty!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLfFSQkg76rMMmwpiMBsiAdmCrTqatOujk1a8QJP9otrJYHhs2FhU3TRzvI5oy87ZxJyVCB3N0cih8LYoZOTsfhsos9qZccthSipM5PojzAyV_uzkxyzXKgGDfzhotJzjb_rhI1OYM3iDfrv%3Dw86-h114-k-no!7i4284!8i5712!4m7!3m6!1s0x3467f4f99dff7663:0x950a58aaa1e59ebc!8m2!3d24.8423735!4d121.9501551!10e5!16zL20vMDVwbXd3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "head-view",
+      "credit": "joylog weekend via Google Maps",
+      "capture": "2025-10",
+      "accessed": "2026-10-15",
+      "observations": "Real summit-looking-down photo joylog weekend, capture Oct 2025 (uploaded Nov 2025). Green high eastern head with sheer cliffs and ocean beyond. Additional evidence, not ground-level or complete-island profile.",
+      "limitations": "Seaward head cliff, summit head view and whole-island satellite cross-checked. Island elevations, western harbor and lagoon proportions are approximate; not a surveyed island model.",
+      "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "real-photo-overview.jpg",
+      "page": "https://events.necoast-nsa.gov.tw/coast/Articles.aspx?a=2656",
+      "image": "https://www.necoast-nsa.gov.tw/UserFiles/image/guishan-info-01.jpg",
+      "credit": "Northeast and Yilan Coast National Scenic Area official page; individual photographer not exposed",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "kind": "complete island seaward profile",
+      "observations": "Central wooded body rises higher than separate eastern head; low saddle and western tail. Primary massing/elevation evidence."
+    },
+    {
+      "local": "real-photo-head-official.jpg",
+      "page": "https://events.necoast-nsa.gov.tw/coast/Articles.aspx?a=2656",
+      "image": "https://www.necoast-nsa.gov.tw/UserFiles/image/guishan-info-02(1).jpg",
+      "credit": "Northeast and Yilan Coast National Scenic Area official page; individual photographer not exposed",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "kind": "eastern head seaward detail"
+    }
+  ],
+  "officialContext": [
+    "https://events.necoast-nsa.gov.tw/coast/Articles.aspx?a=2656"
+  ]
+}

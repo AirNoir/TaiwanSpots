@@ -1,6 +1,6 @@
 {
   "spotId": "hinoki-village",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
@@ -9,7 +9,7 @@
   },
   "crop": "A cluster of the restored wooden dormitories and their lanes. Not the whole Chiayi forestry area.",
   "heroScale": 1,
-  "orientation": "verify: dormitory row direction from the map",
+  "orientation": "Selected timber-house cluster is west of the school stadium, organized around garden lanes; verify: individual dormitory footprint alignment.",
   "lockedGeometry": [
     "rows of single-storey houses",
     "gravel lanes and gardens",
@@ -31,10 +31,19 @@
     "bicycles"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg",
+      "google-ground-review.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "One wooden Japanese house with a tree"
@@ -42,7 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Real timber-house ground panorama and satellite garden cluster compared. Houses are a representative compact crop; exact dormitory identities and footprints remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

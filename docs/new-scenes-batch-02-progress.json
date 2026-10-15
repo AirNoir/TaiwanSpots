@@ -1,0 +1,281 @@
+{
+  "date": "2026-10-15",
+  "scope": "20 new collection previews; no runtime replacement or tokens",
+  "items": [
+    {
+      "id": "longshan-temple",
+      "name": "艋舺龍山寺",
+      "lat": 25.0372,
+      "lng": 121.4999,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Front hall roof/dragon columns and south-facing entrance compared with real panorama and satellite. Rear roof massing and waterfall scale are simplified, not measured. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "cks-memorial",
+      "name": "中正紀念堂",
+      "lat": 25.0346,
+      "lng": 121.5218,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Square white body corrected from draft’s octagonal-body error; blue octagonal roof and west-facing stairs retained. Exact roof facets, facade proportions and 89 individual stair treads require manual review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "ximending",
+      "name": "西門町",
+      "lat": 25.0435,
+      "lng": 121.5072,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Real exterior photo replaces panorama facing away. Octagonal facade and cruciform west wing checked; rear details and neighboring stalls simplified. Exterior Street View/360 audit remains pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "shengxing-station",
+      "name": "勝興車站",
+      "lat": 24.388,
+      "lng": 120.7817,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Official Tourism Administration facade photograph plus satellite plan used. Default panorama failed to load and is excluded; usable station-exterior Street View audit remains pending. Rail count/platform details require review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "longteng-bridge",
+      "name": "龍騰斷橋",
+      "lat": 24.3586,
+      "lng": 120.7732,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Broken arch shoulders and freestanding redbrick piers retained; no intact deck. Exact surviving pier count, bridge-axis angle and valley-channel position require manual review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "sanyi-woodcarving",
+      "name": "三義木雕老街",
+      "lat": 24.4058,
+      "lng": 120.7613,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Corrected wooden-oldstreet draft to actual concrete museum, four entrance columns and three facade disks. Separate Shuimei street excluded. Public exterior photo replaces default interior panorama; exterior 360 audit and unseen roof/side-wing details remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "nanzhuang",
+      "name": "南庄老街",
+      "lat": 24.5991,
+      "lng": 120.9993,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Timber post office, pale upper gable and entry-side palms checked. No fictional stream through this crop. Exact alley shop arrangement and rear roof geometry remain simplified. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "hinoki-village",
+      "name": "檜意森活村",
+      "lat": 23.4857,
+      "lng": 120.4546,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Real timber-house ground panorama and satellite garden cluster compared. Houses are a representative compact crop; exact dormitory identities and footprints remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "fenqihu",
+      "name": "奮起湖",
+      "lat": 23.5053,
+      "lng": 120.6949,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Real engine-shed photo and satellite track/old-street relationship used. Exact station/garage architecture, switch count and tree species require manual review; no operating locomotive invented. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "dongshi",
+      "name": "東石漁人碼頭",
+      "lat": 23.4511,
+      "lng": 120.1353,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Actual pastel arcaded shop facade and satellite harbor/oyster-bed arrangement used. Forecourt panorama reviewed but lacked water; selected new photo adds facade evidence. Rack spacing and crop compression are approximate. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "npm-southern",
+      "name": "故宮南院",
+      "lat": 23.4759,
+      "lng": 120.294,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Draft zigzag bridge corrected to flowing curved Zhimei Bridge. Real glass/vertical-fin facade and satellite lake/bridge relationship used. Full roof shape, bridge structure and exact bank geometry remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "guishan-island",
+      "name": "龜山島",
+      "lat": 24.8431,
+      "lng": 121.9516,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v2.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Seaward head cliff, summit head view and whole-island satellite cross-checked. Island elevations, western harbor and lagoon proportions are approximate; not a surveyed island model. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. First review-v1 is rejected for flattened central body and an open sea bay replacing the western lagoon. review-v2 requested using official complete-island profile as primary elevation evidence. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. review-v2.png selected: restored higher central wooded body and separate lower eastern head, small enclosed western lagoon, using official complete-island photograph; precise elevations/coastline still approximate.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "rejectedPreviews": {
+        "review-v1.png": "central body flattened; western lagoon represented as open sea bay"
+      }
+    },
+    {
+      "id": "waiao",
+      "name": "外澳沙灘",
+      "lat": 24.8866,
+      "lng": 121.8493,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Grey-black sand, surf and coast-road/rail/hill sequence checked. Distant Guishan omitted rather than moved adjacent. Beach width, shoreline armoring and transport details require manual geographic review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "jiaoxi",
+      "name": "礁溪溫泉",
+      "lat": 24.8313,
+      "lng": 121.7765,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Actual covered footbath timber pavilion and wooded park satellite used. Canopy hides exact pool/building plan; modeled footbath visibility and layout require review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "shilin-night-market",
+      "name": "士林夜市",
+      "lat": 25.0883,
+      "lng": 121.5251,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Real Cixian Temple facade plus satellite lanes used; temple corrected to north of lanes. Surrounding stall/shop details are generalized, not traced individual businesses. Original 360 glimpse partial; complete lane-level audit remains pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "beitou-thermal-valley",
+      "name": "北投地熱谷",
+      "lat": 25.138,
+      "lng": 121.5119,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Actual jade pond, steam, rock bank and wooded satellite valley checked. Visitors stay on rail walkway; no bathers. Exact shore contour and entrance path under canopy remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "qingtiangang",
+      "name": "擎天崗",
+      "lat": 25.1674,
+      "lng": 121.574,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Open grassy terrain, path/fence and satellite trail network checked. Buffalo and hikers are scale cues; exact trail section, grazing positions and grass species remain interpretive. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "maokong",
+      "name": "貓空纜車",
+      "lat": 24.969,
+      "lng": 121.5882,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Actual enclosed cabins and cable corridor photo plus upper-station satellite used. Default 360 showed unrelated tea patio and is rejected. Station exterior/360 remains pending; no unverified adjacent tea terrace added. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "baishatun",
+      "name": "白沙屯拱天宮",
+      "lat": 24.5715,
+      "lng": 120.7092,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Actual temple facade plus satellite small Gongtian roof cluster used, distinguishing adjacent larger Tiande Temple. Default interior panorama replaced by public exterior photo; exterior 360 audit, rear halls and exact approach remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "huoyanshan",
+      "name": "火炎山",
+      "lat": 24.3773,
+      "lng": 120.731,
+      "status": "preview-ready-for-review",
+      "preview": "collection/review-v1.png",
+      "qaNotes": "2026-10-15 review-v1.png, new collection preview only. Real drone360 and satellite actual badlands used. Gravel/conglomerate texture and dry gullies retained. Drone image is aerial, not street-level: ground viewpoint remains pending; exact ridge elevations and scale unmeasured. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending.",
+      "nativeDimensions": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "generatedSpots": 20,
+  "approval": "pending user geographic/identity review",
+  "generatedAttempts": 21,
+  "selectedPreviews": 20,
+  "validation": {
+    "lint": "pass",
+    "typecheck": "pass",
+    "assetsCheck": "159 spots / 0 errors / 517 warnings",
+    "spotsCheck": "159 spots / 0 errors",
+    "validatorIntegrationCases": "4 passed: full-size selected preview accepted; missing selection rejected; approved without runtime rejected; draft accepted",
+    "runtimeAssets": "unchanged; preview only"
+  }
+}

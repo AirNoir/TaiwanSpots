@@ -1,6 +1,6 @@
 {
   "spotId": "jiaoxi",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
@@ -9,7 +9,7 @@
   },
   "crop": "The hot-spring park with its foot baths. Not the whole hotel district.",
   "heroScale": 1,
-  "orientation": "verify: park position relative to the main street",
+  "orientation": "Selected Jiaoxi Hot Springs Park is west of Gongyuan Road/Gongyuan North Road around 24.83260,121.77668; not Tangweigou or the similarly named southern pin (satellite).",
   "lockedGeometry": [
     "public park with paths",
     "shallow foot-bath pools",
@@ -30,10 +30,19 @@
     "trees with lanterns"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg",
+      "google-ground-review.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Steaming wooden foot-bath tub"
@@ -41,7 +50,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Actual covered footbath timber pavilion and wooded park satellite used. Canopy hides exact pool/building plan; modeled footbath visibility and layout require review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
   }
 }

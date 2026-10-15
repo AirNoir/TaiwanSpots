@@ -95,3 +95,5 @@ Q 版化是輕度圓潤比例，擬真的是材質與環境：石材、屋瓦、
 正式輸出若已將相同調色烘焙進圖片，須同步將比較頁對應的顯示調色還原 100%，避免重複減色。
 
 `npm run assets:prompt -- <id>` 使用此規格。逐張的完整提示詞保存在 collection/review-vN-prompt.txt 與 docs/cute-diorama-prompts.json。prompt 更新不等於圖片已通過 QA；舊 master/day/token 仍是正式 App 資產，預覽須經使用者逐張確認後再套用。
+
+新增景點可先交付審查預覽：來源收集後設為 `references-collected`，將原生 `review-vN.png` 加入 `docs/asset-review-selections.json`，更新比較頁。此階段不產生 day、thumbnail 或 token，也不註冊進 App。`assets:check` 對已明確選定且寬高均達 1024px 的審查圖，將缺 day 列為「待核准」警告；沒有有效預覽的非 draft 景點仍報錯，`approved` 景點也仍必須有正式 day。

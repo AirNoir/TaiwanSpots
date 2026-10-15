@@ -1,0 +1,38 @@
+{
+  "id": "shilin-night-market",
+  "title": "士林夜市 — real photographic reference",
+  "page": "https://www.google.com/maps/place/Shilin+Cixian+Temple/@25.0894605,121.5246522,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgIDf8YucOQ!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLe3d-qjSB84HALldNKCIT0xk6aa17-AGybdwqViwCB48j7hziXXa_dPZ7nOmNSAaSLKcmjhdVUTwkOlxqzjtDc0Ldd2lustantYORBCKrR4RDv5P7ZmZOlaj9211kVWya9p6FZk%3Dw86-h114-k-no!7i3024!8i4032!4m7!3m6!1s0x3442aebabca02d47:0x72e92503124a0b96!8m2!3d25.0894903!4d121.5246627!10e5!16s%2Fg%2F155q5p7k?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+  "image": "https://lh3.googleusercontent.com/grass-cs/AABkmLe3d-qjSB84HALldNKCIT0xk6aa17-AGybdwqViwCB48j7hziXXa_dPZ7nOmNSAaSLKcmjhdVUTwkOlxqzjtDc0Ldd2lustantYORBCKrR4RDv5P7ZmZOlaj9211kVWya9p6FZk=w1200-h900-k-no",
+  "local": "real-photo.jpg",
+  "author": "lee wei yi 壹尾魚 via Google Maps",
+  "capture": "2025-01",
+  "accessed": "2026-10-15",
+  "description": "Real Cixian Temple facade plus satellite lanes used; temple corrected to north of lanes. Surrounding stall/shop details are generalized, not traced individual businesses. Original 360 glimpse partial; complete lane-level audit remains pending.",
+  "usage": "Reference only; never used as final texture or bundled in App. Photographer/provider retains copyright; no license clearance is asserted.",
+  "method": "Public Google Maps source photograph, larger server rendition (not upscaled locally)",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "page": "https://www.google.com/maps/place/Shilin+Cixian+Temple/@25.0894605,121.5246522,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgIDf8YucOQ!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLe3d-qjSB84HALldNKCIT0xk6aa17-AGybdwqViwCB48j7hziXXa_dPZ7nOmNSAaSLKcmjhdVUTwkOlxqzjtDc0Ldd2lustantYORBCKrR4RDv5P7ZmZOlaj9211kVWya9p6FZk%3Dw86-h114-k-no!7i3024!8i4032!4m7!3m6!1s0x3442aebabca02d47:0x72e92503124a0b96!8m2!3d25.0894903!4d121.5246627!10e5!16s%2Fg%2F155q5p7k?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "ground",
+      "credit": "lee wei yi 壹尾魚 via Google Maps",
+      "capture": "2025-01",
+      "accessed": "2026-10-15",
+      "observations": "Public real photo lee wei yi 壹尾魚, capture Jan 2025. Cixian Temple orange terracotta roof/dragons, grey dragon pillars, red lanterns and raised steps. Neighboring market lane layout from satellite; storefront specifics simplified.",
+      "limitations": "Real Cixian Temple facade plus satellite lanes used; temple corrected to north of lanes. Surrounding stall/shop details are generalized, not traced individual businesses. Original 360 glimpse partial; complete lane-level audit remains pending.",
+      "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@25.0883,121.5251,389m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "satellite",
+      "credit": "Google Maps / credited imagery providers",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "observations": "Loaded satellite view confirms Cixian Temple north of main market lanes, Danan Road and dense low-rise blocks. Crop excludes elevated road.",
+      "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
+      "usage": "Reference only, not final texture"
+    }
+  ],
+  "officialContext": []
+}

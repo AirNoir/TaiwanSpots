@@ -1,19 +1,19 @@
 {
   "spotId": "guishan-island",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Guishan Island",
-    "silhouette": "Volcanic island shaped like a turtle with a high head peak and low tail"
+    "silhouette": "Irregular volcanic island with a high wooded body, steep eastern head and low western tail"
   },
   "crop": "The island seen from the sea with its turtle shape. Not the mainland coast.",
   "heroScale": 1,
-  "orientation": "verify: turtle head points east/south-east",
+  "orientation": "Low tail extends west and the steep head projects east/southeast; high wooded central body and western lagoon retained (satellite plus seaward and summit photos).",
   "lockedGeometry": [
-    "steep head peak",
+    "high central wooded body and steep eastern head linked by a lower saddle",
     "low tail extending west",
-    "small lagoon and harbour on the south side"
+    "small western lagoon and coastal harbor; exact elevations remain approximate"
   ],
   "lockedIdentity": [
     "turtle-shaped profile",
@@ -31,10 +31,22 @@
     "waves"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "google-satellite-review.jpg",
+      "google-head-view-review.jpg"
+    ],
+    "ground": [
+      "real-photo.jpg",
+      "google-ground-review.jpg",
+      "real-photo-overview.jpg",
+      "real-photo-head-official.jpg"
+    ],
+    "map": [
+      "google-satellite-review.jpg"
+    ],
+    "representative": [
+      "real-photo-overview.jpg"
+    ]
   },
   "worldToken": {
     "element": "Turtle-shaped green island with a small plume"
@@ -42,7 +54,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Seaward head cliff, summit head view and whole-island satellite cross-checked. Island elevations, western harbor and lagoon proportions are approximate; not a surveyed island model. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. First review-v1 is rejected for flattened central body and an open sea bay replacing the western lagoon. review-v2 requested using official complete-island profile as primary elevation evidence. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. review-v2.png selected: restored higher central wooded body and separate lower eastern head, small enclosed western lagoon, using official complete-island photograph; precise elevations/coastline still approximate."
   }
 }

@@ -1,0 +1,38 @@
+{
+  "id": "nanzhuang",
+  "title": "南庄老街 — real photographic reference",
+  "page": "https://www.google.com/maps/place/Old+Nanzhuang+Post+Office/@24.6001111,120.9991105,224a,75y,94.26h,90t/data=!3m7!1e1!3m5!1s2ipLCPIFnpmbdHMjfKAMBA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D2ipLCPIFnpmbdHMjfKAMBA%26yaw%3D94.26019!7i16384!8i8192!4m9!3m8!1s0x346851e34ae0460f:0x9f91f32d039ad0e4!8m2!3d24.6000936!4d120.9993477!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11x9y3_2_?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+  "image": null,
+  "local": "real-photo.jpg",
+  "author": "Google Street View",
+  "capture": "2024-05",
+  "accessed": "2026-10-15",
+  "description": "Timber post office, pale upper gable and entry-side palms checked. No fictional stream through this crop. Exact alley shop arrangement and rear roof geometry remain simplified.",
+  "usage": "Reference only; never used as final texture or bundled in App. Photographer/provider retains copyright; no license clearance is asserted.",
+  "method": "Google Maps ground-view screenshot with visible attribution",
+  "supplementary": [
+    {
+      "local": "google-ground-review.jpg",
+      "page": "https://www.google.com/maps/place/Old+Nanzhuang+Post+Office/@24.6001111,120.9991105,224a,75y,94.26h,90t/data=!3m7!1e1!3m5!1s2ipLCPIFnpmbdHMjfKAMBA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D2ipLCPIFnpmbdHMjfKAMBA%26yaw%3D94.26019!7i16384!8i8192!4m9!3m8!1s0x346851e34ae0460f:0x9f91f32d039ad0e4!8m2!3d24.6000936!4d120.9993477!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11x9y3_2_?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "ground",
+      "credit": "Google Street View",
+      "capture": "2024-05",
+      "accessed": "2026-10-15",
+      "observations": "Timber post office, pale upper gable and entry-side palms checked. No fictional stream through this crop. Exact alley shop arrangement and rear roof geometry remain simplified.",
+      "limitations": "Timber post office, pale upper gable and entry-side palms checked. No fictional stream through this crop. Exact alley shop arrangement and rear roof geometry remain simplified.",
+      "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.6000936,120.9993477,195m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "satellite",
+      "credit": "Google Maps / credited imagery providers",
+      "capture": "Not exposed",
+      "accessed": "2026-10-15",
+      "observations": "Loaded satellite: old post office west of school, above old-street lanes; no invented river through crop.",
+      "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
+      "usage": "Reference only, not final texture"
+    }
+  ],
+  "officialContext": []
+}
