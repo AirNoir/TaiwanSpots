@@ -1,0 +1,203 @@
+{
+  "scope": "25 existing preview models audited; 18 require edits, 7 already have no board and coherent square bases",
+  "requirements": [
+    "no backdrop boards or hardware",
+    "consistent human / Queen Head scale",
+    "true square rounded plinth",
+    "coherent horizontal base and architectural perspective",
+    "all scenery and buildings contained inside the base; adjust common scene scale if overflowing"
+  ],
+  "items": [
+    {
+      "id": "yehliu",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/yehliu/collection/review-v1.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/yehliu/collection/review-v4.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/yehliu/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/yehliu/reference/google-ground-queen.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "sun-moon-lake",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/sun-moon-lake/collection/review-v6.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/sun-moon-lake/collection/review-v7.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/sun-moon-lake/reference/real-photo.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "xiangshan",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/xiangshan/collection/urban-detail-preview.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/xiangshan/collection/review-v4.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/xiangshan/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/xiangshan/reference/real-photo-city.jpg"
+      ],
+      "status": "containment-visually-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "palace-museum",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/palace-museum/collection/review-v2.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/palace-museum/collection/review-v7.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/palace-museum/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/palace-museum/reference/real-photo-overview.jpg"
+      ],
+      "status": "containment-visually-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "jiufen",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/jiufen/collection/review-v5.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/jiufen/collection/review-v6.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/jiufen/reference/real-photo.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "qingshui-cliff",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/qingshui-cliff/collection/review-v4.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/qingshui-cliff/collection/review-v5.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/qingshui-cliff/reference/real-photo.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "tamsui",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/tamsui/collection/review-v3.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/tamsui/collection/review-v4.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/tamsui/reference/real-photo.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "cingjing",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/cingjing/collection/review-v1.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/cingjing/collection/review-v2.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/cingjing/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/cingjing/reference/google-ground-pasture.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "gaomei",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/gaomei/collection/review-v1.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/gaomei/collection/review-v2.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/gaomei/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/gaomei/reference/google-ground-boardwalk.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "hehuanshan",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/hehuanshan/collection/review-v1.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/hehuanshan/collection/review-v2.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/hehuanshan/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/hehuanshan/reference/google-ground-review.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "alishan",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/alishan/collection/review-v1.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/alishan/collection/review-v2.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/alishan/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/alishan/reference/google-ground-review.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "pier2",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/pier2/collection/review-v1.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/pier2/collection/review-v2.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/pier2/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/pier2/reference/google-ground-review.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "cijin",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/cijin/collection/review-v1.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/cijin/collection/review-v2.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/cijin/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/cijin/reference/google-ground-review.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "kenting",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/kenting/collection/review-v1.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/kenting/collection/review-v2.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/kenting/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/kenting/reference/google-ground-review.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "qixingtan",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/qixingtan/collection/review-v1.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/qixingtan/collection/review-v2.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/qixingtan/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/qixingtan/reference/google-ground-review.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "brown-avenue",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/brown-avenue/collection/review-v1.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/brown-avenue/collection/review-v2.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/brown-avenue/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/brown-avenue/reference/google-ground-review.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "sanxiantai",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/sanxiantai/collection/review-v2.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/sanxiantai/collection/review-v3.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/sanxiantai/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/sanxiantai/reference/google-ground-review.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    },
+    {
+      "id": "ruisui",
+      "target": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/ruisui/collection/review-v1.png",
+      "output": "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/ruisui/collection/review-v2.png",
+      "references": [
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/ruisui/reference/real-photo.jpg",
+        "/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/ruisui/reference/google-ground-review.jpg"
+      ],
+      "status": "presentation-reviewed-geographic-qa-pending"
+    }
+  ],
+  "status": "preview-batch-finished-user-geographic-review-pending",
+  "unchangedAfterAudit": [
+    "taipei-101",
+    "dadaocheng",
+    "rainbow-village",
+    "lukang",
+    "anping",
+    "chihkan",
+    "taroko"
+  ],
+  "limitations": {
+    "palace-museum": "Pailou openings/pillars remain simplified and geographic accuracy pending. Perspective is a visual rendering, not a surveyed 3D model.",
+    "yehliu": "Rock/human proportion improved by visual approximation; exact dimensions and rope/path placement remain pending.",
+    "xiangshan": "Six-rock arrangement and individual skyline footprints remain pending."
+  }
+}

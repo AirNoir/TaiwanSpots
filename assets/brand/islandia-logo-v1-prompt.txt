@@ -1,0 +1,10 @@
+Use case: logo-brand
+Asset type: primary brand logo concept for Islandia, a Taiwan travel app for collecting beautiful miniature landmark scenes.
+Primary request: create one polished original logo lockup: a simple iconic Taiwan miniature-island emblem above the word "Islandia".
+Subject: a recognizable gently rounded Taiwan island silhouette, long northeast-to-southwest shape, supported by a small rounded-square isometric plinth. Use two or three broad nested green shapes to suggest the island's mountain ridge, with a clean turquoise edge suggesting coast. It should read as a collectible little island, yet be a bold graphic symbol easily legible at app icon size. Keep the square base subtle and geometrically clear.
+Style/medium: refined flat vector-like brand design, smooth precise edges, playful premium proportions, restrained two-dimensional isometric depth. Rounded and friendly, intentional negative space. No tiny scenic details.
+Composition: centered emblem with generous whitespace, wordmark directly beneath it. Single logo only, no presentation mockups or alternative versions.
+Color palette: deep forest green, jade green, turquoise, and a warm ivory plinth; dark forest green lettering. Solid colors, no photographic textures.
+Text (verbatim): "Islandia", spelled I s l a n d i a. A beautifully balanced custom rounded geometric sans-serif wordmark with a capital I, lowercase remainder. Excellent optical spacing, medium-bold weight. No tagline or other text.
+Background: genuinely transparent.
+Constraints: premium, cute, timeless brand mark. Taiwan outline must remain recognizable; emblem and wordmark need clean readable silhouettes. No crystal globe, no map pin, no landmarks, no scenic illustration, no character face, no decorative badges, no gradients, no cast shadows, no watermark.

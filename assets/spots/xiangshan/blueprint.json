@@ -45,10 +45,10 @@
     "element": "The boulder cluster with a small Taipei 101 behind it"
   },
   "qa": {
-    "geographic": "fail",
+    "geographic": "pending",
     "identity": "pending",
     "style": "pending",
     "collection": "pending",
-    "notes": "Original collection/master.png sample has an inverted stair slope, identified by user; not approved. Three real photographs now corroborate the descending path. Crystal sphere concept is a separate preview, pending user review; do not replace the production master until accepted. Full six-rock layout and cardinal bearing remain unconfirmed."
+    "notes": "Original collection/master.png sample has an inverted stair slope, identified by user; not approved. Three real photographs now corroborate the descending path. Crystal sphere concept is a separate preview, pending user review; do not replace the production master until accepted. Full six-rock layout and cardinal bearing remain unconfirmed. | 2026-10-15 review-v3.png: removed all backdrop cards and hardware; square ivory plinth / camera and architectural alignment reviewed. This is a presentation edit, not a new map audit or automatic approval. Real geographic details and user acceptance remain pending. | review-v3.png changes outer base to a square and removes the unsupported domed background tower. Downward stair slope and trees beside rocks retained. Exact six-rock arrangement and city building placement remain pending. | 2026-10-15 review-v4.png: complete scene footprint reduced, wide continuous ivory perimeter buffer added; buildings, terrain and tree crowns now visually contained inside the same square plinth. Geographic details and user acceptance remain pending."
   }
 }
