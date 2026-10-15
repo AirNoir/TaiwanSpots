@@ -1,7 +1,9 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Animated, Easing, Image, StyleSheet, View } from 'react-native';
+import Svg, { Path } from 'react-native-svg';
+import { isWet, Season, seasonWash, Sky } from '../atmosphere';
 import { collectionImage, collectionThumbnail, DIORAMA_BG } from '../data/spotAssets';
 import { Spot } from '../data/spots';
 import { useTheme } from '../theme';
@@ -14,12 +16,16 @@ interface Props {
   locked?: boolean;
   live?: boolean; // subtle "living diorama" motion
   radius?: number;
+  /** Season wash over the model; rain falls on live dioramas when the sky is wet. */
+  atmosphere?: { season: Season; sky?: Sky };
 }
 
-export function Diorama({ spot, size, locked = false, live = false, radius }: Props) {
+export function Diorama({ spot, size, locked = false, live = false, radius, atmosphere }: Props) {
   const t = useTheme();
   const { art } = spot;
   const br = radius ?? size * 0.12;
+  const wash = !locked && atmosphere ? seasonWash[atmosphere.season] : null;
+  const raining = !locked && live && !!atmosphere?.sky && isWet(atmosphere.sky);
 
   const [cloudX] = useState(() => new Animated.Value(0));
   const [bobY] = useState(() => new Animated.Value(0));
@@ -77,6 +83,8 @@ export function Diorama({ spot, size, locked = false, live = false, radius }: Pr
         >
           <Image source={image} style={{ width: '100%', height: '100%' }} resizeMode="contain" />
         </Animated.View>
+        {wash && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: wash }]} />}
+        {raining && <Rain size={size} />}
         {locked && (
           <View style={[styles.lockBadgeWrap, { backgroundColor: t.lockOverlay }]}>
             <MaterialCommunityIcons name={'lock' as any} size={size * 0.14} color={t.lockedIcon} />
@@ -218,12 +226,59 @@ export function Diorama({ spot, size, locked = false, live = false, radius }: Pr
       >
         <MaterialCommunityIcons name={art.icon as any} size={size * 0.3} color={mainColor} />
       </Animated.View>
+      {wash && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: wash }]} />}
+      {raining && <Rain size={size} />}
       {locked && (
         <View style={styles.lockBadgeWrap}>
           <MaterialCommunityIcons name={'lock' as any} size={size * 0.14} color="#8E9AAF" />
         </View>
       )}
     </View>
+  );
+}
+
+// Deterministic pseudo-random in [0,1) so drops don't shuffle between renders.
+const hash = (n: number) => {
+  const s = Math.sin(n * 127.1) * 43758.5453;
+  return s - Math.floor(s);
+};
+
+/** Thin streaks falling over a live diorama. */
+function Rain({ size }: { size: number }) {
+  const [fall] = useState(() => new Animated.Value(0));
+  useEffect(() => {
+    const a = Animated.loop(
+      Animated.timing(fall, { toValue: 1, duration: 700, easing: Easing.linear, useNativeDriver: true }),
+    );
+    a.start();
+    return () => a.stop();
+  }, [fall]);
+  const drops = useMemo(
+    () =>
+      Array.from({ length: 16 }, (_, k) => ({
+        x: hash(k) * size,
+        y: hash(k + 31) * size * 0.7,
+        l: size * (0.03 + hash(k + 61) * 0.03),
+      })),
+    [size],
+  );
+  return (
+    <Animated.View
+      pointerEvents="none"
+      style={[
+        StyleSheet.absoluteFill,
+        {
+          opacity: fall.interpolate({ inputRange: [0, 0.2, 0.8, 1], outputRange: [0, 0.6, 0.6, 0] }),
+          transform: [{ translateY: fall.interpolate({ inputRange: [0, 1], outputRange: [-size * 0.04, size * 0.06] }) }],
+        },
+      ]}
+    >
+      <Svg width={size} height={size}>
+        {drops.map((d, k) => (
+          <Path key={k} d={`M ${d.x} ${d.y} l ${-d.l * 0.25} ${d.l}`} stroke="#8FB8D8" strokeWidth={1.2} strokeLinecap="round" />
+        ))}
+      </Svg>
+    </Animated.View>
   );
 }
 

@@ -1,3 +1,4 @@
+import type { Season } from './atmosphere';
 import { useStore } from './store';
 
 export type ThemeMode = 'light' | 'dark';
@@ -20,7 +21,33 @@ export interface WorldPalette {
   lightCore: string;
   pin: string;
   tokenShadow: string;
+  cloud: string; // weather clouds over a region
+  rain: string; // rain streaks
+  snow: string; // snow caps and flakes
 }
+
+/** Seasonal recolouring of discovered terrain; undiscovered land stays fogged grey. */
+export interface SeasonTint {
+  ridgeLit: [string, string];
+  bloom: string;
+  blossom?: string; // spring petals around discovered spots
+  snowCaps: boolean; // white tops on the highest central peaks
+}
+
+export const seasonTints: Record<ThemeMode, Record<Season, SeasonTint>> = {
+  light: {
+    spring: { ridgeLit: ['#A8D67E', '#73A85A'], bloom: '#9BD178', blossom: '#F4A6B8', snowCaps: false },
+    summer: { ridgeLit: ['#8CC56A', '#5C9448'], bloom: '#7FC25C', snowCaps: false },
+    autumn: { ridgeLit: ['#D9B562', '#A4813F'], bloom: '#CDAA5C', snowCaps: false },
+    winter: { ridgeLit: ['#A9BFA6', '#7C9680'], bloom: '#A3BF95', snowCaps: true },
+  },
+  dark: {
+    spring: { ridgeLit: ['#9ECB78', '#6A9A55'], bloom: '#93C96F', blossom: '#E59AAD', snowCaps: false },
+    summer: { ridgeLit: ['#86B96A', '#56874A'], bloom: '#80B861', snowCaps: false },
+    autumn: { ridgeLit: ['#C9A65A', '#8F6F38'], bloom: '#B99A52', snowCaps: false },
+    winter: { ridgeLit: ['#98AE9C', '#6E8574'], bloom: '#93AC8A', snowCaps: true },
+  },
+};
 
 export interface Palette {
   mode: ThemeMode;
@@ -87,6 +114,9 @@ const dark: Palette = {
     lightCore: '#FFF4D6',
     pin: '220,228,236',
     tokenShadow: 'rgba(0,0,0,0.35)',
+    cloud: '#8A96A6',
+    rain: '#9CC0E0',
+    snow: '#F4F7FA',
   },
 };
 
@@ -131,6 +161,9 @@ const light: Palette = {
     lightCore: '#FFF7E3',
     pin: '70,80,92',
     tokenShadow: 'rgba(80,64,36,0.28)',
+    cloud: '#C3CAD3',
+    rain: '#5F8FB8',
+    snow: '#FFFFFF',
   },
 };
 

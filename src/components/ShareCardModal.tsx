@@ -10,8 +10,9 @@ import {
   View,
 } from 'react-native';
 import ViewShot from 'react-native-view-shot';
+import { seasonMeta, skyMeta } from '../atmosphere';
 import { Spot } from '../data/spots';
-import { CollectionEntry } from '../store';
+import { CollectionEntry, entrySeason } from '../store';
 import { makeStyles, Palette, useTheme } from '../theme';
 import { Diorama } from './Diorama';
 
@@ -39,6 +40,8 @@ export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visibl
   const dateStr = date
     .toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })
     .toUpperCase();
+  const season = entrySeason(entry);
+  const variant = `${seasonMeta[season].label}${entry.sky ? ` · ${skyMeta[entry.sky].zh}` : ''}`;
 
   const share = async () => {
     try {
@@ -57,17 +60,19 @@ export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visibl
       <View style={styles.backdrop}>
         <ViewShot ref={shotRef} options={{ format: 'png', quality: 1 }}>
           <View style={[styles.card, { width: cardW }]}>
-            <Diorama spot={spot} size={dioramaSize} radius={20} />
+            <Diorama spot={spot} size={dioramaSize} radius={20} atmosphere={{ season, sky: entry.sky }} />
             <Text style={styles.name}>{spot.nameEn}</Text>
             <Text style={styles.serial}>#{String(entry.order).padStart(3, '0')}</Text>
             <Text style={styles.meta}>{dateStr}</Text>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 6 }}>
               <MaterialCommunityIcons
-                name={'white-balance-sunny' as any}
+                name={seasonMeta[season].icon as any}
                 size={13}
                 color={t.subtext}
               />
-              <Text style={[styles.meta, { marginTop: 0 }]}>{spot.city}</Text>
+              <Text style={[styles.meta, { marginTop: 0 }]}>
+                {spot.city} · {variant}
+              </Text>
             </View>
             <View style={styles.divider} />
             <Text style={styles.myTaiwan}>MY TAIWAN</Text>

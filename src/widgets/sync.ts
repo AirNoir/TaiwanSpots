@@ -5,7 +5,7 @@ import { useEffect, useMemo } from 'react';
 import { Platform } from 'react-native';
 import { collectionThumbnail } from '../data/spotAssets';
 import { SPOTS, Spot } from '../data/spots';
-import { distanceMeters, LatLng } from '../geo';
+import { checkinRadius, distanceMeters, formatDistance, LatLng } from '../geo';
 import { CollectionEntry, useStore } from '../store';
 import type { IslandiaWidgetProps } from './IslandiaWidget';
 import type { SpotNearbyProps } from './SpotNearbyActivity';
@@ -96,7 +96,7 @@ function syncActivity(m: WidgetsModule, here: Spot | null, dist: number) {
     live.forEach((a) => void a.end('immediate'));
     return;
   }
-  const props: SpotNearbyProps = { spotId: here.id, name: here.name, distance: `${Math.round(dist)} m` };
+  const props: SpotNearbyProps = { spotId: here.id, name: here.name, distance: formatDistance(dist) };
   if (live.length) void live[0].update(props);
   else m.activity.start(props, `islandia://spot/${here.id}`);
 }
@@ -124,7 +124,7 @@ export function useWidgetSync(location: LatLng, hasFix: boolean) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [collections, nextKey]);
 
-  const here = nearest && nearest.dist <= nearest.spot.checkinRadius ? nearest : null;
+  const here = nearest && nearest.dist <= checkinRadius(nearest.spot) ? nearest : null;
   useEffect(() => {
     if (!native) return;
     try {

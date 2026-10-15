@@ -10,16 +10,21 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { describeWeather, seasonMeta, seasonOf, skyIcon, useWeather } from '../../src/atmosphere';
 import { Diorama } from '../../src/components/Diorama';
 import { TaiwanWorld } from '../../src/components/TaiwanWorld';
 import { SPOTS, spotById } from '../../src/data/spots';
-import { distanceMeters, formatDistance } from '../../src/geo';
+import { TAIWAN } from '../../src/data/world';
+import { distanceMeters, formatDistance, LatLng } from '../../src/geo';
 import { useStore } from '../../src/store';
 import { makeStyles, Palette, useTheme } from '../../src/theme';
 import { useLocation } from '../../src/useLocation';
 import { useWidgetSync } from '../../src/widgets/sync';
 
 const { width: SCREEN_W } = Dimensions.get('window');
+
+// Weather is looked up for these four city centres only — never for the traveller's position.
+const REGION_POINTS: LatLng[] = TAIWAN.regions.map((r) => ({ latitude: r.center[1], longitude: r.center[0] }));
 
 function greeting() {
   const h = new Date().getHours();
@@ -39,6 +44,22 @@ export default function WorldScreen() {
 
   const collectedIds = useMemo(() => new Set(Object.keys(collections)), [collections]);
   const count = collectedIds.size;
+
+  const season = seasonOf();
+  const regionWeather = useWeather(REGION_POINTS);
+  const weatherByRegion = Object.fromEntries(TAIWAN.regions.map((r, i) => [r.id, regionWeather[i]]));
+  // The region whose city centre is closest to the traveller (computed on-device).
+  const nearRegion = useMemo(
+    () =>
+      TAIWAN.regions.reduce((best, r, i) =>
+        distanceMeters(location, REGION_POINTS[i]) <
+        distanceMeters(location, REGION_POINTS[TAIWAN.regions.indexOf(best)])
+          ? r
+          : best,
+      ),
+    [location],
+  );
+  const hereWeather = weatherByRegion[nearRegion.id];
 
   const nearby = useMemo(
     () =>
@@ -64,10 +85,23 @@ export default function WorldScreen() {
       <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
         <Text style={styles.greeting}>{greeting()}</Text>
         <Text style={styles.subGreeting}>去過的地方,會成為你的世界。</Text>
+        <View style={styles.atmosRow}>
+          <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={13} color={t.subtext} />
+          <Text style={styles.atmosText}>{seasonMeta[season].zh}天</Text>
+          {hereWeather && (
+            <>
+              <Text style={styles.atmosText}>·</Text>
+              <MaterialCommunityIcons name={skyIcon(hereWeather) as any} size={13} color={t.subtext} />
+              <Text style={styles.atmosText}>
+                {nearRegion.zh} {describeWeather(hereWeather)}
+              </Text>
+            </>
+          )}
+        </View>
 
         <View style={styles.worldCard}>
           <Text style={styles.worldLabel}>MY TAIWAN WORLD</Text>
-          <TaiwanWorld width={mapW} collectedIds={collectedIds} />
+          <TaiwanWorld width={mapW} collectedIds={collectedIds} season={season} weather={weatherByRegion} />
           <View style={styles.worldStats}>
             <Text style={styles.worldCount}>
               {count} <Text style={styles.worldTotal}>/ {SPOTS.length}</Text>
@@ -124,7 +158,9 @@ const useStyles = makeStyles((t: Palette) =>
   safe: { flex: 1, backgroundColor: t.bg },
   container: { padding: 24, paddingBottom: 48 },
   greeting: { color: t.text, fontSize: 28, fontWeight: '800' },
-  subGreeting: { color: t.subtext, fontSize: 14, marginTop: 6, marginBottom: 20 },
+  subGreeting: { color: t.subtext, fontSize: 14, marginTop: 6 },
+  atmosRow: { flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 8, marginBottom: 20 },
+  atmosText: { color: t.subtext, fontSize: 12 },
   worldCard: {
     backgroundColor: t.card,
     borderRadius: 24,

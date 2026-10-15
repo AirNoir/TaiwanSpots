@@ -14,10 +14,12 @@ import { Diorama } from '../../src/components/Diorama';
 import { DioramaViewer } from '../../src/components/DioramaViewer';
 import { ShareCardModal } from '../../src/components/ShareCardModal';
 import { UnlockOverlay } from '../../src/components/UnlockOverlay';
+import { describeWeather, seasonMeta, seasonOf, skyIcon, skyMeta, useWeather } from '../../src/atmosphere';
 import { collectionImage } from '../../src/data/spotAssets';
 import { spotById, SPOTS } from '../../src/data/spots';
-import { distanceMeters, formatDistance } from '../../src/geo';
-import { useStore } from '../../src/store';
+import { checkinRadius, distanceMeters, formatDistance } from '../../src/geo';
+import { openDirections, travelModeFor } from '../../src/maps';
+import { entrySeason, useStore } from '../../src/store';
 import { Palette, categoryMeta, makeStyles, rarityMeta, useTheme } from '../../src/theme';
 import { useLocation } from '../../src/useLocation';
 
@@ -46,6 +48,8 @@ export default function SpotDetailScreen() {
     () => (spot ? distanceMeters(location, spot) : Infinity),
     [location, spot]
   );
+  // Weather at the spot itself (a fixed public coordinate — never the traveller's position).
+  const [weather] = useWeather(useMemo(() => (spot ? [spot] : []), [spot]));
 
   if (!spot) {
     return (
@@ -55,12 +59,19 @@ export default function SpotDetailScreen() {
     );
   }
 
-  const inRange = dist <= spot.checkinRadius;
+  const radius = checkinRadius(spot);
+  const inRange = dist <= radius;
   const rarity = rarityMeta[spot.rarity];
   const category = categoryMeta[spot.category];
   const dioramaSize = SCREEN_W - 48;
   // Spots whose art is still pending only have the procedural diorama — nothing to zoom into.
   const zoomable = collected && !!collectionImage(spot.id);
+
+  // A collected diorama keeps the season (and sky) it was collected in; a locked one shows today's.
+  const season = seasonOf();
+  const shownSeason = entry ? entrySeason(entry) : season;
+  const atmosphere = { season: shownSeason, sky: entry ? entry.sky : weather?.sky };
+  const travelMode = travelModeFor(dist);
 
   const onCheckIn = () => {
     if (!inRange || collected) return;
@@ -68,8 +79,12 @@ export default function SpotDetailScreen() {
   };
 
   const onUnlockDone = () => {
-    checkIn(spot.id);
+    checkIn(spot.id, { season, sky: weather?.sky, temperature: weather?.temperature });
     setUnlocking(false);
+  };
+
+  const onNavigate = () => {
+    void openDirections(spot, travelMode, t.mode);
   };
 
   return (
@@ -88,7 +103,7 @@ export default function SpotDetailScreen() {
           accessibilityRole="imagebutton"
           accessibilityLabel={`放大檢視 ${spot.name}`}
         >
-          <Diorama spot={spot} size={dioramaSize} locked={!collected} live={collected} radius={24} />
+          <Diorama spot={spot} size={dioramaSize} locked={!collected} live={collected} radius={24} atmosphere={atmosphere} />
           {zoomable && (
             <View style={styles.zoomBadge} pointerEvents="none">
               <Ionicons name="expand" size={14} color={t.text} />
@@ -122,6 +137,17 @@ export default function SpotDetailScreen() {
               {rarity.label}
             </Text>
           </View>
+          {/* today's season, and the weather at the spot once it has loaded */}
+          <View style={[styles.tag, { flexDirection: 'row', alignItems: 'center', gap: 5 }]}>
+            <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={13} color={t.subtext} />
+            <Text style={styles.tagText}>{seasonMeta[season].zh}</Text>
+            {weather && (
+              <>
+                <MaterialCommunityIcons name={skyIcon(weather) as any} size={13} color={t.subtext} />
+                <Text style={styles.tagText}>{describeWeather(weather)}</Text>
+              </>
+            )}
+          </View>
         </View>
 
         <Text style={styles.description}>{spot.description}</Text>
@@ -136,15 +162,24 @@ export default function SpotDetailScreen() {
             </Text>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 6 }}>
               <MaterialCommunityIcons
-                name={'white-balance-sunny' as any}
+                name={seasonMeta[shownSeason].icon as any}
                 size={13}
                 color={t.subtext}
               />
-              <Text style={[styles.collectedVariant, { marginTop: 0 }]}>DAY VARIANT</Text>
+              <Text style={[styles.collectedVariant, { marginTop: 0 }]}>
+                {seasonMeta[shownSeason].label} VARIANT
+                {entry.sky
+                  ? ` · ${skyMeta[entry.sky].zh}${entry.temperature != null ? ` ${entry.temperature}°` : ''}`
+                  : ''}
+              </Text>
             </View>
             <Pressable style={styles.shareBtn} onPress={() => setSharing(true)}>
               <Ionicons name="share-outline" size={16} color={t.onAccent} />
               <Text style={styles.shareBtnText}>分享收藏卡</Text>
+            </Pressable>
+            <Pressable style={styles.navLink} onPress={onNavigate} accessibilityRole="button">
+              <MaterialCommunityIcons name={'navigation-variant-outline' as any} size={14} color={t.subtext} />
+              <Text style={styles.navLinkText}>導航再訪 · {formatDistance(dist)}</Text>
             </Pressable>
           </View>
         ) : (
@@ -156,7 +191,7 @@ export default function SpotDetailScreen() {
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 8 }}>
                 <MaterialCommunityIcons name={'lock' as any} size={12} color={t.faint} />
                 <Text style={[styles.outRangeText, { marginTop: 0 }]}>
-                  需進入 {spot.checkinRadius} m 範圍內才能收藏
+                  需進入 {formatDistance(radius)} 範圍內才能收藏
                 </Text>
               </View>
             )}
@@ -168,6 +203,11 @@ export default function SpotDetailScreen() {
               <Text style={[styles.checkinBtnText, !inRange && { color: t.faint }]}>
                 留下足跡
               </Text>
+            </Pressable>
+            {/* hands the spot to Apple / Google Maps on the phone */}
+            <Pressable style={styles.navBtn} onPress={onNavigate} accessibilityRole="button">
+              <MaterialCommunityIcons name={'navigation-variant-outline' as any} size={16} color={t.accent} />
+              <Text style={styles.navBtnText}>{travelMode === 'walking' ? '步行導航' : '開車導航'}</Text>
             </Pressable>
             {/* demo helper: teleport to this spot in the simulator */}
             {!inRange && (
@@ -281,6 +321,20 @@ const useStyles = makeStyles((t: Palette) =>
   },
   checkinBtnDisabled: { backgroundColor: t.locked },
   checkinBtnText: { color: t.onAccent, fontSize: 16, fontWeight: '800', letterSpacing: 2 },
+  navBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    borderWidth: 1,
+    borderColor: t.accent,
+    borderRadius: 22,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    marginTop: 12,
+  },
+  navBtnText: { color: t.accent, fontWeight: '700', fontSize: 14 },
+  navLink: { flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 14 },
+  navLinkText: { color: t.subtext, fontSize: 12 },
   devBtn: { marginTop: 14 },
   devBtnText: { color: t.faint, fontSize: 12 },
   }),

@@ -1,5 +1,6 @@
+import { SEASONS } from './atmosphere';
 import { SPOTS, spotById } from './data/spots';
-import { CollectionEntry } from './store';
+import { CollectionEntry, entrySeason } from './store';
 
 export interface AchievementDef {
   id: string;
@@ -20,6 +21,8 @@ const byRegion = (collected: CollectionEntry[], region: string) =>
   collected.filter((c) => spotById(c.spotId)?.region === region).length;
 
 const regionTotal = (region: string) => SPOTS.filter((s) => s.region === region).length;
+
+const seasonsCollected = (collected: CollectionEntry[]) => new Set(collected.map(entrySeason)).size;
 
 export const ACHIEVEMENTS: AchievementDef[] = [
   {
@@ -61,6 +64,14 @@ export const ACHIEVEMENTS: AchievementDef[] = [
     icon: 'city-variant',
     check: (c) => byRegion(c, 'north') >= regionTotal('north'),
     progress: (c) => ({ now: byRegion(c, 'north'), goal: regionTotal('north') }),
+  },
+  {
+    id: 'four-seasons',
+    title: 'FOUR SEASONS',
+    zh: '春夏秋冬都留下足跡',
+    icon: 'sun-snowflake',
+    check: (c) => seasonsCollected(c) >= SEASONS.length,
+    progress: (c) => ({ now: seasonsCollected(c), goal: SEASONS.length }),
   },
   {
     id: 'taiwan-master',

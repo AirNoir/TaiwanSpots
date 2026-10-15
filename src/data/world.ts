@@ -8,6 +8,8 @@ export interface WorldRegion {
   id: string;
   label: string;
   zh: string;
+  /** Representative point (lng, lat) for the region's weather — a city centre, never the traveller. */
+  center: LngLat;
 }
 
 export interface WorldDef {
@@ -55,10 +57,10 @@ export const TAIWAN: WorldDef = {
     [[120.62, 23.05], [120.5, 22.75], [120.43, 22.48]], // Gaoping
   ],
   regions: [
-    { id: 'north', label: 'NORTH', zh: '北台灣' },
-    { id: 'central', label: 'CENTRAL', zh: '中台灣' },
-    { id: 'south', label: 'SOUTH', zh: '南台灣' },
-    { id: 'east', label: 'EAST', zh: '東台灣' },
+    { id: 'north', label: 'NORTH', zh: '北台灣', center: [121.52, 25.05] }, // Taipei
+    { id: 'central', label: 'CENTRAL', zh: '中台灣', center: [120.68, 24.15] }, // Taichung
+    { id: 'south', label: 'SOUTH', zh: '南台灣', center: [120.3, 22.65] }, // Kaohsiung
+    { id: 'east', label: 'EAST', zh: '東台灣', center: [121.6, 23.98] }, // Hualien
   ],
 };
 

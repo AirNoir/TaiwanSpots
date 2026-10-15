@@ -18,8 +18,18 @@ export function distanceMeters(a: LatLng, b: LatLng): number {
 
 export function formatDistance(m: number): string {
   if (m < 1000) return `${Math.round(m)} m`;
-  if (m < 10000) return `${(m / 1000).toFixed(1)} km`;
+  if (m < 10000) return `${(m / 1000).toFixed(1).replace(/\.0$/, '')} km`;
   return `${Math.round(m / 1000)} km`;
+}
+
+/**
+ * Every spot can be collected from at least this far away (metres). Spots that
+ * declare a larger radius of their own (national parks, mountain areas) keep it.
+ */
+export const MIN_CHECKIN_RADIUS = 1000;
+
+export function checkinRadius(spot: { checkinRadius: number }): number {
+  return Math.max(spot.checkinRadius, MIN_CHECKIN_RADIUS);
 }
 
 // Demo presets for simulator testing

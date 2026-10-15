@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
+import { Season, seasonOf, Sky } from './atmosphere';
 import { SPOTS } from './data/spots';
 import { LatLng } from './geo';
 import type { ThemeMode } from './theme';
@@ -11,7 +12,21 @@ export interface CollectionEntry {
   variant: 'day';
   firstVisit: boolean;
   order: number; // collection serial number (1-based)
+  /** Atmosphere at the moment of collection. Entries from before 0.2 have none — use entrySeason(). */
+  season?: Season;
+  sky?: Sky;
+  temperature?: number;
 }
+
+export interface Atmosphere {
+  season: Season;
+  sky?: Sky;
+  temperature?: number;
+}
+
+/** Season a collection belongs to: recorded at check-in, or derived from the date for older entries. */
+export const entrySeason = (e: CollectionEntry): Season =>
+  e.season ?? seasonOf(new Date(e.checkedInAt));
 
 interface IslandiaState {
   hydrated: boolean;
@@ -22,7 +37,7 @@ interface IslandiaState {
   setThemeMode: (mode: ThemeMode) => void;
   setOnboarded: () => void;
   setDevLocation: (loc: LatLng | null) => void;
-  checkIn: (spotId: string) => CollectionEntry;
+  checkIn: (spotId: string, atmosphere?: Atmosphere) => CollectionEntry;
   /** Dev: collect every active spot (keeps existing entries). */
   unlockAll: () => void;
   reset: () => void;
@@ -39,7 +54,7 @@ export const useStore = create<IslandiaState>()(
       setThemeMode: (mode) => set({ themeMode: mode }),
       setOnboarded: () => set({ onboarded: true }),
       setDevLocation: (loc) => set({ devLocation: loc }),
-      checkIn: (spotId) => {
+      checkIn: (spotId, atmosphere) => {
         const existing = get().collections[spotId];
         if (existing) return existing;
         const order = Object.keys(get().collections).length + 1;
@@ -49,6 +64,9 @@ export const useStore = create<IslandiaState>()(
           variant: 'day',
           firstVisit: true,
           order,
+          season: atmosphere?.season ?? seasonOf(),
+          sky: atmosphere?.sky,
+          temperature: atmosphere?.temperature,
         };
         set({ collections: { ...get().collections, [spotId]: entry } });
         return entry;
@@ -57,10 +75,11 @@ export const useStore = create<IslandiaState>()(
         const collections = { ...get().collections };
         let order = Object.keys(collections).length;
         const now = new Date().toISOString();
+        const season = seasonOf();
         for (const s of SPOTS) {
           if (collections[s.id]) continue;
           order += 1;
-          collections[s.id] = { spotId: s.id, checkedInAt: now, variant: 'day', firstVisit: true, order };
+          collections[s.id] = { spotId: s.id, checkedInAt: now, variant: 'day', firstVisit: true, order, season };
         }
         set({ collections, onboarded: true });
       },

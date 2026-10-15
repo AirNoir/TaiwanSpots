@@ -11,7 +11,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
 import { Region, SPOTS } from '../../src/data/spots';
-import { DEV_LOCATIONS, distanceMeters, formatDistance } from '../../src/geo';
+import { checkinRadius, DEV_LOCATIONS, distanceMeters, formatDistance } from '../../src/geo';
 import { useStore } from '../../src/store';
 import { Palette, categoryMeta, makeStyles, rarityMeta, regionMeta, useTheme } from '../../src/theme';
 import { useLocation } from '../../src/useLocation';
@@ -96,7 +96,7 @@ export default function ExploreScreen() {
         contentContainerStyle={{ padding: 20, paddingTop: 8, paddingBottom: 40 }}
         renderItem={({ item }) => {
           const { spot, dist, collected } = item;
-          const inRange = dist <= spot.checkinRadius;
+          const inRange = dist <= checkinRadius(spot);
           return (
             <Pressable style={styles.row} onPress={() => router.push(`/spot/${spot.id}`)}>
               <Diorama spot={spot} size={64} locked={!collected} radius={16} />

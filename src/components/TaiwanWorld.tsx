@@ -21,10 +21,11 @@ import Svg, {
   RadialGradient,
   Stop,
 } from 'react-native-svg';
+import { describeWeather, isWet, Season, seasonOf, skyIcon, Weather } from '../atmosphere';
 import { worldToken } from '../data/spotAssets';
 import { Spot, SPOTS } from '../data/spots';
 import { makeProjector, TAIWAN, WorldDef, worldAspect } from '../data/world';
-import { makeStyles, Palette, useTheme } from '../theme';
+import { makeStyles, Palette, seasonTints, useTheme } from '../theme';
 
 // Isometric miniature Taiwan (visual spec v0.2 §10–§11).
 // Unvisited land is desaturated and fogged; visited spots bloom colour into
@@ -42,6 +43,10 @@ interface Props {
   collectedIds: Set<string>;
   interactive?: boolean;
   world?: WorldDef;
+  /** Recolours discovered terrain; defaults to the current calendar season. */
+  season?: Season;
+  /** Current weather per region id. Missing or null regions draw no weather. */
+  weather?: Record<string, Weather | null>;
 }
 
 const TOP_PAD = 0.1; // room above the north tip for token heads (× width)
@@ -84,9 +89,18 @@ export function worldHeight(width: number, world: WorldDef = TAIWAN) {
   return width * (TOP_PAD + worldAspect(world) + SLAB + BOTTOM_PAD);
 }
 
-export function TaiwanWorld({ width, collectedIds, interactive = true, world = TAIWAN }: Props) {
+export function TaiwanWorld({
+  width,
+  collectedIds,
+  interactive = true,
+  world = TAIWAN,
+  season: seasonProp,
+  weather,
+}: Props) {
   const t = useTheme();
   const C = t.world;
+  const season = seasonProp ?? seasonOf();
+  const tint = seasonTints[t.mode][season];
   const styles = useStyles();
   const router = useRouter();
   const height = worldHeight(width, world);
@@ -139,6 +153,8 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
       islands,
       positions,
       peaks,
+      // peaks at least this tall get a winter snow cap
+      snowLine: Math.max(0, ...peaks.map((p) => p.h)) * 0.7,
       rivers: world.rivers.map((r) => smoothOpen(r.map(ll))),
     };
   }, [world, width, spots]);
@@ -232,6 +248,19 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
     };
   }, [drift, pulse]);
 
+  // rain / snow falls only while some region is wet
+  const precip =
+    !!weather && Object.values(weather).some((w) => w && (isWet(w.sky) || w.sky === 'snow'));
+  const [fall] = useState(() => new Animated.Value(0));
+  useEffect(() => {
+    if (!precip) return;
+    const a = Animated.loop(
+      Animated.timing(fall, { toValue: 1, duration: 900, easing: Easing.linear, useNativeDriver: true }),
+    );
+    a.start();
+    return () => a.stop();
+  }, [precip, fall]);
+
   // ── what sits on the map at this level ────────────────────
   // `size` is the on-screen token width; markers are not scaled by the zoom.
   const markers = useMemo<Marker[]>(() => {
@@ -273,6 +302,8 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
 
   const active = regionStats.find((r) => r.id === regionId);
   const fogShift = drift.interpolate({ inputRange: [0, 1], outputRange: [-width * 0.025, width * 0.025] });
+  const fallShift = fall.interpolate({ inputRange: [0, 1], outputRange: [-width * 0.012, width * 0.012] });
+  const fallFade = fall.interpolate({ inputRange: [0, 0.15, 0.85, 1], outputRange: [0, 1, 1, 0] });
   const zoomTransform = { transform: [{ translateX: tx }, { translateY: ty }, { scale }] };
 
   return (
@@ -292,9 +323,9 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
                   <Stop offset="100%" stopColor={C.landBottom} />
                 </LinearGradient>
                 <RadialGradient id="bloom" cx="50%" cy="50%" r="50%">
-                  <Stop offset="0%" stopColor={C.bloom} stopOpacity={1} />
-                  <Stop offset="55%" stopColor={C.bloom} stopOpacity={0.75} />
-                  <Stop offset="100%" stopColor={C.bloom} stopOpacity={0} />
+                  <Stop offset="0%" stopColor={tint.bloom} stopOpacity={1} />
+                  <Stop offset="55%" stopColor={tint.bloom} stopOpacity={0.75} />
+                  <Stop offset="100%" stopColor={tint.bloom} stopOpacity={0} />
                 </RadialGradient>
                 <ClipPath id="islandClip">
                   <Path d={geo.island} />
@@ -329,6 +360,27 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
                   const p = geo.positions[s.id];
                   return <Ellipse key={s.id} cx={p.x} cy={p.y} rx={bloomR} ry={bloomR * 0.8} fill="url(#bloom)" />;
                 })}
+                {/* spring: a few petals scattered around each discovered spot */}
+                {tint.blossom &&
+                  visited.map((s) => {
+                    const p = geo.positions[s.id];
+                    const seed = spots.indexOf(s) * 17;
+                    return [0, 1, 2, 3, 4].map((k) => {
+                      const a = hash(seed + k) * Math.PI * 2;
+                      const r = bloomR * (0.3 + hash(seed + k + 5) * 0.55);
+                      return (
+                        <Ellipse
+                          key={`${s.id}p${k}`}
+                          cx={p.x + Math.cos(a) * r}
+                          cy={p.y + Math.sin(a) * r * 0.8}
+                          rx={width * 0.006}
+                          ry={width * 0.005}
+                          fill={tint.blossom}
+                          opacity={0.85}
+                        />
+                      );
+                    });
+                  })}
               </G>
 
               {geo.rivers.map((d, k) => (
@@ -341,12 +393,20 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
                   const q = geo.positions[s.id];
                   return Math.hypot(q.x - p.x, (q.y - p.y) / 0.8) < bloomR * 1.05;
                 });
-                const [light, dark] = lit ? C.ridgeLit : C.ridgeFog;
+                const [light, dark] = lit ? tint.ridgeLit : C.ridgeFog;
                 const foot = p.y + p.w * 0.28;
+                const cap = tint.snowCaps && p.h >= geo.snowLine;
                 return (
                   <G key={k}>
                     <Path d={`M ${p.x - p.w} ${p.y} L ${p.x} ${p.y - p.h} L ${p.x} ${foot} Z`} fill={light} stroke={light} strokeWidth={0.8} strokeLinejoin="round" />
                     <Path d={`M ${p.x} ${p.y - p.h} L ${p.x + p.w} ${p.y} L ${p.x} ${foot} Z`} fill={dark} stroke={dark} strokeWidth={0.8} strokeLinejoin="round" />
+                    {cap && (
+                      <Path
+                        d={`M ${p.x - p.w * 0.34} ${p.y - p.h * 0.66} L ${p.x} ${p.y - p.h} L ${p.x + p.w * 0.34} ${p.y - p.h * 0.66} L ${p.x} ${p.y - p.h * 0.56} Z`}
+                        fill={C.snow}
+                        opacity={0.92}
+                      />
+                    )}
                   </G>
                 );
               })}
@@ -384,6 +444,66 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
               </Svg>
             </Animated.View>
           </Animated.View>
+
+          {/* weather over each region: clouds sit still, rain and snow fall */}
+          {weather && (
+            <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, zoomTransform]}>
+              <Svg width={width} height={height}>
+                {regionStats.map((r, ri) => {
+                  const w = weather[r.id];
+                  if (!w || w.sky === 'clear') return null;
+                  const n = w.sky === 'cloudy' ? 2 : 3;
+                  const op = w.sky === 'cloudy' ? 0.45 : w.sky === 'fog' ? 0.5 : 0.65;
+                  const cy = r.center.y - width * 0.06;
+                  return (
+                    <G key={r.id}>
+                      {Array.from({ length: n }).map((_, k) => (
+                        <Ellipse
+                          key={k}
+                          cx={r.center.x + (k - (n - 1) / 2) * width * 0.05 + (hash(ri * 10 + k) - 0.5) * width * 0.02}
+                          cy={cy + (hash(ri * 10 + k + 5) - 0.5) * width * 0.02}
+                          rx={width * 0.055}
+                          ry={width * 0.028}
+                          fill={w.sky === 'fog' ? C.fog : C.cloud}
+                          opacity={op}
+                        />
+                      ))}
+                    </G>
+                  );
+                })}
+              </Svg>
+              {precip && (
+                <Animated.View
+                  style={[StyleSheet.absoluteFill, { opacity: fallFade, transform: [{ translateY: fallShift }] }]}
+                >
+                  <Svg width={width} height={height}>
+                    {regionStats.map((r, ri) => {
+                      const w = weather[r.id];
+                      if (!w || !(isWet(w.sky) || w.sky === 'snow')) return null;
+                      const count = w.sky === 'drizzle' ? 7 : w.sky === 'snow' ? 8 : 12;
+                      const len = width * (w.sky === 'drizzle' ? 0.014 : 0.022);
+                      return Array.from({ length: count }).map((_, k) => {
+                        const x = r.center.x + (hash(ri * 100 + k) - 0.5) * width * 0.16;
+                        const y = r.center.y - width * 0.03 + (hash(ri * 100 + k + 50) - 0.5) * width * 0.12;
+                        return w.sky === 'snow' ? (
+                          <Ellipse key={`${r.id}${k}`} cx={x} cy={y} rx={width * 0.004} ry={width * 0.004} fill={C.snow} opacity={0.9} />
+                        ) : (
+                          <Path
+                            key={`${r.id}${k}`}
+                            d={`M ${x} ${y} l ${-len * 0.3} ${len}`}
+                            stroke={C.rain}
+                            strokeWidth={1.1}
+                            strokeLinecap="round"
+                            opacity={0.75}
+                          />
+                        );
+                      });
+                    })}
+                  </Svg>
+                </Animated.View>
+              )}
+            </Animated.View>
+          )}
         </Pressable>
 
         {/* landmarks, lights and pending pins — repositioned by the zoom, never scaled */}
@@ -425,6 +545,9 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
               <Text style={styles.regionCount}>
                 {active.found} / {active.total} discovered
               </Text>
+              {weather?.[active.id] && (
+                <Text style={styles.regionWeather}>{describeWeather(weather[active.id] as Weather)}</Text>
+              )}
             </View>
           </>
         )}
@@ -434,6 +557,7 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
         <View style={styles.chips}>
           {regionStats.map((r) => {
             const on = r.id === regionId;
+            const w = weather?.[r.id];
             return (
               <Pressable
                 key={r.id}
@@ -443,6 +567,12 @@ export function TaiwanWorld({ width, collectedIds, interactive = true, world = T
                 <Text style={[styles.chipText, on && styles.chipTextOn]}>
                   {r.zh.replace('台灣', '')} {r.found}/{r.total}
                 </Text>
+                {w && (
+                  <>
+                    <MaterialCommunityIcons name={skyIcon(w) as any} size={12} color={on ? t.accent : t.subtext} />
+                    <Text style={[styles.chipText, on && styles.chipTextOn]}>{w.temperature}°</Text>
+                  </>
+                )}
               </Pressable>
             );
           })}
@@ -604,8 +734,12 @@ const useStyles = makeStyles((t: Palette) =>
   regionTag: { position: 'absolute', right: 10, top: 8, alignItems: 'flex-end' },
   regionName: { color: t.text, fontSize: 15, fontWeight: '800' },
   regionCount: { color: t.accent, fontSize: 11, letterSpacing: 1, marginTop: 2 },
+  regionWeather: { color: t.subtext, fontSize: 11, marginTop: 2 },
   chips: { flexDirection: 'row', justifyContent: 'center', gap: 6, marginTop: 8, flexWrap: 'wrap' },
   chip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
     paddingHorizontal: 10,
     paddingVertical: 5,
     borderRadius: 12,

@@ -12,7 +12,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
 import { SPOTS } from '../../src/data/spots';
-import { useStore } from '../../src/store';
+import { entrySeason, useStore } from '../../src/store';
 import { Palette, makeStyles, regionMeta, useTheme } from '../../src/theme';
 
 const { width: SCREEN_W } = Dimensions.get('window');
@@ -74,13 +74,21 @@ export default function PassportScreen() {
           </View>
         }
         renderItem={({ item: spot }) => {
-          const collected = !!collections[spot.id];
+          const entry = collections[spot.id];
+          const collected = !!entry;
           return (
             <Pressable
               style={{ width: CELL }}
               onPress={() => router.push(`/spot/${spot.id}`)}
             >
-              <Diorama spot={spot} size={CELL} locked={!collected} radius={16} />
+              {/* each collection keeps the season it was collected in */}
+              <Diorama
+                spot={spot}
+                size={CELL}
+                locked={!collected}
+                radius={16}
+                atmosphere={entry ? { season: entrySeason(entry) } : undefined}
+              />
               <Text style={[styles.cellName, !collected && { color: t.faint }]} numberOfLines={1}>
                 {collected ? spot.name : '????'}
               </Text>
