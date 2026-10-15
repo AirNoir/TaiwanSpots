@@ -6,6 +6,8 @@ const source=readFileSync(join(root,'src/data/spots.ts'),'utf8');
 const spots=[...source.matchAll(/id: '([^']+)',\s+name: '([^']+)'/g)].map(m=>({id:m[1],name:m[2]}));
 const selectionPath=join(root,'docs/asset-review-selections.json');
 const selections=existsSync(selectionPath)?JSON.parse(readFileSync(selectionPath,'utf8')):{};
+const colorSpec=JSON.parse(readFileSync(join(root,'docs/asset-preview-color.json'),'utf8'));
+if(!Number.isFinite(colorSpec.saturation)||colorSpec.saturation<0.7||colorSpec.saturation>1)throw new Error('Preview saturation must be between 0.7 and 1');
 for(const spot of spots){
  const base=join(root,'assets/spots',spot.id),collection=join(base,'collection'),reference=join(base,'reference');
  const path=(area,file)=>`../assets/spots/${spot.id}/${area}/${file}`;
@@ -20,5 +22,5 @@ for(const spot of spots){
 }
 const data=JSON.stringify(spots).replaceAll('<','\\u003c');
 const template=readFileSync(join(root,'docs/asset-comparison.template.html'),'utf8');
-writeFileSync(join(root,'docs/asset-comparison.html'),template.replace('__SPOT_DATA__',data));
+writeFileSync(join(root,'docs/asset-comparison.html'),template.replace('__SPOT_DATA__',data).replace('__COLOR_SPEC__',JSON.stringify(colorSpec).replaceAll('<','\\u003c')));
 console.log(JSON.stringify({spots:spots.length,models:spots.filter(s=>s.models.length).length,photos:spots.filter(s=>s.photos.length).length,paired:spots.filter(s=>s.models.length&&s.photos.length).length}));

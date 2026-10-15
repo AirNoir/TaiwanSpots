@@ -26,6 +26,7 @@ const MASTER_ART_DIRECTION = [
   'Gently rounded Q forms with realistic miniature-scale material surfaces: stone grain, worn paving, glazed tiles, wood grain, restrained glass and metal',
   'Slightly chubby miniature proportions, preserving the landmark silhouette',
   'Soft diffused studio daylight and restrained tilt-shift focus matched to the approved Jiufen review style',
+  'Gently restrained color saturation, about 12% softer than the previously vivid previews; preserve realistic material hues and tonal detail, avoid neon greens and oversaturated cyan, do not darken the image or wash it out',
   'Ambient occlusion',
   'Very soft shadows',
   'Clean background',
