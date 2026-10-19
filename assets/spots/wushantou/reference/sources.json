@@ -1,0 +1,65 @@
+{
+  "id": "wushantou",
+  "page": "https://www.twtainan.net/zh-tw/attractions/detail/529/",
+  "credit": "Tainan City tourism/culture bureau",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown",
+  "usage": "Visual reference only; allsource rightsretained, notfinaltextures",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/100267/1920x1080_attractions-image-4fpxjqwigek8aqvz2b6vua.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/529/",
+      "credit": "Tainan City tourism/culture bureau",
+      "kind": "real photograph",
+      "capture": "Unknown; filename/upload year not capture date",
+      "usage": "Reference only; rights retained, no blanket commercial license/texture reuse"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/100268/1920x1080_attractions-image-agbehu5gbe6ycdrn7v_tlg.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/529/",
+      "credit": "Tainan City tourism/culture bureau",
+      "kind": "real photograph",
+      "capture": "Unknown; filename/upload year not capture date",
+      "usage": "Reference only; rights retained, no blanket commercial license/texture reuse"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/100269/1920x1080_attractions-image-vj_vtigpp0qoxzyodgzzwa.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/529/",
+      "credit": "Tainan City tourism/culture bureau",
+      "kind": "real photograph",
+      "capture": "Unknown; filename/upload year not capture date",
+      "usage": "Reference only; rights retained, no blanket commercial license/texture reuse"
+    },
+    {
+      "local": "official-statue.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/100257/1920x1080_attractions-image-p1pyiacua0aan1jvtvmgqg.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/529/",
+      "credit": "Tainan City tourism/culture bureau",
+      "capture": "Unknown",
+      "kind": "real memorial photograph",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-statue-rear.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/100266/1920x1080_attractions-image-ugpzcwdb90ibhoy7cvkrvw.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/529/",
+      "credit": "Tainan City tourism/culture bureau",
+      "capture": "Unknown",
+      "kind": "real memorial photograph",
+      "usage": "Reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/place/Yoichi+Hatta+Statue/@23.2094355,120.366386,789m/data=!3m2!1e3!4b1!4m6!3m5!1s0x346e882187307f3d:0x6b0e707cc3205c2!8m2!3d23.2094355!4d120.3689609!16s%2Fg%2F1tv3lf6v?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed;2026copyright is not capture date",
+      "usage": "Visual reference only, notfinaltexture",
+      "observations": "Hatta statue in wooded park on west bank of reservoir; finite statue terrace, reservoir/dam outside crop; satellite and two ground angles checked2026-10-20."
+    }
+  ]
+}

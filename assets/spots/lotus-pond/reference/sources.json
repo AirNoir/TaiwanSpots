@@ -1,0 +1,47 @@
+{
+  "id": "lotus-pond",
+  "page": "https://khh.travel/zh-tw/attractions/detail/11/",
+  "credit": "Kaohsiung City Tourism",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown",
+  "usage": "Visual reference only; allsource rightsretained, notfinaltextures",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://khh.travel/image/63049/1024x768",
+      "page": "https://khh.travel/zh-tw/attractions/detail/11/",
+      "credit": "Kaohsiung City Tourism",
+      "kind": "real photograph",
+      "capture": "Unknown; filename/upload year not capture date",
+      "usage": "Reference only; rights retained, no blanket commercial license/texture reuse"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://khh.travel/image/19850/1024x768",
+      "page": "https://khh.travel/zh-tw/attractions/detail/11/",
+      "credit": "Kaohsiung City Tourism",
+      "kind": "real photograph",
+      "capture": "Unknown; filename/upload year not capture date",
+      "usage": "Reference only; rights retained, no blanket commercial license/texture reuse"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://khh.travel/image/19849/1024x768",
+      "page": "https://khh.travel/zh-tw/attractions/detail/11/",
+      "credit": "Kaohsiung City Tourism",
+      "kind": "real photograph",
+      "capture": "Unknown; filename/upload year not capture date",
+      "usage": "Reference only; rights retained, no blanket commercial license/texture reuse"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.681,120.2929,396m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed;2026copyright is not capture date",
+      "usage": "Visual reference only, notfinaltexture",
+      "observations": "Twin towers stand on southwestern/western Lotus Pond shore east of Liantan Road. Approach zigzag bridge from west shore toward east towers. Ground/aerial/satellite checked2026-10-20."
+    }
+  ]
+}

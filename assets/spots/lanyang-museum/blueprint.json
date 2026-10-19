@@ -1,19 +1,19 @@
 {
   "spotId": "lanyang-museum",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Lanyang Museum",
     "silhouette": "Angular wedge-shaped building rising from wetland like a tilted rock"
   },
-  "crop": "The museum and its wetland pond. Not the harbour.",
+  "crop": "Whole cuesta museum wedge and immediate wetland edge with small entry terrace; harbour/sea outside crop.",
   "heroScale": 1,
-  "orientation": "verify: Wushi harbour lies to the east",
+  "orientation": "Museum west shore of old Wushi wetland; current fishing harbour east beyond road. Northwestern high end and southeast descending roof mass as satellite, exact angles pending.",
   "lockedGeometry": [
-    "building tilting out of a pond",
-    "wetland",
-    "coast nearby"
+    "multiple sloping stone cuesta masses",
+    "glass slot between volumes",
+    "museum beside wetland on west bank"
   ],
   "lockedIdentity": [
     "cuesta-shaped angled roof",
@@ -30,18 +30,27 @@
     "reflections"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.8688,121.8339,390m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Tilted rock-shaped building over water"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Museum west shore of old Wushi wetland; current fishing harbour east beyond road. Northwestern high end and southeast descending roof mass as satellite, exact angles pending. Capture dates unknown; Street View/360, metric dimensions and unseen geometry pending.",
+    "identity": "pending user review: Cuesta stone wedge/slopingplanes and glass bands by wetland retained; annotated source season words omitted, harbour not relocated. Exact building angles, shoreline planting/deck layout and facadepanel rhythm simplified/pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm people, soft natural lighting, weak-perspective elevated view, no scenic cards/globe",
+    "collection": "self-checked preview: contained complete small-rounded square-style ivory base, coherent groundplane/verticals; readable main forms at512px; not survey geometry"
   }
 }

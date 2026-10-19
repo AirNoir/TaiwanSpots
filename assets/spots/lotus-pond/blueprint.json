@@ -1,15 +1,15 @@
 {
   "spotId": "lotus-pond",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Dragon and Tiger Pagodas",
     "silhouette": "Twin seven-storey pagodas with dragon and tiger gates on a zigzag bridge over a lake"
   },
-  "crop": "The two pagodas and zigzag bridge. Not the whole lake.",
+  "crop": "Complete dragon/tiger tower pair, mouth tunnels and actual zigzag approach over finite lake patch; nearby temples omitted.",
   "heroScale": 1,
-  "orientation": "verify: pagodas stand on the west shore",
+  "orientation": "Twin towers stand on southwestern/western Lotus Pond shore east of Liantan Road. Approach zigzag bridge from west shore toward east towers. Ground/aerial/satellite checked2026-10-20.",
   "lockedGeometry": [
     "lake",
     "zigzag bridge from shore",
@@ -30,18 +30,27 @@
     "boats"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.681,120.2929,396m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Two little pagodas on a zigzag bridge"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Twin towers stand on southwestern/western Lotus Pond shore east of Liantan Road. Approach zigzag bridge from west shore toward east towers. Ground/aerial/satellite checked2026-10-20. Capture dates unknown; Street View/360, metric dimensions and unseen geometry pending.",
+    "identity": "pending user review: v2 corrects seven-storey tower count and bridge connection to shore; dragon left/tiger right from actual approach, lake and paired platform retained. Exact zigzag angles/number of bends and ornament details remain pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm people, soft natural lighting, weak-perspective elevated view, no scenic cards/globe",
+    "collection": "self-checked preview: contained complete small-rounded square-style ivory base, coherent groundplane/verticals; readable main forms at512px; not survey geometry"
   }
 }

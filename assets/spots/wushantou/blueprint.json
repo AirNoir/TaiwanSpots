@@ -1,23 +1,23 @@
 {
   "spotId": "wushantou",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
-    "name": "Wushantou Reservoir",
-    "silhouette": "Branching coral-shaped reservoir among low wooded hills behind an earth dam"
+    "name": "Wushantou Hatta Yoichi memorial",
+    "silhouette": "Thoughtful life-size seated bronze on low stone plinth beneath banyan trees"
   },
-  "crop": "The dam, lake and Hatta Yoichi memorial area. Not the whole irrigation system.",
+  "crop": "Hatta Yoichi seated bronze statue, adjacent stone lantern and wooded paved terrace only.",
   "heroScale": 1,
-  "orientation": "verify: dam sits at the west end of the lake",
+  "orientation": "Hatta statue in wooded park on west bank of reservoir; finite statue terrace, reservoir/dam outside crop; satellite and two ground angles checked2026-10-20.",
   "lockedGeometry": [
-    "branching lake arms",
-    "low hills",
-    "earth dam"
+    "low statue plinth on stone terrace",
+    "stone lantern beside terrace",
+    "wooded grass around terrace"
   ],
   "lockedIdentity": [
-    "coral-shaped shoreline",
-    "Hatta statue"
+    "Hatta seated bronze with raised knee",
+    "stone lantern and memorial stele"
   ],
   "doNotInvent": [
     "mountains with snow",
@@ -30,18 +30,27 @@
     "tiny visitors"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-statue.jpg",
+      "official-statue-rear.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/place/Yoichi+Hatta+Statue/@23.2094355,120.366386,789m/data=!3m2!1e3!4b1!4m6!3m5!1s0x346e882187307f3d:0x6b0e707cc3205c2!8m2!3d23.2094355!4d120.3689609!16s%2Fg%2F1tv3lf6v?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "official-statue.jpg"
+    ]
   },
   "worldToken": {
-    "element": "Coral-shaped lake with a tiny boat"
+    "element": "Seated Hatta memorial statue"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Hatta statue in wooded park on west bank of reservoir; finite statue terrace, reservoir/dam outside crop; satellite and two ground angles checked2026-10-20. Capture dates unknown; Street View/360, metric dimensions and unseen geometry pending.",
+    "identity": "pending user review: Real Hatta thoughtful seated pose/raised knee, low oblong plinth, side stone lantern and rear stele preserved, human-life-size magnitude. Finite woodland terrace excludes lake/dam. Tree crowns and paving simplified, exact dimensions pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm people, soft natural lighting, weak-perspective elevated view, no scenic cards/globe",
+    "collection": "self-checked preview: contained complete small-rounded square-style ivory base, coherent groundplane/verticals; readable main forms at512px; not survey geometry"
   }
 }

@@ -1,0 +1,47 @@
+{
+  "id": "lanyang-museum",
+  "page": "https://www.lym.gov.tw/ch/about/architectural/",
+  "credit": "Lanyang Museum / Yilan County",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown",
+  "usage": "Visual reference only; allsource rightsretained, notfinaltextures",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.lym.gov.tw/export/sites/lym/images/about/6-5-20180612-1.jpg",
+      "page": "https://www.lym.gov.tw/ch/about/architectural/",
+      "credit": "Lanyang Museum / Yilan County",
+      "kind": "real photograph",
+      "capture": "Unknown; filename/upload year not capture date",
+      "usage": "Reference only; rights retained, no blanket commercial license/texture reuse"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.lym.gov.tw/export/sites/lym/images/about/6-5-20180612-2.jpg",
+      "page": "https://www.lym.gov.tw/ch/about/architectural/",
+      "credit": "Lanyang Museum / Yilan County",
+      "kind": "real photograph",
+      "capture": "Unknown; filename/upload year not capture date",
+      "usage": "Reference only; rights retained, no blanket commercial license/texture reuse"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://www.lym.gov.tw/export/sites/lym/images/about/6-5-20180612-3.jpg",
+      "page": "https://www.lym.gov.tw/ch/about/architectural/",
+      "credit": "Lanyang Museum / Yilan County",
+      "kind": "real photograph",
+      "capture": "Unknown; filename/upload year not capture date",
+      "usage": "Reference only; rights retained, no blanket commercial license/texture reuse"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@24.8688,121.8339,390m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed;2026copyright is not capture date",
+      "usage": "Visual reference only, notfinaltexture",
+      "observations": "Museum west shore of old Wushi wetland; current fishing harbour east beyond road. Northwestern high end and southeast descending roof mass as satellite, exact angles pending."
+    }
+  ]
+}

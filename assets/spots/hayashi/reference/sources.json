@@ -1,0 +1,47 @@
+{
+  "id": "hayashi",
+  "page": "https://historic.tainan.gov.tw/index.php?belongid=41&id=112&index=44&lang=cht&option=module&task=pageinfo",
+  "credit": "Tainan City tourism/culture bureau",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown",
+  "usage": "Visual reference only; allsource rightsretained, notfinaltextures",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://historic.tainan.gov.tw/upload/cht/160/112_img_1.jpg",
+      "page": "https://historic.tainan.gov.tw/index.php?belongid=41&id=112&index=44&lang=cht&option=module&task=pageinfo",
+      "credit": "Tainan City tourism/culture bureau",
+      "kind": "real photograph",
+      "capture": "Unknown; filename/upload year not capture date",
+      "usage": "Reference only; rights retained, no blanket commercial license/texture reuse"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://historic.tainan.gov.tw/upload/cht/160/112_img_2.jpg",
+      "page": "https://historic.tainan.gov.tw/index.php?belongid=41&id=112&index=44&lang=cht&option=module&task=pageinfo",
+      "credit": "Tainan City tourism/culture bureau",
+      "kind": "real photograph",
+      "capture": "Unknown; filename/upload year not capture date",
+      "usage": "Reference only; rights retained, no blanket commercial license/texture reuse"
+    },
+    {
+      "local": "official-rooftop.png",
+      "image": "https://www.hayashi.com.tw/data/brand/1782858746ANFEI_0.png",
+      "page": "https://www.hayashi.com.tw/floor.php?act=view&no=22",
+      "credit": "Hayashi Department Store",
+      "capture": "Unknown",
+      "kind": "real rooftop photograph",
+      "usage": "Reference only, rights retained"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.9912,120.2026,395m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed;2026copyright is not capture date",
+      "usage": "Visual reference only, notfinaltexture",
+      "observations": "Building southwest corner of Zhongzheng and Zhongyi intersection; short north/east street frontages, rooftop shrine belongs on building. Satellite and ground verified2026-10-20."
+    }
+  ]
+}

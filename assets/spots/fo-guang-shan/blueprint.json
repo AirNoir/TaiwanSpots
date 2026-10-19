@@ -5,19 +5,19 @@
   "productionTier": "standard",
   "hero": {
     "name": "Fo Guang Shan Buddha Museum",
-    "silhouette": "Long avenue flanked by eight pagodas leading to a giant seated bronze Buddha"
+    "silhouette": "Giant seated bronze Buddha behind stepped museum main hall and four pale corner stupas"
   },
-  "crop": "The Buddha Museum avenue and statue. Not the monastery complex.",
+  "crop": "Giant seated Buddha, actual lotus pedestal and central main hall stepped platform with four white corner stupas; omit240mavenue/eight towers rather than move them.",
   "heroScale": 1,
-  "orientation": "verify: Buddha faces east toward the avenue",
+  "orientation": "Buddha west end faces approximately east down240mavenue; museum hall lies east/below Buddha, eight avenue pagodas farther east outside selected crop. Satellite checked2026-10-20.",
   "lockedGeometry": [
-    "long straight avenue",
-    "pagodas in two rows",
-    "hills behind"
+    "Buddha west of main hall",
+    "broad stepped main hall mass",
+    "four corner white stupas"
   ],
   "lockedIdentity": [
-    "eight pagodas",
-    "giant bronze Buddha"
+    "giant seated bronze Buddha",
+    "lotus pedestal and stepped main hall"
   ],
   "doNotInvent": [
     "skyscrapers",
@@ -30,18 +30,29 @@
     "bells"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg",
+      "official-third.jpg",
+      "official-buddha.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.757286,120.440315,396m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
-    "element": "Seated Buddha with a pagoda"
+    "element": "Giant seated Buddha and stepped main hall"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Buddha west end faces approximately east down240mavenue; museum hall lies east/below Buddha, eight avenue pagodas farther east outside selected crop. Satellite checked2026-10-20. Capture dates unknown; Street View/360, metric dimensions and unseen geometry pending. v1 serial roof pyramids/extra miniBuddha rejected; v2/v3 improved but proportions not reliable.",
+    "identity": "failed self-check after3drafts: Buddha/person ratio remains too small; giant50mfigure appears garden-statue scale relative people",
+    "style": "partial: tactile model, broad hall geometry improved v2/v3, camera/base corner still not consistently45degrees",
+    "collection": "needs-regeneration; all native drafts preserved rejected, not selected; no runtime promotion"
   }
 }
