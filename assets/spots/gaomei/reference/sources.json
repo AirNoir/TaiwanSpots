@@ -31,6 +31,31 @@
         "Mudflat channels and grassy patches",
         "Gaomei lighthouse inland east/northeast of entrance, outside chosen compact crop"
       ]
+    },
+    {
+      "local": "official-turbine-road.jpg",
+      "page": "https://www.links.taichung.gov.tw/837108/2758517/2758532/2758556/2758565/post",
+      "image": "https://www.links.taichung.gov.tw/media/801124/img_tales4_7.jpg",
+      "kind": "ground",
+      "author": "Taichung City Marine Resources and Fisheries Development Institute",
+      "capture": "Not exposed",
+      "published": "2022-04-24",
+      "updated": "2024-12-12",
+      "accessed": "2026-10-19",
+      "observations": "Official guide places turbine row beside Huangang North Road SOUTH of wetland; describes unit height about 64m, boardwalk total length 691m. Image shows industrial turbines rooted on dry roadside land, not mudflat.",
+      "limitations": "Approximate height wording, not detailed turbine engineering drawing; current unit count not re-surveyed.",
+      "usage": "Reference only; source retains copyright, not runtime texture."
+    },
+    {
+      "local": "satellite-turbine-boardwalk-20261019.jpg",
+      "page": "https://www.google.com/maps/@24.3074732,120.5364233,3131m/data=!3m1!1e3",
+      "kind": "satellite",
+      "credit": "Google Maps / Airbus, CNES / Airbus, Maxar Technologies",
+      "capture": "Acquisition date not exposed",
+      "accessed": "2026-10-19",
+      "observations": "North-up broad view includes boardwalk in northeast wetland and oblique Huangang North Road southwest/south with broad intertidal gap.",
+      "limitations": "Not georectified or measured from screenshot; turbine bases/spacing not surveyed; source attribution retained.",
+      "usage": "Reference only; not runtime texture."
     }
   ]
 }

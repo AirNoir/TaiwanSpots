@@ -15,3 +15,5 @@ Source: [round3 input](2026-10-19-round3-input.json). Six adjust entries plus Qi
 [Current progress](2026-10-19-round3-progress.json). Preview only; user acceptance pending, no runtime promotion.
 
 Seven revisions completed and selected for preview; user acceptance pending. [Revision details](2026-10-19-round3-review.md).
+
+Latest follow-up: Gaomei only, review-v6.png. Tilt-shift toy view and turbine scale/location correction; other 44 previews unchanged. [Details](2026-10-19-gaomei-toy-review.json).

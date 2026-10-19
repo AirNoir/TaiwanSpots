@@ -1,57 +1,61 @@
 {
   "scope": "Runtime derivatives only; source byte totals are not an IPA/APK size measurement.",
   "encoder": "Pillow 11.3.0",
-  "sourceMode": "runtime",
+  "sourceMode": "masters",
   "spec": {
     "collection": {
       "maxSize": 1024,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     "thumbnail": {
       "maxSize": 512,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     "world": {
       "maxSize": 512,
       "lossless": true
     },
     "method": 6,
-    "notes": "Offline static WebP derivatives only. Keep PNG sources and review previews unchanged. 512px thumbnails cover 160pt cards on 3x screens and the iOS widget. Map tokens retain exact RGBA pixels at their original 512px resolution."
+    "notes": "Offline WebP derivatives. Collection and thumbnail use CSS-compatible 88% saturation, always from unadjusted master PNGs (sourceMode masters). Review/master PNGs unchanged; comparison review display remains 88%. World tokens remain lossless original RGBA. 512px thumbnails support 3x cards/widgets."
   },
-  "files": 74,
-  "sourceBytes": 58335191,
-  "outputBytes": 11055680,
-  "reductionPercent": 81.05,
+  "files": 114,
+  "sourceBytes": 219855975,
+  "outputBytes": 16493966,
+  "reductionPercent": 92.5,
   "assets": [
     {
       "family": "collection",
-      "source": "assets/spots/alishan/collection/day.png",
+      "source": "assets/spots/alishan/collection/master.png",
       "output": "assets/spots/alishan/collection/day.webp",
-      "sourceSha256": "52aac83ec16e90d140c1c4fed8d6a45b9fea634689925d0c321b3e25b2cf2c5e",
-      "outputSha256": "672e64acee8d0673a3fd1d8081473cbd860bfdd2c26f34f45debb02e730ef40d",
-      "sourceBytes": 1767919,
-      "outputBytes": 222806,
+      "sourceSha256": "63641788617cbecb86d052d2658b217081bbcf6b6ce9a4adc07b0f4be8bd6efd",
+      "outputSha256": "806a0a501b8c53d703d1d0344c536e11143a8129aa9173ded227b1fed6dbce3b",
+      "sourceBytes": 2723062,
+      "outputBytes": 263254,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/alishan/collection/thumbnail.png",
+      "source": "assets/spots/alishan/collection/master.png",
       "output": "assets/spots/alishan/collection/thumbnail.webp",
-      "sourceSha256": "945d58c5cac3ddeffe6321bb171c7fc011b01fe1e7bbe919b0aa0255870c54e0",
-      "outputSha256": "3b59a6c92348ff8d2e0caaa3ca24b02aed0a49a14861b8e29400f532843a8178",
-      "sourceBytes": 490213,
-      "outputBytes": 72102,
+      "sourceSha256": "63641788617cbecb86d052d2658b217081bbcf6b6ce9a4adc07b0f4be8bd6efd",
+      "outputSha256": "532a937f6c1ce724a5bbecd8b67ad5b144da8290e7e4c4345e74f774b58fc9cf",
+      "sourceBytes": 2723062,
+      "outputBytes": 74544,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -66,37 +70,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/anping/collection/day.png",
+      "source": "assets/spots/anping/collection/master.png",
       "output": "assets/spots/anping/collection/day.webp",
-      "sourceSha256": "a54e93ac3a00599c7c2f2807b60cf328b456167282403953231d341a691a8812",
-      "outputSha256": "a696aaaa7fa6baaa0d91db849c818181d800c2e56ff5c218b7ec429f09a8f032",
-      "sourceBytes": 1582814,
-      "outputBytes": 167648,
+      "sourceSha256": "a8124a06abf6536f6d0bf229c4a8d2e19034f8e69f4a022afdb13ce7e160e600",
+      "outputSha256": "182c8144a03fba5904100c1f47847188bf40d4d5e13f7109ddb639825d3b36e2",
+      "sourceBytes": 2671315,
+      "outputBytes": 262710,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/anping/collection/thumbnail.png",
+      "source": "assets/spots/anping/collection/master.png",
       "output": "assets/spots/anping/collection/thumbnail.webp",
-      "sourceSha256": "e908e04e8cb9cf5692876da9a955edee53904df6abd60657c755cff8066f646c",
-      "outputSha256": "870844ed5b6b59f4e36ddbcaddce0ab76f7cd25b34bcf4ae21901f9d576c88ea",
-      "sourceBytes": 427869,
-      "outputBytes": 52696,
+      "sourceSha256": "a8124a06abf6536f6d0bf229c4a8d2e19034f8e69f4a022afdb13ce7e160e600",
+      "outputSha256": "97012c71f42c57672c1ba93c01e77e205e7014de401771189412be85779bb164",
+      "sourceBytes": 2671315,
+      "outputBytes": 70156,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -111,37 +118,104 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/brown-avenue/collection/day.png",
-      "output": "assets/spots/brown-avenue/collection/day.webp",
-      "sourceSha256": "f1fd69d455e9e61f18a9cf62526fc60e2d9bb0782dea5dc1cefb1e1dac5c0929",
-      "outputSha256": "bf1f132e24ee5f1118056824cd9f40857f7a2723e93b89bf1c9555c845a4be36",
-      "sourceBytes": 1442162,
-      "outputBytes": 135276,
+      "source": "assets/spots/baishatun/collection/master.png",
+      "output": "assets/spots/baishatun/collection/day.webp",
+      "sourceSha256": "ed86569c1b3ea0ed35d1de812cb931bb7362631aa22e7b5d92cf4c31b09dcc04",
+      "outputSha256": "462c9e5bb540ccf5a309a19dd086b16efd63f6cb38f8046f16624d3c4adb8c31",
+      "sourceBytes": 2740239,
+      "outputBytes": 266264,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/brown-avenue/collection/thumbnail.png",
-      "output": "assets/spots/brown-avenue/collection/thumbnail.webp",
-      "sourceSha256": "6eb93c94dd845b6c9bc40ae30116be92cdba8e98169b81522b2d0480cacb3f1d",
-      "outputSha256": "cb706d57d1c771ad26bd54ae6758040d22ec045f4d6c049842fed3cf5524136c",
-      "sourceBytes": 396368,
-      "outputBytes": 44022,
+      "source": "assets/spots/baishatun/collection/master.png",
+      "output": "assets/spots/baishatun/collection/thumbnail.webp",
+      "sourceSha256": "ed86569c1b3ea0ed35d1de812cb931bb7362631aa22e7b5d92cf4c31b09dcc04",
+      "outputSha256": "a232b99f80f367c51034c85f473c1c0e7d79ea9f1d44d787b109b9c5fb438064",
+      "sourceBytes": 2740239,
+      "outputBytes": 71778,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/beitou-thermal-valley/collection/master.png",
+      "output": "assets/spots/beitou-thermal-valley/collection/day.webp",
+      "sourceSha256": "ce2ad9173887437ddb9c81b0a4d427a2afe8fb836f7472e8af930463505ced10",
+      "outputSha256": "c455784a0a03f77f8295e0d39c5f9860a21e88e2329e526b5847616af39780fc",
+      "sourceBytes": 2316733,
+      "outputBytes": 198188,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/beitou-thermal-valley/collection/master.png",
+      "output": "assets/spots/beitou-thermal-valley/collection/thumbnail.webp",
+      "sourceSha256": "ce2ad9173887437ddb9c81b0a4d427a2afe8fb836f7472e8af930463505ced10",
+      "outputSha256": "72cfb9c058913ddfb31f64490793739ba172a17c83dcf9566d939161e105a6a3",
+      "sourceBytes": 2316733,
+      "outputBytes": 55704,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/brown-avenue/collection/master.png",
+      "output": "assets/spots/brown-avenue/collection/day.webp",
+      "sourceSha256": "4c977c2e34e695c8ffb337efcb597273315b148a1fc7da94aa71eb6ea0697b34",
+      "outputSha256": "06a248da2d75b05c7428b675173280b30f3ebfd1a3e5505acd6c380860a96b2a",
+      "sourceBytes": 2245809,
+      "outputBytes": 159710,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/brown-avenue/collection/master.png",
+      "output": "assets/spots/brown-avenue/collection/thumbnail.webp",
+      "sourceSha256": "4c977c2e34e695c8ffb337efcb597273315b148a1fc7da94aa71eb6ea0697b34",
+      "outputSha256": "7c8a588f7d31909541c176c9590c6c15b8b2ff961636b7859e67b64cb0a326d9",
+      "sourceBytes": 2245809,
+      "outputBytes": 43160,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -156,37 +230,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/chihkan/collection/day.png",
+      "source": "assets/spots/chihkan/collection/master.png",
       "output": "assets/spots/chihkan/collection/day.webp",
-      "sourceSha256": "3bc0a53ef7f3d26101d0f9ac704a8e952d69594bfe31ed30078f236847d60293",
-      "outputSha256": "aebff007aae591f4ea710fd3b1a43220105a760dd737ea63633977e22a3bf3b2",
-      "sourceBytes": 1646903,
-      "outputBytes": 197022,
+      "sourceSha256": "845472773d9df9ceb2e86becc967595dbc6fc37841bd4c43d521b64bec092c8c",
+      "outputSha256": "5cb8a9235f885903f6e85720d34683011185c5e123313788baf1bb2b077df513",
+      "sourceBytes": 2621792,
+      "outputBytes": 253156,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/chihkan/collection/thumbnail.png",
+      "source": "assets/spots/chihkan/collection/master.png",
       "output": "assets/spots/chihkan/collection/thumbnail.webp",
-      "sourceSha256": "1beedda055a22511efab457c927339a3aeca245d67a1b6e20c8f8b8764c6cd2a",
-      "outputSha256": "a1e09563ff5f70b7490f2cb19c3b2922b5b69791dd9e7611757ee90b493e2a03",
-      "sourceBytes": 451291,
-      "outputBytes": 60514,
+      "sourceSha256": "845472773d9df9ceb2e86becc967595dbc6fc37841bd4c43d521b64bec092c8c",
+      "outputSha256": "612f151c8b3455bbae8d513580a5a0709195335899781d62bb5b46b7415ec5eb",
+      "sourceBytes": 2621792,
+      "outputBytes": 69842,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -201,37 +278,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/cijin/collection/day.png",
+      "source": "assets/spots/cijin/collection/master.png",
       "output": "assets/spots/cijin/collection/day.webp",
-      "sourceSha256": "5c49dc6de664ae3c16d21d186e5987c9d42502915a04b031eabb92b6dead0223",
-      "outputSha256": "934cac22de3e7a90fdc61bdf8f9137f77e60e364b2707417a2c7c32521817f04",
-      "sourceBytes": 1538898,
-      "outputBytes": 169786,
+      "sourceSha256": "398b31ec801bf072a63d7a9e43d59bb7c5fac17016c80d6f89b0ac2550cb0257",
+      "outputSha256": "94c69a83c2aebe3495d5dbaad337ca9b7b3ad2c0b61b08e20e630376e51eb915",
+      "sourceBytes": 2230601,
+      "outputBytes": 172750,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/cijin/collection/thumbnail.png",
+      "source": "assets/spots/cijin/collection/master.png",
       "output": "assets/spots/cijin/collection/thumbnail.webp",
-      "sourceSha256": "69d233e9b838bf92e9c21ea1eac3d42c0eef533ccc394115debd5e66dba43722",
-      "outputSha256": "a0ba7d7722297696c09ff54bd265c2527651f275728bb6bfce93bdff1bd53cf4",
-      "sourceBytes": 421103,
-      "outputBytes": 52638,
+      "sourceSha256": "398b31ec801bf072a63d7a9e43d59bb7c5fac17016c80d6f89b0ac2550cb0257",
+      "outputSha256": "7c90a68cafa3ef8d2837d11e5ec9a9a0209549e85320f94ec5f75dfbb4577857",
+      "sourceBytes": 2230601,
+      "outputBytes": 50746,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -246,37 +326,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/cingjing/collection/day.png",
+      "source": "assets/spots/cingjing/collection/master.png",
       "output": "assets/spots/cingjing/collection/day.webp",
-      "sourceSha256": "037b64e9aefd2c9f6227956d85a69cfa7369e04cc8481b64dbbfb39897aac89f",
-      "outputSha256": "cbeb573c4444ac37a885c43044a479250445b3453675930c5b9edf0e595d2181",
-      "sourceBytes": 1591997,
-      "outputBytes": 171964,
+      "sourceSha256": "f75056d60413760718e89fb5b86c377eaafe2f06589516ae37a4c0d6a932ef8d",
+      "outputSha256": "0e4e06c8bc3d98f9d0ef675814aa18c673f407826397a4201c8aa6522e33afa0",
+      "sourceBytes": 2327812,
+      "outputBytes": 193590,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/cingjing/collection/thumbnail.png",
+      "source": "assets/spots/cingjing/collection/master.png",
       "output": "assets/spots/cingjing/collection/thumbnail.webp",
-      "sourceSha256": "79597114d5dc5da14bc420a6e00913d19e398a4f6d9c88a710ec6a1837957655",
-      "outputSha256": "a7ba8108350f299303481328efa780879714e4f0df1e8176c1858971a7cd19a6",
-      "sourceBytes": 443393,
-      "outputBytes": 58452,
+      "sourceSha256": "f75056d60413760718e89fb5b86c377eaafe2f06589516ae37a4c0d6a932ef8d",
+      "outputSha256": "982ee27fcb34554511555a0ce73e4df3d47ee6d01c0ebbd79e2a4129077d4d07",
+      "sourceBytes": 2327812,
+      "outputBytes": 55518,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -291,37 +374,72 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/dadaocheng/collection/day.png",
-      "output": "assets/spots/dadaocheng/collection/day.webp",
-      "sourceSha256": "4a18dafc8bf26e93e8b67e3a5b6e87d1c4115585e4c6375f74f0713e3440b498",
-      "outputSha256": "18b4720ce51cc51db0cdf555447c23f7dbedc2e1d0d53046e44c68ba9d83e20a",
-      "sourceBytes": 1731416,
-      "outputBytes": 221626,
+      "source": "assets/spots/cks-memorial/collection/master.png",
+      "output": "assets/spots/cks-memorial/collection/day.webp",
+      "sourceSha256": "b496354bdc91727484bab98a1e2bca182b85950d752884d64042bf5b786c1706",
+      "outputSha256": "ac82cd9ae1107f380421ba37f1480b03449c85e525a98b938710fe737df34e7e",
+      "sourceBytes": 2350419,
+      "outputBytes": 183948,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/dadaocheng/collection/thumbnail.png",
-      "output": "assets/spots/dadaocheng/collection/thumbnail.webp",
-      "sourceSha256": "e1d2d8405fbb772fcc5de80fa9657462d9a99eb089002edde57454cf3ac804d0",
-      "outputSha256": "2d1712b7319c876c769b2a828bcd0e2882d21e168c9e48b37efaf86732f231ec",
-      "sourceBytes": 470307,
-      "outputBytes": 66552,
+      "source": "assets/spots/cks-memorial/collection/master.png",
+      "output": "assets/spots/cks-memorial/collection/thumbnail.webp",
+      "sourceSha256": "b496354bdc91727484bab98a1e2bca182b85950d752884d64042bf5b786c1706",
+      "outputSha256": "eb36e05ff197362bd3816f9eecffb9644e9ab19aad2ed6e7498ec94f4e9094b1",
+      "sourceBytes": 2350419,
+      "outputBytes": 50042,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/dadaocheng/collection/master.png",
+      "output": "assets/spots/dadaocheng/collection/day.webp",
+      "sourceSha256": "54ce86957be07c000494b54a682617ad1c898f13ab428a553a865783f28197be",
+      "outputSha256": "32a1ed2d77027130883cad62b543886f210e1d3028b825bcad276d200148ad50",
+      "sourceBytes": 2751984,
+      "outputBytes": 246898,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/dadaocheng/collection/master.png",
+      "output": "assets/spots/dadaocheng/collection/thumbnail.webp",
+      "sourceSha256": "54ce86957be07c000494b54a682617ad1c898f13ab428a553a865783f28197be",
+      "outputSha256": "76add868783555a77ff4f0b1cbf7bcc133fd52f10a103ef3ee98695a3c6c1fa9",
+      "sourceBytes": 2751984,
+      "outputBytes": 67908,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -336,37 +454,104 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/gaomei/collection/day.png",
-      "output": "assets/spots/gaomei/collection/day.webp",
-      "sourceSha256": "4d0240f1a21d09ba6f3ee967a8bcab085e4a186948b16597a8b6a4913b0c65d1",
-      "outputSha256": "54d3729b7eb5912162d13e606db23d74c06e2ed1b2dcfc874e30efbd5461c30a",
-      "sourceBytes": 1459065,
-      "outputBytes": 145522,
+      "source": "assets/spots/dongshi/collection/master.png",
+      "output": "assets/spots/dongshi/collection/day.webp",
+      "sourceSha256": "28db4ebd9c51e0f0d6601f4a00dc5a6066acda977b7e269abbfad7940c1baf8c",
+      "outputSha256": "b5e182551a7e05d0f604815ac0bd3048f27232f3ed5bcc7c694c6ed5a4afb7ed",
+      "sourceBytes": 2167647,
+      "outputBytes": 157462,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/gaomei/collection/thumbnail.png",
-      "output": "assets/spots/gaomei/collection/thumbnail.webp",
-      "sourceSha256": "32f1bdf966e4dd241333bbc2207af9107a96172f80242f9730cad460690f4300",
-      "outputSha256": "9db72d0aad60b1a5daace01a46286c410034ca4fbbbf194aa402cb6804ae50e9",
-      "sourceBytes": 397068,
-      "outputBytes": 47074,
+      "source": "assets/spots/dongshi/collection/master.png",
+      "output": "assets/spots/dongshi/collection/thumbnail.webp",
+      "sourceSha256": "28db4ebd9c51e0f0d6601f4a00dc5a6066acda977b7e269abbfad7940c1baf8c",
+      "outputSha256": "2ecd7c584554cc527c46940beec17c66c228692ad00fbec1b4e4db6197cd38c0",
+      "sourceBytes": 2167647,
+      "outputBytes": 46866,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/fenqihu/collection/master.png",
+      "output": "assets/spots/fenqihu/collection/day.webp",
+      "sourceSha256": "7a40c589b2fb5af71ae7701d4eda9a62bbae5abae9bfb540e2efaa4f1fdfa144",
+      "outputSha256": "2b221d0c49ccf6d772f7d19ec7eb591092f6084ee86c1abb60a73e8bb7c650a3",
+      "sourceBytes": 2801353,
+      "outputBytes": 274846,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/fenqihu/collection/master.png",
+      "output": "assets/spots/fenqihu/collection/thumbnail.webp",
+      "sourceSha256": "7a40c589b2fb5af71ae7701d4eda9a62bbae5abae9bfb540e2efaa4f1fdfa144",
+      "outputSha256": "b6d074d180fe6368a645cfbc61782a7da508fdca1e6ae7dddc02bb7633eb3658",
+      "sourceBytes": 2801353,
+      "outputBytes": 75458,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/gaomei/collection/master.png",
+      "output": "assets/spots/gaomei/collection/day.webp",
+      "sourceSha256": "6b4e529824740a26bddeb4bed09dbab3ed134e2c04b11d63b89f7e171e9a280d",
+      "outputSha256": "8ae0ab6d97df93bf68e3672f39f325a0d27fab4c1c8eeeb2e88d3e07fd665ab4",
+      "sourceBytes": 2183001,
+      "outputBytes": 159588,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/gaomei/collection/master.png",
+      "output": "assets/spots/gaomei/collection/thumbnail.webp",
+      "sourceSha256": "6b4e529824740a26bddeb4bed09dbab3ed134e2c04b11d63b89f7e171e9a280d",
+      "outputSha256": "14f1f52f13b413cf9ed6dcf9d8c4533c60932665a0b6f0a9a5c9a4f1084c786a",
+      "sourceBytes": 2183001,
+      "outputBytes": 43742,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -381,37 +566,72 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/hehuanshan/collection/day.png",
-      "output": "assets/spots/hehuanshan/collection/day.webp",
-      "sourceSha256": "093ad92a3bfb45a9eb5b6494797bdde81f1714b7658fe4ab9ed74dcb12a94e28",
-      "outputSha256": "afcebabb1ac663fbf3cda406456b21ad746d84ee4de91d6eb696196957918821",
-      "sourceBytes": 1585740,
-      "outputBytes": 171746,
+      "source": "assets/spots/guishan-island/collection/master.png",
+      "output": "assets/spots/guishan-island/collection/day.webp",
+      "sourceSha256": "b7878b45518d672ffdda51ed7801d1950c2965cca2a74e9112705ef5fd8af666",
+      "outputSha256": "38044b82b1ff87a62b96458eeba12a42231c9c8c78b11dbd26cddc0ee8cc0462",
+      "sourceBytes": 2154372,
+      "outputBytes": 151760,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/hehuanshan/collection/thumbnail.png",
-      "output": "assets/spots/hehuanshan/collection/thumbnail.webp",
-      "sourceSha256": "cdd558a7ea9c26a31b7f4b618a397a40642151cc0af5dce4e4e081903d1c9451",
-      "outputSha256": "a86f402b6a94c122b51a1d760130c05427de9f972d8fec505bf612417616dafb",
-      "sourceBytes": 428453,
-      "outputBytes": 54730,
+      "source": "assets/spots/guishan-island/collection/master.png",
+      "output": "assets/spots/guishan-island/collection/thumbnail.webp",
+      "sourceSha256": "b7878b45518d672ffdda51ed7801d1950c2965cca2a74e9112705ef5fd8af666",
+      "outputSha256": "731918ac6457306b52894feaa5739a10093edb2b88c9771fc1018f50f2ad09dc",
+      "sourceBytes": 2154372,
+      "outputBytes": 40676,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/hehuanshan/collection/master.png",
+      "output": "assets/spots/hehuanshan/collection/day.webp",
+      "sourceSha256": "2e75a9836a4209d61f79db70676a3b19e5ca8d8749f19692a641d03cc5ca874a",
+      "outputSha256": "dc909923163e561f3db7df8b3238260c88a1be34b2d780bf3e86e11336dd3cf4",
+      "sourceBytes": 2225267,
+      "outputBytes": 167022,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/hehuanshan/collection/master.png",
+      "output": "assets/spots/hehuanshan/collection/thumbnail.webp",
+      "sourceSha256": "2e75a9836a4209d61f79db70676a3b19e5ca8d8749f19692a641d03cc5ca874a",
+      "outputSha256": "d763a02e9c000d9e0503f12c0ab7701471aa35a9880da0d95db97899476f0845",
+      "sourceBytes": 2225267,
+      "outputBytes": 49618,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -426,37 +646,136 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/jiufen/collection/day.png",
-      "output": "assets/spots/jiufen/collection/day.webp",
-      "sourceSha256": "9112f56ce2338cf4ab83ba7b7c41e99a4bad12a3fdf0f2ecf0f68fa675b8e88b",
-      "outputSha256": "d8a0a87352abca2a59ce0c3391941433af46e081153cb77746f867cd1cfd3f99",
-      "sourceBytes": 1731732,
-      "outputBytes": 228588,
+      "source": "assets/spots/hinoki-village/collection/master.png",
+      "output": "assets/spots/hinoki-village/collection/day.webp",
+      "sourceSha256": "b96d88856f57397e30780a0cc24fc9c9b4b6c8714b24218372c6453a7c0c6904",
+      "outputSha256": "0c28d860b4540747953a7c15d6cb254f34e9d227a1b9aeb9574e07e0c32934ef",
+      "sourceBytes": 2541559,
+      "outputBytes": 228434,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/jiufen/collection/thumbnail.png",
-      "output": "assets/spots/jiufen/collection/thumbnail.webp",
-      "sourceSha256": "ee097af5237c87c87890fc78a18087be6b9870aaa3743458b8b5c8ec527b71b6",
-      "outputSha256": "490502e7e5fca5045345ca984a5fcf3c2252d863af37b26d896dfd504d04d7c6",
-      "sourceBytes": 478394,
-      "outputBytes": 71530,
+      "source": "assets/spots/hinoki-village/collection/master.png",
+      "output": "assets/spots/hinoki-village/collection/thumbnail.webp",
+      "sourceSha256": "b96d88856f57397e30780a0cc24fc9c9b4b6c8714b24218372c6453a7c0c6904",
+      "outputSha256": "83c6ddcfe259f24955dfe7ca56ddf8e6caeda3f099ebed20625c2744a11b2716",
+      "sourceBytes": 2541559,
+      "outputBytes": 63136,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/huoyanshan/collection/master.png",
+      "output": "assets/spots/huoyanshan/collection/day.webp",
+      "sourceSha256": "f3f40243b49dcf89b2f45fbc5ed46d14efd1e31d57ab68e1a1c357424c01113e",
+      "outputSha256": "7cdb57ca2aeb410d0fc385de099719687dab31e5c6eeac337a98c49b6cea7810",
+      "sourceBytes": 2467921,
+      "outputBytes": 212650,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/huoyanshan/collection/master.png",
+      "output": "assets/spots/huoyanshan/collection/thumbnail.webp",
+      "sourceSha256": "f3f40243b49dcf89b2f45fbc5ed46d14efd1e31d57ab68e1a1c357424c01113e",
+      "outputSha256": "c5aeb7d2a6ee9882799b2d3e0ed0bba7290c6cd870dbd59d0e07067858a3ab97",
+      "sourceBytes": 2467921,
+      "outputBytes": 57348,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/jiaoxi/collection/master.png",
+      "output": "assets/spots/jiaoxi/collection/day.webp",
+      "sourceSha256": "60bf60721b420c9e6795e922b68af9db80cbfa7ec2b68fb6af162a57b6962aa4",
+      "outputSha256": "e69c58d7dcc1f3770305d3917eb010321b9c9512079d4edbcf623a9af3b8cdb5",
+      "sourceBytes": 2489218,
+      "outputBytes": 231952,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/jiaoxi/collection/master.png",
+      "output": "assets/spots/jiaoxi/collection/thumbnail.webp",
+      "sourceSha256": "60bf60721b420c9e6795e922b68af9db80cbfa7ec2b68fb6af162a57b6962aa4",
+      "outputSha256": "84acb6731f525cce27759a97928315c79d054eae6156e31f20fab48d94cb1802",
+      "sourceBytes": 2489218,
+      "outputBytes": 62936,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/jiufen/collection/master.png",
+      "output": "assets/spots/jiufen/collection/day.webp",
+      "sourceSha256": "d961ead14c682fb39770e7b27b5010f1e702f89d28f6cead7946e36ffe99d4c3",
+      "outputSha256": "a8d7abbe0da461c6311c82bb4713f00ec9c4c5dc09463a78762e89ed0adbfa96",
+      "sourceBytes": 2270968,
+      "outputBytes": 194414,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/jiufen/collection/master.png",
+      "output": "assets/spots/jiufen/collection/thumbnail.webp",
+      "sourceSha256": "d961ead14c682fb39770e7b27b5010f1e702f89d28f6cead7946e36ffe99d4c3",
+      "outputSha256": "43bad6b8ca4261e0a8f4f50e3ed79cfd107866bf1c506e0ceb5185c98f9d496c",
+      "sourceBytes": 2270968,
+      "outputBytes": 59536,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -471,37 +790,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/kenting/collection/day.png",
+      "source": "assets/spots/kenting/collection/master.png",
       "output": "assets/spots/kenting/collection/day.webp",
-      "sourceSha256": "4ac659b52a730353665a1ea8a72e64df809912136e79c17d2d15eba8531730c3",
-      "outputSha256": "fe313de6fe6c0f178afee75822e0b1822bf50562704c5e4b33c92f1ada57e86a",
-      "sourceBytes": 1489163,
-      "outputBytes": 146324,
+      "sourceSha256": "9a4a65bab31f87b97a2907185bed0847caef15301c691aea3d982c20c937e33b",
+      "outputSha256": "55a694d784cf2bb9b51455b294b6b586cd7b043a0e2b70e1ca16023b09f9e764",
+      "sourceBytes": 2123058,
+      "outputBytes": 152436,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/kenting/collection/thumbnail.png",
+      "source": "assets/spots/kenting/collection/master.png",
       "output": "assets/spots/kenting/collection/thumbnail.webp",
-      "sourceSha256": "193a1eed1d7651eb3311d76e51887716c02376207c2dd9e1baf6643348346b52",
-      "outputSha256": "3d3e8b2b15407fd8877a50f274b152cab7b7358e47834a1d6ebe5ab0eff7f8be",
-      "sourceBytes": 407564,
-      "outputBytes": 49224,
+      "sourceSha256": "9a4a65bab31f87b97a2907185bed0847caef15301c691aea3d982c20c937e33b",
+      "outputSha256": "85ceb313481eed44bdf8cf69d66baa95383efdeaf6e00493f2ca4fb9b3626402",
+      "sourceBytes": 2123058,
+      "outputBytes": 47056,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -516,37 +838,104 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/lukang/collection/day.png",
-      "output": "assets/spots/lukang/collection/day.webp",
-      "sourceSha256": "dc1029f9e6a8a490eeef2de528e840950104acc88d29d29daea797c908d4d341",
-      "outputSha256": "f23617ba43c96336e7a4b65c1c6c14723436a4a077edadcfa43741ff9fec24d8",
-      "sourceBytes": 1628188,
-      "outputBytes": 185860,
+      "source": "assets/spots/longshan-temple/collection/master.png",
+      "output": "assets/spots/longshan-temple/collection/day.webp",
+      "sourceSha256": "6b4e8486acc0bdea3ed4d4811e98d67f79b4fcdc8771ce37bcab3c51d209dc81",
+      "outputSha256": "6c8108ba9867352bae95778ca5e09e041e027f8cc128eaab2d16ffb942fafb61",
+      "sourceBytes": 2432690,
+      "outputBytes": 209000,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/lukang/collection/thumbnail.png",
-      "output": "assets/spots/lukang/collection/thumbnail.webp",
-      "sourceSha256": "68265abd1f846d5fd166b430892089506034b054cd46232b49a2dc946ba79144",
-      "outputSha256": "34b2e2c6241750a5403ab398478204f9f7a6ebdadd5df6a585318c0e337b58a3",
-      "sourceBytes": 449832,
-      "outputBytes": 59172,
+      "source": "assets/spots/longshan-temple/collection/master.png",
+      "output": "assets/spots/longshan-temple/collection/thumbnail.webp",
+      "sourceSha256": "6b4e8486acc0bdea3ed4d4811e98d67f79b4fcdc8771ce37bcab3c51d209dc81",
+      "outputSha256": "1f0869ab45634616fc4e5f79614061954aed2bf31c042e7da10939c935d57c0c",
+      "sourceBytes": 2432690,
+      "outputBytes": 58134,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/longteng-bridge/collection/master.png",
+      "output": "assets/spots/longteng-bridge/collection/day.webp",
+      "sourceSha256": "5b3ae035bb33ce3d299b7d9eaa8b3975db20ccdb1b011437643d64f43e0ba8be",
+      "outputSha256": "2e2c2a16901aec33313855218f7f6dc38f6636fef712524b2f9f8a6039c716ae",
+      "sourceBytes": 2424073,
+      "outputBytes": 207042,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/longteng-bridge/collection/master.png",
+      "output": "assets/spots/longteng-bridge/collection/thumbnail.webp",
+      "sourceSha256": "5b3ae035bb33ce3d299b7d9eaa8b3975db20ccdb1b011437643d64f43e0ba8be",
+      "outputSha256": "beb0766024f079fee73bc5c0bf072fd591616d18c7af5106a0397716527b9795",
+      "sourceBytes": 2424073,
+      "outputBytes": 58034,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/lukang/collection/master.png",
+      "output": "assets/spots/lukang/collection/day.webp",
+      "sourceSha256": "ff91b3033a75c7fa040bf392c719d771475a6451afe728753c1c4ef43f0f43f1",
+      "outputSha256": "a87735347a643144c39b7a0b4d25567749cc947631186ef647c4ddacba83fb42",
+      "sourceBytes": 2583628,
+      "outputBytes": 221708,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/lukang/collection/master.png",
+      "output": "assets/spots/lukang/collection/thumbnail.webp",
+      "sourceSha256": "ff91b3033a75c7fa040bf392c719d771475a6451afe728753c1c4ef43f0f43f1",
+      "outputSha256": "21a6a78b9f33221d108ad2b96a464d72cbd4101dd940534a219f23c7a08c171d",
+      "sourceBytes": 2583628,
+      "outputBytes": 61304,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -561,37 +950,136 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/palace-museum/collection/day.png",
-      "output": "assets/spots/palace-museum/collection/day.webp",
-      "sourceSha256": "8ede20a03bfb5734a7322366bb9aa97569906e7e0007d42ceb7e734eaf69264b",
-      "outputSha256": "1a2e8289c2e4ed74cd94b3ce6c7a6168224d6d6ae16afcbc0fb87a0dfc25fbfc",
-      "sourceBytes": 1696835,
-      "outputBytes": 217346,
+      "source": "assets/spots/maokong/collection/master.png",
+      "output": "assets/spots/maokong/collection/day.webp",
+      "sourceSha256": "868645d34e4093fe70fe652ba480a4a3d7d6b5b6b75dc05fca9620d8fc56e981",
+      "outputSha256": "8b469c19b04a5dabfa7288c511746fcadb6b3010474efe5441bc1d3ffd4bfd0d",
+      "sourceBytes": 2388227,
+      "outputBytes": 211046,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/palace-museum/collection/thumbnail.png",
-      "output": "assets/spots/palace-museum/collection/thumbnail.webp",
-      "sourceSha256": "0f859a96528a5842d54281a7401099a7f1dafb09ff33289bea2ea0a1f85d91cf",
-      "outputSha256": "12158ee4f4e4a22ca8039f62ae012482396e9c1d0018835728fe833559c6852d",
-      "sourceBytes": 463789,
-      "outputBytes": 68510,
+      "source": "assets/spots/maokong/collection/master.png",
+      "output": "assets/spots/maokong/collection/thumbnail.webp",
+      "sourceSha256": "868645d34e4093fe70fe652ba480a4a3d7d6b5b6b75dc05fca9620d8fc56e981",
+      "outputSha256": "0e45d6baa983329a622c34f18458929bd06b6edfc39a5b9007e5b61546571851",
+      "sourceBytes": 2388227,
+      "outputBytes": 58140,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/nanzhuang/collection/master.png",
+      "output": "assets/spots/nanzhuang/collection/day.webp",
+      "sourceSha256": "5df19b6c4ad4fb3ba34e132bc111e28f07bced68958465af9f46838c413b4d6f",
+      "outputSha256": "c278537e74aa718fde5a4b51b2a73fc580aa5fdb5169635d540335a7f97c35c3",
+      "sourceBytes": 2410392,
+      "outputBytes": 211108,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/nanzhuang/collection/master.png",
+      "output": "assets/spots/nanzhuang/collection/thumbnail.webp",
+      "sourceSha256": "5df19b6c4ad4fb3ba34e132bc111e28f07bced68958465af9f46838c413b4d6f",
+      "outputSha256": "4f39ee2fdb222ad9188887995e6ed490939aad5a71fa4dcc024030efbceb554f",
+      "sourceBytes": 2410392,
+      "outputBytes": 57780,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/npm-southern/collection/master.png",
+      "output": "assets/spots/npm-southern/collection/day.webp",
+      "sourceSha256": "3bed42dc84391cfb58b4380f6ab96692d29e9dad61f520ab14308e81fcfade3c",
+      "outputSha256": "ff4c32a04dc796e1da06d4af6b8b1646e54a81b229c34046c528ed4b2e393198",
+      "sourceBytes": 2236338,
+      "outputBytes": 175600,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/npm-southern/collection/master.png",
+      "output": "assets/spots/npm-southern/collection/thumbnail.webp",
+      "sourceSha256": "3bed42dc84391cfb58b4380f6ab96692d29e9dad61f520ab14308e81fcfade3c",
+      "outputSha256": "52b2b00b58023eb956f49aa9978723aa529679f183f41a1c31b39013c71ac325",
+      "sourceBytes": 2236338,
+      "outputBytes": 50026,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/palace-museum/collection/master.png",
+      "output": "assets/spots/palace-museum/collection/day.webp",
+      "sourceSha256": "7e0061b7d407f84dcf89b9a9dd40a0444d1e13ad10f065ed09fd1b9e161b755a",
+      "outputSha256": "efb62e483bfe41d62fa0206dae9b3d797de39f0ce8f4b7aff7ffdc86be3511dc",
+      "sourceBytes": 2130220,
+      "outputBytes": 152042,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/palace-museum/collection/master.png",
+      "output": "assets/spots/palace-museum/collection/thumbnail.webp",
+      "sourceSha256": "7e0061b7d407f84dcf89b9a9dd40a0444d1e13ad10f065ed09fd1b9e161b755a",
+      "outputSha256": "f0e61dd05f773b1bf7305e4083d868e846d1f252da84b260cf1fced3701056dd",
+      "sourceBytes": 2130220,
+      "outputBytes": 44370,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -606,37 +1094,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/pier2/collection/day.png",
+      "source": "assets/spots/pier2/collection/master.png",
       "output": "assets/spots/pier2/collection/day.webp",
-      "sourceSha256": "63d874215b7682243a9583b9b403abb774ff3ef3ce6c68fbf6b99ba6b8a6b31e",
-      "outputSha256": "62638e677304c4792c850b8a32f61e845ecc7902d087f7a33f64ef219dd2d742",
-      "sourceBytes": 1653794,
-      "outputBytes": 196634,
+      "sourceSha256": "cda10bdc6bd927389d4c5927a78e5251172425e4d41321f418c7414307f92808",
+      "outputSha256": "05046d292efc11aa3cd4c272de59eb7a1a3e26d95cc151b48562a4297f671940",
+      "sourceBytes": 2302619,
+      "outputBytes": 173296,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/pier2/collection/thumbnail.png",
+      "source": "assets/spots/pier2/collection/master.png",
       "output": "assets/spots/pier2/collection/thumbnail.webp",
-      "sourceSha256": "faa2fe9750ad7054fcff4a27314434d42bc5136eff7eaff511e1ba7a3640b62f",
-      "outputSha256": "2fccc6d32e319c36754bb0fca35d4d1b7b23c07a453148afb096e5a89084ba2d",
-      "sourceBytes": 453981,
-      "outputBytes": 61424,
+      "sourceSha256": "cda10bdc6bd927389d4c5927a78e5251172425e4d41321f418c7414307f92808",
+      "outputSha256": "44140f0678bcfa64a162c7f31c4a389375cb54b39d6b7c7636d95edfba6cee95",
+      "sourceBytes": 2302619,
+      "outputBytes": 51316,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -651,37 +1142,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/qingshui-cliff/collection/day.png",
+      "source": "assets/spots/qingshui-cliff/collection/master.png",
       "output": "assets/spots/qingshui-cliff/collection/day.webp",
-      "sourceSha256": "17d3c94cc5fc1b744d0cdec7acbd391b50a4238c5d46fdf714fac5f95799c7c4",
-      "outputSha256": "6bcf7a2a39198bfcb1c98c2aac42b2ce9f2f633d1d76d6e8f897d0bcaf4dd012",
-      "sourceBytes": 1709535,
-      "outputBytes": 213730,
+      "sourceSha256": "bd20a6a432ac12c7229d786608c23da2661641cef343b6218ed1921644159d68",
+      "outputSha256": "dc9a733a47249334e50f9d18ff3eff42f04b21b15e39bfb0ce00c5c4782c51df",
+      "sourceBytes": 2193528,
+      "outputBytes": 175220,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/qingshui-cliff/collection/thumbnail.png",
+      "source": "assets/spots/qingshui-cliff/collection/master.png",
       "output": "assets/spots/qingshui-cliff/collection/thumbnail.webp",
-      "sourceSha256": "7eaa0f79bbaa9397c9250acf102d3acd122bbab225cbe64c2d3d8946ede9712f",
-      "outputSha256": "36a760aa8541b25b04031cfe02f331232545bfdf3656b66c34ac832ac9df0126",
-      "sourceBytes": 468477,
-      "outputBytes": 66900,
+      "sourceSha256": "bd20a6a432ac12c7229d786608c23da2661641cef343b6218ed1921644159d68",
+      "outputSha256": "070e86dcdf67db84dc2be92e211bb56892e5c8a13b826ad589c06df21f6f92b1",
+      "sourceBytes": 2193528,
+      "outputBytes": 53622,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -696,37 +1190,72 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/qixingtan/collection/day.png",
-      "output": "assets/spots/qixingtan/collection/day.webp",
-      "sourceSha256": "1ef6ab22ba51032736089128ebe7fd8e13e7f01e10953744bb31f2a4248d37be",
-      "outputSha256": "bcd2c0139cdb13d7d14757fceb197609fe0a1f3f04f2db762eb43c19f2fa4bd9",
-      "sourceBytes": 1606560,
-      "outputBytes": 195018,
+      "source": "assets/spots/qingtiangang/collection/master.png",
+      "output": "assets/spots/qingtiangang/collection/day.webp",
+      "sourceSha256": "6151357bbe05ca5fa94b1a1b0b7849189ff0ba822e7efd42c006d57d3e77ff10",
+      "outputSha256": "05fd79936063dba22d31a2a7a68488894bbe415d564030ee10f52fea9c05931a",
+      "sourceBytes": 2407528,
+      "outputBytes": 196312,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/qixingtan/collection/thumbnail.png",
-      "output": "assets/spots/qixingtan/collection/thumbnail.webp",
-      "sourceSha256": "574abf93bf2648302b96de9c8c45fe2d4fd91493cdcf2a4fe0d798c5d0f84213",
-      "outputSha256": "44214b5a5a38220865379a6d88303be15c3a77a40dd2c9deb44ab96feedd0b68",
-      "sourceBytes": 434713,
-      "outputBytes": 57880,
+      "source": "assets/spots/qingtiangang/collection/master.png",
+      "output": "assets/spots/qingtiangang/collection/thumbnail.webp",
+      "sourceSha256": "6151357bbe05ca5fa94b1a1b0b7849189ff0ba822e7efd42c006d57d3e77ff10",
+      "outputSha256": "236cee68ee21c217e0ac18dfd3e93edcda3c1c8a932159679ff5ac28b7742aca",
+      "sourceBytes": 2407528,
+      "outputBytes": 52458,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/qixingtan/collection/master.png",
+      "output": "assets/spots/qixingtan/collection/day.webp",
+      "sourceSha256": "2e02991dcca54cd210a02dab6c0cf94e2848260b1eb590491e3401a1d69066b3",
+      "outputSha256": "e26b0d77710c766d72a199a2ddc9e1c455d7d1f185f84dbda40e4527cf23a3e6",
+      "sourceBytes": 2275419,
+      "outputBytes": 165060,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/qixingtan/collection/master.png",
+      "output": "assets/spots/qixingtan/collection/thumbnail.webp",
+      "sourceSha256": "2e02991dcca54cd210a02dab6c0cf94e2848260b1eb590491e3401a1d69066b3",
+      "outputSha256": "5074655f3af07bce75d68e9c110a3e2052701331acd5be2fcdae3e820b1f74fc",
+      "sourceBytes": 2275419,
+      "outputBytes": 44722,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -741,37 +1270,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/rainbow-village/collection/day.png",
+      "source": "assets/spots/rainbow-village/collection/master.png",
       "output": "assets/spots/rainbow-village/collection/day.webp",
-      "sourceSha256": "259f5ec67e12122488c185ee58f46afd2bef348c4ccdcddb5ddf7b64aad37192",
-      "outputSha256": "f8224ffc918bd96c4e1820911facbf8fd024f6559ffa40716ece64b5bc889ffa",
-      "sourceBytes": 1575162,
-      "outputBytes": 169098,
+      "sourceSha256": "416a48088af6cc22c7887cccf3c1b71db0a3027d52b2fa03dc86edc726472048",
+      "outputSha256": "63c0bd5f60ad66710055310ca4186812f05c3f3cd750fe3ddd131187d5197dd5",
+      "sourceBytes": 2637676,
+      "outputBytes": 244614,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/rainbow-village/collection/thumbnail.png",
+      "source": "assets/spots/rainbow-village/collection/master.png",
       "output": "assets/spots/rainbow-village/collection/thumbnail.webp",
-      "sourceSha256": "778c45d804d2ee81aa8c263c600b640b9c568ac2eee5010f2242f1241dca766c",
-      "outputSha256": "5ffa8a1592f945f1283bc5ad79d9a1c83f9b8e1dc8cabe8921d4c123f9caf8d2",
-      "sourceBytes": 431834,
-      "outputBytes": 52808,
+      "sourceSha256": "416a48088af6cc22c7887cccf3c1b71db0a3027d52b2fa03dc86edc726472048",
+      "outputSha256": "c292bc39881f772238ed7dd7c4169405c76b893437a7b5124702ac0ad32020f0",
+      "sourceBytes": 2637676,
+      "outputBytes": 67326,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -786,37 +1318,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/ruisui/collection/day.png",
+      "source": "assets/spots/ruisui/collection/master.png",
       "output": "assets/spots/ruisui/collection/day.webp",
-      "sourceSha256": "0f74d0b1a20529e37d40988a7898a3e50cc00508d108f058b273f4e93a97d0ee",
-      "outputSha256": "47187f28ae0fa6ca14ea6733a7e0f045619a03bffa867c1fc3aa2ff91d1f5fa2",
-      "sourceBytes": 1385186,
-      "outputBytes": 114018,
+      "sourceSha256": "6485398af38534e91009eff75ae022aa30bf74b4004f42649a797d26b8a0ebc2",
+      "outputSha256": "665886193eb6a6dafb430ea56c40de747613e42b43712aa083945f8b861344ef",
+      "sourceBytes": 2280624,
+      "outputBytes": 169568,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/ruisui/collection/thumbnail.png",
+      "source": "assets/spots/ruisui/collection/master.png",
       "output": "assets/spots/ruisui/collection/thumbnail.webp",
-      "sourceSha256": "27178c96fd60d9abc941d14b69f5f5d12477eb3352074f397c79623166963dc8",
-      "outputSha256": "11af8946a669d83e2eda6c048fb476bcadf58dd6b459e6193c7755b5e36a8179",
-      "sourceBytes": 376889,
-      "outputBytes": 38184,
+      "sourceSha256": "6485398af38534e91009eff75ae022aa30bf74b4004f42649a797d26b8a0ebc2",
+      "outputSha256": "38287dcb127b6523d818a4e122c51794d654533e790ab75adcbfdd04aa90d8a2",
+      "sourceBytes": 2280624,
+      "outputBytes": 48482,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -831,37 +1366,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/sanxiantai/collection/day.png",
+      "source": "assets/spots/sanxiantai/collection/master.png",
       "output": "assets/spots/sanxiantai/collection/day.webp",
-      "sourceSha256": "8e2a7da6e854d4c01a96297e1729dc797ae57eafe25a394bb69c94411fc83c18",
-      "outputSha256": "8eb99f4b6563d5985b3d4551db2aaa595686a2c9ba7294846614865bf085d36e",
-      "sourceBytes": 1501773,
-      "outputBytes": 144430,
+      "sourceSha256": "80f39fb6f1653243e3416a90fd1ccf5209703eb05e8edb147154e95b36e30bef",
+      "outputSha256": "7711f1aa73055af3e603b07bbaa409cf72c1e8422ff4ab9e365a5bebc95fd3e6",
+      "sourceBytes": 2086396,
+      "outputBytes": 141602,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/sanxiantai/collection/thumbnail.png",
+      "source": "assets/spots/sanxiantai/collection/master.png",
       "output": "assets/spots/sanxiantai/collection/thumbnail.webp",
-      "sourceSha256": "889256724290ab6f734c6d86ef84a06c41f09144a3336a86e722cc25484b1331",
-      "outputSha256": "dc30f64c9d5d0bae249fffa2fe215f267a06a32f63e6d7ec9970d5de4ac34d5b",
-      "sourceBytes": 408029,
-      "outputBytes": 47450,
+      "sourceSha256": "80f39fb6f1653243e3416a90fd1ccf5209703eb05e8edb147154e95b36e30bef",
+      "outputSha256": "92412293e0bab48d4faa80fe17c32df32cb4af2c715567ef48f5fba3279f38cb",
+      "sourceBytes": 2086396,
+      "outputBytes": 41970,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -876,37 +1414,136 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/sun-moon-lake/collection/day.png",
-      "output": "assets/spots/sun-moon-lake/collection/day.webp",
-      "sourceSha256": "d409cc55ac232d36ba181774ba51155a2bf0bfc32ca17da59e94664ff96d7021",
-      "outputSha256": "d68a086300df40b8a126e2cce3ad9a7ae70a3bcf573b2a0b2c8a3a77ba71b935",
-      "sourceBytes": 1597297,
-      "outputBytes": 169006,
+      "source": "assets/spots/sanyi-woodcarving/collection/master.png",
+      "output": "assets/spots/sanyi-woodcarving/collection/day.webp",
+      "sourceSha256": "ad601865ea32c342c0558401b7f1d0c08e443394031f13aa76da30ff07005e12",
+      "outputSha256": "e331c21e66cb4688b9fe252b193b6f6518645ea178bbc2606472c3536f4ff772",
+      "sourceBytes": 2390217,
+      "outputBytes": 206472,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/sun-moon-lake/collection/thumbnail.png",
-      "output": "assets/spots/sun-moon-lake/collection/thumbnail.webp",
-      "sourceSha256": "4f1d2e1b9287998352d28e0c85309f35a2290e7978a244b5e20bdb261a42bcc0",
-      "outputSha256": "343d156671e8d30b045a5fbeae2d1134192717cadf4dfb84ecc83b07d2c81c30",
-      "sourceBytes": 433967,
-      "outputBytes": 53440,
+      "source": "assets/spots/sanyi-woodcarving/collection/master.png",
+      "output": "assets/spots/sanyi-woodcarving/collection/thumbnail.webp",
+      "sourceSha256": "ad601865ea32c342c0558401b7f1d0c08e443394031f13aa76da30ff07005e12",
+      "outputSha256": "bee93275ba5b5ec8bc5f5d89a7837954cde198865f05bb21a8cde015f6c55213",
+      "sourceBytes": 2390217,
+      "outputBytes": 57044,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/shengxing-station/collection/master.png",
+      "output": "assets/spots/shengxing-station/collection/day.webp",
+      "sourceSha256": "17fe7b9f4b1ce31bb1d89ff116419930c54286033b4bcdc7c4e881b89a0610f6",
+      "outputSha256": "0f39dc039858b0e18f436be3f660119fc8f35f0dd0e258bd6c74b1bb47a9c705",
+      "sourceBytes": 2392242,
+      "outputBytes": 194174,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/shengxing-station/collection/master.png",
+      "output": "assets/spots/shengxing-station/collection/thumbnail.webp",
+      "sourceSha256": "17fe7b9f4b1ce31bb1d89ff116419930c54286033b4bcdc7c4e881b89a0610f6",
+      "outputSha256": "9aac73426e699b79a7a004adb3a2a7cab10bb0d4b0ef8154352885fcca0ebcf1",
+      "sourceBytes": 2392242,
+      "outputBytes": 55528,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/shilin-night-market/collection/master.png",
+      "output": "assets/spots/shilin-night-market/collection/day.webp",
+      "sourceSha256": "3edbdb2c588330b559910eed563d008e174b2c511d3c24ef55bf6f1d7cbafc58",
+      "outputSha256": "5133572ce97394200e5e369c3e3e7dc4e82007ec7348135ef18dcc225d2afbdf",
+      "sourceBytes": 2448415,
+      "outputBytes": 218822,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/shilin-night-market/collection/master.png",
+      "output": "assets/spots/shilin-night-market/collection/thumbnail.webp",
+      "sourceSha256": "3edbdb2c588330b559910eed563d008e174b2c511d3c24ef55bf6f1d7cbafc58",
+      "outputSha256": "0f2ec349f83c703aa860c7b9f735f3dfbe3338c0767ce06fd0b0ba0afc56cf53",
+      "sourceBytes": 2448415,
+      "outputBytes": 64942,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/sun-moon-lake/collection/master.png",
+      "output": "assets/spots/sun-moon-lake/collection/day.webp",
+      "sourceSha256": "a62134e42230c294b8d19d2729396fbe303d2dcc8846675841022d1d62755473",
+      "outputSha256": "5a12a679ca2986f754db822da9de91e6820e36c62f1ed168048baa67eaf0f22f",
+      "sourceBytes": 1988960,
+      "outputBytes": 134966,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/sun-moon-lake/collection/master.png",
+      "output": "assets/spots/sun-moon-lake/collection/thumbnail.webp",
+      "sourceSha256": "a62134e42230c294b8d19d2729396fbe303d2dcc8846675841022d1d62755473",
+      "outputSha256": "1b12878623ac606ae9f870380266faaa58cb487c3a6ff657650e50bb9bc03ad8",
+      "sourceBytes": 1988960,
+      "outputBytes": 42458,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -921,37 +1558,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/taipei-101/collection/day.png",
+      "source": "assets/spots/taipei-101/collection/master.png",
       "output": "assets/spots/taipei-101/collection/day.webp",
-      "sourceSha256": "3b5729c03ce4ef24dc26700b4d0483f2beb6ad1f0ff3da2412e2f4e7c44eef2b",
-      "outputSha256": "78c51fc665e6c7ec1163c9ad9f50cc097520a237fc1453bace98ff06175a0fe4",
-      "sourceBytes": 1404724,
-      "outputBytes": 116856,
+      "sourceSha256": "78d4cfe1fceb4698924ddb3faedcca6be14bdf9d96482fdbf7aed67126a777f9",
+      "outputSha256": "f301ce7702114fdbcdb6274fcef6794d42de4802361310e5f3af0c55a66acea2",
+      "sourceBytes": 2252744,
+      "outputBytes": 161074,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/taipei-101/collection/thumbnail.png",
+      "source": "assets/spots/taipei-101/collection/master.png",
       "output": "assets/spots/taipei-101/collection/thumbnail.webp",
-      "sourceSha256": "999ea7d6fb03b4f7ce5f7dbd388a64939c8cb49e9a65fc98f68ccdc1d71c52a1",
-      "outputSha256": "96f8ccc30604b12ce92327c5f0e2bbade4f2280cbb35a09a885718dffa8b2bf8",
-      "sourceBytes": 377131,
-      "outputBytes": 37662,
+      "sourceSha256": "78d4cfe1fceb4698924ddb3faedcca6be14bdf9d96482fdbf7aed67126a777f9",
+      "outputSha256": "5c1c029bda84c0cab24edb2f56d344ffbb7890a889a64ef9397b82485d0ddf24",
+      "sourceBytes": 2252744,
+      "outputBytes": 46246,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -966,37 +1606,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/tamsui/collection/day.png",
+      "source": "assets/spots/tamsui/collection/master.png",
       "output": "assets/spots/tamsui/collection/day.webp",
-      "sourceSha256": "88a76ed13184ae2cfc5c1590e95b984d1c27801ef4eb820010180303a7cc2827",
-      "outputSha256": "53d87bc63af20a81e3aac65f2d44e741fb986063e53e18fbd6d80b8fe73a2eae",
-      "sourceBytes": 1497288,
-      "outputBytes": 157018,
+      "sourceSha256": "6fd2db564f09ecc630b20305a1b63c8c16f89f97dee22c03f9ae89955d19906f",
+      "outputSha256": "5c11d1085c277af8d9a2d9f32a066f537a5e23bfe9636cab45ab30da9b243375",
+      "sourceBytes": 2060206,
+      "outputBytes": 141612,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/tamsui/collection/thumbnail.png",
+      "source": "assets/spots/tamsui/collection/master.png",
       "output": "assets/spots/tamsui/collection/thumbnail.webp",
-      "sourceSha256": "1aa90a58e6240b9f60a8b9d6cd291d1a972b64d13b732bfe3f19ba79a2c99089",
-      "outputSha256": "6d95fe91d7cd99b336a2ab1593821f89283448b1a2d50d90f3afff52a49f6054",
-      "sourceBytes": 410660,
-      "outputBytes": 51970,
+      "sourceSha256": "6fd2db564f09ecc630b20305a1b63c8c16f89f97dee22c03f9ae89955d19906f",
+      "outputSha256": "285bed6b077424ad7ce6bdfc629aceb67ebaa2ece1d91914fd10b7ebb7d4d4e2",
+      "sourceBytes": 2060206,
+      "outputBytes": 44068,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -1011,37 +1654,40 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/taroko/collection/day.png",
+      "source": "assets/spots/taroko/collection/master.png",
       "output": "assets/spots/taroko/collection/day.webp",
-      "sourceSha256": "14abe3b0ecf919296ce0b90c8629515ccb1fee28a603af2cda4bae69f56e733b",
-      "outputSha256": "510d65f8aed81214a1437e35c5af8c2d006134359cb76f67db19b7e8ba277f3f",
-      "sourceBytes": 1762703,
-      "outputBytes": 209126,
+      "sourceSha256": "43f6df2ef67fb41712f03a62c65383da8998d84277ae672efa1b9a08223837a6",
+      "outputSha256": "7598804ff0e82e15d52fe5de93dce570551b3240046fb0031a51fd55ace7b8a9",
+      "sourceBytes": 2584666,
+      "outputBytes": 234636,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/taroko/collection/thumbnail.png",
+      "source": "assets/spots/taroko/collection/master.png",
       "output": "assets/spots/taroko/collection/thumbnail.webp",
-      "sourceSha256": "8df18536b1c63fcd704df1a6e2943c2e727687ccb9095b555f03117ba63d7033",
-      "outputSha256": "a5e08d4a2daaa2755673e827bc7855ddfd95dbd25b71515848ce3e3b14a641dc",
-      "sourceBytes": 495064,
-      "outputBytes": 71558,
+      "sourceSha256": "43f6df2ef67fb41712f03a62c65383da8998d84277ae672efa1b9a08223837a6",
+      "outputSha256": "35dee55da7047896a3163aa53f568dcd52d73b2fa4203bc5af7fcd683a944667",
+      "sourceBytes": 2584666,
+      "outputBytes": 68296,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -1056,67 +1702,136 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     },
     {
       "family": "collection",
-      "source": "assets/spots/xiangshan/collection/day.png",
+      "source": "assets/spots/waiao/collection/master.png",
+      "output": "assets/spots/waiao/collection/day.webp",
+      "sourceSha256": "2713400e8c7aeeb576e07c9e27ae1aa981ee30678638445594e71c767bf9e4d4",
+      "outputSha256": "35d58cc82283dcd2ea28e0a8596fe5a9f80630d90af940249c99122a16706524",
+      "sourceBytes": 2201502,
+      "outputBytes": 154300,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/waiao/collection/master.png",
+      "output": "assets/spots/waiao/collection/thumbnail.webp",
+      "sourceSha256": "2713400e8c7aeeb576e07c9e27ae1aa981ee30678638445594e71c767bf9e4d4",
+      "outputSha256": "efabafdf293c822537a3b341d27af1a29fedc0dbfe26346aeb927166e3e1084f",
+      "sourceBytes": 2201502,
+      "outputBytes": 44308,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/xiangshan/collection/master.png",
       "output": "assets/spots/xiangshan/collection/day.webp",
-      "sourceSha256": "e9fbaf97d1abdaee52a272c50e5f301c46a733518dbb99377ad91805ee72efaa",
-      "outputSha256": "826d3b18c051e777a4e0f72e83a548efd1fef8443d53f6f300b33f422ae65ed5",
-      "sourceBytes": 1546321,
-      "outputBytes": 142366,
+      "sourceSha256": "40ea05c23991cbef522e9e52c6dd9d80dffb01676f2ab602d41f3640df1e065e",
+      "outputSha256": "48d59b30ec89e659ea782de03244f2cd2849113584fe22644b9b1f366ceab8db",
+      "sourceBytes": 2128786,
+      "outputBytes": 158590,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/xiangshan/collection/thumbnail.png",
+      "source": "assets/spots/xiangshan/collection/master.png",
       "output": "assets/spots/xiangshan/collection/thumbnail.webp",
-      "sourceSha256": "1218eb39e8222922066fc4b6278622bca529ed26119ce9439f8a514303982643",
-      "outputSha256": "c09e02a568f4de1ba3054928c6fd7c9f5dd2a615fc776dc05c5889a41d949f1b",
-      "sourceBytes": 421795,
-      "outputBytes": 45284,
+      "sourceSha256": "40ea05c23991cbef522e9e52c6dd9d80dffb01676f2ab602d41f3640df1e065e",
+      "outputSha256": "527bc9253349b0ad96d30ff150b6b3eb874e50c3475e1a01fe6976317d9dfe81",
+      "sourceBytes": 2128786,
+      "outputBytes": 46572,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "collection",
-      "source": "assets/spots/yehliu/collection/day.png",
-      "output": "assets/spots/yehliu/collection/day.webp",
-      "sourceSha256": "4eb397d0c26a719eab4d87127aca19af62c482de89498031d6eb61135c9fc4d1",
-      "outputSha256": "f9298d840f89b016761d2a7e557ac7fbadc038aa16579ec4344ae08a026549cc",
-      "sourceBytes": 1447356,
-      "outputBytes": 131738,
+      "source": "assets/spots/ximending/collection/master.png",
+      "output": "assets/spots/ximending/collection/day.webp",
+      "sourceSha256": "9106bdf3d4948637912cce9006025d20cb675cd4d1012eb868931a67bc839a50",
+      "outputSha256": "74b77975749e153d714d447f8aea27fe6907c216831237e42e56e80403db61bb",
+      "sourceBytes": 2219192,
+      "outputBytes": 163682,
       "dimensions": [
         1024,
         1024
       ],
       "lossless": false,
-      "quality": 90
+      "quality": 90,
+      "saturation": 0.88
     },
     {
       "family": "thumbnail",
-      "source": "assets/spots/yehliu/collection/thumbnail.png",
-      "output": "assets/spots/yehliu/collection/thumbnail.webp",
-      "sourceSha256": "6c7ebd56e9586dd85f02544abbc5095e07b58c70a812e56c8381959d8713d95d",
-      "outputSha256": "8cc18b095f2eaf1e560bf900d1e31b07e9b093495d33449de57274124ad9b06d",
-      "sourceBytes": 392039,
-      "outputBytes": 42046,
+      "source": "assets/spots/ximending/collection/master.png",
+      "output": "assets/spots/ximending/collection/thumbnail.webp",
+      "sourceSha256": "9106bdf3d4948637912cce9006025d20cb675cd4d1012eb868931a67bc839a50",
+      "outputSha256": "9839c6c25148fb1c7bc975552c3b1abbbd55e131135640f346190fe2dbc4879d",
+      "sourceBytes": 2219192,
+      "outputBytes": 46718,
       "dimensions": [
         512,
         512
       ],
       "lossless": false,
-      "quality": 88
+      "quality": 88,
+      "saturation": 0.88
+    },
+    {
+      "family": "collection",
+      "source": "assets/spots/yehliu/collection/master.png",
+      "output": "assets/spots/yehliu/collection/day.webp",
+      "sourceSha256": "6494c769463818cbb5a2b96f455b75a6101b6a76fa12ea36443448823915e3eb",
+      "outputSha256": "ec272344a0ad2cd02ce856f2fc5c9a28ca0ee10bcb1ba6a72acc67055dcfb8a4",
+      "sourceBytes": 2105351,
+      "outputBytes": 145388,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "lossless": false,
+      "quality": 90,
+      "saturation": 0.88
+    },
+    {
+      "family": "thumbnail",
+      "source": "assets/spots/yehliu/collection/master.png",
+      "output": "assets/spots/yehliu/collection/thumbnail.webp",
+      "sourceSha256": "6494c769463818cbb5a2b96f455b75a6101b6a76fa12ea36443448823915e3eb",
+      "outputSha256": "6bdce3bc9505517c6349b11867e5a212ebfd743af448063aee4218d344dce5ba",
+      "sourceBytes": 2105351,
+      "outputBytes": 45060,
+      "dimensions": [
+        512,
+        512
+      ],
+      "lossless": false,
+      "quality": 88,
+      "saturation": 0.88
     },
     {
       "family": "world",
@@ -1131,7 +1846,8 @@
         512
       ],
       "lossless": true,
-      "quality": null
+      "quality": null,
+      "saturation": 1
     }
   ]
 }

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-19",
+  "id": "gaomei",
+  "previous": "review-v4.png",
+  "selected": "review-v4.png",
+  "discarded": {
+    "review-v5.png": "Residual wide-angle funnel, turbine scale/location flagged by user; not selected",
+    "review-v6.png": "User disliked aerial angle/lack of human warmth; not promoted"
+  },
+  "corrections": [
+    "Elevated tilt-shift toy presentation, reduced foreground scale exaggeration",
+    "Turbine segment south/southwest along Huangang North Road; broad wetland gap to boardwalk",
+    "Larger industrial turbines relative to micro visitors, shared scale intent"
+  ],
+  "newReferences": [
+    "official-turbine-road.jpg",
+    "satellite-turbine-boardwalk-20261019.jpg"
+  ],
+  "sources": "assets/spots/gaomei/reference/sources.json",
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "method": "New reconstruction from approved high-angle miniature style and actual plan/ground evidence; originals unchanged.",
+  "limitations": "Approximate model compression remains; exact spacing, dimensions and road-side offsets not measured. Not a calibrated lens inverse or survey.",
+  "geographicApproval": "pending",
+  "userAcceptance": "pending",
+  "other44Selections": "unchanged",
+  "runtimePromoted": "v4 only for temporary App preview",
+  "checks": {
+    "lint": "pass",
+    "typecheck": "pass",
+    "spots": "159 spots, 0 errors",
+    "assets": "159 spots, 0 errors, 517 existing warnings"
+  }
+}

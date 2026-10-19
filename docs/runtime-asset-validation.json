@@ -1,23 +1,26 @@
 {
-  "unitTests": 6,
+  "date": "2026-10-19",
+  "scope": "45 user-selected collection images promoted for App preview; not geographic QA approval",
+  "unitTests": 8,
   "lint": "pass",
   "typecheck": "pass",
-  "assetsCheck": "159 spots; 0 errors; 517 existing draft/preview warnings",
+  "assetsCheck": "159 spots; 0 errors; 477 existing missing-asset warnings",
   "spotsCheck": "159 spots; 0 errors",
   "nativeJsExports": [
     "ios",
     "android"
   ],
-  "exportedSpotImages": 74,
+  "exportedSpotImages": 114,
+  "collectionDayImages": 45,
+  "collectionThumbnails": 45,
+  "existingWorldTokens": 24,
   "allSpotImagesAreWebP": true,
-  "sourceHashesUnchanged": true,
-  "nativeDeviceRendering": "UIKit UIImage(data:) decode passed for all 74 WebPs plus a PNG-named widget copy on an existing iPhone 16 Pro iOS 18.3 simulator; not a full installed-app UI or physical-device test",
-  "note": "Metro/Hermes export verifies packaging, not an IPA/APK size or physical-device rendering.",
-  "uikitDecodedFiles": 75,
-  "browserVisualReview": [
-    "alishan",
-    "qingshui-cliff",
-    "yehliu",
-    "taipei-101"
-  ]
+  "noReviewReferenceArchiveMasterBundled": true,
+  "selectedReviewSourcesUnchanged": true,
+  "previousMasterBackupsVerified": 25,
+  "sourceMode": "masters",
+  "runtimeSaturation": 0.88,
+  "sourceReviewSaturation": "unchanged; comparison CSS remains 0.88",
+  "runtimeBytes": 16493966,
+  "nativeDeviceRendering": "Not performed this round: Simulator computer-use access not approved. Native Metro/Hermes export verifies packaging only, not installed App UI or device performance."
 }

@@ -1,7 +1,18 @@
 {
-  "collection": { "maxSize": 1024, "quality": 90 },
-  "thumbnail": { "maxSize": 512, "quality": 88 },
-  "world": { "maxSize": 512, "lossless": true },
+  "collection": {
+    "maxSize": 1024,
+    "quality": 90,
+    "saturation": 0.88
+  },
+  "thumbnail": {
+    "maxSize": 512,
+    "quality": 88,
+    "saturation": 0.88
+  },
+  "world": {
+    "maxSize": 512,
+    "lossless": true
+  },
   "method": 6,
-  "notes": "Offline static WebP derivatives only. Keep PNG sources and review previews unchanged. 512px thumbnails cover 160pt cards on 3x screens and the iOS widget. Map tokens retain exact RGBA pixels at their original 512px resolution."
+  "notes": "Offline WebP derivatives. Collection and thumbnail use CSS-compatible 88% saturation, always from unadjusted master PNGs (sourceMode masters). Review/master PNGs unchanged; comparison review display remains 88%. World tokens remain lossless original RGBA. 512px thumbnails support 3x cards/widgets."
 }

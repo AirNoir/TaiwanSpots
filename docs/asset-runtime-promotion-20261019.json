@@ -1,0 +1,553 @@
+{
+  "date": "2026-10-19",
+  "purpose": "User-authorized App preview of all 45 selected collection images; not geographic QA approval",
+  "gaomei": "Use v4 before rejected v5/v6; deferred further art refinement",
+  "saturation": 0.88,
+  "sourceOriginals": "Unmodified review PNGs; previous masters backed up",
+  "runtime": "1024px day WebP quality90; 512px thumbnail WebP quality88",
+  "mapTokens": "Existing tokens unchanged; no new token art requested",
+  "spots": [
+    {
+      "id": "xiangshan",
+      "selectedReview": "review-v5.png",
+      "source": "assets/spots/xiangshan/collection/review-v5.png",
+      "sourceSha256": "40ea05c23991cbef522e9e52c6dd9d80dffb01676f2ab602d41f3640df1e065e",
+      "master": "assets/spots/xiangshan/collection/master.png",
+      "previousMasterBackup": "assets/spots/xiangshan/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "palace-museum",
+      "selectedReview": "review-v8.png",
+      "source": "assets/spots/palace-museum/collection/review-v8.png",
+      "sourceSha256": "7e0061b7d407f84dcf89b9a9dd40a0444d1e13ad10f065ed09fd1b9e161b755a",
+      "master": "assets/spots/palace-museum/collection/master.png",
+      "previousMasterBackup": "assets/spots/palace-museum/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "jiufen",
+      "selectedReview": "review-v6.png",
+      "source": "assets/spots/jiufen/collection/review-v6.png",
+      "sourceSha256": "d961ead14c682fb39770e7b27b5010f1e702f89d28f6cead7946e36ffe99d4c3",
+      "master": "assets/spots/jiufen/collection/master.png",
+      "previousMasterBackup": "assets/spots/jiufen/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "sun-moon-lake",
+      "selectedReview": "review-v8.png",
+      "source": "assets/spots/sun-moon-lake/collection/review-v8.png",
+      "sourceSha256": "a62134e42230c294b8d19d2729396fbe303d2dcc8846675841022d1d62755473",
+      "master": "assets/spots/sun-moon-lake/collection/master.png",
+      "previousMasterBackup": "assets/spots/sun-moon-lake/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "qingshui-cliff",
+      "selectedReview": "review-v5.png",
+      "source": "assets/spots/qingshui-cliff/collection/review-v5.png",
+      "sourceSha256": "bd20a6a432ac12c7229d786608c23da2661641cef343b6218ed1921644159d68",
+      "master": "assets/spots/qingshui-cliff/collection/master.png",
+      "previousMasterBackup": "assets/spots/qingshui-cliff/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "tamsui",
+      "selectedReview": "review-v4.png",
+      "source": "assets/spots/tamsui/collection/review-v4.png",
+      "sourceSha256": "6fd2db564f09ecc630b20305a1b63c8c16f89f97dee22c03f9ae89955d19906f",
+      "master": "assets/spots/tamsui/collection/master.png",
+      "previousMasterBackup": "assets/spots/tamsui/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "taipei-101",
+      "selectedReview": "review-v1.png",
+      "source": "assets/spots/taipei-101/collection/review-v1.png",
+      "sourceSha256": "78d4cfe1fceb4698924ddb3faedcca6be14bdf9d96482fdbf7aed67126a777f9",
+      "master": "assets/spots/taipei-101/collection/master.png",
+      "previousMasterBackup": "assets/spots/taipei-101/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "dadaocheng",
+      "selectedReview": "review-v1.png",
+      "source": "assets/spots/dadaocheng/collection/review-v1.png",
+      "sourceSha256": "54ce86957be07c000494b54a682617ad1c898f13ab428a553a865783f28197be",
+      "master": "assets/spots/dadaocheng/collection/master.png",
+      "previousMasterBackup": "assets/spots/dadaocheng/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "yehliu",
+      "selectedReview": "review-v5.png",
+      "source": "assets/spots/yehliu/collection/review-v5.png",
+      "sourceSha256": "6494c769463818cbb5a2b96f455b75a6101b6a76fa12ea36443448823915e3eb",
+      "master": "assets/spots/yehliu/collection/master.png",
+      "previousMasterBackup": "assets/spots/yehliu/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "cingjing",
+      "selectedReview": "review-v3.png",
+      "source": "assets/spots/cingjing/collection/review-v3.png",
+      "sourceSha256": "f75056d60413760718e89fb5b86c377eaafe2f06589516ae37a4c0d6a932ef8d",
+      "master": "assets/spots/cingjing/collection/master.png",
+      "previousMasterBackup": "assets/spots/cingjing/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "gaomei",
+      "selectedReview": "review-v4.png",
+      "source": "assets/spots/gaomei/collection/review-v4.png",
+      "sourceSha256": "6b4e529824740a26bddeb4bed09dbab3ed134e2c04b11d63b89f7e171e9a280d",
+      "master": "assets/spots/gaomei/collection/master.png",
+      "previousMasterBackup": "assets/spots/gaomei/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "rainbow-village",
+      "selectedReview": "review-v1.png",
+      "source": "assets/spots/rainbow-village/collection/review-v1.png",
+      "sourceSha256": "416a48088af6cc22c7887cccf3c1b71db0a3027d52b2fa03dc86edc726472048",
+      "master": "assets/spots/rainbow-village/collection/master.png",
+      "previousMasterBackup": "assets/spots/rainbow-village/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "lukang",
+      "selectedReview": "review-v4.png",
+      "source": "assets/spots/lukang/collection/review-v4.png",
+      "sourceSha256": "ff91b3033a75c7fa040bf392c719d771475a6451afe728753c1c4ef43f0f43f1",
+      "master": "assets/spots/lukang/collection/master.png",
+      "previousMasterBackup": "assets/spots/lukang/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "hehuanshan",
+      "selectedReview": "review-v3.png",
+      "source": "assets/spots/hehuanshan/collection/review-v3.png",
+      "sourceSha256": "2e75a9836a4209d61f79db70676a3b19e5ca8d8749f19692a641d03cc5ca874a",
+      "master": "assets/spots/hehuanshan/collection/master.png",
+      "previousMasterBackup": "assets/spots/hehuanshan/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "alishan",
+      "selectedReview": "review-v2.png",
+      "source": "assets/spots/alishan/collection/review-v2.png",
+      "sourceSha256": "63641788617cbecb86d052d2658b217081bbcf6b6ce9a4adc07b0f4be8bd6efd",
+      "master": "assets/spots/alishan/collection/master.png",
+      "previousMasterBackup": "assets/spots/alishan/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "anping",
+      "selectedReview": "review-v1.png",
+      "source": "assets/spots/anping/collection/review-v1.png",
+      "sourceSha256": "a8124a06abf6536f6d0bf229c4a8d2e19034f8e69f4a022afdb13ce7e160e600",
+      "master": "assets/spots/anping/collection/master.png",
+      "previousMasterBackup": "assets/spots/anping/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "chihkan",
+      "selectedReview": "review-v1.png",
+      "source": "assets/spots/chihkan/collection/review-v1.png",
+      "sourceSha256": "845472773d9df9ceb2e86becc967595dbc6fc37841bd4c43d521b64bec092c8c",
+      "master": "assets/spots/chihkan/collection/master.png",
+      "previousMasterBackup": "assets/spots/chihkan/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "pier2",
+      "selectedReview": "review-v3.png",
+      "source": "assets/spots/pier2/collection/review-v3.png",
+      "sourceSha256": "cda10bdc6bd927389d4c5927a78e5251172425e4d41321f418c7414307f92808",
+      "master": "assets/spots/pier2/collection/master.png",
+      "previousMasterBackup": "assets/spots/pier2/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "cijin",
+      "selectedReview": "review-v2.png",
+      "source": "assets/spots/cijin/collection/review-v2.png",
+      "sourceSha256": "398b31ec801bf072a63d7a9e43d59bb7c5fac17016c80d6f89b0ac2550cb0257",
+      "master": "assets/spots/cijin/collection/master.png",
+      "previousMasterBackup": "assets/spots/cijin/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "kenting",
+      "selectedReview": "review-v3.png",
+      "source": "assets/spots/kenting/collection/review-v3.png",
+      "sourceSha256": "9a4a65bab31f87b97a2907185bed0847caef15301c691aea3d982c20c937e33b",
+      "master": "assets/spots/kenting/collection/master.png",
+      "previousMasterBackup": "assets/spots/kenting/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "taroko",
+      "selectedReview": "review-v3.png",
+      "source": "assets/spots/taroko/collection/review-v3.png",
+      "sourceSha256": "43f6df2ef67fb41712f03a62c65383da8998d84277ae672efa1b9a08223837a6",
+      "master": "assets/spots/taroko/collection/master.png",
+      "previousMasterBackup": "assets/spots/taroko/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "qixingtan",
+      "selectedReview": "review-v3.png",
+      "source": "assets/spots/qixingtan/collection/review-v3.png",
+      "sourceSha256": "2e02991dcca54cd210a02dab6c0cf94e2848260b1eb590491e3401a1d69066b3",
+      "master": "assets/spots/qixingtan/collection/master.png",
+      "previousMasterBackup": "assets/spots/qixingtan/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "brown-avenue",
+      "selectedReview": "review-v4.png",
+      "source": "assets/spots/brown-avenue/collection/review-v4.png",
+      "sourceSha256": "4c977c2e34e695c8ffb337efcb597273315b148a1fc7da94aa71eb6ea0697b34",
+      "master": "assets/spots/brown-avenue/collection/master.png",
+      "previousMasterBackup": "assets/spots/brown-avenue/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "sanxiantai",
+      "selectedReview": "review-v5.png",
+      "source": "assets/spots/sanxiantai/collection/review-v5.png",
+      "sourceSha256": "80f39fb6f1653243e3416a90fd1ccf5209703eb05e8edb147154e95b36e30bef",
+      "master": "assets/spots/sanxiantai/collection/master.png",
+      "previousMasterBackup": "assets/spots/sanxiantai/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "ruisui",
+      "selectedReview": "review-v3.png",
+      "source": "assets/spots/ruisui/collection/review-v3.png",
+      "sourceSha256": "6485398af38534e91009eff75ae022aa30bf74b4004f42649a797d26b8a0ebc2",
+      "master": "assets/spots/ruisui/collection/master.png",
+      "previousMasterBackup": "assets/spots/ruisui/collection/archive/master-before-runtime-preview-20261019.png",
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "longshan-temple",
+      "selectedReview": "review-v3.png",
+      "source": "assets/spots/longshan-temple/collection/review-v3.png",
+      "sourceSha256": "6b4e8486acc0bdea3ed4d4811e98d67f79b4fcdc8771ce37bcab3c51d209dc81",
+      "master": "assets/spots/longshan-temple/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "cks-memorial",
+      "selectedReview": "review-v6.png",
+      "source": "assets/spots/cks-memorial/collection/review-v6.png",
+      "sourceSha256": "b496354bdc91727484bab98a1e2bca182b85950d752884d64042bf5b786c1706",
+      "master": "assets/spots/cks-memorial/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "ximending",
+      "selectedReview": "review-v2.png",
+      "source": "assets/spots/ximending/collection/review-v2.png",
+      "sourceSha256": "9106bdf3d4948637912cce9006025d20cb675cd4d1012eb868931a67bc839a50",
+      "master": "assets/spots/ximending/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "shengxing-station",
+      "selectedReview": "review-v4.png",
+      "source": "assets/spots/shengxing-station/collection/review-v4.png",
+      "sourceSha256": "17fe7b9f4b1ce31bb1d89ff116419930c54286033b4bcdc7c4e881b89a0610f6",
+      "master": "assets/spots/shengxing-station/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "longteng-bridge",
+      "selectedReview": "review-v4.png",
+      "source": "assets/spots/longteng-bridge/collection/review-v4.png",
+      "sourceSha256": "5b3ae035bb33ce3d299b7d9eaa8b3975db20ccdb1b011437643d64f43e0ba8be",
+      "master": "assets/spots/longteng-bridge/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "sanyi-woodcarving",
+      "selectedReview": "review-v1.png",
+      "source": "assets/spots/sanyi-woodcarving/collection/review-v1.png",
+      "sourceSha256": "ad601865ea32c342c0558401b7f1d0c08e443394031f13aa76da30ff07005e12",
+      "master": "assets/spots/sanyi-woodcarving/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "nanzhuang",
+      "selectedReview": "review-v2.png",
+      "source": "assets/spots/nanzhuang/collection/review-v2.png",
+      "sourceSha256": "5df19b6c4ad4fb3ba34e132bc111e28f07bced68958465af9f46838c413b4d6f",
+      "master": "assets/spots/nanzhuang/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "hinoki-village",
+      "selectedReview": "review-v2.png",
+      "source": "assets/spots/hinoki-village/collection/review-v2.png",
+      "sourceSha256": "b96d88856f57397e30780a0cc24fc9c9b4b6c8714b24218372c6453a7c0c6904",
+      "master": "assets/spots/hinoki-village/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "fenqihu",
+      "selectedReview": "review-v5.png",
+      "source": "assets/spots/fenqihu/collection/review-v5.png",
+      "sourceSha256": "7a40c589b2fb5af71ae7701d4eda9a62bbae5abae9bfb540e2efaa4f1fdfa144",
+      "master": "assets/spots/fenqihu/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "dongshi",
+      "selectedReview": "review-v2.png",
+      "source": "assets/spots/dongshi/collection/review-v2.png",
+      "sourceSha256": "28db4ebd9c51e0f0d6601f4a00dc5a6066acda977b7e269abbfad7940c1baf8c",
+      "master": "assets/spots/dongshi/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "npm-southern",
+      "selectedReview": "review-v3.png",
+      "source": "assets/spots/npm-southern/collection/review-v3.png",
+      "sourceSha256": "3bed42dc84391cfb58b4380f6ab96692d29e9dad61f520ab14308e81fcfade3c",
+      "master": "assets/spots/npm-southern/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "guishan-island",
+      "selectedReview": "review-v2.png",
+      "source": "assets/spots/guishan-island/collection/review-v2.png",
+      "sourceSha256": "b7878b45518d672ffdda51ed7801d1950c2965cca2a74e9112705ef5fd8af666",
+      "master": "assets/spots/guishan-island/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "waiao",
+      "selectedReview": "review-v1.png",
+      "source": "assets/spots/waiao/collection/review-v1.png",
+      "sourceSha256": "2713400e8c7aeeb576e07c9e27ae1aa981ee30678638445594e71c767bf9e4d4",
+      "master": "assets/spots/waiao/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "jiaoxi",
+      "selectedReview": "review-v1.png",
+      "source": "assets/spots/jiaoxi/collection/review-v1.png",
+      "sourceSha256": "60bf60721b420c9e6795e922b68af9db80cbfa7ec2b68fb6af162a57b6962aa4",
+      "master": "assets/spots/jiaoxi/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "shilin-night-market",
+      "selectedReview": "review-v7.png",
+      "source": "assets/spots/shilin-night-market/collection/review-v7.png",
+      "sourceSha256": "3edbdb2c588330b559910eed563d008e174b2c511d3c24ef55bf6f1d7cbafc58",
+      "master": "assets/spots/shilin-night-market/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "beitou-thermal-valley",
+      "selectedReview": "review-v1.png",
+      "source": "assets/spots/beitou-thermal-valley/collection/review-v1.png",
+      "sourceSha256": "ce2ad9173887437ddb9c81b0a4d427a2afe8fb836f7472e8af930463505ced10",
+      "master": "assets/spots/beitou-thermal-valley/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "qingtiangang",
+      "selectedReview": "review-v2.png",
+      "source": "assets/spots/qingtiangang/collection/review-v2.png",
+      "sourceSha256": "6151357bbe05ca5fa94b1a1b0b7849189ff0ba822e7efd42c006d57d3e77ff10",
+      "master": "assets/spots/qingtiangang/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "maokong",
+      "selectedReview": "review-v2.png",
+      "source": "assets/spots/maokong/collection/review-v2.png",
+      "sourceSha256": "868645d34e4093fe70fe652ba480a4a3d7d6b5b6b75dc05fca9620d8fc56e981",
+      "master": "assets/spots/maokong/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "baishatun",
+      "selectedReview": "review-v2.png",
+      "source": "assets/spots/baishatun/collection/review-v2.png",
+      "sourceSha256": "ed86569c1b3ea0ed35d1de812cb931bb7362631aa22e7b5d92cf4c31b09dcc04",
+      "master": "assets/spots/baishatun/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "huoyanshan",
+      "selectedReview": "review-v1.png",
+      "source": "assets/spots/huoyanshan/collection/review-v1.png",
+      "sourceSha256": "f3f40243b49dcf89b2f45fbc5ed46d14efd1e31d57ab68e1a1c357424c01113e",
+      "master": "assets/spots/huoyanshan/collection/master.png",
+      "previousMasterBackup": null,
+      "nativeSize": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "runtimeBytes": 16493966,
+  "runtimeFiles": 114
+}

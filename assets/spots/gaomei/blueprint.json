@@ -7,15 +7,15 @@
     "name": "Gaomei wind turbines and boardwalk",
     "silhouette": "Line of tall white wind turbines along the shore behind a flat, mirror-like tidal flat crossed by a narrow wooden boardwalk"
   },
-  "crop": "The boardwalk section of the wetland: the boardwalk running out onto the tidal flat, the seawall and the turbine row behind it. Not the whole coastline or Taichung Port.",
+  "crop": "Expanded representative coastal slice: eastern-seawall boardwalk extending west across northern mudflat, plus a finite southern/southwestern Huangang North Road turbine segment separated by open tidal flat. Exclude whole port and unrelated facilities.",
   "heroScale": 1,
-  "orientation": "Taiwan Strait to the west (sunset side); turbines in a line along the coast; boardwalk runs from the seawall out onto the flats",
+  "orientation": "Sea west; boardwalk from eastern seawall westward. Turbine row lies south/southwest of boardwalk area beside Huangang North Road, not immediately behind the boardwalk.",
   "lockedGeometry": [
     "flat intertidal mudflat",
-    "boardwalk alignment from the seawall onto the flat",
-    "wind turbine row along the shoreline",
-    "seawall / embankment edge",
-    "sea to the west"
+    "boardwalk meanders west from eastern seawall",
+    "turbine segment on dry land beside southern/southwestern Huangang North Road",
+    "broad tidal-flat separation between boardwalk and turbine road",
+    "one common miniature scale for boardwalk, people and turbines"
   ],
   "lockedIdentity": [
     "white three-blade turbines in a line",
@@ -39,14 +39,18 @@
   ],
   "references": {
     "aerial": [
-      "google-satellite-boardwalk.jpg"
+      "google-satellite-boardwalk.jpg",
+      "satellite-turbine-boardwalk-20261019.jpg"
     ],
     "ground": [
-      "google-ground-boardwalk.jpg"
+      "google-ground-boardwalk.jpg",
+      "official-turbine-road.jpg"
     ],
     "map": [],
     "representative": [
-      "real-photo.jpg"
+      "satellite-turbine-boardwalk-20261019.jpg",
+      "real-photo.jpg",
+      "official-turbine-road.jpg"
     ]
   },
   "worldToken": {
@@ -58,6 +62,6 @@
     "identity": "pending",
     "style": "pass",
     "collection": "pass",
-    "notes": "Google ground 2017 and overhead checked 2026-10-14; meandering boardwalk and muddy tidal flat confirmed. Lighthouse outside compact crop; turbine spacing/scale compressed artistically, exact current turbine count unresolved. New review-v1.png boardwalk and wet mudflat are tactile foreground; turbine line is printed distant horizon rather than physical turbine excerpt. Fine boardwalk width/height, marsh distribution and geographic compression remain pending; preview only. | 2026-10-15 review-v2.png: removed all backdrop cards and hardware; square ivory plinth / camera and architectural alignment reviewed. This is a presentation edit, not a new map audit or automatic approval. Real geographic details and user acceptance remain pending. | 2026-10-15 review-v3.png: Imported user review repair: 底座非方形, 有點不規則, 跟其他圖不一樣 Self-check: Continuous straight square support checked; wetland vegetation and finite boardwalk preserved. Actual boardwalk distances remain simplified. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit. | 2026-10-19 review-v4.png: User latest review: 調整比例, 希望帶入遠方的風力發電景色 Self-check: Broader mudflat and grounded turbine strip visible; square contained base. Artistic turbine spacing and scale compression remain pending. Preview only; user acceptance pending. Existing real references crosschecked; not a new map audit or calibrated photo correction."
+    "notes": "Google ground 2017 and overhead checked 2026-10-14; meandering boardwalk and muddy tidal flat confirmed. Lighthouse outside compact crop; turbine spacing/scale compressed artistically, exact current turbine count unresolved. New review-v1.png boardwalk and wet mudflat are tactile foreground; turbine line is printed distant horizon rather than physical turbine excerpt. Fine boardwalk width/height, marsh distribution and geographic compression remain pending; preview only. | 2026-10-15 review-v2.png: removed all backdrop cards and hardware; square ivory plinth / camera and architectural alignment reviewed. This is a presentation edit, not a new map audit or automatic approval. Real geographic details and user acceptance remain pending. | 2026-10-15 review-v3.png: Imported user review repair: 底座非方形, 有點不規則, 跟其他圖不一樣 Self-check: Continuous straight square support checked; wetland vegetation and finite boardwalk preserved. Actual boardwalk distances remain simplified. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit. | 2026-10-19 review-v4.png: User latest review: 調整比例, 希望帶入遠方的風力發電景色 Self-check: Broader mudflat and grounded turbine strip visible; square contained base. Artistic turbine spacing and scale compression remain pending. Preview only; user acceptance pending. Existing real references crosschecked; not a new map audit or calibrated photo correction. | 2026-10-19 review-v6.png: User requested tilt-shift toy look without wide-angle and corrected turbine size/location. v5 retained foreground taper and undersized rear turbine row; rejected. Fresh v6 uses broad satellite and official roadside turbine photo, with southern/southwestern road segment separated from northern/eastern boardwalk by tidal flat. Visually checked contained square, elevated miniature view, tiny visitors, large industrial turbines, no giant foreground funnel. Scale/spacing are approximate artistic reconstruction, not surveyed proportions or calibrated orthographic render; geographic/identity and user acceptance pending. Only preview changed. | User rejected v6 angle/lack of warmth. Defer further generation; return selection to v4 for 45-image App preview. Known turbine scale/location issues in v4 remain pending, not approved."
   }
 }

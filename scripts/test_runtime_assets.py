@@ -21,7 +21,10 @@ class RuntimeAssetsTests(unittest.TestCase):
         self.root = Path(self.tmp.name)
         (self.root / 'docs').mkdir()
         spec = Path(__file__).resolve().parents[1] / 'docs/asset-runtime-spec.json'
-        (self.root / 'docs/asset-runtime-spec.json').write_bytes(spec.read_bytes())
+        config = json.loads(spec.read_text())
+        for family in ['collection', 'thumbnail']:
+            config[family].pop('saturation', None)
+        (self.root / 'docs/asset-runtime-spec.json').write_text(json.dumps(config))
         self.collection = self.root / 'assets/spots/example/collection'
         self.collection.mkdir(parents=True)
         Image.new('RGB', (1200, 600), (20, 40, 200)).save(self.collection / 'day.png')
@@ -86,6 +89,26 @@ class RuntimeAssetsTests(unittest.TestCase):
         self.assertEqual(exporter.run(self.root), first)
         with Image.open(self.collection / 'day.webp') as image:
             self.assertGreater(image.getpixel((20, 20))[0], 180)
+
+    def test_saturation_matrix_preserves_alpha_and_neutral_colors(self):
+        image = Image.new('RGBA', (2, 1))
+        image.putdata([(200, 40, 20, 73), (100, 100, 100, 0)])
+        adjusted = exporter.apply_saturation(image, .88)
+        self.assertEqual(adjusted.getpixel((0, 0)), (185, 44, 26, 73))
+        self.assertEqual(adjusted.getpixel((1, 0)), (100, 100, 100, 0))
+        self.assertEqual(image.getpixel((0, 0)), (200, 40, 20, 73))
+
+    def test_master_reexport_does_not_double_apply_saturation(self):
+        path = self.root / 'docs/asset-runtime-spec.json'
+        config = json.loads(path.read_text())
+        for family in ['collection', 'thumbnail']:
+            config[family]['saturation'] = .88
+        path.write_text(json.dumps(config))
+        first = exporter.run(self.root, 'masters')
+        output = (self.collection / 'day.webp').read_bytes()
+        self.assertEqual(exporter.run(self.root), first)
+        self.assertEqual((self.collection / 'day.webp').read_bytes(), output)
+        self.assertTrue(all(row['saturation'] == .88 for row in first['assets']))
 
 
 if __name__ == '__main__':

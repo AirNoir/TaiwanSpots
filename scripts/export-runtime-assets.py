@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 
 from PIL import Image, features, __version__ as pillow_version
@@ -12,6 +13,24 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def apply_saturation(image, saturation):
+    """Match the comparison page's CSS saturate matrix; preserve source alpha."""
+    if not math.isfinite(saturation) or not 0 <= saturation <= 2:
+        raise ValueError('saturation must be finite and between 0 and 2')
+    if saturation == 1:
+        return image
+    s = saturation
+    matrix = (
+        .213 + .787*s, .715 - .715*s, .072 - .072*s, 0,
+        .213 - .213*s, .715 + .285*s, .072 - .072*s, 0,
+        .213 - .213*s, .715 - .715*s, .072 + .928*s, 0,
+    )
+    adjusted = image.convert('RGB').convert('RGB', matrix)
+    if 'A' in image.getbands():
+        adjusted.putalpha(image.getchannel('A'))
+    return adjusted
+
+
 def export_one(root, source, output, family, spec):
     before = digest(source)
     config = spec[family]
@@ -19,6 +38,8 @@ def export_one(root, source, output, family, spec):
         image = original.convert('RGBA' if 'A' in original.getbands() or 'transparency' in original.info else 'RGB')
         icc = original.info.get('icc_profile')
         image.thumbnail((config['maxSize'], config['maxSize']), Image.Resampling.LANCZOS)
+    saturation = config.get('saturation', 1)
+    image = apply_saturation(image, saturation)
     options = {'format': 'WEBP', 'method': spec['method'], 'exact': True}
     if config.get('lossless'):
         options['lossless'] = True
@@ -53,6 +74,7 @@ def export_one(root, source, output, family, spec):
         'dimensions': list(image.size),
         'lossless': config.get('lossless', False),
         'quality': config.get('quality'),
+        'saturation': saturation,
     }
 
 

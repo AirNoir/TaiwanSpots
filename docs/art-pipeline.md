@@ -119,3 +119,11 @@ Python 工具依賴 Pillow，版本見 `scripts/requirements-art.txt`。可在�
 容量／來源 SHA-256／輸出尺寸／編碼參數記錄於 `docs/runtime-asset-report.json`，驗證結果見 `docs/runtime-asset-validation.json`。本次 74 張正式圖片由 58.34 MB 降為 11.06 MB（減少 81.05%）；這是圖片檔案總量，不是 IPA/APK 或安裝後大小。[畫質比較](runtime-image-comparison.html) 可放大檢查。
 
 iOS 與 Android Metro/Hermes 匯出通過，asset map 確認只有 74 張景點 WebP，沒有 PNG／master／reference／review。另在既有 iPhone 16 Pro（iOS 18.3）模擬器以 UIKit `UIImage(data:)` 解碼 74 張 WebP 與小工具的 PNG 檔名複製檔，75 項皆通過。檢查程式為 `scripts/check-runtime-webp.m`。這不代表已完成實體裝置或整個 App UI 驗收。
+
+## 45 張收藏圖接入 App 預覽（2026-10-19）
+
+使用者授權暫停美術調整，把目前 45 張選定圖用於 App 預覽。高美恢復這輪調整前的 review-v4；v5/v6 不採用。各選定原圖逐一複製為 master.png，25 個既有 master 備份於各 collection/archive/master-before-runtime-preview-20261019.png。選定版本、SHA-256 與備份位置記錄在 docs/asset-runtime-promotion-20261019.json。此次套用不代表地理 QA 通過，blueprint 不自動設 approved。
+
+以 `npm run assets:export -- --source masters` 輸出 45 張 1024px day.webp 與 45 張 512px thumbnail.webp；既有 24 張地圖圖標保留。收藏大圖／縮圖採 CSS 相容的 saturate(0.88) 矩陣，僅在 runtime 輸出時套用。master/review 原圖不調色，因此比較頁繼續對原圖顯示 88%，不會對同一檔重複減色。後續 export 沿用 masters 來源，避免把已調色的衍生圖再次處理。8 項輸出測試包含透明度、色彩中性值與重跑不重複減色。
+
+正式登錄為 45 個景點。iOS／Android Metro/Hermes 匯出均通過，asset map 確認 114 個景點檔案全為 WebP（90 張收藏大圖／縮圖、24 張原地圖圖標），沒有 master、review、reference 或 archive 圖。總計約 16.49 MB，非 IPA/APK 或安裝後大小。模擬器操作權限未開啟，這輪未完成安裝後 UI／實機驗收；現有 Metro 8081 可重新載入 App 預覽。地圖新景點缺少專用 token 時沿用既有通用標記。
