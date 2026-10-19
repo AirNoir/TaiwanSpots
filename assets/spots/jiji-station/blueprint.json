@@ -1,23 +1,23 @@
 {
   "spotId": "jiji-station",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Jiji Station",
-    "silhouette": "Small Japanese-era cypress wood station with a dark tiled roof"
+    "silhouette": "Low graywhite painted timber station with graytiledroof and central porch"
   },
-  "crop": "The station and its forecourt. Not the town.",
+  "crop": "Station and north forecourt with small stone train-shaped monument; short track behind if visible, no relocated actual steam locomotive.",
   "heroScale": 1,
-  "orientation": "verify: track runs east-west",
+  "orientation": "Station front/forecourt north toward MinquanRoad; railway east-west behind/south. Actual real steamlocomotive across road northwest, excluded. Small stone train-shaped forecourt monument distinct from actual locomotive.",
   "lockedGeometry": [
-    "small station",
-    "forecourt",
-    "track behind"
+    "one-storey timberstation",
+    "northforecourt",
+    "trackbehind south"
   ],
   "lockedIdentity": [
-    "dark wooden station",
-    "small train"
+    "lightgray painted Japanese timber station",
+    "small stone train-shaped forecourtmonument"
   ],
   "doNotInvent": [
     "high-rises",
@@ -30,18 +30,28 @@
     "travellers"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-3.jpg",
+      "real-photo.jpg",
+      "official-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.826450,120.784890,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "official-3.jpg"
+    ]
   },
   "worldToken": {
     "element": "Wooden station with a tree"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Station front/forecourt north toward MinquanRoad; railway east-west behind/south. Actual real steamlocomotive across road northwest, excluded. Small stone train-shaped forecourt monument distinct from actual locomotive. Groundandindependentoverhead visuallychecked. Exactdimensions/capturedates/StreetView360/unseen structure pending.",
+    "identity": "pending user review: v3 rebuilds squarebase/cornercamera; graywhite painted timber station with grayroof and smalltrainshaped STONEforecourtmonument; not realsteamlocomotive acrossroad. Trackbehind south. Exactwindowcount/roofdepth/monumentplacement and operatingstatus pending; historical appearance.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

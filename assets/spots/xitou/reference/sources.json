@@ -1,0 +1,44 @@
+{
+  "id": "xitou",
+  "page": "https://ntuweb.cloud.ntu.edu.tw/12scence/07.htm",
+  "credit": "National Taiwan University",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical tourism photographs, URL upload dates not confirmed capture years",
+  "usage": "Visual reference only; rights retained, no blanket commercial licence or finaltexture reuse.",
+  "description": "University Pond real location23.67213,120.79098 (distinct from coarse park point); satellite bridge diagonal northwest-southeast across pond northeast part, not draft east-west. Surrounding cedar forest; exact rebuiltbridge2026 state pending.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://ntuweb.cloud.ntu.edu.tw/12scence/07.jpg",
+      "page": "https://ntuweb.cloud.ntu.edu.tw/12scence/07.htm",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://ntuweb.cloud.ntu.edu.tw/12scence/07b.jpg",
+      "page": "https://ntuweb.cloud.ntu.edu.tw/12scence/07.htm",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.6721336,120.7909769,20z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 not captureyear",
+      "usage": "Visual reference only",
+      "observations": "University Pond real location23.67213,120.79098 (distinct from coarse park point); satellite bridge diagonal northwest-southeast across pond northeast part, not draft east-west. Surrounding cedar forest; exact rebuiltbridge2026 state pending."
+    },
+    {
+      "page": "https://www.exfo.ntu.edu.tw/xitou/index.php?sn=700",
+      "kind": "official currentcondition notice",
+      "observations": "Bamboo bridge update construction projected midOctober; actual completion/currentdesign pending. Historical bridge model."
+    }
+  ],
+  "lensReview": "Upward wideangle corrected by reconstructing coherent longlens miniature against independent overhead; no calibrated mathematical undistortion. StreetView360/exactdepths pending.",
+  "quality": "NTU official main usable photo400x270, small icon40x40 excluded from generation. Detailed joints unseen remain simplified pending."
+}

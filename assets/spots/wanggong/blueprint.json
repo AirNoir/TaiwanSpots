@@ -5,19 +5,19 @@
   "productionTier": "standard",
   "hero": {
     "name": "Wanggong lighthouse",
-    "silhouette": "Black-and-white striped octagonal lighthouse on flat tidal coast with oyster beds"
+    "silhouette": "Vertical blackwhite striped octagonal lighthouse with lowwhite courtyard buildings"
   },
-  "crop": "The lighthouse and tidal flats. Not the village.",
+  "crop": "Historical lighthouse courtyard with low white servicebuildings, gate and lawns only; no relocated oyster beds or sea at tower base.",
   "heroScale": 1,
-  "orientation": "verify: sea lies to the west",
+  "orientation": "Fangyuan Lighthouse compound north of Wanggong fishing basin, west/YugangRoad at entrance side and ponds east/north; tidal flats farther west across seawall road. Far oyster racks/bridges excluded, not placed at tower feet.",
   "lockedGeometry": [
-    "flat coast",
-    "tidal flats",
-    "harbour with bridge"
+    "flat enclosed courtyard",
+    "separate low servicebuildings",
+    "tower centralnorth"
   ],
   "lockedIdentity": [
-    "black-and-white striped lighthouse",
-    "oyster racks"
+    "tall octagonal lighthouse",
+    "vertical blackwhite stripes"
   ],
   "doNotInvent": [
     "cliffs",
@@ -30,18 +30,27 @@
     "sunset"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-2.jpg",
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.9711299,120.3241636,20z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "official-2.jpg"
+    ]
   },
   "worldToken": {
     "element": "Striped lighthouse on the flats"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Fangyuan Lighthouse compound north of Wanggong fishing basin, west/YugangRoad at entrance side and ponds east/north; tidal flats farther west across seawall road. Far oyster racks/bridges excluded, not placed at tower feet. Groundandindependentoverhead visuallychecked. Exactdimensions/capturedates/StreetView360/unseen structure pending.",
+    "identity": "pending: correct octagonal verticalstripe identity/courtyard, but tower/person ratio still wrong",
+    "style": "failed: v1/v2 people too large; v3 target edit only reduced partially, final tower about14–16 adult heights versus about22 for37.4m tower/1.7madult",
+    "collection": "failed common scale after initial+2 targeted revisions; needs measured clean scale reconstruction"
   }
 }

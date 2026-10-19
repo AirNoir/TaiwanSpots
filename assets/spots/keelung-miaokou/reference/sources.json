@@ -1,0 +1,38 @@
+{
+  "id": "keelung-miaokou",
+  "page": "https://travel.klcg.gov.tw/TourContent.aspx?n=8059&s=558",
+  "credit": "Keelung City Culture and Tourism Bureau",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical tourism photographs, URL upload dates not confirmed capture years",
+  "usage": "Visual reference only; rights retained, no blanket commercial licence or finaltexture reuse.",
+  "description": "Market on Ren3rdRoad between Ai3rd/Ai4th Roads; lantern rows run along both street edges. Dianji Temple is beside the street, not an invented axial gate; temple outside selected short street crop.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://klctb-ws.klcg.gov.tw/001/Upload/tour/445/12550/1123/pic/0f9d30d7-c987-472f-8aac-dc54e7a18bec.jpg",
+      "page": "https://travel.klcg.gov.tw/TourContent.aspx?n=8059&s=558",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://klctb-ws.klcg.gov.tw/001/Upload/tour/445/12550/884/pic/69197261-b829-461c-a433-209e1eb63816.jpg",
+      "page": "https://travel.klcg.gov.tw/TourContent.aspx?n=8059&s=558",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@25.1282775,121.7425832,18z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 not captureyear",
+      "usage": "Visual reference only",
+      "observations": "Market on Ren3rdRoad between Ai3rd/Ai4th Roads; lantern rows run along both street edges. Dianji Temple is beside the street, not an invented axial gate; temple outside selected short street crop."
+    }
+  ],
+  "lensReview": "Upward wideangle corrected by reconstructing coherent longlens miniature against independent overhead; no calibrated mathematical undistortion. StreetView360/exactdepths pending."
+}

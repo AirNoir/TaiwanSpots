@@ -1,0 +1,47 @@
+{
+  "id": "jiji-station",
+  "page": "https://www.sunmoonlake.gov.tw/attractions/Attractions?A=20&Id=46",
+  "credit": "Sun Moon Lake National Scenic Area Administration",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical tourism photographs, URL upload dates not confirmed capture years",
+  "usage": "Visual reference only; rights retained, no blanket commercial licence or finaltexture reuse.",
+  "description": "Station front/forecourt north toward MinquanRoad; railway east-west behind/south. Actual real steamlocomotive across road northwest, excluded. Small stone train-shaped forecourt monument distinct from actual locomotive.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.sunmoonlake.gov.tw/fapi/Image?type=Attraction&id=215&refid=46&l=1&w=2480&h=1488",
+      "page": "https://www.sunmoonlake.gov.tw/attractions/Attractions?A=20&Id=46",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://www.sunmoonlake.gov.tw/fapi/Image?type=Attraction&id=2607&refid=46&l=1&w=2480&h=1488",
+      "page": "https://www.sunmoonlake.gov.tw/attractions/Attractions?A=20&Id=46",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://www.sunmoonlake.gov.tw/fapi/Image?type=Attraction&id=2608&refid=46&l=1&w=2480&h=1488",
+      "page": "https://www.sunmoonlake.gov.tw/attractions/Attractions?A=20&Id=46",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.826450,120.784890,18z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 not captureyear",
+      "usage": "Visual reference only",
+      "observations": "Station front/forecourt north toward MinquanRoad; railway east-west behind/south. Actual real steamlocomotive across road northwest, excluded. Small stone train-shaped forecourt monument distinct from actual locomotive."
+    }
+  ],
+  "lensReview": "Upward wideangle corrected by reconstructing coherent longlens miniature against independent overhead; no calibrated mathematical undistortion. StreetView360/exactdepths pending.",
+  "currentCondition": "Official page reports railway suspension/reopening plans, internally stale/conflictingdates; historical building appearance only, no serviceclaim."
+}

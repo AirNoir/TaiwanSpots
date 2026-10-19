@@ -1,0 +1,48 @@
+{
+  "id": "wanggong",
+  "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=7ca73fbb-c3e0-4c87-ba52-e2b0b3b04065&id=80&l=CH&param=pn%3D1",
+  "credit": "Changhua County Tourism; individual photographer not specified for selected lighthousephotos",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical tourism photographs, URL upload dates not confirmed capture years",
+  "usage": "Visual reference only; rights retained, no blanket commercial licence or finaltexture reuse.",
+  "description": "Fangyuan Lighthouse compound north of Wanggong fishing basin, west/YugangRoad at entrance side and ponds east/north; tidal flats farther west across seawall road. Far oyster racks/bridges excluded, not placed at tower feet.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2023103016470299149.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=7ca73fbb-c3e0-4c87-ba52-e2b0b3b04065&id=80&l=CH&param=pn%3D1",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2023103016471323490.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=7ca73fbb-c3e0-4c87-ba52-e2b0b3b04065&id=80&l=CH&param=pn%3D1",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.9711299,120.3241636,20z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 not captureyear",
+      "usage": "Visual reference only",
+      "observations": "Fangyuan Lighthouse compound north of Wanggong fishing basin, west/YugangRoad at entrance side and ponds east/north; tidal flats farther west across seawall road. Far oyster racks/bridges excluded, not placed at tower feet."
+    },
+    {
+      "page": "https://transport-museum.nat.gov.tw/oceanshipping/home.jsp?class_serno=201512090020&dataserno=201602290047&id=12&mcustomize=cultural_relic_view.jsp",
+      "kind": "official dimension reference",
+      "observations": "Tower37.4m. County tourism text has misleading37.4尺 typo; do not use feet."
+    },
+    {
+      "page": "https://www.motc.gov.tw/ch/app/data/view?id=14&module=news&serno=a4f60a42-f93f-4af4-b9d0-645454b9793e",
+      "kind": "official renovation notice",
+      "observations": "Closed for renovation from2026-03-01; historical courtyard shown, current layout pending."
+    }
+  ],
+  "lensReview": "Upward wideangle corrected by reconstructing coherent longlens miniature against independent overhead; no calibrated mathematical undistortion. StreetView360/exactdepths pending."
+}

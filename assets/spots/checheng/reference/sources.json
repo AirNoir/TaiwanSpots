@@ -1,0 +1,46 @@
+{
+  "id": "checheng",
+  "page": "https://www.sunmoonlake.gov.tw/JA/attractions/Attractions?A=20&Id=114&P=1",
+  "credit": "Sun Moon Lake National Scenic Area Administration",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical tourism photographs, URL upload dates not confirmed capture years",
+  "usage": "Visual reference only; rights retained, no blanket commercial licence or finaltexture reuse.",
+  "description": "Railway terminus northeast-southwest; timber station west of track, log pond north of station beyond buildings, not immediately against station walls. River east beyond road excluded.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.sunmoonlake.gov.tw/fapi/Image?type=Attraction&id=422&refid=114&l=3&w=2480&h=1488",
+      "page": "https://www.sunmoonlake.gov.tw/JA/attractions/Attractions?A=20&Id=114&P=1",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://www.sunmoonlake.gov.tw/fapi/Image?type=Attraction&id=419&refid=113&l=3&w=2480&h=1488",
+      "page": "https://www.sunmoonlake.gov.tw/ja/Attractions/Attractions?a=20&id=113",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://www.sunmoonlake.gov.tw/fapi/Image?type=Attraction&id=420&refid=113&l=3&w=2480&h=1488",
+      "page": "https://www.sunmoonlake.gov.tw/ja/Attractions/Attractions?a=20&id=113",
+      "kind": "actual ground/elevated realphoto visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.833480,120.865800,18z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 not captureyear",
+      "usage": "Visual reference only",
+      "observations": "Railway terminus northeast-southwest; timber station west of track, log pond north of station beyond buildings, not immediately against station walls. River east beyond road excluded."
+    }
+  ],
+  "lensReview": "Upward wideangle corrected by reconstructing coherent longlens miniature against independent overhead; no calibrated mathematical undistortion. StreetView360/exactdepths pending."
+}

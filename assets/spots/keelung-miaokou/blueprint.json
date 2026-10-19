@@ -1,23 +1,23 @@
 {
   "spotId": "keelung-miaokou",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Miaokou night market",
     "silhouette": "Street of stalls under rows of yellow lanterns leading to a temple"
   },
-  "crop": "The lantern-lined stall street and Dianji Temple. Not the harbour.",
+  "crop": "Finite lantern-lined food stall street section, no relocated temple facade at end of lane or harbour.",
   "heroScale": 1,
-  "orientation": "verify: Dianji Temple sits at the centre of the market",
+  "orientation": "Market on Ren3rdRoad between Ai3rd/Ai4th Roads; lantern rows run along both street edges. Dianji Temple is beside the street, not an invented axial gate; temple outside selected short street crop.",
   "lockedGeometry": [
-    "narrow street",
-    "stalls in rows",
-    "temple"
+    "two roadside stallrows",
+    "lantern metalframework",
+    "clear central walkinglane"
   ],
   "lockedIdentity": [
-    "rows of yellow lanterns with numbers",
-    "Dianji Temple"
+    "three rows yellow side lanterns",
+    "numbered food stalls"
   ],
   "doNotInvent": [
     "skyscrapers",
@@ -30,18 +30,27 @@
     "rain umbrellas"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@25.1282775,121.7425832,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Yellow lanterns over a stall"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Market on Ren3rdRoad between Ai3rd/Ai4th Roads; lantern rows run along both street edges. Dianji Temple is beside the street, not an invented axial gate; temple outside selected short street crop. Groundandindependentoverhead visuallychecked. Exactdimensions/capturedates/StreetView360/unseen structure pending.",
+    "identity": "pending user review: v3 fixes bothsides exactly3lanternrows and removes invented oversizedmarket title; three side rows and numberedfoodcarts. Short Ren3rdRoad segment only, DianjiTemple outsidecrop not relocated. Exactstallpositions/menu lettering and shopfronts simplified pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

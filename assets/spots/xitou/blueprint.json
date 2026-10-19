@@ -1,19 +1,19 @@
 {
   "spotId": "xitou",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "University Pond",
     "silhouette": "Small pond in a tall cedar forest crossed by an arched bamboo bridge"
   },
-  "crop": "The pond and bamboo bridge in the forest. Not the whole park.",
+  "crop": "Historical bamboo archbridge over small UniversityPond with adjacent cedarbank and shorepath; omit buildings/canopies beyond pond.",
   "heroScale": 1,
-  "orientation": "verify: bridge crosses the pond east-west",
+  "orientation": "University Pond real location23.67213,120.79098 (distinct from coarse park point); satellite bridge diagonal northwest-southeast across pond northeast part, not draft east-west. Surrounding cedar forest; exact rebuiltbridge2026 state pending.",
   "lockedGeometry": [
-    "small pond",
-    "tall forest around",
-    "path"
+    "diagonal bambooarchbridge across pondnortheast",
+    "cedarforestbank",
+    "shorepath"
   ],
   "lockedIdentity": [
     "arched bamboo bridge",
@@ -30,18 +30,26 @@
     "ducks"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.6721336,120.7909769,20z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "official-2.jpg"
+    ]
   },
   "worldToken": {
     "element": "Bamboo arch bridge over a pond"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "University Pond real location23.67213,120.79098 (distinct from coarse park point); satellite bridge diagonal northwest-southeast across pond northeast part, not draft east-west. Surrounding cedar forest; exact rebuiltbridge2026 state pending. Groundandindependentoverhead visuallychecked. Exactdimensions/capturedates/StreetView360/unseen structure pending.",
+    "identity": "pending user review: Historical bambooarchbridge and greenpond in cedarforest; satellite diagonalorientationcorrected fromdraft. NTU small400pxphoto limitsjointdetails; bridge renovation/currentcompletion unknown. Exactspan/supports/pondcrop pending, not measured model.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }
