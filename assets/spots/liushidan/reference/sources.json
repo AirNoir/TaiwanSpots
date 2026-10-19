@@ -1,0 +1,41 @@
+{
+  "id": "liushidan",
+  "page": "https://www.erv-nsa.gov.tw/zh-tw/attractions/detail/58/",
+  "credit": "East Rift Valley National Scenic Area Administration",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical tourism photos; URL timestamps not verified capture dates",
+  "usage": "Visual reference only, rights retained. No blanket commercial licence or final texture reuse.",
+  "description": "Coastal Range hillside east of East Rift Valley; valley west. Satellite confirms curving ridge roads and cultivated slope patches, exact pavilion identity/footpath footprint in historical photo pending.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/11106/?r=1536289775460",
+      "page": "https://www.erv-nsa.gov.tw/zh-tw/attractions/detail/58/",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/11113/?r=1536289794588",
+      "page": "https://www.erv-nsa.gov.tw/zh-tw/attractions/detail/58/",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.22219,121.31703,18z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 is not capturedate",
+      "usage": "Visual reference only",
+      "observations": "Coastal Range hillside east of East Rift Valley; valley west. Satellite confirms curving ridge roads and cultivated slope patches, exact pavilion identity/footpath footprint in historical photo pending."
+    }
+  ],
+  "lensReview": "Wide/upward views rebuilt against independent real angle and satellite; weakperspective collectible camera. No calibrated mathematical undistortion. Unseen structure, exact dimensions and GoogleStreetView360 pending.",
+  "pageUpdatedAt": "2026-02-02",
+  "publicationCaution": "Page update date is not photograph capture date.",
+  "currentCondition": "Officialpage says under renovation; August–September bloom depicted from historicalphoto, not October2026/currentcondition."
+}

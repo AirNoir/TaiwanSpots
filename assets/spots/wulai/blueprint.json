@@ -5,20 +5,19 @@
   "productionTier": "standard",
   "hero": {
     "name": "Wulai Waterfall",
-    "silhouette": "Tall slender waterfall down a forested cliff across a river gorge"
+    "silhouette": "Tall layered waterfall and near-bank viewingwalk"
   },
-  "crop": "The waterfall seen from the trolley terminus across the gorge. Not the hot-spring street.",
+  "crop": "Actual upper/lower vertical Wulai waterfall face with near-bank viewing promenade across narrow ravine; omit station/cablecar and city.",
   "heroScale": 1,
-  "orientation": "verify: falls on the east side of the river",
+  "orientation": "Falls on wooded cliff east of Pubu Road/viewing promenade; stream descends roughly north/northeast toward Nanshi confluence. Trolley/cablecar facilities uphill/north outside finite falls crop. Ground photo confirms promenade across rocky gap, not at waterfall lip.",
   "lockedGeometry": [
-    "steep forested cliff",
-    "river gorge",
-    "trolley line"
+    "80mverticalfallsonwoodedcliff",
+    "viewingpromenadewest acrossgap",
+    "threeupperribbons/lowerledge"
   ],
   "lockedIdentity": [
-    "tall white falls",
-    "small push trolley",
-    "cable car line above"
+    "tallWulaiwaterfall",
+    "subtropicalrockface"
   ],
   "doNotInvent": [
     "lakes",
@@ -31,18 +30,27 @@
     "ferns"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.84746,121.55192,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Tall waterfall with a little trolley"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Falls on wooded cliff east of Pubu Road/viewing promenade; stream descends roughly north/northeast toward Nanshi confluence. Trolley/cablecar facilities uphill/north outside finite falls crop. Ground photo confirms promenade across rocky gap, not at waterfall lip. Two real viewpoints inspected. StreetView360/exactdimensions/captureyears pending.",
+    "identity": "pending: recognizable waterfall silhouette, but full80m drop/person ratio unreliable",
+    "style": "failed scale: v1/v2 giant foreground visitors; v3 reduces but still about13–16 adult heights versus requiredabout47. Railing also drifts from actual palegreen crosslattice.",
+    "collection": "failed scale QA after initial+2 targeted revisions. No accepted preview; clean measured crop reconstruction needed."
   }
 }

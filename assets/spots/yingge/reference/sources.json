@@ -1,0 +1,46 @@
+{
+  "id": "yingge",
+  "page": "https://newtaipei.travel/zh-tw/attractions/detail/110661",
+  "credit": "New Taipei City Tourism and Travel Department",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical tourism photos; URL timestamps not verified capture dates",
+  "usage": "Visual reference only, rights retained. No blanket commercial licence or final texture reuse.",
+  "description": "Ceramics Old Street district south of railway; photographed retro brick street fronts in Jianshanpu/Chongqing/Yuying district. Exact storefront footprint pending. Old Street Pottery Museum chimney separate and excluded.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/67055/1920x1080_attractions-image-5hgyywpt_eob1qgac92ckq.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/110661",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/67054/1024x768_attractions-image-owbv9ccvteotco3tjguxew.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/110661",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/67049/1024x768_attractions-image-9wlzqy2-7e-elwuqkwymuw.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/110661",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@24.9522113,121.3473415,18z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 is not capturedate",
+      "usage": "Visual reference only",
+      "observations": "Ceramics Old Street district south of railway; photographed retro brick street fronts in Jianshanpu/Chongqing/Yuying district. Exact storefront footprint pending. Old Street Pottery Museum chimney separate and excluded."
+    }
+  ],
+  "lensReview": "Wide/upward views rebuilt against independent real angle and satellite; weakperspective collectible camera. No calibrated mathematical undistortion. Unseen structure, exact dimensions and GoogleStreetView360 pending."
+}

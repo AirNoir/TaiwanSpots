@@ -1,19 +1,19 @@
 {
   "spotId": "liushidan",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Liushidan daylily fields",
     "silhouette": "Rolling hilltop covered in orange daylily flowers with small pavilions"
   },
-  "crop": "The daylily fields on the ridge with the valley edge. Not the whole range.",
+  "crop": "Finite photographed daylily ridge with scattered sandstone boulders, curving path and small summit pavilion; omit far valley and distant ranges.",
   "heroScale": 1,
-  "orientation": "verify: valley lies to the west",
+  "orientation": "Coastal Range hillside east of East Rift Valley; valley west. Satellite confirms curving ridge roads and cultivated slope patches, exact pavilion identity/footpath footprint in historical photo pending.",
   "lockedGeometry": [
-    "rounded hilltop",
-    "terraced fields",
-    "valley below"
+    "cultivatedslopingridge",
+    "curvingpath",
+    "smallpavilion"
   ],
   "lockedIdentity": [
     "orange daylily blooms",
@@ -30,18 +30,27 @@
     "mist"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-2.jpg",
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.22219,121.31703,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "official-2.jpg"
+    ]
   },
   "worldToken": {
     "element": "Orange daylily field on a hill"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Coastal Range hillside east of East Rift Valley; valley west. Satellite confirms curving ridge roads and cultivated slope patches, exact pavilion identity/footpath footprint in historical photo pending. Two real viewpoints inspected. StreetView360/exactdimensions/captureyears pending.",
+    "identity": "pending user review: Historical orange daylily ridge/rocks/path/pavilion crop, no relocated valley. Actual season Aug–Sep; official page says renovation. Exact pavilion identity/footpath steps/plan pending, not measured reconstruction or currentcondition.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

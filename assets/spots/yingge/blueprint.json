@@ -1,24 +1,23 @@
 {
   "spotId": "yingge",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Yingge Old Street",
-    "silhouette": "Pedestrian street of red-brick shops selling pottery with a kiln chimney"
+    "silhouette": "Redbrick pottery storefronts and cobbledstreet"
   },
-  "crop": "The old street and a kiln chimney. Not the museum.",
+  "crop": "Finite photographed brick pottery shop pedestrian street section with cobbled center and ceramic wares; omit distant chimney/museum/railway.",
   "heroScale": 1,
-  "orientation": "verify: street runs along Jianshanpu Road",
+  "orientation": "Ceramics Old Street district south of railway; photographed retro brick street fronts in Jianshanpu/Chongqing/Yuying district. Exact storefront footprint pending. Old Street Pottery Museum chimney separate and excluded.",
   "lockedGeometry": [
-    "pedestrian street",
-    "low brick shops",
-    "chimney at one end"
+    "twoattachedshopfrontrows",
+    "cobbledpedestrianstreet",
+    "ceramicshops"
   ],
   "lockedIdentity": [
-    "red brick",
-    "pottery displays",
-    "kiln chimney"
+    "brick ceramics old street",
+    "pottery shop wares"
   ],
   "doNotInvent": [
     "temples",
@@ -31,18 +30,27 @@
     "visitors"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.9522113,121.3473415,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Vase beside a kiln chimney"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ceramics Old Street district south of railway; photographed retro brick street fronts in Jianshanpu/Chongqing/Yuying district. Exact storefront footprint pending. Old Street Pottery Museum chimney separate and excluded. Two real viewpoints inspected. StreetView360/exactdimensions/captureyears pending.",
+    "identity": "pending user review: Finite pottery shopstreet with redbrick/graytrim/windowbays, cobbledcenter/redtilepavements and smallpotterywares. No relocatedchimney/railway/museum. Shopfrontdetails simplified; exactshopbays/depth and currentbusinesssigns pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

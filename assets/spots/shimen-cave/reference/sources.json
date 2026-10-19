@@ -1,0 +1,68 @@
+{
+  "id": "shimen-cave",
+  "page": "https://newtaipei.travel/ja/attractions/detail/112111",
+  "credit": "New Taipei City Tourism and Travel Department",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical tourism photos; URL timestamps not verified capture dates",
+  "usage": "Visual reference only, rights retained. No blanket commercial licence or final texture reuse.",
+  "description": "Sea northwest of arch, Highway2 inland southeast, fishing harbour southwest outside crop. Actual arch through coastal rock ridge with steps up east/right flank from landward side. Historical stair/railing appearance; district listing2026-05-26 says closed for renovation, current completed layout/reopening pending.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/45073/1024x768_attractions-image-mp79fussqe2vq4sicbowvq.jpg",
+      "page": "https://newtaipei.travel/ja/attractions/detail/112111",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/213/1024x768_a381195d-361f-4d50-ad0a-6cbdfaf129f4.jpg",
+      "page": "https://newtaipei.travel/ja/attractions/detail/112111",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/207/1024x768_fb259ff3-449a-4689-b107-6bd02a5ecbeb.jpg",
+      "page": "https://newtaipei.travel/ja/attractions/detail/112111",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-4.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/208/1024x768_230463a9-8e6a-47c9-86e6-e442310a08fe.jpg",
+      "page": "https://newtaipei.travel/ja/attractions/detail/112111",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@25.2959,121.56843,18z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 is not capturedate",
+      "usage": "Visual reference only",
+      "observations": "Sea northwest of arch, Highway2 inland southeast, fishing harbour southwest outside crop. Actual arch through coastal rock ridge with steps up east/right flank from landward side. Historical stair/railing appearance; 2025 renovation status pending."
+    },
+    {
+      "page": "https://www.northguan-nsa.gov.tw/USER/article.aspx?Lang=1&SNo=04002494",
+      "kind": "official textual dimensions/current condition",
+      "observations": "Official scenic area: natural arch about10m high.",
+      "accessed": "2026-10-20 Asia/Taipei"
+    },
+    {
+      "page": "https://www.shimen.ntpc.gov.tw/home.jsp?id=1746a22a2af02008",
+      "kind": "official textual dimensions/current condition",
+      "observations": "District official listing dated2026-05-26 says scenic area currently closed for renovation. Model depicts historical photo appearance, reopening unverified.",
+      "accessed": "2026-10-20 Asia/Taipei"
+    }
+  ],
+  "lensReview": "Wide/upward views rebuilt against independent real angle and satellite; weakperspective collectible camera. No calibrated mathematical undistortion. Unseen structure, exact dimensions and GoogleStreetView360 pending.",
+  "pageUpdatedAt": "2026-10-13",
+  "publicationCaution": "Page update date is not photograph capture date."
+}

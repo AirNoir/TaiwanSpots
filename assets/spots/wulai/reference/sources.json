@@ -1,0 +1,46 @@
+{
+  "id": "wulai",
+  "page": "https://newtaipei.travel/zh-tw/attractions/detail/402224",
+  "credit": "New Taipei City Tourism and Travel Department",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical tourism photos; URL timestamps not verified capture dates",
+  "usage": "Visual reference only, rights retained. No blanket commercial licence or final texture reuse.",
+  "description": "Falls on wooded cliff east of Pubu Road/viewing promenade; stream descends roughly north/northeast toward Nanshi confluence. Trolley/cablecar facilities uphill/north outside finite falls crop. Ground photo confirms promenade across rocky gap, not at waterfall lip.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/25262/1920x1080_attractions-image-yaq5albzhu2muce9w_c4da.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/402224",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/25260/1024x768_attractions-image-cm8i5vqtzk6d84n2jwptxq.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/402224",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@24.84746,121.55192,18z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 is not capturedate",
+      "usage": "Visual reference only",
+      "observations": "Falls on wooded cliff east of Pubu Road/viewing promenade; stream descends roughly north/northeast toward Nanshi confluence. Trolley/cablecar facilities uphill/north outside finite falls crop. Ground photo confirms promenade across rocky gap, not at waterfall lip."
+    },
+    {
+      "page": "https://hsinchu.forest.gov.tw/roadmaintain/wulai",
+      "kind": "official textual dimensions/current condition",
+      "observations": "Forestry official: waterfall about80m high and10m wide. Approximate natural measurements, flow seasonal.",
+      "accessed": "2026-10-20 Asia/Taipei"
+    }
+  ],
+  "lensReview": "Wide/upward views rebuilt against independent real angle and satellite; weakperspective collectible camera. No calibrated mathematical undistortion. Unseen structure, exact dimensions and GoogleStreetView360 pending.",
+  "pageUpdatedAt": "2025-06-22",
+  "publicationCaution": "Page update date is not photograph capture date."
+}

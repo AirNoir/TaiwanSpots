@@ -1,23 +1,23 @@
 {
   "spotId": "lintianshan",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Lintianshan forestry village",
-    "silhouette": "Hillside village of dark wooden Japanese houses with a small logging train"
+    "silhouette": "Cypress warehouse on stone terrace above historic track"
   },
-  "crop": "The village lanes, houses and rail. Not the forest beyond.",
+  "crop": "One actual timber forestry warehouse on raised stone terrace above abandoned track; omit locomotive/ZhongshanHall/trestle rather than relocate.",
   "heroScale": 1,
-  "orientation": "verify: village climbs the slope eastward",
+  "orientation": "Forestry settlement south of Wanli Stream; wooded ground rises inland south/west, not draft east-only slope. Historical warehouse ground photo has narrow-gauge track BELOW raised stone retaining terrace. Actual train exhibit and Zhongshan Hall outside selected crop.",
   "lockedGeometry": [
-    "gentle slope",
-    "rows of houses",
-    "rail track"
+    "raisedwarehouse stone terrace",
+    "narrowgauge track below terrace",
+    "wooded slope inland south/west"
   ],
   "lockedIdentity": [
-    "dark cypress wooden houses",
-    "small logging train"
+    "weathered cypress logging warehouse",
+    "abandoned narrow gauge track"
   ],
   "doNotInvent": [
     "skyscrapers",
@@ -30,18 +30,28 @@
     "bicycles"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-2.jpg",
+      "official-3.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.71764,121.3973,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Wooden house with a logging cart"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Forestry settlement south of Wanli Stream; wooded ground rises inland south/west, not draft east-only slope. Historical warehouse ground photo has narrow-gauge track BELOW raised stone retaining terrace. Actual train exhibit and Zhongshan Hall outside selected crop. Two real viewpoints inspected. StreetView360/exactdimensions/captureyears pending.",
+    "identity": "pending user review: v2 increases containment buffer. Weathered cypress forestry warehouse above stoneretainingterrace and lower abandonedtrack; no relocatedtrestle/locomotive/ZhongshanHall. Side/back and exact roofvent/retaininggeometry dimensions pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

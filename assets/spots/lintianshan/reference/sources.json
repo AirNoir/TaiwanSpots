@@ -1,0 +1,56 @@
+{
+  "id": "lintianshan",
+  "page": "https://www.erv-nsa.gov.tw/ja/attractions/detail/163",
+  "credit": "East Rift Valley National Scenic Area Administration",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical tourism photos; URL timestamps not verified capture dates",
+  "usage": "Visual reference only, rights retained. No blanket commercial licence or final texture reuse.",
+  "description": "Forestry settlement south of Wanli Stream; wooded ground rises inland south/west, not draft east-only slope. Historical warehouse ground photo has narrow-gauge track BELOW raised stone retaining terrace. Actual train exhibit and Zhongshan Hall outside selected crop.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/10330/?r=1529668128339",
+      "page": "https://www.erv-nsa.gov.tw/ja/attractions/detail/163",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/10328/?r=1529668136220",
+      "page": "https://www.erv-nsa.gov.tw/ja/attractions/detail/163",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/10331/?r=1529668145844",
+      "page": "https://www.erv-nsa.gov.tw/ja/attractions/detail/163",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-4.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/10325/?r=1529668156013",
+      "page": "https://www.erv-nsa.gov.tw/ja/attractions/detail/163",
+      "kind": "actual ground/elevated tourism photograph; visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.71764,121.3973,18z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 is not capturedate",
+      "usage": "Visual reference only",
+      "observations": "Forestry settlement south of Wanli Stream; wooded ground rises inland south/west, not draft east-only slope. Historical warehouse ground photo has narrow-gauge track BELOW raised stone retaining terrace. Actual train exhibit and Zhongshan Hall outside selected crop."
+    }
+  ],
+  "lensReview": "Wide/upward views rebuilt against independent real angle and satellite; weakperspective collectible camera. No calibrated mathematical undistortion. Unseen structure, exact dimensions and GoogleStreetView360 pending.",
+  "pageUpdatedAt": "2026-02-02",
+  "publicationCaution": "Page update date is not photograph capture date."
+}

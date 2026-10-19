@@ -1,15 +1,15 @@
 {
   "spotId": "shimen-cave",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Shimen sea arch",
     "silhouette": "Natural rock arch on the shore with grass on top and a beach beyond"
   },
-  "crop": "The arch and the rocky beach. Not the coastal town.",
+  "crop": "Finite natural sandstone arch with grass cap, actual side stairs, pebbly shore and small contained seawater strip. No highway/harbour pavilion relocation.",
   "heroScale": 1,
-  "orientation": "verify: road runs along the inland side",
+  "orientation": "Sea northwest of arch, Highway2 inland southeast, fishing harbour southwest outside crop. Actual arch through coastal rock ridge with steps up east/right flank from landward side. Historical stair/railing appearance; district listing2026-05-26 says closed for renovation, current completed layout/reopening pending.",
   "lockedGeometry": [
     "rock arch on the shore",
     "rocky beach",
@@ -30,18 +30,28 @@
     "tidepools"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-2.jpg",
+      "official-4.jpg",
+      "official-3.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@25.2959,121.56843,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "official-2.jpg"
+    ]
   },
   "worldToken": {
     "element": "Rock arch with grass on top"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Sea northwest of arch, Highway2 inland southeast, fishing harbour southwest outside crop. Actual arch through coastal rock ridge with steps up east/right flank from landward side. Historical stair/railing appearance; district listing2026-05-26 says closed for renovation, current completed layout/reopening pending. Two real viewpoints inspected. StreetView360/exactdimensions/captureyears pending.",
+    "identity": "pending user review: Historical broad naturalarch/grasscap/rightflankstairs and pebblyapproach; seaNW/highwaySE. About10mrockridge commonscale; opening and staircount approximate. District listing2026-05-26 says closedrenovation; presentrail/stairlayout and plaque lettering pending. No inventedharbour/templepavilion.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

@@ -1245,51 +1245,105 @@
       "id": "liushidan",
       "name": "六十石山",
       "hero": "Liushidan daylily fields",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "official-2.jpg",
+        "real-photo.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Coastal Range hillside east of East Rift Valley; valley west. Satellite confirms curving ridge roads and cultivated slope patches, exact pavilion identity/footpath footprint in historical photo pending. Two real viewpoints inspected. StreetView360/exactdimensions/captureyears pending.",
+        "identity": "pending user review: Historical orange daylily ridge/rocks/path/pavilion crop, no relocated valley. Actual season Aug–Sep; official page says renovation. Exact pavilion identity/footpath steps/plan pending, not measured reconstruction or currentcondition.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T22:13:51.420665+00:00"
     },
     {
       "id": "lintianshan",
       "name": "林田山林業文化園區",
       "hero": "Lintianshan forestry village",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "official-2.jpg",
+        "official-3.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Forestry settlement south of Wanli Stream; wooded ground rises inland south/west, not draft east-only slope. Historical warehouse ground photo has narrow-gauge track BELOW raised stone retaining terrace. Actual train exhibit and Zhongshan Hall outside selected crop. Two real viewpoints inspected. StreetView360/exactdimensions/captureyears pending.",
+        "identity": "pending user review: v2 increases containment buffer. Weathered cypress forestry warehouse above stoneretainingterrace and lower abandonedtrack; no relocatedtrestle/locomotive/ZhongshanHall. Side/back and exact roofvent/retaininggeometry dimensions pending.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T22:13:51.425149+00:00"
     },
     {
       "id": "yingge",
       "name": "鶯歌陶瓷老街",
       "hero": "Yingge Old Street",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "official-2.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Ceramics Old Street district south of railway; photographed retro brick street fronts in Jianshanpu/Chongqing/Yuying district. Exact storefront footprint pending. Old Street Pottery Museum chimney separate and excluded. Two real viewpoints inspected. StreetView360/exactdimensions/captureyears pending.",
+        "identity": "pending user review: Finite pottery shopstreet with redbrick/graytrim/windowbays, cobbledcenter/redtilepavements and smallpotterywares. No relocatedchimney/railway/museum. Shopfrontdetails simplified; exactshopbays/depth and currentbusinesssigns pending.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T22:13:51.426618+00:00"
     },
     {
       "id": "wulai",
       "name": "烏來瀑布",
       "hero": "Wulai Waterfall",
-      "state": "queued",
+      "state": "needs-regeneration",
       "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "references": [
+        "real-photo.jpg",
+        "official-2.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Falls on wooded cliff east of Pubu Road/viewing promenade; stream descends roughly north/northeast toward Nanshi confluence. Trolley/cablecar facilities uphill/north outside finite falls crop. Ground photo confirms promenade across rocky gap, not at waterfall lip. Two real viewpoints inspected. StreetView360/exactdimensions/captureyears pending.",
+        "identity": "pending: recognizable waterfall silhouette, but full80m drop/person ratio unreliable",
+        "style": "failed scale: v1/v2 giant foreground visitors; v3 reduces but still about13–16 adult heights versus requiredabout47. Railing also drifts from actual palegreen crosslattice.",
+        "collection": "failed scale QA after initial+2 targeted revisions. No accepted preview; clean measured crop reconstruction needed."
+      },
+      "userAcceptance": "pending",
+      "candidatePreview": "rejected/review-v3.png",
+      "attempts": 3,
+      "reason": "All3 candidates failed80m waterfall vs1.7madult scale; final about13–16 adult heights, not47. Railappearance also drifts; no selection."
     },
     {
       "id": "shimen-cave",
       "name": "石門洞",
       "hero": "Shimen sea arch",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "official-2.jpg",
+        "official-4.jpg",
+        "official-3.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Sea northwest of arch, Highway2 inland southeast, fishing harbour southwest outside crop. Actual arch through coastal rock ridge with steps up east/right flank from landward side. Historical stair/railing appearance; district listing2026-05-26 says closed for renovation, current completed layout/reopening pending. Two real viewpoints inspected. StreetView360/exactdimensions/captureyears pending.",
+        "identity": "pending user review: Historical broad naturalarch/grasscap/rightflankstairs and pebblyapproach; seaNW/highwaySE. About10mrockridge commonscale; opening and staircount approximate. District listing2026-05-26 says closedrenovation; presentrail/stairlayout and plaque lettering pending. No inventedharbour/templepavilion.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T22:13:51.427642+00:00"
     },
     {
       "id": "keelung-miaokou",
@@ -1852,7 +1906,7 @@
       "userAcceptance": "pending"
     }
   ],
-  "lastUpdatedAt": "2026-10-19T21:47:49.042501+00:00",
+  "lastUpdatedAt": "2026-10-19T22:13:52.868829+00:00",
   "automation": {
     "id": "islandia",
     "status": "ACTIVE",
@@ -1861,14 +1915,14 @@
   },
   "lastBatch": {
     "ids": [
-      "baguashan-buddha",
-      "tianwei",
-      "formosa-boulevard",
-      "sizihwan",
-      "liuhe"
+      "liushidan",
+      "lintianshan",
+      "yingge",
+      "wulai",
+      "shimen-cave"
     ],
     "generated": 5,
-    "additionalRevisions": 4,
-    "result": "5 self-checked previews; 4 targeted scale/base/ceiling/asphalt revisions; all user acceptance pending"
+    "additionalRevisions": 3,
+    "result": "4 self-checked previews; Wulai3 candidates rejected for waterfall/person scale;3 targeted revisions total, all user acceptance pending"
   }
 }
