@@ -1,0 +1,47 @@
+{
+  "id": "liyu-lake",
+  "page": "https://www.erv-nsa.gov.tw/zh-tw/attractions/detail/30",
+  "credit": "East Rift Valley National Scenic Area",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; upload or pageupdate not capturedate",
+  "usage": "Visual reference only, rights retained; no blanket commercial licence/final texture reuse.",
+  "description": "Liyu Mountain EAST of lake; Route9C and dock settlement west. Crop north/northwest shore curved 120m water boardwalk, distant mountain/hotels omitted instead of relocated.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/71380/?r=1669287606133",
+      "page": "https://www.erv-nsa.gov.tw/zh-tw/attractions/detail/30",
+      "kind": "real photograph / aerial when stated",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/71373/?r=1669287593108",
+      "page": "https://www.erv-nsa.gov.tw/zh-tw/attractions/detail/30",
+      "kind": "real photograph / aerial when stated",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/71376/?r=1669287614572",
+      "page": "https://www.erv-nsa.gov.tw/zh-tw/attractions/detail/30",
+      "kind": "real photograph / aerial when stated",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.9365444,121.5086138,1570m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 notcapturedate",
+      "usage": "Visual reference only",
+      "observations": "Liyu Mountain EAST of lake; Route9C and dock settlement west. Crop north/northwest shore curved 120m water boardwalk, distant mountain/hotels omitted instead of relocated."
+    }
+  ],
+  "lensReview": "Wide groundview perspective assessed against independent actual aerial and satellite; model reconstructs compact northshore curve, omits distant hills/hotels. No calibrated mathematical undistortion claimed.",
+  "reviewLimitations": "Independent real ground and overhead inspected. Google Street View/360 capture pending; dimensions, current conditions and unseen geometry not fully verified. Lens distortion evaluated using multiple views; no calibrated inverse-distortion claimed."
+}

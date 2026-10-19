@@ -1,23 +1,23 @@
 {
   "spotId": "bitou-cape",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
-    "name": "Bitou Cape headland and lighthouse",
-    "silhouette": "Grassy sandstone headland with sea cliffs and a small white lighthouse near its tip"
+    "name": "Bitou Cape grassy ridge trail",
+    "silhouette": "Grassy ridge knolls with winding stair trail and little view pavilion"
   },
-  "crop": "The tip of the cape with the cliff trail and lighthouse. Not the fishing village.",
+  "crop": "Two grassy ridge knolls with actual stair trail and low view pavilion; nearby cliff water edge only, lighthouse outside crop.",
   "heroScale": 1,
-  "orientation": "verify: lighthouse sits on the north-east side of the cape",
+  "orientation": "Ridge trail southwest of cape lighthouse area; headland projects northeast. Chosen grassy ridge/stair crop omits distant lighthouse and village, does not relocate lighthouse beside hikers.",
   "lockedGeometry": [
     "narrow headland pointing into the sea",
     "sea cliffs and wave-cut platforms",
     "trail along the ridge"
   ],
   "lockedIdentity": [
-    "small white lighthouse",
-    "eroded sandstone cliffs"
+    "ridge stair trail",
+    "grassy sandstone cape"
   ],
   "doNotInvent": [
     "big harbours",
@@ -30,18 +30,27 @@
     "waves"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@25.1294,121.9206138,1555m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
-    "element": "White lighthouse on a grassy cliff"
+    "element": "Grassy ridge with stair trail"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ridge trail southwest of cape lighthouse area; headland projects northeast. Chosen grassy ridge/stair crop omits distant lighthouse and village, does not relocate lighthouse beside hikers. Ground and satellite checked, dates unknown; exact dimensions/Google360/unseen back pending.",
+    "identity": "pending user review: Grassy ridge stair climbs rightknoll then crosses saddle toward left pavilion; sandstone coast/low bushes and realistic hikers. Distant lighthouse omitted rather than relocated. Exact staircount/height/shore crop and pavilion details pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

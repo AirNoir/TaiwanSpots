@@ -1,23 +1,23 @@
 {
   "spotId": "liyu-lake",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
-    "name": "Liyu Lake",
-    "silhouette": "Calm green lake below a forested mountain with swan pedal boats"
+    "name": "Liyu Lake northshore waterfront",
+    "silhouette": "Curving waterside walkway beside green lake and planted shore"
   },
-  "crop": "The lake and Liyu Mountain. Not the whole Hualien valley.",
+  "crop": "North-shore curved waterside walkway, planted green margin and finite lake water with kayakers; not whole oval lake.",
   "heroScale": 1,
-  "orientation": "verify: Liyu Mountain rises on the west shore",
+  "orientation": "Liyu Mountain EAST of lake; Route9C and dock settlement west. Crop north/northwest shore curved 120m water boardwalk, distant mountain/hotels omitted instead of relocated.",
   "lockedGeometry": [
-    "oval lake",
-    "forested mountain beside it",
-    "lakeside path"
+    "curved water walkway on low piers",
+    "planted northshore",
+    "finite lake water"
   ],
   "lockedIdentity": [
-    "swan boats",
-    "mountain reflection"
+    "northshore curved waterfront walkway",
+    "green lake"
   ],
   "doNotInvent": [
     "snow",
@@ -30,18 +30,28 @@
     "fireflies"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-third.jpg",
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.9365444,121.5086138,1570m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "official-third.jpg"
+    ]
   },
   "worldToken": {
-    "element": "Swan boat on a green lake"
+    "element": "Curved walkway beside green lake"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Liyu Mountain EAST of lake; Route9C and dock settlement west. Crop north/northwest shore curved 120m water boardwalk, distant mountain/hotels omitted instead of relocated. Ground and satellite checked, dates unknown; exact dimensions/Google360/unseen back pending.",
+    "identity": "pending user review: Curved northshore waterwalk, darkgreen rails/yellow boom, planted inlet and kayak activity based ground/aerial; Liyu Mountain east, outside finite crop. No invented swan boats. Selected finite walkway segment, exact span/tree/pavilion placements and recognition of reduced crop pending userreview.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

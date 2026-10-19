@@ -1,0 +1,38 @@
+{
+  "id": "bitou-cape",
+  "page": "https://www.necoast-nsa.gov.tw/Attraction-Content.aspx?a=183&l=1",
+  "credit": "Northeast/Yilan Coast National Scenic Area; first photo Liang Hung-yeh",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; upload or pageupdate not capturedate",
+  "usage": "Visual reference only, rights retained; no blanket commercial licence/final texture reuse.",
+  "description": "Ridge trail southwest of cape lighthouse area; headland projects northeast. Chosen grassy ridge/stair crop omits distant lighthouse and village, does not relocate lighthouse beside hikers.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.necoast-nsa.gov.tw/FileArtPic.ashx?id=566&w=960&h=640",
+      "page": "https://www.necoast-nsa.gov.tw/Attraction-Content.aspx?a=183&l=1",
+      "kind": "real photograph / aerial when stated",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.necoast-nsa.gov.tw/FileArtPic.ashx?id=564&w=960&h=640",
+      "page": "https://www.necoast-nsa.gov.tw/Attraction-Content.aspx?a=183&l=1",
+      "kind": "real photograph / aerial when stated",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@25.1294,121.9206138,1555m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 notcapturedate",
+      "usage": "Visual reference only",
+      "observations": "Ridge trail southwest of cape lighthouse area; headland projects northeast. Chosen grassy ridge/stair crop omits distant lighthouse and village, does not relocate lighthouse beside hikers."
+    }
+  ],
+  "reviewLimitations": "Independent real ground and overhead inspected. Google Street View/360 capture pending; dimensions, current conditions and unseen geometry not fully verified. Lens distortion evaluated using multiple views; no calibrated inverse-distortion claimed."
+}

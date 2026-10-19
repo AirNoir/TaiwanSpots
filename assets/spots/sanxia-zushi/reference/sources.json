@@ -1,0 +1,38 @@
+{
+  "id": "sanxia-zushi",
+  "page": "https://newtaipei.travel/zh-tw/attractions/detail/109622",
+  "credit": "New Taipei City Tourism",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; upload or pageupdate not capturedate",
+  "usage": "Visual reference only, rights retained; no blanket commercial licence/final texture reuse.",
+  "description": "Temple front plaza faces south/southeast toward Sanxia River; old street southwest and rear urban fabric northwest. Draft southwest-facing assertion corrected by satellite. River/bridge outside close temple crop.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/25210/1920x1080_attractions-image-xiiaooz-rekeanh-qvbu-w.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/109622",
+      "kind": "real photograph / aerial when stated",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/25205/1024x768_attractions-image-ycxacdquek-tqaixx9smzg.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/109622",
+      "kind": "real photograph / aerial when stated",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/place/%E8%B2%A1%E5%9C%98%E6%B3%95%E4%BA%BA%E6%96%B0%E5%8C%97%E5%B8%82+%E4%B8%89%E5%B3%BD%E9%95%B7%E7%A6%8F%E5%B7%96+%E6%B8%85%E6%B0%B4%E7%A5%96%E5%B8%AB%E5%85%AC/@24.9337902,121.3695773,195m/data=!3m1!1e3!4m6!3m5!1s0x34681bf1e1f856eb:0x5309bb465f3013f1!8m2!3d24.9337902!4d121.3703176!16s%2Fm%2F04gj49c?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 notcapturedate",
+      "usage": "Visual reference only",
+      "observations": "Temple front plaza faces south/southeast toward Sanxia River; old street southwest and rear urban fabric northwest. Draft southwest-facing assertion corrected by satellite. River/bridge outside close temple crop."
+    }
+  ],
+  "reviewLimitations": "Independent real ground and overhead inspected. Google Street View/360 capture pending; dimensions, current conditions and unseen geometry not fully verified. Lens distortion evaluated using multiple views; no calibrated inverse-distortion claimed."
+}

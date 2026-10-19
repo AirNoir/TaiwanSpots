@@ -1,0 +1,8 @@
+{
+  "spotId": "fulong",
+  "reviewedAt": "2026-10-20 Asia/Taipei",
+  "method": "Visual comparison of independent real ground views and overhead; reconstruction uses weak-perspective45-degree miniature camera, not direct photo geometry transfer.",
+  "originalsPreserved": true,
+  "calibratedUndistortion": false,
+  "limitations": "No reliable camera calibration/focal parameters; metric ratios, unseen geometry and Google StreetView360 capture pending."
+}

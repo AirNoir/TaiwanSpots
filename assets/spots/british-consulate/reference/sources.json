@@ -1,0 +1,39 @@
+{
+  "id": "british-consulate",
+  "page": "https://khh.travel/zh-tw/attractions/detail/195/",
+  "credit": "Kaohsiung City Tourism Bureau",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; upload or pageupdate not capturedate",
+  "usage": "Visual reference only, rights retained; no blanket commercial licence/final texture reuse.",
+  "description": "Hilltop residence above harbour; harbour entrance and Qijin south, harbour city east. Separate lower consulate office and adjacent temple omitted in finite crop.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://khh.travel/Image/37653/?r=1642749998934",
+      "page": "https://khh.travel/zh-tw/attractions/detail/195/",
+      "kind": "real photograph / aerial when stated",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://khh.travel/image/18436/1024x768",
+      "page": "https://khh.travel/zh-tw/attractions/detail/195/",
+      "kind": "real photograph / aerial when stated",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.61891,120.26684,793m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "capture": "Not exposed; copyright2026 notcapturedate",
+      "usage": "Visual reference only",
+      "observations": "Hilltop residence above harbour; harbour entrance and Qijin south, harbour city east. Separate lower consulate office and adjacent temple omitted in finite crop."
+    }
+  ],
+  "currentCondition": "Official page updated2026-09-08 states hilltop residence maintenance; rendering uses historical intact exterior, not current construction status.",
+  "reviewLimitations": "Independent real ground and overhead inspected. Google Street View/360 capture pending; dimensions, current conditions and unseen geometry not fully verified. Lens distortion evaluated using multiple views; no calibrated inverse-distortion claimed."
+}

@@ -1,23 +1,23 @@
 {
   "spotId": "fulong",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Fulong Beach sandbar",
     "silhouette": "Long golden sandbar between a river mouth and the sea, linked by a footbridge"
   },
-  "crop": "The sandbar beach, river mouth and the rainbow footbridge. Not the town.",
+  "crop": "Rainbow footbridge across inner river, finite golden sandbar and ocean edge; no town/hotel or distant mountains.",
   "heroScale": 1,
-  "orientation": "verify: river runs inland of the sandbar to the south-west",
+  "orientation": "Ocean northeast of sandbar, Shuang River southwest/inland side; actual pedestrian bridge crosses river from southern land to sandbar, river mouth east/southeast of bridge.",
   "lockedGeometry": [
     "sandbar separating river and sea",
     "river mouth",
     "footbridge to the sandbar"
   ],
   "lockedIdentity": [
-    "golden sand",
-    "rainbow-arched footbridge"
+    "golden sandbar",
+    "gently arched yellow-railed pedestrian bridge"
   ],
   "doNotInvent": [
     "cliffs on the beach",
@@ -30,18 +30,28 @@
     "tiny swimmers"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg",
+      "official-third.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@25.0205,121.9422,778m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
-    "element": "Golden sandbar with a rainbow bridge"
+    "element": "Golden sandbar and yellow-railed bridge"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ocean northeast of sandbar, Shuang River southwest/inland side; actual pedestrian bridge crosses river from southern land to sandbar, river mouth east/southeast of bridge. Ground and satellite checked, dates unknown; exact dimensions/Google360/unseen back pending.",
+    "identity": "pending user review: v3 corrects croppedbase/bridge scale and refines gentle deck profile. Actual yellow-railed gently humped pedestrian bridge crosses sheltered river to golden sandbar; no literal rainbow overheadarch. Ocean opposite river side, no hotel/relocated town. Exact span/shoreline seasonal form and bridge supports pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

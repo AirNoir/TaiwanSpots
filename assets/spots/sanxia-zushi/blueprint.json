@@ -7,17 +7,17 @@
     "name": "Qingshui Zushi Temple",
     "silhouette": "Temple densely carved with stone pillars and bronze reliefs beside a river"
   },
-  "crop": "The temple front and courtyard by the Sanxia River. Not the old street.",
+  "crop": "Actual five-door front hall and immediate stone forecourt only; middle/rearhalls, river, bridge and old street outside selected crop.",
   "heroScale": 1,
-  "orientation": "verify: temple faces the river to the south-west",
+  "orientation": "Temple front plaza faces south/southeast toward Sanxia River; old street southwest and rear urban fabric northwest. Draft southwest-facing assertion corrected by satellite. River/bridge outside close temple crop.",
   "lockedGeometry": [
-    "temple beside the river",
-    "plaza in front",
-    "old street behind"
+    "front plaza south/southeast",
+    "front hall with real roof depth",
+    "middle/rear halls outside close crop"
   ],
   "lockedIdentity": [
-    "carved stone dragon pillars",
-    "bronze and gold roof decoration"
+    "carved graystone dragoncolumns",
+    "orange ceramic roofs and ornate ridges"
   ],
   "doNotInvent": [
     "pagodas",
@@ -30,18 +30,27 @@
     "arched bridge"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/place/%E8%B2%A1%E5%9C%98%E6%B3%95%E4%BA%BA%E6%96%B0%E5%8C%97%E5%B8%82+%E4%B8%89%E5%B3%BD%E9%95%B7%E7%A6%8F%E5%B7%96+%E6%B8%85%E6%B0%B4%E7%A5%96%E5%B8%AB%E5%85%AC/@24.9337902,121.3695773,195m/data=!3m1!1e3!4m6!3m5!1s0x34681bf1e1f856eb:0x5309bb465f3013f1!8m2!3d24.9337902!4d121.3703176!16s%2Fm%2F04gj49c?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Carved stone pillar with a temple roof"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Temple front plaza faces south/southeast toward Sanxia River; old street southwest and rear urban fabric northwest. Draft southwest-facing assertion corrected by satellite. River/bridge outside close temple crop. Ground and satellite checked, dates unknown; exact dimensions/Google360/unseen back pending.",
+    "identity": "pending: actual ornate front-hall identity is recognizable but not accepted",
+    "style": "failed: v1/v2 base chamfer, v3 elongated rectangular base and front-biased camera; maximum2 targeted revisions exhausted",
+    "collection": "failed containment/camera/base specification; needs clean regeneration, not selected"
   }
 }
