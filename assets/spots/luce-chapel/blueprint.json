@@ -1,28 +1,30 @@
 {
   "spotId": "luce-chapel",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Luce Memorial Chapel",
     "silhouette": "Tent-like chapel of four curved hyperbolic shells meeting at the top"
   },
-  "crop": "The chapel on its lawn in the campus. Not the whole university.",
+  "crop": "Whole chapel and small adjoining lawn with access path; omit separate bell tower and campus buildings.",
   "heroScale": 1,
-  "orientation": "verify: chapel stands on the main campus lawn",
+  "orientation": "Chapel on lawn SOUTH of Duxin Road, administration building WEST; finite crop includes chapel/lawn/path only. Satellite checked 2026-10-19; precise shell measurements not surveyed.",
   "lockedGeometry": [
     "open lawn",
     "single small building",
     "trees around the lawn"
   ],
   "lockedIdentity": [
-    "curving yellow diamond-tile shells",
-    "glazed slit along the ridge"
+    "four curved concrete shells",
+    "ochre diamond ceramic tiles",
+    "narrow glazing slits",
+    "small real ridge cross"
   ],
   "doNotInvent": [
     "steeples",
-    "crosses on top",
-    "stained glass domes"
+    "oversized crosses",
+    "stained-glass domes"
   ],
   "allowedMiniatureDetails": [
     "students",
@@ -30,18 +32,27 @@
     "walkways"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.1789,120.6006,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Yellow curved tent chapel"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Independent official ground photographs and Google satellite visually checked 2026-10-19; Street View/360 and unobserved back details pending. Not measured photogrammetry.",
+    "identity": "pending user review: Curved ochre tiled shells, narrow glazing and small actual cross preserved; grass/path and common-scale visitors. Exact shell curvature/junction and entrance steps require user detail review, not architectural survey.",
+    "style": "self-checked preview: physical Q toy materials, elevated weak-perspective view, warm common-scale visitors; no scenic board/globe",
+    "collection": "self-checked preview: full square-style small-rounded ivory base in frame, scene inset and verticals coherent, readable at512px; dimensions not measured; user approval pending"
   }
 }

@@ -430,51 +430,101 @@
       "id": "raohe-night-market",
       "name": "饒河街夜市",
       "hero": "Raohe market gate and Ciyou Temple",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v3.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Independent official ground photographs and Google satellite visually checked 2026-10-19; Street View/360 and unobserved back details pending. Not measured photogrammetry.",
+        "identity": "pending user review: v1/v2 rejected: gate and temple wrongly parallel. v3 clean small east-gate/westward-street crop; Ciyou Temple omitted outside finite crop. Actual gate silhouette/4 lanterns and human scale readable; individual shops simplified.",
+        "style": "self-checked preview: physical Q toy materials, elevated weak-perspective view, warm common-scale visitors; no scenic board/globe",
+        "collection": "self-checked preview: full square-style small-rounded ivory base in frame, scene inset and verticals coherent, readable at512px; dimensions not measured; user approval pending"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T12:44:47.440090+00:00"
     },
     {
       "id": "baoan-temple",
       "name": "大龍峒保安宮",
       "hero": "Baoan Temple front hall",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "official-night.jpg",
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Independent official ground photographs and Google satellite visually checked 2026-10-19; Street View/360 and unobserved back details pending. Not measured photogrammetry.",
+        "identity": "pending user review: Internal courtyard/main hall crop based on actual courtyard view, muted clay roof/jiannian and carved columns readable; external arch omitted. Exact courtyard furniture and unobserved rear details inferred, not measured.",
+        "style": "self-checked preview: physical Q toy materials, elevated weak-perspective view, warm common-scale visitors; no scenic board/globe",
+        "collection": "self-checked preview: full square-style small-rounded ivory base in frame, scene inset and verticals coherent, readable at512px; dimensions not measured; user approval pending"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T12:44:47.441351+00:00"
     },
     {
       "id": "fengjia",
       "name": "逢甲夜市",
       "hero": "Fengjia night market",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Independent official ground photographs and Google satellite visually checked 2026-10-19; Street View/360 and unobserved back details pending. Not measured photogrammetry.",
+        "identity": "pending user review: Actual lightweight colorful market sign distinguishes from temple arch; shoe/clothing/food lane and common-scale people visible. Individual shop ordering and sign positions simplified.",
+        "style": "self-checked preview: physical Q toy materials, elevated weak-perspective view, warm common-scale visitors; no scenic board/globe",
+        "collection": "self-checked preview: full square-style small-rounded ivory base in frame, scene inset and verticals coherent, readable at512px; dimensions not measured; user approval pending"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T12:44:47.441897+00:00"
     },
     {
       "id": "shenji-village",
       "name": "審計新村",
       "hero": "Shenji New Village",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Independent official ground photographs and Google satellite visually checked 2026-10-19; Street View/360 and unobserved back details pending. Not measured photogrammetry.",
+        "identity": "pending user review: Two-storey cream concrete dorm rows, red tile roofs, exterior stairs/brick lane/white parasols preserved. Exact bay count and market positions simplified; finite lane crop.",
+        "style": "self-checked preview: physical Q toy materials, elevated weak-perspective view, warm common-scale visitors; no scenic board/globe",
+        "collection": "self-checked preview: full square-style small-rounded ivory base in frame, scene inset and verticals coherent, readable at512px; dimensions not measured; user approval pending"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T12:44:47.442578+00:00"
     },
     {
       "id": "luce-chapel",
       "name": "路思義教堂",
       "hero": "Luce Memorial Chapel",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Independent official ground photographs and Google satellite visually checked 2026-10-19; Street View/360 and unobserved back details pending. Not measured photogrammetry.",
+        "identity": "pending user review: Curved ochre tiled shells, narrow glazing and small actual cross preserved; grass/path and common-scale visitors. Exact shell curvature/junction and entrance steps require user detail review, not architectural survey.",
+        "style": "self-checked preview: physical Q toy materials, elevated weak-perspective view, warm common-scale visitors; no scenic board/globe",
+        "collection": "self-checked preview: full square-style small-rounded ivory base in frame, scene inset and verticals coherent, readable at512px; dimensions not measured; user approval pending"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T12:44:47.443392+00:00"
     },
     {
       "id": "wufeng-lin",
@@ -1437,7 +1487,7 @@
       "userAcceptance": "pending"
     }
   ],
-  "lastUpdatedAt": "2026-10-19T12:18:38.049868+00:00",
+  "lastUpdatedAt": "2026-10-19T12:44:47.443397+00:00",
   "automation": {
     "id": "islandia",
     "status": "ACTIVE",
@@ -1446,14 +1496,14 @@
   },
   "lastBatch": {
     "ids": [
-      "anping-treehouse",
-      "nccta",
-      "luodong-night-market",
-      "taipingshan",
-      "sun-yat-sen-memorial"
+      "raohe-night-market",
+      "baoan-temple",
+      "fengjia",
+      "shenji-village",
+      "luce-chapel"
     ],
     "generated": 5,
-    "additionalRevisions": 4,
-    "result": "4 self-checked previews; sun-yat-sen-memorial needs clean regeneration, not selected"
+    "additionalRevisions": 2,
+    "result": "5 self-checked previews; Raohe v1/v2 rejected, v3 finite crop selected; not user-approved"
   }
 }

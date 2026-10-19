@@ -1,0 +1,43 @@
+{
+  "id": "shenji-village",
+  "title": "shenji-village real scene references",
+  "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/1139",
+  "image": "https://taichung.travel/content/images/attractions/63099/1024x768_attractions-image-dezfvpxs0kgzybgoxdhmca.jpg",
+  "credit": "Taichung City tourism, photographer unspecified",
+  "capture": "Unknown; filename/publication year is not confirmed capture date",
+  "accessed": "2026-10-19",
+  "description": "Dorm rows and narrow market lanes lie WEST of Zhongxing Street and NORTH of Minsheng Road; local lawn pockets occur between buildings, not verified as one northern lawn. Satellite checked 2026-10-19.",
+  "usage": "Reference only; copyright retained by source/photographer. No blanket commercial redistribution clearance; not final texture.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://taichung.travel/content/images/attractions/63099/1024x768_attractions-image-dezfvpxs0kgzybgoxdhmca.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/1139",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only; no final texture reuse",
+      "note": ""
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://taichung.travel/content/images/attractions/63100/1024x768_attractions-image-ix20biqvsegnh9t7ta0kea.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/1139",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only; no final texture reuse",
+      "note": ""
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.1446,120.6627,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar, on-image attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Imagery acquisition date not exposed; copyright2026 not capture date",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Dorm rows and narrow market lanes lie WEST of Zhongxing Street and NORTH of Minsheng Road; local lawn pockets occur between buildings, not verified as one northern lawn. Satellite checked 2026-10-19."
+      ],
+      "limitations": "Not metric survey; Street View/360 not captured. No precise lens calibration."
+    }
+  ]
+}

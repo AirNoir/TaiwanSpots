@@ -1,0 +1,52 @@
+{
+  "id": "raohe-night-market",
+  "title": "raohe-night-market real scene references",
+  "page": "https://www.travel.taipei/zh-tw/attraction/details/1538",
+  "image": "https://www.travel.taipei/content/images/attractions/282180/480x360_attractions-image--rznjhetiuoqnzoyqppjgw.jpg",
+  "credit": "Taipei City tourism (Ciyou image 劉佳雯)",
+  "capture": "Unknown; filename/publication year is not confirmed capture date",
+  "accessed": "2026-10-19",
+  "description": "East entrance stands immediately WEST of Ciyou Temple, market extends west along Raohe Street. Temple north of Bade Road, river further north outside crop; satellite checked 2026-10-19.",
+  "usage": "Reference only; copyright retained by source/photographer. No blanket commercial redistribution clearance; not final texture.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.travel.taipei/content/images/attractions/282180/480x360_attractions-image--rznjhetiuoqnzoyqppjgw.jpg",
+      "page": "https://www.travel.taipei/zh-tw/attraction/details/1538",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only; no final texture reuse",
+      "note": ""
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.travel.taipei/content/images/attractions/282182/480x360_attractions-image-dyxppo6qrukchnuibc42jg.jpg",
+      "page": "https://www.travel.taipei/zh-tw/attraction/details/1538",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only; no final texture reuse",
+      "note": ""
+    },
+    {
+      "local": "ciyou-front.jpg",
+      "image": "https://www.travel.taipei/content/images/attractions/179306/480x360_attractions-image-itgh91qd_ekwpsikwoshqa.jpg",
+      "page": "https://www.travel.taipei/zh-tw/attraction/details/71",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only; no final texture reuse",
+      "note": ""
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@25.0509,121.578,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar, on-image attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Imagery acquisition date not exposed; copyright2026 not capture date",
+      "accessed": "2026-10-19",
+      "observations": [
+        "East entrance stands immediately WEST of Ciyou Temple, market extends west along Raohe Street. Temple north of Bade Road, river further north outside crop; satellite checked 2026-10-19."
+      ],
+      "limitations": "Not metric survey; Street View/360 not captured. No precise lens calibration."
+    }
+  ]
+}

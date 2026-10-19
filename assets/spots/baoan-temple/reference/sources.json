@@ -1,0 +1,52 @@
+{
+  "id": "baoan-temple",
+  "title": "baoan-temple real scene references",
+  "page": "https://www.travel.taipei/zh-tw/attraction/details/61",
+  "image": "https://www.travel.taipei/content/images/attractions/63868/480x360_attractions-image-mnpe77h4huyv3upoqmxgkg.jpg",
+  "credit": "Taipei City tourism / 劉佳雯 where credited; temple-owned carousel images ©Dalongdong Baoan Temple",
+  "capture": "Unknown; filename/publication year is not confirmed capture date",
+  "accessed": "2026-10-19",
+  "description": "Baoan Temple lies WEST of Dalong Street; Confucius Temple EAST across Dalong Street, not north. Hami Street borders south side. Satellite checked 2026-10-19.",
+  "usage": "Reference only; copyright retained by source/photographer. No blanket commercial redistribution clearance; not final texture.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.travel.taipei/content/images/attractions/63868/480x360_attractions-image-mnpe77h4huyv3upoqmxgkg.jpg",
+      "page": "https://www.travel.taipei/zh-tw/attraction/details/61",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only; no final texture reuse",
+      "note": ""
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.travel.taipei/content/images/attractions/63880/480x360_attractions-image-rsgj9e4iskkoswkbf0ntpg.jpg",
+      "page": "https://www.travel.taipei/zh-tw/attraction/details/61",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only; no final texture reuse",
+      "note": ""
+    },
+    {
+      "local": "official-night.jpg",
+      "image": "https://baoan.org.tw/photo/indexslide/4/20190719-063921-1.jpg",
+      "page": "https://baoan.org.tw/",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only; no final texture reuse",
+      "note": ""
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@25.0732,121.516,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar, on-image attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Imagery acquisition date not exposed; copyright2026 not capture date",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Baoan Temple lies WEST of Dalong Street; Confucius Temple EAST across Dalong Street, not north. Hami Street borders south side. Satellite checked 2026-10-19."
+      ],
+      "limitations": "Not metric survey; Street View/360 not captured. No precise lens calibration."
+    }
+  ]
+}
