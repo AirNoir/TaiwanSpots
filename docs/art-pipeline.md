@@ -127,3 +127,7 @@ iOS 與 Android Metro/Hermes 匯出通過，asset map 確認只有 74 張景點 
 以 `npm run assets:export -- --source masters` 輸出 45 張 1024px day.webp 與 45 張 512px thumbnail.webp；既有 24 張地圖圖標保留。收藏大圖／縮圖採 CSS 相容的 saturate(0.88) 矩陣，僅在 runtime 輸出時套用。master/review 原圖不調色，因此比較頁繼續對原圖顯示 88%，不會對同一檔重複減色。後續 export 沿用 masters 來源，避免把已調色的衍生圖再次處理。8 項輸出測試包含透明度、色彩中性值與重跑不重複減色。
 
 正式登錄為 45 個景點。iOS／Android Metro/Hermes 匯出均通過，asset map 確認 114 個景點檔案全為 WebP（90 張收藏大圖／縮圖、24 張原地圖圖標），沒有 master、review、reference 或 archive 圖。總計約 16.49 MB，非 IPA/APK 或安裝後大小。模擬器操作權限未開啟，這輪未完成安裝後 UI／實機驗收；現有 Metro 8081 可重新載入 App 預覽。地圖新景點缺少專用 token 時沿用既有通用標記。
+
+## 其餘 114 張夜間製作（2026-10-19 → 2026-10-20）
+
+本次 user 授權批次完成剩餘圖並在網頁 review。先讀 [製圖規範與踩坑紀錄](art-production-rules.md)，佇列與不可更動的 45 張 App 圖／114 個 runtime WebP SHA-256 在 [overnight-art-progress.json](overnight-art-progress.json)。新圖僅為 review 預覽，不自動套用 App；每張保留真實來源、完整 prompt、未確認事項與目視 QA。移軸玩具感不可用冷漠的衛星俯瞰、誇大的前景或不一致比例代替。

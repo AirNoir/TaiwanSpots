@@ -1,0 +1,36 @@
+{
+  "id": "shifen-waterfall",
+  "title": "shifen-waterfall official real reference",
+  "page": "https://newtaipei.travel/zh-tw/attractions/detail/109612",
+  "image": "https://newtaipei.travel/content/images/attractions/25291/1024x768_attractions-image-_me6w6ogd0-5entkeakk1w.jpg",
+  "credit": "New Taipei City tourism official site; individual photographer unspecified",
+  "capture": "Not specified",
+  "accessed": "2026-10-19",
+  "usage": "Reference only; no commercial redistribution permission asserted. Not used as final texture.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@25.0490,121.7873,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar, attribution retained",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "kind": "satellite overhead",
+      "observations": [
+        "Google satellite shows river approaching from northeast and leaving west/southwest, with observation areas on east/southeast and southern bank; original north-side-only claim removed. Ground photo controls local terrace/ledge relation."
+      ],
+      "limitations": "Google ground/360 capture pending; photo lens calibration unknown. No claim of metric survey."
+    },
+    {
+      "local": "official-oblique.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/109612",
+      "image": "https://newtaipei.travel/content/images/attractions/25297/1024x768_attractions-image-wytsty13ckmyyxuf9upjvq.jpg",
+      "credit": "New Taipei City tourism official site; individual photographer unspecified",
+      "kind": "ground elevated oblique",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Actual curved rock lip, multiple shelves, visitors behind side terrace railing"
+      ]
+    }
+  ]
+}

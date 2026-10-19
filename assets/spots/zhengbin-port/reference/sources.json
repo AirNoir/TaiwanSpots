@@ -1,0 +1,24 @@
+{
+  "id": "zhengbin-port",
+  "title": "zhengbin-port official real reference",
+  "page": "https://travel.klcg.gov.tw/TourContent.aspx?n=8843&s=52&sms=12546",
+  "image": "https://klctb-ws.klcg.gov.tw/001/Upload/tour/445/12546/426/pic/ca108622-dfb0-4c35-9e27-ae222ecb518b.jpg",
+  "credit": "Keelung City tourism official site; individual photographer unspecified",
+  "capture": "Not specified",
+  "accessed": "2026-10-19",
+  "usage": "Reference only; no commercial redistribution permission asserted. Not used as final texture.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@25.1524456,121.7691176,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar, attribution retained",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "kind": "satellite overhead",
+      "observations": [
+        "Harbor-facing attached row lies on southern bank of this inlet, fronts approximately north; rear road lies south, verified in Google satellite 2026-10-19."
+      ],
+      "limitations": "Google ground/360 capture pending; photo lens calibration unknown. No claim of metric survey."
+    }
+  ]
+}

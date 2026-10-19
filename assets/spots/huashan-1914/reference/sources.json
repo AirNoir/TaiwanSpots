@@ -1,0 +1,24 @@
+{
+  "id": "huashan-1914",
+  "title": "huashan-1914 official real reference",
+  "page": "https://www.huashan1914.com/about",
+  "image": "https://files.huashan1914.com/編輯器.jpg",
+  "credit": "Huashan 1914 official operator; individual photographer unspecified",
+  "capture": "Not specified",
+  "accessed": "2026-10-19",
+  "usage": "Reference only; no commercial redistribution permission asserted. Not used as final texture.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@25.0446,121.5292,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar, attribution retained",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "kind": "satellite overhead",
+      "observations": [
+        "Main warehouse grid occupies central site, large lawn north, Bade Road south, Xinsheng elevated road east; checked satellite 2026-10-19. Model crops courtyard; unseen rear details simplified."
+      ],
+      "limitations": "Google ground/360 capture pending; photo lens calibration unknown. No claim of metric survey."
+    }
+  ]
+}

@@ -1,15 +1,15 @@
 {
   "spotId": "huashan-1914",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
-    "name": "Huashan winery warehouses",
-    "silhouette": "Row of red-brick factory buildings with chimneys facing a lawn"
+    "name": "Huashan 1914 warehouse courtyard",
+    "silhouette": "Low industrial gabled warehouses, gray-white plaster and ivy-covered walls flanking pedestrian courtyard"
   },
-  "crop": "The brick warehouses and lawn. Not the surrounding city blocks.",
+  "crop": "Finite central ivy warehouse courtyard; surrounding city and north lawn omitted.",
   "heroScale": 1,
-  "orientation": "verify: lawn sits on the east side toward Bade Road",
+  "orientation": "Main warehouse grid occupies central site, large lawn north, Bade Road south, Xinsheng elevated road east; checked satellite 2026-10-19. Model crops courtyard; unseen rear details simplified.",
   "lockedGeometry": [
     "row of long warehouses",
     "open lawn",
@@ -31,18 +31,26 @@
     "visitors"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "reference/google-satellite-review.png"
+    ],
+    "ground": [
+      "reference/real-photo.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@25.0446,121.5292,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Red-brick warehouse with a chimney"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "pending: ground and satellite cross-check collected; Google street/360 capture pending; unseen details simplified",
+    "identity": "pending user review: Ivy warehouse courtyard and opposite pale industrial facade recognizable, coherent upright projection and human scale. Roof rear details and individual tree locations simplified; cropped courtyard, not whole park.",
+    "style": "self-checked preview: physical Q toy materials, elevated weak perspective, no backdrop; user acceptance pending",
+    "collection": "self-checked preview: full ivory square-style base, 512px subject readable; user acceptance pending"
   }
 }

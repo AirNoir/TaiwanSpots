@@ -1,6 +1,6 @@
 {
   "spotId": "shifen-waterfall",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
@@ -9,15 +9,15 @@
   },
   "crop": "The waterfall and its pool with the viewing deck. Not the old street.",
   "heroScale": 1,
-  "orientation": "verify: viewing deck on the north side",
+  "orientation": "Google satellite shows river approaching from northeast and leaving west/southwest, with observation areas on east/southeast and southern bank; original north-side-only claim removed. Ground photo controls local terrace/ledge relation.",
   "lockedGeometry": [
     "wide rock ledge",
     "round plunge pool",
     "forested valley"
   ],
   "lockedIdentity": [
-    "curtain-shaped falls",
-    "rainbow in the spray"
+    "broad curved curtain falls",
+    "irregular tilted rock ledge and plunge pool"
   ],
   "doNotInvent": [
     "tall cliffs",
@@ -30,18 +30,27 @@
     "suspension bridge"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "aerial": [
+      "reference/google-satellite-review.png"
+    ],
+    "ground": [
+      "reference/real-photo.jpg",
+      "reference/official-oblique.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@25.0490,121.7873,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Wide waterfall with a rainbow"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "pending: ground and satellite cross-check collected; Google street/360 capture pending; unseen details simplified",
+    "identity": "pending user review: v1 rejected for edge foliage and oversized visitors. v2 moves crowns inside rim and reduces people, preserves curved irregular waterfall lip. Rear ivory rim appears taller from topographic cut; user review required, not approved.",
+    "style": "self-checked preview: physical Q toy materials, elevated weak perspective, no backdrop; user acceptance pending",
+    "collection": "self-checked preview: full ivory square-style base, 512px subject readable; user acceptance pending"
   }
 }
