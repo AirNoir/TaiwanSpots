@@ -1,6 +1,6 @@
 {
   "spotId": "tainan-confucius",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
@@ -9,7 +9,7 @@
   },
   "crop": "The Dacheng Hall courtyard and its red walls. Not the surrounding streets.",
   "heroScale": 1,
-  "orientation": "verify: main axis runs north-south, hall faces south",
+  "orientation": "Dacheng Hall courtyard axis north-south, hall front south, side corridors east/west; Nanmen Road east. Ground and satellite crosschecked 2026-10-19.",
   "lockedGeometry": [
     "walled courtyard compound",
     "hall raised on a platform",
@@ -31,18 +31,27 @@
     "stone lanterns"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-overview.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.9903,120.2043,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Red hall with a swallowtail roof under a banyan"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "pending: actual ground and aerial/satellite cross-check; Google street/360 capture pending; unseen details simplified",
+    "identity": "pending user review: v1 eave overhang and extra gate removed in v2; v2 frontal angle and invented gold seated figure rejected. v3 diagonal view with contained eaves/crowns and wooden spirit tablet, no gold statue. Roof details and corridor proportions simplified; user review required.",
+    "style": "self-checked preview: tactile Q miniature, elevated weak perspective, warm people, no backdrop; not user approved",
+    "collection": "self-checked preview: full square-style ivory base and native image; 512px main subject readable; boundary and exact physical dimensions not measured"
   }
 }

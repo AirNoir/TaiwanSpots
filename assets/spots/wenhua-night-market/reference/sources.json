@@ -1,0 +1,25 @@
+{
+  "id": "wenhua-night-market",
+  "title": "wenhua-night-market real reference",
+  "page": "https://media.taiwan.net.tw/en-us/portal/travel/details/attraction_376600000a_000032",
+  "image": "https://travel.chiayi.gov.tw/FileDownload/TravelInformation/Big/20260323182526152572158.jpg",
+  "credit": "Chiayi City government photo via Taiwan Tourism Administration open multimedia; photographer unspecified, data updated 2026-03-25 (not photo capture date)",
+  "capture": "Not specified",
+  "accessed": "2026-10-19",
+  "usage": "Visual reference only; no assertion of commercial photo redistribution rights. Photo not used as final texture.",
+  "description": "Market extends SOUTH from Zhongshan Road central fountain roundabout toward Chuiyang Road, supported by Tourism Administration map and Google satellite. Model crops one finite street section, not whole 600m route.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@23.4785,120.4488138,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar; attribution retained",
+      "kind": "satellite overhead",
+      "capture": "Not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Market extends SOUTH from Zhongshan Road central fountain roundabout toward Chuiyang Road, supported by Tourism Administration map and Google satellite. Model crops one finite street section, not whole 600m route."
+      ],
+      "limitations": "Not a metric survey. Google ground panorama pending; optical calibration unknown."
+    }
+  ]
+}

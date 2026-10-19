@@ -1,0 +1,35 @@
+{
+  "id": "tainan-confucius",
+  "title": "tainan-confucius real reference",
+  "page": "https://www.twtainan.net/zh-tw/attractions/detail/800/",
+  "image": "https://www.twtainan.net/content/images/attractions/17541/1920x1080_Filedata635593487806609806.jpg",
+  "credit": "Tainan City tourism official site, photographer/capture date unspecified; page updated 2026-06-01",
+  "capture": "Not specified",
+  "accessed": "2026-10-19",
+  "usage": "Visual reference only; no assertion of commercial photo redistribution rights. Photo not used as final texture.",
+  "description": "Dacheng Hall courtyard axis north-south, hall front south, side corridors east/west; Nanmen Road east. Ground and satellite crosschecked 2026-10-19.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@22.9903,120.2043,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar; attribution retained",
+      "kind": "satellite overhead",
+      "capture": "Not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Dacheng Hall courtyard axis north-south, hall front south, side corridors east/west; Nanmen Road east. Ground and satellite crosschecked 2026-10-19."
+      ],
+      "limitations": "Not a metric survey. Google ground panorama pending; optical calibration unknown."
+    },
+    {
+      "local": "official-overview.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/17542/1920x1080_Filedata635593487845765875.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/800/",
+      "credit": "Tainan City tourism official site, photographer/capture date unspecified; page updated 2026-06-01",
+      "kind": "real ground or oblique photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    }
+  ]
+}

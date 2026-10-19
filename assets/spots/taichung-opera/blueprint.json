@@ -1,6 +1,6 @@
 {
   "spotId": "taichung-opera",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
@@ -9,7 +9,7 @@
   },
   "crop": "The theater building and its front lawn. Not the surrounding high-rises.",
   "heroScale": 1,
-  "orientation": "verify: main entrance faces Huilai Road to the east",
+  "orientation": "Front plaza lies east toward Huilai Road, Huimin Road west; roof garden and front water/plaza verified from official aerial and Google satellite 2026-10-19.",
   "lockedGeometry": [
     "rectangular block with flat roof",
     "glass facades between curved walls",
@@ -30,18 +30,28 @@
     "reflecting pools"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg",
+      "real-photo.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.1629,120.6405,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "White box with curved cave openings"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "pending: actual ground and aerial/satellite cross-check; Google street/360 capture pending; unseen details simplified",
+    "identity": "pending user review: v1 failed right-edge framing; v2 shows full contained square-style base. Organic facade, glazed openings, roof wells/garden and plaza recognizable. Window/well counts and landscaping simplified; not measured reconstruction.",
+    "style": "self-checked preview: tactile Q miniature, elevated weak perspective, warm people, no backdrop; not user approved",
+    "collection": "self-checked preview: full square-style ivory base and native image; 512px main subject readable; boundary and exact physical dimensions not measured"
   }
 }

@@ -1,0 +1,75 @@
+{
+  "id": "miyahara",
+  "title": "miyahara real reference",
+  "page": "https://www.miyahara.com.tw/en/index.html",
+  "image": "https://www.miyahara.com.tw/en/img/index1200_610_0318.jpg",
+  "credit": "Miyahara official operator exterior photograph, photographer/date unspecified; supplementary arcade/entrance photos Taichung City tourism",
+  "capture": "Not specified",
+  "accessed": "2026-10-19",
+  "usage": "Visual reference only; no assertion of commercial photo redistribution rights. Photo not used as final texture.",
+  "description": "Green River lies WEST of Miyahara across Luchuan East Street, not east. Building occupies northeast corner of Zhongshan Road / Luchuan East Street, verified satellite.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.1379,120.6836,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar; attribution retained",
+      "kind": "satellite overhead",
+      "capture": "Not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Green River lies WEST of Miyahara across Luchuan East Street, not east. Building occupies northeast corner of Zhongshan Road / Luchuan East Street, verified satellite."
+      ],
+      "limitations": "Not a metric survey. Google ground panorama pending; optical calibration unknown."
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://taichung.travel/content/images/attractions/3028/1024x768_image_635183992864720156.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/793/",
+      "credit": "Miyahara official operator exterior photograph, photographer/date unspecified; supplementary arcade/entrance photos Taichung City tourism",
+      "kind": "real ground or oblique photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-arcade.jpg",
+      "image": "https://taichung.travel/content/images/attractions/50377/1024x768_image637711220563322498.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/793/",
+      "credit": "Miyahara official operator exterior photograph, photographer/date unspecified; supplementary arcade/entrance photos Taichung City tourism",
+      "kind": "real ground or oblique photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-exterior-1.jpg",
+      "image": "https://taichung.travel/content/images/attractions/3036/1024x768_Filedata635183996512718203.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/793/",
+      "credit": "Miyahara official operator exterior photograph, photographer/date unspecified; supplementary arcade/entrance photos Taichung City tourism",
+      "kind": "real ground or oblique photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-exterior-2.jpg",
+      "image": "https://taichung.travel/content/images/attractions/3039/1024x768_Filedata635183996561712343.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/793/",
+      "credit": "Miyahara official operator exterior photograph, photographer/date unspecified; supplementary arcade/entrance photos Taichung City tourism",
+      "kind": "real ground or oblique photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "operator-exterior.jpg",
+      "image": "https://www.miyahara.com.tw/en/img/index1200_610_0318.jpg",
+      "page": "https://www.miyahara.com.tw/en/index.html",
+      "credit": "Miyahara official operator exterior photograph, photographer/date unspecified; supplementary arcade/entrance photos Taichung City tourism",
+      "kind": "real ground or oblique photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    }
+  ]
+}

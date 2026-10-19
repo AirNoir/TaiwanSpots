@@ -1,19 +1,19 @@
 {
   "spotId": "miyahara",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Miyahara building",
     "silhouette": "Red-brick Japanese-era building with arched windows on a street corner"
   },
-  "crop": "The red-brick facade on Zhongshan Road and the canal nearby. Not the whole downtown.",
+  "crop": "Miyahara heritage arcade, modern lattice-glass upper addition and immediate street corner. Green River west across street lies outside crop.",
   "heroScale": 1,
-  "orientation": "verify: Green River runs just east of the building",
+  "orientation": "Green River lies WEST of Miyahara across Luchuan East Street, not east. Building occupies northeast corner of Zhongshan Road / Luchuan East Street, verified satellite.",
   "lockedGeometry": [
-    "corner building on a city street",
-    "canal close by",
-    "low downtown buildings"
+    "retained red-brick arcade",
+    "modern dark diagonal-lattice upper addition",
+    "street corner entrance"
   ],
   "lockedIdentity": [
     "red brick facade with arches",
@@ -30,18 +30,29 @@
     "street trees"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-exterior-1.jpg",
+      "official-arcade.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg",
+      "real-photo.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.1379,120.6836,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Red-brick facade with an ice-cream cone"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "pending: actual ground and aerial/satellite cross-check; Google street/360 capture pending; unseen details simplified",
+    "identity": "pending user review: Red-brick long arcade, chamfered entrance and dark diamond-lattice upper addition recognizable. Roof equipment and visitors/planting simplified; canal omitted outside crop, correct west relationship documented.",
+    "style": "self-checked preview: tactile Q miniature, elevated weak perspective, warm people, no backdrop; not user approved",
+    "collection": "self-checked preview: full square-style ivory base and native image; 512px main subject readable; boundary and exact physical dimensions not measured"
   }
 }

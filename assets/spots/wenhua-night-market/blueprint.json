@@ -1,19 +1,19 @@
 {
   "spotId": "wenhua-night-market",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Wenhua Road night market",
     "silhouette": "Long straight street lined with food stalls leading from a fountain roundabout"
   },
-  "crop": "The section of Wenhua Road with stalls and the fountain roundabout at one end. Not the whole city.",
+  "crop": "Short finite representative food-stall section south of roundabout; distant fountain omitted to keep coherent human scale.",
   "heroScale": 1,
-  "orientation": "verify: OSM has no POI; exact market section along Wenhua Road needs confirmation",
+  "orientation": "Market extends SOUTH from Zhongshan Road central fountain roundabout toward Chuiyang Road, supported by Tourism Administration map and Google satellite. Model crops one finite street section, not whole 600m route.",
   "lockedGeometry": [
-    "straight street closed to traffic at night",
-    "roundabout with fountain at the end",
-    "low shophouses on both sides"
+    "straight north-south pedestrian street",
+    "attached shopfronts",
+    "food carts beneath shop awnings"
   ],
   "lockedIdentity": [
     "turkey rice stalls",
@@ -30,18 +30,26 @@
     "steaming pots"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.4785,120.4488138,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "A bowl of turkey rice by a little fountain"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "pending: actual ground and aerial/satellite cross-check; Google street/360 capture pending; unseen details simplified",
+    "identity": "pending user review: Finite representative food street, people/vendor/cart scale coherent, no invented roundabout in short crop. Generic shopfront interpretation, exact shop locations/signs not verified; geographic identity requires user review.",
+    "style": "self-checked preview: tactile Q miniature, elevated weak perspective, warm people, no backdrop; not user approved",
+    "collection": "self-checked preview: full square-style ivory base and native image; 512px main subject readable; boundary and exact physical dimensions not measured"
   }
 }

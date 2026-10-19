@@ -1,0 +1,35 @@
+{
+  "id": "taichung-opera",
+  "title": "taichung-opera real reference",
+  "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/942/",
+  "image": "https://taichung.travel/content/images/attractions/24379/1024x768_image636446329449094547.jpg",
+  "credit": "Taichung City tourism official site, photographer unspecified",
+  "capture": "Not specified",
+  "accessed": "2026-10-19",
+  "usage": "Visual reference only; no assertion of commercial photo redistribution rights. Photo not used as final texture.",
+  "description": "Front plaza lies east toward Huilai Road, Huimin Road west; roof garden and front water/plaza verified from official aerial and Google satellite 2026-10-19.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.1629,120.6405,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar; attribution retained",
+      "kind": "satellite overhead",
+      "capture": "Not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Front plaza lies east toward Huilai Road, Huimin Road west; roof garden and front water/plaza verified from official aerial and Google satellite 2026-10-19."
+      ],
+      "limitations": "Not a metric survey. Google ground panorama pending; optical calibration unknown."
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://taichung.travel/content/images/attractions/12675/1024x768_Filedata635550367359758229.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/942/",
+      "credit": "Taichung City tourism official site, photographer unspecified",
+      "kind": "real ground or oblique photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    }
+  ]
+}
