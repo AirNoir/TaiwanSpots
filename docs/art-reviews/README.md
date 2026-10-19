@@ -1,16 +1,17 @@
 # Latest imported art reviews
 
-Source: 2026-10-19-latest.json; 45 entries, 37 approved, 8 adjust. Visual acceptance only, no automatic geographic approval or runtime promotion.
+Source: [round3 input](2026-10-19-round3-input.json). Six adjust entries plus Qingtiangang pending with an explicit correction = seven revisions. All 38 other current previews are retained by user instruction; missing checkmarks do not request regeneration. Longteng v4 explicitly accepted. Older review statuses are historical only.
 
-| Spot | Reviewed model | Requested edit |
-|---|---|---|
-| 高美濕地 (gaomei) | review-v3.png | 調整比例, 希望帶入遠方的風力發電景色 |
-| 鹿港老街 (lukang) | review-v3.png | 雖然街道已經貫通, 但是透視比例錯誤, 本身基座應該無法承載那麼長的街道 |
-| 七星潭 (qixingtan) | review-v2.png | 感覺不夠壯闊, 比例可以再調整 |
-| 伯朗大道 (brown-avenue) | review-v3.png | 希望比例可以縮小一點, 讓道路有延伸感 |
-| 瑞穗牧場 (ruisui) | review-v2.png | 希望比例縮小, 不然覺得農場太小了 |
-| 龍騰斷橋 (longteng-bridge) | review-v2.png | google map 是呈現廣角感覺, 所以看起來建築是斜斜的, 你產生的圖不應該讓橋墩是斜的～ |
-| 奮起湖 (fenqihu) | review-v2.png | 你的參考圖也是廣角的, 實際鐵軌跟車庫都是水平的, 你做的有視覺化向下凹陷的問題 |
-| 士林夜市 (shilin-night-market) | review-v4.png | 道路為什麼直衝捷運站入口? |
+| Spot | Reviewed model | Request |
+| --- | --- | --- |
+| 士林夜市 | review-v6.png | 劍潭站是在美術館的對面 |
+| 中正紀念堂 | review-v5.png | 建築物傾斜了, 是你用廣角視角去做,但是微縮模型移軸角度, 不應該產生這種感覺。 |
+| 檜意森活村 | review-v1.png | 建築物傾斜了, 是你用廣角視角去做,但是微縮模型移軸角度, 不應該產生這種感覺。 |
+| 奮起湖 | review-v4.png | 有進步了, 但要用微縮模型移軸角度 |
+| 故宮南院 | review-v1.png | https://udn.com/news/story/6885/9545144 https://tlife.thsrc.com.tw/en/article/5942 角度跟建築似乎跟真實有出入, 主建築後面有個灰色拱形的建築好像都消失了, 水平也不是移軸感 |
+| 擎天崗 | review-v1.png | 不該用廣角視角去做,要用微縮模型移軸角度 |
+| 白沙屯拱天宮 | review-v1.png | 建築可以再縮小一點, 人潮多一點, 製造香火鼎盛的感覺 |
 
-本輪 8 張修訂已完成自檢並更新預覽，仍待使用者驗收。詳見 [2026-10-19 第二輪修訂](2026-10-19-round2-review.md) 與 [進度](2026-10-19-round2-progress.json)。
+[Current progress](2026-10-19-round3-progress.json). Preview only; user acceptance pending, no runtime promotion.
+
+Seven revisions completed and selected for preview; user acceptance pending. [Revision details](2026-10-19-round3-review.md).

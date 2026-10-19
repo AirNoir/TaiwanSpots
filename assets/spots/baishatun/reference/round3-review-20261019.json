@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-19",
+  "reviewSource": "docs/art-reviews/2026-10-19-round3-input.json",
+  "correction": "建築可以再縮小一點, 人潮多一點, 製造香火鼎盛的感覺",
+  "method": "Presentation/camera edits use existing real ground and aerial references without changing original photos. NPM Southern reconstructed from two new independent published aerial photos plus satellite. No calibrated lens inversion or exact orthographic camera calibration claimed.",
+  "limitations": "Denser pilgrimage crowd is artistic scene population, not an observed crowd count/event reconstruction.",
+  "originalPhotosModified": false,
+  "geographicAndUserApproval": "pending"
+}

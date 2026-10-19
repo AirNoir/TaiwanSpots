@@ -32,6 +32,32 @@
       "observations": "Draft zigzag bridge corrected to flowing curved Zhimei Bridge. Real glass/vertical-fin facade and satellite lake/bridge relationship used. Full roof shape, bridge structure and exact bank geometry remain pending.",
       "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
       "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "museum-supplied-overview-2026.jpg",
+      "page": "https://udn.com/news/story/6885/9545144",
+      "image": "https://uc.udn.com.tw/photo/t3/2026/06/04/35011599.jpg",
+      "kind": "aerial",
+      "credit": "NPM Southern Branch supplied / Central News Agency via UDN",
+      "published": "2026-06-04",
+      "capture": "Not exposed",
+      "accessed": "2026-10-19",
+      "observations": "Front oblique aerial shows deep gray curved solid rear mass, glazed ribbed wing and grounds.",
+      "license": "Copyright retained by source; reference only, no license clearance asserted",
+      "usage": "Reference only; not runtime texture or bundled App asset."
+    },
+    {
+      "local": "tlife-overview-2025.jpg",
+      "page": "https://tlife.thsrc.com.tw/en/article/5942",
+      "image": "https://tlife.thsrc.com.tw/s3/quill/20250527-zZQblKYO17NSHgYI3Xmb5rgyNKIG1ehden0i3GAh.jpg",
+      "kind": "aerial",
+      "credit": "TLife / Taiwan High Speed Rail; individual image photographer not specified beside this photo",
+      "published": "2025-06-01",
+      "capture": "Not exposed",
+      "accessed": "2026-10-19",
+      "observations": "Opposite aerial shows broad dark sculptural shell and bridge arch with hangers and smooth curved deck, not staircase.",
+      "license": "Copyright retained by source; reference only, no license clearance asserted",
+      "usage": "Reference only; not runtime texture or bundled App asset."
     }
   ],
   "officialContext": [

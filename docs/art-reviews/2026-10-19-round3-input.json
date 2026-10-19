@@ -1,0 +1,81 @@
+{
+  "exportedAt": "2026-10-19T08:34:22.914Z",
+  "colorPreview": {
+    "saturation": 0.88,
+    "scope": "model-display-only"
+  },
+  "reviews": [
+    {
+      "id": "shilin-night-market",
+      "name": "士林夜市",
+      "status": "adjust",
+      "note": "劍潭站是在美術館的對面",
+      "model": "review-v6.png",
+      "photo": "google-ground-jiantan-review.jpg",
+      "updatedAt": "2026-10-19T08:24:51.078Z"
+    },
+    {
+      "id": "cks-memorial",
+      "name": "中正紀念堂",
+      "status": "adjust",
+      "note": "建築物傾斜了, 是你用廣角視角去做,但是微縮模型移軸角度, 不應該產生這種感覺。",
+      "model": "review-v5.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:27:22.862Z"
+    },
+    {
+      "id": "longteng-bridge",
+      "name": "龍騰斷橋",
+      "status": "approved",
+      "note": "",
+      "model": "review-v4.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:27:34.444Z"
+    },
+    {
+      "id": "hinoki-village",
+      "name": "檜意森活村",
+      "status": "adjust",
+      "note": "建築物傾斜了, 是你用廣角視角去做,但是微縮模型移軸角度, 不應該產生這種感覺。",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:27:54.242Z"
+    },
+    {
+      "id": "fenqihu",
+      "name": "奮起湖",
+      "status": "adjust",
+      "note": "有進步了, 但要用微縮模型移軸角度",
+      "model": "review-v4.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:34:11.137Z"
+    },
+    {
+      "id": "npm-southern",
+      "name": "故宮南院",
+      "status": "adjust",
+      "note": "https://udn.com/news/story/6885/9545144\nhttps://tlife.thsrc.com.tw/en/article/5942\n角度跟建築似乎跟真實有出入, 主建築後面有個灰色拱形的建築好像都消失了, 水平也不是移軸感",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:31:48.360Z"
+    },
+    {
+      "id": "qingtiangang",
+      "name": "擎天崗",
+      "status": "pending",
+      "note": "不該用廣角視角去做,要用微縮模型移軸角度",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:33:00.850Z"
+    },
+    {
+      "id": "baishatun",
+      "name": "白沙屯拱天宮",
+      "status": "adjust",
+      "note": "建築可以再縮小一點, 人潮多一點, 製造香火鼎盛的感覺",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:33:44.902Z"
+    }
+  ]
+}

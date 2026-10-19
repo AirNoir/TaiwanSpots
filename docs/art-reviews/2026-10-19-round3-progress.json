@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-19",
+  "input": "2026-10-19-round3-input.json",
+  "scope": "Current actionable list ONLY comes from round3 input: 6 adjust + 1 pending with explicit note. User says unmarked spots can remain; preserve all other current selections. Older statuses retained as history, NOT active regeneration requests. No automatic geographic approval or runtime promotion.",
+  "items": [
+    {
+      "id": "shilin-night-market",
+      "name": "士林夜市",
+      "status": "adjust",
+      "note": "劍潭站是在美術館的對面",
+      "model": "review-v6.png",
+      "photo": "google-ground-jiantan-review.jpg",
+      "updatedAt": "2026-10-19T08:24:51.078Z",
+      "output": "review-v7.png",
+      "state": "self-checked-preview",
+      "userAcceptance": "pending",
+      "limitations": "Station entry moved to a distinct block across road from TPAC; exact traffic configuration and current roof/entrance completeness remain pending.",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "selfCheck": "Distinct station-side block across intervening road from TPAC, pedestrian sidewalks and entry separation checked."
+    },
+    {
+      "id": "cks-memorial",
+      "name": "中正紀念堂",
+      "status": "adjust",
+      "note": "建築物傾斜了, 是你用廣角視角去做,但是微縮模型移軸角度, 不應該產生這種感覺。",
+      "model": "review-v5.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:27:22.862Z",
+      "output": "review-v6.png",
+      "state": "self-checked-preview",
+      "userAcceptance": "pending",
+      "limitations": "Do not erase genuine battered wall profile or curved roof while removing optical lean.",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "selfCheck": "More elevated, reduced-perspective miniature framing; central roof/body alignment and upright posts checked while real wall batter retained."
+    },
+    {
+      "id": "hinoki-village",
+      "name": "檜意森活村",
+      "status": "adjust",
+      "note": "建築物傾斜了, 是你用廣角視角去做,但是微縮模型移軸角度, 不應該產生這種感覺。",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:27:54.242Z",
+      "output": "review-v2.png",
+      "state": "self-checked-preview",
+      "userAcceptance": "pending",
+      "limitations": "Existing satellite labels obscure exact building plan; roof/house layout remains simplified, not a survey.",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "selfCheck": "Higher miniature view; upright timber posts and consistent eave projection, garden/house identity retained."
+    },
+    {
+      "id": "fenqihu",
+      "name": "奮起湖",
+      "status": "adjust",
+      "note": "有進步了, 但要用微縮模型移軸角度",
+      "model": "review-v4.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:34:11.137Z",
+      "output": "review-v5.png",
+      "state": "self-checked-preview",
+      "userAcceptance": "pending",
+      "limitations": "Flat rail yard retained while changing viewpoint; exact switch topology/current shed appearance remains pending.",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "selfCheck": "Elevated miniature view with visible roofs; empty tracks and yard/garage floor remain level, no new rolling stock."
+    },
+    {
+      "id": "npm-southern",
+      "name": "故宮南院",
+      "status": "adjust",
+      "note": "https://udn.com/news/story/6885/9545144\nhttps://tlife.thsrc.com.tw/en/article/5942\n角度跟建築似乎跟真實有出入, 主建築後面有個灰色拱形的建築好像都消失了, 水平也不是移軸感",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:31:48.360Z",
+      "output": "review-v3.png",
+      "state": "self-checked-preview",
+      "userAcceptance": "pending",
+      "limitations": "Both interwoven museum masses and smooth-deck arch bridge; exclude unrelated new construction. Hidden elevations/roof details simplified.",
+      "intermediate": {
+        "file": "review-v2.png",
+        "reason": "Museum/bridge silhouette improved, but right plinth corner cropped; not selected."
+      },
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "selfCheck": "Both dark curved solid shell and ribbed glazed wing visible, arched Zhimei Bridge with smooth deck restored; no staircase bridge."
+    },
+    {
+      "id": "qingtiangang",
+      "name": "擎天崗",
+      "status": "pending",
+      "note": "不該用廣角視角去做,要用微縮模型移軸角度",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:33:00.850Z",
+      "output": "review-v2.png",
+      "state": "self-checked-preview",
+      "userAcceptance": "pending",
+      "limitations": "Preserve real rolling grass slopes; buffalo/visitor scale stylized.",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "selfCheck": "Elevated miniature view with rolling grassland, stone trail and small buffalo; no panoramic horizon or scene board."
+    },
+    {
+      "id": "baishatun",
+      "name": "白沙屯拱天宮",
+      "status": "adjust",
+      "note": "建築可以再縮小一點, 人潮多一點, 製造香火鼎盛的感覺",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T08:33:44.902Z",
+      "output": "review-v2.png",
+      "state": "self-checked-preview",
+      "userAcceptance": "pending",
+      "limitations": "Denser pilgrimage crowd is artistic scene population, not an observed crowd count/event reconstruction.",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "selfCheck": "Temple scale reduced, denser small pilgrims, facade remains visible and contained; no extra temple."
+    }
+  ],
+  "method": "Presentation/camera edits use existing real ground and aerial references without changing original photos. NPM Southern reconstructed from two new independent published aerial photos plus satellite. No calibrated lens inversion or exact orthographic camera calibration claimed.",
+  "runtimePromoted": false,
+  "retainedOtherPreviews": 38,
+  "generation": "Built-in imagegen; seven selected native PNG revisions plus one discarded framing attempt; no upscaling.",
+  "checks": {
+    "lint": "pass",
+    "typecheck": "pass",
+    "spots": "159 spots, 0 errors",
+    "assets": "159 spots, 0 errors, 517 existing missing-asset warnings",
+    "registry": "regenerated; src unchanged",
+    "diff": "pass"
+  }
+}

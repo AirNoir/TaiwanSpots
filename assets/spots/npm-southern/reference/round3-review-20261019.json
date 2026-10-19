@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-19",
+  "reviewSource": "docs/art-reviews/2026-10-19-round3-input.json",
+  "correction": "https://udn.com/news/story/6885/9545144\nhttps://tlife.thsrc.com.tw/en/article/5942\n角度跟建築似乎跟真實有出入, 主建築後面有個灰色拱形的建築好像都消失了, 水平也不是移軸感",
+  "method": "Presentation/camera edits use existing real ground and aerial references without changing original photos. NPM Southern reconstructed from two new independent published aerial photos plus satellite. No calibrated lens inversion or exact orthographic camera calibration claimed.",
+  "limitations": "Both interwoven museum masses and smooth-deck arch bridge; exclude unrelated new construction. Hidden elevations/roof details simplified.",
+  "originalPhotosModified": false,
+  "geographicAndUserApproval": "pending"
+}

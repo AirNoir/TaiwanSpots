@@ -5,14 +5,16 @@
   "productionTier": "standard",
   "hero": {
     "name": "NPM Southern Branch museum",
-    "silhouette": "Fluid dark modern museum with curving glass curtain walls and a curved white Zhimei Bridge across the lake"
+    "silhouette": "Interwoven dark solid curving museum shell and lighter ribbed glazed public wing, approached across lake by slender arched Zhimei Bridge with smooth curved deck"
   },
   "crop": "The museum building, lake and the curved bridges. Not the whole park.",
   "heroScale": 1,
   "orientation": "Zhimei Bridge curves north from the southern lake bank toward the museum; lake also extends east of the building (satellite and museum official introduction).",
   "lockedGeometry": [
-    "artificial lake south and east of the museum",
-    "flowing curved Zhimei Bridge approaching from the south",
+    "dark solid volume west and ribbed glazed public wing east, interwoven with middle connecting circulation volume",
+    "curved dark shell crest visibly rises behind glazed public wing",
+    "artificial lake south and east of museum",
+    "Zhimei Bridge approaching from south: actual arch rib and vertical hangers over smoothly curved walking deck, not staircase",
     "flat landscaped parkland"
   ],
   "lockedIdentity": [
@@ -31,7 +33,9 @@
   ],
   "references": {
     "aerial": [
-      "google-satellite-review.jpg"
+      "google-satellite-review.jpg",
+      "museum-supplied-overview-2026.jpg",
+      "tlife-overview-2025.jpg"
     ],
     "ground": [
       "real-photo.jpg",
@@ -41,6 +45,8 @@
       "google-satellite-review.jpg"
     ],
     "representative": [
+      "tlife-overview-2025.jpg",
+      "museum-supplied-overview-2026.jpg",
       "real-photo.jpg"
     ]
   },
@@ -52,6 +58,6 @@
     "identity": "pending",
     "style": "pass",
     "collection": "pass",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Draft zigzag bridge corrected to flowing curved Zhimei Bridge. Real glass/vertical-fin facade and satellite lake/bridge relationship used. Full roof shape, bridge structure and exact bank geometry remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending."
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Draft zigzag bridge corrected to flowing curved Zhimei Bridge. Real glass/vertical-fin facade and satellite lake/bridge relationship used. Full roof shape, bridge structure and exact bank geometry remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-19 round3 review-v3.png: User correction: https://udn.com/news/story/6885/9545144\nhttps://tlife.thsrc.com.tw/en/article/5942\n角度跟建築似乎跟真實有出入, 主建築後面有個灰色拱形的建築好像都消失了, 水平也不是移軸感 Self-check: Both dark curved solid shell and ribbed glazed wing visible, arched Zhimei Bridge with smooth deck restored; no staircase bridge. Limitations: Both interwoven museum masses and smooth-deck arch bridge; exclude unrelated new construction. Hidden elevations/roof details simplified. Preview only, user acceptance pending; weak-perspective reconstruction, not a calibrated camera/lens correction."
   }
 }

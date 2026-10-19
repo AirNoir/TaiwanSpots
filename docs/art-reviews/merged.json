@@ -17,6 +17,12 @@
       "originalFilename": "islandia-art-review (2).json",
       "sha256": "e18f04eb85fc83fb9bd49557e20f1b84ae4d8526c316c81602dceb9ec96e94a1",
       "exportedAt": "2026-10-19T06:44:46.283Z"
+    },
+    {
+      "file": "2026-10-19-round3-input.json",
+      "originalFilename": "islandia-art-review (3).json",
+      "sha256": "a8f781366ad1d2db6210470859aef290a6c2fd49392d0349dc75acf6e2125bb1",
+      "exportedAt": "2026-10-19T08:34:22.914Z"
     }
   ],
   "colorPreview": {
@@ -24,12 +30,12 @@
     "scope": "model-display-only"
   },
   "counts": {
-    "approved": 37,
-    "adjust": 8,
-    "pending": 0
+    "approved": 33,
+    "adjust": 11,
+    "pending": 1
   },
   "missingReviewIds": [],
-  "scope": "User visual review only; does not change blueprint geographic QA, runtime selection or image files.",
+  "scope": "Current actionable list ONLY comes from round3 input: 6 adjust + 1 pending with explicit note. User says unmarked spots can remain; preserve all other current selections. Older statuses retained as history, NOT active regeneration requests. No automatic geographic approval or runtime promotion.",
   "reviews": [
     {
       "id": "palace-museum",
@@ -259,11 +265,11 @@
     {
       "id": "cks-memorial",
       "name": "中正紀念堂",
-      "status": "approved",
-      "note": "",
+      "status": "adjust",
+      "note": "建築物傾斜了, 是你用廣角視角去做,但是微縮模型移軸角度, 不應該產生這種感覺。",
       "model": "review-v5.png",
       "photo": "real-photo.jpg",
-      "updatedAt": "2026-10-19T06:31:02.535Z"
+      "updatedAt": "2026-10-19T08:27:22.862Z"
     },
     {
       "id": "ximending",
@@ -286,11 +292,11 @@
     {
       "id": "longteng-bridge",
       "name": "龍騰斷橋",
-      "status": "adjust",
-      "note": "google map 是呈現廣角感覺, 所以看起來建築是斜斜的, 你產生的圖不應該讓橋墩是斜的～",
-      "model": "review-v2.png",
+      "status": "approved",
+      "note": "",
+      "model": "review-v4.png",
       "photo": "real-photo.jpg",
-      "updatedAt": "2026-10-19T06:32:59.488Z"
+      "updatedAt": "2026-10-19T08:27:34.444Z"
     },
     {
       "id": "sanyi-woodcarving",
@@ -313,20 +319,20 @@
     {
       "id": "hinoki-village",
       "name": "檜意森活村",
-      "status": "approved",
-      "note": "",
+      "status": "adjust",
+      "note": "建築物傾斜了, 是你用廣角視角去做,但是微縮模型移軸角度, 不應該產生這種感覺。",
       "model": "review-v1.png",
       "photo": "real-photo.jpg",
-      "updatedAt": "2026-10-19T06:33:15.351Z"
+      "updatedAt": "2026-10-19T08:27:54.242Z"
     },
     {
       "id": "fenqihu",
       "name": "奮起湖",
       "status": "adjust",
-      "note": "你的參考圖也是廣角的, 實際鐵軌跟車庫都是水平的, 你做的有視覺化向下凹陷的問題",
-      "model": "review-v2.png",
+      "note": "有進步了, 但要用微縮模型移軸角度",
+      "model": "review-v4.png",
       "photo": "real-photo.jpg",
-      "updatedAt": "2026-10-19T06:37:31.349Z"
+      "updatedAt": "2026-10-19T08:34:11.137Z"
     },
     {
       "id": "dongshi",
@@ -340,11 +346,11 @@
     {
       "id": "npm-southern",
       "name": "故宮南院",
-      "status": "approved",
-      "note": "",
+      "status": "adjust",
+      "note": "https://udn.com/news/story/6885/9545144\nhttps://tlife.thsrc.com.tw/en/article/5942\n角度跟建築似乎跟真實有出入, 主建築後面有個灰色拱形的建築好像都消失了, 水平也不是移軸感",
       "model": "review-v1.png",
       "photo": "real-photo.jpg",
-      "updatedAt": "2026-10-19T06:37:47.388Z"
+      "updatedAt": "2026-10-19T08:31:48.360Z"
     },
     {
       "id": "guishan-island",
@@ -377,10 +383,10 @@
       "id": "shilin-night-market",
       "name": "士林夜市",
       "status": "adjust",
-      "note": "道路為什麼直衝捷運站入口?",
-      "model": "review-v4.png",
-      "photo": "real-photo-jiantan-market-2018.jpg",
-      "updatedAt": "2026-10-19T06:43:56.571Z"
+      "note": "劍潭站是在美術館的對面",
+      "model": "review-v6.png",
+      "photo": "google-ground-jiantan-review.jpg",
+      "updatedAt": "2026-10-19T08:24:51.078Z"
     },
     {
       "id": "beitou-thermal-valley",
@@ -394,11 +400,11 @@
     {
       "id": "qingtiangang",
       "name": "擎天崗",
-      "status": "approved",
-      "note": "",
+      "status": "pending",
+      "note": "不該用廣角視角去做,要用微縮模型移軸角度",
       "model": "review-v1.png",
       "photo": "real-photo.jpg",
-      "updatedAt": "2026-10-19T06:44:24.925Z"
+      "updatedAt": "2026-10-19T08:33:00.850Z"
     },
     {
       "id": "maokong",
@@ -412,11 +418,11 @@
     {
       "id": "baishatun",
       "name": "白沙屯拱天宮",
-      "status": "approved",
-      "note": "",
+      "status": "adjust",
+      "note": "建築可以再縮小一點, 人潮多一點, 製造香火鼎盛的感覺",
       "model": "review-v1.png",
       "photo": "real-photo.jpg",
-      "updatedAt": "2026-10-19T06:44:40.089Z"
+      "updatedAt": "2026-10-19T08:33:44.902Z"
     },
     {
       "id": "huoyanshan",
@@ -436,5 +442,14 @@
       "photo": "real-photo.jpg",
       "updatedAt": "2026-10-19T06:26:59.667Z"
     }
+  ],
+  "activeWorkIds": [
+    "shilin-night-market",
+    "cks-memorial",
+    "hinoki-village",
+    "fenqihu",
+    "npm-southern",
+    "qingtiangang",
+    "baishatun"
   ]
 }
