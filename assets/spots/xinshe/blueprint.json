@@ -1,23 +1,23 @@
 {
   "spotId": "xinshe",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Xinshe flower fields",
-    "silhouette": "Broad terraces of colourful flower beds on a plateau with hills behind"
+    "silhouette": "Level seasonal cosmos flower beds divided by farm lanes"
   },
-  "crop": "The flower festival fields. Not the whole Xinshe plateau.",
+  "crop": "Finite historic seasonal cosmos field excerpt and intersecting farm walking lanes; no annual giant art installation.",
   "heroScale": 1,
-  "orientation": "verify: hills rise to the east",
+  "orientation": "Actual flower fields around Xingyi Street/Xiexing Street south of nursery research station; flat rectangular agricultural plots, not hillside terraces. Satellite checked2026-10-19; flower layout historical seasonal, exact2026 layout pending.",
   "lockedGeometry": [
-    "flat plateau fields",
-    "hills behind",
-    "farm lanes between the fields"
+    "level rectangular agricultural plots",
+    "straight farm walking lanes between beds",
+    "low greenhouse context beyond fields"
   ],
   "lockedIdentity": [
-    "colourful flower stripes",
-    "sunflowers and cosmos"
+    "yellow-orange cosmos beds",
+    "pink cosmos beds and farm lanes"
   ],
   "doNotInvent": [
     "tulip windmills",
@@ -26,21 +26,30 @@
   ],
   "allowedMiniatureDetails": [
     "visitors",
-    "flower arches"
+    "bicycle held on walking lane"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/place/Xinshe+Sea+of+Flowers/@24.2025387,120.8101749,783m/data=!3m2!1e3!4b1!4m6!3m5!1s0x34691edaaaaaaaab:0xfda0dfa9a7a4e3c8!8m2!3d24.2025387!4d120.8127498!16s%2Fg%2F11hc_symzs?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Stripes of colourful flowers"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ground and independent satellite checked; capture dates unknown, precise dimensions/unseen surfaces and Street View pending. Actual flower fields around Xingyi Street/Xiexing Street south of nursery research station; flat rectangular agricultural plots, not hillside terraces. Satellite checked2026-10-19; flower layout historical seasonal, exact2026 layout pending.",
+    "identity": "pending user review: Level yellow-orange/pink cosmos beds and right-angle farm lanes with visitors/bicycle; no windmill/fantasy castle/mountain terraces. Historic seasonal field interpretation, not current2026 layout. Bed count, greenhouse placement and flower detail are simplified, pending user acceptance.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

@@ -1,29 +1,29 @@
 {
   "spotId": "jinguashi",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
-    "name": "Jinguashi Gold Museum",
-    "silhouette": "Mountain mining settlement with wooden Japanese houses and mine entrances"
+    "name": "Jinguashi Benshan Fifth Tunnel",
+    "silhouette": "Round brick mine portal with narrow gauge ore cart and dark timber hut"
   },
-  "crop": "The museum area with Japanese houses and the Benshan mine tunnel. Not the whole coast.",
+  "crop": "Benshan Fifth Tunnel portal, adjacent dark timber hut and short mine cart track only.",
   "heroScale": 1,
-  "orientation": "verify: sea lies to the north",
+  "orientation": "Benshan Fifth Tunnel southeast of Japanese staff dormitory area, portal at wooded slope; satellite partly cloud-obscured, exact building depths pending.",
   "lockedGeometry": [
-    "steep hillside",
-    "terraced paths",
-    "mine tunnel entrance"
+    "brick portal in wooded slope",
+    "adjacent dark timber hut",
+    "short mine track"
   ],
   "lockedIdentity": [
-    "wooden Japanese-era houses",
-    "mine cart track",
-    "golden brick"
+    "Benshan Fifth Tunnel round brick portal",
+    "ore wagon and short narrow gauge track"
   ],
   "doNotInvent": [
     "skyscrapers",
     "lakes",
-    "snow"
+    "snow",
+    "outdoor giant goldbar"
   ],
   "allowedMiniatureDetails": [
     "tiny visitors",
@@ -31,18 +31,26 @@
     "helmets"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/search/%E6%9C%AC%E5%B1%B1%E4%BA%94%E5%9D%91/@25.1064478,121.8578415,389m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "official-second.jpg"
+    ]
   },
   "worldToken": {
     "element": "Mine cart with a gold bar"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ground and independent satellite checked; capture dates unknown, precise dimensions/unseen surfaces and Street View pending. Benshan Fifth Tunnel southeast of Japanese staff dormitory area, portal at wooded slope; satellite partly cloud-obscured, exact building depths pending.",
+    "identity": "pending user review: Round brick portal, short ore track/cart and adjacent dark hut match real photo relations; indoor goldbar omitted. Forecourt crop excludes distant houses/sea. Cloud-obscured satellite limits exact depths; rock/planting details and hidden tunnel remain simplified/pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

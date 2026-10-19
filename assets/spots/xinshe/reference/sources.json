@@ -1,0 +1,48 @@
+{
+  "id": "xinshe",
+  "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/633",
+  "credit": "Taichung City Tourism",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; page/filename timestamp is not capture date",
+  "usage": "Visual reference only. Photographer/source rights retained; no blanket commercial license or texture reuse granted.",
+  "description": "Actual flower fields around Xingyi Street/Xiexing Street south of nursery research station; flat rectangular agricultural plots, not hillside terraces. Satellite checked2026-10-19; flower layout historical seasonal, exact2026 layout pending.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://taichung.travel/content/images/attractions/660/1024x768_Filedata635173666363955078.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/633",
+      "credit": "Taichung City Tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://taichung.travel/content/images/attractions/4124/1024x768_Filedata635187409528884141.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/633",
+      "credit": "Taichung City Tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://taichung.travel/content/images/attractions/12829/1024x768_Filedata635563121888640203.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/633",
+      "credit": "Taichung City Tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/place/Xinshe+Sea+of+Flowers/@24.2025387,120.8101749,783m/data=!3m2!1e3!4b1!4m6!3m5!1s0x34691edaaaaaaaab:0xfda0dfa9a7a4e3c8!8m2!3d24.2025387!4d120.8127498!16s%2Fg%2F11hc_symzs?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "credit": "Google Maps / Airbus / CNES / Maxar; attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Not exposed; copyright2026 is not capture date",
+      "observations": "Actual flower fields around Xingyi Street/Xiexing Street south of nursery research station; flat rectangular agricultural plots, not hillside terraces. Satellite checked2026-10-19; flower layout historical seasonal, exact2026 layout pending.",
+      "limitations": "Not metric survey, no calibrated distortion correction. Jinguashi partly cloud obscured."
+    }
+  ]
+}

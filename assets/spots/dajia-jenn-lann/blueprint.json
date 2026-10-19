@@ -1,15 +1,15 @@
 {
   "spotId": "dajia-jenn-lann",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Jenn Lann Temple",
     "silhouette": "Grand Mazu temple with layered ornate roofs on a town street"
   },
-  "crop": "The temple facade and front street. Not the whole Dajia district.",
+  "crop": "Front hall and immediate forecourt/short Shuntian Road margin; no whole town or festival procession.",
   "heroScale": 1,
-  "orientation": "verify: temple faces Shuntian Road",
+  "orientation": "Temple along southeast side of diagonal Shuntian Road, Jianggong Road northeast; frontal courtyard opens northwest toward Shuntian Road. Satellite checked2026-10-19.",
   "lockedGeometry": [
     "temple on a busy street",
     "front plaza",
@@ -30,18 +30,27 @@
     "flags"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.34523,120.62357,391m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Temple roof with firecracker smoke"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ground and independent satellite checked; capture dates unknown, precise dimensions/unseen surfaces and Street View pending. Temple along southeast side of diagonal Shuntian Road, Jianggong Road northeast; frontal courtyard opens northwest toward Shuntian Road. Satellite checked2026-10-19.",
+    "identity": "pending user review: v2 removes invented forecourt enclosure and unsupported tall corner garden trees. Carved columns, tiled ornate roof and open entry forecourt retained. Ridge ornament/side hall depths and illegible inscription details are artistic simplification, pending user acceptance.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

@@ -1,0 +1,48 @@
+{
+  "id": "dajia-jenn-lann",
+  "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/609",
+  "credit": "Taichung City Tourism",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; page/filename timestamp is not capture date",
+  "usage": "Visual reference only. Photographer/source rights retained; no blanket commercial license or texture reuse granted.",
+  "description": "Temple along southeast side of diagonal Shuntian Road, Jianggong Road northeast; frontal courtyard opens northwest toward Shuntian Road. Satellite checked2026-10-19.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://taichung.travel/content/images/attractions/50373/1024x768_image637711201252869546.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/609",
+      "credit": "Taichung City Tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://taichung.travel/content/images/attractions/31525/1024x768_image637090692889168704.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/609",
+      "credit": "Taichung City Tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://taichung.travel/content/images/attractions/31526/1024x768_image637090693059814935.jpg",
+      "page": "https://www.taichung.travel/zh-tw/Attractions/Intro/609",
+      "credit": "Taichung City Tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@24.34523,120.62357,391m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "credit": "Google Maps / Airbus / CNES / Maxar; attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Not exposed; copyright2026 is not capture date",
+      "observations": "Temple along southeast side of diagonal Shuntian Road, Jianggong Road northeast; frontal courtyard opens northwest toward Shuntian Road. Satellite checked2026-10-19.",
+      "limitations": "Not metric survey, no calibrated distortion correction. Jinguashi partly cloud obscured."
+    }
+  ]
+}

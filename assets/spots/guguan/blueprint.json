@@ -1,23 +1,23 @@
 {
   "spotId": "guguan",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
-    "name": "Guguan hot spring village",
-    "silhouette": "Small hot spring town in a deep river gorge with a red suspension bridge"
+    "name": "Guguan public park footbath",
+    "silhouette": "Curved blue mosaic shallow footbath beneath open red pergola and pine tree"
   },
-  "crop": "The village, river and suspension bridge. Not the surrounding peaks.",
+  "crop": "One actual public park curved blue-mosaic footbath and its open red pergola, immediate paving and pine tree only; bridge/river/hotels outside crop.",
   "heroScale": 1,
-  "orientation": "verify: Dajia River flows west through the gorge",
+  "orientation": "Guguan Park on southern riverbank north of Dongguan Road. Suspensionbridge west/northwest of park is separate from selected footbath crop. Satellite checked2026-10-19.",
   "lockedGeometry": [
-    "deep gorge",
-    "river with boulders",
-    "village on the terrace"
+    "shallow curved blue mosaic footbath",
+    "open red pergola posts around pool terrace",
+    "pine tree and poolside timber platform"
   ],
   "lockedIdentity": [
-    "red suspension bridge",
-    "steaming baths"
+    "blue mosaic public footbath",
+    "open red pergola and pine"
   ],
   "doNotInvent": [
     "beaches",
@@ -30,18 +30,27 @@
     "steam"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-third.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.20354,121.00663,392m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
-    "element": "Steaming tub by a red bridge"
+    "element": "Blue mosaic footbath and red pergola"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ground and independent satellite checked; capture dates unknown, precise dimensions/unseen surfaces and Street View pending. Guguan Park on southern riverbank north of Dongguan Road. Suspensionbridge west/northwest of park is separate from selected footbath crop. Satellite checked2026-10-19.",
+    "identity": "pending user review: v2 restores actual timber poolside deck. Actual curved blue mosaic footbath and open red pergola/pine crop; separate bridge/river and alternative rock-rim pool omitted. Relaxed seated visitors share scale, no steamcloud. Pool/pergola exact curve/post count and current operation pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

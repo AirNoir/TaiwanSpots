@@ -1,23 +1,23 @@
 {
   "spotId": "wuqi-port",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Wuqi fishing harbour",
     "silhouette": "Flat harbour basin with fishing boats and a large fish market hall"
   },
-  "crop": "The fishing harbour basin and market. Not the industrial Taichung port.",
+  "crop": "Blue-white market tower and immediate entrance forecourt with adjacent short market wing; quay/boats/water outside crop.",
   "heroScale": 1,
-  "orientation": "verify: OSM places the basin in Qingshui district; sunset west over the strait",
+  "orientation": "Fish market north shore of fishing basin; market roof and blue-white tower north of quay, water south. Satellite checked2026-10-19.",
   "lockedGeometry": [
-    "flat reclaimed coast",
-    "rectangular harbour basin",
-    "market hall on the quay"
+    "blue-white drum tower",
+    "adjacent shallow arched fish-market roof",
+    "paved entrance and landscaped lawn"
   ],
   "lockedIdentity": [
-    "fishing boats",
-    "seafood market stalls"
+    "blue domed white tower",
+    "fish-market entrance"
   ],
   "doNotInvent": [
     "cliffs",
@@ -30,18 +30,28 @@
     "sunset"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-second.jpg",
+      "real-photo.jpg",
+      "official-third.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/search/%E6%A2%A7%E6%A3%B2%E6%BC%81%E6%B8%AF%E8%A7%80%E5%85%89%E9%AD%9A%E5%B8%82/@24.2935741,120.5188964,783m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "official-second.jpg"
+    ]
   },
   "worldToken": {
     "element": "Fishing boat with a fish"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ground and independent satellite checked; capture dates unknown, precise dimensions/unseen surfaces and Street View pending. Fish market north shore of fishing basin; market roof and blue-white tower north of quay, water south. Satellite checked2026-10-19.",
+    "identity": "pending user review: Actual blue-domed white drum tower, arched market wing and curved landscaped forecourt/dolphin sculptures identify crop. Quay/boats/water omitted to avoid moving port geography. Forecourt furnishings, seafood-stall arrangement and exact tower height/roof-bay count remain pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

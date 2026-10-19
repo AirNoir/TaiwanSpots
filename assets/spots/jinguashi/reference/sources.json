@@ -1,0 +1,39 @@
+{
+  "id": "jinguashi",
+  "page": "https://newtaipei.travel/zh-tw/attractions/detail/109620",
+  "credit": "New Taipei City tourism / culture bureau",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; page/filename timestamp is not capture date",
+  "usage": "Visual reference only. Photographer/source rights retained; no blanket commercial license or texture reuse granted.",
+  "description": "Benshan Fifth Tunnel southeast of Japanese staff dormitory area, portal at wooded slope; satellite partly cloud-obscured, exact building depths pending.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/48378/1920x1080_attractions-image-g5y7pqzz70ctlabtbcz-eq.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/109620",
+      "credit": "New Taipei City tourism / culture bureau",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/167/1024x768_43116b78-8920-4f53-9c77-e6a2308ea84e.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/109620",
+      "credit": "New Taipei City tourism / culture bureau",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/search/%E6%9C%AC%E5%B1%B1%E4%BA%94%E5%9D%91/@25.1064478,121.8578415,389m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "credit": "Google Maps / Airbus / CNES / Maxar; attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Not exposed; copyright2026 is not capture date",
+      "observations": "Benshan Fifth Tunnel southeast of Japanese staff dormitory area, portal at wooded slope; satellite partly cloud-obscured, exact building depths pending.",
+      "limitations": "Not metric survey, no calibrated distortion correction. Jinguashi partly cloud obscured."
+    }
+  ]
+}

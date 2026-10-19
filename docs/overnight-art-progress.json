@@ -735,51 +735,101 @@
       "id": "jinguashi",
       "name": "金瓜石黃金博物館",
       "hero": "Jinguashi Gold Museum",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Ground and independent satellite checked; capture dates unknown, precise dimensions/unseen surfaces and Street View pending. Benshan Fifth Tunnel southeast of Japanese staff dormitory area, portal at wooded slope; satellite partly cloud-obscured, exact building depths pending.",
+        "identity": "pending user review: Round brick portal, short ore track/cart and adjacent dark hut match real photo relations; indoor goldbar omitted. Forecourt crop excludes distant houses/sea. Cloud-obscured satellite limits exact depths; rock/planting details and hidden tunnel remain simplified/pending.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T16:36:58.748958+00:00"
     },
     {
       "id": "dajia-jenn-lann",
       "name": "大甲鎮瀾宮",
       "hero": "Jenn Lann Temple",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Ground and independent satellite checked; capture dates unknown, precise dimensions/unseen surfaces and Street View pending. Temple along southeast side of diagonal Shuntian Road, Jianggong Road northeast; frontal courtyard opens northwest toward Shuntian Road. Satellite checked2026-10-19.",
+        "identity": "pending user review: v2 removes invented forecourt enclosure and unsupported tall corner garden trees. Carved columns, tiled ornate roof and open entry forecourt retained. Ridge ornament/side hall depths and illegible inscription details are artistic simplification, pending user acceptance.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T16:36:58.749853+00:00"
     },
     {
       "id": "wuqi-port",
       "name": "梧棲漁港",
       "hero": "Wuqi fishing harbour",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "official-second.jpg",
+        "real-photo.jpg",
+        "official-third.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Ground and independent satellite checked; capture dates unknown, precise dimensions/unseen surfaces and Street View pending. Fish market north shore of fishing basin; market roof and blue-white tower north of quay, water south. Satellite checked2026-10-19.",
+        "identity": "pending user review: Actual blue-domed white drum tower, arched market wing and curved landscaped forecourt/dolphin sculptures identify crop. Quay/boats/water omitted to avoid moving port geography. Forecourt furnishings, seafood-stall arrangement and exact tower height/roof-bay count remain pending.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T16:36:58.750665+00:00"
     },
     {
       "id": "xinshe",
       "name": "新社花海",
       "hero": "Xinshe flower fields",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Ground and independent satellite checked; capture dates unknown, precise dimensions/unseen surfaces and Street View pending. Actual flower fields around Xingyi Street/Xiexing Street south of nursery research station; flat rectangular agricultural plots, not hillside terraces. Satellite checked2026-10-19; flower layout historical seasonal, exact2026 layout pending.",
+        "identity": "pending user review: Level yellow-orange/pink cosmos beds and right-angle farm lanes with visitors/bicycle; no windmill/fantasy castle/mountain terraces. Historic seasonal field interpretation, not current2026 layout. Bed count, greenhouse placement and flower detail are simplified, pending user acceptance.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T16:36:58.751363+00:00"
     },
     {
       "id": "guguan",
       "name": "谷關溫泉",
       "hero": "Guguan hot spring village",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "official-third.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Ground and independent satellite checked; capture dates unknown, precise dimensions/unseen surfaces and Street View pending. Guguan Park on southern riverbank north of Dongguan Road. Suspensionbridge west/northwest of park is separate from selected footbath crop. Satellite checked2026-10-19.",
+        "identity": "pending user review: v2 restores actual timber poolside deck. Actual curved blue mosaic footbath and open red pergola/pine crop; separate bridge/river and alternative rock-rim pool omitted. Relaxed seated visitors share scale, no steamcloud. Pool/pergola exact curve/post count and current operation pending.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T16:36:58.751939+00:00"
     },
     {
       "id": "wushantou",
@@ -1592,7 +1642,7 @@
       "userAcceptance": "pending"
     }
   ],
-  "lastUpdatedAt": "2026-10-19T13:50:51.772275+00:00",
+  "lastUpdatedAt": "2026-10-19T16:36:58.751945+00:00",
   "automation": {
     "id": "islandia",
     "status": "ACTIVE",
@@ -1601,14 +1651,14 @@
   },
   "lastBatch": {
     "ids": [
-      "nanfangao",
-      "jimmy-square",
-      "suao-cold-spring",
-      "pingxi",
-      "houtong"
+      "jinguashi",
+      "dajia-jenn-lann",
+      "wuqi-port",
+      "xinshe",
+      "guguan"
     ],
     "generated": 5,
-    "additionalRevisions": 1,
-    "result": "4 self-checked previews; Nanfangao needs close real quay references,1attempt rejected; no source invention or generic final selection"
+    "additionalRevisions": 2,
+    "result": "5 self-checked previews, Dajia open-forecourt and Guguan timberdeck revisions; narrow crops prevent moving separate features; all pending user acceptance"
   }
 }
