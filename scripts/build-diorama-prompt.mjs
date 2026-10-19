@@ -18,11 +18,13 @@ const bp = JSON.parse(readFileSync(join(root, 'assets/spots', id, 'blueprint.jso
 
 const MASTER_ART_DIRECTION = [
   'Cute Q-proportion premium physical miniature collectible, macro product photography',
-  'Common base reference is Tamsui collection/review-v3.png: match ONLY ivory base thickness, rim width and rounded bevels, never its backdrop card or hardware',
+  'Common base reference is approved Tamsui collection/review-v4.png: match ONLY ivory base thickness, rim width and small rounded corners, never its scenery',
   'Consistent 45-degree downward camera elevation, diagonally above a front corner; two sides of the base clearly visible',
   'Handcrafted collectible miniature',
   'Compact self-contained world',
   'Accurate landmark geometry from real photographic references',
+  'Screen real references for wide-angle edge stretch, barrel/fisheye distortion, panorama projection and low-angle vertical convergence before reconstructing geometry; cross-check independent ground views and aerial plans, do not copy distorted photo proportions into the model',
+  'Normalize the miniature to a distant-camera near-orthographic architectural product view with upright verticals and coherent ground planes; preserve actual curved roofs, sloping walls and terrain. Missing lens coefficients mean exact inverse-lens calibration remains unverified; never treat two crops of the same panorama as independent angles',
   'Gently rounded Q forms with realistic miniature-scale material surfaces: stone grain, worn paving, glazed tiles, wood grain, restrained glass and metal',
   'Slightly chubby miniature proportions, preserving the landmark silhouette',
   'Soft diffused studio daylight and restrained tilt-shift focus matched to the approved Jiufen review style',
@@ -31,7 +33,7 @@ const MASTER_ART_DIRECTION = [
   'Very soft shadows',
   'Clean background',
   'Warm cream palette and ONE shallow square ivory plinth with rounded corners, equal-length sides in world space; not a circle, oval or elongated rectangle',
-  'Manufactured base perimeter has FOUR straight sides and FOUR right-angle corners with modest soft corner radius visually matched to Tamsui review-v3 (about 6% of side length), with long straight sides retained; natural shoreline is contained inside, never defines the plinth outline',
+  'Manufactured base perimeter has FOUR straight sides and FOUR right-angle turns joined by small smooth rounded corners matched to Tamsui review-v4 (about 6% of side length); NO flat cut-off chamfer corner segments, extra polygon edges or notches; natural shoreline stays inside and never defines the plinth outline',
   'Camera pulled back: entire square base and all subject tops visible with 10–15% clean outer margin',
   'Foreground and middle-distance objects are tactile physical models, grounded on the same base',
   'Scale the COMPLETE scene footprint, including every building, terrain mass, tree crown and rock, to fit INSIDE the square base with a visible continuous ivory perimeter buffer; nothing floats outside or spills over the plinth edge. If the content is too large, reduce the entire coherent miniature scale rather than clipping landmarks or extending the terrain beyond the base',

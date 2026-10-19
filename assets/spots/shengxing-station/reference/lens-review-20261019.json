@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-19",
+  "scope": "Reference review for normalized miniature perspective",
+  "observations": [
+    "Primary photo EXIF: 24mm full-frame, Sony ILCE-7RM2 / FE24-70mm F4, 2019-03-26.",
+    "Added independent heritage facade photograph, capture date/lens unknown.",
+    "Roof is corrugated sheet metal, not clay tiles. Perspective normalization must not flatten true roof slope or wooded terrain."
+  ],
+  "method": "Multi-view shape/plan crosscheck and near-orthographic miniature reconstruction. No global homography across depth-varying scene.",
+  "originalPhotosModified": false,
+  "exactInverseLensCalibration": "pending: calibrated intrinsics and distortion coefficients unavailable",
+  "generatedModelIsGeographicEvidence": false
+}

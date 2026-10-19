@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-19",
+  "scope": "Reference review for normalized miniature perspective",
+  "observations": [
+    "TPAC 360 screenshot is a perspective viewport of a panorama; source FOV/pose and camera coefficients unavailable.",
+    "Sphere shape, cube verticals and real angled supports checked against satellite; tilted supports are not distortion errors.",
+    "Jiantan photo covers entrance only; full station roof and exact current street geometry stay pending."
+  ],
+  "method": "Multi-view shape/plan crosscheck and near-orthographic miniature reconstruction. No global homography across depth-varying scene.",
+  "originalPhotosModified": false,
+  "exactInverseLensCalibration": "pending: calibrated intrinsics and distortion coefficients unavailable",
+  "generatedModelIsGeographicEvidence": false
+}

@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-19",
+  "scope": "First priority continuation: 3 previously failed previews. Multi-view model perspective normalization; not exact pixel lens calibration. Original photos unchanged.",
+  "items": [
+    {
+      "id": "cks-memorial",
+      "previous": "review-v3.png",
+      "output": "review-v5.png",
+      "prompt": "assets/spots/cks-memorial/collection/review-v5-prompt.txt",
+      "state": "self-reviewed-preview",
+      "userAcceptance": "pending",
+      "rejectedAttempts": [
+        {
+          "file": "review-v4.png",
+          "reason": "Inherited clipped corners or outboard rail from the previous model; failed presentation QA."
+        }
+      ],
+      "presentationQa": "pass (visual self-check only)",
+      "qa": "First v4 attempt retained polygon front edge; fresh v5 rebuilt from independent real views and satellite without the rejected model. Four-sided square rim and upright coherent massing visually checked; actual battered walls and curved blue roof retained. 89 individual treads, exact terrace dimensions and landscaping are not verified.",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "exactLensCalibration": "pending"
+    },
+    {
+      "id": "shengxing-station",
+      "previous": "review-v2.png",
+      "output": "review-v4.png",
+      "prompt": "assets/spots/shengxing-station/collection/review-v4-prompt.txt",
+      "state": "self-reviewed-preview",
+      "userAcceptance": "pending",
+      "rejectedAttempts": [
+        {
+          "file": "review-v3.png",
+          "reason": "Inherited clipped corners or outboard rail from the previous model; failed presentation QA."
+        }
+      ],
+      "presentationQa": "pass (visual self-check only)",
+      "qa": "First v3 attempt retained chamfered front. Fresh v4 built from two independent facade photos and satellite; square support with a small curved nearest corner, footprint containment and level platform visually checked. Corrugated metal roof corrected. Exact rail/platform-side arrangement and surrounding buildings remain pending; no new usable Street View capture obtained.",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "exactLensCalibration": "pending"
+    },
+    {
+      "id": "shilin-night-market",
+      "previous": "review-v2.png",
+      "output": "review-v4.png",
+      "prompt": "assets/spots/shilin-night-market/collection/review-v4-prompt.txt",
+      "state": "self-reviewed-preview",
+      "userAcceptance": "pending",
+      "rejectedAttempts": [
+        {
+          "file": "review-v3.png",
+          "reason": "Inherited clipped corners or outboard rail from the previous model; failed presentation QA."
+        }
+      ],
+      "presentationQa": "pass (visual self-check only)",
+      "qa": "First v3 retained outboard rail/notched plinth. Fresh v4 removes projecting track and keeps a compact station-entry/platform crop inside the square. Upright TPAC cube, real sphere/support legs and coherent street plane visually checked. Exact station architecture, current shops and road distances remain simplified and pending.",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "exactLensCalibration": "pending"
+    }
+  ],
+  "summary": {
+    "spots": 3,
+    "generatedImages": 6,
+    "selectedPreviews": 3,
+    "userAcceptance": "pending",
+    "exactInverseLensCalibration": "pending: coefficients unavailable",
+    "otherSelectedSpotsChanged": false,
+    "runtimePromotion": false
+  },
+  "validation": {
+    "lint": "pass",
+    "typecheck": "pass",
+    "assetsCheck": "159 spots / 0 errors / 517 existing warnings",
+    "spotsCheck": "159 spots / 0 errors",
+    "selectionCheck": "Exactly 3 selected versions changed; other 42 preserved; no src changes"
+  }
+}

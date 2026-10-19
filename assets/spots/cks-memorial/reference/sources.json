@@ -32,6 +32,17 @@
       "observations": "Distinct octagonal blue roof over square hall body and square stepped terrace, broad westward stair/plaza approach and surrounding park.",
       "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
       "usage": "Reference only, not final texture"
+    },
+    {
+      "file": "commons-oblique-2015.jpg",
+      "title": "Chiang Kai-shek memorial hall — independent oblique view",
+      "page": "https://commons.wikimedia.org/wiki/File:Chiang_Kai-shek_memorial_hall.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Chiang_Kai-shek_memorial_hall.jpg",
+      "author": "Shubham2712",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "date": "2015-05-16",
+      "description": "Independent oblique ground view, Nikon D3200, 18mm / 27mm full-frame equivalent. Still wide-angle and upward-looking; used with satellite plan, not treated as distortion-free or distant frontal photograph. Original unchanged."
     }
   ],
   "officialContext": [

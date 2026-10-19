@@ -21,6 +21,16 @@
       "observations": "Captured for subsequent visual audit; acquisition date not displayed.",
       "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
       "usage": "Reference only, not final texture"
+    },
+    {
+      "file": "heritage-front-wide.jpg",
+      "title": "勝興火車站 — 文化部獨立正面照片",
+      "page": "https://tcmb.culture.tw/zh-tw/detail?id=19990416000001&indexCode=BOCH_CountryCulture_11",
+      "image": "https://data.boch.gov.tw/old_upload/_upload/Assets_new/building/7429/photo/G035苗栗縣勝興火車站(2).jpg",
+      "author": "文化部文化資產局 / 國家文化資產網",
+      "license": "See source site; reference only; not a runtime texture",
+      "date": "Capture date not exposed",
+      "description": "Independent facade photo from different distance; original unchanged. Used for window/door/roof proportions, not exact lens calibration."
     }
   ],
   "officialContext": []

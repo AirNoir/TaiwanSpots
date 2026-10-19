@@ -5,7 +5,7 @@
   "productionTier": "standard",
   "hero": {
     "name": "Shengxing Station building",
-    "silhouette": "Small Japanese-era wooden station house with a dark tiled roof beside a single track"
+    "silhouette": "Small Japanese-era cream timber-clapboard station house with a grey corrugated metal gable roof beside railway tracks"
   },
   "crop": "The station house, platform and track with the old-street slope behind. Not the tunnels or the bridge ruins.",
   "heroScale": 1,
@@ -16,7 +16,7 @@
     "forested hills around"
   ],
   "lockedIdentity": [
-    "dark grey tiled roof on wooden walls",
+    "grey corrugated metal gable roof on cream wooden clapboard walls, confirmed by photos and cultural heritage record",
     "station name board without readable text",
     "highest-point marker beside the track"
   ],
@@ -35,7 +35,8 @@
       "google-satellite-review.jpg"
     ],
     "ground": [
-      "real-photo.jpg"
+      "real-photo.jpg",
+      "heritage-front-wide.jpg"
     ],
     "map": [
       "google-satellite-review.jpg"
@@ -50,8 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "fail",
-    "collection": "fail",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Official Tourism Administration facade photograph plus satellite plan used. Default panorama failed to load and is excluded; usable station-exterior Street View audit remains pending. Rail count/platform details require review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-15 review-v2.png: Imported user review repair: 靠近邊緣的建築與樹木部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍 Self-check: Scene scale reduced and tree/eave footprint pulled inside; however front corner now has an extra clipped segment, so square-base QA remains failed and needs follow-up. Hero facade and rails preserved. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Official Tourism Administration facade photograph plus satellite plan used. Default panorama failed to load and is excluded; usable station-exterior Street View audit remains pending. Rail count/platform details require review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-15 review-v2.png: Imported user review repair: 靠近邊緣的建築與樹木部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍 Self-check: Scene scale reduced and tree/eave footprint pulled inside; however front corner now has an extra clipped segment, so square-base QA remains failed and needs follow-up. Hero facade and rails preserved. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit. | 2026-10-19 source audit: original station photograph EXIF shows Sony ILCE-7RM2, FE 24-70mm F4 ZA OSS at 24mm / 24mm equivalent, captured 2019-03-26. Roof material corrected to metal corrugated sheet from mistaken tiled-roof brief; exact track count remains pending. | 2026-10-19 review-v4.png: First v3 attempt retained chamfered front. Fresh v4 built from two independent facade photos and satellite; square support with a small curved nearest corner, footprint containment and level platform visually checked. Corrugated metal roof corrected. Exact rail/platform-side arrangement and surrounding buildings remain pending; no new usable Street View capture obtained. Model perspective normalized through multi-view reasoning, not calibrated photo undistortion. Original photos unchanged. Presentation self-check only; geographic/identity QA and user acceptance remain pending."
   }
 }

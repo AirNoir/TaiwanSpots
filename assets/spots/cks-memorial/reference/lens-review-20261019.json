@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-19",
+  "scope": "Reference review for normalized miniature perspective",
+  "observations": [
+    "real-photo.jpg and google-ground-review.jpg depict the same panorama/angle; count as one ground viewpoint.",
+    "Added independent 2015 oblique ground view (27mm equivalent); this is also wide, not a distortion-free replacement.",
+    "Satellite plan constrains square body and octagonal roof; roof eave curves and wall batter are real architecture."
+  ],
+  "method": "Multi-view shape/plan crosscheck and near-orthographic miniature reconstruction. No global homography across depth-varying scene.",
+  "originalPhotosModified": false,
+  "exactInverseLensCalibration": "pending: calibrated intrinsics and distortion coefficients unavailable",
+  "generatedModelIsGeographicEvidence": false
+}
