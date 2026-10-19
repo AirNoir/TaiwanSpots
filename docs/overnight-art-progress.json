@@ -327,51 +327,104 @@
       "id": "anping-treehouse",
       "name": "安平樹屋",
       "hero": "Anping Tree House",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "official-roots.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
+        "identity": "pending user review: v1 edge foliage reduced/inset in v2, roofless brick bays, root-wrapped walls and steel stair readable. Exact room grid/roots simplified; no metric plan reconstruction.",
+        "style": "self-checked preview: physical Q miniature, elevated weak perspective, warm visitors, no backdrop; not user approved",
+        "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T12:18:38.044470+00:00"
     },
     {
       "id": "nccta",
       "name": "國立傳統藝術中心",
       "hero": "Traditional arts old street",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
+        "identity": "pending user review: v1 right foliage cropped; v2 fully framed/inset. Red-brick arcades, pale bands and artisan/puppet interaction preserved. Temporary event banners and distant river/temple omitted; exact bay ordering inferred.",
+        "style": "self-checked preview: physical Q miniature, elevated weak perspective, warm visitors, no backdrop; not user approved",
+        "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T12:18:38.045753+00:00"
     },
     {
       "id": "luodong-night-market",
       "name": "羅東夜市",
       "hero": "Luodong night market",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
+        "identity": "pending user review: Finite park-edge market excerpt, food-cart/person scale and warm interactions readable, no invented circular ring road. Actual individual stall placement and park planting simplified; geographic identity pending user review.",
+        "style": "self-checked preview: physical Q miniature, elevated weak perspective, warm visitors, no backdrop; not user approved",
+        "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T12:18:38.046440+00:00"
     },
     {
       "id": "taipingshan",
       "name": "太平山",
       "hero": "Taipingshan Villa",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
+        "identity": "pending user review: Stairs rise from low foreground toward upper forest; terraced lodge excerpt and purple maples readable, no invented train. Exact lodge frontage/landings/rails simplified from distant and ground references; not current survey.",
+        "style": "self-checked preview: physical Q miniature, elevated weak perspective, warm visitors, no backdrop; not user approved",
+        "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T12:18:38.047306+00:00"
     },
     {
       "id": "sun-yat-sen-memorial",
       "name": "國父紀念館",
       "hero": "Sun Yat-sen Memorial Hall",
-      "state": "queued",
+      "state": "needs-regeneration",
       "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "references": [
+        "real-photo.jpg",
+        "official-night.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
+        "identity": "failed self-check: v3 rotates entry toward a corner and displaces south reflecting-pool axis; actual hall plan not reliably preserved",
+        "style": "partial: toy/material/base qualities present, but architectural alignment failed after two revisions",
+        "collection": "needs-regeneration: no qualifying preview selected; rejected native versions preserved under collection/rejected"
+      },
+      "userAcceptance": "pending",
+      "candidatePreview": "rejected/review-v3.png",
+      "attempts": 3,
+      "reason": "Two targeted revisions failed to preserve real entrance/pool axis and base alignment. Rebuild from clean style + real references next time; do not reuse failed target."
     },
     {
       "id": "raohe-night-market",
@@ -1384,7 +1437,7 @@
       "userAcceptance": "pending"
     }
   ],
-  "lastUpdatedAt": "2026-10-19T11:38:50.647921+00:00",
+  "lastUpdatedAt": "2026-10-19T12:18:38.049868+00:00",
   "automation": {
     "id": "islandia",
     "status": "ACTIVE",
@@ -1393,14 +1446,14 @@
   },
   "lastBatch": {
     "ids": [
-      "taichung-opera",
-      "miyahara",
-      "wenhua-night-market",
-      "tainan-confucius",
-      "shennong-street"
+      "anping-treehouse",
+      "nccta",
+      "luodong-night-market",
+      "taipingshan",
+      "sun-yat-sen-memorial"
     ],
     "generated": 5,
-    "additionalRevisions": 3,
-    "result": "5 self-checked previews, geographic/user acceptance pending"
+    "additionalRevisions": 4,
+    "result": "4 self-checked previews; sun-yat-sen-memorial needs clean regeneration, not selected"
   }
 }

@@ -1,0 +1,45 @@
+{
+  "id": "nccta",
+  "title": "nccta real-scene reference",
+  "page": "https://travel.yilan.gov.tw/zh-tw/attraction/231/",
+  "credit": "Yilan County tourism official photographs, photographer and capture date unspecified",
+  "capture": "Not specified; publication date is not capture date",
+  "accessed": "2026-10-19",
+  "description": "Dongshan River is WEST of park, Wubin Road and parking EAST; main street runs roughly north-south. Satellite checked 2026-10-19; original east-river draft corrected.",
+  "usage": "Visual reference only, not used as final texture. Third-party photo rights retained; no blanket commercial redistribution clearance asserted.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.6855,121.8237,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar, attribution retained",
+      "kind": "satellite overhead",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Dongshan River is WEST of park, Wubin Road and parking EAST; main street runs roughly north-south. Satellite checked 2026-10-19; original east-river draft corrected."
+      ],
+      "limitations": "Not a metric survey; ground panorama not captured; photo optical calibration unknown."
+    },
+    {
+      "local": "real-photo.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/23597/1920x1080_attractions-image-zhuvkdkqe0spgpqzpmug0w.jpg",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/231/",
+      "credit": "Yilan County tourism official photographs, photographer and capture date unspecified",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/Image/23590/?r=1760943937043",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/231/",
+      "credit": "Yilan County tourism official photographs, photographer and capture date unspecified",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    }
+  ],
+  "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/23597/1920x1080_attractions-image-zhuvkdkqe0spgpqzpmug0w.jpg"
+}

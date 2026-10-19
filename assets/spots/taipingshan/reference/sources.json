@@ -1,0 +1,45 @@
+{
+  "id": "taipingshan",
+  "title": "taipingshan real-scene reference",
+  "page": "https://tps.forest.gov.tw/TPSWeb/wSite/ct?ctNode=241&xItem=4263",
+  "credit": "Forestry and Nature Conservation Agency Taipingshan official album; attachment dates approximately 2016, actual capture date and photographer not specified",
+  "capture": "Not specified; publication date is not capture date",
+  "accessed": "2026-10-19",
+  "description": "Central stair climbs northwest from lodge/restaurant terraces toward upper forest/Chen-An Temple area; Bong Bong train station and line lie west of main lodge area, not east. Satellite and ground photos crosschecked 2026-10-19.",
+  "usage": "Visual reference only, not used as final texture. Third-party photo rights retained; no blanket commercial redistribution clearance asserted.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.4938038,121.5351625,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar, attribution retained",
+      "kind": "satellite overhead",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Central stair climbs northwest from lodge/restaurant terraces toward upper forest/Chen-An Temple area; Bong Bong train station and line lie west of main lodge area, not east. Satellite and ground photos crosschecked 2026-10-19."
+      ],
+      "limitations": "Not a metric survey; ground panorama not captured; photo optical calibration unknown."
+    },
+    {
+      "local": "real-photo.jpg",
+      "image": "https://tps.forest.gov.tw/TPSWeb/wSite/public/Attachment/f1467033670913.jpg",
+      "page": "https://tps.forest.gov.tw/TPSWeb/wSite/ct?ctNode=241&xItem=4263",
+      "credit": "Forestry and Nature Conservation Agency Taipingshan official album; attachment dates approximately 2016, actual capture date and photographer not specified",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://tps.forest.gov.tw/TPSWeb/wSite/public/Attachment/f1467033695796.jpg",
+      "page": "https://tps.forest.gov.tw/TPSWeb/wSite/ct?ctNode=241&xItem=4263",
+      "credit": "Forestry and Nature Conservation Agency Taipingshan official album; attachment dates approximately 2016, actual capture date and photographer not specified",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    }
+  ],
+  "image": "https://tps.forest.gov.tw/TPSWeb/wSite/public/Attachment/f1467033670913.jpg"
+}

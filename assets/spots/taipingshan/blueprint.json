@@ -1,24 +1,23 @@
 {
   "spotId": "taipingshan",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Taipingshan Villa",
     "silhouette": "Mountain lodge on a misty ridge with a long stairway and old forest railway"
   },
-  "crop": "The villa area, central stairway and logging rail line. Not the whole forest reserve.",
+  "crop": "Finite lower central stairway and adjacent lodge terrace among purple-leaf maples; train station/line and distant ridge outside crop.",
   "heroScale": 1,
-  "orientation": "verify: Bong Bong train line runs east from the villa",
+  "orientation": "Central stair climbs northwest from lodge/restaurant terraces toward upper forest/Chen-An Temple area; Bong Bong train station and line lie west of main lodge area, not east. Satellite and ground photos crosschecked 2026-10-19.",
   "lockedGeometry": [
-    "steep ridge",
-    "long stairway up to the lodge",
-    "narrow logging rail on a contour"
+    "uphill central stone stairs and landings",
+    "purple-leaf maples",
+    "terraced low lodge wing"
   ],
   "lockedIdentity": [
-    "cypress and hemlock forest",
-    "sea of clouds",
-    "small Bong Bong train"
+    "lower central stair climbing toward forest",
+    "mountain lodge terraces"
   ],
   "doNotInvent": [
     "snowfields",
@@ -31,18 +30,27 @@
     "mossy logs"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.4938038,121.5351625,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Tiny forest train in mist and cypress"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
+    "identity": "pending user review: Stairs rise from low foreground toward upper forest; terraced lodge excerpt and purple maples readable, no invented train. Exact lodge frontage/landings/rails simplified from distant and ground references; not current survey.",
+    "style": "self-checked preview: physical Q miniature, elevated weak perspective, warm visitors, no backdrop; not user approved",
+    "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured"
   }
 }

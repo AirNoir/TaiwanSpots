@@ -1,19 +1,19 @@
 {
   "spotId": "luodong-night-market",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Luodong night market",
     "silhouette": "Ring of food stalls wrapped around a small city park"
   },
-  "crop": "The market streets around Zhongshan Park. Not the whole town.",
+  "crop": "Short park-edge nightmarket street excerpt and small adjacent Zhongshan Park planting strip, not all market streets or full park.",
   "heroScale": 1,
-  "orientation": "verify: market surrounds the park block",
+  "orientation": "Market streets edge Zhongshan Park, Gongyuan Road on east and Minquan Road south, Minsheng Road north; satellite checked 2026-10-19. Do not invent circular ring road.",
   "lockedGeometry": [
-    "square park block",
-    "stall-lined streets around it",
-    "low town buildings"
+    "food market street beside Zhongshan Park",
+    "compact food carts",
+    "planted park edge"
   ],
   "lockedIdentity": [
     "scallion pancake stalls",
@@ -30,18 +30,27 @@
     "lanterns"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.6766,121.7696,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Scallion pancake stall beside a park tree"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
+    "identity": "pending user review: Finite park-edge market excerpt, food-cart/person scale and warm interactions readable, no invented circular ring road. Actual individual stall placement and park planting simplified; geographic identity pending user review.",
+    "style": "self-checked preview: physical Q miniature, elevated weak perspective, warm visitors, no backdrop; not user approved",
+    "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured"
   }
 }

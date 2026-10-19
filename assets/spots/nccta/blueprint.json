@@ -1,19 +1,19 @@
 {
   "spotId": "nccta",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Traditional arts old street",
     "silhouette": "Recreated Qing-style shop street with a temple and stage beside a river"
   },
-  "crop": "The old street, temple and opera stage by the Dongshan River. Not the whole park.",
+  "crop": "Finite Minyi Street artisan shop excerpt with small live-performance gathering; distant river, temple and stage omitted rather than compressed together.",
   "heroScale": 1,
-  "orientation": "verify: river runs along the east side",
+  "orientation": "Dongshan River is WEST of park, Wubin Road and parking EAST; main street runs roughly north-south. Satellite checked 2026-10-19; original east-river draft corrected.",
   "lockedGeometry": [
-    "straight old street",
-    "riverbank promenade",
-    "open-air stage"
+    "red-brick artisan street arcades",
+    "full-depth attached shop houses",
+    "gray paving and cobble strips"
   ],
   "lockedIdentity": [
     "red-brick shopfronts",
@@ -31,18 +31,27 @@
     "visitors"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.6855,121.8237,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Little opera stage with a puppet"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
+    "identity": "pending user review: v1 right foliage cropped; v2 fully framed/inset. Red-brick arcades, pale bands and artisan/puppet interaction preserved. Temporary event banners and distant river/temple omitted; exact bay ordering inferred.",
+    "style": "self-checked preview: physical Q miniature, elevated weak perspective, warm visitors, no backdrop; not user approved",
+    "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured"
   }
 }

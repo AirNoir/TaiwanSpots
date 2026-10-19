@@ -1,0 +1,56 @@
+{
+  "id": "sun-yat-sen-memorial",
+  "title": "sun-yat-sen-memorial real-scene reference",
+  "page": "https://commons.wikimedia.org/wiki/File:國立國父紀念館正面外觀_20130908.jpg",
+  "credit": "Nyx Ning, 2013-09-08, CC BY-SA 3.0 via Wikimedia Commons/Panoramio; supplementary reflection 高讚賢 via Taipei tourism",
+  "capture": "2013-09-08",
+  "accessed": "2026-10-19",
+  "description": "Hall front and main reflecting pool SOUTH; Cuihu is farther SOUTHWEST and outside this crop. East side Yixian Road, north Zhongxiao Road; satellite checked 2026-10-19. Model depicts historical clean exterior, not verified 2026 construction state.",
+  "usage": "Visual reference only, not used as final texture. Third-party photo rights retained; no blanket commercial redistribution clearance asserted.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@25.0400,121.5603,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar, attribution retained",
+      "kind": "satellite overhead",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Hall front and main reflecting pool SOUTH; Cuihu is farther SOUTHWEST and outside this crop. East side Yixian Road, north Zhongxiao Road; satellite checked 2026-10-19. Model depicts historical clean exterior, not verified 2026 construction state."
+      ],
+      "limitations": "Not a metric survey; ground panorama not captured; photo optical calibration unknown."
+    },
+    {
+      "local": "official-night.jpg",
+      "image": "https://www.travel.taipei/content/images/attractions/456099/640x480_attractions-image-t9beyfp1r0-miil2_bckcw.jpg",
+      "page": "https://media.taiwan.net.tw/zh-tw/portal/travel/details/attraction_379000000a_000024",
+      "credit": "Nyx Ning, 2013-09-08, CC BY-SA 3.0 via Wikimedia Commons/Panoramio; supplementary reflection 高讚賢 via Taipei tourism",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "district-tiny-overview.jpg",
+      "image": "https://www-ws.gov.taipei/001/Upload/public/MMO/XYDO/國父紀念館01.jpg",
+      "page": "https://xydo.gov.taipei/News_Content.aspx?n=BB80282AEF97F274&s=151FA8BA4DB4B0C0",
+      "credit": "Nyx Ning, 2013-09-08, CC BY-SA 3.0 via Wikimedia Commons/Panoramio; supplementary reflection 高讚賢 via Taipei tourism",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www-ws.gov.taipei/001/Upload/public/MMO/XYDO/國父紀念館02.jpg",
+      "page": "https://xydo.gov.taipei/News_Content.aspx?n=BB80282AEF97F274&s=151FA8BA4DB4B0C0",
+      "credit": "Nyx Ning, 2013-09-08, CC BY-SA 3.0 via Wikimedia Commons/Panoramio; supplementary reflection 高讚賢 via Taipei tourism",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    }
+  ],
+  "license": "CC BY-SA 3.0 (main photo)",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/%E5%9C%8B%E7%AB%8B%E5%9C%8B%E7%88%B6%E7%B4%80%E5%BF%B5%E9%A4%A8%E6%AD%A3%E9%9D%A2%E5%A4%96%E8%A7%80_20130908.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+}

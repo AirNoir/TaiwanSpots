@@ -7,9 +7,9 @@
     "name": "Sun Yat-sen Memorial Hall",
     "silhouette": "Square hall with a sweeping upturned yellow-tile roof on columns"
   },
-  "crop": "The hall, its plaza and Cuihu pond. Not Taipei 101 in the background.",
+  "crop": "Complete main hall with front plaza and reflecting pool, omit farther southwest Cuihu pond and Taipei 101.",
   "heroScale": 1,
-  "orientation": "verify: Taipei 101 rises to the south-east",
+  "orientation": "Hall front and main reflecting pool SOUTH; Cuihu is farther SOUTHWEST and outside this crop. East side Yixian Road, north Zhongxiao Road; satellite checked 2026-10-19. Model depicts historical clean exterior, not verified 2026 construction state.",
   "lockedGeometry": [
     "square hall on a platform",
     "wide plaza around it",
@@ -30,18 +30,27 @@
     "tiny visitors"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-night.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@25.0400,121.5603,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Yellow upturned roof on grey columns"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
+    "identity": "failed self-check: v3 rotates entry toward a corner and displaces south reflecting-pool axis; actual hall plan not reliably preserved",
+    "style": "partial: toy/material/base qualities present, but architectural alignment failed after two revisions",
+    "collection": "needs-regeneration: no qualifying preview selected; rejected native versions preserved under collection/rejected"
   }
 }

@@ -1,0 +1,45 @@
+{
+  "id": "luodong-night-market",
+  "title": "luodong-night-market real-scene reference",
+  "page": "https://travel.yilan.gov.tw/zh-tw/attraction/246/",
+  "credit": "Yilan County tourism official photographs, photographer/capture date unspecified",
+  "capture": "Not specified; publication date is not capture date",
+  "accessed": "2026-10-19",
+  "description": "Market streets edge Zhongshan Park, Gongyuan Road on east and Minquan Road south, Minsheng Road north; satellite checked 2026-10-19. Do not invent circular ring road.",
+  "usage": "Visual reference only, not used as final texture. Third-party photo rights retained; no blanket commercial redistribution clearance asserted.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.6766,121.7696,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar, attribution retained",
+      "kind": "satellite overhead",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Market streets edge Zhongshan Park, Gongyuan Road on east and Minquan Road south, Minsheng Road north; satellite checked 2026-10-19. Do not invent circular ring road."
+      ],
+      "limitations": "Not a metric survey; ground panorama not captured; photo optical calibration unknown."
+    },
+    {
+      "local": "real-photo.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/23477/1920x1080_attractions-image-l7xbheeiwky4r7jli6wp8q.jpg",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/246/",
+      "credit": "Yilan County tourism official photographs, photographer/capture date unspecified",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/Image/23937/?r=1784692532337",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/246/",
+      "credit": "Yilan County tourism official photographs, photographer/capture date unspecified",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    }
+  ],
+  "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/23477/1920x1080_attractions-image-l7xbheeiwky4r7jli6wp8q.jpg"
+}

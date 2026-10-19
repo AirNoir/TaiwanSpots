@@ -1,0 +1,65 @@
+{
+  "id": "anping-treehouse",
+  "title": "anping-treehouse real-scene reference",
+  "page": "https://www.twtainan.net/zh-tw/attractions/detail/806/",
+  "credit": "Tainan City tourism official site; main steel-walkway/roots photographs photographer unspecified; entrance photo 鄭雯",
+  "capture": "Not specified; publication date is not capture date",
+  "accessed": "2026-10-19",
+  "description": "Tree-covered warehouse lies NORTH of Tait & Co Merchant House, not merely east/west; satellite checked 2026-10-19. Crop excludes merchant house and entrance.",
+  "usage": "Visual reference only, not used as final texture. Third-party photo rights retained; no blanket commercial redistribution clearance asserted.",
+  "supplementary": [
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@23.0040,120.1597,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / CNES / Maxar, attribution retained",
+      "kind": "satellite overhead",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Tree-covered warehouse lies NORTH of Tait & Co Merchant House, not merely east/west; satellite checked 2026-10-19. Crop excludes merchant house and entrance."
+      ],
+      "limitations": "Not a metric survey; ground panorama not captured; photo optical calibration unknown."
+    },
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/12757/1920x1080_460634329557356831250.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/806/",
+      "credit": "Tainan City tourism official site; main steel-walkway/roots photographs photographer unspecified; entrance photo 鄭雯",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/17441/1920x1080_Filedata635593448139328134.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/806/",
+      "credit": "Tainan City tourism official site; main steel-walkway/roots photographs photographer unspecified; entrance photo 鄭雯",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-roots.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/14243/1920x1080_Filedata635549315406121664.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/806/",
+      "credit": "Tainan City tourism official site; main steel-walkway/roots photographs photographer unspecified; entrance photo 鄭雯",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-entrance.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/101265/1920x1080_attractions-image-nzg2b165kuqsugcogxt16g.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/806/",
+      "credit": "Tainan City tourism official site; main steel-walkway/roots photographs photographer unspecified; entrance photo 鄭雯",
+      "kind": "real photograph",
+      "capture": "Not specified",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    }
+  ],
+  "image": "https://www.twtainan.net/content/images/attractions/12757/1920x1080_460634329557356831250.jpg"
+}

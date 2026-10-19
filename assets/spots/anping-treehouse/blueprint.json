@@ -1,15 +1,15 @@
 {
   "spotId": "anping-treehouse",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Anping Tree House",
     "silhouette": "Roofless brick warehouse overgrown by banyan roots and canopy"
   },
-  "crop": "The warehouse ruin and walkways inside the banyan. Not the Tait & Co. building beside it.",
+  "crop": "Finite root-covered ruined warehouse bays and actual steel visitor walkway; exclude Tait merchant house and entrance gate.",
   "heroScale": 1,
-  "orientation": "verify: Tait & Co. merchant house sits to the east",
+  "orientation": "Tree-covered warehouse lies NORTH of Tait & Co Merchant House, not merely east/west; satellite checked 2026-10-19. Crop excludes merchant house and entrance.",
   "lockedGeometry": [
     "brick warehouse walls",
     "elevated walkways through the ruin",
@@ -30,18 +30,28 @@
     "moss"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg",
+      "official-roots.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.0040,120.1597,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Brick wall swallowed by banyan roots"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
+    "identity": "pending user review: v1 edge foliage reduced/inset in v2, roofless brick bays, root-wrapped walls and steel stair readable. Exact room grid/roots simplified; no metric plan reconstruction.",
+    "style": "self-checked preview: physical Q miniature, elevated weak perspective, warm visitors, no backdrop; not user approved",
+    "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured"
   }
 }
