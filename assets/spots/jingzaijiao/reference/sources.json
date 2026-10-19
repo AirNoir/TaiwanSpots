@@ -1,0 +1,60 @@
+{
+  "id": "jingzaijiao",
+  "title": "jingzaijiao real-scene references",
+  "page": "https://www.swcoast-nsa.gov.tw/zh-tw/attraction/details/369",
+  "image": "https://www.swcoast-nsa.gov.tw/image/35604/1024x768",
+  "credit": "Southwest Coast National Scenic Area Administration",
+  "capture": "Not specified; publication/filename/copyright year not confirmed capture date",
+  "accessed": "2026-10-19",
+  "usage": "Visual reference only; copyright retained by source/photographer. No blanket commercial redistribution clearance; not reused as final texture.",
+  "description": "Tile evaporation pans form long roughly north-south grid; visitor path EAST, Beimen lagoon WEST, village north. Satellite checked2026-10-19.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.swcoast-nsa.gov.tw/image/35604/1024x768",
+      "page": "https://www.swcoast-nsa.gov.tw/zh-tw/attraction/details/369",
+      "credit": "Southwest Coast National Scenic Area Administration",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.swcoast-nsa.gov.tw/image/1332/1024x768",
+      "page": "https://www.swcoast-nsa.gov.tw/zh-tw/attraction/details/369",
+      "credit": "Southwest Coast National Scenic Area Administration",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://www.swcoast-nsa.gov.tw/image/534/1024x768",
+      "page": "https://www.swcoast-nsa.gov.tw/zh-tw/attraction/details/369",
+      "credit": "Southwest Coast National Scenic Area Administration",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@23.25883,120.10757,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / Maxar; on-image attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Acquisition date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Tile evaporation pans form long roughly north-south grid; visitor path EAST, Beimen lagoon WEST, village north. Satellite checked2026-10-19."
+      ],
+      "limitations": "Not metric survey; no ground panorama captured or optical calibration."
+    },
+    {
+      "page": "https://www.swcoast-nsa.gov.tw/zh-tw/news/details/2592",
+      "title": "2026-09-02 lookout maintenance notice",
+      "observation": "Lookout closed until expected2026-11-30; excluded from model crop"
+    }
+  ]
+}

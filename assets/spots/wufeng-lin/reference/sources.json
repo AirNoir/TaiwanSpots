@@ -1,0 +1,35 @@
+{
+  "id": "wufeng-lin",
+  "title": "wufeng-lin real-scene references",
+  "page": "https://www.taichung.travel/zh-tw/attractions/intro/935",
+  "image": "https://taichung.travel/content/images/attractions/57106/1024x768_attractions-image-qcguelv6x0iqhkhsrosk6w.jpg",
+  "credit": "Taichung City tourism",
+  "capture": "Not specified; publication/filename/copyright year not confirmed capture date",
+  "accessed": "2026-10-19",
+  "usage": "Visual reference only; copyright retained by source/photographer. No blanket commercial redistribution clearance; not reused as final texture.",
+  "description": "Hills EAST of mansion; Laiyuan garden is a separate southeast site, not inside Gongbaodi courtyards. Satellite checked2026-10-19; exact Flower Hall compass axis remains verify.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://taichung.travel/content/images/attractions/57106/1024x768_attractions-image-qcguelv6x0iqhkhsrosk6w.jpg",
+      "page": "https://www.taichung.travel/zh-tw/attractions/intro/935",
+      "credit": "Taichung City tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.0628,120.7011,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / Maxar; on-image attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Acquisition date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Hills EAST of mansion; Laiyuan garden is a separate southeast site, not inside Gongbaodi courtyards. Satellite checked2026-10-19; exact Flower Hall compass axis remains verify."
+      ],
+      "limitations": "Not metric survey; no ground panorama captured or optical calibration."
+    }
+  ]
+}

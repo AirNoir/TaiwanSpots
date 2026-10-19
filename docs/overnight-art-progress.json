@@ -530,51 +530,104 @@
       "id": "wufeng-lin",
       "name": "霧峰林家花園",
       "hero": "Lin family mansion and garden",
-      "state": "queued",
+      "state": "needs-regeneration",
       "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "references": [
+        "real-photo.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Independent official ground photographs and Google satellite visually checked2026-10-19. Street View/360, metric dimensions and unseen structures pending; historical appearances may differ from current state.",
+        "identity": "failed self-check: stage/side-gallery rectangular axis not reliably preserved when camera becomes corner view; exact compass axis also pending reference",
+        "style": "partial: good timber/stage details, but v1 wrong camera and v2 added base notch; v3 geometry still ambiguous",
+        "collection": "needs-regeneration after two revisions; no qualifying preview selected; all native versions preserved in collection/rejected"
+      },
+      "userAcceptance": "pending",
+      "candidatePreview": "rejected/review-v3.png",
+      "attempts": 3,
+      "reason": "Camera/base corrections did not reliably preserve rectangular courtyard/stage axis. Collect more stage-side/overhead evidence before clean reconstruction; do not reuse rejected target."
     },
     {
       "id": "chimei-museum",
       "name": "奇美博物館",
       "hero": "Chimei Museum",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v3.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Independent official ground photographs and Google satellite visually checked2026-10-19. Street View/360, metric dimensions and unseen structures pending; historical appearances may differ from current state.",
+        "identity": "pending user review: v1 thin facade and framing revised; v3 has deep exhibition block and curved east end plus complete front/3 domes. Immediate forecourt only, distant fountain/bridge excluded; exact roof detail and landscape placement simplified, no survey accuracy.",
+        "style": "self-checked preview: physical Q toy, tactile environment/materials, common-scale visitors, elevated weak perspective, no backdrop",
+        "collection": "self-checked preview: complete square-style small-rounded ivory plinth, coherent groundplane and contained scene, identifiable at512px; dimensions not measured"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T13:20:42.303458+00:00"
     },
     {
       "id": "qigu-salt",
       "name": "七股鹽山",
       "hero": "Qigu Salt Mountain",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "official-third.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Independent official ground photographs and Google satellite visually checked2026-10-19. Street View/360, metric dimensions and unseen structures pending; historical appearances may differ from current state.",
+        "identity": "pending user review: v2 stairs subdivided to improve adult/step scale; mound/rope-net/summit and full square base readable. Exact stair count, height/current stockpile shape pending; historical unthemed appearance.",
+        "style": "self-checked preview: physical Q toy, tactile environment/materials, common-scale visitors, elevated weak perspective, no backdrop",
+        "collection": "self-checked preview: complete square-style small-rounded ivory plinth, coherent groundplane and contained scene, identifiable at512px; dimensions not measured"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T13:20:42.304481+00:00"
     },
     {
       "id": "jingzaijiao",
       "name": "井仔腳瓦盤鹽田",
       "hero": "Jingzaijiao tile salt pans",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v3.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "official-third.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Independent official ground photographs and Google satellite visually checked2026-10-19. Street View/360, metric dimensions and unseen structures pending; historical appearances may differ from current state.",
+        "identity": "pending user review: v1/v2 base framing revised with clean v3 square and coherent flat tile-grid. Visible broken pottery, shallow brine, modest heaps and salt-worker/family interaction; exact grid counts and display assignments simplified.",
+        "style": "self-checked preview: physical Q toy, tactile environment/materials, common-scale visitors, elevated weak perspective, no backdrop",
+        "collection": "self-checked preview: complete square-style small-rounded ivory plinth, coherent groundplane and contained scene, identifiable at512px; dimensions not measured"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T13:20:42.304954+00:00"
     },
     {
       "id": "sicao",
       "name": "四草綠色隧道",
       "hero": "Sicao mangrove tunnel",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Independent official ground photographs and Google satellite visually checked2026-10-19. Street View/360, metric dimensions and unseen structures pending; historical appearances may differ from current state.",
+        "identity": "pending user review: Actual blue tourist pipe raft with flotation tubes, metal rails, stools/lifejackets and outboard; open mangrove arch with roots/reflection. Canopy distribution and individual boat details simplified; no temple/lake relocation.",
+        "style": "self-checked preview: physical Q toy, tactile environment/materials, common-scale visitors, elevated weak perspective, no backdrop",
+        "collection": "self-checked preview: complete square-style small-rounded ivory plinth, coherent groundplane and contained scene, identifiable at512px; dimensions not measured"
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T13:20:42.305780+00:00"
     },
     {
       "id": "nanfangao",
@@ -1487,7 +1540,7 @@
       "userAcceptance": "pending"
     }
   ],
-  "lastUpdatedAt": "2026-10-19T12:44:47.443397+00:00",
+  "lastUpdatedAt": "2026-10-19T13:20:42.309073+00:00",
   "automation": {
     "id": "islandia",
     "status": "ACTIVE",
@@ -1496,14 +1549,14 @@
   },
   "lastBatch": {
     "ids": [
-      "raohe-night-market",
-      "baoan-temple",
-      "fengjia",
-      "shenji-village",
-      "luce-chapel"
+      "wufeng-lin",
+      "chimei-museum",
+      "qigu-salt",
+      "jingzaijiao",
+      "sicao"
     ],
     "generated": 5,
-    "additionalRevisions": 2,
-    "result": "5 self-checked previews; Raohe v1/v2 rejected, v3 finite crop selected; not user-approved"
+    "additionalRevisions": 7,
+    "result": "4 self-checked previews; Wufeng3 attempts rejected, needs extra geometry references; user acceptance pending"
   }
 }

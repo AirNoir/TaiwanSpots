@@ -1,0 +1,45 @@
+{
+  "id": "sicao",
+  "title": "sicao real-scene references",
+  "page": "https://www.twtainan.net/zh-tw/attractions/detail/1324/",
+  "image": "https://www.twtainan.net/content/images/attractions/80526/1920x1080_attractions-image-pxm3_jcmzekp3h-jzkrb4g.jpg",
+  "credit": "Tainan City tourism; Sicao water-level tunnel photo credited Taijiang National Park",
+  "capture": "Not specified; publication/filename/copyright year not confirmed capture date",
+  "accessed": "2026-10-19",
+  "usage": "Visual reference only; copyright retained by source/photographer. No blanket commercial redistribution clearance; not reused as final texture.",
+  "description": "Boat access starts at Sicao Dazhong Temple area; narrow mangrove canal lies behind temple toward northwest, Sicao Lake east is a separate broader water body. Satellite checked2026-10-19; route details under canopy pending.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/80526/1920x1080_attractions-image-pxm3_jcmzekp3h-jzkrb4g.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/1324/",
+      "credit": "Tainan City tourism; Sicao water-level tunnel photo credited Taijiang National Park",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/33195/1920x1080_Filedata635654926337985732.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/1324/",
+      "credit": "Tainan City tourism; Sicao water-level tunnel photo credited Taijiang National Park",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@23.019779,120.135769,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / Maxar; on-image attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Acquisition date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Boat access starts at Sicao Dazhong Temple area; narrow mangrove canal lies behind temple toward northwest, Sicao Lake east is a separate broader water body. Satellite checked2026-10-19; route details under canopy pending."
+      ],
+      "limitations": "Not metric survey; no ground panorama captured or optical calibration."
+    }
+  ]
+}

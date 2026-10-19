@@ -7,17 +7,18 @@
     "name": "Lin family mansion and garden",
     "silhouette": "Cluster of courtyard mansions with curved roofs and an opera stage at the foot of a hill"
   },
-  "crop": "The Gongbaodi courtyard houses and garden stage. Not the whole Wufeng township.",
+  "crop": "Da Hua Ting (Great Flower Hall) opera-stage courtyard and two side galleries only; separate Laiyuan pond/garden and complete mansion excluded.",
   "heroScale": 1,
-  "orientation": "verify: hills rise to the east",
+  "orientation": "Hills EAST of mansion; Laiyuan garden is a separate southeast site, not inside Gongbaodi courtyards. Satellite checked2026-10-19; exact Flower Hall compass axis remains verify.",
   "lockedGeometry": [
-    "multiple courtyards in a row",
-    "garden with pond",
-    "hill behind"
+    "raised opera stage facing courtyard",
+    "two-storey wooden side galleries",
+    "moon doors flanking stage"
   ],
   "lockedIdentity": [
-    "curved Min-style roofs",
-    "opera stage in the flower hall"
+    "Fuzhou opera stage",
+    "swallowtail tile roof",
+    "round lattice backdrop"
   ],
   "doNotInvent": [
     "skyscrapers",
@@ -30,18 +31,26 @@
     "garden plants"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.0628,120.7011,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Courtyard roofs with an opera stage"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Independent official ground photographs and Google satellite visually checked2026-10-19. Street View/360, metric dimensions and unseen structures pending; historical appearances may differ from current state.",
+    "identity": "failed self-check: stage/side-gallery rectangular axis not reliably preserved when camera becomes corner view; exact compass axis also pending reference",
+    "style": "partial: good timber/stage details, but v1 wrong camera and v2 added base notch; v3 geometry still ambiguous",
+    "collection": "needs-regeneration after two revisions; no qualifying preview selected; all native versions preserved in collection/rejected"
   }
 }

@@ -1,19 +1,19 @@
 {
   "spotId": "jingzaijiao",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Jingzaijiao tile salt pans",
     "silhouette": "Grid of shallow mirror-like salt pans paved with broken pottery tiles"
   },
-  "crop": "The tiled salt pans and their small salt heaps at sunset. Not the coast beyond.",
+  "crop": "Finite 3x4 subsection of tile pans with small conical salt heaps and east visitor walkway; coast/village/lookout excluded.",
   "heroScale": 1,
-  "orientation": "verify: sea lies to the west",
+  "orientation": "Tile evaporation pans form long roughly north-south grid; visitor path EAST, Beimen lagoon WEST, village north. Satellite checked2026-10-19.",
   "lockedGeometry": [
-    "flat grid of pans",
-    "narrow earth dikes",
-    "small viewing platform"
+    "flat rectangular tile pans",
+    "low dikes and shallow brine",
+    "small salt heaps"
   ],
   "lockedIdentity": [
     "broken tile mosaic floors",
@@ -31,18 +31,28 @@
     "birds"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg",
+      "official-third.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.25883,120.10757,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "official-second.jpg"
+    ]
   },
   "worldToken": {
     "element": "Tiled salt pan with a white salt heap"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Independent official ground photographs and Google satellite visually checked2026-10-19. Street View/360, metric dimensions and unseen structures pending; historical appearances may differ from current state.",
+    "identity": "pending user review: v1/v2 base framing revised with clean v3 square and coherent flat tile-grid. Visible broken pottery, shallow brine, modest heaps and salt-worker/family interaction; exact grid counts and display assignments simplified.",
+    "style": "self-checked preview: physical Q toy, tactile environment/materials, common-scale visitors, elevated weak perspective, no backdrop",
+    "collection": "self-checked preview: complete square-style small-rounded ivory plinth, coherent groundplane and contained scene, identifiable at512px; dimensions not measured"
   }
 }

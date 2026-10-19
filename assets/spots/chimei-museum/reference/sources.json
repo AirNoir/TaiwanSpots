@@ -1,0 +1,45 @@
+{
+  "id": "chimei-museum",
+  "title": "chimei-museum real-scene references",
+  "page": "https://www.twtainan.net/zh-tw/attractions/detail/572/",
+  "image": "https://www.twtainan.net/content/images/attractions/17368/1920x1080_Filedata635593365562299095.jpg",
+  "credit": "Tainan City tourism",
+  "capture": "Not specified; publication/filename/copyright year not confirmed capture date",
+  "accessed": "2026-10-19",
+  "usage": "Visual reference only; copyright retained by source/photographer. No blanket commercial redistribution clearance; not reused as final texture.",
+  "description": "Main hall front faces WEST; Olympus Bridge approaches from WEST across lake, not north. Main formal axis east-west. Satellite checked2026-10-19.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/17368/1920x1080_Filedata635593365562299095.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/572/",
+      "credit": "Tainan City tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.twtainan.net/content/images/attractions/17370/1920x1080_Filedata635593365640143232.jpg",
+      "page": "https://www.twtainan.net/zh-tw/attractions/detail/572/",
+      "credit": "Tainan City tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "accessed": "2026-10-19",
+      "usage": "Reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@22.93482,120.22619,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / Maxar; on-image attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Acquisition date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Main hall front faces WEST; Olympus Bridge approaches from WEST across lake, not north. Main formal axis east-west. Satellite checked2026-10-19."
+      ],
+      "limitations": "Not metric survey; no ground panorama captured or optical calibration."
+    }
+  ]
+}

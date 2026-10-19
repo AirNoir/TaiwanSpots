@@ -1,19 +1,19 @@
 {
   "spotId": "qigu-salt",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Qigu Salt Mountain",
     "silhouette": "Large white mound of salt with stairs up its side beside flat salt pans"
   },
-  "crop": "The salt mound and salt fields around it. Not the lagoon.",
+  "crop": "One salt mound with climbing stair, summit viewing area and narrow flat apron only; remote salt pans/lagoon and amusement exhibits excluded.",
   "heroScale": 1,
-  "orientation": "verify: salt pans extend to the west",
+  "orientation": "Salt mound lies EAST of visitor retail buildings, north of large parking; saltworks/ponds around wider site. Satellite checked2026-10-19; exact stairs compass direction verify.",
   "lockedGeometry": [
-    "single big white mound",
-    "flat salt fields",
-    "sea not far west"
+    "broad salt mound",
+    "climbing stair and rope-net railing",
+    "flat apron"
   ],
   "lockedIdentity": [
     "brilliant white salt",
@@ -30,18 +30,28 @@
     "sunset"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg",
+      "official-third.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.15426,120.10017,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "White salt mound with tiny steps"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Independent official ground photographs and Google satellite visually checked2026-10-19. Street View/360, metric dimensions and unseen structures pending; historical appearances may differ from current state.",
+    "identity": "pending user review: v2 stairs subdivided to improve adult/step scale; mound/rope-net/summit and full square base readable. Exact stair count, height/current stockpile shape pending; historical unthemed appearance.",
+    "style": "self-checked preview: physical Q toy, tactile environment/materials, common-scale visitors, elevated weak perspective, no backdrop",
+    "collection": "self-checked preview: complete square-style small-rounded ivory plinth, coherent groundplane and contained scene, identifiable at512px; dimensions not measured"
   }
 }

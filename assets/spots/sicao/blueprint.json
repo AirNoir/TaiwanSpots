@@ -1,15 +1,15 @@
 {
   "spotId": "sicao",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Sicao mangrove tunnel",
     "silhouette": "Narrow waterway roofed by arching mangrove branches with a bamboo raft"
   },
-  "crop": "The mangrove channel with rafts. Not the wider wetland park.",
+  "crop": "One short mangrove canal section, two banks, arching canopy and one actual blue tourist pipe raft; dock/temple/wider lake excluded.",
   "heroScale": 1,
-  "orientation": "verify: channel runs from the Dazhong Temple dock",
+  "orientation": "Boat access starts at Sicao Dazhong Temple area; narrow mangrove canal lies behind temple toward northwest, Sicao Lake east is a separate broader water body. Satellite checked2026-10-19; route details under canopy pending.",
   "lockedGeometry": [
     "narrow straight water channel",
     "mangroves on both banks",
@@ -17,7 +17,7 @@
   ],
   "lockedIdentity": [
     "arching mangrove canopy",
-    "bamboo raft with passengers"
+    "blue tourist pipe raft with seated passengers"
   ],
   "doNotInvent": [
     "mountains",
@@ -30,18 +30,27 @@
     "tiny passengers"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.019779,120.135769,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
-    "element": "Bamboo raft under a green arch"
+    "element": "Blue tourist pipe raft under a green mangrove arch"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Independent official ground photographs and Google satellite visually checked2026-10-19. Street View/360, metric dimensions and unseen structures pending; historical appearances may differ from current state.",
+    "identity": "pending user review: Actual blue tourist pipe raft with flotation tubes, metal rails, stools/lifejackets and outboard; open mangrove arch with roots/reflection. Canopy distribution and individual boat details simplified; no temple/lake relocation.",
+    "style": "self-checked preview: physical Q toy, tactile environment/materials, common-scale visitors, elevated weak perspective, no backdrop",
+    "collection": "self-checked preview: complete square-style small-rounded ivory plinth, coherent groundplane and contained scene, identifiable at512px; dimensions not measured"
   }
 }
