@@ -1,23 +1,23 @@
 {
   "spotId": "formosa-boulevard",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Dome of Light",
-    "silhouette": "Circular underground concourse under a huge stained-glass dome, entrances like hands in prayer"
+    "silhouette": "Underground stainedglass ceiling and two glowing columns in architecturalcutaway"
   },
-  "crop": "The glass station entrances and the dome beneath, shown as a cutaway. Not the street grid.",
+  "crop": "Architectural cutaway of underground Dome of Light hall only; omit surface roads/entrances instead of stacking false geography.",
   "heroScale": 1,
-  "orientation": "verify: four glass entrances at the roundabout corners",
+  "orientation": "Dome of Light underground B1 central concourse beneath Zhongshan/Zhongzheng junction. Four prayer-hands street entrances at intersection corners are separate surface structures, omitted from underground-only crop.",
   "lockedGeometry": [
-    "round roundabout above",
-    "station concourse below",
-    "glass entrance pavilions"
+    "undergroundconcourse",
+    "twoilluminatedpillars",
+    "shallowannularstainedglassceiling"
   ],
   "lockedIdentity": [
-    "colourful stained-glass dome",
-    "prayer-hands glass entrances"
+    "blueandred illuminatedcolumns",
+    "DomeofLightstainedglass"
   ],
   "doNotInvent": [
     "trains on the surface",
@@ -30,18 +30,28 @@
     "lights"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-third.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.63151,120.30132,396m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Colourful glass dome"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Dome of Light underground B1 central concourse beneath Zhongshan/Zhongzheng junction. Four prayer-hands street entrances at intersection corners are separate surface structures, omitted from underground-only crop. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
+    "identity": "pending user review: v2 reduces fisheye/foregroundscale effect. Underground-only architecturalcutaway of stainedglassannularceiling/twocolourcolumns; surfaceentrances not stackedoverit. Intentionalremovedroof section, not actual demolishedstation. Exact interiorplan/ceilingsection curvature/pillarheight/artwork panel fidelity pending; this displaysection is artistic rather than measured.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

@@ -1,0 +1,38 @@
+{
+  "id": "sizihwan",
+  "page": "https://khh.travel/zh-tw/attractions/detail/165/?OpBrowser=1",
+  "credit": "Kaohsiung City Tourism Bureau; Dome of Light artwork Narcissus Quagliata",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown. URLuploadyears2023/2024/2025 not confirmedcaptureyears",
+  "usage": "Visualreferenceonly; rightsretained, no blanket commerciallicence or finaltexture reuse.",
+  "description": "Public seaside park/promenade west of Lianhai Road below university gateway; sea west, wooded slope inland/east. Harbour entrance south, long north breakwater and separate sandy beach farther north excluded.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://khh.travel/image/20097/1920x1080",
+      "page": "https://khh.travel/zh-tw/attractions/detail/165/?OpBrowser=1",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://khh.travel/image/20100/1024x768",
+      "page": "https://khh.travel/zh-tw/attractions/detail/165/?OpBrowser=1",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.620747,120.2633069,793m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "capture": "Not exposed;copyright2026 notcapturedate",
+      "usage": "Visualreferenceonly",
+      "observations": "Public seaside park/promenade west of Lianhai Road below university gateway; sea west, wooded slope inland/east. Harbour entrance south, long north breakwater and separate sandy beach farther north excluded."
+    }
+  ],
+  "lensReview": "Groundwide/fisheye/telephoto projections assessed against other realangle/satellite; scene rebuilt as weakperspective miniature. No calibrated mathematicalundistortion. StreetView360/exactdepths pending."
+}

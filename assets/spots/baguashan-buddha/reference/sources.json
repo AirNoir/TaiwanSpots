@@ -1,0 +1,47 @@
+{
+  "id": "baguashan-buddha",
+  "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=CBDF5FD9-0B1E-4E04-B514-C61B641A3B2E&id=10&l=TW",
+  "credit": "Changhua County Tourism",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown. URLuploadyears2023/2024/2025 not confirmedcaptureyears",
+  "usage": "Visualreferenceonly; rightsretained, no blanket commerciallicence or finaltexture reuse.",
+  "description": "Buddha plaza axis west/southwest toward city; main Buddha Hall east/northeast behind statue. Finite statue/lotus/lions/steps crop excludes rearhall/towers and distant city.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2025042314275293709.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=CBDF5FD9-0B1E-4E04-B514-C61B641A3B2E&id=10&l=TW",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2023102016023531186.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=CBDF5FD9-0B1E-4E04-B514-C61B641A3B2E&id=10&l=TW",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2023102016024144150.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=CBDF5FD9-0B1E-4E04-B514-C61B641A3B2E&id=10&l=TW",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@24.0786,120.5489,392m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "capture": "Not exposed;copyright2026 notcapturedate",
+      "usage": "Visualreferenceonly",
+      "observations": "Buddha plaza axis west/southwest toward city; main Buddha Hall east/northeast behind statue. Finite statue/lotus/lions/steps crop excludes rearhall/towers and distant city."
+    }
+  ],
+  "lensReview": "Groundwide/fisheye/telephoto projections assessed against other realangle/satellite; scene rebuilt as weakperspective miniature. No calibrated mathematicalundistortion. StreetView360/exactdepths pending.",
+  "dimensions": "County officialdescription: Buddha22m; exactlotus/body height allocation remainsapproximate, scalecheckedagainstadult1.7m."
+}

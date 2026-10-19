@@ -1,19 +1,19 @@
 {
   "spotId": "tianwei",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
-    "name": "Tianwei garden lanes",
-    "silhouette": "Country lanes lined with nursery greenhouses and flower beds"
+    "name": "Tianwei plantnursery frontage",
+    "silhouette": "Pottednursery rows and low shadehouse beside familycycle"
   },
-  "crop": "A crossroads of the garden lanes with nurseries. Not the whole township.",
+  "crop": "Short real Dazhong plant-nursery frontage on Minzu Road with potted rows and yellow four-wheel family cycle; no invented crossroads.",
   "heroScale": 1,
-  "orientation": "verify: main road runs north-south",
+  "orientation": "Specific photographed Dazhong Nursery frontage east/northeast side of Minzu Road Section1 near Gongyuan Road junction. Road locally NW-SE, not generic north-south. Satellite identifies actual roof/plant frontage.",
   "lockedGeometry": [
-    "grid of country lanes",
-    "greenhouses",
-    "flat farmland"
+    "actualnursery frontage east/northeast roadside",
+    "lowrectangularshadehouse",
+    "flatpottedplantrows"
   ],
   "lockedIdentity": [
     "colourful nursery beds",
@@ -30,18 +30,27 @@
     "greenhouses"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-4.jpg",
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/place/%E5%A4%A7%E8%A1%86%E5%9C%92%E8%97%9D/@23.8983751,120.5304315,393m/data=!3m1!1e3!4m6!3m5!1s0x34693581b9174709:0xc04d5de5d28dcd7b!8m2!3d23.8983751!4d120.5317833!16s%2Fg%2F11dx9b75v2?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "official-4.jpg"
+    ]
   },
   "worldToken": {
     "element": "Bicycle by a flower bed"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Specific photographed Dazhong Nursery frontage east/northeast side of Minzu Road Section1 near Gongyuan Road junction. Road locally NW-SE, not generic north-south. Satellite identifies actual roof/plant frontage. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
+    "identity": "pending user review: Actual Dazhong nursery frontage on MinzuRoad, pottedplants/shadehouse/familycycle; no inventedfarmcrossroads or relocatedothergarden. Exact shopdepth/plantstock and historicalsigns pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

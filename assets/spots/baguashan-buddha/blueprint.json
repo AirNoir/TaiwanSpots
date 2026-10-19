@@ -1,27 +1,27 @@
 {
   "spotId": "baguashan-buddha",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Baguashan Great Buddha",
-    "silhouette": "Giant dark seated Buddha statue on a hilltop with lions at its base"
+    "silhouette": "Dark brown seated Buddha on yellow lotus pedestal with stone lions"
   },
-  "crop": "The Buddha statue and plaza on the hill. Not the city below.",
+  "crop": "Baguashan seated Buddha on yellow lotus pedestal, immediate frontal steps and stone lions; not whole hillside complex.",
   "heroScale": 1,
-  "orientation": "verify: Buddha faces west over the city",
+  "orientation": "Buddha plaza axis west/southwest toward city; main Buddha Hall east/northeast behind statue. Finite statue/lotus/lions/steps crop excludes rearhall/towers and distant city.",
   "lockedGeometry": [
-    "hilltop plaza",
-    "stairs up the slope",
-    "city below"
+    "west/southwest-facing meditation Buddha",
+    "round yellow lotus base",
+    "frontalsteps and stone lions"
   ],
   "lockedIdentity": [
-    "dark grey seated Buddha",
-    "stone lions"
+    "dark brown Buddha handsinlap",
+    "yellow lotus pedestal"
   ],
   "doNotInvent": [
-    "gold paint",
-    "pagodas",
+    "gold-painted Buddha body",
+    "relocated pagodas",
     "snow"
   ],
   "allowedMiniatureDetails": [
@@ -30,18 +30,28 @@
     "pigeons"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-third.jpg",
+      "official-second.jpg",
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.0786,120.5489,392m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "official-third.jpg"
+    ]
   },
   "worldToken": {
     "element": "Dark seated Buddha on a hill"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Buddha plaza axis west/southwest toward city; main Buddha Hall east/northeast behind statue. Finite statue/lotus/lions/steps crop excludes rearhall/towers and distant city. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
+    "identity": "pending user review: v3 restores symmetric squarebase after v2 camera drift; smaller visitors improve heightorder. Dark brown meditation Buddha and real yellowlotus/roundwindows, front steps/stone lions only; rearhall/towers/city omitted. Official22m versus1.7madult used as approximate visualcheck; not a metric pass, exact person/statue allocation and plaza dimensions pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

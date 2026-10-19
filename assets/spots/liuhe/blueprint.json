@@ -1,24 +1,23 @@
 {
   "spotId": "liuhe",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Liuhe night market",
     "silhouette": "Wide straight road filled with stalls under neon signs at night"
   },
-  "crop": "The market street. Not the station.",
+  "crop": "Finite photographed Liuhe market street section with roadside food carts, attached white signs and central pedestrian dining space; no invented gate or station.",
   "heroScale": 1,
-  "orientation": "verify: market runs east-west along Liuhe 2nd Road",
+  "orientation": "Market occupies Liuhe2ndRoad west of Zhongshan1stRoad/east of Zili2ndRoad; locally east-northeast/west-southwest. Minjheng Road intersects selected street section; Formosa Station outsidecrop.",
   "lockedGeometry": [
-    "one wide straight street",
-    "low buildings on both sides",
-    "stalls down the middle"
+    "straight market street",
+    "roadside foodcarts",
+    "centralwalk/dining space"
   ],
   "lockedIdentity": [
-    "papaya milk stalls",
-    "seafood stalls",
-    "neon gate"
+    "papaya milk/seafood carts",
+    "white attached Liuhe lightboxsign"
   ],
   "doNotInvent": [
     "temples",
@@ -31,18 +30,28 @@
     "steam"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg",
+      "official-third.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.63212,120.29926,396m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Papaya milk cup with a stall"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Market occupies Liuhe2ndRoad west of Zhongshan1stRoad/east of Zili2ndRoad; locally east-northeast/west-southwest. Minjheng Road intersects selected street section; Formosa Station outsidecrop. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
+    "identity": "pending user review: v2 replaces inventedtilepaving with asphalt and reduces sign duplication. Finite streetfoodcartrows, papayamilk/seafood and attachedwhiteLiuhemarketlightboxes; no inventedtemplegate/station. Stalllocations/currentsigns/shopdetails simplified, pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

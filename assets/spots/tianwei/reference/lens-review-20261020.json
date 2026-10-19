@@ -1,0 +1,12 @@
+{
+  "spotId": "tianwei",
+  "date": "2026-10-20 Asia/Taipei",
+  "actualReferences": "Official ground/elevatedphotos plus independent Google satellite saved in sources.json",
+  "method": "Cross-angle visual reconstruction; correct wideangle/fisheye/upwardkeystone/telephoto compression using shape and map, not singlephoto transfer",
+  "calibratedUndistortion": false,
+  "pending": [
+    "StreetView360capture",
+    "metricunseendepth",
+    "currentappearance"
+  ]
+}

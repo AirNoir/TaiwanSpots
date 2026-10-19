@@ -1142,51 +1142,104 @@
       "id": "baguashan-buddha",
       "name": "八卦山大佛",
       "hero": "Baguashan Great Buddha",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v3.png",
+      "references": [
+        "official-third.jpg",
+        "official-second.jpg",
+        "real-photo.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Buddha plaza axis west/southwest toward city; main Buddha Hall east/northeast behind statue. Finite statue/lotus/lions/steps crop excludes rearhall/towers and distant city. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
+        "identity": "pending user review: v3 restores symmetric squarebase after v2 camera drift; smaller visitors improve heightorder. Dark brown meditation Buddha and real yellowlotus/roundwindows, front steps/stone lions only; rearhall/towers/city omitted. Official22m versus1.7madult used as approximate visualcheck; not a metric pass, exact person/statue allocation and plaza dimensions pending.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T21:47:47.620149+00:00"
     },
     {
       "id": "tianwei",
       "name": "田尾公路花園",
       "hero": "Tianwei garden lanes",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "official-4.jpg",
+        "real-photo.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Specific photographed Dazhong Nursery frontage east/northeast side of Minzu Road Section1 near Gongyuan Road junction. Road locally NW-SE, not generic north-south. Satellite identifies actual roof/plant frontage. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
+        "identity": "pending user review: Actual Dazhong nursery frontage on MinzuRoad, pottedplants/shadehouse/familycycle; no inventedfarmcrossroads or relocatedothergarden. Exact shopdepth/plantstock and historicalsigns pending.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T21:47:47.621144+00:00"
     },
     {
       "id": "formosa-boulevard",
       "name": "美麗島站光之穹頂",
       "hero": "Dome of Light",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "official-third.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Dome of Light underground B1 central concourse beneath Zhongshan/Zhongzheng junction. Four prayer-hands street entrances at intersection corners are separate surface structures, omitted from underground-only crop. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
+        "identity": "pending user review: v2 reduces fisheye/foregroundscale effect. Underground-only architecturalcutaway of stainedglassannularceiling/twocolourcolumns; surfaceentrances not stackedoverit. Intentionalremovedroof section, not actual demolishedstation. Exact interiorplan/ceilingsection curvature/pillarheight/artwork panel fidelity pending; this displaysection is artistic rather than measured.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T21:47:47.621754+00:00"
     },
     {
       "id": "sizihwan",
       "name": "西子灣",
       "hero": "Sizihwan beach",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Public seaside park/promenade west of Lianhai Road below university gateway; sea west, wooded slope inland/east. Harbour entrance south, long north breakwater and separate sandy beach farther north excluded. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
+        "identity": "pending user review: Finite palmpark/shorepromenade with graywavebreakers and sunset-litwater. Separatebeach/longbreakwater/universitytower/Britishresidence omitted ratherthanrelocated. Exact lawn/path furniture and presentconditions pending.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T21:47:47.622534+00:00"
     },
     {
       "id": "liuhe",
       "name": "六合夜市",
       "hero": "Liuhe night market",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "official-second.jpg",
+        "official-third.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Market occupies Liuhe2ndRoad west of Zhongshan1stRoad/east of Zili2ndRoad; locally east-northeast/west-southwest. Minjheng Road intersects selected street section; Formosa Station outsidecrop. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
+        "identity": "pending user review: v2 replaces inventedtilepaving with asphalt and reduces sign duplication. Finite streetfoodcartrows, papayamilk/seafood and attachedwhiteLiuhemarketlightboxes; no inventedtemplegate/station. Stalllocations/currentsigns/shopdetails simplified, pending.",
+        "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+        "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-19T21:47:47.623491+00:00"
     },
     {
       "id": "liushidan",
@@ -1799,7 +1852,7 @@
       "userAcceptance": "pending"
     }
   ],
-  "lastUpdatedAt": "2026-10-19T18:15:15.377103+00:00",
+  "lastUpdatedAt": "2026-10-19T21:47:49.042501+00:00",
   "automation": {
     "id": "islandia",
     "status": "ACTIVE",
@@ -1808,14 +1861,14 @@
   },
   "lastBatch": {
     "ids": [
-      "british-consulate",
-      "liyu-lake",
-      "bitou-cape",
-      "fulong",
-      "sanxia-zushi"
+      "baguashan-buddha",
+      "tianwei",
+      "formosa-boulevard",
+      "sizihwan",
+      "liuhe"
     ],
     "generated": 5,
-    "additionalRevisions": 5,
-    "result": "4 self-checked previews; Sanxia3 candidates rejected for base/camera;5 targeted revisions total, user acceptance pending"
+    "additionalRevisions": 4,
+    "result": "5 self-checked previews; 4 targeted scale/base/ceiling/asphalt revisions; all user acceptance pending"
   }
 }

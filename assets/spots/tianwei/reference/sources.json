@@ -1,0 +1,78 @@
+{
+  "id": "tianwei",
+  "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=02d9d045-486c-4325-9d3c-a22b2aea5983&id=7&topic=11",
+  "credit": "Changhua County Tourism",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown. URLuploadyears2023/2024/2025 not confirmedcaptureyears",
+  "usage": "Visualreferenceonly; rightsretained, no blanket commerciallicence or finaltexture reuse.",
+  "description": "Specific photographed Dazhong Nursery frontage east/northeast side of Minzu Road Section1 near Gongyuan Road junction. Road locally NW-SE, not generic north-south. Satellite identifies actual roof/plant frontage.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2024073008452916934.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=02d9d045-486c-4325-9d3c-a22b2aea5983&id=7&topic=11",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2023032915574665514.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=02d9d045-486c-4325-9d3c-a22b2aea5983&id=7&topic=11",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2024052411480961088.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=02d9d045-486c-4325-9d3c-a22b2aea5983&id=7&topic=11",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-4.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2024052411482958664.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=02d9d045-486c-4325-9d3c-a22b2aea5983&id=7&topic=11",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-5.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2024052411485092351.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=02d9d045-486c-4325-9d3c-a22b2aea5983&id=7&topic=11",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-6.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2024052411490163710.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=02d9d045-486c-4325-9d3c-a22b2aea5983&id=7&topic=11",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-7.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2024052411492083556.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=02d9d045-486c-4325-9d3c-a22b2aea5983&id=7&topic=11",
+      "kind": "actual ground or elevated/aerial photo (visually inspected)",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/place/%E5%A4%A7%E8%A1%86%E5%9C%92%E8%97%9D/@23.8983751,120.5304315,393m/data=!3m1!1e3!4m6!3m5!1s0x34693581b9174709:0xc04d5de5d28dcd7b!8m2!3d23.8983751!4d120.5317833!16s%2Fg%2F11dx9b75v2?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "capture": "Not exposed;copyright2026 notcapturedate",
+      "usage": "Visualreferenceonly",
+      "observations": "Specific photographed Dazhong Nursery frontage east/northeast side of Minzu Road Section1 near Gongyuan Road junction. Road locally NW-SE, not generic north-south. Satellite identifies actual roof/plant frontage."
+    }
+  ],
+  "lensReview": "Groundwide/fisheye/telephoto projections assessed against other realangle/satellite; scene rebuilt as weakperspective miniature. No calibrated mathematicalundistortion. StreetView360/exactdepths pending."
+}

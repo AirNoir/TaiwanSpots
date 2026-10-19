@@ -1,23 +1,23 @@
 {
   "spotId": "sizihwan",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Sizihwan beach",
-    "silhouette": "Small sandy bay at the foot of a green hill with a breakwater and sunset sea"
+    "silhouette": "Palmshore seawall promenade beside sunset-litwater"
   },
-  "crop": "The beach, breakwater and hill edge. Not the university campus.",
+  "crop": "Finite actual palm lawn/seawall promenade near university gateway with tetrapods and contained sunset-lit water; no relocated beach/pier/hill.",
   "heroScale": 1,
-  "orientation": "verify: harbour mouth lies to the south",
+  "orientation": "Public seaside park/promenade west of Lianhai Road below university gateway; sea west, wooded slope inland/east. Harbour entrance south, long north breakwater and separate sandy beach farther north excluded.",
   "lockedGeometry": [
-    "small curved bay",
-    "green hill to the north",
-    "breakwater"
+    "sea west of promenade",
+    "palm lawnlandward",
+    "graywavebreakersseaward"
   ],
   "lockedIdentity": [
-    "sunset over the strait",
-    "breakwater"
+    "Sizihwan palmshore promenade",
+    "sunset-litsea/tetrapods"
   ],
   "doNotInvent": [
     "high-rise hotels on the beach",
@@ -30,18 +30,27 @@
     "monkeys"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.620747,120.2633069,793m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
-    "element": "Breakwater at sunset"
+    "element": "Palm beside seawall and sea"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Public seaside park/promenade west of Lianhai Road below university gateway; sea west, wooded slope inland/east. Harbour entrance south, long north breakwater and separate sandy beach farther north excluded. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
+    "identity": "pending user review: Finite palmpark/shorepromenade with graywavebreakers and sunset-litwater. Separatebeach/longbreakwater/universitytower/Britishresidence omitted ratherthanrelocated. Exact lawn/path furniture and presentconditions pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }
