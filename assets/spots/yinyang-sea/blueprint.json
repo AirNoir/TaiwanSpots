@@ -1,23 +1,23 @@
 {
   "spotId": "yinyang-sea",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Yin-Yang Sea",
-    "silhouette": "Bay split into golden-brown and deep blue water below a mountain with mining ruins"
+    "silhouette": "Two-toned coastal water beside seawall, without inland ruins"
   },
-  "crop": "The two-coloured bay and the smelter ruins on the slope. Not the whole coast.",
+  "crop": "Short actual seawall/Highway2 margin, tetrapods and finite yellow-to-blue nearshore water patch only; no relocated smelter ruins.",
   "heroScale": 1,
-  "orientation": "verify: Thirteen Levels ruins rise south of the bay",
+  "orientation": "Sea north of Provincial Highway2 and Shu nantong settlement, nearshore yellow-brown plume blends toward blue offshore; Thirteen Levels smelter inland south and outside selected finite coastal crop.",
   "lockedGeometry": [
-    "small bay",
-    "steep mountain slope",
-    "coastal road"
+    "sea north of coastalroad",
+    "shoreline seawall and tetrapods",
+    "ochre plume fading offshore"
   ],
   "lockedIdentity": [
-    "two-coloured sea",
-    "terraced smelter ruins"
+    "yellow-brown nearshore water",
+    "blue offshore water"
   ],
   "doNotInvent": [
     "beaches with umbrellas",
@@ -30,18 +30,26 @@
     "visitors"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@25.1227,121.8642,389m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Bay half gold, half blue"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Sea north of Provincial Highway2 and Shu nantong settlement, nearshore yellow-brown plume blends toward blue offshore; Thirteen Levels smelter inland south and outside selected finite coastal crop. Ground and satellite checked; capture dates unknown, Google Street View/360, exact dimensions/unseen sides pending.",
+    "identity": "pending user review: v3 puts viewers inland across road; v2 corrects road/person width and wavebreaker shape. Nearshore ochre plume softly mixes offshore blue, seawall/road landward; no relocated smelter. Plume boundary/time-specific watercolor and exact viewpoint furniture pending.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

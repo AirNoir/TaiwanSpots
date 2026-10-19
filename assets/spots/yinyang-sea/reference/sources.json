@@ -1,0 +1,29 @@
+{
+  "id": "yinyang-sea",
+  "page": "https://www.filmassist.ntpc.gov.tw/scene/349",
+  "credit": "New Taipei City Film Assistance",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; publication/uploaddate is not capturedate",
+  "usage": "Visual reference only, rights retained. No blanket commerciallicense or finaltexture reuse.",
+  "description": "Sea north of Provincial Highway2 and Shu nantong settlement, nearshore yellow-brown plume blends toward blue offshore; Thirteen Levels smelter inland south and outside selected finite coastal crop.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.filmassist.ntpc.gov.tw/content/images/scene/11469/1920x1080_scene-image-bxsopea2akqool4f4tzxfq.jpg",
+      "page": "https://www.filmassist.ntpc.gov.tw/scene/349",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@25.1227,121.8642,389m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Not exposed;copyright2026 notcapturedate",
+      "usage": "Visual reference only",
+      "observations": "Sea north of Provincial Highway2 and Shu nantong settlement, nearshore yellow-brown plume blends toward blue offshore; Thirteen Levels smelter inland south and outside selected finite coastal crop."
+    }
+  ]
+}

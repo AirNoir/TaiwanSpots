@@ -1,0 +1,45 @@
+{
+  "id": "roundhouse",
+  "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=e51a4fad-7be7-43fd-9a61-56939757426f&id=29&l=TW",
+  "credit": "Changhua County Tourism; photos credited on source to Chiu Chia-tseng / Chen Chien-hao / Wu Chang-ti (individual file assignment uncertain)",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; publication/uploaddate is not capturedate",
+  "usage": "Visual reference only, rights retained. No blanket commerciallicense or finaltexture reuse.",
+  "description": "Fan-shaped shed north/northwest of turntable, bays open southeast toward turntable; railway main corridor east/southeast. Draft west-facing assertion corrected by satellite2026-10-20.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2023051214214634495.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=e51a4fad-7be7-43fd-9a61-56939757426f&id=29&l=TW",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2023051214222251526.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=e51a4fad-7be7-43fd-9a61-56939757426f&id=29&l=TW",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://tourism.chcg.gov.tw/upload/27/2023051214223557133.jpg",
+      "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=e51a4fad-7be7-43fd-9a61-56939757426f&id=29&l=TW",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@24.0859,120.5401,392m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Not exposed;copyright2026 notcapturedate",
+      "usage": "Visual reference only",
+      "observations": "Fan-shaped shed north/northwest of turntable, bays open southeast toward turntable; railway main corridor east/southeast. Draft west-facing assertion corrected by satellite2026-10-20."
+    }
+  ]
+}

@@ -1,23 +1,23 @@
 {
   "spotId": "wuling-farm",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
-    "name": "Wuling Farm valley",
-    "silhouette": "High mountain valley with cherry trees along a stream and orchards on slopes"
+    "name": "Wuling Farm spring visitor-center scene",
+    "silhouette": "Red-tile visitor center beside pink cherry trees"
   },
-  "crop": "The valley farm with cherry blossoms. Not the high peaks.",
+  "crop": "Actual Wuling Visitor Center red-tile building and cherry blossom forecourt; river, hotel, orchards and bear-sign outside crop.",
   "heroScale": 1,
-  "orientation": "verify: Qijiawan Creek flows along the valley floor",
+  "orientation": "Wuling visitor center on west/northwest side of Qijiawan Creek, road and valley southwest-northeast; selected building/forecourt crop omits creek. Satellite checked2026-10-20.",
   "lockedGeometry": [
-    "high valley",
-    "stream along the floor",
-    "orchards on terraces"
+    "pitched tiled visitorcenter",
+    "paved forecourt and steps",
+    "cherry trees beside building"
   ],
   "lockedIdentity": [
-    "pink cherry blossoms",
-    "Formosan landlocked salmon stream"
+    "red-tiled Wuling visitorcenter",
+    "spring pink cherries"
   ],
   "doNotInvent": [
     "beaches",
@@ -30,18 +30,27 @@
     "mist"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-second.jpg",
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/place/%E9%9B%AA%E9%9C%B8%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92%E6%AD%A6%E9%99%B5%E9%81%8A%E5%AE%A2%E4%B8%AD%E5%BF%83/@24.3532375,121.3072235,783m/data=!3m2!1e3!4b1!4m6!3m5!1s0x34685e2adc646723:0xd0a2bd662c74c451!8m2!3d24.3532375!4d121.3097984!16s%2Fg%2F1td749pm?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "official-second.jpg"
+    ]
   },
   "worldToken": {
-    "element": "Pink cherry tree by a stream"
+    "element": "Cherry tree beside red-tile visitorcenter"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Wuling visitor center on west/northwest side of Qijiawan Creek, road and valley southwest-northeast; selected building/forecourt crop omits creek. Satellite checked2026-10-20. Ground and satellite checked; capture dates unknown, Google Street View/360, exact dimensions/unseen sides pending.",
+    "identity": "pending user review: Real red-tile visitor-center/forecourt and spring cherry interpretation; creek/hotel/bearsign omitted rather than relocated. Exact cherry placement/windowbays and current flower state pending; not October bloom.",
+    "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
   }
 }

@@ -1,0 +1,37 @@
+{
+  "id": "wuling-farm",
+  "page": "https://www.trimt-nsa.gov.tw/zh-tw/attraction/70/",
+  "credit": "Tri-Mountain National Scenic Area",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; publication/uploaddate is not capturedate",
+  "usage": "Visual reference only, rights retained. No blanket commerciallicense or finaltexture reuse.",
+  "description": "Wuling visitor center on west/northwest side of Qijiawan Creek, road and valley southwest-northeast; selected building/forecourt crop omits creek. Satellite checked2026-10-20.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.trimt-nsa.gov.tw/_api/Image/147612/?r=1770361577468",
+      "page": "https://www.trimt-nsa.gov.tw/zh-tw/attraction/70/",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.trimt-nsa.gov.tw/_api/Image/147613/?r=1770361592796",
+      "page": "https://www.trimt-nsa.gov.tw/zh-tw/attraction/70/",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/place/%E9%9B%AA%E9%9C%B8%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92%E6%AD%A6%E9%99%B5%E9%81%8A%E5%AE%A2%E4%B8%AD%E5%BF%83/@24.3532375,121.3072235,783m/data=!3m2!1e3!4b1!4m6!3m5!1s0x34685e2adc646723:0xd0a2bd662c74c451!8m2!3d24.3532375!4d121.3097984!16s%2Fg%2F1td749pm?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Not exposed;copyright2026 notcapturedate",
+      "usage": "Visual reference only",
+      "observations": "Wuling visitor center on west/northwest side of Qijiawan Creek, road and valley southwest-northeast; selected building/forecourt crop omits creek. Satellite checked2026-10-20."
+    }
+  ]
+}

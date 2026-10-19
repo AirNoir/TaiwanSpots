@@ -1,0 +1,37 @@
+{
+  "id": "pine-garden",
+  "page": "https://www.hccc.gov.tw/zh-tw/LocalCulturalHall/Detail/20?OpBrowser=1",
+  "credit": "Hualien County Cultural Affairs",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; publication/uploaddate is not capturedate",
+  "usage": "Visual reference only, rights retained. No blanket commerciallicense or finaltexture reuse.",
+  "description": "Main villa on wooded terrace north of Meilun River, grounds front lawn west/southwest of mainblock; harbour/sea farther east outside crop. Satellite checked2026-10-20.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.hccc.gov.tw/Utility/DisplayImage?id=27205",
+      "page": "https://www.hccc.gov.tw/zh-tw/LocalCulturalHall/Detail/20?OpBrowser=1",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://www.hccc.gov.tw/Utility/DisplayImage?id=27204",
+      "page": "https://www.hccc.gov.tw/zh-tw/LocalCulturalHall/Detail/20?OpBrowser=1",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.9826,121.6155,392m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Not exposed;copyright2026 notcapturedate",
+      "usage": "Visual reference only",
+      "observations": "Main villa on wooded terrace north of Meilun River, grounds front lawn west/southwest of mainblock; harbour/sea farther east outside crop. Satellite checked2026-10-20."
+    }
+  ]
+}
