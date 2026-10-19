@@ -1,0 +1,61 @@
+{
+  "id": "houtong",
+  "title": "houtong real-scene references",
+  "page": "https://newtaipei.travel/zh-tw/attractions/detail/112430",
+  "image": "https://newtaipei.travel/content/images/attractions/46242/1920x1080_attractions-image-lhgu3l5byug0jgmlmaf-aa.jpg",
+  "credit": "New Taipei City tourism",
+  "capture": "2025 after-repair for bridge photos as official caption; cat capture unknown",
+  "accessed": "2026-10-19",
+  "usage": "Reference only; source/artist/photographer rights retained, no blanket commercial permission, no final texture reuse. Jimmy installation characters remain rights of original artist.",
+  "description": "Cat village WEST/NORTHWEST hillside of station; main rail corridor NE-SW. Cat bridge crosses tracks from village to station east, not village north. Satellite checked2026-10-19.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/46242/1920x1080_attractions-image-lhgu3l5byug0jgmlmaf-aa.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/403148",
+      "credit": "New Taipei City tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/44816/1024x768_attractions-image-5y_4jjsape-u2xrrbkpq-q.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/403148",
+      "credit": "New Taipei City tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-bridge.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/65791/1024x768_attractions-image-mrwq0stccum5ib5eya0u4a.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/112430",
+      "credit": "New Taipei City tourism",
+      "kind": "real photograph",
+      "capture": "2025 after-repair",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-bridge-second.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/65792/1024x768_attractions-image-y821xy9bbu6frx5jx2ujrq.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/112430",
+      "credit": "New Taipei City tourism",
+      "kind": "real photograph",
+      "capture": "2025 after-repair",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@25.086956,121.827222,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Cat village WEST/NORTHWEST hillside of station; main rail corridor NE-SW. Cat bridge crosses tracks from village to station east, not village north. Satellite checked2026-10-19."
+      ],
+      "limitations": "Not metric survey; no calibrated lens correction or Street View capture."
+    }
+  ]
+}

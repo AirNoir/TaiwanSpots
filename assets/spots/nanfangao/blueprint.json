@@ -7,17 +7,17 @@
     "name": "Nanfangao harbour",
     "silhouette": "Crescent harbour crowded with colourful fishing boats below green hills"
   },
-  "crop": "The harbour basin, boats and Nantian Temple. Not the whole Su'ao coast.",
+  "crop": "Finite Yugang Road quay excerpt along north shore of first fishing basin, boats and modest fishery buildings; temple/bridge/coast/hills outside crop.",
   "heroScale": 1,
-  "orientation": "verify: harbour mouth opens east to the Pacific",
+  "orientation": "First fishing basin SOUTH of town peninsula, third basin NORTH; narrow passages east lead toward outer Su-ao harbour. Nantian Temple west end of first basin. Satellite checked2026-10-19.",
   "lockedGeometry": [
-    "curved harbour basin",
-    "hills enclosing it",
-    "town packed along the quay"
+    "straight working quay",
+    "fishing boats moored beside quay",
+    "modest fishery shop row"
   ],
   "lockedIdentity": [
-    "rows of colourful fishing boats",
-    "Nantian Temple"
+    "working fishing boats",
+    "quay and fish crates"
   ],
   "doNotInvent": [
     "cruise ships",
@@ -30,18 +30,26 @@
     "seagulls"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-second.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.5833,121.8670,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "official-second.jpg"
+    ]
   },
   "worldToken": {
     "element": "A colourful fishing boat"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Land observation-platform view and satellite collected, but close quay/street detail and building identification insufficient; current imagery/date uncertain",
+    "identity": "failed self-check: generic fishing quay lacks place-specific identity within3seconds; no supported NantianTemple geometry in this crop",
+    "style": "partial: good miniature boat/crate/material/people qualities; does not establish correct specific place",
+    "collection": "needs-regeneration; preserve native rejected draft, collect actual close ground quay+NantianTemple relation before further generation"
   }
 }

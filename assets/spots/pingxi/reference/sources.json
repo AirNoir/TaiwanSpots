@@ -1,0 +1,43 @@
+{
+  "id": "pingxi",
+  "title": "pingxi real-scene references",
+  "page": "https://newtaipei.travel/zh-tw/attractions/detail/110030",
+  "image": "https://newtaipei.travel/content/images/attractions/48227/1920x1080_attractions-image-mgygbdk5ukmtw1tflr9jfw.jpg",
+  "credit": "New Taipei City tourism",
+  "capture": "Capture date unknown; page/filename year not capture date",
+  "accessed": "2026-10-19",
+  "usage": "Reference only; source/artist/photographer rights retained, no blanket commercial permission, no final texture reuse. Jimmy installation characters remain rights of original artist.",
+  "description": "Railway roughly east-west above northern edge of Pingxi Street; street crosses beneath short elevated section by station. Satellite and actual rail-side photos checked2026-10-19.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/48227/1920x1080_attractions-image-mgygbdk5ukmtw1tflr9jfw.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/110030",
+      "credit": "New Taipei City tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/48226/1024x768_attractions-image-8btaeqfvbkmz7q4bmbyblq.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/110030",
+      "credit": "New Taipei City tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@25.02533,121.73882,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Railway roughly east-west above northern edge of Pingxi Street; street crosses beneath short elevated section by station. Satellite and actual rail-side photos checked2026-10-19."
+      ],
+      "limitations": "Not metric survey; no calibrated lens correction or Street View capture."
+    }
+  ]
+}

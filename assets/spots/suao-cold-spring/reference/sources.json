@@ -1,0 +1,52 @@
+{
+  "id": "suao-cold-spring",
+  "title": "suao-cold-spring real-scene references",
+  "page": "https://travel.yilan.gov.tw/zh-tw/attraction/1/",
+  "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/10075/480x360_attractions-image-kx80r6tyyuovbtbogz6h5g.jpg",
+  "credit": "Yilan County tourism",
+  "capture": "Capture date unknown; page/filename year not capture date",
+  "accessed": "2026-10-19",
+  "usage": "Reference only; source/artist/photographer rights retained, no blanket commercial permission, no final texture reuse. Jimmy installation characters remain rights of original artist.",
+  "description": "Park along Lengquan Road east side, shallow central watercourse north-south; low facility buildings west. Ground/overhead and satellite checked2026-10-19; current bathing operation pending.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/10075/480x360_attractions-image-kx80r6tyyuovbtbogz6h5g.jpg",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/1/",
+      "credit": "Yilan County tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/10073/480x360_attractions-image-ws741gt5juq4v6-uc5sq5g.jpg",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/1/",
+      "credit": "Yilan County tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/10076/480x360_attractions-image-99an96q53uut8usyxivtsa.jpg",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/1/",
+      "credit": "Yilan County tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.5973124,121.850703,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Park along Lengquan Road east side, shallow central watercourse north-south; low facility buildings west. Ground/overhead and satellite checked2026-10-19; current bathing operation pending."
+      ],
+      "limitations": "Not metric survey; no calibrated lens correction or Street View capture."
+    }
+  ]
+}

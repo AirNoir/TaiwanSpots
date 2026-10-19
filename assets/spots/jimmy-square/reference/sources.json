@@ -1,0 +1,52 @@
+{
+  "id": "jimmy-square",
+  "title": "jimmy-square real-scene references",
+  "page": "https://travel.yilan.gov.tw/zh-tw/attraction/232/",
+  "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/23820/480x360_attractions-image-i0-krg2hukqh7yfoe6rnng.jpg",
+  "credit": "Yilan County tourism",
+  "capture": "Capture date unknown; page/filename year not capture date",
+  "accessed": "2026-10-19",
+  "usage": "Reference only; source/artist/photographer rights retained, no blanket commercial permission, no final texture reuse. Jimmy installation characters remain rights of original artist.",
+  "description": "Actual Jimmy Square south of Yilan Station and WEST of rail tracks. DiuDiuDang flying train is separate site in front of station, not moved into this crop. Satellite checked2026-10-19.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/23820/480x360_attractions-image-i0-krg2hukqh7yfoe6rnng.jpg",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/232/",
+      "credit": "Yilan County tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/23822/480x360_attractions-image-3egektakfu2yedf94aehhq.jpg",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/232/",
+      "credit": "Yilan County tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-third.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/23824/480x360_attractions-image-q_xqm5coguq2ngbyzrd0uq.jpg",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/232/",
+      "credit": "Yilan County tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.7526264,121.7570038,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "Actual Jimmy Square south of Yilan Station and WEST of rail tracks. DiuDiuDang flying train is separate site in front of station, not moved into this crop. Satellite checked2026-10-19."
+      ],
+      "limitations": "Not metric survey; no calibrated lens correction or Street View capture."
+    }
+  ]
+}

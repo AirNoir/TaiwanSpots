@@ -1,0 +1,43 @@
+{
+  "id": "nanfangao",
+  "title": "nanfangao real-scene references",
+  "page": "https://travel.yilan.gov.tw/zh-tw/attraction/18/",
+  "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/10242/480x360_attractions-image-o5rr0diziei53se5zwaf4g.jpg",
+  "credit": "Yilan County tourism",
+  "capture": "Capture date unknown; page/filename year not capture date",
+  "accessed": "2026-10-19",
+  "usage": "Reference only; source/artist/photographer rights retained, no blanket commercial permission, no final texture reuse. Jimmy installation characters remain rights of original artist.",
+  "description": "First fishing basin SOUTH of town peninsula, third basin NORTH; narrow passages east lead toward outer Su-ao harbour. Nantian Temple west end of first basin. Satellite checked2026-10-19.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/10242/480x360_attractions-image-o5rr0diziei53se5zwaf4g.jpg",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/18/",
+      "credit": "Yilan County tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-second.jpg",
+      "image": "https://travel.yilan.gov.tw/_api/content/images/attractions/10238/480x360_attractions-image-y3snr53x3kqs4qrmswv_yg.jpg",
+      "page": "https://travel.yilan.gov.tw/zh-tw/attraction/18/",
+      "credit": "Yilan County tourism",
+      "kind": "real photograph",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "page": "https://www.google.com/maps/@24.5833,121.8670,18z/data=!3m1!1e3",
+      "credit": "Google Maps / Airbus / Maxar attribution retained",
+      "kind": "independent satellite overhead",
+      "capture": "Imagery date not exposed",
+      "accessed": "2026-10-19",
+      "observations": [
+        "First fishing basin SOUTH of town peninsula, third basin NORTH; narrow passages east lead toward outer Su-ao harbour. Nantian Temple west end of first basin. Satellite checked2026-10-19."
+      ],
+      "limitations": "Not metric survey; no calibrated lens correction or Street View capture."
+    }
+  ]
+}
