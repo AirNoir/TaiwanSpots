@@ -32,6 +32,19 @@
       "observations": "Broken arch shoulders and freestanding redbrick piers retained; no intact deck. Exact surviving pier count, bridge-axis angle and valley-channel position require manual review.",
       "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
       "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "county-platform-view-2017.jpg",
+      "page": "https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=198554",
+      "image": "https://webws.miaoli.gov.tw/001/Upload/402/relpic/9462/198554/91997441-009e-42b7-ba5b-a91a0cf7b6d7%40710x470.jpg",
+      "kind": "ground",
+      "credit": "Miaoli County Government, 2017-12-27 news release",
+      "capture": "Not exposed; published 2017-12-27",
+      "license": "Reference only; copyright retained by source; no redistribution license asserted",
+      "observations": "Independent distant view from southern railway platform confirms overall standing row and green valley.",
+      "limitations": "334x188 low resolution; cannot measure pier lean, count or exact dimensions. Genuine damaged masonry offsets must remain; do not claim perfectly straight monument measured from photo.",
+      "accessed": "2026-10-19",
+      "usage": "Reference only; never runtime texture or bundled App asset."
     }
   ],
   "officialContext": [

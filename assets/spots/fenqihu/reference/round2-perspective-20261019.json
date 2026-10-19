@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-19",
+  "reviewSource": "docs/art-reviews/2026-10-19-latest.json",
+  "userCorrection": "你的參考圖也是廣角的, 實際鐵軌跟車庫都是水平的, 你做的有視覺化向下凹陷的問題",
+  "groundReferences": [
+    "real-photo.jpg",
+    "google-ground-review.jpg",
+    "commons-garage-2005.jpg"
+  ],
+  "aerialReferences": [
+    "google-satellite-review.jpg"
+  ],
+  "representativeReferences": [
+    "real-photo.jpg"
+  ],
+  "method": "Existing ground and aerial references crosschecked, plus independent historical real ground views for Fenqihu and Longteng. Reconstruct geometry with reduced perspective; original photos unchanged. No calibrated inverse lens correction or new full Google Maps audit claimed.",
+  "limitations": "Independent 2005 front image historical; current facade and full track/switch topology remain pending.",
+  "originalPhotosModified": false,
+  "exactInverseLensCalibration": "pending: calibrated intrinsics and distortion coefficients unavailable",
+  "generatedModelIsGeographicEvidence": false
+}

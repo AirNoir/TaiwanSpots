@@ -35,7 +35,8 @@
     ],
     "ground": [
       "real-photo.jpg",
-      "google-ground-review.jpg"
+      "google-ground-review.jpg",
+      "county-platform-view-2017.jpg"
     ],
     "map": [
       "google-satellite-review.jpg"
@@ -50,8 +51,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Broken arch shoulders and freestanding redbrick piers retained; no intact deck. Exact surviving pier count, bridge-axis angle and valley-channel position require manual review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-15 review-v2.png: Imported user review repair: 靠近邊緣的景物部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍 Self-check: Reduced common scene footprint; ruin shoulders and tree crowns visibly contained by plinth boundary. No glass or intact bridge deck added. Pier counts and exact alignment remain pending. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
+    "style": "pass",
+    "collection": "pass",
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Broken arch shoulders and freestanding redbrick piers retained; no intact deck. Exact surviving pier count, bridge-axis angle and valley-channel position require manual review. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-15 review-v2.png: Imported user review repair: 靠近邊緣的景物部分, 應該與底座邊緣切齊, 可以想像底座上方四個面各有一層玻璃, 內容物不應該超過玻璃的範圍 Self-check: Reduced common scene footprint; ruin shoulders and tree crowns visibly contained by plinth boundary. No glass or intact bridge deck added. Pier counts and exact alignment remain pending. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit. | 2026-10-19 review-v4.png: Latest user review: google map 是呈現廣角感覺, 所以看起來建築是斜斜的, 你產生的圖不應該讓橋墩是斜的～ Self-check: Corrected upright shaft alignment while preserving widened footings and broken arch shoulders; exact earthquake offsets remain pending. Preview only; user acceptance and exact geographic measurement pending. Independent views used for perspective normalization; original photos unchanged, calibrated inverse correction unavailable."
   }
 }

@@ -1,0 +1,414 @@
+{
+  "exportedAt": "2026-10-19T06:44:46.283Z",
+  "colorPreview": {
+    "saturation": 0.88,
+    "scope": "model-display-only"
+  },
+  "reviews": [
+    {
+      "id": "gaomei",
+      "name": "高美濕地",
+      "status": "adjust",
+      "note": "調整比例, 希望帶入遠方的風力發電景色",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:26:56.342Z"
+    },
+    {
+      "id": "taipei-101",
+      "name": "台北 101",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "oneness-taipei-101.jpg",
+      "updatedAt": "2026-10-19T06:26:27.185Z"
+    },
+    {
+      "id": "palace-museum",
+      "name": "故宮博物院",
+      "status": "approved",
+      "note": "",
+      "model": "review-v8.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:26:29.077Z"
+    },
+    {
+      "id": "jiufen",
+      "name": "九份老街",
+      "status": "approved",
+      "note": "",
+      "model": "review-v6.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:26:30.896Z"
+    },
+    {
+      "id": "tamsui",
+      "name": "淡水老街",
+      "status": "approved",
+      "note": "",
+      "model": "review-v4.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:26:35.830Z"
+    },
+    {
+      "id": "dadaocheng",
+      "name": "大稻埕",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:26:39.774Z"
+    },
+    {
+      "id": "yehliu",
+      "name": "野柳地質公園",
+      "status": "approved",
+      "note": "",
+      "model": "review-v5.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:26:41.982Z"
+    },
+    {
+      "id": "sun-moon-lake",
+      "name": "日月潭",
+      "status": "approved",
+      "note": "",
+      "model": "review-v8.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:26:44.500Z"
+    },
+    {
+      "id": "cingjing",
+      "name": "清境農場",
+      "status": "approved",
+      "note": "",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:26:49.045Z"
+    },
+    {
+      "id": "rainbow-village",
+      "name": "彩虹眷村",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:26:59.667Z"
+    },
+    {
+      "id": "lukang",
+      "name": "鹿港老街",
+      "status": "adjust",
+      "note": "雖然街道已經貫通, 但是透視比例錯誤, 本身基座應該無法承載那麼長的街道",
+      "model": "review-v3.png",
+      "photo": "google-ground-review.jpg",
+      "updatedAt": "2026-10-19T06:27:54.101Z"
+    },
+    {
+      "id": "hehuanshan",
+      "name": "合歡山",
+      "status": "approved",
+      "note": "",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:28:00.433Z"
+    },
+    {
+      "id": "alishan",
+      "name": "阿里山",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:28:04.236Z"
+    },
+    {
+      "id": "anping",
+      "name": "安平古堡",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:28:07.433Z"
+    },
+    {
+      "id": "chihkan",
+      "name": "赤崁樓",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:28:26.509Z"
+    },
+    {
+      "id": "pier2",
+      "name": "駁二藝術特區",
+      "status": "approved",
+      "note": "",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:28:31.345Z"
+    },
+    {
+      "id": "cijin",
+      "name": "旗津",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:28:38.979Z"
+    },
+    {
+      "id": "kenting",
+      "name": "墾丁",
+      "status": "approved",
+      "note": "",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:28:50.019Z"
+    },
+    {
+      "id": "taroko",
+      "name": "太魯閣",
+      "status": "approved",
+      "note": "",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:28:56.755Z"
+    },
+    {
+      "id": "qingshui-cliff",
+      "name": "清水斷崖",
+      "status": "approved",
+      "note": "",
+      "model": "review-v5.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:29:00.486Z"
+    },
+    {
+      "id": "qixingtan",
+      "name": "七星潭",
+      "status": "adjust",
+      "note": "感覺不夠壯闊, 比例可以再調整",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:29:32.075Z"
+    },
+    {
+      "id": "brown-avenue",
+      "name": "伯朗大道",
+      "status": "adjust",
+      "note": "希望比例可以縮小一點, 讓道路有延伸感",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:29:55.857Z"
+    },
+    {
+      "id": "sanxiantai",
+      "name": "三仙台",
+      "status": "approved",
+      "note": "",
+      "model": "review-v5.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:29:59.593Z"
+    },
+    {
+      "id": "ruisui",
+      "name": "瑞穗牧場",
+      "status": "adjust",
+      "note": "希望比例縮小, 不然覺得農場太小了",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:30:35.908Z"
+    },
+    {
+      "id": "xiangshan",
+      "name": "象山",
+      "status": "approved",
+      "note": "",
+      "model": "review-v5.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:30:41.694Z"
+    },
+    {
+      "id": "longshan-temple",
+      "name": "艋舺龍山寺",
+      "status": "approved",
+      "note": "",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:31:00.417Z"
+    },
+    {
+      "id": "cks-memorial",
+      "name": "中正紀念堂",
+      "status": "approved",
+      "note": "",
+      "model": "review-v5.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:31:02.535Z"
+    },
+    {
+      "id": "ximending",
+      "name": "西門町",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:31:06.463Z"
+    },
+    {
+      "id": "shengxing-station",
+      "name": "勝興車站",
+      "status": "approved",
+      "note": "",
+      "model": "review-v4.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:31:13.135Z"
+    },
+    {
+      "id": "longteng-bridge",
+      "name": "龍騰斷橋",
+      "status": "adjust",
+      "note": "google map 是呈現廣角感覺, 所以看起來建築是斜斜的, 你產生的圖不應該讓橋墩是斜的～",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:32:59.488Z"
+    },
+    {
+      "id": "sanyi-woodcarving",
+      "name": "三義木雕老街",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:33:03.378Z"
+    },
+    {
+      "id": "nanzhuang",
+      "name": "南庄老街",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:33:11.877Z"
+    },
+    {
+      "id": "hinoki-village",
+      "name": "檜意森活村",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:33:15.351Z"
+    },
+    {
+      "id": "fenqihu",
+      "name": "奮起湖",
+      "status": "adjust",
+      "note": "你的參考圖也是廣角的, 實際鐵軌跟車庫都是水平的, 你做的有視覺化向下凹陷的問題",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:37:31.349Z"
+    },
+    {
+      "id": "dongshi",
+      "name": "東石漁人碼頭",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:37:36.664Z"
+    },
+    {
+      "id": "npm-southern",
+      "name": "故宮南院",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:37:47.388Z"
+    },
+    {
+      "id": "guishan-island",
+      "name": "龜山島",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo-overview.jpg",
+      "updatedAt": "2026-10-19T06:37:51.624Z"
+    },
+    {
+      "id": "waiao",
+      "name": "外澳沙灘",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:37:54.375Z"
+    },
+    {
+      "id": "jiaoxi",
+      "name": "礁溪溫泉",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:37:58.353Z"
+    },
+    {
+      "id": "shilin-night-market",
+      "name": "士林夜市",
+      "status": "adjust",
+      "note": "道路為什麼直衝捷運站入口?",
+      "model": "review-v4.png",
+      "photo": "real-photo-jiantan-market-2018.jpg",
+      "updatedAt": "2026-10-19T06:43:56.571Z"
+    },
+    {
+      "id": "beitou-thermal-valley",
+      "name": "北投地熱谷",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:44:03.513Z"
+    },
+    {
+      "id": "qingtiangang",
+      "name": "擎天崗",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:44:24.925Z"
+    },
+    {
+      "id": "maokong",
+      "name": "貓空纜車",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:44:31.862Z"
+    },
+    {
+      "id": "baishatun",
+      "name": "白沙屯拱天宮",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:44:40.089Z"
+    },
+    {
+      "id": "huoyanshan",
+      "name": "火炎山",
+      "status": "approved",
+      "note": "",
+      "model": "review-v1.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-19T06:44:42.969Z"
+    }
+  ]
+}

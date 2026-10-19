@@ -32,6 +32,20 @@
       "observations": "Real engine-shed photo and satellite track/old-street relationship used. Exact station/garage architecture, switch count and tree species require manual review; no operating locomotive invented.",
       "limitations": "Satellite is a plan reference; acquisition date not displayed, elevations and obscured geometry unmeasured.",
       "usage": "Reference only, not final texture"
+    },
+    {
+      "local": "commons-garage-2005.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Fenchihu_Garage01.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Fenchihu_Garage01.jpg",
+      "kind": "ground",
+      "credit": "Jill Chen",
+      "capture": "2005-04-03",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "observations": "Independent front view: straight shed threshold, vertical facade, gabled roof and rails flush at entrance. Historical appearance, not proof of current paint or layout.",
+      "limitations": "640x480 historical image, no calibrated intrinsics; 6.40625mm focal length reported for Canon DIGITAL IXUS i; not asserted distortion-free.",
+      "accessed": "2026-10-19",
+      "usage": "Reference only; never runtime texture or bundled App asset."
     }
   ],
   "officialContext": []

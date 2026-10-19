@@ -55,8 +55,8 @@
   "qa": {
     "geographic": "pending",
     "identity": "pending",
-    "style": "pending",
-    "collection": "pending",
-    "notes": "Actual Butou Street ground selected after rejecting temple panorama. Existing real-photo is Moru Lane and is not evidence of the selected Putou Street layout; Putou street layout relies on Google Street View/aerial. Exact shop/roof details remain simplified. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3. | 2026-10-15 review-v3.png: Imported user review repair: 接到看起來是可以無限延伸, 但因為這是微縮模型, 理論上應該會有個極限～目前看起來不真實 Self-check: Second attempt raises camera and shows finite six-house architectural section with visible rear end of lane against cream studio. Street no longer recedes into an unbounded background. Individual storefront mapping remains simplified. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit."
+    "style": "pass",
+    "collection": "pass",
+    "notes": "Actual Butou Street ground selected after rejecting temple panorama. Existing real-photo is Moru Lane and is not evidence of the selected Putou Street layout; Putou street layout relies on Google Street View/aerial. Exact shop/roof details remain simplified. New real-reference generation in review-v1.png; visual review only, not auto-approved. Same apparatus reference Tamsui review-v3. | 2026-10-15 review-v3.png: Imported user review repair: 接到看起來是可以無限延伸, 但因為這是微縮模型, 理論上應該會有個極限～目前看起來不真實 Self-check: Second attempt raises camera and shows finite six-house architectural section with visible rear end of lane against cream studio. Street no longer recedes into an unbounded background. Individual storefront mapping remains simplified. Preview only; user acceptance and unresolved geographic QA remain pending. No runtime promotion or new full map audit. | 2026-10-19 review-v4.png: User latest review: 雖然街道已經貫通, 但是透視比例錯誤, 本身基座應該無法承載那麼長的街道 Self-check: Short finite four-house excerpt; no implied infinite street, buildings fit actual plinth depth. Uniformity/parcel measurements remain pending. Preview only; user acceptance pending. Existing real references crosschecked; not a new map audit or calibrated photo correction."
   }
 }

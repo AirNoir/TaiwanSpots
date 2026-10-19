@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-19",
+  "reviewSource": "docs/art-reviews/2026-10-19-latest.json",
+  "userCorrection": "感覺不夠壯闊, 比例可以再調整",
+  "groundReferences": [
+    "google-ground-review.jpg"
+  ],
+  "aerialReferences": [
+    "google-aerial-review.jpg"
+  ],
+  "representativeReferences": [
+    "real-photo.jpg"
+  ],
+  "method": "Existing ground and aerial references crosschecked, plus independent historical real ground views for Fenqihu and Longteng. Reconstruct geometry with reduced perspective; original photos unchanged. No calibrated inverse lens correction or new full Google Maps audit claimed.",
+  "limitations": "Wider central coastline excerpt, not entire measured bay.",
+  "originalPhotosModified": false,
+  "exactInverseLensCalibration": "pending: calibrated intrinsics and distortion coefficients unavailable",
+  "generatedModelIsGeographicEvidence": false
+}

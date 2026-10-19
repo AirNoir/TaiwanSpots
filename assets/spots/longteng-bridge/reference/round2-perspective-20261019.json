@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-19",
+  "reviewSource": "docs/art-reviews/2026-10-19-latest.json",
+  "userCorrection": "google map 是呈現廣角感覺, 所以看起來建築是斜斜的, 你產生的圖不應該讓橋墩是斜的～",
+  "groundReferences": [
+    "real-photo.jpg",
+    "google-ground-review.jpg",
+    "county-platform-view-2017.jpg"
+  ],
+  "aerialReferences": [
+    "google-satellite-review.jpg"
+  ],
+  "representativeReferences": [
+    "real-photo.jpg"
+  ],
+  "method": "Existing ground and aerial references crosschecked, plus independent historical real ground views for Fenqihu and Longteng. Reconstruct geometry with reduced perspective; original photos unchanged. No calibrated inverse lens correction or new full Google Maps audit claimed.",
+  "limitations": "Official distant reference low resolution; surviving pier count, real earthquake offsets and precise dimensions pending.",
+  "originalPhotosModified": false,
+  "exactInverseLensCalibration": "pending: calibrated intrinsics and distortion coefficients unavailable",
+  "generatedModelIsGeographicEvidence": false
+}
