@@ -1,0 +1,44 @@
+{
+  "id": "tiehua-village",
+  "page": "https://tour.taitung.gov.tw/zh-tw/news/details/5576",
+  "historicalPage": "https://www.pioneeringeastriftvalleygranaryfestivities.com.tw/2019/05/03/5400/",
+  "credit": "Wang Pi-Cheng / 王弼正; photo filenames20190420, page2019-05-03; visual reference only",
+  "accessed": "2026-10-20",
+  "usage": "Visual reference only, copyright retained, no blanket commercialtexturelicense",
+  "description": "Historical2019 TiehuaRoad tree-lined pedestrian market, NW-SE streetaxis; old music stage and TTstyle wavehouse separate locations outside this finite lantern/stall crop.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.pioneeringeastriftvalleygranaryfestivities.com.tw/wp-content/uploads/2019/05/20190420-WPC_6144-1024x683.jpg",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "2019-04-20 per filename/page2019-05-03; historic",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://www.pioneeringeastriftvalleygranaryfestivities.com.tw/wp-content/uploads/2019/05/20190420-WPC_6076.jpg",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "2019-04-20 per filename/page2019-05-03; historic",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://www.pioneeringeastriftvalleygranaryfestivities.com.tw/wp-content/uploads/2019/05/20190420-WPC_6124.jpg",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "2019-04-20 per filename/page2019-05-03; historic",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.7533566,121.1460498,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent real satellite",
+      "capture": "Not exposed;2026copyrightnotcaptureyear",
+      "credit": "Google / Airbus / CNES / Maxar originalattributionretained",
+      "usage": "Visual reference only",
+      "observations": "Historical2019 TiehuaRoad tree-lined pedestrian market, NW-SE streetaxis; old music stage and TTstyle wavehouse separate locations outside this finite lantern/stall crop."
+    }
+  ],
+  "lensReview": "Realphoto wideangle/upwardview not copied; crossview composition rebuilt with longlens miniaturecamera, NOT calibrated lensundistortion",
+  "eraCaveat": "Originalmusicvillageclosed2023end, BlueHouse2024reopened; historiclanterncropmustspecified"
+}

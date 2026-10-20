@@ -1,23 +1,23 @@
 {
   "spotId": "chike-mountain",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Chike Mountain daylily fields",
-    "silhouette": "Mountain ridge of orange daylily fields with small huts and rising mist"
+    "silhouette": "Historic low hall and orange daylilies drying on dark roof and courtyard"
   },
-  "crop": "The daylily ridge. Not the valley.",
+  "crop": "Historic Wang-house front hall and small south drying courtyard, limited planted field edge; no distant stone turtle/huts.",
   "heroScale": 1,
-  "orientation": "verify: valley lies to the west",
+  "orientation": "Wang family historic courtyard at23.382844,121.389566, south-facing drying court; Google name-only pin23.3844177 is a separate hillside lookout. Flower-field aerial is a different context crop, not attached to house.",
   "lockedGeometry": [
-    "ridge",
-    "terraces",
-    "valley below"
+    "low historic fronthall",
+    "south dryingcourt",
+    "nearby grassfieldedge"
   ],
   "lockedIdentity": [
-    "orange daylilies",
-    "small huts"
+    "Wanghouse harvested daylily drying",
+    "blackfeltroof and graytimber veranda"
   ],
   "doNotInvent": [
     "snow",
@@ -30,18 +30,27 @@
     "farmers"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-2.jpg",
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.382844,121.389566,99m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "official-2.jpg"
+    ]
   },
   "worldToken": {
     "element": "Orange flowers on a misty ridge"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ground/elevated real photographs and independent satellite reviewed. Wang family historic courtyard at23.382844,121.389566, south-facing drying court; Google name-only pin23.3844177 is a separate hillside lookout. Flower-field aerial is a different context crop, not attached to house. StreetView360, exact dimension and current condition pending.",
+    "identity": "pending userreview: Historic Wang-house front hall and small south drying courtyard, limited planted field edge; no distant stone turtle/huts. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

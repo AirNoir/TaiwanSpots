@@ -1,0 +1,44 @@
+{
+  "id": "donggang",
+  "page": "https://www.dbnsa.gov.tw/zh-tw/attraction/AttractionPage?a=256",
+  "historicalPage": null,
+  "credit": "Official tourism authority, individual photographer unprovided",
+  "accessed": "2026-10-20",
+  "usage": "Visual reference only, copyright retained, no blanket commercialtexturelicense",
+  "description": "Actual Huaqiao seafood retail hall north of ChaolongRoad, water/quay to north; fishing auction buildings and southern fishing harbor are separate, not merged at stall feet.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.dbnsa.gov.tw/fapi/ArtPic?type=ArticlePic&id=345&w=1920",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "Unknown; file/date metadata not proven capturedate",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://www.dbnsa.gov.tw/fapi/ArtPic?type=ArticlePic&id=347&w=1920",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "Unknown; file/date metadata not proven capturedate",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://www.dbnsa.gov.tw/fapi/ArtPic?type=ArticlePic&id=348&w=1920",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "Unknown; file/date metadata not proven capturedate",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.467916,120.44256,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent real satellite",
+      "capture": "Not exposed;2026copyrightnotcaptureyear",
+      "credit": "Google / Airbus / CNES / Maxar originalattributionretained",
+      "usage": "Visual reference only",
+      "observations": "Actual Huaqiao seafood retail hall north of ChaolongRoad, water/quay to north; fishing auction buildings and southern fishing harbor are separate, not merged at stall feet."
+    }
+  ],
+  "lensReview": "Realphoto wideangle/upwardview not copied; crossview composition rebuilt with longlens miniaturecamera, NOT calibrated lensundistortion",
+  "eraCaveat": "Historical view, currentconfiguration not confirmed"
+}

@@ -1,23 +1,23 @@
 {
   "spotId": "donggang",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Huaqiao fish market",
-    "silhouette": "Large market hall full of seafood stalls beside a fishing harbour"
+    "silhouette": "Open-top display cutaway of documented indoor seafood aisle"
   },
-  "crop": "The market and harbour edge. Not the town.",
+  "crop": "Explanatory open-top cutaway of a finite seafood aisle with documented counters and dining stools; no invented external facade or boats.",
   "heroScale": 1,
-  "orientation": "verify: harbour lies to the west",
+  "orientation": "Actual Huaqiao seafood retail hall north of ChaolongRoad, water/quay to north; fishing auction buildings and southern fishing harbor are separate, not merged at stall feet.",
   "lockedGeometry": [
-    "market hall",
-    "harbour",
-    "boats"
+    "finite indoor seafood aisle",
+    "tiled floor",
+    "documented stall counters"
   ],
   "lockedIdentity": [
-    "bluefin tuna",
-    "seafood stalls"
+    "seafood and sakurashrimp counter",
+    "busy Huaqiao indoor market"
   ],
   "doNotInvent": [
     "mountains",
@@ -30,18 +30,27 @@
     "boats"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-3.jpg",
+      "official-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.467916,120.44256,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "official-3.jpg"
+    ]
   },
   "worldToken": {
     "element": "Tuna on a market stall"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ground/elevated real photographs and independent satellite reviewed. Actual Huaqiao seafood retail hall north of ChaolongRoad, water/quay to north; fishing auction buildings and southern fishing harbor are separate, not merged at stall feet. StreetView360, exact dimension and current condition pending.",
+    "identity": "pending userreview: Explanatory open-top cutaway of a finite seafood aisle with documented counters and dining stools; no invented external facade or boats. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

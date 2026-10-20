@@ -1,23 +1,23 @@
 {
   "spotId": "tiehua-village",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Tiehua Music Village",
-    "silhouette": "Small outdoor stage among old railway dorms with lantern balloons in trees"
+    "silhouette": "Lantern-lit historic treewalk and marketcanopies"
   },
-  "crop": "The stage and lantern trees. Not the railway park.",
+  "crop": "Short historic lantern-lit tree walk and one documented market tent row, no invented outdoor stage or merged wavehouse.",
   "heroScale": 1,
-  "orientation": "verify: OSM point is the adjacent Railway Art Village; confirm the stage location",
+  "orientation": "Historical2019 TiehuaRoad tree-lined pedestrian market, NW-SE streetaxis; old music stage and TTstyle wavehouse separate locations outside this finite lantern/stall crop.",
   "lockedGeometry": [
-    "small lawn",
-    "stage",
-    "old dorms"
+    "historic treewalk",
+    "short tentrow",
+    "pavedpedestrianlane"
   ],
   "lockedIdentity": [
-    "glowing balloon lanterns",
-    "outdoor stage"
+    "small faceted paper balloon lanterns",
+    "2019 slowmarket"
   ],
   "doNotInvent": [
     "high-rises",
@@ -30,18 +30,27 @@
     "lights"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-3.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.7533566,121.1460498,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Glowing lantern over a small stage"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ground/elevated real photographs and independent satellite reviewed. Historical2019 TiehuaRoad tree-lined pedestrian market, NW-SE streetaxis; old music stage and TTstyle wavehouse separate locations outside this finite lantern/stall crop. StreetView360, exact dimension and current condition pending.",
+    "identity": "pending userreview: Short historic lantern-lit tree walk and one documented market tent row, no invented outdoor stage or merged wavehouse. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

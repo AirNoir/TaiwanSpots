@@ -1,0 +1,49 @@
+{
+  "id": "chike-mountain",
+  "page": "https://www.erv-nsa.gov.tw/zh-tw/Attractions/Detail/53",
+  "historicalPage": null,
+  "credit": "Official tourism authority, individual photographer unprovided",
+  "accessed": "2026-10-20",
+  "usage": "Visual reference only, copyright retained, no blanket commercialtexturelicense",
+  "description": "Wang family historic courtyard at23.382844,121.389566, south-facing drying court; Google name-only pin23.3844177 is a separate hillside lookout. Flower-field aerial is a different context crop, not attached to house.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/11121/?r=1536291690700",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "Unknown; file/date metadata not proven capturedate",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/11119/?r=1536291541318",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "Unknown; file/date metadata not proven capturedate",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://www.erv-nsa.gov.tw/Image/11116/?r=1536291530142",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "Unknown; file/date metadata not proven capturedate",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.382844,121.389566,99m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent real satellite",
+      "capture": "Not exposed;2026copyrightnotcaptureyear",
+      "credit": "Google / Airbus / CNES / Maxar originalattributionretained",
+      "usage": "Visual reference only",
+      "observations": "Wang family historic courtyard at23.382844,121.389566, south-facing drying court; Google name-only pin23.3844177 is a separate hillside lookout. Flower-field aerial is a different context crop, not attached to house."
+    },
+    {
+      "page": "https://blog.udn.com/article/article_print.jsp?f_ART_ID=148425040&f_CODE=1787107435553&uid=jackgtk",
+      "kind": "photographer published coordinate23.382844,121.389566 used to locate actualhouse, independently satellitechecked; nameonlyMaps pin is lookout",
+      "usage": "Coordinate research, not image reused"
+    }
+  ],
+  "lensReview": "Realphoto wideangle/upwardview not copied; crossview composition rebuilt with longlens miniaturecamera, NOT calibrated lensundistortion",
+  "eraCaveat": "Page2024-05-24; flowerseason8-9; chooseactualfinitecrop afterview, threegiantblackrocks/stoneTurtle/Wanghouse differentlocations"
+}

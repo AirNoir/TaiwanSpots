@@ -1758,51 +1758,101 @@
       "id": "xiaoliuqiu",
       "name": "小琉球花瓶岩",
       "hero": "Vase Rock",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "official-2.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Ground/elevated real photographs and independent satellite reviewed. Vase Rock at NE-facing shore; open sea north/northeast, coast walk inland/southwest, Baisha harbor southeast outside crop. StreetView360, exact dimension and current condition pending.",
+        "identity": "pending userreview: Vase Rock on finite shallow coral reef shelf and a short dry coastal viewing edge; no harbor or temple. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T04:21:41.327203+00:00"
     },
     {
       "id": "donggang",
       "name": "東港華僑市場",
       "hero": "Huaqiao fish market",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "official-3.jpg",
+        "official-2.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Ground/elevated real photographs and independent satellite reviewed. Actual Huaqiao seafood retail hall north of ChaolongRoad, water/quay to north; fishing auction buildings and southern fishing harbor are separate, not merged at stall feet. StreetView360, exact dimension and current condition pending.",
+        "identity": "pending userreview: Explanatory open-top cutaway of a finite seafood aisle with documented counters and dining stools; no invented external facade or boats. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T04:21:42.189453+00:00"
     },
     {
       "id": "chike-mountain",
       "name": "赤科山",
       "hero": "Chike Mountain daylily fields",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "official-2.jpg",
+        "real-photo.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Ground/elevated real photographs and independent satellite reviewed. Wang family historic courtyard at23.382844,121.389566, south-facing drying court; Google name-only pin23.3844177 is a separate hillside lookout. Flower-field aerial is a different context crop, not attached to house. StreetView360, exact dimension and current condition pending.",
+        "identity": "pending userreview: Historic Wang-house front hall and small south drying courtyard, limited planted field edge; no distant stone turtle/huts. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T04:21:42.915409+00:00"
     },
     {
       "id": "tiehua-village",
       "name": "鐵花村",
       "hero": "Tiehua Music Village",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v3.png",
+      "references": [
+        "real-photo.jpg",
+        "official-3.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Ground/elevated real photographs and independent satellite reviewed. Historical2019 TiehuaRoad tree-lined pedestrian market, NW-SE streetaxis; old music stage and TTstyle wavehouse separate locations outside this finite lantern/stall crop. StreetView360, exact dimension and current condition pending.",
+        "identity": "pending userreview: Short historic lantern-lit tree walk and one documented market tent row, no invented outdoor stage or merged wavehouse. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T04:21:43.725035+00:00"
     },
     {
       "id": "taitung-forest-park",
       "name": "台東森林公園",
       "hero": "Taitung Forest Park lakes",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "lake-1.jpg",
+        "lake-2.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Ground/elevated real photographs and independent satellite reviewed. PipaLake longaxis broadly N-S, forest paths on both banks, sea east outside crop. Official lake-1 caption Pipa viewpoint, exact historical deck pinpoint/era pending under canopy. StreetView360, exact dimension and current condition pending.",
+        "identity": "pending userreview: Finite historical lake shore and low orange-brown plank lookout with dark faux-log rails, no entrance gateway or playground. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T04:21:44.225102+00:00"
     },
     {
       "id": "duoliang",
@@ -2115,7 +2165,7 @@
       "userAcceptance": "pending"
     }
   ],
-  "lastUpdatedAt": "2026-10-20T03:56:04.271696+00:00",
+  "lastUpdatedAt": "2026-10-20T04:21:44.716840+00:00",
   "automation": {
     "id": "islandia",
     "status": "ACTIVE",
@@ -2124,14 +2174,14 @@
   },
   "lastBatch": {
     "ids": [
-      "sun-link-sea",
-      "paper-dome",
-      "formosan-aboriginal-village",
-      "maolin",
-      "dapeng-bay"
+      "xiaoliuqiu",
+      "donggang",
+      "chike-mountain",
+      "tiehua-village",
+      "taitung-forest-park"
     ],
     "generated": 5,
-    "additionalRevisions": 4,
+    "additionalRevisions": 3,
     "result": "5 selfchecked previews; useracceptancepending"
   },
   "manualResumedAt": "2026-10-20T02:48:01+00:00",

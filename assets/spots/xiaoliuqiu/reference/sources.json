@@ -1,0 +1,37 @@
+{
+  "id": "xiaoliuqiu",
+  "page": "https://www.dbnsa.gov.tw/zh-tw/attraction/AttractionPage?a=222",
+  "historicalPage": null,
+  "credit": "Official tourism authority, individual photographer unprovided",
+  "accessed": "2026-10-20",
+  "usage": "Visual reference only, copyright retained, no blanket commercialtexturelicense",
+  "description": "Vase Rock at NE-facing shore; open sea north/northeast, coast walk inland/southwest, Baisha harbor southeast outside crop.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.dbnsa.gov.tw/fapi/ArtPic?type=ArticlePic&id=223&w=1920",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "Unknown; file/date metadata not proven capturedate",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://www.dbnsa.gov.tw/fapi/ArtPic?type=ArticlePic&id=228&w=1920",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "Unknown; file/date metadata not proven capturedate",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.35566,120.38076,199m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent real satellite",
+      "capture": "Not exposed;2026copyrightnotcaptureyear",
+      "credit": "Google / Airbus / CNES / Maxar originalattributionretained",
+      "usage": "Visual reference only",
+      "observations": "Vase Rock at NE-facing shore; open sea north/northeast, coast walk inland/southwest, Baisha harbor southeast outside crop."
+    }
+  ],
+  "lensReview": "Realphoto wideangle/upwardview not copied; crossview composition rebuilt with longlens miniaturecamera, NOT calibrated lensundistortion",
+  "eraCaveat": "Historical view, currentconfiguration not confirmed"
+}

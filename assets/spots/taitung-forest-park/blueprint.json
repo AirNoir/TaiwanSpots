@@ -1,15 +1,15 @@
 {
   "spotId": "taitung-forest-park",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Taitung Forest Park lakes",
     "silhouette": "Coastal forest of casuarina trees around two lakes near the sea"
   },
-  "crop": "The lakes and forest paths. Not the city.",
+  "crop": "Finite historical lake shore and low orange-brown plank lookout with dark faux-log rails, no entrance gateway or playground.",
   "heroScale": 1,
-  "orientation": "verify: sea lies to the east",
+  "orientation": "PipaLake longaxis broadly N-S, forest paths on both banks, sea east outside crop. Official lake-1 caption Pipa viewpoint, exact historical deck pinpoint/era pending under canopy.",
   "lockedGeometry": [
     "forest",
     "lakes",
@@ -30,18 +30,27 @@
     "swimmers"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "lake-1.jpg",
+      "lake-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.7557212,121.1665645,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "lake-1.jpg"
+    ]
   },
   "worldToken": {
     "element": "Lake among casuarina trees"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Ground/elevated real photographs and independent satellite reviewed. PipaLake longaxis broadly N-S, forest paths on both banks, sea east outside crop. Official lake-1 caption Pipa viewpoint, exact historical deck pinpoint/era pending under canopy. StreetView360, exact dimension and current condition pending.",
+    "identity": "pending userreview: Finite historical lake shore and low orange-brown plank lookout with dark faux-log rails, no entrance gateway or playground. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

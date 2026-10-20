@@ -1,0 +1,58 @@
+{
+  "id": "taitung-forest-park",
+  "page": "https://tour.taitung.gov.tw/zh-tw/attraction/details/454",
+  "historicalPage": null,
+  "credit": "Official tourism authority, individual photographer unprovided",
+  "accessed": "2026-10-20",
+  "usage": "Visual reference only, copyright retained, no blanket commercialtexturelicense",
+  "description": "PipaLake longaxis broadly N-S, forest paths on both banks, sea east outside crop. Official lake-1 caption Pipa viewpoint, exact historical deck pinpoint/era pending under canopy.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://tour.taitung.gov.tw/image/53399/1920x1080",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "Unknown; file/date metadata not proven capturedate",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://tour.taitung.gov.tw/image/53400/1024x768",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "Unknown; file/date metadata not proven capturedate",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://tour.taitung.gov.tw/image/53401/1024x768",
+      "kind": "real photographs, visually inspected; exact subject roles in prompt",
+      "capture": "Unknown; file/date metadata not proven capturedate",
+      "usage": "Visual reference only, rights retained"
+    },
+    {
+      "local": "lake-1.jpg",
+      "image": "https://tour.taitung.gov.tw/image/53403/1024x768",
+      "kind": "real officialphoto, lake-1caption Pipalake, lake-2different platform",
+      "capture": "Unknown historical",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "lake-2.jpg",
+      "image": "https://tour.taitung.gov.tw/image/53406/1024x768",
+      "kind": "real officialphoto, lake-1caption Pipalake, lake-2different platform",
+      "capture": "Unknown historical",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.7557212,121.1665645,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent real satellite",
+      "capture": "Not exposed;2026copyrightnotcaptureyear",
+      "credit": "Google / Airbus / CNES / Maxar originalattributionretained",
+      "usage": "Visual reference only",
+      "observations": "PipaLake longaxis broadly N-S, forest paths on both banks, sea east outside crop. Official lake-1 caption Pipa viewpoint, exact historical deck pinpoint/era pending under canopy."
+    }
+  ],
+  "lensReview": "Realphoto wideangle/upwardview not copied; crossview composition rebuilt with longlens miniaturecamera, NOT calibrated lensundistortion",
+  "eraCaveat": "Historical view, currentconfiguration not confirmed"
+}
