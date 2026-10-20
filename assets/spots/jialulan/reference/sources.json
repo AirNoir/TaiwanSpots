@@ -1,0 +1,42 @@
+{
+  "id": "jialulan",
+  "page": "https://www.eastcoast-nsa.gov.tw/zh-tw/attractions/detail/28/",
+  "accessed": "2026-10-20",
+  "credit": "Official NationalPark / tourism authority; photographers unspecified",
+  "usage": "Visual reference only; no blanket commercial texture licence. Originals copyright retained, not App textures.",
+  "capture": "Unknown historical imagery, not current measured reconstruction",
+  "supplementary": [
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/72378/1920x1080",
+      "caption": "加路蘭遊憩區大地藝術作品「月亮住在海裡」"
+    },
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/72381/1920x1080",
+      "caption": "藝術作品-旅人的眼睛"
+    },
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/75276/1920x1080",
+      "caption": "這是加路蘭遊憩區空拍照"
+    },
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/41451/1920x1080",
+      "caption": "加路蘭最美公車亭"
+    },
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.eastcoast-nsa.gov.tw/image/72378/1920x1080",
+      "caption": "加路蘭遊憩區大地藝術作品「月亮住在海裡」"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.8065,121.197,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent actual satellite",
+      "capture": "Unknown; copyright2026 not acquisitionyear",
+      "credit": "Google/Airbus/CNES/Maxar attribution retained",
+      "observations": "Art lawn east of Highway11 and west of Pacific; 月亮住在海裡 pavilion on northern smallmound, different from 旅人的眼睛 and busstop. Historicalphotoera; present renovation/temporaryclosures pending."
+    }
+  ],
+  "lensReview": "Wideangle/depth reconstructed with independent view; no calibrated mathematical undistortion claimed. StreetView360 pending.",
+  "description": "Art lawn east of Highway11 and west of Pacific; 月亮住在海裡 pavilion on northern smallmound, different from 旅人的眼睛 and busstop. Historicalphotoera; present renovation/temporaryclosures pending."
+}

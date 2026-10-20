@@ -1,23 +1,23 @@
 {
   "spotId": "jialulan",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Jialulan coast",
     "silhouette": "Grassy coastal terrace with driftwood art and a mountain behind"
   },
-  "crop": "The terrace and shore. Not the town.",
+  "crop": "Actual 月亮住在海裡 woven sculpture and small grassmound only; no ocean or other artworks relocated onto mound.",
   "heroScale": 1,
-  "orientation": "verify: Dulan Mountain lies to the north-west",
+  "orientation": "Art lawn east of Highway11 and west of Pacific; 月亮住在海裡 pavilion on northern smallmound, different from 旅人的眼睛 and busstop. Historicalphotoera; present renovation/temporaryclosures pending.",
   "lockedGeometry": [
-    "grass terrace",
-    "shore",
-    "mountain"
+    "Actual 月亮住在海裡 woven sculpture and small grassmound only; no ocean or other artworks relocated onto mound.",
+    "Art lawn east of Highway11 and west of Pacific; 月亮住在海裡 pavilion on northern smallmound, different from 旅人的眼睛 and busstop. Historicalphotoera; present renovation/temporaryclosures pending.",
+    "all chosen terrain inside true square shallow ivorybase"
   ],
   "lockedIdentity": [
-    "driftwood installations",
-    "sea"
+    "Jialulan actual landart月亮住在海裡 physical Q miniature",
+    "real primary photograph silhouette and material"
   ],
   "doNotInvent": [
     "buildings",
@@ -30,18 +30,27 @@
     "waves"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "study-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.8065,121.197,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Driftwood art on grass"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground and independent satellite visually inspected. Art lawn east of Highway11 and west of Pacific; 月亮住在海裡 pavilion on northern smallmound, different from 旅人的眼睛 and busstop. Historicalphotoera; present renovation/temporaryclosures pending. Exact dimensions/backside/era and StreetView360 pending.",
+    "identity": "pending userreview: Actual 月亮住在海裡 woven sculpture and small grassmound only; no ocean or other artworks relocated onto mound. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

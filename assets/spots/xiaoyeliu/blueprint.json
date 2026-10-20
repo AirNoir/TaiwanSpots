@@ -1,23 +1,23 @@
 {
   "spotId": "xiaoyeliu",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Xiaoyeliu rocks",
     "silhouette": "Coastal sandstone platforms carved into tofu and honeycomb shapes"
   },
-  "crop": "The rocky shore. Not the campground.",
+  "crop": "Photographed low sandstone slabs and shallow tidepool with safe dryrock visitors, no visitorcenter/harbor/giantqueenhead.",
   "heroScale": 1,
-  "orientation": "verify: Green Island visible to the east",
+  "orientation": "Sandstone intertidalplatform east of coastalforestpaths, Pacific east; FugangHarbor southoutsidecrop. Exact individualrock rearface/coordinates notmeasured.",
   "lockedGeometry": [
-    "rock platforms",
-    "shore",
-    "sea"
+    "Photographed low sandstone slabs and shallow tidepool with safe dryrock visitors, no visitorcenter/harbor/giantqueenhead.",
+    "Sandstone intertidalplatform east of coastalforestpaths, Pacific east; FugangHarbor southoutsidecrop. Exact individualrock rearface/coordinates notmeasured.",
+    "all chosen terrain inside true square shallow ivorybase"
   ],
   "lockedIdentity": [
-    "tofu rocks",
-    "honeycomb rocks"
+    "Xiaoyeliu sandstone TIDALPOOL scene exactrealphoto",
+    "real primary photograph silhouette and material"
   ],
   "doNotInvent": [
     "beaches",
@@ -30,18 +30,27 @@
     "crabs"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "study-0.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.7947736,121.1981802,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Honeycomb rock by the sea"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground and independent satellite visually inspected. Sandstone intertidalplatform east of coastalforestpaths, Pacific east; FugangHarbor southoutsidecrop. Exact individualrock rearface/coordinates notmeasured. Exact dimensions/backside/era and StreetView360 pending.",
+    "identity": "pending userreview: Photographed low sandstone slabs and shallow tidepool with safe dryrock visitors, no visitorcenter/harbor/giantqueenhead. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

@@ -1,0 +1,34 @@
+{
+  "id": "hengchun-old-town",
+  "page": "https://www.ktnp.gov.tw/News_Content2.aspx?n=5C28A0E32DF925F9&sms=C88B5251F308CE96&s=22486EF6EB59B864",
+  "accessed": "2026-10-20",
+  "credit": "Official NationalPark / tourism authority; photographers unspecified",
+  "usage": "Visual reference only; no blanket commercial texture licence. Originals copyright retained, not App textures.",
+  "capture": "Unknown historical imagery, not current measured reconstruction",
+  "supplementary": [
+    {
+      "image": "https://ws.ktnp.gov.tw/001/Upload/245/relpic/6730/78567/584e37e6-2c2b-43fd-91d1-ab1036d5ccad@710x470.jpg",
+      "caption": "恆春古城.JPG"
+    },
+    {
+      "image": "https://ws.ktnp.gov.tw/001/Upload/245/relpic/6730/78567/54c17fd3-9d65-4aa2-830f-3984c68ad2d2@710x470.jpg",
+      "caption": "恆春古城_229"
+    },
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.taiwan.net.tw/att/1/big_scenic_spots/pic_2112_11.jpg",
+      "caption": "Official genuine南門, visually inspected; other gallery images show WestGate and even harbour, excluded."
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.0008249,120.7447665,20z/data=!3m1!1e3",
+      "kind": "independent actual satellite",
+      "capture": "Unknown; copyright2026 not acquisitionyear",
+      "credit": "Google/Airbus/CNES/Maxar attribution retained",
+      "observations": "SouthGate in small roadtraffic island, mainarch north-south, facade south. Side streets and urban shops beyond finite islandcrop omitted; no longwall from EastGate."
+    }
+  ],
+  "lensReview": "Wideangle/depth reconstructed with independent view; no calibrated mathematical undistortion claimed. StreetView360 pending.",
+  "description": "SouthGate in small roadtraffic island, mainarch north-south, facade south. Side streets and urban shops beyond finite islandcrop omitted; no longwall from EastGate."
+}

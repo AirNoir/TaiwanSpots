@@ -1,23 +1,23 @@
 {
   "spotId": "hengchun-old-town",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Hengchun South Gate",
     "silhouette": "Qing dynasty brick city gate in a roundabout"
   },
-  "crop": "The South Gate and wall. Not the town.",
+  "crop": "Actual SouthGate with entire small plantedtraffic island and short surroundingroad ring, no other gate or unrelated oldtownblock.",
   "heroScale": 1,
-  "orientation": "verify: gate stands in a roundabout",
+  "orientation": "SouthGate in small roadtraffic island, mainarch north-south, facade south. Side streets and urban shops beyond finite islandcrop omitted; no longwall from EastGate.",
   "lockedGeometry": [
-    "roundabout",
-    "gate",
-    "wall segments"
+    "Actual SouthGate with entire small plantedtraffic island and short surroundingroad ring, no other gate or unrelated oldtownblock.",
+    "SouthGate in small roadtraffic island, mainarch north-south, facade south. Side streets and urban shops beyond finite islandcrop omitted; no longwall from EastGate.",
+    "all chosen terrain inside true square shallow ivorybase"
   ],
   "lockedIdentity": [
-    "brick gate tower",
-    "city walls"
+    "Hengchun SOUTH GATE, Image2 genuine government photograph caption南門",
+    "real primary photograph silhouette and material"
   ],
   "doNotInvent": [
     "skyscrapers",
@@ -30,18 +30,26 @@
     "trees"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.0008249,120.7447665,20z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Brick city gate"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground and independent satellite visually inspected. SouthGate in small roadtraffic island, mainarch north-south, facade south. Side streets and urban shops beyond finite islandcrop omitted; no longwall from EastGate. Exact dimensions/backside/era and StreetView360 pending.",
+    "identity": "pending userreview: Actual SouthGate with entire small plantedtraffic island and short surroundingroad ring, no other gate or unrelated oldtownblock. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

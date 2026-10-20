@@ -1,23 +1,23 @@
 {
   "spotId": "maobitou",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Cat Nose Rock",
     "silhouette": "Coral rock shaped like a crouching cat on a rugged headland"
   },
-  "crop": "The cat rock and headland. Not the town.",
+  "crop": "Photographed CatRock and immediate coralrock/water fragment only; no relocated observationdeck or people on unsafe rock.",
   "heroScale": 1,
-  "orientation": "verify: rock sits at the tip facing south",
+  "orientation": "Park viewingplatform west/uphill of eastern rocky shore. Satellite around21.92198,120.73903 is explanatory sign/overlook context, not verified exact CatRock coordinates; precise rock matching pending.",
   "lockedGeometry": [
-    "headland",
-    "coral reefs",
-    "viewing platform"
+    "Photographed CatRock and immediate coralrock/water fragment only; no relocated observationdeck or people on unsafe rock.",
+    "Park viewingplatform west/uphill of eastern rocky shore. Satellite around21.92198,120.73903 is explanatory sign/overlook context, not verified exact CatRock coordinates; precise rock matching pending.",
+    "all chosen terrain inside true square shallow ivorybase"
   ],
   "lockedIdentity": [
-    "cat-shaped rock",
-    "rugged coast"
+    "Maobitou Cat Nose Rock exact real coral-limestone silhouette",
+    "real primary photograph silhouette and material"
   ],
   "doNotInvent": [
     "beaches",
@@ -30,18 +30,27 @@
     "fishermen"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "study-0.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@21.92198,120.73903,100m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Cat-shaped rock by the sea"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground and independent satellite visually inspected. Park viewingplatform west/uphill of eastern rocky shore. Satellite around21.92198,120.73903 is explanatory sign/overlook context, not verified exact CatRock coordinates; precise rock matching pending. Exact dimensions/backside/era and StreetView360 pending.",
+    "identity": "pending userreview: Photographed CatRock and immediate coralrock/water fragment only; no relocated observationdeck or people on unsafe rock. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

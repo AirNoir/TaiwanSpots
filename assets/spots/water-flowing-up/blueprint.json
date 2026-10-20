@@ -1,23 +1,23 @@
 {
   "spotId": "water-flowing-up",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Water flowing upward canal",
     "silhouette": "Small irrigation channel that seems to run uphill through fields"
   },
-  "crop": "The channel and fields. Not the coast.",
+  "crop": "Actual 奇觀 stone, narrow irrigationchannel and short parallel stonepath/roadedge only, no field/lake or marketbuilding.",
   "heroScale": 1,
-  "orientation": "verify: channel runs east toward the hill",
+  "orientation": "Canal and stonewalk along northeast/uphill side of WuxianIndustryRoad, broad NW-SE corridor; Pacific distant east outsidecrop. Apparent uphill flow is opticalillusion, actualwater obeysgravity.",
   "lockedGeometry": [
-    "canal",
-    "fields",
-    "slope"
+    "Actual 奇觀 stone, narrow irrigationchannel and short parallel stonepath/roadedge only, no field/lake or marketbuilding.",
+    "Canal and stonewalk along northeast/uphill side of WuxianIndustryRoad, broad NW-SE corridor; Pacific distant east outsidecrop. Apparent uphill flow is opticalillusion, actualwater obeysgravity.",
+    "all chosen terrain inside true square shallow ivorybase"
   ],
   "lockedIdentity": [
-    "concrete irrigation ditch",
-    "water visibly running up a gentle slope"
+    "Water Running Upward Dulan exactreal smallcanal miniature",
+    "real primary photograph silhouette and material"
   ],
   "doNotInvent": [
     "buildings",
@@ -30,18 +30,27 @@
     "grass"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "study-1.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.868385,121.2183054,99m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Little canal on a slope"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground and independent satellite visually inspected. Canal and stonewalk along northeast/uphill side of WuxianIndustryRoad, broad NW-SE corridor; Pacific distant east outsidecrop. Apparent uphill flow is opticalillusion, actualwater obeysgravity. Exact dimensions/backside/era and StreetView360 pending.",
+    "identity": "pending userreview: Actual 奇觀 stone, narrow irrigationchannel and short parallel stonepath/roadedge only, no field/lake or marketbuilding. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

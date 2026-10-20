@@ -2063,51 +2063,100 @@
       "id": "maobitou",
       "name": "貓鼻頭",
       "hero": "Cat Nose Rock",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "study-0.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground and independent satellite visually inspected. Park viewingplatform west/uphill of eastern rocky shore. Satellite around21.92198,120.73903 is explanatory sign/overlook context, not verified exact CatRock coordinates; precise rock matching pending. Exact dimensions/backside/era and StreetView360 pending.",
+        "identity": "pending userreview: Photographed CatRock and immediate coralrock/water fragment only; no relocated observationdeck or people on unsafe rock. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T08:27:38.030231+00:00"
     },
     {
       "id": "hengchun-old-town",
       "name": "恆春古城",
       "hero": "Hengchun South Gate",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground and independent satellite visually inspected. SouthGate in small roadtraffic island, mainarch north-south, facade south. Side streets and urban shops beyond finite islandcrop omitted; no longwall from EastGate. Exact dimensions/backside/era and StreetView360 pending.",
+        "identity": "pending userreview: Actual SouthGate with entire small plantedtraffic island and short surroundingroad ring, no other gate or unrelated oldtownblock. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T08:27:39.072082+00:00"
     },
     {
       "id": "jialulan",
       "name": "加路蘭",
       "hero": "Jialulan coast",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "study-2.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground and independent satellite visually inspected. Art lawn east of Highway11 and west of Pacific; 月亮住在海裡 pavilion on northern smallmound, different from 旅人的眼睛 and busstop. Historicalphotoera; present renovation/temporaryclosures pending. Exact dimensions/backside/era and StreetView360 pending.",
+        "identity": "pending userreview: Actual 月亮住在海裡 woven sculpture and small grassmound only; no ocean or other artworks relocated onto mound. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T08:27:39.570819+00:00"
     },
     {
       "id": "water-flowing-up",
       "name": "水往上流",
       "hero": "Water flowing upward canal",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "study-1.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground and independent satellite visually inspected. Canal and stonewalk along northeast/uphill side of WuxianIndustryRoad, broad NW-SE corridor; Pacific distant east outsidecrop. Apparent uphill flow is opticalillusion, actualwater obeysgravity. Exact dimensions/backside/era and StreetView360 pending.",
+        "identity": "pending userreview: Actual 奇觀 stone, narrow irrigationchannel and short parallel stonepath/roadedge only, no field/lake or marketbuilding. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T08:27:40.118670+00:00"
     },
     {
       "id": "xiaoyeliu",
       "name": "小野柳",
       "hero": "Xiaoyeliu rocks",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "study-0.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground and independent satellite visually inspected. Sandstone intertidalplatform east of coastalforestpaths, Pacific east; FugangHarbor southoutsidecrop. Exact individualrock rearface/coordinates notmeasured. Exact dimensions/backside/era and StreetView360 pending.",
+        "identity": "pending userreview: Photographed low sandstone slabs and shallow tidepool with safe dryrock visitors, no visitorcenter/harbor/giantqueenhead. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T08:27:40.741699+00:00"
     },
     {
       "id": "luye-highland",
@@ -2270,7 +2319,7 @@
       "userAcceptance": "pending"
     }
   ],
-  "lastUpdatedAt": "2026-10-20T07:48:45.940458+00:00",
+  "lastUpdatedAt": "2026-10-20T08:27:41.417802+00:00",
   "automation": {
     "id": "islandia",
     "status": "ACTIVE",
@@ -2279,15 +2328,15 @@
   },
   "lastBatch": {
     "ids": [
-      "aowanda",
-      "yushan",
-      "beigang-chaotian",
-      "eluanbi",
-      "longpan"
+      "maobitou",
+      "hengchun-old-town",
+      "jialulan",
+      "water-flowing-up",
+      "xiaoyeliu"
     ],
     "generated": 5,
-    "additionalRevisions": 7,
-    "result": "4 selfchecked previews; useracceptancepending"
+    "additionalRevisions": 2,
+    "result": "5 selfchecked previews; useracceptancepending"
   },
   "manualResumedAt": "2026-10-20T02:48:01+00:00",
   "automationStatus": "paused after original09:00Taipei cutoff; manualwork resumed by user"

@@ -1,0 +1,42 @@
+{
+  "id": "maobitou",
+  "page": "https://www.ktnp.gov.tw/News_Content2.aspx?n=5C28A0E32DF925F9&s=9C8B9499841F2B1D&sms=C88B5251F308CE96",
+  "accessed": "2026-10-20",
+  "credit": "Official NationalPark / tourism authority; photographers unspecified",
+  "usage": "Visual reference only; no blanket commercial texture licence. Originals copyright retained, not App textures.",
+  "capture": "Unknown historical imagery, not current measured reconstruction",
+  "supplementary": [
+    {
+      "image": "https://ws.ktnp.gov.tw/001/Upload/245/relpic/6730/78564/8f1d1254-e5bb-49da-a600-5f03ae6b6680@710x470.jpg",
+      "caption": "貓鼻頭_229"
+    },
+    {
+      "image": "https://ws.ktnp.gov.tw/001/Upload/245/relpic/6730/78564/fd8f4ecc-2685-409f-b942-45486d81748a@710x470.jpg",
+      "caption": "貓鼻頭_230"
+    },
+    {
+      "image": "https://ws.ktnp.gov.tw/001/Upload/245/relpic/6730/78564/0ac9f6a2-1007-4da7-872f-3698874d94c0@710x470.jpg",
+      "caption": "貓鼻頭_231"
+    },
+    {
+      "image": "https://ws.ktnp.gov.tw/001/Upload/245/relpic/6730/78564/90c724b8-05d6-4d18-b867-92b22250459e@710x470.jpg",
+      "caption": "貓鼻頭_232"
+    },
+    {
+      "local": "real-photo.jpg",
+      "image": "https://ws.ktnp.gov.tw/001/Upload/245/relpic/6730/78564/fd8f4ecc-2685-409f-b942-45486d81748a@710x470.jpg",
+      "caption": "貓鼻頭_230"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@21.92198,120.73903,100m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent actual satellite",
+      "capture": "Unknown; copyright2026 not acquisitionyear",
+      "credit": "Google/Airbus/CNES/Maxar attribution retained",
+      "observations": "Park viewingplatform west/uphill of eastern rocky shore. Satellite around21.92198,120.73903 is explanatory sign/overlook context, not verified exact CatRock coordinates; precise rock matching pending."
+    }
+  ],
+  "lensReview": "Wideangle/depth reconstructed with independent view; no calibrated mathematical undistortion claimed. StreetView360 pending.",
+  "description": "Park viewingplatform west/uphill of eastern rocky shore. Satellite around21.92198,120.73903 is explanatory sign/overlook context, not verified exact CatRock coordinates; precise rock matching pending."
+}

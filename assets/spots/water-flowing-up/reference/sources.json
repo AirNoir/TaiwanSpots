@@ -1,0 +1,42 @@
+{
+  "id": "water-flowing-up",
+  "page": "https://www.eastcoast-nsa.gov.tw/zh-tw/attractions/detail/33/",
+  "accessed": "2026-10-20",
+  "credit": "Official NationalPark / tourism authority; photographers unspecified",
+  "usage": "Visual reference only; no blanket commercial texture licence. Originals copyright retained, not App textures.",
+  "capture": "Unknown historical imagery, not current measured reconstruction",
+  "supplementary": [
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/28892/1920x1080",
+      "caption": "水往上流"
+    },
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/28893/1920x1080",
+      "caption": "看著水往上流的水道，那水，緩緩地從腳邊流過"
+    },
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/28894/1920x1080",
+      "caption": "這是水往上流旁的花圃"
+    },
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/28895/1920x1080",
+      "caption": "水往上流石碑上的介紹"
+    },
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.eastcoast-nsa.gov.tw/image/28892/1920x1080",
+      "caption": "水往上流"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.868385,121.2183054,99m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent actual satellite",
+      "capture": "Unknown; copyright2026 not acquisitionyear",
+      "credit": "Google/Airbus/CNES/Maxar attribution retained",
+      "observations": "Canal and stonewalk along northeast/uphill side of WuxianIndustryRoad, broad NW-SE corridor; Pacific distant east outsidecrop. Apparent uphill flow is opticalillusion, actualwater obeysgravity."
+    }
+  ],
+  "lensReview": "Wideangle/depth reconstructed with independent view; no calibrated mathematical undistortion claimed. StreetView360 pending.",
+  "description": "Canal and stonewalk along northeast/uphill side of WuxianIndustryRoad, broad NW-SE corridor; Pacific distant east outsidecrop. Apparent uphill flow is opticalillusion, actualwater obeysgravity."
+}

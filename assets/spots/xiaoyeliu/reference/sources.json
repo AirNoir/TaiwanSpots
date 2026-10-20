@@ -1,0 +1,42 @@
+{
+  "id": "xiaoyeliu",
+  "page": "https://www.eastcoast-nsa.gov.tw/zh-tw/attractions/detail/32/",
+  "accessed": "2026-10-20",
+  "credit": "Official NationalPark / tourism authority; photographers unspecified",
+  "usage": "Visual reference only; no blanket commercial texture licence. Originals copyright retained, not App textures.",
+  "capture": "Unknown historical imagery, not current measured reconstruction",
+  "supplementary": [
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/72369/1920x1080",
+      "caption": "富岡地質公園 (小野柳)"
+    },
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/72370/1920x1080",
+      "caption": "富岡地質公園 (小野柳) 豐富的海岸地形"
+    },
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/72371/1920x1080",
+      "caption": "富岡地質公園 (小野柳) 礁岩海岸"
+    },
+    {
+      "image": "https://www.eastcoast-nsa.gov.tw/image/72372/1920x1080",
+      "caption": "各種奇岩怪石"
+    },
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.eastcoast-nsa.gov.tw/image/72370/1920x1080",
+      "caption": "富岡地質公園 (小野柳) 豐富的海岸地形"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.7947736,121.1981802,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent actual satellite",
+      "capture": "Unknown; copyright2026 not acquisitionyear",
+      "credit": "Google/Airbus/CNES/Maxar attribution retained",
+      "observations": "Sandstone intertidalplatform east of coastalforestpaths, Pacific east; FugangHarbor southoutsidecrop. Exact individualrock rearface/coordinates notmeasured."
+    }
+  ],
+  "lensReview": "Wideangle/depth reconstructed with independent view; no calibrated mathematical undistortion claimed. StreetView360 pending.",
+  "description": "Sandstone intertidalplatform east of coastalforestpaths, Pacific east; FugangHarbor southoutsidecrop. Exact individualrock rearface/coordinates notmeasured."
+}
