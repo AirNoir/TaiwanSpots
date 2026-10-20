@@ -1,0 +1,386 @@
+{
+  "id": "aowanda",
+  "page": "https://recreation.forest.gov.tw/Forest/RA?typ_id=0400001",
+  "accessed": "2026-10-20",
+  "credit": "Governmentoperator; Yushan images explicitly credited 楊湘文; others unspecified",
+  "usage": "Visual reference only; no blanket commercial texture licence. Originals copyright retained, not App textures.",
+  "capture": "Unknown historical imagery, not current measured reconstruction",
+  "supplementary": [
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/01_%E5%A5%A7%E8%90%AC%E5%A4%A7%E5%90%8A%E6%A9%8B.%E8%83%BD%E9%AB%98%E5%8D%97%E5%B3%B0.%E6%A5%93%E9%A6%99.jpg",
+      "caption": "奧萬大吊橋.能高南峰.楓香"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/02_%E5%A5%A7%E8%90%AC%E5%A4%A7%E8%B3%9E%E6%A5%93%E5%B9%B3%E5%8F%B0%E6%A5%93%E9%A6%99-2.jpg",
+      "caption": "奧萬大賞楓平台楓香"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/03_%E5%A5%A7%E8%90%AC%E5%A4%A7%E8%90%BD%E7%BE%BD%E6%9D%BE.%E9%9D%92%E6%A5%93-1.jpg",
+      "caption": "奧萬大落羽松.青楓"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/04_%E5%A5%A7%E8%90%AC%E5%A4%A7-%E5%B1%B1%E6%AB%BB%E8%8A%B1.jpg",
+      "caption": "奧萬大-山櫻花"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/05_%E5%A5%A7%E8%90%AC%E5%A4%A7%E6%B2%99%E5%8D%B0(%E7%AC%AC%E4%BA%8C)%E5%81%9C%E8%BB%8A%E5%A0%B4%E5%85%AB%E9%87%8D%E6%AB%BB-3.jpg",
+      "caption": "奧萬大沙印(第二)停車場八重櫻"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/06_%E9%81%8A%E5%AE%A2%E4%B8%AD%E5%BF%83%E5%91%A8%E5%9C%8D%E6%99%AF%E8%89%B2-5(%E9%9C%A7%E7%A4%BE%E6%AB%BB).jpg",
+      "caption": "遊客中心周圍景色-5(霧社櫻)"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/07_%E5%A5%A7%E8%90%AC%E5%A4%A7%E9%9B%99%E7%80%91%20(2).JPG",
+      "caption": "奧萬大雙瀑"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/08_%E5%A5%A7%E8%90%AC%E5%A4%A7%E9%A3%9B%E7%80%91.JPG",
+      "caption": "奧萬大飛瀑"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/01_%E5%A5%A7%E8%90%AC%E5%A4%A7%E5%90%8A%E6%A9%8B.%E8%83%BD%E9%AB%98%E5%8D%97%E5%B3%B0.%E6%A5%93%E9%A6%99.jpg",
+      "caption": "奧萬大吊橋.能高南峰.楓香"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/02_%E5%A5%A7%E8%90%AC%E5%A4%A7%E8%B3%9E%E6%A5%93%E5%B9%B3%E5%8F%B0%E6%A5%93%E9%A6%99-2.jpg",
+      "caption": "奧萬大賞楓平台楓香"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/03_%E5%A5%A7%E8%90%AC%E5%A4%A7%E8%90%BD%E7%BE%BD%E6%9D%BE.%E9%9D%92%E6%A5%93-1.jpg",
+      "caption": "奧萬大落羽松.青楓"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/04_%E5%A5%A7%E8%90%AC%E5%A4%A7-%E5%B1%B1%E6%AB%BB%E8%8A%B1.jpg",
+      "caption": "奧萬大-山櫻花"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/05_%E5%A5%A7%E8%90%AC%E5%A4%A7%E6%B2%99%E5%8D%B0(%E7%AC%AC%E4%BA%8C)%E5%81%9C%E8%BB%8A%E5%A0%B4%E5%85%AB%E9%87%8D%E6%AB%BB-3.jpg",
+      "caption": "奧萬大沙印(第二)停車場八重櫻"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/06_%E9%81%8A%E5%AE%A2%E4%B8%AD%E5%BF%83%E5%91%A8%E5%9C%8D%E6%99%AF%E8%89%B2-5(%E9%9C%A7%E7%A4%BE%E6%AB%BB).jpg",
+      "caption": "遊客中心周圍景色-5(霧社櫻)"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/07_%E5%A5%A7%E8%90%AC%E5%A4%A7%E9%9B%99%E7%80%91%20(2).JPG",
+      "caption": "奧萬大雙瀑"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/08_%E5%A5%A7%E8%90%AC%E5%A4%A7%E9%A3%9B%E7%80%91.JPG",
+      "caption": "奧萬大飛瀑"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E5%8F%B0%E7%81%A3%E6%9D%89.jpg",
+      "caption": "奧萬大-台灣杉"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E5%8F%B0%E7%81%A3%E9%95%B7%E8%87%82%E9%87%91%E9%BE%9C.jpg",
+      "caption": "奧萬大-台灣長臂金龜"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E5%8F%B0%E7%81%A3%E9%B3%B3%E8%9D%B6.jpg",
+      "caption": "奧萬大-台灣鳳蝶"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E7%94%9F%E6%85%8B%E6%B1%A0.jpg",
+      "caption": "奧萬大-生態池"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E7%81%B0%E5%96%89%E5%B1%B1%E6%A4%92%E9%B3%A5-%E9%9B%84%E9%B3%A5-%E5%91%82%E5%AE%8F%E6%98%8C.jpg",
+      "caption": "奧萬大-灰喉山椒鳥-雄鳥-呂宏昌"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E6%AD%A5%E9%81%93.jpg",
+      "caption": "奧萬大-步道"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E9%9D%92%E8%83%8C%E5%B1%B1%E9%9B%80-%E8%AC%9D%E6%96%87%E6%AC%BD2.jpg",
+      "caption": "奧萬大-青背山雀-謝文欽"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E9%9D%92%E6%A5%93.jpg",
+      "caption": "奧萬大-青楓"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E9%9D%92%E6%A5%932.JPG",
+      "caption": "奧萬大-青楓"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E5%86%A0%E7%BE%BD%E7%95%AB%E7%9C%89-%E9%99%B3%E8%8F%AF%E9%A6%99.jpg",
+      "caption": "奧萬大-冠羽畫眉-陳華香"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E6%98%A5-%E6%B2%99%E5%8D%B0%E5%81%9C%E8%BB%8A%E5%A0%B4-%E5%85%AB%E9%87%8D%E6%AB%BB1.jpg",
+      "caption": "奧萬大-春-沙印停車場-八重櫻"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E6%98%A5-%E6%B2%99%E5%8D%B0%E5%81%9C%E8%BB%8A%E5%A0%B4-%E5%85%AB%E9%87%8D%E6%AB%BB5.jpg",
+      "caption": "奧萬大-春-沙印停車場-八重櫻"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E6%98%A5-%E6%B2%99%E5%8D%B0%E5%81%9C%E8%BB%8A%E5%A0%B4-%E5%85%AB%E9%87%8D%E6%AB%BB9.jpg",
+      "caption": "奧萬大-春-沙印停車場-八重櫻"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E6%98%A5%E6%AB%BB-%E5%BB%96%E6%85%B6%E6%A3%AE%E6%94%9D.JPG",
+      "caption": "奧萬大-春櫻-廖慶森攝"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E7%A7%8B-%E9%9D%92%E6%A5%93.jpg",
+      "caption": "奧萬大-秋-青楓"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E7%A7%8B-%E6%A5%93%E9%A6%99.jpg",
+      "caption": "奧萬大-秋-楓香"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E7%A7%8B-%E8%90%BD%E7%BE%BD%E6%9D%BE.%E9%9D%92%E6%A5%93-3.jpg",
+      "caption": "奧萬大-秋-落羽松"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E7%B4%85%E8%83%B8%E5%95%84%E8%8A%B1-%E9%BB%83%E6%96%87%E6%AC%A3.jpg",
+      "caption": "奧萬大-紅胸啄花 -黃文欣"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E9%BB%83%E5%B1%B1%E9%9B%80-%E8%AC%9D%E6%96%87%E6%AC%BD.jpg",
+      "caption": "奧萬大-黃山雀-謝文欽"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E6%A5%93%E6%9E%97%E5%8D%801.jpg",
+      "caption": "奧萬大-楓林區"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E6%A5%93%E9%A6%99%E6%96%B0%E8%8A%BD.jpg",
+      "caption": "奧萬大-楓香新芽"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E7%80%91%E5%B8%83-%E9%A3%9B%E7%80%91%E7%80%91%E5%B8%83.jpg",
+      "caption": "奧萬大-瀑布-飛瀑瀑布"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E6%AB%BB%E8%8A%B1.jpg",
+      "caption": "奧萬大-櫻花"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7-%E6%AB%BB%E8%8A%B12.jpg",
+      "caption": "奧萬大-櫻花"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7%E6%AB%BB%E8%8A%B1%E5%9C%92-%E7%B7%8B%E5%AF%92%E6%AB%BB-2.jpg",
+      "caption": "奧萬大櫻花園-緋寒櫻"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E5%A5%A7%E8%90%AC%E5%A4%A7%E6%AB%BB%E8%8A%B1%E5%9C%92-%E9%9C%A7%E7%A4%BE%E6%AB%BB.jpg",
+      "caption": "奧萬大櫻花園-霧社櫻"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E8%90%BD%E7%BE%BD%E6%9D%BE1.jpg",
+      "caption": "落羽松1"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E8%90%BD%E7%BE%BD%E6%9D%BE2.jpg",
+      "caption": "落羽松2"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E9%81%8A%E5%AE%A2%E4%B8%AD%E5%BF%83%E5%91%A8%E5%9C%8D%E6%99%AF%E8%89%B2-1.jpg",
+      "caption": "遊客中心周圍景色"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/%E9%81%8A%E5%AE%A2%E4%B8%AD%E5%BF%83%E5%91%A8%E5%9C%8D%E6%99%AF%E8%89%B2-%E5%85%AB%E9%87%8D%E6%AB%BB.jpg",
+      "caption": "遊客中心周圍景色-八重櫻"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0400001/04_%E5%A5%A7%E8%90%AC%E5%A4%A7-%E5%B1%B1%E6%AB%BB%E8%8A%B1.jpg",
+      "caption": "奧萬大-山櫻花"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/PHOTO/traffic/0400001/0400001-new.jpg",
+      "caption": "交通資訊地圖"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/trail/0400001/0400001001.jpg",
+      "caption": "楓林步道"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_12.jpg",
+      "caption": "雙瀑瀑布"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/trail/0400001/0400001001.jpg",
+      "caption": "楓林步道"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/trail/0400001/0400001002.jpg",
+      "caption": "瀑布群步道(已損壞)"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/trail/0400001/0400001003.jpg",
+      "caption": "森林公園步道"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/trail/0400001/0400001004.jpg",
+      "caption": "賞鳥步道"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/trail/0400001/0400001005.jpg",
+      "caption": "好漢坡步道"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_12.jpg",
+      "caption": "雙瀑瀑布(已災損)"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_13.jpg",
+      "caption": "飛瀑瀑布(已災損)"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_01.jpg",
+      "caption": "奧萬大國家森林遊樂區大門"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/fac_0400001.jpg",
+      "caption": "奧萬大森林遊樂區遊客中心"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_07.jpg",
+      "caption": "奧萬大自然教育中心"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_08.jpg",
+      "caption": "奧萬大吊橋"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_09.jpg",
+      "caption": "生態池與楓葉橋"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_02.jpg",
+      "caption": "第一停車場（酷杜停車場）"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/P1340110-1.jpg",
+      "caption": "第二停車場（沙印停車場）"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_04.jpg",
+      "caption": "第三停車場（努敢停車場）"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_05.jpg",
+      "caption": "第四停車場（巴呀停車場）"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_14.jpg",
+      "caption": "綠野山莊"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_15.jpg",
+      "caption": "楓紅山莊"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_16.jpg",
+      "caption": "小木屋"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_17.jpg",
+      "caption": "多功能教室"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_18.jpg",
+      "caption": "森林小舖"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/resource/0400001/GEO_01.jpg",
+      "caption": "【地形】高山河谷"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/resource/0400001/HYD_01.jpg",
+      "caption": "【水文】飛瀑"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/resource/0400001/HYD_04.jpg",
+      "caption": "【水文】萬大溪"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/resource/0400001/HIS_01.jpg",
+      "caption": "照片一"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/resource/0400001/HIS_02.jpg",
+      "caption": "照片二"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Event/journey/photo/0400001/040000103.jpg",
+      "caption": "漫步綠森林"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Event/journey/photo/0400001/040000103_schedule.jpg",
+      "caption": ""
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Event/journey/photo/0400001/040000104.jpg",
+      "caption": "奧萬大散策"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Event/journey/photo/0400001/040000104_schedule.jpg",
+      "caption": ""
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Event/journey/photo/0400001/040000105.jpg",
+      "caption": "夜探奧萬大"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Event/journey/photo/0400001/040000106.jpg",
+      "caption": "森林手做DIY"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Event/journey/photo/0400001/040000106_schedule.jpg",
+      "caption": ""
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Event/journey/photo/0400001/040000107.jpg",
+      "caption": "森林療癒"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Event/journey/photo/0400001/040000107_schedule.jpg",
+      "caption": "奧萬大森林療癒活動行程"
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Event/journey/photo/0400001/040000107_schedule202601090.jpg",
+      "caption": ""
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/roadby/0400001/",
+      "caption": ""
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/roadby/0400001/",
+      "caption": ""
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/roadby/0400001/",
+      "caption": ""
+    },
+    {
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/roadby/0400001/",
+      "caption": ""
+    },
+    {
+      "local": "real-photo.jpg",
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/view/0400001/FAC_08.jpg",
+      "caption": "奧萬大吊橋"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.9449758,121.191093,196m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent actual satellite",
+      "capture": "Unknown; copyright2026 not acquisitionyear",
+      "credit": "Google/Airbus/CNES/Maxar attribution retained",
+      "observations": "Bridge runs broadly NNW-SSE across Wanda drainage, pineforest at southern landing; not draft east-west. Far peaks outside crop."
+    }
+  ],
+  "lensReview": "Wideangle/depth reconstructed with independent view; no calibrated mathematical undistortion claimed. StreetView360 pending.",
+  "description": "Bridge runs broadly NNW-SSE across Wanda drainage, pineforest at southern landing; not draft east-west. Far peaks outside crop."
+}

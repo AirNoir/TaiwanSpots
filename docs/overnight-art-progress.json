@@ -1963,51 +1963,101 @@
       "id": "aowanda",
       "name": "奧萬大",
       "hero": "Aowanda maple forest",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v3.png",
+      "references": [
+        "real-photo.jpg",
+        "study-0.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground and independent satellite visually inspected. Bridge runs broadly NNW-SSE across Wanda drainage, pineforest at southern landing; not draft east-west. Far peaks outside crop. Exact dimensions/backside/era and StreetView360 pending.",
+        "identity": "pending userreview: Historical northern landing and finite short approach/span detail only; exact crop length pending, not complete180m bridge or90m drop. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T07:48:41.569658+00:00"
     },
     {
       "id": "yushan",
       "name": "玉山主峰",
       "hero": "Yushan summit",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "study-0.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground and independent satellite visually inspected. Summit bare rocky node with branching ridges; south/north/east/west branches seen overhead, not a single surveyed N-S ridge. Exact summit-marker bearing pending. Exact dimensions/backside/era and StreetView360 pending.",
+        "identity": "pending userreview: Small summit cairn/stele and immediate rocky approach, no entire mountain compressed into base. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T07:48:42.600742+00:00"
     },
     {
       "id": "beigang-chaotian",
       "name": "北港朝天宮",
       "hero": "Chaotian Temple",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v3.png",
+      "references": [
+        "real-photo.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground and independent satellite visually inspected. Temple southern front faces plaza and ZhongshanRoad approach; east/west flanks follow actual compound grid. Northern halls outside finite front crop. Exact dimensions/backside/era and StreetView360 pending.",
+        "identity": "pending userreview: Photographed front gatehall and shallow plaza edge only, not full temple compound. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T07:48:43.359995+00:00"
     },
     {
       "id": "eluanbi",
       "name": "鵝鑾鼻燈塔",
       "hero": "Eluanbi Lighthouse",
-      "state": "queued",
+      "state": "needs-regeneration",
       "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "references": [
+        "real-photo.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground and independent satellite visually inspected. Lighthouse in northern part of walled compound, low arcade southwest, green lawn west, coastalforest east. Sea outside finite compound crop, not towerfoot. Exact dimensions/backside/era and StreetView360 pending.",
+        "identity": "pending: actualreferences collected, candidate still unqualified",
+        "style": "failed after initial+2 targetedrepairs",
+        "collection": "needs-regeneration: camera/basecontainment or exactidentity still visiblyfails; no automaticselection"
+      },
+      "userAcceptance": "pending",
+      "candidatePreview": "rejected/review-v3.png",
+      "attempts": 3,
+      "reason": "Three candidates remain disproportionate: official21.4m lighthouse should be about12.6 adultheights, but output about8-9. Keep unselected; needs stronger common-scale reconstruction."
     },
     {
       "id": "longpan",
       "name": "龍磐公園",
       "hero": "Longpan grassland cliffs",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "study-0.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground and independent satellite visually inspected. Road26 west of grassland, Pacific east; upper limestone rim and lower denselyvegetated slope separate from shoreline far east. No sea directly at uppercliff feet. Exact dimensions/backside/era and StreetView360 pending.",
+        "identity": "pending userreview: Finite grassy upper coral-limestone rim and short walkingtrack only; lower long slope and distant Pacific outside crop. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T07:48:44.299056+00:00"
     },
     {
       "id": "maobitou",
@@ -2220,7 +2270,7 @@
       "userAcceptance": "pending"
     }
   ],
-  "lastUpdatedAt": "2026-10-20T07:17:25.138328+00:00",
+  "lastUpdatedAt": "2026-10-20T07:48:45.940458+00:00",
   "automation": {
     "id": "islandia",
     "status": "ACTIVE",
@@ -2229,15 +2279,15 @@
   },
   "lastBatch": {
     "ids": [
-      "duoliang",
-      "shimen-reservoir",
-      "lalashan",
-      "xiaowulai",
-      "hsinchu-chenghuang"
+      "aowanda",
+      "yushan",
+      "beigang-chaotian",
+      "eluanbi",
+      "longpan"
     ],
     "generated": 5,
-    "additionalRevisions": 5,
-    "result": "3 selfchecked previews; useracceptancepending"
+    "additionalRevisions": 7,
+    "result": "4 selfchecked previews; useracceptancepending"
   },
   "manualResumedAt": "2026-10-20T02:48:01+00:00",
   "automationStatus": "paused after original09:00Taipei cutoff; manualwork resumed by user"

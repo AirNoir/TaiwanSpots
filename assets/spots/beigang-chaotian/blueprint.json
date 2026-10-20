@@ -1,23 +1,23 @@
 {
   "spotId": "beigang-chaotian",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Chaotian Temple",
     "silhouette": "Grand Mazu temple with layered roofs on a busy main street"
   },
-  "crop": "The temple and front street. Not the town.",
+  "crop": "Photographed front gatehall and shallow plaza edge only, not full temple compound.",
   "heroScale": 1,
-  "orientation": "verify: temple faces Zhongshan Road to the south",
+  "orientation": "Temple southern front faces plaza and ZhongshanRoad approach; east/west flanks follow actual compound grid. Northern halls outside finite front crop.",
   "lockedGeometry": [
-    "temple",
-    "main street",
-    "plaza"
+    "Photographed front gatehall and shallow plaza edge only, not full temple compound.",
+    "Temple southern front faces plaza and ZhongshanRoad approach; east/west flanks follow actual compound grid. Northern halls outside finite front crop.",
+    "all chosen terrain inside true square shallow ivorybase"
   ],
   "lockedIdentity": [
-    "multi-tiered roofs",
-    "Mazu palanquin"
+    "Beigang ChaotianTemple actual FRONT GATEHALL miniature",
+    "real primary photograph silhouette and material"
   ],
   "doNotInvent": [
     "pagodas",
@@ -30,18 +30,26 @@
     "flags"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.567805,120.30464,98m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Temple roof with firecracker smoke"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground and independent satellite visually inspected. Temple southern front faces plaza and ZhongshanRoad approach; east/west flanks follow actual compound grid. Northern halls outside finite front crop. Exact dimensions/backside/era and StreetView360 pending.",
+    "identity": "pending userreview: Photographed front gatehall and shallow plaza edge only, not full temple compound. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

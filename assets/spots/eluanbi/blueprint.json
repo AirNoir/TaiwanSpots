@@ -7,17 +7,17 @@
     "name": "Eluanbi Lighthouse",
     "silhouette": "Tall white cylindrical lighthouse among lawns and tropical trees near the coast"
   },
-  "crop": "The lighthouse and park. Not the whole cape.",
+  "crop": "White lighthouse and southwest low arcade with interior lawn, partial documented compound only.",
   "heroScale": 1,
-  "orientation": "verify: sea lies east and south",
+  "orientation": "Lighthouse in northern part of walled compound, low arcade southwest, green lawn west, coastalforest east. Sea outside finite compound crop, not towerfoot.",
   "lockedGeometry": [
-    "lawn park",
-    "coast",
-    "paths"
+    "White lighthouse and southwest low arcade with interior lawn, partial documented compound only.",
+    "Lighthouse in northern part of walled compound, low arcade southwest, green lawn west, coastalforest east. Sea outside finite compound crop, not towerfoot.",
+    "all chosen terrain inside true square shallow ivorybase"
   ],
   "lockedIdentity": [
-    "white lighthouse",
-    "tropical trees"
+    "Eluanbi Lighthouse physical Q miniature",
+    "real primary photograph silhouette and material"
   ],
   "doNotInvent": [
     "skyscrapers",
@@ -30,18 +30,26 @@
     "waves"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@21.9022339,120.8526297,100m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "White lighthouse with palms"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground and independent satellite visually inspected. Lighthouse in northern part of walled compound, low arcade southwest, green lawn west, coastalforest east. Sea outside finite compound crop, not towerfoot. Exact dimensions/backside/era and StreetView360 pending.",
+    "identity": "pending: actualreferences collected, candidate still unqualified",
+    "style": "failed after initial+2 targetedrepairs",
+    "collection": "needs-regeneration: tower/people common scale failed after3 candidates, not selected"
   }
 }

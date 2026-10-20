@@ -1,0 +1,38 @@
+{
+  "id": "yushan",
+  "page": "https://www.ysnp.gov.tw/Trail/7fa5c242-df1a-4a8e-bcab-32dc55b1f7b6?ID=980ec5de-bc0d-41a5-b479-add518f66181&Tab=2",
+  "accessed": "2026-10-20",
+  "credit": "Governmentoperator; Yushan images explicitly credited 楊湘文; others unspecified",
+  "usage": "Visual reference only; no blanket commercial texture licence. Originals copyright retained, not App textures.",
+  "capture": "Unknown historical imagery, not current measured reconstruction",
+  "supplementary": [
+    {
+      "image": "https://www.ysnp.gov.tw/UploadPlugin?file=i%2BifzMiqxoOGxT%2FVr25SKzsDjCs7OItEOJlnGmQ4RxjQvA%2F5WlYYvbI%2FDHhT4oIiVUWsrnAcv9FpckmL1l%2F3TA%3D%3D",
+      "caption": "玉山主峰-楊湘文攝"
+    },
+    {
+      "image": "https://www.ysnp.gov.tw/UploadPlugin?file=i%2BifzMiqxoOGxT%2FVr25SKzsDjCs7OItEOJlnGmQ4Rxg4%2F7nasX%2FGGutKf3xqycZRFcG6FAXD1PICHjbSNDTIxw%3D%3D",
+      "caption": "玉山主峰-楊湘文攝"
+    },
+    {
+      "image": "https://www.ysnp.gov.tw/UploadPlugin?file=i%2BifzMiqxoOGxT%2FVr25SKzsDjCs7OItEOJlnGmQ4RxgC2OGbhAUX%2B2Ym6jgZGcKIlmKwzA8yufev2S%2FS6Hg%2BoQ%3D%3D",
+      "caption": "玉山主峰-楊湘文攝"
+    },
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.ysnp.gov.tw/UploadPlugin?file=i%2BifzMiqxoOGxT%2FVr25SKzsDjCs7OItEOJlnGmQ4RxgC2OGbhAUX%2B2Ym6jgZGcKIlmKwzA8yufev2S%2FS6Hg%2BoQ%3D%3D",
+      "caption": "玉山主峰-楊湘文攝"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.4699818,120.9572579,98m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent actual satellite",
+      "capture": "Unknown; copyright2026 not acquisitionyear",
+      "credit": "Google/Airbus/CNES/Maxar attribution retained",
+      "observations": "Summit bare rocky node with branching ridges; south/north/east/west branches seen overhead, not a single surveyed N-S ridge. Exact summit-marker bearing pending."
+    }
+  ],
+  "lensReview": "Wideangle/depth reconstructed with independent view; no calibrated mathematical undistortion claimed. StreetView360 pending.",
+  "description": "Summit bare rocky node with branching ridges; south/north/east/west branches seen overhead, not a single surveyed N-S ridge. Exact summit-marker bearing pending."
+}

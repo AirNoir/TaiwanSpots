@@ -1,23 +1,23 @@
 {
   "spotId": "longpan",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Longpan grassland cliffs",
     "silhouette": "Flat grassy coral terrace ending in steep cliffs over the Pacific"
   },
-  "crop": "The grassland and cliff edge. Not the road.",
+  "crop": "Finite grassy upper coral-limestone rim and short walkingtrack only; lower long slope and distant Pacific outside crop.",
   "heroScale": 1,
-  "orientation": "verify: cliffs face east",
+  "orientation": "Road26 west of grassland, Pacific east; upper limestone rim and lower denselyvegetated slope separate from shoreline far east. No sea directly at uppercliff feet.",
   "lockedGeometry": [
-    "flat terrace",
-    "cliffs",
-    "sea"
+    "Finite grassy upper coral-limestone rim and short walkingtrack only; lower long slope and distant Pacific outside crop.",
+    "Road26 west of grassland, Pacific east; upper limestone rim and lower denselyvegetated slope separate from shoreline far east. No sea directly at uppercliff feet.",
+    "all chosen terrain inside true square shallow ivorybase"
   ],
   "lockedIdentity": [
-    "grassland",
-    "cliff edge"
+    "Longpan Park actual CORAL-LIMESTONE UPPER TERRACE miniature, not seaside verticalsheerwall",
+    "real primary photograph silhouette and material"
   ],
   "doNotInvent": [
     "buildings",
@@ -30,18 +30,27 @@
     "waves"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "study-0.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@21.9272344,120.8479628,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Grassy cliff over the sea"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground and independent satellite visually inspected. Road26 west of grassland, Pacific east; upper limestone rim and lower denselyvegetated slope separate from shoreline far east. No sea directly at uppercliff feet. Exact dimensions/backside/era and StreetView360 pending.",
+    "identity": "pending userreview: Finite grassy upper coral-limestone rim and short walkingtrack only; lower long slope and distant Pacific outside crop. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

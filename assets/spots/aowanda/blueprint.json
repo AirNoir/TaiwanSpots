@@ -1,23 +1,23 @@
 {
   "spotId": "aowanda",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Aowanda maple forest",
     "silhouette": "Valley forest of red maples with a suspension bridge"
   },
-  "crop": "The maple forest and bridge. Not the whole reserve.",
+  "crop": "Historical northern landing and finite short approach/span detail only; exact crop length pending, not complete180m bridge or90m drop.",
   "heroScale": 1,
-  "orientation": "verify: suspension bridge crosses the river east-west",
+  "orientation": "Bridge runs broadly NNW-SSE across Wanda drainage, pineforest at southern landing; not draft east-west. Far peaks outside crop.",
   "lockedGeometry": [
-    "valley",
-    "river",
-    "suspension bridge"
+    "Historical northern bridge landing and first about20m of suspended deck only; remaining180m span and90m drop outside finite detail.",
+    "Bridge runs broadly NNW-SSE across Wanda drainage, pineforest at southern landing; not draft east-west. Far peaks outside crop.",
+    "all chosen terrain inside true square shallow ivorybase"
   ],
   "lockedIdentity": [
-    "red maples",
-    "suspension bridge"
+    "Aowanda suspension bridge LANDING DETAIL, not a complete short gardenbridge",
+    "real primary photograph silhouette and material"
   ],
   "doNotInvent": [
     "buildings",
@@ -30,18 +30,27 @@
     "mist"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "study-0.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.9449758,121.191093,196m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Red maple tree by a bridge"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground and independent satellite visually inspected. Bridge runs broadly NNW-SSE across Wanda drainage, pineforest at southern landing; not draft east-west. Far peaks outside crop. Exact dimensions/backside/era and StreetView360 pending.",
+    "identity": "pending userreview: Historical northern landing and finite short approach/span detail only; exact crop length pending, not complete180m bridge or90m drop. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

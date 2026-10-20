@@ -1,23 +1,23 @@
 {
   "spotId": "yushan",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Yushan summit",
     "silhouette": "Rocky alpine summit with a stone marker above a sea of clouds"
   },
-  "crop": "The summit and ridge. Not the trailhead.",
+  "crop": "Small summit cairn/stele and immediate rocky approach, no entire mountain compressed into base.",
   "heroScale": 1,
-  "orientation": "verify: summit ridge runs north-south",
+  "orientation": "Summit bare rocky node with branching ridges; south/north/east/west branches seen overhead, not a single surveyed N-S ridge. Exact summit-marker bearing pending.",
   "lockedGeometry": [
-    "rocky peak",
-    "ridges",
-    "cloud sea"
+    "Small summit cairn/stele and immediate rocky approach, no entire mountain compressed into base.",
+    "Summit bare rocky node with branching ridges; south/north/east/west branches seen overhead, not a single surveyed N-S ridge. Exact summit-marker bearing pending.",
+    "all chosen terrain inside true square shallow ivorybase"
   ],
   "lockedIdentity": [
-    "summit stone marker",
-    "sea of clouds"
+    "Yushan MAIN SUMMIT finite hiking scene, not whole3952m mountain",
+    "real primary photograph silhouette and material"
   ],
   "doNotInvent": [
     "buildings",
@@ -30,18 +30,27 @@
     "juniper"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "study-0.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.4699818,120.9572579,98m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Rocky peak above clouds"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground and independent satellite visually inspected. Summit bare rocky node with branching ridges; south/north/east/west branches seen overhead, not a single surveyed N-S ridge. Exact summit-marker bearing pending. Exact dimensions/backside/era and StreetView360 pending.",
+    "identity": "pending userreview: Small summit cairn/stele and immediate rocky approach, no entire mountain compressed into base. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }
