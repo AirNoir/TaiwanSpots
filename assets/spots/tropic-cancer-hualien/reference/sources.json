@@ -1,0 +1,52 @@
+{
+  "id": "tropic-cancer-hualien",
+  "page": "https://www.erv-nsa.gov.tw/zh-tw/attractions/detail/52",
+  "credit": "East Rift Valley National Scenic Area Administration",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical officialphotos; pageupdate2025-2026 not proven capturedates",
+  "usage": "Visual reference only; copyright retained, no blanket commercialtexture licence",
+  "description": "Ruisui Wuhe inland marker EAST/southeast of diagonal NE-SW ProvincialHighway9, not coastal Fengbin marker. Actual circular monument court inside square modelbase.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.erv-nsa.gov.tw/image/71363/1920x1080",
+      "page": "https://www.erv-nsa.gov.tw/zh-tw/attractions/detail/52",
+      "kind": "real ground/elevated photograph, visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://www.erv-nsa.gov.tw/image/71364/1024x768",
+      "page": "https://www.erv-nsa.gov.tw/zh-tw/attractions/detail/52",
+      "kind": "real ground/elevated photograph, visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://www.erv-nsa.gov.tw/image/10494/1024x768",
+      "page": "https://www.erv-nsa.gov.tw/zh-tw/attractions/detail/52",
+      "kind": "real ground/elevated photograph, visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.4658,121.3576,19z/data=!3m1!1e3",
+      "kind": "independent real satellite",
+      "credit": "Google / Airbus / CNES / Maxar originalattributionretained",
+      "capture": "Notexposed; copyrightyear notcaptureyear",
+      "usage": "Visual reference only",
+      "observations": "Ruisui Wuhe inland marker EAST/southeast of diagonal NE-SW ProvincialHighway9, not coastal Fengbin marker. Actual circular monument court inside square modelbase."
+    },
+    {
+      "page": "https://www.juisui.gov.tw/cp.aspx?n=1685",
+      "kind": "official historicalmarker background",
+      "observations": "5.5m refers to old1933stationmarker; current Wuhestructure is different. Exactcurrentheight pending."
+    }
+  ],
+  "lensReview": "Wideangle/upwardphotos notcopied as geometry; independentview reconstruction, not calibrated mathematicalundistortion; StreetView360 pending.",
+  "dimensionLimit": "Current Wuhespireheight not confirmed. Approx20m prompt was an unmeasured visualworkingestimate, not survey; precise scale pending. Older stationmarker5.5m should not be substituted as currentparkdimension."
+}

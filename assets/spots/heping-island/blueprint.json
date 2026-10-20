@@ -1,28 +1,28 @@
 {
   "spotId": "heping-island",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Heping Island coast",
     "silhouette": "Rocky coast of tofu rocks and hoodoos with a seawater pool"
   },
-  "crop": "The rock platform and pool. Not the harbour.",
+  "crop": "Finite historical seawaterpool edge and documented zigzag lowwood footway beside greenrockknoll, not combined with pavilion.",
   "heroScale": 1,
-  "orientation": "verify: open sea lies to the north-east",
+  "orientation": "Historical seawater pool/openwest bay, green headland inland/east; pavilion a separate north/east rockyheadland outsidecrop. Pooldetail differs across eras, currentconfiguration pending.",
   "lockedGeometry": [
-    "rock platform",
-    "seawater pool",
-    "green hill"
+    "historical seawaterpool",
+    "low zigzagwood footway",
+    "green rockyknoll"
   ],
   "lockedIdentity": [
-    "tofu-grid rocks",
-    "mushroom rocks"
+    "rocky seawaterpool",
+    "documentedlow zigzagwood deck"
   ],
   "doNotInvent": [
-    "beaches",
-    "buildings",
-    "bridges"
+    "sandy beaches",
+    "large buildings",
+    "suspension bridges"
   ],
   "allowedMiniatureDetails": [
     "swimmers",
@@ -30,18 +30,27 @@
     "waves"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@25.16177,121.76157,19z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "official-2.jpg"
+    ]
   },
   "worldToken": {
     "element": "Tofu rocks by a sea pool"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Real photos and independent satellite inspected: Historical seawater pool/openwest bay, green headland inland/east; pavilion a separate north/east rockyheadland outsidecrop. Pooldetail differs across eras, currentconfiguration pending. GoogleStreetView360, dimensions/backside/currentcondition pending.",
+    "identity": "pending userreview: Finite historical seawaterpool edge and documented zigzag lowwood footway beside greenrockknoll, not combined with pavilion. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

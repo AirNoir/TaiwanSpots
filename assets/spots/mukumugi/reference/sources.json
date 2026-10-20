@@ -1,0 +1,21 @@
+{
+  "id": "mukumugi",
+  "accessed": "2026-10-20",
+  "status": "blocked-reference",
+  "sources": [
+    {
+      "url": "https://www.cna.com.tw/news/aloc/202506160159.aspx",
+      "published": "2025-06-16",
+      "credit": "CNA / HualienCountyGovernment suppliedphoto",
+      "observations": "Officialcounty statement reported roadsrepaired but ecologicalarea not reopened; not2026currentstatusconfirmation",
+      "usage": "Read-only research; no image reused"
+    },
+    {
+      "url": "https://www.forest.gov.tw/MagazineFile/6749",
+      "credit": "Forestry and Nature Conservation Agency magazine",
+      "observations": "Historical source located; exactpicturedreach/bridge not independently geolocated",
+      "usage": "Not downloaded or supplied to imagegeneration"
+    }
+  ],
+  "reason": "Unable to verify exactgorgecrop with independent matchedground/satellite; oldphotos mixed with nearbyEmeraldValley and draft suspensionbridge unverified. Do not generate genericgorge."
+}

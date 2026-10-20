@@ -1,0 +1,38 @@
+{
+  "id": "lin-family-garden",
+  "page": "https://newtaipei.travel/zh-tw/attractions/detail/109673",
+  "credit": "New Taipei City Tourism Bureau",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical officialphotos; pageupdate2025-2026 not proven capturedates",
+  "usage": "Visual reference only; copyright retained, no blanket commercialtexture licence",
+  "description": "Garden EAST/northeast of threecourtyard mansion, not draftwest. Officialguideplan and realground confirm pavilions/pond; overhead treecover hidesdetails.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/25170/1024x768_attractions-image-nqjfqiivi0woexnjfa4b2w.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/109673",
+      "kind": "real ground/elevated photograph, visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://newtaipei.travel/content/images/attractions/25171/1024x768_attractions-image-jphdndyk6uy4tnbls-a4vg.jpg",
+      "page": "https://newtaipei.travel/zh-tw/attractions/detail/109673",
+      "kind": "officialguideplan",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@25.01113,121.45459,19z/data=!3m1!1e3",
+      "kind": "independent real satellite",
+      "credit": "Google / Airbus / CNES / Maxar originalattributionretained",
+      "capture": "Notexposed; copyrightyear notcaptureyear",
+      "usage": "Visual reference only",
+      "observations": "Garden EAST/northeast of threecourtyard mansion, not draftwest. Officialguideplan and realground confirm pavilions/pond; overhead treecover hidesdetails."
+    }
+  ],
+  "lensReview": "Wideangle/upwardphotos notcopied as geometry; independentview reconstruction, not calibrated mathematicalundistortion; StreetView360 pending."
+}

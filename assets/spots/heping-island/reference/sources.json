@@ -1,0 +1,38 @@
+{
+  "id": "heping-island",
+  "page": "https://travel.klcg.gov.tw/TourContent.aspx?n=8840&s=59&sms=12546",
+  "credit": "Keelung City Culture and Tourism Bureau",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical officialphotos; pageupdate2025-2026 not proven capturedates",
+  "usage": "Visual reference only; copyright retained, no blanket commercialtexture licence",
+  "description": "Historical seawater pool/openwest bay, green headland inland/east; pavilion a separate north/east rockyheadland outsidecrop. Pooldetail differs across eras, currentconfiguration pending.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://klctb-ws.klcg.gov.tw/001/Upload/tour/445/12546/354/pic/a31262d7-e49a-4a45-b132-78573334e36e.jpg",
+      "page": "https://travel.klcg.gov.tw/TourContent.aspx?n=8840&s=59&sms=12546",
+      "kind": "real ground/elevated photograph, visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://klctb-ws.klcg.gov.tw/001/Upload/tour/445/12546/355/pic/805cc77a-ff05-4a14-adc9-4a91f14f9de4.jpg",
+      "page": "https://travel.klcg.gov.tw/TourContent.aspx?n=8840&s=59&sms=12546",
+      "kind": "real ground/elevated photograph, visually inspected",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@25.16177,121.76157,19z/data=!3m1!1e3",
+      "kind": "independent real satellite",
+      "credit": "Google / Airbus / CNES / Maxar originalattributionretained",
+      "capture": "Notexposed; copyrightyear notcaptureyear",
+      "usage": "Visual reference only",
+      "observations": "Historical seawater pool/openwest bay, green headland inland/east; pavilion a separate north/east rockyheadland outsidecrop. Pooldetail differs across eras, currentconfiguration pending."
+    }
+  ],
+  "lensReview": "Wideangle/upwardphotos notcopied as geometry; independentview reconstruction, not calibrated mathematicalundistortion; StreetView360 pending."
+}
