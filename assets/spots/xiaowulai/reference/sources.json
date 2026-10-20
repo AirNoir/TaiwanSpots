@@ -1,0 +1,42 @@
+{
+  "id": "xiaowulai",
+  "page": "https://travel.tycg.gov.tw/zh-tw/travel/attraction/1011",
+  "accessed": "2026-10-20",
+  "credit": "Officialoperator/governmenttourismauthority; individualphotographerunspecified",
+  "usage": "Visualreferenceonly, no blanketcommercialtexturelicence",
+  "description": "Actual cantilever deck on east bank of gorge, western projection near upper waterfall. Site pin lies SE of visible deck; exact drainage microgeometry pending under canopy.",
+  "supplementary": [
+    {
+      "local": "study-0.jpg",
+      "image": "https://travel.tycg.gov.tw/content/images/attractions/32299/1024x768_attractions-image-8x2dpfm_ckq7rwegxjlnnw.jpg",
+      "caption": "小烏來風景特定區",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "study-1.jpg",
+      "image": "https://travel.tycg.gov.tw/content/images/attractions/32297/1024x768_attractions-image-cxphktb-1uqf_9lgwsnxnq.jpg",
+      "caption": "瀑布讓人置身在水花四濺的快意國度",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "real-photo.jpg",
+      "sameOriginalAs": "study-0.jpg"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@24.7903264,121.3754843,97m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independentrealsatellite",
+      "credit": "Google / Airbus / CNES / Maxar attributionretained",
+      "capture": "Unknown; copyright2026 notcaptureyear",
+      "usage": "Visualreferenceonly",
+      "observations": "Actual cantilever deck on east bank of gorge, western projection near upper waterfall. Site pin lies SE of visible deck; exact drainage microgeometry pending under canopy."
+    }
+  ],
+  "lensReview": "Crossviewreconstruction withlonglensmodelcamera, NOT calibrated lenscorrection. StreetView360pending.",
+  "eraCaveat": "Historicalphotos, no claimofexactcurrentcondition; crop/unseengeometrypending"
+}

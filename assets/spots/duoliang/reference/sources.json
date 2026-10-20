@@ -1,0 +1,50 @@
+{
+  "id": "duoliang",
+  "page": "https://tour.taitung.gov.tw/zh-tw/attraction/details/429",
+  "accessed": "2026-10-20",
+  "credit": "Officialoperator/governmenttourismauthority; individualphotographerunspecified",
+  "usage": "Visualreferenceonly, no blanketcommercialtexturelicence",
+  "description": "Rail broadly NNE-SSW, station viewingterrace uphill/west, Provincial9B between railway and Pacific east/southeast. Northern tunnel outside finitecrop.",
+  "supplementary": [
+    {
+      "local": "study-0.jpg",
+      "image": "https://tour.taitung.gov.tw/image/49550/1920x1080",
+      "caption": "",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "study-1.jpg",
+      "image": "https://tour.taitung.gov.tw/Image/49549/?r=1728378253570",
+      "caption": "面海臨山的絕佳地理景色",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "study-2.jpg",
+      "image": "https://tour.taitung.gov.tw/Image/49544/?r=1728378239298",
+      "caption": "二樓景觀台可眺望海景及火車",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "real-photo.jpg",
+      "sameOriginalAs": "study-0.jpg"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.50753,120.95888,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independentrealsatellite",
+      "credit": "Google / Airbus / CNES / Maxar attributionretained",
+      "capture": "Unknown; copyright2026 notcaptureyear",
+      "usage": "Visualreferenceonly",
+      "observations": "Rail broadly NNE-SSW, station viewingterrace uphill/west, Provincial9B between railway and Pacific east/southeast. Northern tunnel outside finitecrop."
+    }
+  ],
+  "lensReview": "Crossviewreconstruction withlonglensmodelcamera, NOT calibrated lenscorrection. StreetView360pending.",
+  "eraCaveat": "Historicalphotos, no claimofexactcurrentcondition; crop/unseengeometrypending"
+}

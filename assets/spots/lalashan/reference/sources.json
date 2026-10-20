@@ -1,0 +1,50 @@
+{
+  "id": "lalashan",
+  "page": "https://recreation.forest.gov.tw/Forest/RA?typ=0&typ_id=0200005",
+  "accessed": "2026-10-20",
+  "credit": "Officialoperator/governmenttourismauthority; individualphotographerunspecified",
+  "usage": "Visualreferenceonly, no blanketcommercialtexturelicence",
+  "description": "Gianttree trail network east/northeast of visitorcenter, under densecanopy; individual photographed forkedtree coordinates and exact adjoiningpath pending, do not label it No14.",
+  "supplementary": [
+    {
+      "local": "study-0.jpg",
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0200005/0200005.jpg",
+      "caption": "拉拉山的巨木",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "study-1.jpg",
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0200005/0200005202303200.jpg",
+      "caption": "拉拉山巨木",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "study-2.jpg",
+      "image": "https://recreation.forest.gov.tw/Files/Forest/RA/photo/album/0200005/0200005202303202.jpg",
+      "caption": "巨木步道與流水",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "real-photo.jpg",
+      "sameOriginalAs": "study-0.jpg"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@24.710668,121.4377528,390m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independentrealsatellite",
+      "credit": "Google / Airbus / CNES / Maxar attributionretained",
+      "capture": "Unknown; copyright2026 notcaptureyear",
+      "usage": "Visualreferenceonly",
+      "observations": "Gianttree trail network east/northeast of visitorcenter, under densecanopy; individual photographed forkedtree coordinates and exact adjoiningpath pending, do not label it No14."
+    }
+  ],
+  "lensReview": "Crossviewreconstruction withlonglensmodelcamera, NOT calibrated lenscorrection. StreetView360pending.",
+  "eraCaveat": "Historicalphotos, no claimofexactcurrentcondition; crop/unseengeometrypending"
+}

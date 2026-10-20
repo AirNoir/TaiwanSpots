@@ -1,0 +1,50 @@
+{
+  "id": "shimen-reservoir",
+  "page": "https://travel.tycg.gov.tw/zh-tw/travel/attraction/351",
+  "accessed": "2026-10-20",
+  "credit": "Officialoperator/governmenttourismauthority; individualphotographerunspecified",
+  "usage": "Visualreferenceonly, no blanketcommercialtexturelicence",
+  "description": "Reservoir upstream SE/east, afterbay NW/north; concrete spillway at eastern flank of main earthfill embankment, not a thin arch dam. Finite uppercrest detail omits full embankment/133mheight.",
+  "supplementary": [
+    {
+      "local": "study-0.jpg",
+      "image": "https://travel.tycg.gov.tw/content/images/attractions/34281/1024x768_attractions-image-zyntexu3kkok3tgluqzfbw.jpg",
+      "caption": "石門水庫",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "study-1.jpg",
+      "image": "https://travel.tycg.gov.tw/Image/3954/?r=1623124175909",
+      "caption": "湖光山色，風景秀麗",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "study-2.jpg",
+      "image": "https://travel.tycg.gov.tw/Image/6844/?r=1623124197755",
+      "caption": "石門水庫台灣北部的重要水庫之一",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "real-photo.jpg",
+      "sameOriginalAs": "study-0.jpg"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@24.8132257,121.2456965,780m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independentrealsatellite",
+      "credit": "Google / Airbus / CNES / Maxar attributionretained",
+      "capture": "Unknown; copyright2026 notcaptureyear",
+      "usage": "Visualreferenceonly",
+      "observations": "Reservoir upstream SE/east, afterbay NW/north; concrete spillway at eastern flank of main earthfill embankment, not a thin arch dam. Finite uppercrest detail omits full embankment/133mheight."
+    }
+  ],
+  "lensReview": "Crossviewreconstruction withlonglensmodelcamera, NOT calibrated lenscorrection. StreetView360pending.",
+  "eraCaveat": "Historicalphotos, no claimofexactcurrentcondition; crop/unseengeometrypending"
+}

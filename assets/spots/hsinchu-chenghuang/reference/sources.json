@@ -1,0 +1,54 @@
+{
+  "id": "hsinchu-chenghuang",
+  "page": "https://weiling.org.tw/?act=menuinfo&ml_id=20240918010",
+  "accessed": "2026-10-20",
+  "credit": "Officialoperator/governmenttourismauthority; individualphotographerunspecified",
+  "usage": "Visualreferenceonly, no blanketcommercialtexturelicence",
+  "description": "Main temple fronts north/northwest toward DongmenStreet/plaza; photographed turquoise-roof market entrance is western ZhongshanRoad access, not mainornate templehall. Indoor market surrounds west/south.",
+  "supplementary": [
+    {
+      "local": "study-0.jpg",
+      "image": "https://weiling.org.tw/upload_files/web/uploadfile/2024092015/original/240920151523913940.jpg",
+      "caption": "",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "study-1.jpg",
+      "image": "https://weiling.org.tw/upload_files/web/uploadfile/2024092015/original/240920151524497805.jpg",
+      "caption": "",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "study-2.png",
+      "image": "https://weiling.org.tw/upload_files/web/uploadfile/2024092314/original/240923145245787392.png",
+      "caption": "威靈顯赫之城隍廟",
+      "kind": "realground/elevated photograph, visuallyinspected",
+      "capture": "Unknown; URLuploaddate notproven capturedate",
+      "usage": "Visualreferenceonly, copyrightretained"
+    },
+    {
+      "local": "real-photo.jpg",
+      "page": "https://www.taiwan.net.tw/m1.aspx?id=447&sno=0001016",
+      "image": "https://www.taiwan.net.tw/att/1/big_scenic_spots/pic_447_17.jpg",
+      "kind": "realmarketgatewaygroundphoto",
+      "capture": "Unknown",
+      "usage": "Visualreferenceonly"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@24.8045519,120.965808,97m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independentrealsatellite",
+      "credit": "Google / Airbus / CNES / Maxar attributionretained",
+      "capture": "Unknown; copyright2026 notcaptureyear",
+      "usage": "Visualreferenceonly",
+      "observations": "Main temple fronts north/northwest toward DongmenStreet/plaza; photographed turquoise-roof market entrance is western ZhongshanRoad access, not mainornate templehall. Indoor market surrounds west/south."
+    }
+  ],
+  "lensReview": "Crossviewreconstruction withlonglensmodelcamera, NOT calibrated lenscorrection. StreetView360pending.",
+  "eraCaveat": "Historicalphotos, no claimofexactcurrentcondition; crop/unseengeometrypending"
+}

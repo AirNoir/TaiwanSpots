@@ -5,19 +5,19 @@
   "productionTier": "standard",
   "hero": {
     "name": "Lalashan giant cypress",
-    "silhouette": "Huge ancient red cypress trunks in a misty forest with a boardwalk"
+    "silhouette": "Photographed tall forked ancientcypress with fullcrown; individual number unverified"
   },
-  "crop": "The giant trees and boardwalk. Not the orchards.",
+  "crop": "Single photographed ancient forked cypress and immediate mossyforest floor with short conservative walkingedge, no streambridge.",
   "heroScale": 1,
-  "orientation": "verify: trail loops north of the station",
+  "orientation": "Gianttree trail network east/northeast of visitorcenter, under densecanopy; individual photographed forkedtree coordinates and exact adjoiningpath pending, do not label it No14.",
   "lockedGeometry": [
-    "forest",
-    "boardwalk",
-    "ridge"
+    "singleancientforkedcypress",
+    "mossyroots",
+    "forestedhillside"
   ],
   "lockedIdentity": [
-    "giant red cypress trees",
-    "moss"
+    "graybrowncypressbark and thickforkedtrunk",
+    "mountainunderstory"
   ],
   "doNotInvent": [
     "buildings",
@@ -30,18 +30,27 @@
     "mist"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "study-1.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.710668,121.4377528,390m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Giant tree trunk in mist"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground/elevated and independent satellite inspected. Gianttree trail network east/northeast of visitorcenter, under densecanopy; individual photographed forkedtree coordinates and exact adjoiningpath pending, do not label it No14. StreetView360, exact dimensions/backside/currentcondition pending.",
+    "identity": "pending: actualreferences collected, candidate still unqualified",
+    "style": "failed after initial+2 targetedrepairs",
+    "collection": "needs-regeneration: Three candidates retain overlarge hikers relative to chosen giant-tree scale, and final tree top lacks margin. Exact primary tree height/number not verified; do not label photographed tree No14 or invent a measured40m height."
   }
 }

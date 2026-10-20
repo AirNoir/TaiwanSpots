@@ -1858,51 +1858,106 @@
       "id": "duoliang",
       "name": "多良車站",
       "hero": "Duoliang Station",
-      "state": "queued",
+      "state": "needs-regeneration",
       "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "references": [
+        "real-photo.jpg",
+        "study-1.jpg",
+        "study-2.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground/elevated and independent satellite inspected. Rail broadly NNE-SSW, station viewingterrace uphill/west, Provincial9B between railway and Pacific east/southeast. Northern tunnel outside finitecrop. StreetView360, exact dimensions/backside/currentcondition pending.",
+        "identity": "pending: actualreferences collected, candidate still unqualified",
+        "style": "failed after initial+2 targetedrepairs",
+        "collection": "needs-regeneration: Three candidates: rail/highway parallelism corrected, but equal-corner camera/base projection still visibly inconsistent; common train/people scale remains approximate. Clean reconstruction needed."
+      },
+      "userAcceptance": "pending",
+      "candidatePreview": "rejected/review-v3.png",
+      "attempts": 3,
+      "reason": "Three candidates: rail/highway parallelism corrected, but equal-corner camera/base projection still visibly inconsistent; common train/people scale remains approximate. Clean reconstruction needed."
     },
     {
       "id": "shimen-reservoir",
       "name": "石門水庫",
       "hero": "Shimen Dam",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "study-2.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground/elevated and independent satellite inspected. Reservoir upstream SE/east, afterbay NW/north; concrete spillway at eastern flank of main earthfill embankment, not a thin arch dam. Finite uppercrest detail omits full embankment/133mheight. StreetView360, exact dimensions/backside/currentcondition pending.",
+        "identity": "pending userreview: Two adjacent upper spillway bays and connecting curved crestroad with narrow upstream lake edge; display detail, not entire dam or full chute. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T07:17:22.829611+00:00"
     },
     {
       "id": "lalashan",
       "name": "拉拉山神木區",
       "hero": "Lalashan giant cypress",
-      "state": "queued",
+      "state": "needs-regeneration",
       "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "references": [
+        "real-photo.jpg",
+        "study-1.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground/elevated and independent satellite inspected. Gianttree trail network east/northeast of visitorcenter, under densecanopy; individual photographed forkedtree coordinates and exact adjoiningpath pending, do not label it No14. StreetView360, exact dimensions/backside/currentcondition pending.",
+        "identity": "pending: actualreferences collected, candidate still unqualified",
+        "style": "failed after initial+2 targetedrepairs",
+        "collection": "needs-regeneration: Three candidates retain overlarge hikers relative to chosen giant-tree scale, and final tree top lacks margin. Exact primary tree height/number not verified; do not label photographed tree No14 or invent a measured40m height."
+      },
+      "userAcceptance": "pending",
+      "candidatePreview": "rejected/review-v3.png",
+      "attempts": 3,
+      "reason": "Three candidates retain overlarge hikers relative to chosen giant-tree scale, and final tree top lacks margin. Exact primary tree height/number not verified; do not label photographed tree No14 or invent a measured40m height."
     },
     {
       "id": "xiaowulai",
       "name": "小烏來天空步道",
       "hero": "Xiaowulai Skywalk",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "real-photo.jpg",
+        "study-1.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground/elevated and independent satellite inspected. Actual cantilever deck on east bank of gorge, western projection near upper waterfall. Site pin lies SE of visible deck; exact drainage microgeometry pending under canopy. StreetView360, exact dimensions/backside/currentcondition pending.",
+        "identity": "pending userreview: 11m glass cantilever, white A-frame/cables and upper rock lip of waterfall only; lower70m gorge outside crop. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T07:17:23.488478+00:00"
     },
     {
       "id": "hsinchu-chenghuang",
       "name": "新竹都城隍廟",
       "hero": "Hsinchu City God Temple",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "study-1.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Realground/elevated and independent satellite inspected. Main temple fronts north/northwest toward DongmenStreet/plaza; photographed turquoise-roof market entrance is western ZhongshanRoad access, not mainornate templehall. Indoor market surrounds west/south. StreetView360, exact dimensions/backside/currentcondition pending.",
+        "identity": "pending userreview: Actual ZhongshanRoad market gate with two redposts, small adjacent foodcounter and short covered access; no transplanted fulltemple. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T07:17:23.982697+00:00"
     },
     {
       "id": "aowanda",
@@ -2165,7 +2220,7 @@
       "userAcceptance": "pending"
     }
   ],
-  "lastUpdatedAt": "2026-10-20T04:21:44.716840+00:00",
+  "lastUpdatedAt": "2026-10-20T07:17:25.138328+00:00",
   "automation": {
     "id": "islandia",
     "status": "ACTIVE",
@@ -2174,15 +2229,15 @@
   },
   "lastBatch": {
     "ids": [
-      "xiaoliuqiu",
-      "donggang",
-      "chike-mountain",
-      "tiehua-village",
-      "taitung-forest-park"
+      "duoliang",
+      "shimen-reservoir",
+      "lalashan",
+      "xiaowulai",
+      "hsinchu-chenghuang"
     ],
     "generated": 5,
-    "additionalRevisions": 3,
-    "result": "5 selfchecked previews; useracceptancepending"
+    "additionalRevisions": 5,
+    "result": "3 selfchecked previews; useracceptancepending"
   },
   "manualResumedAt": "2026-10-20T02:48:01+00:00",
   "automationStatus": "paused after original09:00Taipei cutoff; manualwork resumed by user"

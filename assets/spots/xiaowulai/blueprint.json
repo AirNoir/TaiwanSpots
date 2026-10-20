@@ -1,28 +1,28 @@
 {
   "spotId": "xiaowulai",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Xiaowulai Skywalk",
-    "silhouette": "Glass-floored walkway projecting from a cliff above a waterfall"
+    "silhouette": "Complete glassdeck with uppergorgelip only, lower70m outsidecrop"
   },
-  "crop": "The skywalk and waterfall. Not the village.",
+  "crop": "11m glass cantilever, white A-frame/cables and upper rock lip of waterfall only; lower70m gorge outside crop.",
   "heroScale": 1,
-  "orientation": "verify: waterfall drops to the north of the skywalk",
+  "orientation": "Actual cantilever deck on east bank of gorge, western projection near upper waterfall. Site pin lies SE of visible deck; exact drainage microgeometry pending under canopy.",
   "lockedGeometry": [
-    "cliff edge",
-    "waterfall",
-    "gorge"
+    "11mglasscantilever",
+    "whiteAframe/cables",
+    "uppergorgelip"
   ],
   "lockedIdentity": [
-    "glass skywalk",
-    "waterfall"
+    "glasswalk and authenticAframe",
+    "upperwaterfall rocklip"
   ],
   "doNotInvent": [
-    "buildings",
-    "lakes",
-    "snow"
+    "unverified toll buildings",
+    "hotspringpool atdeck",
+    "skyropebridge merged intocantilever"
   ],
   "allowedMiniatureDetails": [
     "visitors",
@@ -30,18 +30,27 @@
     "trees"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "study-1.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.7903264,121.3754843,97m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Glass walkway over a waterfall"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground/elevated and independent satellite inspected. Actual cantilever deck on east bank of gorge, western projection near upper waterfall. Site pin lies SE of visible deck; exact drainage microgeometry pending under canopy. StreetView360, exact dimensions/backside/currentcondition pending.",
+    "identity": "pending userreview: 11m glass cantilever, white A-frame/cables and upper rock lip of waterfall only; lower70m gorge outside crop. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

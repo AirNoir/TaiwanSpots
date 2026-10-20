@@ -7,17 +7,17 @@
     "name": "Duoliang Station",
     "silhouette": "Small station platform on a cliff above the Pacific with a train tunnel"
   },
-  "crop": "The platform and tracks above the sea. Not the village.",
+  "crop": "Finite station viewingterrace and short electrified rail segment with one engine and partial coach, downhill road and small gray shore/sea strip.",
   "heroScale": 1,
-  "orientation": "verify: tracks run north-south along the cliff",
+  "orientation": "Rail broadly NNE-SSW, station viewingterrace uphill/west, Provincial9B between railway and Pacific east/southeast. Northern tunnel outside finitecrop.",
   "lockedGeometry": [
-    "cliff platform",
-    "rail line",
-    "tunnel"
+    "western viewingterrace",
+    "NNE-SSW electrifiedrail",
+    "downhillroad before Pacific"
   ],
   "lockedIdentity": [
-    "blue sea view",
-    "train"
+    "documentedorangecreamtrain",
+    "stationviewplatform"
   ],
   "doNotInvent": [
     "beaches with resorts",
@@ -30,18 +30,28 @@
     "trains"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "study-1.jpg",
+      "study-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.50753,120.95888,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "study-2.jpg"
+    ]
   },
   "worldToken": {
     "element": "Train by the blue sea"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground/elevated and independent satellite inspected. Rail broadly NNE-SSW, station viewingterrace uphill/west, Provincial9B between railway and Pacific east/southeast. Northern tunnel outside finitecrop. StreetView360, exact dimensions/backside/currentcondition pending.",
+    "identity": "pending: actualreferences collected, candidate still unqualified",
+    "style": "failed after initial+2 targetedrepairs",
+    "collection": "needs-regeneration: Three candidates: rail/highway parallelism corrected, but equal-corner camera/base projection still visibly inconsistent; common train/people scale remains approximate. Clean reconstruction needed."
   }
 }

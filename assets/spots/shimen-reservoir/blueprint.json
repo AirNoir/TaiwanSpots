@@ -1,23 +1,23 @@
 {
   "spotId": "shimen-reservoir",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Shimen Dam",
-    "silhouette": "Large earth dam holding a green lake among hills"
+    "silhouette": "Finite spillway uppercrest architectural detail, not entire dam"
   },
-  "crop": "The dam and lake. Not the whole catchment.",
+  "crop": "Two adjacent upper spillway bays and connecting curved crestroad with narrow upstream lake edge; display detail, not entire dam or full chute.",
   "heroScale": 1,
-  "orientation": "verify: dam sits at the north end of the lake",
+  "orientation": "Reservoir upstream SE/east, afterbay NW/north; concrete spillway at eastern flank of main earthfill embankment, not a thin arch dam. Finite uppercrest detail omits full embankment/133mheight.",
   "lockedGeometry": [
-    "dam",
-    "lake",
-    "hills"
+    "two-bayuppercrest DETAILcrop",
+    "curvedcrestroad",
+    "upstreamlake east/downstreamwest"
   ],
   "lockedIdentity": [
-    "curved dam wall",
-    "spillway"
+    "documentedconcretespillwaygatehoists",
+    "earthfilldam context not thinarchwall"
   ],
   "doNotInvent": [
     "buildings on the lake",
@@ -30,18 +30,27 @@
     "visitors"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "study-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@24.8132257,121.2456965,780m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "study-2.jpg"
+    ]
   },
   "worldToken": {
     "element": "Dam and green lake"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Realground/elevated and independent satellite inspected. Reservoir upstream SE/east, afterbay NW/north; concrete spillway at eastern flank of main earthfill embankment, not a thin arch dam. Finite uppercrest detail omits full embankment/133mheight. StreetView360, exact dimensions/backside/currentcondition pending.",
+    "identity": "pending userreview: Two adjacent upper spillway bays and connecting curved crestroad with narrow upstream lake edge; display detail, not entire dam or full chute. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }
