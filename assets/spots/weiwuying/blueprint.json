@@ -7,9 +7,9 @@
     "name": "Weiwuying",
     "silhouette": "Huge low building with a flowing white wave roof sheltering an open plaza"
   },
-  "crop": "The arts centre building and surrounding park. Not the city.",
+  "crop": "Complete low artscentre with restrained nearby paving and lawn; widerpark omitted",
   "heroScale": 1,
-  "orientation": "verify: park surrounds the building on all sides",
+  "orientation": "Sanduo1stRoad north, Guotai2ndRoad east, metropolitanpark south/west. Real sculptural supports valid, not classicalcolumns.",
   "lockedGeometry": [
     "long low building",
     "park",
@@ -20,8 +20,8 @@
     "open banyan-like plaza"
   ],
   "doNotInvent": [
+    "classical columns",
     "domes",
-    "columns",
     "pagodas"
   ],
   "allowedMiniatureDetails": [
@@ -30,18 +30,27 @@
     "trees"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-2.jpg",
+      "official-3.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.6229,120.3424,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "White wavy roof"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Real ground/elevated and independent satellite inspected; Sanduo1stRoad north, Guotai2ndRoad east, metropolitanpark south/west. Real sculptural supports valid, not classicalcolumns. StreetView360, precise dimensions/backside/currentstate pending. Official building footprint3.3ha; wholebuilding scale about200m, exactdimension plan pending. Prior oversizedpeople rejected.",
+    "identity": "pending: broadroof identity retained, wholebuilding human/tree scale failed",
+    "style": "failed: initial and two targeted scale repairs still do not meet building-to-adult scale; no further automatic retry",
+    "collection": "needs-regeneration: finite entrance crop or measured wholebuilding reconstruction needed"
   }
 }

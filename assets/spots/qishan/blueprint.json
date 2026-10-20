@@ -1,15 +1,15 @@
 {
   "spotId": "qishan",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Qishan old street",
     "silhouette": "Row of baroque arcade shophouse facades and an old station"
   },
-  "crop": "The arcade street and the old Qishan station. Not the hills.",
+  "crop": "Single photographed heritage shopfront row and adjacent asphalt street half; opposite streetrow/station outside finitecrop",
   "heroScale": 1,
-  "orientation": "verify: old station sits at the north end",
+  "orientation": "Oldstreet north/northwest of station, not station north of lane. Dense attached shoprows and asphalt street.",
   "lockedGeometry": [
     "straight street",
     "arcade shophouses",
@@ -30,18 +30,28 @@
     "scooters"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-2.jpg",
+      "official-3.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.88511,120.48179,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Baroque shopfront with banana ice"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Real ground/elevated and independent satellite inspected; Oldstreet north/northwest of station, not station north of lane. Dense attached shoprows and asphalt street. StreetView360, precise dimensions/backside/currentstate pending. Preview uses one shoprow only, opposite side outsidecrop; shop names/menu are simplified artistic placeholders, not verified facade signage.",
+    "identity": "pending user review: Photographed short ZhongshanRoad heritage facade street crop; station omitted. Main landmark silhouette checked against sourcephotos; exact small joints/storefronts/backside simplified pending.",
+    "style": "self-checked preview: warm physical Q miniature, tactile real materials, elevated weakperspective camera; no scenic cards/globe",
+    "collection": "self-checked preview: complete ivory smallrounded square base, contained footprints and coherent verticals; 512px identification checked. Artistic model, not measured reconstruction."
   }
 }

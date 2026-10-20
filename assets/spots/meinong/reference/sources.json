@@ -1,0 +1,38 @@
+{
+  "id": "meinong",
+  "page": "https://khh.travel/ja/attractions/detail/623/",
+  "credit": "Kaohsiung City Tourism Bureau",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical official tourism photos, publication/update dates not capturedate",
+  "usage": "Visual reference only; rights retained, no blanket commercial licence or texture reuse",
+  "description": "Gate north of creek, road passes through opening to bridge south; no ricefield at gate feet.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://khh.travel/image/21807/1920x1080",
+      "page": "https://khh.travel/ja/attractions/detail/623/",
+      "kind": "ground/elevated/aerial realphoto visually inspected; roles described in exactprompt",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://khh.travel/image/1486/1024x768",
+      "page": "https://khh.travel/ja/attractions/detail/623/",
+      "kind": "ground/elevated/aerial realphoto visually inspected; roles described in exactprompt",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.8956,120.54885,18z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar; original attribution retained",
+      "capture": "Not exposed; copyright2026 not captureyear",
+      "usage": "Visual reference only",
+      "observations": "Gate north of creek, road passes through opening to bridge south; no ricefield at gate feet."
+    }
+  ],
+  "lensReview": "Reconstruct coherent miniature from independent views; not calibrated mathematical undistortion; StreetView360 pending"
+}

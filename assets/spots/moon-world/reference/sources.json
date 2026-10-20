@@ -1,0 +1,46 @@
+{
+  "id": "moon-world",
+  "page": "https://khh.travel/ja/attractions/detail/604/",
+  "credit": "Kaohsiung City Tourism Bureau",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical official tourism photos, publication/update dates not capturedate",
+  "usage": "Visual reference only; rights retained, no blanket commercial licence or texture reuse",
+  "description": "Badlands west/north of visitorcentre and Route28; paths follow valleys, not across razor ridges. Exact stair geometry pending.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://khh.travel/image/18407/1920x1080",
+      "page": "https://khh.travel/ja/attractions/detail/604/",
+      "kind": "ground/elevated/aerial realphoto visually inspected; roles described in exactprompt",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://khh.travel/image/18409/1024x768",
+      "page": "https://khh.travel/ja/attractions/detail/604/",
+      "kind": "ground/elevated/aerial realphoto visually inspected; roles described in exactprompt",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://khh.travel/image/18411/1024x768",
+      "page": "https://khh.travel/ja/attractions/detail/604/",
+      "kind": "ground/elevated/aerial realphoto visually inspected; roles described in exactprompt",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@22.886002,120.388983,18z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar; original attribution retained",
+      "capture": "Not exposed; copyright2026 not captureyear",
+      "usage": "Visual reference only",
+      "observations": "Badlands west/north of visitorcentre and Route28; paths follow valleys, not across razor ridges. Exact stair geometry pending."
+    }
+  ],
+  "lensReview": "Reconstruct coherent miniature from independent views; not calibrated mathematical undistortion; StreetView360 pending"
+}

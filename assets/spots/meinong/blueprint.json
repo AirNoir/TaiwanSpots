@@ -1,24 +1,23 @@
 {
   "spotId": "meinong",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Meinong East Gate tower",
-    "silhouette": "Hakka gate tower beside rice fields with tobacco barns and paper umbrellas"
+    "silhouette": "Gray gate legs supporting open redpost pavilion and orange roof over road"
   },
-  "crop": "The East Gate tower and nearby fields. Not the whole township.",
+  "crop": "EastGate and immediately adjacent road; fields/barns/creek beyond crop omitted",
   "heroScale": 1,
-  "orientation": "verify: Meinong Creek runs past the gate",
+  "orientation": "Gate north of creek, road passes through opening to bridge south; no ricefield at gate feet.",
   "lockedGeometry": [
-    "town edge",
-    "rice fields",
-    "creek"
+    "road through gate",
+    "gate north of creek outsidecrop",
+    "open pavilion on two broad graywalllegs"
   ],
   "lockedIdentity": [
     "East Gate tower",
-    "tobacco barns",
-    "oil-paper umbrellas"
+    "open redcolumn pavilion"
   ],
   "doNotInvent": [
     "skyscrapers",
@@ -31,18 +30,27 @@
     "cyclists"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.8956,120.54885,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Oil-paper umbrella beside a gate tower"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Real ground/elevated and independent satellite inspected; Gate north of creek, road passes through opening to bridge south; no ricefield at gate feet. StreetView360, precise dimensions/backside/currentstate pending. Roof ornamentation/backside and upperfloor access not verified; preserve pending.",
+    "identity": "pending user review: EastGate and immediately adjacent road; fields/barns/creek beyond crop omitted. Main landmark silhouette checked against sourcephotos; exact small joints/storefronts/backside simplified pending.",
+    "style": "self-checked preview: warm physical Q miniature, tactile real materials, elevated weakperspective camera; no scenic cards/globe",
+    "collection": "self-checked preview: complete ivory smallrounded square base, contained footprints and coherent verticals; 512px identification checked. Artistic model, not measured reconstruction."
   }
 }

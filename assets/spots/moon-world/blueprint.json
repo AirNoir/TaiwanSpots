@@ -1,15 +1,15 @@
 {
   "spotId": "moon-world",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Moon World badlands",
     "silhouette": "Grey mudstone badland ridges with sharp gullies around a small pond"
   },
-  "crop": "The badland ridges and pond with the walkway. Not the farmland.",
+  "crop": "Finite actual downhill boardwalk beside eroded mudstone ridge; pond outside crop",
   "heroScale": 1,
-  "orientation": "verify: pond sits in the centre of the ridges",
+  "orientation": "Badlands west/north of visitorcentre and Route28; paths follow valleys, not across razor ridges. Exact stair geometry pending.",
   "lockedGeometry": [
     "eroded ridges",
     "small pond",
@@ -30,18 +30,26 @@
     "sparse grass"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-3.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.886002,120.388983,18z/data=!3m1!1e3"
+    ],
+    "representative": [
+      "official-3.jpg"
+    ]
   },
   "worldToken": {
     "element": "Grey sharp ridges around a pond"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Real ground/elevated and independent satellite inspected; Badlands west/north of visitorcentre and Route28; paths follow valleys, not across razor ridges. Exact stair geometry pending. StreetView360, precise dimensions/backside/currentstate pending. Model uses documented valley boardwalk rather than pondsite; individual gullies/boardwalk exactcoordinates and railposts pending.",
+    "identity": "pending user review: Finite actual downhill boardwalk beside eroded mudstone ridge; pond outside crop. Main landmark silhouette checked against sourcephotos; exact small joints/storefronts/backside simplified pending.",
+    "style": "self-checked preview: warm physical Q miniature, tactile real materials, elevated weakperspective camera; no scenic cards/globe",
+    "collection": "self-checked preview: complete ivory smallrounded square base, contained footprints and coherent verticals; 512px identification checked. Artistic model, not measured reconstruction."
   }
 }

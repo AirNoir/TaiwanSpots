@@ -1,0 +1,46 @@
+{
+  "id": "shitiping",
+  "page": "https://www.eastcoast-nsa.gov.tw/zh-tw/attractions/detail/12/",
+  "credit": "East Coast National Scenic Area Administration",
+  "accessed": "2026-10-20 Asia/Taipei",
+  "capture": "Unknown; historical official tourism photos, publication/update dates not capturedate",
+  "usage": "Visual reference only; rights retained, no blanket commercial licence or texture reuse",
+  "description": "Pacific east of pale rocky platform, inland vegetation/road west. Wooden deck documented in ground/elevatedphoto.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.eastcoast-nsa.gov.tw/image/28701/1024x768",
+      "page": "https://www.eastcoast-nsa.gov.tw/zh-tw/attractions/detail/12/",
+      "kind": "ground/elevated/aerial realphoto visually inspected; roles described in exactprompt",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://www.eastcoast-nsa.gov.tw/image/28702/1024x768",
+      "page": "https://www.eastcoast-nsa.gov.tw/zh-tw/attractions/detail/12/",
+      "kind": "ground/elevated/aerial realphoto visually inspected; roles described in exactprompt",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://www.eastcoast-nsa.gov.tw/image/28708/640x480",
+      "page": "https://www.eastcoast-nsa.gov.tw/zh-tw/attractions/detail/12/",
+      "kind": "ground/elevated/aerial realphoto visually inspected; roles described in exactprompt",
+      "capture": "Unknown",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.48525,121.51173,18z/data=!3m1!1e3",
+      "kind": "independent satellite overhead",
+      "credit": "Google Maps / Airbus / CNES / Maxar; original attribution retained",
+      "capture": "Not exposed; copyright2026 not captureyear",
+      "usage": "Visual reference only",
+      "observations": "Pacific east of pale rocky platform, inland vegetation/road west. Wooden deck documented in ground/elevatedphoto."
+    }
+  ],
+  "lensReview": "Reconstruct coherent miniature from independent views; not calibrated mathematical undistortion; StreetView360 pending"
+}
