@@ -1,15 +1,15 @@
 {
   "spotId": "sun-link-sea",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Sun Link Sea forest",
     "silhouette": "Mountain valley of tall cedars with flower gardens and a waterfall"
   },
-  "crop": "The forest garden area. Not the road.",
+  "crop": "Historical ornamental garden pond, tiny stepped cascade and surrounding maple/conifer planting only.",
   "heroScale": 1,
-  "orientation": "verify: valley runs north-south",
+  "orientation": "Flower center garden in forested valley, not Songlong waterfall. Finite ornamental pond corner, exact pond within satellite garden complex pending.",
   "lockedGeometry": [
     "mountain valley",
     "gardens",
@@ -30,18 +30,27 @@
     "flowers"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-2.jpg",
+      "real-photo.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.62861,120.7985402,197m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "official-2.jpg"
+    ]
   },
   "worldToken": {
     "element": "Cedar forest with flowers"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Two independent real viewpoints reviewed; Flower center garden in forested valley, not Songlong waterfall. Finite ornamental pond corner, exact pond within satellite garden complex pending. Exact dimensions, current condition and backside remain pending.",
+    "identity": "pending userreview: Historical ornamental garden pond, tiny stepped cascade and surrounding maple/conifer planting only. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

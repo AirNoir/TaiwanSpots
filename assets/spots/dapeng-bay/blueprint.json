@@ -1,23 +1,23 @@
 {
   "spotId": "dapeng-bay",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Dapeng Bay lagoon",
     "silhouette": "Large calm lagoon with a bascule bridge and bike path"
   },
-  "crop": "The lagoon and bridge. Not the town.",
+  "crop": "Main cable-stayed opening bridge span and both short shore approaches over outlet, excluding long road approaches/whole lagoon.",
   "heroScale": 1,
-  "orientation": "verify: lagoon mouth opens to the south-west",
+  "orientation": "Pengwan bridge crosses outlet NW-SE; lagoon NE and sea SW. Sail pylon at southeast end, control pier northwest; closed deck, no oyster racks at tower feet.",
   "lockedGeometry": [
-    "large lagoon",
-    "narrow outlet",
-    "bridge"
+    "outlet crossing NW-SE",
+    "SE asymmetric sail pylon",
+    "NW bridge control pier"
   ],
   "lockedIdentity": [
-    "bascule bridge",
-    "oyster racks"
+    "yellow cable fan and leaning A pylon",
+    "closed broad road bridge"
   ],
   "doNotInvent": [
     "mountains",
@@ -30,18 +30,27 @@
     "birds"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.4492,120.45483,397m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Bascule bridge over a lagoon"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Two independent real viewpoints reviewed; Pengwan bridge crosses outlet NW-SE; lagoon NE and sea SW. Sail pylon at southeast end, control pier northwest; closed deck, no oyster racks at tower feet. Exact dimensions, current condition and backside remain pending.",
+    "identity": "pending userreview: Main cable-stayed opening bridge span and both short shore approaches over outlet, excluding long road approaches/whole lagoon. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

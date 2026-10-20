@@ -1657,51 +1657,102 @@
       "id": "sun-link-sea",
       "name": "杉林溪",
       "hero": "Sun Link Sea forest",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "official-2.jpg",
+        "real-photo.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Two independent real viewpoints reviewed; Flower center garden in forested valley, not Songlong waterfall. Finite ornamental pond corner, exact pond within satellite garden complex pending. Exact dimensions, current condition and backside remain pending.",
+        "identity": "pending userreview: Historical ornamental garden pond, tiny stepped cascade and surrounding maple/conifer planting only. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T03:56:01.945565+00:00"
     },
     {
       "id": "paper-dome",
       "name": "埔里紙教堂",
       "hero": "Paper Dome",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v1.png",
+      "references": [
+        "architect-0.jpg",
+        "architect-1.jpg",
+        "study-1.png",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Two independent real viewpoints reviewed; Paper tube hall separate from green C-steel community shelters and leaf bamboo pavilions; pond at west/left edge of hall garden, no hall floating in pond. Exact dimensions, current condition and backside remain pending.",
+        "identity": "pending userreview: Actual paper tube hall, gray deck, small front lawn and short west pond edge. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T03:56:01.247148+00:00"
     },
     {
       "id": "formosan-aboriginal-village",
       "name": "九族文化村",
       "hero": "Aboriginal culture village",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "official-2.jpg",
+        "official-3.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Two independent real viewpoints reviewed; Finite historical Nine Tribes Square performance island/pool inside cultural park, not Naruwan Theatre farther south; lake/cablecar and entry lookout outside crop. Exact dimensions, current condition and backside remain pending.",
+        "identity": "pending userreview: Photographed low circular shingled performance pavilion, surrounding blue pool and two short connecting footways only. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T03:56:02.684521+00:00"
     },
     {
       "id": "maolin",
       "name": "茂林紫蝶幽谷",
       "hero": "Purple butterfly valley",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v3.png",
+      "references": [
+        "real-photo.jpg",
+        "official-2.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Two independent real viewpoints reviewed; Forested hillside trail west of village road; photographed path climbs away, steep bank right in second view, valley falls away left. No stream at this finite trail. Exact dimensions, current condition and backside remain pending.",
+        "identity": "pending userreview: Finite wooded stone stair trail, low faux-timber railing and sheltered butterfly foliage. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T03:56:03.242368+00:00"
     },
     {
       "id": "dapeng-bay",
       "name": "大鵬灣",
       "hero": "Dapeng Bay lagoon",
-      "state": "queued",
-      "preview": null,
-      "references": [],
-      "qa": {},
-      "userAcceptance": "pending"
+      "state": "self-checked-preview",
+      "preview": "review-v2.png",
+      "references": [
+        "real-photo.jpg",
+        "official-2.jpg",
+        "google-satellite-review.jpg"
+      ],
+      "qa": {
+        "geographic": "Two independent real viewpoints reviewed; Pengwan bridge crosses outlet NW-SE; lagoon NE and sea SW. Sail pylon at southeast end, control pier northwest; closed deck, no oyster racks at tower feet. Exact dimensions, current condition and backside remain pending.",
+        "identity": "pending userreview: Main cable-stayed opening bridge span and both short shore approaches over outlet, excluding long road approaches/whole lagoon. Exactdimensions, unseenstructure and smallornaments pending.",
+        "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+        "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+      },
+      "userAcceptance": "pending",
+      "completedAt": "2026-10-20T03:56:03.756787+00:00"
     },
     {
       "id": "xiaoliuqiu",
@@ -2064,7 +2115,7 @@
       "userAcceptance": "pending"
     }
   ],
-  "lastUpdatedAt": "2026-10-20T03:15:39.592606+00:00",
+  "lastUpdatedAt": "2026-10-20T03:56:04.271696+00:00",
   "automation": {
     "id": "islandia",
     "status": "ACTIVE",
@@ -2073,15 +2124,15 @@
   },
   "lastBatch": {
     "ids": [
-      "tropic-cancer-hualien",
-      "heping-island",
-      "lin-family-garden",
-      "daxi",
-      "mukumugi"
+      "sun-link-sea",
+      "paper-dome",
+      "formosan-aboriginal-village",
+      "maolin",
+      "dapeng-bay"
     ],
-    "generated": 4,
-    "additionalRevisions": 6,
-    "result": "3 selfchecked previews; Daxi3drafts rejected for camera/base; Mukumugi blocked-reference; useracceptancepending"
+    "generated": 5,
+    "additionalRevisions": 4,
+    "result": "5 selfchecked previews; useracceptancepending"
   },
   "manualResumedAt": "2026-10-20T02:48:01+00:00",
   "automationStatus": "paused after original09:00Taipei cutoff; manualwork resumed by user"

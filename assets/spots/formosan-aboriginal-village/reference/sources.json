@@ -1,0 +1,43 @@
+{
+  "id": "formosan-aboriginal-village",
+  "page": "https://www.sunmoonlake.gov.tw/zh-tw/attractions/Attractions?A=20&Id=13",
+  "accessed": "2026-10-20",
+  "capture": "Unknown; historical official real photographs. Page update and file path date not capture date.",
+  "credit": "Official operator/tourism authority, photographer unprovided unless noted",
+  "usage": "Visual reference only; rights retained; no blanket commercial texture license",
+  "description": "Finite historical Nine Tribes Square performance island/pool inside cultural park, not Naruwan Theatre farther south; lake/cablecar and entry lookout outside crop.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://www.sunmoonlake.gov.tw/fapi/Image?type=Attraction&id=2772&refid=13&l=1&w=2480&h=1488",
+      "kind": "real photograph ground/elevated",
+      "capture": "Unknown, URL upload date not capture year",
+      "usage": "Visual reference only, copyright retained; not licensed as commercial texture"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://www.sunmoonlake.gov.tw/fapi/Image?type=Attraction&id=2779&refid=13&l=1&w=2480&h=1488",
+      "kind": "real photograph ground/elevated",
+      "capture": "Unknown, URL upload date not capture year",
+      "usage": "Visual reference only, copyright retained; not licensed as commercial texture"
+    },
+    {
+      "local": "official-3.jpg",
+      "image": "https://www.sunmoonlake.gov.tw/fapi/Image?type=Attraction&id=2780&refid=13&l=1&w=2480&h=1488",
+      "kind": "real performer clothing study, not roof geometry",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.8632799,120.9499498,98m/data=!3m1!1e3",
+      "kind": "independent real satellite",
+      "credit": "Google / Airbus / CNES / Maxar original attribution retained",
+      "capture": "Not exposed; 2026 copyright is not capture year",
+      "usage": "Visual reference only",
+      "observations": "Finite historical Nine Tribes Square performance island/pool inside cultural park, not Naruwan Theatre farther south; lake/cablecar and entry lookout outside crop."
+    }
+  ],
+  "lensReview": "Cross-view reconstruction with long-lens miniature camera, NOT calibrated numerical lens correction. StreetView360 pending.",
+  "eraCaveat": "Historical view; Sun Link Sea flower hall has renovation notice since2025; no claim of present accessibility or exact current layout."
+}

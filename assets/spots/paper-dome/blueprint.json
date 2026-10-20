@@ -1,23 +1,23 @@
 {
   "spotId": "paper-dome",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Paper Dome",
-    "silhouette": "Oval hall of paper tubes inside a glass box beside a pond"
+    "silhouette": "Elliptical kraft paper tube ring inside rectangular translucent folding-panel hall with shallow white tension roof"
   },
-  "crop": "The dome and pond. Not the eco village.",
+  "crop": "Actual paper tube hall, gray deck, small front lawn and short west pond edge.",
   "heroScale": 1,
-  "orientation": "verify: pond lies in front of the dome",
+  "orientation": "Paper tube hall separate from green C-steel community shelters and leaf bamboo pavilions; pond at west/left edge of hall garden, no hall floating in pond.",
   "lockedGeometry": [
-    "small building",
-    "pond",
-    "garden"
+    "rectangular hall on dry deck",
+    "elliptical paper column ring",
+    "small west pond edge"
   ],
   "lockedIdentity": [
-    "paper tube columns",
-    "glass walls"
+    "tan paper tube columns",
+    "translucent folding panels and shallow membrane roof"
   ],
   "doNotInvent": [
     "steeples",
@@ -30,18 +30,28 @@
     "plants"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "architect-0.jpg",
+      "architect-1.jpg",
+      "study-1.png"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.9414,120.9271,196m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "architect-0.jpg"
+    ]
   },
   "worldToken": {
     "element": "Paper tube hall"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Two independent real viewpoints reviewed; Paper tube hall separate from green C-steel community shelters and leaf bamboo pavilions; pond at west/left edge of hall garden, no hall floating in pond. Exact dimensions, current condition and backside remain pending.",
+    "identity": "pending userreview: Actual paper tube hall, gray deck, small front lawn and short west pond edge. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

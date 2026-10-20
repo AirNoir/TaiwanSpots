@@ -1,0 +1,71 @@
+{
+  "id": "paper-dome",
+  "page": "https://paperdome.org.tw/architectural-aesthetics/",
+  "accessed": "2026-10-20",
+  "capture": "Unknown; historical official real photographs. Page update and file path date not capture date.",
+  "credit": "Official operator/tourism authority, photographer unprovided unless noted",
+  "usage": "Visual reference only; rights retained; no blanket commercial texture license",
+  "description": "Paper tube hall separate from green C-steel community shelters and leaf bamboo pavilions; pond at west/left edge of hall garden, no hall floating in pond.",
+  "supplementary": [
+    {
+      "local": "real-photo.jpg",
+      "image": "https://paperdome.org.tw/wp-content/uploads/2025/05/DSC_5712.jpg",
+      "kind": "real photograph ground/elevated",
+      "capture": "Unknown, URL upload date not capture year",
+      "usage": "Visual reference only, copyright retained; not licensed as commercial texture"
+    },
+    {
+      "local": "official-2.jpg",
+      "image": "https://paperdome.org.tw/wp-content/uploads/2025/05/DSC3395.jpg",
+      "kind": "real photograph ground/elevated",
+      "capture": "Unknown, URL upload date not capture year",
+      "usage": "Visual reference only, copyright retained; not licensed as commercial texture"
+    },
+    {
+      "local": "architect-0.jpg",
+      "image": "https://shigerubanarchitects.com/wp-content/uploads/2022/10/shigeru-ban-paper-dome-taiwan0.jpg",
+      "page": "https://shigerubanarchitects.com/works/cultural/paper-dome-taiwan/",
+      "credit": "Shigeru Ban Architects, photographer not specified",
+      "capture": "Unknown, historical project",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "architect-1.jpg",
+      "image": "https://shigerubanarchitects.com/wp-content/uploads/2022/10/shigeru-ban-paper-dome-taiwan5.jpg",
+      "page": "https://shigerubanarchitects.com/works/cultural/paper-dome-taiwan/",
+      "credit": "Shigeru Ban Architects, photographer not specified",
+      "capture": "Unknown, historical project",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "study-0.png",
+      "image": "https://paperdome.org.tw/wp-content/uploads/2025/05/%E6%88%AA%E5%9C%96-2025-05-17-%E4%B8%8A%E5%8D%8810.29.50.png",
+      "kind": "study-1 actual paper hall interior; study-0 separate bamboo pavilions; other C-steel shelter context",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "study-1.png",
+      "image": "https://paperdome.org.tw/wp-content/uploads/2025/05/%E6%88%AA%E5%9C%96-2025-04-02-%E4%B8%8A%E5%8D%8811.56.46.png",
+      "kind": "study-1 actual paper hall interior; study-0 separate bamboo pavilions; other C-steel shelter context",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "study-2.png",
+      "image": "https://paperdome.org.tw/wp-content/uploads/2025/05/%E6%88%AA%E5%9C%96-2025-05-17-%E4%B8%8A%E5%8D%8810.26.05.png",
+      "kind": "study-1 actual paper hall interior; study-0 separate bamboo pavilions; other C-steel shelter context",
+      "usage": "Visual reference only"
+    },
+    {
+      "local": "google-satellite-review.jpg",
+      "raw": "google-satellite-review.png",
+      "page": "https://www.google.com/maps/@23.9414,120.9271,196m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "kind": "independent real satellite",
+      "credit": "Google / Airbus / CNES / Maxar original attribution retained",
+      "capture": "Not exposed; 2026 copyright is not capture year",
+      "usage": "Visual reference only",
+      "observations": "Paper tube hall separate from green C-steel community shelters and leaf bamboo pavilions; pond at west/left edge of hall garden, no hall floating in pond."
+    }
+  ],
+  "lensReview": "Cross-view reconstruction with long-lens miniature camera, NOT calibrated numerical lens correction. StreetView360 pending.",
+  "eraCaveat": "Historical view; Sun Link Sea flower hall has renovation notice since2025; no claim of present accessibility or exact current layout."
+}

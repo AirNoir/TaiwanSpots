@@ -1,23 +1,23 @@
 {
   "spotId": "formosan-aboriginal-village",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "urban",
   "productionTier": "standard",
   "hero": {
     "name": "Aboriginal culture village",
     "silhouette": "Hillside village of traditional houses with a gondola line"
   },
-  "crop": "The village slope and gondola. Not the lake.",
+  "crop": "Photographed low circular shingled performance pavilion, surrounding blue pool and two short connecting footways only.",
   "heroScale": 1,
-  "orientation": "verify: gondola heads east toward Sun Moon Lake",
+  "orientation": "Finite historical Nine Tribes Square performance island/pool inside cultural park, not Naruwan Theatre farther south; lake/cablecar and entry lookout outside crop.",
   "lockedGeometry": [
-    "hillside",
-    "traditional houses",
-    "gondola"
+    "circular performance island",
+    "surrounding shallow pool",
+    "short bank footways"
   ],
   "lockedIdentity": [
-    "traditional aboriginal houses",
-    "gondola cabins"
+    "low brown shingled pavilion",
+    "documented tourism performance costumes"
   ],
   "doNotInvent": [
     "skyscrapers",
@@ -30,18 +30,27 @@
     "flowers"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "official-2.jpg",
+      "official-3.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@23.8632799,120.9499498,98m/data=!3m1!1e3"
+    ],
+    "representative": [
+      "official-2.jpg"
+    ]
   },
   "worldToken": {
     "element": "Gondola over traditional houses"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Two independent real viewpoints reviewed; Finite historical Nine Tribes Square performance island/pool inside cultural park, not Naruwan Theatre farther south; lake/cablecar and entry lookout outside crop. Exact dimensions, current condition and backside remain pending.",
+    "identity": "pending userreview: Photographed low circular shingled performance pavilion, surrounding blue pool and two short connecting footways only. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }

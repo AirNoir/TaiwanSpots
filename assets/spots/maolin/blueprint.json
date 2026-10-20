@@ -1,23 +1,23 @@
 {
   "spotId": "maolin",
-  "status": "draft",
+  "status": "references-collected",
   "spotType": "natural",
   "productionTier": "standard",
   "hero": {
     "name": "Purple butterfly valley",
     "silhouette": "Forest valley where trees glitter with clusters of purple butterflies"
   },
-  "crop": "The valley forest with butterflies. Not the village.",
+  "crop": "Finite wooded stone stair trail, low faux-timber railing and sheltered butterfly foliage.",
   "heroScale": 1,
-  "orientation": "verify: valley runs east",
+  "orientation": "Forested hillside trail west of village road; photographed path climbs away, steep bank right in second view, valley falls away left. No stream at this finite trail.",
   "lockedGeometry": [
-    "forest valley",
-    "stream",
-    "path"
+    "ascending stone forest trail",
+    "waist-high faux-timber rail",
+    "steep wooded bank"
   ],
   "lockedIdentity": [
-    "purple crow butterflies",
-    "dense forest"
+    "actual dark stone hillside stair",
+    "naturally tiny purple crow butterflies"
   ],
   "doNotInvent": [
     "buildings",
@@ -30,18 +30,27 @@
     "ferns"
   ],
   "references": {
-    "aerial": [],
-    "ground": [],
-    "map": [],
-    "representative": []
+    "ground": [
+      "real-photo.jpg",
+      "official-2.jpg"
+    ],
+    "aerial": [
+      "google-satellite-review.jpg"
+    ],
+    "map": [
+      "https://www.google.com/maps/@22.887661,120.663142,198m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+    ],
+    "representative": [
+      "real-photo.jpg"
+    ]
   },
   "worldToken": {
     "element": "Purple butterflies on a tree"
   },
   "qa": {
-    "geographic": "pending",
-    "identity": "pending",
-    "style": "pending",
-    "collection": "pending"
+    "geographic": "Two independent real viewpoints reviewed; Forested hillside trail west of village road; photographed path climbs away, steep bank right in second view, valley falls away left. No stream at this finite trail. Exact dimensions, current condition and backside remain pending.",
+    "identity": "pending userreview: Finite wooded stone stair trail, low faux-timber railing and sheltered butterfly foliage. Exactdimensions, unseenstructure and smallornaments pending.",
+    "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
   }
 }
