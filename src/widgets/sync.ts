@@ -49,11 +49,11 @@ function widgetDistance(m: number) {
 async function sharedImage(directory: string, spotId: string): Promise<string> {
   const source = collectionThumbnail(spotId);
   if (typeof source !== 'number') return '';
-  const module = Asset.fromModule(source);
+  const art = Asset.fromModule(source);
   // The content hash is part of the name, so re-exported art replaces the cached copy.
-  const target = new File(directory, `${spotId}-${(module.hash ?? '0').slice(0, 10)}.png`);
+  const target = new File(directory, `${spotId}-${(art.hash ?? '0').slice(0, 10)}.png`);
   if (!target.exists) {
-    const asset = await module.downloadAsync();
+    const asset = await art.downloadAsync();
     if (!asset.localUri) return '';
     new File(asset.localUri).copy(target);
   }
