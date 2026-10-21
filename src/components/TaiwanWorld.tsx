@@ -533,7 +533,12 @@ export function TaiwanWorld({
   const onMarkerPress = (m: Marker) => {
     const spot = m.spot;
     void Haptics.selectionAsync();
-    if (!regionId) setRegionId(spot.region, target?.spot.id === spot.id ? spot : null);
+    if (!regionId) {
+      setRegionId(spot.region, target?.spot.id === spot.id ? spot : null);
+      // a county light opens straight into its county when that county is a bubble
+      if (m.kind === 'light' && (COUNTY_SIZE.get(`${spot.region}:${countyOf(spot)}`) ?? 0) >= CLUSTER_MIN)
+        setCounty(countyOf(spot));
+    }
     else if (m.cluster) {
       setCounty(m.cluster.county);
       setSelectedId(null);
