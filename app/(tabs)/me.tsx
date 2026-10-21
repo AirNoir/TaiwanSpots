@@ -12,7 +12,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { ACHIEVEMENTS } from '../../src/achievements';
 import { DEMO_TOOLS } from '../../src/demo';
 import { SEASONS, seasonMeta, Sky, skyMeta } from '../../src/atmosphere';
-import { spotById } from '../../src/data/spots';
+import { spotById, SPOTS } from '../../src/data/spots';
 import { distanceMeters } from '../../src/geo';
 import { useActiveCollections, useStore } from '../../src/store';
 import { Palette, ThemeMode, categoryMeta, makeStyles, useTheme } from '../../src/theme';
@@ -24,6 +24,23 @@ const THEME_OPTIONS: { mode: ThemeMode; label: string; icon: string }[] = [
 
 // Dev preview choices (value '' = automatic). Skies limited to the ones that look different.
 const PREVIEW_SKIES: Sky[] = ['clear', 'cloudy', 'overcast', 'fog', 'rain', 'thunder', 'snow'];
+
+// Traveller titles by collection size; the last one is every active spot.
+const RANKS = [
+  { at: 0, title: 'NEWCOMER', zh: '初來乍到' },
+  { at: 1, title: 'TRAVELER', zh: '旅人' },
+  { at: 10, title: 'CITY WALKER', zh: '城市漫遊者' },
+  { at: 30, title: 'ISLAND EXPLORER', zh: '島嶼探險家' },
+  { at: 60, title: 'FORMOSA HAND', zh: '寶島達人' },
+  { at: 100, title: 'TAIWAN SAGE', zh: '台灣通' },
+  { at: SPOTS.length, title: 'ISLAND KEEPER', zh: '島嶼守護者' },
+];
+
+function rankFor(n: number) {
+  let i = 0;
+  while (i + 1 < RANKS.length && n >= RANKS[i + 1].at) i++;
+  return { ...RANKS[i], next: RANKS[i + 1] ?? null };
+}
 
 export default function MeScreen() {
   const t = useTheme();
@@ -61,6 +78,8 @@ export default function MeScreen() {
     return Math.round(total / 1000);
   }, [collected]);
 
+  const rank = rankFor(collected.length);
+
   const catCounts = useMemo(() => {
     const counts: Record<string, number> = {};
     collected.forEach((c) => {
@@ -76,8 +95,13 @@ export default function MeScreen() {
         <View style={styles.avatar}>
           <MaterialCommunityIcons name={'compass-rose' as any} size={40} color={t.accent} />
         </View>
-        <Text style={styles.name}>TRAVELER</Text>
-        <Text style={styles.role}>Taiwan Explorer</Text>
+        <Text style={styles.name}>{rank.title}</Text>
+        <Text style={styles.role}>{rank.zh}</Text>
+        {rank.next && (
+          <Text style={styles.rankNext}>
+            再收藏 {rank.next.at - collected.length} 個，成為「{rank.next.zh}」
+          </Text>
+        )}
 
         <View style={styles.statsRow}>
           <View style={styles.statCell}>
@@ -267,6 +291,7 @@ const useStyles = makeStyles((t: Palette) =>
     textAlign: 'center',
     marginTop: 14,
   },
+  rankNext: { color: t.accent, fontSize: 12, fontWeight: '600', marginTop: 6, textAlign: 'center' },
   role: { color: t.subtext, fontSize: 13, textAlign: 'center', marginTop: 4 },
   statsRow: {
     flexDirection: 'row',
