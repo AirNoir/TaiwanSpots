@@ -15,7 +15,8 @@ import { Diorama } from '../../src/components/Diorama';
 import { TaiwanWorld } from '../../src/components/TaiwanWorld';
 import { SPOTS, spotById } from '../../src/data/spots';
 import { TAIWAN } from '../../src/data/world';
-import { distanceMeters, formatDistance, LatLng } from '../../src/geo';
+import { checkinRadius, distanceMeters, formatDistance, LatLng } from '../../src/geo';
+import { openDirections, travelModeFor } from '../../src/maps';
 import { entrySeason, useActiveCollections } from '../../src/store';
 import { makeStyles, Palette, useTheme } from '../../src/theme';
 import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
@@ -69,9 +70,11 @@ export default function WorldScreen() {
       SPOTS.filter((s) => !collectedIds.has(s.id))
         .map((s) => ({ spot: s, dist: distanceMeters(location, s) }))
         .sort((a, b) => a.dist - b.dist)
-        .slice(0, 3),
+        .slice(0, 4),
     [location, collectedIds]
   );
+
+  const nextStop = nearby[0] ? { ...nearby[0], inRange: nearby[0].dist <= checkinRadius(nearby[0].spot) } : null;
 
   const latest = useMemo(() => {
     const list = Object.values(collections).sort(
@@ -127,8 +130,50 @@ export default function WorldScreen() {
           </View>
         </View>
 
-        <Text style={styles.sectionTitle}>NEAR YOU</Text>
-        {nearby.map(({ spot, dist }) => (
+        {nextStop && (
+          <>
+            <Text style={styles.sectionTitle}>NEXT STOP</Text>
+            <Pressable
+              style={[styles.nextCard, nextStop.inRange && styles.nextCardReady]}
+              onPress={() => router.push(`/spot/${nextStop.spot.id}`)}
+              accessibilityRole="button"
+              accessibilityLabel={`下一站 ${nextStop.spot.name}`}
+            >
+              <Diorama spot={nextStop.spot} size={104} radius={18} />
+              <View style={styles.nextBody}>
+                <Text style={styles.nextKicker}>
+                  {nextStop.inRange ? '你已抵達 · 現在就能收藏' : isFallback ? '離台北車站最近的景點' : '離你最近、還沒收藏'}
+                </Text>
+                <Text style={styles.nextName} numberOfLines={1}>
+                  {nextStop.spot.name}
+                </Text>
+                <Text style={styles.nextCity} numberOfLines={1}>
+                  {nextStop.spot.city}
+                  {isFallback ? '' : ` · ${formatDistance(nextStop.dist)}`}
+                </Text>
+                <View style={styles.nextActions}>
+                  <View style={[styles.nextBtn, styles.nextBtnPrimary]}>
+                    <Text style={styles.nextBtnPrimaryText}>{nextStop.inRange ? '去收藏' : '看看'}</Text>
+                  </View>
+                  {!nextStop.inRange && (
+                    <Pressable
+                      style={styles.nextBtn}
+                      onPress={() => void openDirections(nextStop.spot, travelModeFor(nextStop.dist), t.mode)}
+                      hitSlop={6}
+                      accessibilityRole="button"
+                    >
+                      <MaterialCommunityIcons name={'navigation-variant-outline' as any} size={13} color={t.accent} />
+                      <Text style={styles.nextBtnText}>導航</Text>
+                    </Pressable>
+                  )}
+                </View>
+              </View>
+            </Pressable>
+          </>
+        )}
+
+        {nearby.length > 1 && <Text style={styles.sectionTitle}>ALSO NEAR YOU</Text>}
+        {nearby.slice(1).map(({ spot, dist }) => (
           <Pressable
             key={spot.id}
             style={styles.nearRow}
@@ -139,10 +184,16 @@ export default function WorldScreen() {
               <Text style={styles.nearName}>{spot.name}</Text>
               <Text style={styles.nearCity}>{spot.city}</Text>
             </View>
-            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 3 }}>
-              <MaterialCommunityIcons name={'map-marker' as any} size={13} color={t.accent} />
-              <Text style={styles.nearDist}>{formatDistance(dist)}</Text>
-            </View>
+            {dist <= checkinRadius(spot) ? (
+              <Text style={styles.readyBadge}>可收藏</Text>
+            ) : (
+              !isFallback && (
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 3 }}>
+                  <MaterialCommunityIcons name={'map-marker' as any} size={13} color={t.accent} />
+                  <Text style={styles.nearDist}>{formatDistance(dist)}</Text>
+                </View>
+              )
+            )}
           </Pressable>
         ))}
 
@@ -208,6 +259,45 @@ const useStyles = makeStyles((t: Palette) =>
     letterSpacing: 3,
     marginTop: 28,
     marginBottom: 12,
+  },
+  nextCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 14,
+    backgroundColor: t.card,
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: t.cardBorder,
+    padding: 12,
+  },
+  nextCardReady: { borderColor: t.accent, backgroundColor: t.accentSoft },
+  nextBody: { flex: 1, minWidth: 0 },
+  nextKicker: { color: t.accent, fontSize: 11, fontWeight: '700' },
+  nextName: { color: t.text, fontSize: 19, fontWeight: '800', marginTop: 3 },
+  nextCity: { color: t.subtext, fontSize: 12, marginTop: 2 },
+  nextActions: { flexDirection: 'row', gap: 8, marginTop: 10 },
+  nextBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: t.accent,
+  },
+  nextBtnPrimary: { backgroundColor: t.accent },
+  nextBtnPrimaryText: { color: t.onAccent, fontSize: 12, fontWeight: '700' },
+  nextBtnText: { color: t.accent, fontSize: 12, fontWeight: '700' },
+  readyBadge: {
+    color: t.onAccent,
+    backgroundColor: t.accent,
+    fontSize: 11,
+    fontWeight: '700',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 8,
+    overflow: 'hidden',
   },
   nearRow: {
     flexDirection: 'row',

@@ -73,7 +73,7 @@ export function Diorama({ spot, size, locked = false, live = false, radius, atmo
         <Animated.View
           style={{
             flex: 1,
-            opacity: locked ? (t.mode === 'dark' ? 0.2 : 0.28) : 1,
+            opacity: locked ? (t.mode === 'dark' ? 0.3 : 0.4) : 1,
             transform: [
               {
                 translateY: live
