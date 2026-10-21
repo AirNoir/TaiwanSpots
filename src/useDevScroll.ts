@@ -12,9 +12,11 @@ export function useDevScroll(name: string) {
     if (!__DEV__) return;
     const g = globalThis as any;
     g.__islandiaScroll = g.__islandiaScroll ?? {};
-    g.__islandiaScroll[name] = (y: number) => ref.current?.scrollTo({ y, animated: false });
+    const scroll = (y: number) => ref.current?.scrollTo({ y, animated: false });
+    g.__islandiaScroll[name] = scroll;
     return () => {
-      delete g.__islandiaScroll[name];
+      // a remount may already have registered its own scroller
+      if (g.__islandiaScroll[name] === scroll) delete g.__islandiaScroll[name];
     };
   }, [name]);
   return ref;

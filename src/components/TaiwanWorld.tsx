@@ -139,7 +139,7 @@ export function TaiwanWorld({
   useEffect(() => {
     if (!__DEV__ || !interactive) return;
     const g = globalThis as any;
-    g.__islandiaMap = {
+    const api = {
       region: (id: string | null) => {
         setRegionIdRaw(id);
         setCounty(null);
@@ -151,8 +151,10 @@ export function TaiwanWorld({
       },
       select: (id: string | null) => setSelectedId(id),
     };
+    g.__islandiaMap = api;
     return () => {
-      delete g.__islandiaMap;
+      // a remount may already have registered its own api
+      if (g.__islandiaMap === api) delete g.__islandiaMap;
     };
   }, [interactive]);
   const inFocus = (s: Spot) => s.region === regionId && (!county || countyOf(s) === county);
@@ -379,7 +381,7 @@ export function TaiwanWorld({
         // Crowded counties fold into one bubble until they are opened.
         if (s.region !== regionId) continue;
         const c = countyOf(s);
-        if (c !== county && (countyCounts.get(c)?.total ?? 0) >= CLUSTER_MIN) continue;
+        if (county ? c !== county : (countyCounts.get(c)?.total ?? 0) >= CLUSTER_MIN) continue;
         list.push({ spot: s, kind: got && s.worldTier === 'anchor' && worldToken(s.id) ? 'token' : 'thumb', size, at });
       } else if (target?.spot.id === s.id) {
         list.push({ spot: s, kind: 'target', size: 0, at });
@@ -400,9 +402,10 @@ export function TaiwanWorld({
     for (const l of lights.values()) {
       list.push({ spot: l.spot, kind: 'light', size: Math.min(1.9, 0.75 + Math.sqrt(l.n) * 0.3), at: { x: l.x / l.n, y: l.y / l.n } });
     }
-    if (regionId) {
+    // Inside an opened county only its own spots show; the back button returns to the region.
+    if (regionId && !county) {
       for (const [c, info] of countyCounts) {
-        if (c === county || info.total < CLUSTER_MIN) continue;
+        if (info.total < CLUSTER_MIN) continue;
         list.push({
           spot: info.cover,
           kind: 'cluster',
@@ -427,7 +430,7 @@ export function TaiwanWorld({
   // Name labels under region pins, placed greedily by priority and dropped
   // where they would collide, so a crowded city still reads cleanly.
   const labels = useMemo(() => {
-    const placed = new Set<string>();
+    const placed = new Map<string, LabelSide>();
     if (!regionId) return placed;
     const boxes: { x0: number; y0: number; x1: number; y1: number }[] = [];
     const hit = (b: (typeof boxes)[number]) =>
@@ -447,11 +450,21 @@ export function TaiwanWorld({
     for (const pin of [...pins].sort((a, b) => rank(a) - rank(b))) {
       if (pin.m.spot.id === selectedId || pin.m.kind === 'cluster') continue; // the callout / bubble names it
       const w = pin.m.spot.name.length * 10.5 + 10;
-      const b = { x0: pin.p.x - w / 2, y0: pin.p.y + pin.r + 2, x1: pin.p.x + w / 2, y1: pin.p.y + pin.r + 2 + LABEL_H };
-      if (b.x0 < 2 || b.x1 > width - 2 || b.y1 > height - 2) continue;
-      if (hit(b)) continue;
-      boxes.push(b);
-      placed.add(pin.m.spot.id);
+      const { x, y } = pin.p;
+      const g = pin.r + 3;
+      // below first (reads most naturally), then beside, then above
+      const options: [LabelSide, { x0: number; y0: number; x1: number; y1: number }][] = [
+        ['below', { x0: x - w / 2, y0: y + g - 1, x1: x + w / 2, y1: y + g - 1 + LABEL_H }],
+        ['right', { x0: x + g, y0: y - LABEL_H / 2, x1: x + g + w, y1: y + LABEL_H / 2 }],
+        ['left', { x0: x - g - w, y0: y - LABEL_H / 2, x1: x - g, y1: y + LABEL_H / 2 }],
+        ['above', { x0: x - w / 2, y0: y - g - LABEL_H, x1: x + w / 2, y1: y - g }],
+      ];
+      for (const [side, b] of options) {
+        if (b.x0 < 2 || b.x1 > width - 2 || b.y0 < 2 || b.y1 > height - 2 || hit(b)) continue;
+        boxes.push(b);
+        placed.set(pin.m.spot.id, side);
+        break;
+      }
     }
     return placed;
     // screenPos depends only on zoom/width/height
@@ -807,7 +820,7 @@ export function TaiwanWorld({
               {labels.has(m.spot.id) && (
                 <View
                   pointerEvents="none"
-                  style={[styles.pinLabel, { top: (m.kind === 'thumb' ? PIN / 2 : m.size * 0.35) + 2 }]}
+                  style={labelStyle(labels.get(m.spot.id)!, m.kind === 'thumb' ? PIN / 2 : m.size * 0.35)}
                 >
                   <Text numberOfLines={1} style={[styles.pinLabelText, !collectedIds.has(m.spot.id) && styles.pinLabelFaint]}>
                     {m.spot.name}
@@ -1135,6 +1148,25 @@ function ClusterBubble({ spot, cluster }: { spot: Spot; cluster: Cluster }) {
   );
 }
 
+type LabelSide = 'below' | 'right' | 'left' | 'above';
+const LABEL_BOX = 140;
+
+/** Positions a name label on one side of a pin of radius r (relative to the pin centre). */
+function labelStyle(side: LabelSide, r: number) {
+  const g = r + 3;
+  const base = { position: 'absolute' as const, width: LABEL_BOX };
+  switch (side) {
+    case 'below':
+      return { ...base, left: -LABEL_BOX / 2, top: g - 1, alignItems: 'center' as const };
+    case 'above':
+      return { ...base, left: -LABEL_BOX / 2, top: -g - LABEL_H, alignItems: 'center' as const };
+    case 'right':
+      return { ...base, left: g, top: -LABEL_H / 2, alignItems: 'flex-start' as const };
+    case 'left':
+      return { ...base, left: -g - LABEL_BOX, top: -LABEL_H / 2, alignItems: 'flex-end' as const };
+  }
+}
+
 /** 'rgba(14,22,52,0.5)' → { rgb: 'rgb(14,22,52)', a: 0.5 } */
 function splitRgba(c: string) {
   const m = c.match(/rgba?\(([^,]+),([^,]+),([^,)]+)(?:,([^)]+))?\)/);
@@ -1361,7 +1393,6 @@ const useStyles = makeStyles((t: Palette) =>
   },
   clusterProgress: { color: t.accent, fontSize: 11, fontWeight: '700' },
   hint: { color: t.faint, fontSize: 11, textAlign: 'center', marginTop: 8 },
-  pinLabel: { position: 'absolute', left: -60, width: 120, alignItems: 'center' },
   pinLabelText: {
     color: t.text,
     fontSize: 10,
