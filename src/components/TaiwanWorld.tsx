@@ -31,6 +31,7 @@ import { Spot, SPOTS } from '../data/spots';
 import { makeProjector, TAIWAN, WorldDef, worldAspect } from '../data/world';
 import { makeStyles, Palette, seasonTints, useTheme } from '../theme';
 import { lightningLoop } from './lightning';
+import { RealCluster, RealMap } from './RealMap';
 
 // Isometric miniature Taiwan (visual spec v0.2 §10–§11).
 // Unvisited land is desaturated and fogged; visited spots bloom colour into
@@ -557,7 +558,37 @@ export function TaiwanWorld({
     setSelectedId(spot.id);
   };
 
-  const selected = regionId ? markers.find((m) => m.spot.id === selectedId) : undefined;
+  const selectedSpot = regionId && selectedId ? spots.find((s) => s.id === selectedId) : undefined;
+
+  // What the real map shows: a county's spots, or a region's bubbles plus its one-spot counties.
+  const realSpots = useMemo(
+    () =>
+      regionId
+        ? spots.filter(
+            (s) =>
+              s.region === regionId &&
+              (county ? countyOf(s) === county : (countyCounts.get(countyOf(s))?.total ?? 0) < CLUSTER_MIN),
+          )
+        : [],
+    [spots, regionId, county, countyCounts],
+  );
+  const realClusters = useMemo<RealCluster[]>(() => {
+    if (!regionId || county) return [];
+    const out: RealCluster[] = [];
+    for (const [c, info] of countyCounts) {
+      if (info.total < CLUSTER_MIN) continue;
+      const inCounty = spots.filter((s) => s.region === regionId && countyOf(s) === c);
+      out.push({
+        county: c,
+        cover: info.cover,
+        total: info.total,
+        found: info.found,
+        latitude: inCounty.reduce((a, s) => a + s.latitude, 0) / inCounty.length,
+        longitude: inCounty.reduce((a, s) => a + s.longitude, 0) / inCounty.length,
+      });
+    }
+    return out;
+  }, [regionId, county, countyCounts, spots]);
 
   const active = regionStats.find((r) => r.id === regionId);
   const fogShift = drift.interpolate({ inputRange: [0, 1], outputRange: [-width * 0.025, width * 0.025] });
@@ -820,8 +851,37 @@ export function TaiwanWorld({
           </Animated.View>
         )}
 
+        {/* inside a region the real map takes over: streets, districts and place names */}
+        {regionId && (
+          <View style={StyleSheet.absoluteFill}>
+            <RealMap
+              width={width}
+              height={height}
+              spots={realSpots}
+              clusters={realClusters}
+              collectedIds={collectedIds}
+              selectedId={selectedId}
+              targetId={target?.spot.id ?? null}
+              focusKey={`${regionId}:${county ?? ''}`}
+              dark={night || t.mode === 'dark'}
+              showsUser={!!location && !approximate}
+              onSelect={(s) => {
+                if (selectedId === s.id) return openSpot(s);
+                void Haptics.selectionAsync();
+                setSelectedId(s.id);
+              }}
+              onOpenCounty={(c) => {
+                void Haptics.selectionAsync();
+                setCounty(c);
+                setSelectedId(null);
+              }}
+              onBackground={() => setSelectedId(null)}
+            />
+          </View>
+        )}
+
         {/* landmarks, lights and pending pins — repositioned by the zoom, never scaled */}
-        {markers.map((m) => {
+        {!regionId && markers.map((m) => {
           const pos = markerPos.get(m)!;
           return (
             <Animated.View
@@ -872,16 +932,17 @@ export function TaiwanWorld({
           );
         })}
 
-        {interactive && selected && (
+        {/* docked at the bottom of the real map */}
+        {interactive && selectedSpot && (
           <Callout
-            spot={selected.spot}
-            at={screenPos(selected.at)}
-            pinR={selected.kind === 'thumb' ? PIN_ON / 2 : selected.size * TOKEN_BASE}
+            spot={selectedSpot}
+            at={{ x: width / 2, y: height - 8 }}
+            pinR={0}
             width={width}
             height={height}
-            got={collectedIds.has(selected.spot.id)}
-            dist={location && !approximate ? distanceMeters(location, selected.spot) : null}
-            onOpen={() => openSpot(selected.spot)}
+            got={collectedIds.has(selectedSpot.id)}
+            dist={location && !approximate ? distanceMeters(location, selectedSpot) : null}
+            onOpen={() => openSpot(selectedSpot)}
           />
         )}
 
