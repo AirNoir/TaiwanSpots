@@ -21,7 +21,7 @@ const PAGES = [
   {
     key: 'intro',
     icon: null as string | null,
-    title: '走過的地方,\n都會留在你的世界。',
+    title: '走過的地方，\n都會留在你的世界。',
     body: 'Islandia 是一座由真實旅行\n建立起來的微縮台灣。',
   },
   {
@@ -40,7 +40,7 @@ const PAGES = [
     key: 'build',
     icon: 'island',
     title: '建立你的台灣',
-    body: '每趟旅行,都讓世界更完整。',
+    body: '每趟旅行，都讓世界更完整。',
   },
 ];
 
@@ -52,8 +52,15 @@ export default function OnboardingScreen() {
   const [page, setPage] = useState(0);
   const scrollRef = useRef<ScrollView>(null);
 
+  const starting = useRef(false);
   const start = async () => {
-    await Location.requestForegroundPermissionsAsync();
+    if (starting.current) return; // a double tap would ask twice and navigate twice
+    starting.current = true;
+    try {
+      await Location.requestForegroundPermissionsAsync();
+    } catch {
+      // the app works without location (no check-ins); never trap the user on this page
+    }
     setOnboarded();
     router.replace('/(tabs)');
   };

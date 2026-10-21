@@ -41,6 +41,9 @@ export function DioramaViewer({ spot, onClose }: Props) {
   const ty = useSharedValue(0);
   const savedTx = useSharedValue(0);
   const savedTy = useSharedValue(0);
+  // pan keeps its own origin: pinch rewrites savedTx/Ty mid-drag, which would count the drag twice
+  const panTx = useSharedValue(0);
+  const panTy = useSharedValue(0);
   const dismissY = useSharedValue(0);
 
   // Keep the zoomed image covering the screen — no panning into empty space.
@@ -68,6 +71,7 @@ export function DioramaViewer({ spot, onClose }: Props) {
       savedScale.value = scale.value;
       savedTx.value = tx.value;
       savedTy.value = ty.value;
+      dismissY.value = withSpring(0, SPRING); // a second finger cancels a pull-to-close
     })
     .onUpdate((e) => {
       const next = Math.min(MAX_SCALE * 1.3, Math.max(0.8, savedScale.value * e.scale));
@@ -84,21 +88,22 @@ export function DioramaViewer({ spot, onClose }: Props) {
   const pan = Gesture.Pan()
     .averageTouches(true)
     .onStart(() => {
-      savedTx.value = tx.value;
-      savedTy.value = ty.value;
+      panTx.value = tx.value;
+      panTy.value = ty.value;
     })
     .onUpdate((e) => {
       if (scale.value > 1.01) {
-        tx.value = savedTx.value + e.translationX;
-        ty.value = savedTy.value + e.translationY;
+        tx.value = panTx.value + e.translationX;
+        ty.value = panTy.value + e.translationY;
       } else if (e.numberOfPointers === 1) {
         dismissY.value = Math.max(0, e.translationY);
       }
     })
     .onEnd((e) => {
       if (scale.value > 1.01) {
-        tx.value = withSpring(clampX(savedTx.value + e.translationX + e.velocityX * 0.05, scale.value), SPRING);
-        ty.value = withSpring(clampY(savedTy.value + e.translationY + e.velocityY * 0.05, scale.value), SPRING);
+        tx.value = withSpring(clampX(panTx.value + e.translationX + e.velocityX * 0.05, scale.value), SPRING);
+        ty.value = withSpring(clampY(panTy.value + e.translationY + e.velocityY * 0.05, scale.value), SPRING);
+        dismissY.value = withSpring(0, SPRING);
       } else if (dismissY.value > DISMISS_DISTANCE || e.velocityY > 1200) {
         dismissY.value = withTiming(H, { duration: 180 });
         scheduleOnRN(onClose);

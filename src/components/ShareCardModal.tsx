@@ -68,6 +68,7 @@ export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visibl
           <View style={[styles.card, { width: cardW }]}>
             <Diorama spot={spot} size={dioramaSize} radius={20} atmosphere={{ season, sky: entry.sky }} />
             <Text style={styles.name}>{spot.nameEn}</Text>
+            <Text style={styles.nameZh}>{spot.name}</Text>
             <Text style={styles.serial}>#{String(entry.order).padStart(3, '0')}</Text>
             <Text style={styles.meta}>{dateStr}</Text>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 6 }}>
@@ -125,6 +126,7 @@ const useStyles = makeStyles((t: Palette) =>
     letterSpacing: 2,
     marginTop: 20,
   },
+  nameZh: { color: t.subtext, fontSize: 15, marginTop: 2 },
   serial: {
     color: t.accent,
     fontSize: 14,

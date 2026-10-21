@@ -93,7 +93,7 @@ export default function WorldScreen() {
     <SafeAreaView style={styles.safe} edges={['top']}>
       <ScrollView ref={scrollRef} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
         <Text style={styles.greeting}>{greeting()}</Text>
-        <Text style={styles.subGreeting}>去過的地方,會成為你的世界。</Text>
+        <Text style={styles.subGreeting}>去過的地方，會成為你的世界。</Text>
         <View style={styles.atmosRow}>
           <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={13} color={t.subtext} />
           <Text style={styles.atmosText}>

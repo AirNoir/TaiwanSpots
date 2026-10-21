@@ -44,7 +44,12 @@ const IslandiaWidget = (p: IslandiaWidgetProps, env: WidgetEnvironment) => {
   const progress = p.total ? p.collected / p.total : 0;
   const link = p.spotId ? `islandia://spot/${p.spotId}` : 'islandia://';
   const count = `${p.collected} / ${p.total}`;
-  const next = p.nextName ? `下一站 ${p.nextName}・${p.nextDistance}` : '全部收藏完成';
+  // no next stop means either everything is collected or there is no location fix yet
+  const next = p.nextName
+    ? `下一站 ${p.nextName}・${p.nextDistance}`
+    : p.collected >= p.total
+      ? '全部收藏完成'
+      : '開啟定位，找下一站';
 
   if (env.widgetFamily === 'accessoryInline') {
     return <Text modifiers={[widgetURL(link)]}>{`Islandia ${count}`}</Text>;
