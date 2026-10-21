@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import React, { useEffect, useMemo, useRef } from 'react';
+import React, { useMemo } from 'react';
 import {
   Dimensions,
   Pressable,
@@ -20,6 +20,7 @@ import { openDirections, travelModeFor } from '../../src/maps';
 import { entrySeason, useActiveCollections } from '../../src/store';
 import { makeStyles, Palette, useTheme } from '../../src/theme';
 import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
+import { useDevScroll } from '../../src/useDevScroll';
 import { useLocation } from '../../src/useLocation';
 import { useWidgetSync } from '../../src/widgets/sync';
 
@@ -84,17 +85,7 @@ export default function WorldScreen() {
   }, [collections]);
 
   const latestSpot = latest ? spotById(latest.spotId) : null;
-
-  // Dev automation: lets the Metro inspector scroll this screen for screenshots.
-  const scrollRef = useRef<ScrollView>(null);
-  useEffect(() => {
-    if (!__DEV__) return;
-    const g = globalThis as any;
-    g.__islandiaHomeScroll = (y: number) => scrollRef.current?.scrollTo({ y, animated: false });
-    return () => {
-      delete g.__islandiaHomeScroll;
-    };
-  }, []);
+  const scrollRef = useDevScroll('home');
   const mapW = SCREEN_W - 48;
 
   return (

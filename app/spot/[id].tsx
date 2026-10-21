@@ -23,6 +23,7 @@ import { activeCollections, entrySeason, useStore } from '../../src/store';
 import { Palette, categoryMeta, makeStyles, rarityMeta, useTheme } from '../../src/theme';
 import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
 import { DEMO_TOOLS } from '../../src/demo';
+import { useDevScroll } from '../../src/useDevScroll';
 import { useLocation } from '../../src/useLocation';
 
 const { width: SCREEN_W } = Dimensions.get('window');
@@ -39,6 +40,7 @@ export default function SpotDetailScreen() {
   const setDevLocation = useStore((s) => s.setDevLocation);
   const { location, isFallback } = useLocation();
 
+  const scrollRef = useDevScroll('spot');
   const [unlocking, setUnlocking] = useState(false);
   const [sharing, setSharing] = useState(false);
   const [viewing, setViewing] = useState(false);
@@ -102,9 +104,16 @@ export default function SpotDetailScreen() {
     void openDirections(spot, travelMode, t.mode);
   };
 
+  // Other spots within an easy hop of this one, for planning the next stop.
+  const around = SPOTS.filter((s) => s.id !== spot.id)
+    .map((s) => ({ spot: s, d: distanceMeters(spot, s) }))
+    .sort((a, b) => a.d - b.d)
+    .slice(0, 4)
+    .filter((x) => x.d < 30_000);
+
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'bottom']}>
-      <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
+      <ScrollView ref={scrollRef} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
         <View style={styles.topBar}>
           <Pressable onPress={() => router.back()} hitSlop={12}>
             <Ionicons name="chevron-down" size={26} color={t.subtext} />
@@ -244,6 +253,30 @@ export default function SpotDetailScreen() {
             )}
           </View>
         )}
+
+        {around.length > 0 && (
+          <>
+            <Text style={styles.aroundTitle}>順路還有</Text>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 10 }}>
+              {around.map(({ spot: s, d }) => (
+                <Pressable
+                  key={s.id}
+                  style={styles.aroundCard}
+                  onPress={() => router.replace(`/spot/${s.id}`)}
+                  accessibilityRole="button"
+                  accessibilityLabel={`${s.name}，距離這裡 ${formatDistance(d)}`}
+                >
+                  <Diorama spot={s} size={96} radius={14} locked={!collections[s.id]} />
+                  <Text style={styles.aroundName} numberOfLines={1}>
+                    {collections[s.id] ? '✓ ' : ''}
+                    {s.name}
+                  </Text>
+                  <Text style={styles.aroundDist}>相距 {formatDistance(d)}</Text>
+                </Pressable>
+              ))}
+            </ScrollView>
+          </>
+        )}
       </ScrollView>
 
       <UnlockOverlay spot={spot} visible={unlocking} onDone={onUnlockDone} />
@@ -289,7 +322,7 @@ const useStyles = makeStyles((t: Palette) =>
     paddingVertical: 8,
   },
   serialText: { color: t.accent, fontWeight: '800', fontSize: 15, letterSpacing: 1 },
-  tagRow: { flexDirection: 'row', gap: 8, marginTop: 14 },
+  tagRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 14 },
   tag: {
     borderWidth: 1,
     borderColor: t.cardBorder,
@@ -359,5 +392,9 @@ const useStyles = makeStyles((t: Palette) =>
   navLinkText: { color: t.subtext, fontSize: 12 },
   devBtn: { marginTop: 14 },
   devBtnText: { color: t.faint, fontSize: 12 },
+  aroundTitle: { color: t.faint, fontSize: 12, letterSpacing: 3, marginTop: 32, marginBottom: 12 },
+  aroundCard: { width: 96 },
+  aroundName: { color: t.text, fontSize: 13, fontWeight: '700', marginTop: 6 },
+  aroundDist: { color: t.subtext, fontSize: 11, marginTop: 1 },
   }),
 );
