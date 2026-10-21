@@ -81,6 +81,15 @@
       "notes": "貓橋與矩形旅客通道拆成兩座分離的平行跨軌天橋；保留兩座島式月台與下接樓梯。結構按實照與衛星圖核對，精確尺寸及現況細部仍為微縮簡化。",
       "userAcceptance": "pending",
       "nativeAnd512": "visually inspected"
+    },
+    "review07": {
+      "id": "houtong",
+      "note": "兩個天橋的相對位置錯了, 如果車站建築在右下方的話, 由左到右依序先是不規則集合天球, 再來才是一般天橋",
+      "reviewedModel": "review-v8.png",
+      "newModel": "review-v9.png",
+      "state": "self-checked-preview",
+      "qa": "Swapped overpass positions: cat bridge front-left; plain passenger concourse back-right, station stays lower-right. Separate parallel crossings and stairs retained. Native and 512 visually inspected. Exact station connections and dimensions remain miniature simplification.",
+      "userAcceptance": "pending"
     }
   }
 }

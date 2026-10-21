@@ -74,6 +74,12 @@
       "notes": "已修正橋面軸向，較舊稿接近底座邊線；但直線段仍未精確平行，三次嘗試後仍未通過幾何自檢。比較頁保留 v7，本頁展示 v10 候選稿，未當成定稿。",
       "userAcceptance": "pending",
       "nativeAnd512": "visually inspected"
+    },
+    "review07": {
+      "model": "review-v10.png",
+      "result": "user-preferred-preview",
+      "notes": "User explicitly prefers last v10 candidate; restore as default comparison image, no raster edit. Previous strict geometric QA remains historical; user says close to OK, not final approval.",
+      "userAcceptance": "pending"
     }
   }
 }
