@@ -16,7 +16,7 @@ import { TaiwanWorld } from '../../src/components/TaiwanWorld';
 import { SPOTS, spotById } from '../../src/data/spots';
 import { TAIWAN } from '../../src/data/world';
 import { distanceMeters, formatDistance, LatLng } from '../../src/geo';
-import { entrySeason, useStore } from '../../src/store';
+import { entrySeason, useActiveCollections } from '../../src/store';
 import { makeStyles, Palette, useTheme } from '../../src/theme';
 import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
 import { useLocation } from '../../src/useLocation';
@@ -39,7 +39,7 @@ export default function WorldScreen() {
   const t = useTheme();
   const styles = useStyles();
   const router = useRouter();
-  const collections = useStore((s) => s.collections);
+  const collections = useActiveCollections();
   const { location, isFallback } = useLocation();
   useWidgetSync(location, !isFallback);
 

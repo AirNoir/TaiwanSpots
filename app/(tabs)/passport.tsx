@@ -12,7 +12,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
 import { SPOTS } from '../../src/data/spots';
-import { entrySeason, useStore } from '../../src/store';
+import { entrySeason, useActiveCollections } from '../../src/store';
 import { Palette, makeStyles, regionMeta, useTheme } from '../../src/theme';
 import { useAtmosphereOverride, useNight } from '../../src/useAtmosphere';
 
@@ -25,7 +25,7 @@ export default function PassportScreen() {
   const t = useTheme();
   const styles = useStyles();
   const router = useRouter();
-  const collections = useStore((s) => s.collections);
+  const collections = useActiveCollections();
   const override = useAtmosphereOverride();
   const night = useNight();
   const count = Object.keys(collections).length;
@@ -93,7 +93,7 @@ export default function PassportScreen() {
                 atmosphere={entry ? { season: override.season ?? entrySeason(entry), night } : undefined}
               />
               <Text style={[styles.cellName, !collected && { color: t.faint }]} numberOfLines={1}>
-                {collected ? spot.name : '????'}
+                {spot.name}
               </Text>
             </Pressable>
           );

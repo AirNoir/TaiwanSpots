@@ -81,6 +81,9 @@ export const seasonWash: Record<Season, string | null> = {
 // ── Open-Meteo (free, no key) ─────────────────────────────────
 const ENDPOINT = 'https://api.open-meteo.com/v1/forecast';
 const TTL_MS = 30 * 60 * 1000;
+// Older readings are not shown at all (they still seed the next refresh's cache).
+const MAX_AGE_MS = 3 * 60 * 60 * 1000;
+const isFresh = (w: Weather) => Date.now() - w.fetchedAt < MAX_AGE_MS;
 const STORAGE_KEY = 'islandia-weather-v1';
 
 // ~1 km cells: two spots that close share one forecast.
@@ -175,5 +178,9 @@ export function useWeather(points: LatLng[]): (Weather | null)[] {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key]);
 
-  return points.map((p) => cache.get(keyOf(p)) ?? null);
+  // Offline for hours: last night's "is_day: false" must not darken the noon map, so old readings are dropped.
+  return points.map((p) => {
+    const w = cache.get(keyOf(p));
+    return w && isFresh(w) ? w : null;
+  });
 }

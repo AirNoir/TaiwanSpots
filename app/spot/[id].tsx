@@ -19,9 +19,10 @@ import { collectionImage } from '../../src/data/spotAssets';
 import { spotById, SPOTS } from '../../src/data/spots';
 import { checkinRadius, distanceMeters, formatDistance } from '../../src/geo';
 import { openDirections, travelModeFor } from '../../src/maps';
-import { entrySeason, useStore } from '../../src/store';
+import { activeCollections, entrySeason, useStore } from '../../src/store';
 import { Palette, categoryMeta, makeStyles, rarityMeta, useTheme } from '../../src/theme';
 import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
+import { DEMO_TOOLS } from '../../src/demo';
 import { useLocation } from '../../src/useLocation';
 
 const { width: SCREEN_W } = Dimensions.get('window');
@@ -36,7 +37,7 @@ export default function SpotDetailScreen() {
   const collections = useStore((s) => s.collections);
   const checkIn = useStore((s) => s.checkIn);
   const setDevLocation = useStore((s) => s.setDevLocation);
-  const { location } = useLocation();
+  const { location, isFallback } = useLocation();
 
   const [unlocking, setUnlocking] = useState(false);
   const [sharing, setSharing] = useState(false);
@@ -57,11 +58,20 @@ export default function SpotDetailScreen() {
   const season = useSeason();
   const night = useNight(weather);
 
-  if (!spot) {
+  // Retired spots (active: false) stay viewable for whoever collected them, but can't be collected anew.
+  if (!spot || (!spot.active && !entry)) {
     return (
-      <View style={[styles.safe, { alignItems: 'center', justifyContent: 'center' }]}>
-        <Text style={{ color: t.subtext }}>找不到這個景點</Text>
-      </View>
+      <SafeAreaView style={[styles.safe, { alignItems: 'center', justifyContent: 'center', gap: 16 }]}>
+        <MaterialCommunityIcons name={'map-marker-question-outline' as any} size={40} color={t.faint} />
+        <Text style={{ color: t.subtext, fontSize: 15 }}>找不到這個景點</Text>
+        <Pressable
+          style={styles.navBtn}
+          onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+          accessibilityRole="button"
+        >
+          <Text style={styles.navBtnText}>回到地圖</Text>
+        </Pressable>
+      </SafeAreaView>
     );
   }
 
@@ -118,7 +128,7 @@ export default function SpotDetailScreen() {
 
         <View style={styles.titleRow}>
           <View style={{ flex: 1 }}>
-            <Text style={styles.nameEn}>{collected ? spot.nameEn : '????'}</Text>
+            <Text style={styles.nameEn}>{spot.nameEn}</Text>
             <Text style={styles.name}>{spot.name}</Text>
             <Text style={styles.city}>{spot.city}</Text>
           </View>
@@ -189,12 +199,14 @@ export default function SpotDetailScreen() {
             </Pressable>
             <Pressable style={styles.navLink} onPress={onNavigate} accessibilityRole="button">
               <MaterialCommunityIcons name={'navigation-variant-outline' as any} size={14} color={t.subtext} />
-              <Text style={styles.navLinkText}>導航再訪 · {formatDistance(dist)}</Text>
+              <Text style={styles.navLinkText}>導航再訪{isFallback ? '' : ` · ${formatDistance(dist)}`}</Text>
             </Pressable>
           </View>
         ) : (
           <View style={styles.checkinCard}>
-            <Text style={styles.distText}>距離你 {formatDistance(dist)}</Text>
+            <Text style={styles.distText}>
+              {isFallback ? '開啟定位，才能知道你離這裡多遠' : `距離你 ${formatDistance(dist)}`}
+            </Text>
             {inRange ? (
               <Text style={styles.inRangeText}>● 你已抵達收藏範圍</Text>
             ) : (
@@ -220,7 +232,7 @@ export default function SpotDetailScreen() {
               <Text style={styles.navBtnText}>{travelMode === 'walking' ? '步行導航' : '開車導航'}</Text>
             </Pressable>
             {/* demo helper: teleport to this spot in the simulator */}
-            {!inRange && (
+            {DEMO_TOOLS && !inRange && (
               <Pressable
                 style={styles.devBtn}
                 onPress={() =>
@@ -240,7 +252,7 @@ export default function SpotDetailScreen() {
         <ShareCardModal
           spot={spot}
           entry={entry}
-          totalCollected={Object.keys(collections).length}
+          totalCollected={Object.keys(activeCollections(collections)).length}
           totalSpots={SPOTS.length}
           visible={sharing}
           onClose={() => setSharing(false)}

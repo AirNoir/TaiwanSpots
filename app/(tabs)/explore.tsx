@@ -11,8 +11,9 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
 import { Region, SPOTS } from '../../src/data/spots';
+import { DEMO_TOOLS } from '../../src/demo';
 import { checkinRadius, DEV_LOCATIONS, distanceMeters, formatDistance } from '../../src/geo';
-import { entrySeason, useStore } from '../../src/store';
+import { entrySeason, useActiveCollections, useStore } from '../../src/store';
 import { Palette, categoryMeta, makeStyles, rarityMeta, regionMeta, useTheme } from '../../src/theme';
 import { useAtmosphereOverride, useNight } from '../../src/useAtmosphere';
 import { useLocation } from '../../src/useLocation';
@@ -23,7 +24,7 @@ export default function ExploreScreen() {
   const t = useTheme();
   const styles = useStyles();
   const router = useRouter();
-  const collections = useStore((s) => s.collections);
+  const collections = useActiveCollections();
   const devLocation = useStore((s) => s.devLocation);
   const setDevLocation = useStore((s) => s.setDevLocation);
   const { location, isDev, isFallback } = useLocation();
@@ -59,25 +60,27 @@ export default function ExploreScreen() {
         </View>
       </View>
 
-      {/* Dev location presets — demo helper for the simulator */}
-      <View style={styles.devRow}>
-        {DEV_LOCATIONS.map((d) => {
-          const active =
-            devLocation?.latitude === d.coord.latitude &&
-            devLocation?.longitude === d.coord.longitude;
-          return (
-            <Pressable
-              key={d.label}
-              style={[styles.devChip, active && styles.devChipActive]}
-              onPress={() => setDevLocation(active ? null : d.coord)}
-            >
-              <Text style={[styles.devChipText, active && styles.devChipTextActive]}>
-                {d.label}
-              </Text>
-            </Pressable>
-          );
-        })}
-      </View>
+      {/* Demo location presets (dev / demo builds only) */}
+      {DEMO_TOOLS && (
+        <View style={styles.devRow}>
+          {DEV_LOCATIONS.map((d) => {
+            const active =
+              devLocation?.latitude === d.coord.latitude &&
+              devLocation?.longitude === d.coord.longitude;
+            return (
+              <Pressable
+                key={d.label}
+                style={[styles.devChip, active && styles.devChipActive]}
+                onPress={() => setDevLocation(active ? null : d.coord)}
+              >
+                <Text style={[styles.devChipText, active && styles.devChipTextActive]}>
+                  {d.label}
+                </Text>
+              </Pressable>
+            );
+          })}
+        </View>
+      )}
 
       <View style={styles.filterRow}>
         {REGION_FILTERS.map((r) => (

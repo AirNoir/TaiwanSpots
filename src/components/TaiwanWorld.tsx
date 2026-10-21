@@ -367,6 +367,7 @@ export function TaiwanWorld({
   // `size` is the on-screen token width; markers are not scaled by the zoom.
   const markers = useMemo<Marker[]>(() => {
     const list: Marker[] = [];
+    const lights = new Map<string, { spot: Spot; n: number; x: number; y: number }>();
     const base = width * (regionId ? TOKEN_L2 : TOKEN_L1);
     for (const s of spots) {
       const at = geo.positions[s.id];
@@ -382,11 +383,22 @@ export function TaiwanWorld({
         list.push({ spot: s, kind: got && s.worldTier === 'anchor' && worldToken(s.id) ? 'token' : 'thumb', size, at });
       } else if (target?.spot.id === s.id) {
         list.push({ spot: s, kind: 'target', size: 0, at });
+      } else if (got && s.worldTier === 'anchor' && worldToken(s.id)) {
+        list.push({ spot: s, kind: 'token', size, at });
       } else if (got) {
-        list.push({ spot: s, kind: s.worldTier === 'anchor' && worldToken(s.id) ? 'token' : 'light', size, at });
+        // One light per county on the island view, growing with what was collected there.
+        const key = `${s.region}:${countyOf(s)}`;
+        const l = lights.get(key) ?? { spot: s, n: 0, x: 0, y: 0 };
+        l.n += 1;
+        l.x += at.x;
+        l.y += at.y;
+        lights.set(key, l);
       } else if (s.worldTier === 'anchor') {
         list.push({ spot: s, kind: 'pending', size: 0, at });
       }
+    }
+    for (const l of lights.values()) {
+      list.push({ spot: l.spot, kind: 'light', size: Math.min(1.9, 0.75 + Math.sqrt(l.n) * 0.3), at: { x: l.x / l.n, y: l.y / l.n } });
     }
     if (regionId) {
       for (const [c, info] of countyCounts) {
@@ -494,17 +506,22 @@ export function TaiwanWorld({
   const selected = regionId ? markers.find((m) => m.spot.id === selectedId) : undefined;
 
   const active = regionStats.find((r) => r.id === regionId);
-  // A near-complete collection puts a light on almost every spot; shrink the halos so terrain stays visible.
-  const lightCount = markers.filter((m) => m.kind === 'light').length;
-  const lightDim = lightCount > 80 ? 0.55 : lightCount > 40 ? 0.75 : 1;
   const fogShift = drift.interpolate({ inputRange: [0, 1], outputRange: [-width * 0.025, width * 0.025] });
   const fallShift = fall.interpolate({ inputRange: [0, 1], outputRange: [-width * 0.012, width * 0.012] });
   const fallFade = fall.interpolate({ inputRange: [0, 0.15, 0.85, 1], outputRange: [0, 1, 1, 0] });
+  const veil = splitRgba(C.nightVeil);
   const zoomTransform = { transform: [{ translateX: tx }, { translateY: ty }, { scale }] };
 
   return (
     <View style={{ width }}>
-      <View style={{ width, height, overflow: 'hidden' }}>
+      <View style={{ width, height, overflow: 'hidden', borderRadius: 18, backgroundColor: night ? C.nightSky : 'transparent' }}>
+        {night && (
+          <Svg width={width} height={height} style={StyleSheet.absoluteFill} pointerEvents="none">
+            {STARS.map(([sx, sy, r], k) => (
+              <Ellipse key={k} cx={sx * width} cy={sy * height} rx={r * width} ry={r * width} fill={C.star} opacity={0.5 + (k % 3) * 0.2} />
+            ))}
+          </Svg>
+        )}
         <Pressable onPress={onMapPress} disabled={!interactive} style={StyleSheet.absoluteFill}>
           {/* terrain — scaled as one layer */}
           <Animated.View style={[StyleSheet.absoluteFill, zoomTransform]}>
@@ -731,15 +748,22 @@ export function TaiwanWorld({
         {/* inside a county the terrain is magnified far past its detail: fade it to a quiet backdrop */}
         {county && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: t.card, opacity: 0.62 }]} />}
 
-        {/* night: veil the terrain and weather, leave the landmarks and their lights above it */}
+        {/* night: darken the land itself (not the panel), leaving landmarks and lights above it */}
         {night && (
-          <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: C.nightVeil }]}>
+          <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, zoomTransform]}>
             <Svg width={width} height={height}>
-              {STARS.map(([sx, sy, r], k) => (
-                <Ellipse key={k} cx={sx * width} cy={sy * height} rx={r * width} ry={r * width} fill={C.star} opacity={0.8} />
-              ))}
+              {/* opaque shapes in one group faded once, so the land/slab overlap isn't darkened twice */}
+              <G opacity={veil.a}>
+                <G transform={`translate(0, ${width * SLAB})`}>
+                  <Path d={geo.island} fill={veil.rgb} />
+                </G>
+                <Path d={geo.island} fill={veil.rgb} />
+                {geo.islands.map((i, k) => (
+                  <Ellipse key={k} cx={i.cx} cy={i.cy + width * SLAB * 0.25} rx={i.rx} ry={i.ry + width * SLAB * 0.25} fill={veil.rgb} />
+                ))}
+              </G>
             </Svg>
-          </View>
+          </Animated.View>
         )}
 
         {/* landmarks, lights and pending pins — repositioned by the zoom, never scaled */}
@@ -756,12 +780,12 @@ export function TaiwanWorld({
                 onPress={() => onMarkerPress(m)}
                 hitSlop={10}
                 accessibilityRole="button"
-                accessibilityLabel={m.spot.name}
+                accessibilityLabel={m.kind === 'cluster' || m.kind === 'light' ? countyOf(m.spot) : m.spot.name}
               >
                 {m.kind === 'token' ? (
                   <LandmarkToken spot={m.spot} size={m.size} />
                 ) : m.kind === 'light' ? (
-                  <Light pulse={pulse} night={night} dim={lightDim} />
+                  <Light pulse={pulse} night={night} dim={m.size} />
                 ) : m.kind === 'thumb' ? (
                   <ThumbPin
                     spot={m.spot}
@@ -818,14 +842,14 @@ export function TaiwanWorld({
               <Text style={styles.backText}>{county ? active.zh : '全台灣'}</Text>
             </Pressable>
             <View style={styles.regionTag} pointerEvents="none">
-              <Text style={styles.regionName}>{county ?? active.zh}</Text>
+              <Text style={[styles.regionName, night && styles.onNight]}>{county ?? active.zh}</Text>
               <Text style={styles.regionCount}>
                 {county
                   ? `${countyCounts.get(county)?.found ?? 0} / ${countyCounts.get(county)?.total ?? 0} 已收藏`
                   : `${active.found} / ${active.total} 已收藏`}
               </Text>
               {weather?.[active.id] && (
-                <Text style={styles.regionWeather}>{describeWeather(weather[active.id] as Weather)}</Text>
+                <Text style={[styles.regionWeather, night && styles.onNightSoft]}>{describeWeather(weather[active.id] as Weather)}</Text>
               )}
             </View>
           </>
@@ -1111,13 +1135,20 @@ function ClusterBubble({ spot, cluster }: { spot: Spot; cluster: Cluster }) {
   );
 }
 
+/** 'rgba(14,22,52,0.5)' → { rgb: 'rgb(14,22,52)', a: 0.5 } */
+function splitRgba(c: string) {
+  const m = c.match(/rgba?\(([^,]+),([^,]+),([^,)]+)(?:,([^)]+))?\)/);
+  if (!m) return { rgb: c, a: 1 };
+  return { rgb: `rgb(${m[1]},${m[2]},${m[3]})`, a: m[4] == null ? 1 : Number(m[4]) };
+}
+
 // Pushes overlapping markers apart (in zoomed screen space) so dense areas
 // like Taipei stay legible. Replaces each marker's `at` with its displaced
 // map position.
 function relax(list: Marker[], s: number, spread: number) {
   const pts = list.map((m) => ({ x: m.at.x * s, y: m.at.y * s }));
   const radius = (m: Marker) =>
-    m.kind === 'thumb' ? PIN / 2 + 1 : m.kind === 'cluster' ? CLUSTER : m.kind === 'target' ? 12 : m.kind === 'pending' ? 16 : m.kind === 'light' ? 6 : m.size * spread;
+    m.kind === 'thumb' ? PIN / 2 + 1 : m.kind === 'cluster' ? CLUSTER : m.kind === 'target' ? 12 : m.kind === 'pending' ? 16 : m.kind === 'light' ? 6 * m.size : m.size * spread;
   for (let iter = 0; iter < 40; iter++) {
     let moved = false;
     for (let i = 0; i < pts.length; i++) {
@@ -1264,6 +1295,8 @@ const useStyles = makeStyles((t: Palette) =>
   regionTag: { position: 'absolute', right: 10, top: 8, alignItems: 'flex-end' },
   regionName: { color: t.text, fontSize: 15, fontWeight: '800' },
   regionCount: { color: t.accent, fontSize: 11, letterSpacing: 1, marginTop: 2 },
+  onNight: { color: '#F4EFE3' },
+  onNightSoft: { color: 'rgba(244,239,227,0.7)' },
   regionWeather: { color: t.subtext, fontSize: 11, marginTop: 2 },
   chips: { flexDirection: 'row', justifyContent: 'center', gap: 6, marginTop: 8, flexWrap: 'wrap' },
   chip: {

@@ -24,7 +24,8 @@ export interface WorldPalette {
   cloud: string; // weather clouds over a region
   rain: string; // rain streaks
   snow: string; // snow caps and flakes
-  nightVeil: string; // laid over the whole map after dark
+  nightVeil: string; // darkens the land after dark
+  nightSky: string; // the map panel behind the island after dark
   star: string;
 }
 
@@ -120,6 +121,7 @@ const dark: Palette = {
     rain: '#9CC0E0',
     snow: '#F4F7FA',
     nightVeil: 'rgba(2,6,18,0.5)',
+    nightSky: '#0A1222',
     star: '#E8EEF8',
   },
 };
@@ -168,7 +170,8 @@ const light: Palette = {
     cloud: '#C3CAD3',
     rain: '#5F8FB8',
     snow: '#FFFFFF',
-    nightVeil: 'rgba(14,22,52,0.46)',
+    nightVeil: 'rgba(14,22,52,0.5)',
+    nightSky: '#1B2542',
     star: '#FFFFFF',
   },
 };

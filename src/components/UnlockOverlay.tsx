@@ -89,10 +89,11 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
   const cx = size / 2;
   const cy = size * 0.68;
 
-  const dateStr = new Date()
-    .toISOString()
-    .slice(0, 10)
-    .replace(/-/g, '.');
+  // Local calendar date (toISOString would give yesterday before 08:00 in Taiwan).
+  const now = new Date();
+  const dateStr = [now.getFullYear(), now.getMonth() + 1, now.getDate()]
+    .map((n, i) => (i ? String(n).padStart(2, '0') : String(n)))
+    .join('.');
 
   const diamond = (fill: string, dy: number, scale = 1) => (
     <View

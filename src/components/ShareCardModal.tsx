@@ -2,6 +2,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Sharing from 'expo-sharing';
 import React, { useRef, useState } from 'react';
 import {
+  Alert,
   Dimensions,
   Modal,
   Pressable,
@@ -47,9 +48,14 @@ export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visibl
     try {
       setSharing(true);
       const uri = await shotRef.current?.capture?.();
-      if (uri && (await Sharing.isAvailableAsync())) {
-        await Sharing.shareAsync(uri, { mimeType: 'image/png' });
+      if (!uri) throw new Error('capture failed');
+      if (!(await Sharing.isAvailableAsync())) {
+        Alert.alert('無法分享', '這台裝置不支援分享圖片。');
+        return;
       }
+      await Sharing.shareAsync(uri, { mimeType: 'image/png' });
+    } catch {
+      Alert.alert('無法分享', '收藏卡產生失敗，請再試一次。');
     } finally {
       setSharing(false);
     }

@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useMemo } from 'react';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 import { Season, seasonOf, Sky } from './atmosphere';
@@ -22,6 +23,24 @@ export interface Atmosphere {
   season: Season;
   sky?: Sky;
   temperature?: number;
+}
+
+const ACTIVE_IDS = new Set(SPOTS.map((s) => s.id));
+
+/**
+ * Collections of spots that are in the game right now. Entries for retired
+ * (active: false) spots stay in storage so they come back if the spot does,
+ * but they never count toward totals, progress or achievements.
+ */
+export function activeCollections(c: Record<string, CollectionEntry>): Record<string, CollectionEntry> {
+  const out: Record<string, CollectionEntry> = {};
+  for (const id in c) if (ACTIVE_IDS.has(id)) out[id] = c[id];
+  return out;
+}
+
+export function useActiveCollections() {
+  const c = useStore((s) => s.collections);
+  return useMemo(() => activeCollections(c), [c]);
 }
 
 /** Season a collection belongs to: recorded at check-in, or derived from the date for older entries. */

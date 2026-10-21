@@ -1,6 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import React, { useMemo } from 'react';
 import {
+  Alert,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -9,10 +10,11 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ACHIEVEMENTS } from '../../src/achievements';
+import { DEMO_TOOLS } from '../../src/demo';
 import { SEASONS, seasonMeta, Sky, skyMeta } from '../../src/atmosphere';
 import { spotById } from '../../src/data/spots';
 import { distanceMeters } from '../../src/geo';
-import { useStore } from '../../src/store';
+import { useActiveCollections, useStore } from '../../src/store';
 import { Palette, ThemeMode, categoryMeta, makeStyles, useTheme } from '../../src/theme';
 
 const THEME_OPTIONS: { mode: ThemeMode; label: string; icon: string }[] = [
@@ -26,7 +28,7 @@ const PREVIEW_SKIES: Sky[] = ['clear', 'cloudy', 'overcast', 'fog', 'rain', 'thu
 export default function MeScreen() {
   const t = useTheme();
   const styles = useStyles();
-  const collections = useStore((s) => s.collections);
+  const collections = useActiveCollections();
   const reset = useStore((s) => s.reset);
   const unlockAll = useStore((s) => s.unlockAll);
   const themeMode = useStore((s) => s.themeMode);
@@ -219,9 +221,19 @@ export default function MeScreen() {
             </Pressable>
           </>
         )}
-        <Pressable style={styles.resetBtn} onPress={reset}>
-          <Text style={styles.resetText}>重置示範資料</Text>
-        </Pressable>
+        {DEMO_TOOLS && (
+          <Pressable
+            style={styles.resetBtn}
+            onPress={() =>
+              Alert.alert('重置示範資料？', '會清除所有收藏並回到開場導覽，無法復原。', [
+                { text: '取消', style: 'cancel' },
+                { text: '重置', style: 'destructive', onPress: reset },
+              ])
+            }
+          >
+            <Text style={styles.resetText}>重置示範資料</Text>
+          </Pressable>
+        )}
 
         <Text style={styles.footer}>
           Money can make your world prettier.{'\n'}But only travel can make it bigger.

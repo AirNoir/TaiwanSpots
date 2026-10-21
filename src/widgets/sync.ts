@@ -6,7 +6,7 @@ import { Platform } from 'react-native';
 import { collectionThumbnail } from '../data/spotAssets';
 import { SPOTS, Spot } from '../data/spots';
 import { checkinRadius, distanceMeters, formatDistance, LatLng } from '../geo';
-import { CollectionEntry, useStore } from '../store';
+import { activeCollections, CollectionEntry, useStore } from '../store';
 import type { IslandiaWidgetProps } from './IslandiaWidget';
 import type { SpotNearbyProps } from './SpotNearbyActivity';
 
@@ -67,7 +67,7 @@ async function updateWidget(
     (a, b) => collections[a.id].order - collections[b.id].order,
   );
   const base: Omit<IslandiaWidgetProps, 'spotId' | 'name' | 'nameEn' | 'city' | 'image'> = {
-    collected: Object.keys(collections).length,
+    collected: Object.keys(activeCollections(collections)).length,
     total: SPOTS.length,
     nextName: next?.spot.name ?? '',
     nextDistance: next ? widgetDistance(next.dist) : '',

@@ -76,7 +76,7 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   {
     id: 'taiwan-master',
     title: 'TAIWAN MASTER',
-    zh: '完成全部 Hero Spots',
+    zh: '收藏全部景點',
     icon: 'trophy',
     check: (c) => c.length >= SPOTS.length,
     progress: (c) => ({ now: c.length, goal: SPOTS.length }),
