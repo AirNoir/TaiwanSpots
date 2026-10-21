@@ -80,6 +80,11 @@
       "result": "user-preferred-preview",
       "notes": "User explicitly prefers last v10 candidate; restore as default comparison image, no raster edit. Previous strict geometric QA remains historical; user says close to OK, not final approval.",
       "userAcceptance": "pending"
+    },
+    "review08": {
+      "model": "review-v10.png",
+      "userAcceptance": "approved",
+      "source": "Direct user message: Heping Island accepted"
     }
   }
 }

@@ -16,7 +16,9 @@
     "hillside houses",
     "two island passenger platforms with tracks on both sides",
     "enclosed elevated passenger concourse with stairs down to each island",
-    "station east of rail corridor opposite western hillside"
+    "station east of rail corridor opposite western hillside",
+    "All stair flights and landings entirely on concrete island platforms, never rails or ballast",
+    "No bridge support columns inside active rail track gauge"
   ],
   "lockedIdentity": [
     "many cats on walls",
@@ -90,6 +92,15 @@
       "state": "self-checked-preview",
       "qa": "Swapped overpass positions: cat bridge front-left; plain passenger concourse back-right, station stays lower-right. Separate parallel crossings and stairs retained. Native and 512 visually inspected. Exact station connections and dimensions remain miniature simplification.",
       "userAcceptance": "pending"
+    },
+    "review08": {
+      "id": "houtong",
+      "reviewedModel": "review-v9.png",
+      "note": "Remove bridge supports and stair landings from railway tracks; use platform-supported pedestrian access according to real photographs.",
+      "state": "self-checked-preview",
+      "newModel": "review-v11.png",
+      "userAcceptance": "pending",
+      "qa": "Rechecked 2015 real concourse/platform photographs. Removed round cat-bridge supports in rail corridor, enlarged concrete islands for longitudinal stairs, cleared misplaced foreground wire mast. Inspected native and512. Two bridges remain separate and in user-corrected order. Exact dimensions and hidden station connections are simplified, not surveyed."
     }
   }
 }
