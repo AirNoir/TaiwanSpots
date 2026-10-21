@@ -1,4 +1,5 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import * as Haptics from 'expo-haptics';
 import { useRouter } from 'expo-router';
 import React, { useEffect, useMemo, useState } from 'react';
 import {
@@ -501,6 +502,7 @@ export function TaiwanWorld({
   // First tap names a spot, second tap opens it.
   const onMarkerPress = (m: Marker) => {
     const spot = m.spot;
+    void Haptics.selectionAsync();
     if (!regionId) setRegionId(spot.region, target?.spot.id === spot.id ? spot : null);
     else if (m.cluster) {
       setCounty(m.cluster.county);
@@ -512,6 +514,7 @@ export function TaiwanWorld({
   // Strip cards can point at a spot inside a still-folded county: open that county first.
   const pickFromStrip = (spot: Spot) => {
     if (selectedId === spot.id) return openSpot(spot);
+    void Haptics.selectionAsync();
     if (countyOf(spot) !== county && (countyCounts.get(countyOf(spot))?.total ?? 0) >= CLUSTER_MIN) setCounty(countyOf(spot));
     setSelectedId(spot.id);
   };
