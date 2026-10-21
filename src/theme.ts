@@ -197,11 +197,11 @@ export function makeStyles<T>(factory: (t: Palette) => T) {
   };
 }
 
-export const rarityMeta: Record<string, { label: string; dots: number; color: string }> = {
-  common: { label: 'COMMON', dots: 1, color: '#9BB0C9' },
-  rare: { label: 'RARE', dots: 2, color: '#6FB7F5' },
-  epic: { label: 'EPIC', dots: 3, color: '#C08BF5' },
-  legendary: { label: 'LEGENDARY', dots: 4, color: '#F5B14C' },
+export const rarityMeta: Record<string, { label: string; zh: string; dots: number; color: string }> = {
+  common: { label: 'COMMON', zh: '普通', dots: 1, color: '#9BB0C9' },
+  rare: { label: 'RARE', zh: '稀有', dots: 2, color: '#6FB7F5' },
+  epic: { label: 'EPIC', zh: '史詩', dots: 3, color: '#C08BF5' },
+  legendary: { label: 'LEGENDARY', zh: '傳說', dots: 4, color: '#F5B14C' },
 };
 
 // icon: MaterialCommunityIcons name

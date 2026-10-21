@@ -26,6 +26,7 @@ import Svg, {
 import { describeWeather, isWet, Season, seasonOf, skyIcon, Weather } from '../atmosphere';
 import { collectionThumbnail, DIORAMA_BG, worldToken } from '../data/spotAssets';
 import { distanceMeters, formatDistance, LatLng } from '../geo';
+import { countyLabel, labelWidth, metaLabel, spotName, useLang, useT } from '../i18n';
 import { Spot, SPOTS } from '../data/spots';
 import { makeProjector, TAIWAN, WorldDef, worldAspect } from '../data/world';
 import { makeStyles, Palette, seasonTints, useTheme } from '../theme';
@@ -129,6 +130,8 @@ export function TaiwanWorld({
   approximate = false,
 }: Props) {
   const t = useTheme();
+  const tr = useT();
+  const lang = useLang();
   const C = t.world;
   const season = seasonProp ?? seasonOf();
   const tint = seasonTints[t.mode][season];
@@ -473,7 +476,7 @@ export function TaiwanWorld({
       (m.spot.id === selectedId ? 0 : 10) + (m.spot.id === target?.spot.id ? 0 : 5) + (m.spot.worldTier === 'anchor' ? 0 : 2) + (collectedIds.has(m.spot.id) ? 0 : 1);
     for (const pin of [...pins].sort((a, b) => rank(a) - rank(b))) {
       if (pin.m.spot.id === selectedId || pin.m.kind === 'cluster') continue; // the callout / bubble names it
-      const w = pin.m.spot.name.length * 10.5 + 10;
+      const w = labelWidth(spotName(pin.m.spot, lang));
       const { x, y } = pin.p;
       const g = pin.r + (pin.m.spot.id === target?.spot.id ? 9 : 3); // clear the pulsing goal ring
       // below first (reads most naturally), then beside, then above
@@ -493,7 +496,7 @@ export function TaiwanWorld({
     return placed;
     // screenPos depends only on zoom/width/height
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [markers, regionId, selectedId, target, collectedIds, zoom, width, height]);
+  }, [markers, regionId, selectedId, target, collectedIds, zoom, width, height, lang]);
 
   const regionSpots = useMemo(() => {
     if (!regionId) return [];
@@ -831,7 +834,7 @@ export function TaiwanWorld({
                 onPress={() => onMarkerPress(m)}
                 hitSlop={10}
                 accessibilityRole="button"
-                accessibilityLabel={m.kind === 'cluster' || m.kind === 'light' ? countyOf(m.spot) : m.spot.name}
+                accessibilityLabel={m.kind === 'cluster' || m.kind === 'light' ? countyLabel(countyOf(m.spot), lang) : spotName(m.spot, lang)}
               >
                 {m.kind === 'token' ? (
                   <LandmarkToken spot={m.spot} size={m.size} />
@@ -861,7 +864,7 @@ export function TaiwanWorld({
                   style={labelStyle(labels.get(m.spot.id)!, m.kind === 'thumb' ? PIN / 2 : m.size * 0.35, m.spot.id === target?.spot.id)}
                 >
                   <Text numberOfLines={1} style={[styles.pinLabelText, !collectedIds.has(m.spot.id) && styles.pinLabelFaint]}>
-                    {m.spot.name}
+                    {spotName(m.spot, lang)}
                   </Text>
                 </View>
               )}
@@ -889,20 +892,20 @@ export function TaiwanWorld({
               onPress={() => (county ? (setCounty(null), setSelectedId(null)) : setRegionId(null))}
               hitSlop={8}
               accessibilityRole="button"
-              accessibilityLabel={`返回${county ? active.zh : '全台灣'}`}
+              accessibilityLabel={tr('map.back', { place: county ? metaLabel(active, lang) : tr('map.allTaiwan') })}
             >
               <MaterialCommunityIcons name={'chevron-left' as any} size={18} color={t.text} />
-              <Text style={styles.backText}>{county ? active.zh : '全台灣'}</Text>
+              <Text style={styles.backText}>{county ? metaLabel(active, lang) : tr('map.allTaiwan')}</Text>
             </Pressable>
             <View style={styles.regionTag} pointerEvents="none">
-              <Text style={styles.regionName}>{county ?? active.zh}</Text>
+              <Text style={styles.regionName}>{county ? countyLabel(county, lang) : metaLabel(active, lang)}</Text>
               <Text style={styles.regionCount}>
                 {county
-                  ? `${countyCounts.get(county)?.found ?? 0} / ${countyCounts.get(county)?.total ?? 0} 已收藏`
-                  : `${active.found} / ${active.total} 已收藏`}
+                  ? tr('map.collectedOf', { found: countyCounts.get(county)?.found ?? 0, total: countyCounts.get(county)?.total ?? 0 })
+                  : tr('map.collectedOf', { found: active.found, total: active.total })}
               </Text>
               {weather?.[active.id] && (
-                <Text style={styles.regionWeather}>{describeWeather(weather[active.id] as Weather)}</Text>
+                <Text style={styles.regionWeather}>{describeWeather(weather[active.id] as Weather, lang)}</Text>
               )}
             </View>
           </>
@@ -921,10 +924,10 @@ export function TaiwanWorld({
                 style={[styles.chip, on && styles.chipOn]}
                 accessibilityRole="button"
                 accessibilityState={{ selected: on }}
-                accessibilityLabel={`${r.zh}，已收藏 ${r.found} / ${r.total}`}
+                accessibilityLabel={tr('map.chipA11y', { region: metaLabel(r, lang), found: r.found, total: r.total })}
               >
                 <Text style={[styles.chipText, on && styles.chipTextOn]}>
-                  {r.zh.replace('台灣', '')} {r.found}/{r.total}
+                  {lang === 'zh' ? r.zh.replace('台灣', '') : r.label[0] + r.label.slice(1).toLowerCase()} {r.found}/{r.total}
                 </Text>
                 {w && (
                   <>
@@ -938,7 +941,7 @@ export function TaiwanWorld({
         </View>
       )}
 
-      {interactive && !regionId && <Text style={styles.hint}>點一個區域，看看那裡有哪些景點</Text>}
+      {interactive && !regionId && <Text style={styles.hint}>{tr('map.hint')}</Text>}
 
       {interactive && regionId && (
         <SpotStrip
@@ -946,7 +949,7 @@ export function TaiwanWorld({
           items={regionSpots}
           selectedId={selectedId}
           onPress={pickFromStrip}
-          title={county ?? active?.zh ?? ''}
+          title={county ? countyLabel(county, lang) : active ? metaLabel(active, lang) : ''}
         />
       )}
     </View>
@@ -969,6 +972,8 @@ function SpotStrip({
 }) {
   const t = useTheme();
   const styles = useStyles();
+  const tr = useT();
+  const lang = useLang();
   const ref = React.useRef<FlatList<StripItem>>(null);
   const todo = items.filter((i) => !i.got).length;
 
@@ -989,7 +994,7 @@ function SpotStrip({
   return (
     <View style={styles.strip}>
       <Text style={styles.stripTitle}>
-        {title} · {todo ? `還有 ${todo} 個景點等你收藏` : '全部收藏了'}
+        {todo ? tr('map.strip.todo', { place: title, n: todo }) : tr('map.strip.done', { place: title })}
       </Text>
       <FlatList
         ref={ref}
@@ -1008,7 +1013,7 @@ function SpotStrip({
               onPress={() => onPress(item.spot)}
               style={[styles.stripCard, on && styles.stripCardOn]}
               accessibilityRole="button"
-              accessibilityLabel={`${item.spot.name}${item.got ? '，已收藏' : ''}`}
+              accessibilityLabel={`${spotName(item.spot, lang)}${item.got ? ` · ${tr('map.got')}` : ''}`}
             >
               <View style={styles.stripThumb}>
                 {thumb ? (
@@ -1023,10 +1028,10 @@ function SpotStrip({
                 )}
               </View>
               <Text style={styles.stripName} numberOfLines={1}>
-                {item.spot.name}
+                {spotName(item.spot, lang)}
               </Text>
               <Text style={styles.stripMeta} numberOfLines={1}>
-                {item.got ? '已收藏' : item.dist != null ? formatDistance(item.dist) : item.spot.city}
+                {item.got ? tr('map.got') : item.dist != null ? formatDistance(item.dist) : item.spot.city}
               </Text>
             </Pressable>
           );
@@ -1080,6 +1085,8 @@ function ThumbPin({ spot, got, on, goal, pulse }: { spot: Spot; got: boolean; on
 /** Level 1: a flag over the closest uncollected spot, so there is always somewhere to go next. */
 function TargetFlag({ spot, dist, pulse, flip }: { spot: Spot; dist: number | null; pulse: Animated.Value; flip: boolean }) {
   const styles = useStyles();
+  const tr = useT();
+  const lang = useLang();
   return (
     <View style={{ marginLeft: -6, marginTop: -6 }}>
       <Animated.View
@@ -1094,9 +1101,9 @@ function TargetFlag({ spot, dist, pulse, flip }: { spot: Spot; dist: number | nu
       <View style={styles.targetDot} />
       <View style={[styles.targetTagBox, flip ? { right: 18, alignItems: 'flex-end' } : { left: 18 }]}>
         <View style={styles.targetTag}>
-          <Text style={styles.targetKicker}>下一站</Text>
+          <Text style={styles.targetKicker}>{tr('map.nextStop')}</Text>
           <Text style={styles.targetName} numberOfLines={1}>
-            {spot.name}
+            {spotName(spot, lang)}
             {dist != null ? ` · ${formatDistance(dist)}` : ''}
           </Text>
         </View>
@@ -1127,6 +1134,8 @@ function Callout({
 }) {
   const t = useTheme();
   const styles = useStyles();
+  const tr = useT();
+  const lang = useLang();
   const [show] = useState(() => new Animated.Value(0));
   useEffect(() => {
     show.setValue(0);
@@ -1153,19 +1162,19 @@ function Callout({
         },
       ]}
     >
-      <Pressable onPress={onOpen} style={styles.calloutInner} accessibilityRole="button" accessibilityLabel={`查看${spot.name}`}>
+      <Pressable onPress={onOpen} style={styles.calloutInner} accessibilityRole="button" accessibilityLabel={tr('map.view', { name: spotName(spot, lang) })}>
         <View style={styles.calloutThumb}>
           {thumb && <Image source={thumb} style={{ width: '100%', height: '100%' }} />}
         </View>
         <View style={{ flex: 1, minWidth: 0 }}>
           <Text style={styles.calloutName} numberOfLines={1}>
-            {spot.name}
+            {spotName(spot, lang)}
           </Text>
           <Text style={styles.calloutMeta} numberOfLines={1}>
             {spot.city}
             {dist != null ? ` · ${formatDistance(dist)}` : ''}
           </Text>
-          <Text style={[styles.calloutState, got && { color: t.accent }]}>{got ? '✓ 已收藏' : '尚未收藏'}</Text>
+          <Text style={[styles.calloutState, got && { color: t.accent }]}>{tr(got ? 'map.gotMark' : 'map.notYet')}</Text>
         </View>
         <MaterialCommunityIcons name={'chevron-right' as any} size={20} color={t.subtext} />
       </Pressable>
@@ -1179,6 +1188,7 @@ const STRIP_W = 92;
 function ClusterBubble({ spot, cluster }: { spot: Spot; cluster: Cluster }) {
   const t = useTheme();
   const styles = useStyles();
+  const lang = useLang();
   const thumb = collectionThumbnail(spot.id);
   const done = cluster.found === cluster.total;
   return (
@@ -1195,7 +1205,7 @@ function ClusterBubble({ spot, cluster }: { spot: Spot; cluster: Cluster }) {
       </View>
       <View style={styles.clusterLabelBox} pointerEvents="none">
         <Text style={styles.clusterLabel} numberOfLines={1}>
-          {cluster.county} <Text style={styles.clusterProgress}>{cluster.found}/{cluster.total}</Text>
+          {countyLabel(cluster.county, lang)} <Text style={styles.clusterProgress}>{cluster.found}/{cluster.total}</Text>
         </Text>
       </View>
     </View>

@@ -13,6 +13,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
 import { Region, SPOTS } from '../../src/data/spots';
 import { DEMO_TOOLS } from '../../src/demo';
+import { I18nKey, metaLabel, spotName, useLang, useT } from '../../src/i18n';
 import { checkinRadius, DEV_LOCATIONS, distanceMeters, formatDistance } from '../../src/geo';
 import { entrySeason, useActiveCollections, useStore } from '../../src/store';
 import { Palette, categoryMeta, makeStyles, rarityMeta, regionMeta, useTheme } from '../../src/theme';
@@ -21,7 +22,7 @@ import { useLocation } from '../../src/useLocation';
 
 const REGION_FILTERS: (Region | 'all')[] = ['all', 'north', 'central', 'south', 'east'];
 type Owned = 'all' | 'todo' | 'done';
-const OWNED_LABEL: Record<Owned, string> = { all: '全部', todo: '未收藏', done: '已收藏' };
+const OWNED_LABEL: Record<Owned, I18nKey> = { all: 'explore.all', todo: 'explore.todo', done: 'explore.done' };
 
 export default function ExploreScreen() {
   const t = useTheme();
@@ -36,6 +37,8 @@ export default function ExploreScreen() {
   const [query, setQuery] = useState('');
   const override = useAtmosphereOverride();
   const night = useNight();
+  const tr = useT();
+  const lang = useLang();
 
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -53,7 +56,7 @@ export default function ExploreScreen() {
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
       <View style={styles.header}>
-        <Text style={styles.title}>EXPLORE</Text>
+        <Text style={styles.title}>{tr('explore.title')}</Text>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 4 }}>
           <MaterialCommunityIcons
             name={(isDev ? 'flask-outline' : 'map-marker') as any}
@@ -61,7 +64,7 @@ export default function ExploreScreen() {
             color={t.subtext}
           />
           <Text style={styles.subtitle}>
-            {isDev ? '模擬位置' : isFallback ? '預設位置(台北車站)' : '目前位置'}
+            {tr(isDev ? 'explore.loc.demo' : isFallback ? 'explore.loc.fallback' : 'explore.loc.here')}
           </Text>
         </View>
       </View>
@@ -93,7 +96,7 @@ export default function ExploreScreen() {
         <TextInput
           value={query}
           onChangeText={setQuery}
-          placeholder="搜尋景點、城市"
+          placeholder={tr('explore.search')}
           placeholderTextColor={t.faint}
           style={styles.searchInput}
           returnKeyType="search"
@@ -110,7 +113,7 @@ export default function ExploreScreen() {
             onPress={() => setRegion(r)}
           >
             <Text style={[styles.filterText, region === r && styles.filterTextActive]}>
-              {r === 'all' ? '全部' : regionMeta[r].zh}
+              {r === 'all' ? tr('explore.all') : metaLabel(regionMeta[r], lang)}
             </Text>
           </Pressable>
         ))}
@@ -118,10 +121,10 @@ export default function ExploreScreen() {
       <View style={styles.ownedRow}>
         {(Object.keys(OWNED_LABEL) as Owned[]).map((o) => (
           <Pressable key={o} onPress={() => setOwned(o)} hitSlop={6} style={[styles.ownedChip, owned === o && styles.ownedChipOn]}>
-            <Text style={[styles.ownedText, owned === o && styles.ownedTextOn]}>{OWNED_LABEL[o]}</Text>
+            <Text style={[styles.ownedText, owned === o && styles.ownedTextOn]}>{tr(OWNED_LABEL[o])}</Text>
           </Pressable>
         ))}
-        <Text style={styles.resultCount}>{rows.length} 個景點</Text>
+        <Text style={styles.resultCount}>{tr('explore.count', { n: rows.length })}</Text>
       </View>
 
       <FlatList
@@ -132,7 +135,7 @@ export default function ExploreScreen() {
           <View style={styles.empty}>
             <MaterialCommunityIcons name={'map-search-outline' as any} size={36} color={t.faint} />
             <Text style={styles.emptyText}>
-              {owned === 'todo' && !query ? '這裡全部收藏了！' : '找不到符合的景點'}
+              {tr(owned === 'todo' && !query ? 'explore.emptyDone' : 'explore.emptyNone')}
             </Text>
           </View>
         }
@@ -152,7 +155,7 @@ export default function ExploreScreen() {
               />
               <View style={{ flex: 1, marginLeft: 14 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                  <Text style={styles.name}>{spot.name}</Text>
+                  <Text style={styles.name}>{spotName(spot, lang)}</Text>
                   {collected && (
                     <MaterialCommunityIcons
                       name={'check-circle' as any}
@@ -168,7 +171,7 @@ export default function ExploreScreen() {
                     color={t.subtext}
                   />
                   <Text style={styles.meta}>
-                    {categoryMeta[spot.category].label} ・ {spot.city}
+                    {metaLabel(categoryMeta[spot.category], lang)} ・ {spot.city}
                   </Text>
                 </View>
                 <View style={styles.rarityRow}>
@@ -179,7 +182,7 @@ export default function ExploreScreen() {
                     />
                   ))}
                   <Text style={[styles.rarityLabel, { color: rarityMeta[spot.rarity].color }]}>
-                    {rarityMeta[spot.rarity].label}
+                    {metaLabel(rarityMeta[spot.rarity], lang)}
                   </Text>
                 </View>
               </View>
@@ -187,7 +190,7 @@ export default function ExploreScreen() {
                 <Text style={[styles.dist, inRange && { color: t.success }]}>
                   {formatDistance(dist)}
                 </Text>
-                {inRange && !collected && <Text style={styles.inRange}>● 可收藏</Text>}
+                {inRange && !collected && <Text style={styles.inRange}>● {tr('common.collectable')}</Text>}
               </View>
             </Pressable>
           );

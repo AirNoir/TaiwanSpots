@@ -16,6 +16,7 @@ import { Diorama } from '../../src/components/Diorama';
 import { TaiwanWorld } from '../../src/components/TaiwanWorld';
 import { SPOTS, spotById } from '../../src/data/spots';
 import { TAIWAN } from '../../src/data/world';
+import { I18nKey, metaLabel, spotName, useLang, useT } from '../../src/i18n';
 import { checkinRadius, distanceMeters, formatDistance, LatLng } from '../../src/geo';
 import { openDirections, travelModeFor } from '../../src/maps';
 import { entrySeason, useActiveCollections } from '../../src/store';
@@ -30,12 +31,12 @@ const { width: SCREEN_W } = Dimensions.get('window');
 // Weather is looked up for these four city centres only — never for the traveller's position.
 const REGION_POINTS: LatLng[] = TAIWAN.regions.map((r) => ({ latitude: r.center[1], longitude: r.center[0] }));
 
-function greeting() {
+function greetingKey(): I18nKey {
   const h = new Date().getHours();
-  if (h < 5) return 'Good night.';
-  if (h < 12) return 'Good morning.';
-  if (h < 18) return 'Good afternoon.';
-  return 'Good evening.';
+  if (h < 5) return 'home.greet.night';
+  if (h < 12) return 'home.greet.morning';
+  if (h < 18) return 'home.greet.afternoon';
+  return 'home.greet.evening';
 }
 
 export default function WorldScreen() {
@@ -43,6 +44,8 @@ export default function WorldScreen() {
   const styles = useStyles();
   const router = useRouter();
   const collections = useActiveCollections();
+  const tr = useT();
+  const lang = useLang();
   const { location, isFallback } = useLocation();
   useWidgetSync(location, !isFallback);
 
@@ -92,20 +95,20 @@ export default function WorldScreen() {
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
       <ScrollView ref={scrollRef} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
-        <Text style={styles.greeting}>{greeting()}</Text>
-        <Text style={styles.subGreeting}>去過的地方，會成為你的世界。</Text>
+        <Text style={styles.greeting}>{tr(greetingKey())}</Text>
+        <Text style={styles.subGreeting}>{tr('home.tagline')}</Text>
         <View style={styles.atmosRow}>
           <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={13} color={t.subtext} />
           <Text style={styles.atmosText}>
-            {seasonMeta[season].zh}
-            {night ? '夜' : '天'}
+            {metaLabel(seasonMeta[season], lang)}
+            {tr(night ? 'home.night' : 'home.day')}
           </Text>
           {hereWeather && (
             <>
               <Text style={styles.atmosText}>·</Text>
               <MaterialCommunityIcons name={skyIcon(hereWeather) as any} size={13} color={t.subtext} />
               <Text style={styles.atmosText}>
-                {nearRegion.zh} {describeWeather(hereWeather)}
+                {metaLabel(nearRegion, lang)} {describeWeather(hereWeather, lang)}
               </Text>
             </>
           )}
@@ -115,29 +118,29 @@ export default function WorldScreen() {
           <View style={styles.locCard}>
             <MaterialCommunityIcons name={'map-marker-off-outline' as any} size={20} color={t.accent} />
             <View style={{ flex: 1 }}>
-              <Text style={styles.locTitle}>定位還沒開啟</Text>
-              <Text style={styles.locBody}>收藏景點需要知道你真的在那裡。距離暫時以台北車站估算。</Text>
+              <Text style={styles.locTitle}>{tr('home.loc.title')}</Text>
+              <Text style={styles.locBody}>{tr('home.loc.body')}</Text>
             </View>
             <Pressable onPress={() => void Linking.openSettings()} hitSlop={8} accessibilityRole="button">
-              <Text style={styles.locBtn}>開啟設定</Text>
+              <Text style={styles.locBtn}>{tr('home.loc.settings')}</Text>
             </Pressable>
           </View>
         )}
 
         <View style={styles.worldCard}>
-          <Text style={styles.worldLabel}>MY TAIWAN WORLD</Text>
+          <Text style={styles.worldLabel}>{tr('home.world')}</Text>
           <TaiwanWorld width={mapW} collectedIds={collectedIds} season={season} weather={weatherByRegion} night={night} location={location} approximate={isFallback} />
           <View style={styles.worldStats}>
             <Text style={styles.worldCount}>
               {count} <Text style={styles.worldTotal}>/ {SPOTS.length}</Text>
             </Text>
-            <Text style={styles.worldExplored}>EXPLORED</Text>
+            <Text style={styles.worldExplored}>{tr('home.explored')}</Text>
           </View>
         </View>
 
         {nextStop && (
           <>
-            <Text style={styles.sectionTitle}>NEXT STOP</Text>
+            <Text style={styles.sectionTitle}>{tr('home.nextStop')}</Text>
             <Pressable
               style={[styles.nextCard, nextStop.inRange && styles.nextCardReady]}
               onPress={() => router.push(`/spot/${nextStop.spot.id}`)}
@@ -147,10 +150,10 @@ export default function WorldScreen() {
               <Diorama spot={nextStop.spot} size={104} radius={18} />
               <View style={styles.nextBody}>
                 <Text style={styles.nextKicker}>
-                  {nextStop.inRange ? '你已抵達 · 現在就能收藏' : isFallback ? '離台北車站最近的景點' : '離你最近、還沒收藏'}
+                  {tr(nextStop.inRange ? 'home.next.ready' : isFallback ? 'home.next.fallback' : 'home.next.closest')}
                 </Text>
                 <Text style={styles.nextName} numberOfLines={1}>
-                  {nextStop.spot.name}
+                  {spotName(nextStop.spot, lang)}
                 </Text>
                 <Text style={styles.nextCity} numberOfLines={1}>
                   {nextStop.spot.city}
@@ -161,9 +164,9 @@ export default function WorldScreen() {
                     style={[styles.nextBtn, styles.nextBtnPrimary]}
                     onPress={() => router.push(`/spot/${nextStop.spot.id}`)}
                     accessibilityRole="button"
-                    accessibilityLabel={`${nextStop.inRange ? '去收藏' : '查看'}下一站 ${nextStop.spot.name}`}
+                    accessibilityLabel={tr(nextStop.inRange ? 'home.next.a11yCollect' : 'home.next.a11yView', { name: spotName(nextStop.spot, lang) })}
                   >
-                    <Text style={styles.nextBtnPrimaryText}>{nextStop.inRange ? '去收藏' : '看看'}</Text>
+                    <Text style={styles.nextBtnPrimaryText}>{tr(nextStop.inRange ? 'home.next.collect' : 'home.next.view')}</Text>
                   </Pressable>
                   {!nextStop.inRange && (
                     <Pressable
@@ -171,10 +174,10 @@ export default function WorldScreen() {
                       onPress={() => void openDirections(nextStop.spot, travelModeFor(nextStop.dist), t.mode)}
                       hitSlop={6}
                       accessibilityRole="button"
-                      accessibilityLabel={`導航到 ${nextStop.spot.name}`}
+                      accessibilityLabel={tr('home.next.a11yNav', { name: spotName(nextStop.spot, lang) })}
                     >
                       <MaterialCommunityIcons name={'navigation-variant-outline' as any} size={13} color={t.accent} />
-                      <Text style={styles.nextBtnText}>導航</Text>
+                      <Text style={styles.nextBtnText}>{tr('home.next.navigate')}</Text>
                     </Pressable>
                   )}
                 </View>
@@ -183,7 +186,7 @@ export default function WorldScreen() {
           </>
         )}
 
-        {nearby.length > 1 && <Text style={styles.sectionTitle}>ALSO NEAR YOU</Text>}
+        {nearby.length > 1 && <Text style={styles.sectionTitle}>{tr('home.alsoNear')}</Text>}
         {nearby.slice(1).map(({ spot, dist }) => (
           <Pressable
             key={spot.id}
@@ -192,11 +195,11 @@ export default function WorldScreen() {
           >
             <Diorama spot={spot} size={56} locked radius={14} />
             <View style={{ flex: 1, marginLeft: 14 }}>
-              <Text style={styles.nearName}>{spot.name}</Text>
+              <Text style={styles.nearName}>{spotName(spot, lang)}</Text>
               <Text style={styles.nearCity}>{spot.city}</Text>
             </View>
             {!isFallback && dist <= checkinRadius(spot) ? (
-              <Text style={styles.readyBadge}>可收藏</Text>
+              <Text style={styles.readyBadge}>{tr('common.collectable')}</Text>
             ) : (
               !isFallback && (
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 3 }}>
@@ -210,7 +213,7 @@ export default function WorldScreen() {
 
         {latestSpot && latest && (
           <>
-            <Text style={styles.sectionTitle}>YOUR LATEST</Text>
+            <Text style={styles.sectionTitle}>{tr('home.latest')}</Text>
             <Pressable
               style={styles.latestCard}
               onPress={() => router.push(`/spot/${latestSpot.id}`)}
@@ -221,7 +224,7 @@ export default function WorldScreen() {
                 radius={20}
                 atmosphere={{ season: override.season ?? entrySeason(latest), night }}
               />
-              <Text style={styles.latestName}>{latestSpot.nameEn}</Text>
+              <Text style={styles.latestName}>{spotName(latestSpot, lang)}</Text>
               <Text style={styles.latestDate}>
                 {new Date(latest.checkedInAt).toLocaleDateString('zh-TW')}
               </Text>
@@ -230,7 +233,7 @@ export default function WorldScreen() {
         )}
 
         <Pressable style={styles.cta} onPress={() => router.push('/explore')}>
-          <Text style={styles.ctaText}>Explore Nearby</Text>
+          <Text style={styles.ctaText}>{tr('home.cta')}</Text>
         </Pressable>
       </ScrollView>
     </SafeAreaView>

@@ -11,15 +11,23 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ACHIEVEMENTS } from '../../src/achievements';
 import { DEMO_TOOLS } from '../../src/demo';
+import { I18nKey, LangPref, metaLabel, useLang, useT } from '../../src/i18n';
 import { SEASONS, seasonMeta, Sky, skyMeta } from '../../src/atmosphere';
 import { spotById, SPOTS } from '../../src/data/spots';
 import { distanceMeters } from '../../src/geo';
 import { useActiveCollections, useStore } from '../../src/store';
 import { Palette, ThemeMode, categoryMeta, makeStyles, useTheme } from '../../src/theme';
 
-const THEME_OPTIONS: { mode: ThemeMode; label: string; icon: string }[] = [
-  { mode: 'light', label: '淺色', icon: 'white-balance-sunny' },
-  { mode: 'dark', label: '深色', icon: 'weather-night' },
+const THEME_OPTIONS: { mode: ThemeMode; label: I18nKey; icon: string }[] = [
+  { mode: 'light', label: 'me.theme.light', icon: 'white-balance-sunny' },
+  { mode: 'dark', label: 'me.theme.dark', icon: 'weather-night' },
+];
+
+// Language names are shown in their own language so anyone can find theirs.
+const LANG_OPTIONS: { pref: LangPref; label: string | null }[] = [
+  { pref: 'auto', label: null },
+  { pref: 'zh', label: '中文' },
+  { pref: 'en', label: 'English' },
 ];
 
 // Dev preview choices (value '' = automatic). Skies limited to the ones that look different.
@@ -50,6 +58,10 @@ export default function MeScreen() {
   const unlockAll = useStore((s) => s.unlockAll);
   const themeMode = useStore((s) => s.themeMode);
   const setThemeMode = useStore((s) => s.setThemeMode);
+  const language = useStore((s) => s.language);
+  const setLanguage = useStore((s) => s.setLanguage);
+  const tr = useT();
+  const lang = useLang();
   const override = useStore((s) => s.atmosphereOverride);
   const setOverride = useStore((s) => s.setAtmosphereOverride);
 
@@ -95,26 +107,29 @@ export default function MeScreen() {
         <View style={styles.avatar}>
           <MaterialCommunityIcons name={'compass-rose' as any} size={40} color={t.accent} />
         </View>
-        <Text style={styles.name}>{rank.title}</Text>
-        <Text style={styles.role}>{rank.zh}</Text>
+        <Text style={styles.name}>{lang === 'zh' ? rank.zh : rank.title}</Text>
+        <Text style={styles.role}>{lang === 'zh' ? rank.title : rank.zh}</Text>
         {rank.next && (
           <Text style={styles.rankNext}>
-            再收藏 {rank.next.at - collected.length} 個，成為「{rank.next.zh}」
+            {tr('me.rankNext', {
+              n: rank.next.at - collected.length,
+              rank: lang === 'zh' ? rank.next.zh : rank.next.title,
+            })}
           </Text>
         )}
 
         <View style={styles.statsRow}>
           <View style={styles.statCell}>
             <Text style={styles.statNum}>{collected.length}</Text>
-            <Text style={styles.statLabel}>Places</Text>
+            <Text style={styles.statLabel}>{tr('me.places')}</Text>
           </View>
           <View style={styles.statCell}>
             <Text style={styles.statNum}>{cities}</Text>
-            <Text style={styles.statLabel}>Cities</Text>
+            <Text style={styles.statLabel}>{tr('me.cities')}</Text>
           </View>
           <View style={styles.statCell}>
             <Text style={styles.statNum}>{journeyKm.toLocaleString()}</Text>
-            <Text style={styles.statLabel}>km Journey</Text>
+            <Text style={styles.statLabel}>{tr('me.journey')}</Text>
           </View>
         </View>
 
@@ -128,7 +143,7 @@ export default function MeScreen() {
                     size={17}
                     color={t.subtext}
                   />
-                  <Text style={styles.catName}>{categoryMeta[cat].zh}</Text>
+                  <Text style={styles.catName}>{metaLabel(categoryMeta[cat], lang)}</Text>
                 </View>
                 <Text style={styles.catCount}>{n}</Text>
               </View>
@@ -136,7 +151,7 @@ export default function MeScreen() {
           </View>
         )}
 
-        <Text style={styles.sectionTitle}>ACHIEVEMENTS</Text>
+        <Text style={styles.sectionTitle}>{tr('me.achievements')}</Text>
         {ACHIEVEMENTS.map((a) => {
           const done = a.check(collected);
           const { now, goal } = a.progress(collected);
@@ -148,8 +163,8 @@ export default function MeScreen() {
                 color={done ? t.accent : t.faint}
               />
               <View style={{ flex: 1, marginLeft: 14 }}>
-                <Text style={styles.achTitle}>{a.title}</Text>
-                <Text style={styles.achZh}>{a.zh}</Text>
+                <Text style={styles.achTitle}>{lang === 'zh' ? a.zhTitle : a.title}</Text>
+                <Text style={styles.achZh}>{lang === 'zh' ? a.zh : a.en}</Text>
                 <View style={styles.achBarTrack}>
                   <View
                     style={[
@@ -167,7 +182,7 @@ export default function MeScreen() {
           );
         })}
 
-        <Text style={styles.sectionTitle}>APPEARANCE</Text>
+        <Text style={styles.sectionTitle}>{tr('me.appearance')}</Text>
         <View style={styles.segment}>
           {THEME_OPTIONS.map((o) => {
             const on = o.mode === themeMode;
@@ -180,7 +195,25 @@ export default function MeScreen() {
                 accessibilityState={{ selected: on }}
               >
                 <MaterialCommunityIcons name={o.icon as any} size={16} color={on ? t.onAccent : t.subtext} />
-                <Text style={[styles.segmentText, on && styles.segmentTextOn]}>{o.label}</Text>
+                <Text style={[styles.segmentText, on && styles.segmentTextOn]}>{tr(o.label)}</Text>
+              </Pressable>
+            );
+          })}
+        </View>
+
+        <Text style={styles.sectionTitle}>{tr('me.language')}</Text>
+        <View style={styles.segment}>
+          {LANG_OPTIONS.map((o) => {
+            const on = o.pref === language;
+            return (
+              <Pressable
+                key={o.pref}
+                style={[styles.segmentItem, on && styles.segmentItemOn]}
+                onPress={() => setLanguage(o.pref)}
+                accessibilityRole="button"
+                accessibilityState={{ selected: on }}
+              >
+                <Text style={[styles.segmentText, on && styles.segmentTextOn]}>{o.label ?? tr('me.lang.auto')}</Text>
               </Pressable>
             );
           })}
@@ -249,19 +282,17 @@ export default function MeScreen() {
           <Pressable
             style={styles.resetBtn}
             onPress={() =>
-              Alert.alert('重置示範資料？', '會清除所有收藏並回到開場導覽，無法復原。', [
-                { text: '取消', style: 'cancel' },
-                { text: '重置', style: 'destructive', onPress: reset },
+              Alert.alert(tr('me.reset.title'), tr('me.reset.body'), [
+                { text: tr('common.cancel'), style: 'cancel' },
+                { text: tr('me.reset.confirm'), style: 'destructive', onPress: reset },
               ])
             }
           >
-            <Text style={styles.resetText}>重置示範資料</Text>
+            <Text style={styles.resetText}>{tr('me.reset')}</Text>
           </Pressable>
         )}
 
-        <Text style={styles.footer}>
-          Money can make your world prettier.{'\n'}But only travel can make it bigger.
-        </Text>
+        <Text style={styles.footer}>{tr('me.footer')}</Text>
       </ScrollView>
     </SafeAreaView>
   );

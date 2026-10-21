@@ -13,6 +13,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
 import { Region, SPOTS } from '../../src/data/spots';
 import { entrySeason, useActiveCollections } from '../../src/store';
+import { metaLabel, spotName, useLang, useT } from '../../src/i18n';
 import { Palette, makeStyles, regionMeta, useTheme } from '../../src/theme';
 import { useAtmosphereOverride, useNight } from '../../src/useAtmosphere';
 
@@ -28,6 +29,8 @@ export default function PassportScreen() {
   const collections = useActiveCollections();
   const override = useAtmosphereOverride();
   const night = useNight();
+  const tr = useT();
+  const lang = useLang();
   const count = Object.keys(collections).length;
   const pct = Math.round((count / SPOTS.length) * 100);
 
@@ -56,8 +59,8 @@ export default function PassportScreen() {
         contentContainerStyle={{ padding: 20, paddingBottom: 40, gap: GAP }}
         ListHeaderComponent={
           <View style={{ marginBottom: 12 }}>
-            <Text style={styles.title}>MY PASSPORT</Text>
-            <Text style={styles.country}>TAIWAN</Text>
+            <Text style={styles.title}>{tr('passport.kicker')}</Text>
+            <Text style={styles.country}>{tr('passport.country')}</Text>
             <Text style={styles.count}>
               {count} <Text style={styles.countTotal}>/ {SPOTS.length}</Text>
             </Text>
@@ -74,9 +77,9 @@ export default function PassportScreen() {
                   onPress={() => setFilter(filter === region ? null : region)}
                   accessibilityRole="button"
                   accessibilityState={{ selected: filter === region }}
-                  accessibilityLabel={`只看${regionMeta[region].zh}，${got}/${total}`}
+                  accessibilityLabel={tr('passport.onlyRegion', { region: metaLabel(regionMeta[region], lang), got, total })}
                 >
-                  <Text style={styles.regionLabel}>{regionMeta[region].zh}</Text>
+                  <Text style={styles.regionLabel}>{metaLabel(regionMeta[region], lang)}</Text>
                   <View style={{ flexDirection: 'row', alignItems: 'center', gap: 3, marginTop: 4 }}>
                     <Text style={[styles.regionCount, got === total && { color: t.accent }]}>
                       {got}/{total}
@@ -90,7 +93,7 @@ export default function PassportScreen() {
             </View>
             {filter && (
               <Pressable onPress={() => setFilter(null)} hitSlop={8} style={styles.filterNote}>
-                <Text style={styles.filterNoteText}>只顯示{regionMeta[filter].zh} · 顯示全部</Text>
+                <Text style={styles.filterNoteText}>{tr('passport.filterNote', { region: metaLabel(regionMeta[filter], lang) })}</Text>
               </Pressable>
             )}
           </View>
@@ -112,7 +115,7 @@ export default function PassportScreen() {
                 atmosphere={entry ? { season: override.season ?? entrySeason(entry), night } : undefined}
               />
               <Text style={[styles.cellName, !collected && { color: t.faint }]} numberOfLines={1}>
-                {spot.name}
+                {spotName(spot, lang)}
               </Text>
             </Pressable>
           );

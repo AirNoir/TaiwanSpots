@@ -35,15 +35,15 @@ export function seasonOf(date: Date = new Date()): Season {
   return 'winter';
 }
 
-export const skyMeta: Record<Sky, { zh: string; icon: string; nightIcon?: string }> = {
-  clear: { zh: '晴', icon: 'weather-sunny', nightIcon: 'weather-night' },
-  cloudy: { zh: '多雲', icon: 'weather-partly-cloudy', nightIcon: 'weather-night-partly-cloudy' },
-  overcast: { zh: '陰', icon: 'weather-cloudy' },
-  fog: { zh: '霧', icon: 'weather-fog' },
-  drizzle: { zh: '毛毛雨', icon: 'weather-rainy' },
-  rain: { zh: '雨', icon: 'weather-pouring' },
-  thunder: { zh: '雷雨', icon: 'weather-lightning-rainy' },
-  snow: { zh: '雪', icon: 'weather-snowy' },
+export const skyMeta: Record<Sky, { zh: string; en: string; icon: string; nightIcon?: string }> = {
+  clear: { zh: '晴', en: 'Clear', icon: 'weather-sunny', nightIcon: 'weather-night' },
+  cloudy: { zh: '多雲', en: 'Cloudy', icon: 'weather-partly-cloudy', nightIcon: 'weather-night-partly-cloudy' },
+  overcast: { zh: '陰', en: 'Overcast', icon: 'weather-cloudy' },
+  fog: { zh: '霧', en: 'Fog', icon: 'weather-fog' },
+  drizzle: { zh: '毛毛雨', en: 'Drizzle', icon: 'weather-rainy' },
+  rain: { zh: '雨', en: 'Rain', icon: 'weather-pouring' },
+  thunder: { zh: '雷雨', en: 'Thunderstorm', icon: 'weather-lightning-rainy' },
+  snow: { zh: '雪', en: 'Snow', icon: 'weather-snowy' },
 };
 
 /** Local-clock fallback for night when no weather service answer is at hand. */
@@ -54,7 +54,8 @@ export const isNightAt = (date: Date = new Date()) => {
 
 export const skyIcon = (w: Weather) => (!w.isDay && skyMeta[w.sky].nightIcon) || skyMeta[w.sky].icon;
 export const isWet = (sky: Sky) => sky === 'drizzle' || sky === 'rain' || sky === 'thunder';
-export const describeWeather = (w: Weather) => `${skyMeta[w.sky].zh} ${w.temperature}°`;
+export const skyName = (sky: Sky, lang: 'zh' | 'en' = 'zh') => (lang === 'zh' ? skyMeta[sky].zh : skyMeta[sky].en);
+export const describeWeather = (w: Weather, lang: 'zh' | 'en' = 'zh') => `${skyName(w.sky, lang)} ${w.temperature}°`;
 
 /** WMO 4677 weather codes as returned by Open-Meteo's `weather_code`. */
 export function skyFromWmo(code: number): Sky {

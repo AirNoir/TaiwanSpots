@@ -5,6 +5,7 @@ import { createJSONStorage, persist } from 'zustand/middleware';
 import { Season, seasonOf, Sky } from './atmosphere';
 import { SPOTS } from './data/spots';
 import { LatLng } from './geo';
+import type { LangPref } from './i18n';
 import type { ThemeMode } from './theme';
 
 export interface CollectionEntry {
@@ -60,6 +61,9 @@ interface IslandiaState {
   collections: Record<string, CollectionEntry>;
   devLocation: LatLng | null;
   themeMode: ThemeMode;
+  /** UI language: 'auto' follows the phone (see src/i18n.ts). */
+  language: LangPref;
+  setLanguage: (l: LangPref) => void;
   atmosphereOverride: AtmosphereOverride;
   setAtmosphereOverride: (o: AtmosphereOverride) => void;
   setThemeMode: (mode: ThemeMode) => void;
@@ -79,6 +83,8 @@ export const useStore = create<IslandiaState>()(
       collections: {},
       devLocation: null,
       themeMode: 'light',
+      language: 'auto',
+      setLanguage: (language) => set({ language }),
       atmosphereOverride: {},
       setAtmosphereOverride: (o) => set({ atmosphereOverride: o }),
       setThemeMode: (mode) => set({ themeMode: mode }),
@@ -123,6 +129,7 @@ export const useStore = create<IslandiaState>()(
         collections: s.collections,
         devLocation: s.devLocation,
         themeMode: s.themeMode,
+        language: s.language,
         atmosphereOverride: s.atmosphereOverride,
       }),
       onRehydrateStorage: () => () => {

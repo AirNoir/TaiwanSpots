@@ -14,7 +14,7 @@ import { Diorama } from '../../src/components/Diorama';
 import { DioramaViewer } from '../../src/components/DioramaViewer';
 import { ShareCardModal } from '../../src/components/ShareCardModal';
 import { UnlockOverlay } from '../../src/components/UnlockOverlay';
-import { describeWeather, seasonMeta, skyIcon, skyMeta, useWeather } from '../../src/atmosphere';
+import { describeWeather, seasonMeta, skyIcon, skyName, useWeather } from '../../src/atmosphere';
 import { collectionImage } from '../../src/data/spotAssets';
 import { spotById, SPOTS } from '../../src/data/spots';
 import { checkinRadius, distanceMeters, formatDistance } from '../../src/geo';
@@ -23,6 +23,7 @@ import { activeCollections, entrySeason, useStore } from '../../src/store';
 import { Palette, categoryMeta, makeStyles, rarityMeta, useTheme } from '../../src/theme';
 import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
 import { DEMO_TOOLS } from '../../src/demo';
+import { metaLabel, spotAltName, spotName, useLang, useT } from '../../src/i18n';
 import { useDevScroll } from '../../src/useDevScroll';
 import { useLocation } from '../../src/useLocation';
 
@@ -69,19 +70,21 @@ export default function SpotDetailScreen() {
   const weather = overrideWeather(fetchedWeather, override);
   const season = useSeason();
   const night = useNight(weather);
+  const tr = useT();
+  const lang = useLang();
 
   // Retired spots (active: false) stay viewable for whoever collected them, but can't be collected anew.
   if (!spot || (!spot.active && !entry)) {
     return (
       <SafeAreaView style={[styles.safe, { alignItems: 'center', justifyContent: 'center', gap: 16 }]}>
         <MaterialCommunityIcons name={'map-marker-question-outline' as any} size={40} color={t.faint} />
-        <Text style={{ color: t.subtext, fontSize: 15 }}>找不到這個景點</Text>
+        <Text style={{ color: t.subtext, fontSize: 15 }}>{tr('spot.notFound')}</Text>
         <Pressable
           style={styles.navBtn}
           onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
           accessibilityRole="button"
         >
-          <Text style={styles.navBtnText}>回到地圖</Text>
+          <Text style={styles.navBtnText}>{tr('spot.backToMap')}</Text>
         </Pressable>
       </SafeAreaView>
     );
@@ -136,7 +139,7 @@ export default function SpotDetailScreen() {
           disabled={!zoomable}
           onPress={() => setViewing(true)}
           accessibilityRole="imagebutton"
-          accessibilityLabel={`放大檢視 ${spot.name}`}
+          accessibilityLabel={tr('spot.zoom', { name: spotName(spot, lang) })}
         >
           <Diorama spot={spot} size={dioramaSize} locked={!collected} live={collected} radius={24} atmosphere={atmosphere} />
           {zoomable && (
@@ -148,8 +151,8 @@ export default function SpotDetailScreen() {
 
         <View style={styles.titleRow}>
           <View style={{ flex: 1 }}>
-            <Text style={styles.nameEn}>{spot.nameEn}</Text>
-            <Text style={styles.name}>{spot.name}</Text>
+            <Text style={styles.nameEn}>{spotAltName(spot, lang)}</Text>
+            <Text style={styles.name}>{spotName(spot, lang)}</Text>
             <Text style={styles.city}>{spot.city}</Text>
           </View>
           {collected && entry && (
@@ -162,27 +165,27 @@ export default function SpotDetailScreen() {
         <View style={styles.tagRow}>
           <View style={[styles.tag, { flexDirection: 'row', alignItems: 'center', gap: 5 }]}>
             <MaterialCommunityIcons name={category.icon as any} size={13} color={t.subtext} />
-            <Text style={styles.tagText}>{category.label}</Text>
+            <Text style={styles.tagText}>{metaLabel(category, lang)}</Text>
           </View>
           <View style={[styles.tag, { borderColor: rarity.color }]}>
             <Text style={[styles.tagText, { color: rarity.color }]}>
               {Array.from({ length: rarity.dots })
                 .map(() => '●')
                 .join(' ')}{' '}
-              {rarity.label}
+              {metaLabel(rarity, lang)}
             </Text>
           </View>
           {/* today's season, and the weather at the spot once it has loaded */}
           <View style={[styles.tag, { flexDirection: 'row', alignItems: 'center', gap: 5 }]}>
             <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={13} color={t.subtext} />
             <Text style={styles.tagText}>
-              {seasonMeta[season].zh}
-              {night ? '夜' : '日'}
+              {metaLabel(seasonMeta[season], lang)}
+              {tr(night ? 'spot.night' : 'spot.day')}
             </Text>
             {weather ? (
               <>
                 <MaterialCommunityIcons name={skyIcon(weather) as any} size={13} color={t.subtext} />
-                <Text style={styles.tagText}>{describeWeather(weather)}</Text>
+                <Text style={styles.tagText}>{describeWeather(weather, lang)}</Text>
               </>
             ) : night ? (
               <MaterialCommunityIcons name={'weather-night' as any} size={13} color={t.subtext} />
@@ -194,10 +197,10 @@ export default function SpotDetailScreen() {
 
         {collected && entry ? (
           <View style={styles.collectedCard}>
-            <Text style={styles.collectedLabel}>COLLECTED</Text>
+            <Text style={styles.collectedLabel}>{tr('spot.collected')}</Text>
             <Text style={styles.collectedDate}>
               {new Date(entry.checkedInAt)
-                .toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })
+                .toLocaleDateString(lang === 'zh' ? 'zh-TW' : 'en-US', { month: lang === 'zh' ? 'long' : 'short', day: '2-digit', year: 'numeric' })
                 .toUpperCase()}
             </Text>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 6 }}>
@@ -207,33 +210,33 @@ export default function SpotDetailScreen() {
                 color={t.subtext}
               />
               <Text style={[styles.collectedVariant, { marginTop: 0 }]}>
-                {seasonMeta[shownSeason].label} VARIANT
+                {tr('spot.variant', { season: metaLabel(seasonMeta[shownSeason], lang) })}
                 {entry.sky
-                  ? ` · ${skyMeta[entry.sky].zh}${entry.temperature != null ? ` ${entry.temperature}°` : ''}`
+                  ? ` · ${skyName(entry.sky, lang)}${entry.temperature != null ? ` ${entry.temperature}°` : ''}`
                   : ''}
               </Text>
             </View>
             <Pressable style={styles.shareBtn} onPress={() => setSharing(true)}>
               <Ionicons name="share-outline" size={16} color={t.onAccent} />
-              <Text style={styles.shareBtnText}>分享收藏卡</Text>
+              <Text style={styles.shareBtnText}>{tr('spot.share')}</Text>
             </Pressable>
             <Pressable style={styles.navLink} onPress={onNavigate} accessibilityRole="button">
               <MaterialCommunityIcons name={'navigation-variant-outline' as any} size={14} color={t.subtext} />
-              <Text style={styles.navLinkText}>導航再訪{isFallback ? '' : ` · ${formatDistance(dist)}`}</Text>
+              <Text style={styles.navLinkText}>{tr('spot.revisit')}{isFallback ? '' : ` · ${formatDistance(dist)}`}</Text>
             </Pressable>
           </View>
         ) : (
           <View style={styles.checkinCard}>
             <Text style={styles.distText}>
-              {isFallback ? '開啟定位，才能知道你離這裡多遠' : `距離你 ${formatDistance(dist)}`}
+              {isFallback ? tr('spot.noLocation') : tr('spot.distance', { d: formatDistance(dist) })}
             </Text>
             {inRange ? (
-              <Text style={styles.inRangeText}>● 你已抵達收藏範圍</Text>
+              <Text style={styles.inRangeText}>{tr('spot.arrived')}</Text>
             ) : (
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 8 }}>
                 <MaterialCommunityIcons name={'lock' as any} size={12} color={t.faint} />
                 <Text style={[styles.outRangeText, { marginTop: 0 }]}>
-                  需進入 {formatDistance(radius)} 範圍內才能收藏
+                  {tr('spot.needRange', { d: formatDistance(radius) })}
                 </Text>
               </View>
             )}
@@ -243,13 +246,13 @@ export default function SpotDetailScreen() {
               disabled={!inRange}
             >
               <Text style={[styles.checkinBtnText, !inRange && { color: t.faint }]}>
-                留下足跡
+                {tr('spot.checkIn')}
               </Text>
             </Pressable>
             {/* hands the spot to Apple / Google Maps on the phone */}
             <Pressable style={styles.navBtn} onPress={onNavigate} accessibilityRole="button">
               <MaterialCommunityIcons name={'navigation-variant-outline' as any} size={16} color={t.accent} />
-              <Text style={styles.navBtnText}>{travelMode === 'walking' ? '步行導航' : '開車導航'}</Text>
+              <Text style={styles.navBtnText}>{tr(travelMode === 'walking' ? 'spot.walk' : 'spot.drive')}</Text>
             </Pressable>
             {/* demo helper: teleport to this spot in the simulator */}
             {DEMO_TOOLS && !inRange && (
@@ -259,7 +262,7 @@ export default function SpotDetailScreen() {
                   setDevLocation({ latitude: spot.latitude, longitude: spot.longitude })
                 }
               >
-                <Text style={styles.devBtnText}>DEV・模擬抵達這裡</Text>
+                <Text style={styles.devBtnText}>{tr('spot.demoTeleport')}</Text>
               </Pressable>
             )}
           </View>
@@ -267,7 +270,7 @@ export default function SpotDetailScreen() {
 
         {around.length > 0 && (
           <>
-            <Text style={styles.aroundTitle}>順路還有</Text>
+            <Text style={styles.aroundTitle}>{tr('spot.around')}</Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 10 }}>
               {around.map(({ spot: s, d }) => (
                 <Pressable
@@ -275,14 +278,14 @@ export default function SpotDetailScreen() {
                   style={styles.aroundCard}
                   onPress={() => router.replace(`/spot/${s.id}`)}
                   accessibilityRole="button"
-                  accessibilityLabel={`${s.name}，距離這裡 ${formatDistance(d)}`}
+                  accessibilityLabel={tr('spot.aroundA11y', { name: spotName(s, lang), d: formatDistance(d) })}
                 >
                   <Diorama spot={s} size={96} radius={14} locked={!collections[s.id]} />
                   <Text style={styles.aroundName} numberOfLines={1}>
                     {collections[s.id] ? '✓ ' : ''}
-                    {s.name}
+                    {spotName(s, lang)}
                   </Text>
-                  <Text style={styles.aroundDist}>相距 {formatDistance(d)}</Text>
+                  <Text style={styles.aroundDist}>{tr('spot.aroundDist', { d: formatDistance(d) })}</Text>
                 </Pressable>
               ))}
             </ScrollView>

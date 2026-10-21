@@ -92,7 +92,7 @@ const IslandiaWidget = (p: IslandiaWidgetProps, env: WidgetEnvironment) => {
       <VStack modifiers={[frame({ width: 132, height: 132 }), clipShape('roundedRectangle', 18)]}>{diorama}</VStack>
       <VStack alignment="leading" spacing={4}>
         <Text modifiers={[font({ size: 10, weight: 'bold' }), foregroundStyle(accent), lineLimit(1)]}>
-          {p.spotId ? p.nameEn : 'MY TAIWAN WORLD'}
+          {p.spotId ? p.nameEn : '我的台灣世界'}
         </Text>
         <Text modifiers={[font({ size: 18, weight: 'heavy' }), foregroundStyle(text), lineLimit(1)]}>
           {p.spotId ? p.name : '還沒有收藏'}
@@ -102,7 +102,7 @@ const IslandiaWidget = (p: IslandiaWidgetProps, env: WidgetEnvironment) => {
         </Text>
         <Spacer />
         <HStack>
-          <Text modifiers={[font({ size: 11, weight: 'bold' }), foregroundStyle(sub)]}>EXPLORED</Text>
+          <Text modifiers={[font({ size: 11, weight: 'bold' }), foregroundStyle(sub)]}>已探索</Text>
           <Spacer />
           <Text modifiers={[font({ size: 13, weight: 'heavy', design: 'rounded' }), foregroundStyle(text)]}>{count}</Text>
         </HStack>

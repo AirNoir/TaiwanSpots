@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import { collectionImage, DIORAMA_BG } from '../data/spotAssets';
 import { Spot, SPOTS } from '../data/spots';
+import { countyLabel, spotAltName, spotName, useLang, useT } from '../i18n';
 import { useActiveCollections } from '../store';
 import { makeStyles, Palette, useTheme } from '../theme';
 
@@ -29,6 +30,8 @@ const { width: SCREEN_W } = Dimensions.get('window');
 export function UnlockOverlay({ spot, visible, onDone }: Props) {
   const t = useTheme();
   const styles = useStyles();
+  const tr = useT();
+  const lang = useLang();
   // Progress as it will be once this spot is added (the check-in lands when the overlay closes).
   const collections = useActiveCollections();
   const already = !!collections[spot.id];
@@ -268,21 +271,21 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
           >
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 10 }}>
               <MaterialCommunityIcons name={'star-four-points' as any} size={14} color={t.accent} />
-              <Text style={styles.newLabel}>NEW LANDMARK</Text>
+              <Text style={styles.newLabel}>{tr('unlock.new')}</Text>
             </View>
-            <Text style={styles.name}>{spot.nameEn}</Text>
-            <Text style={styles.nameZh}>{spot.name}</Text>
+            <Text style={styles.name}>{spotName(spot, lang)}</Text>
+            <Text style={styles.nameZh}>{spotAltName(spot, lang)}</Text>
             <Text style={styles.date}>{dateStr}</Text>
             <Text style={styles.progress}>
-              第 {nth} 個景點 · {county} {countyGot}/{sameCounty.length}
-              {countyGot === sameCounty.length ? ' 全收齊！' : ''}
+              {tr('unlock.progress', { n: nth, county: countyLabel(county, lang), got: countyGot, total: sameCounty.length })}
+              {countyGot === sameCounty.length ? tr('unlock.complete') : ''}
             </Text>
           </Animated.View>
 
           <View style={{ height: 76, justifyContent: 'center' }}>
             {showButton && (
               <Pressable style={styles.button} onPress={onDone}>
-                <Text style={styles.buttonText}>加入收藏</Text>
+                <Text style={styles.buttonText}>{tr('unlock.add')}</Text>
               </Pressable>
             )}
           </View>

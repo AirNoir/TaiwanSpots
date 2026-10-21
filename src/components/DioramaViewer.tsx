@@ -14,6 +14,7 @@ import { scheduleOnRN } from 'react-native-worklets';
 import { collectionImage } from '../data/spotAssets';
 import { Spot } from '../data/spots';
 import { makeStyles, Palette } from '../theme';
+import { spotAltName, spotName, useLang, useT } from '../i18n';
 
 // Full-screen diorama viewer: pinch to zoom, drag to pan, double-tap to zoom
 // in / reset, swipe down (when not zoomed) to close. Mount it only while open
@@ -32,6 +33,8 @@ interface Props {
 export function DioramaViewer({ spot, onClose }: Props) {
   const styles = useStyles();
   const insets = useSafeAreaInsets();
+  const tr = useT();
+  const lang = useLang();
   const { width: W, height: H } = useWindowDimensions();
   const side = Math.min(W, H); // dioramas are square, shown "contain"
 
@@ -168,15 +171,15 @@ export function DioramaViewer({ spot, onClose }: Props) {
           style={[styles.header, { paddingTop: insets.top + 8 }, chromeStyle]}
           pointerEvents="none"
         >
-          <Text style={styles.title}>{spot.name}</Text>
-          <Text style={styles.subtitle}>{spot.nameEn}</Text>
+          <Text style={styles.title}>{spotName(spot, lang)}</Text>
+          <Text style={styles.subtitle}>{spotAltName(spot, lang)}</Text>
         </Animated.View>
         <Pressable
           style={[styles.close, { top: insets.top + 8 }]}
           onPress={onClose}
           hitSlop={12}
           accessibilityRole="button"
-          accessibilityLabel="關閉"
+          accessibilityLabel={tr('common.close')}
         >
           <Ionicons name="close" size={22} color="#FFFFFF" />
         </Pressable>
@@ -184,7 +187,7 @@ export function DioramaViewer({ spot, onClose }: Props) {
           style={[styles.hint, { bottom: insets.bottom + 24 }, chromeStyle]}
           pointerEvents="none"
         >
-          雙指縮放・點兩下放大・往下滑關閉
+          {tr('viewer.hint')}
         </Animated.Text>
       </GestureHandlerRootView>
     </Modal>

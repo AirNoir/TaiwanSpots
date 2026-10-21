@@ -12,7 +12,9 @@
       "supportsTablet": false,
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Islandia 需要你的位置,才能在你抵達景點時解鎖收藏。",
-        "LSApplicationQueriesSchemes": ["comgooglemaps"]
+        "LSApplicationQueriesSchemes": [
+          "comgooglemaps"
+        ]
       },
       "bundleIdentifier": "com.airnoir.islandia",
       "config": {
@@ -65,7 +67,8 @@
         }
       ],
       "expo-asset",
-      "expo-font"
+      "expo-font",
+      "expo-localization"
     ],
     "extra": {
       "router": {},

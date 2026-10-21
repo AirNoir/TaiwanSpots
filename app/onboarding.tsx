@@ -14,6 +14,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { TaiwanWorld } from '../src/components/TaiwanWorld';
 import { useStore } from '../src/store';
 import { makeStyles, Palette, useTheme } from '../src/theme';
+import { I18nKey, useT } from '../src/i18n';
 
 const { width: SCREEN_W, height: SCREEN_H } = Dimensions.get('window');
 // The intro map is ~1.7× taller than wide; leave room for the copy and buttons on short phones (SE: 667 pt).
@@ -23,31 +24,32 @@ const PAGES = [
   {
     key: 'intro',
     icon: null as string | null,
-    title: '走過的地方，\n都會留在你的世界。',
-    body: 'Islandia 是一座由真實旅行\n建立起來的微縮台灣。',
+    title: 'onb.1.title' as I18nKey,
+    body: 'onb.1.body' as I18nKey,
   },
   {
     key: 'arrive',
     icon: 'compass-rose',
-    title: '抵達景點',
-    body: '真的去到那裡。',
+    title: 'onb.2.title' as I18nKey,
+    body: 'onb.2.body' as I18nKey,
   },
   {
     key: 'checkin',
     icon: 'shoe-print',
-    title: '留下足跡',
-    body: '解鎖專屬微縮場景。',
+    title: 'onb.3.title' as I18nKey,
+    body: 'onb.3.body' as I18nKey,
   },
   {
     key: 'build',
     icon: 'island',
-    title: '建立你的台灣',
-    body: '每趟旅行，都讓世界更完整。',
+    title: 'onb.4.title' as I18nKey,
+    body: 'onb.4.body' as I18nKey,
   },
 ];
 
 export default function OnboardingScreen() {
   const t = useTheme();
+  const tr = useT();
   const styles = useStyles();
   const router = useRouter();
   const setOnboarded = useStore((s) => s.setOnboarded);
@@ -93,8 +95,8 @@ export default function OnboardingScreen() {
                 />
               </View>
             )}
-            <Text style={styles.title}>{p.title}</Text>
-            <Text style={styles.body}>{p.body}</Text>
+            <Text style={styles.title}>{tr(p.title)}</Text>
+            <Text style={styles.body}>{tr(p.body)}</Text>
           </View>
         ))}
       </ScrollView>
@@ -107,7 +109,7 @@ export default function OnboardingScreen() {
         </View>
         {page === PAGES.length - 1 ? (
           <Pressable style={styles.cta} onPress={start}>
-            <Text style={styles.ctaText}>開始探索</Text>
+            <Text style={styles.ctaText}>{tr('onb.start')}</Text>
           </Pressable>
         ) : (
           <Pressable
@@ -117,7 +119,7 @@ export default function OnboardingScreen() {
               setPage(page + 1);
             }}
           >
-            <Text style={styles.nextText}>下一步</Text>
+            <Text style={styles.nextText}>{tr('onb.next')}</Text>
           </Pressable>
         )}
       </View>

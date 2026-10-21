@@ -11,7 +11,8 @@ import {
   View,
 } from 'react-native';
 import ViewShot from 'react-native-view-shot';
-import { seasonMeta, skyMeta } from '../atmosphere';
+import { seasonMeta, skyName } from '../atmosphere';
+import { metaLabel, spotAltName, spotName, useLang, useT } from '../i18n';
 import { Spot } from '../data/spots';
 import { CollectionEntry, entrySeason } from '../store';
 import { makeStyles, Palette, useTheme } from '../theme';
@@ -31,6 +32,8 @@ const { width: SCREEN_W } = Dimensions.get('window');
 export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visible, onClose }: Props) {
   const t = useTheme();
   const styles = useStyles();
+  const tr = useT();
+  const lang = useLang();
   const shotRef = useRef<any>(null);
   const [sharing, setSharing] = useState(false);
 
@@ -39,10 +42,10 @@ export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visibl
 
   const date = new Date(entry.checkedInAt);
   const dateStr = date
-    .toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })
+    .toLocaleDateString(lang === 'zh' ? 'zh-TW' : 'en-US', { month: lang === 'zh' ? 'long' : 'short', day: '2-digit', year: 'numeric' })
     .toUpperCase();
   const season = entrySeason(entry);
-  const variant = `${seasonMeta[season].label}${entry.sky ? ` · ${skyMeta[entry.sky].zh}` : ''}`;
+  const variant = `${tr('spot.variant', { season: metaLabel(seasonMeta[season], lang) })}${entry.sky ? ` · ${skyName(entry.sky, lang)}` : ''}`;
 
   const share = async () => {
     try {
@@ -50,12 +53,12 @@ export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visibl
       const uri = await shotRef.current?.capture?.();
       if (!uri) throw new Error('capture failed');
       if (!(await Sharing.isAvailableAsync())) {
-        Alert.alert('無法分享', '這台裝置不支援分享圖片。');
+        Alert.alert(tr('share.fail'), tr('share.unsupported'));
         return;
       }
       await Sharing.shareAsync(uri, { mimeType: 'image/png' });
     } catch {
-      Alert.alert('無法分享', '收藏卡產生失敗，請再試一次。');
+      Alert.alert(tr('share.fail'), tr('share.error'));
     } finally {
       setSharing(false);
     }
@@ -67,8 +70,8 @@ export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visibl
         <ViewShot ref={shotRef} options={{ format: 'png', quality: 1 }}>
           <View style={[styles.card, { width: cardW }]}>
             <Diorama spot={spot} size={dioramaSize} radius={20} atmosphere={{ season, sky: entry.sky }} />
-            <Text style={styles.name}>{spot.nameEn}</Text>
-            <Text style={styles.nameZh}>{spot.name}</Text>
+            <Text style={styles.name}>{spotName(spot, lang)}</Text>
+            <Text style={styles.nameZh}>{spotAltName(spot, lang)}</Text>
             <Text style={styles.serial}>#{String(entry.order).padStart(3, '0')}</Text>
             <Text style={styles.meta}>{dateStr}</Text>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 6 }}>
@@ -82,20 +85,20 @@ export function ShareCardModal({ spot, entry, totalCollected, totalSpots, visibl
               </Text>
             </View>
             <View style={styles.divider} />
-            <Text style={styles.myTaiwan}>MY TAIWAN</Text>
+            <Text style={styles.myTaiwan}>{tr('share.myTaiwan')}</Text>
             <Text style={styles.progress}>
               {totalCollected} / {totalSpots}
             </Text>
-            <Text style={styles.brand}>collected with Islandia</Text>
+            <Text style={styles.brand}>{tr('share.by')}</Text>
           </View>
         </ViewShot>
 
         <View style={styles.actions}>
           <Pressable style={styles.shareBtn} onPress={share} disabled={sharing}>
-            <Text style={styles.shareBtnText}>{sharing ? '處理中…' : '分享'}</Text>
+            <Text style={styles.shareBtnText}>{tr(sharing ? 'share.busy' : 'share.share')}</Text>
           </Pressable>
           <Pressable style={styles.closeBtn} onPress={onClose}>
-            <Text style={styles.closeBtnText}>關閉</Text>
+            <Text style={styles.closeBtnText}>{tr('common.close')}</Text>
           </Pressable>
         </View>
       </View>

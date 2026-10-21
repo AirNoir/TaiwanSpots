@@ -1,6 +1,8 @@
 import * as Linking from 'expo-linking';
 import { ActionSheetIOS, Platform } from 'react-native';
 import { Spot } from './data/spots';
+import { I18nKey, resolveLang, translate } from './i18n';
+import { useStore } from './store';
 
 // Hands a spot to the phone's own navigation app; nothing is routed in-app.
 
@@ -49,6 +51,8 @@ export async function openDirections(
   mode: TravelMode,
   theme: 'light' | 'dark' = 'light',
 ): Promise<boolean> {
+  const lang = resolveLang(useStore.getState().language);
+  const say = (key: I18nKey, vars?: Record<string, string>) => translate(lang, key, vars);
   if (Platform.OS === 'ios') {
     const hasGoogle = await Linking.canOpenURL(GOOGLE_IOS).catch(() => false);
     let app: MapApp | null = 'apple';
@@ -56,8 +60,8 @@ export async function openDirections(
       app = await new Promise<MapApp | null>((resolve) =>
         ActionSheetIOS.showActionSheetWithOptions(
           {
-            title: `導航到 ${spot.name}`,
-            options: ['取消', 'Apple 地圖', 'Google 地圖'],
+            title: say('maps.navigateTo', { name: lang === 'zh' ? spot.name : spot.nameEn }),
+            options: [say('common.cancel'), say('maps.apple'), say('maps.google')],
             cancelButtonIndex: 0,
             userInterfaceStyle: theme,
           },
