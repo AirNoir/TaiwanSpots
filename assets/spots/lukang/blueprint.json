@@ -64,6 +64,11 @@
       "notes": "保留老街建築與人物，重整為四邊小圓角方形基座，移除不規則外框。",
       "nativeAnd512": "visually checked",
       "userAcceptance": "pending"
+    },
+    "review06": {
+      "model": "review-v5.png",
+      "userAcceptance": "approved",
+      "source": "docs/reviews/islandia-art-review-20261021-06.json"
     }
   }
 }

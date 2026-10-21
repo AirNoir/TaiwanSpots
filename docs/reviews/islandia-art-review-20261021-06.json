@@ -1,0 +1,54 @@
+{
+  "exportedAt": "2026-10-21T05:56:39.982Z",
+  "colorPreview": {
+    "saturation": 0.88,
+    "scope": "model-display-only"
+  },
+  "reviews": [
+    {
+      "id": "lukang",
+      "name": "鹿港老街",
+      "status": "approved",
+      "note": "",
+      "model": "review-v5.png",
+      "photo": "google-ground-review.jpg",
+      "updatedAt": "2026-10-21T05:47:18.805Z"
+    },
+    {
+      "id": "houtong",
+      "name": "猴硐貓村",
+      "status": "adjust",
+      "note": "不規則的天橋, 跟一般天橋應該是平行的,  剛剛試著用街景圖看了一下。",
+      "model": "review-v6.png",
+      "photo": "official-bridge.jpg",
+      "updatedAt": "2026-10-21T05:51:49.273Z"
+    },
+    {
+      "id": "tianwei",
+      "name": "田尾公路花園",
+      "status": "approved",
+      "note": "",
+      "model": "review-v3.png",
+      "photo": "official-4.jpg",
+      "updatedAt": "2026-10-21T05:52:13.666Z"
+    },
+    {
+      "id": "heping-island",
+      "name": "和平島公園",
+      "status": "adjust",
+      "note": "你做錯了, 我要的是橋的水平跟地基的水平要平行, 你做錯了",
+      "model": "review-v7.png",
+      "photo": "official-2.jpg",
+      "updatedAt": "2026-10-21T05:53:24.107Z"
+    },
+    {
+      "id": "liushidan",
+      "name": "六十石山",
+      "status": "approved",
+      "note": "",
+      "model": "review-v5.png",
+      "photo": "official-2.jpg",
+      "updatedAt": "2026-10-21T05:56:36.581Z"
+    }
+  ]
+}

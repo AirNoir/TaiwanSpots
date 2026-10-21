@@ -74,6 +74,13 @@
       "notes": "依兩座島式月台、跨站旅客通道及下接月台樓梯重新製作，站房回到山坡對側；保留藍柱與波浪雨棚。歷史照片用於結構核對，非 2026 現況測繪；貓橋與旅客通道接點仍為微縮簡化。",
       "nativeAnd512": "visually checked",
       "userAcceptance": "pending"
+    },
+    "review06": {
+      "model": "review-v8.png",
+      "result": "self-checked-preview",
+      "notes": "貓橋與矩形旅客通道拆成兩座分離的平行跨軌天橋；保留兩座島式月台與下接樓梯。結構按實照與衛星圖核對，精確尺寸及現況細部仍為微縮簡化。",
+      "userAcceptance": "pending",
+      "nativeAnd512": "visually inspected"
     }
   }
 }

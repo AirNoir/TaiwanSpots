@@ -67,6 +67,13 @@
       "notes": "改為小圓角方形底座，調整觀看方位，木橋由左往右橫跨潮池，橋面保持同一高度，避免向遠方下傾的視覺。",
       "nativeAnd512": "visually checked",
       "userAcceptance": "pending"
+    },
+    "review06": {
+      "model": "review-v10.png",
+      "result": "pending-alignment",
+      "notes": "已修正橋面軸向，較舊稿接近底座邊線；但直線段仍未精確平行，三次嘗試後仍未通過幾何自檢。比較頁保留 v7，本頁展示 v10 候選稿，未當成定稿。",
+      "userAcceptance": "pending",
+      "nativeAnd512": "visually inspected"
     }
   }
 }

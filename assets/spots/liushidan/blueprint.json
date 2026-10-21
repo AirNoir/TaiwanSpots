@@ -67,6 +67,11 @@
       "notes": "已修正大切角，改為四邊等長的小圓角方形基座；保留擴大的金針花坡、步道與涼亭。",
       "nativeAnd512": "visually checked",
       "userAcceptance": "pending"
+    },
+    "review06": {
+      "model": "review-v5.png",
+      "userAcceptance": "approved",
+      "source": "docs/reviews/islandia-art-review-20261021-06.json"
     }
   }
 }

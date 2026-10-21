@@ -67,6 +67,11 @@
       "notes": "石牆四字已核對為「公路花園」；直立牌保留「田尾／公路／花園」，其餘景物不變。",
       "nativeAnd512": "visually checked",
       "userAcceptance": "pending"
+    },
+    "review06": {
+      "model": "review-v3.png",
+      "userAcceptance": "approved",
+      "source": "docs/reviews/islandia-art-review-20261021-06.json"
     }
   }
 }
