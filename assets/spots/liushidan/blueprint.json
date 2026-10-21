@@ -60,6 +60,13 @@
       "result": "Expanded flower-slope crop accomplished, but three attempts retain an oversized chamfer/flat fifth edge at near-right base corner. New candidate NOT selected; original v1 retained pending proper square-base revision. No more repeated identical repair calls this round.",
       "userAcceptance": "pending",
       "thumbnailCheck": "Failed base QA; candidate not selected"
+    },
+    "review05": {
+      "model": "review-v5.png",
+      "result": "self-checked-preview",
+      "notes": "已修正大切角，改為四邊等長的小圓角方形基座；保留擴大的金針花坡、步道與涼亭。",
+      "nativeAnd512": "visually checked",
+      "userAcceptance": "pending"
     }
   }
 }

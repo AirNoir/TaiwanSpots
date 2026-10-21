@@ -13,7 +13,10 @@
   "lockedGeometry": [
     "railway station in a valley",
     "footbridge over tracks",
-    "hillside houses"
+    "hillside houses",
+    "two island passenger platforms with tracks on both sides",
+    "enclosed elevated passenger concourse with stairs down to each island",
+    "station east of rail corridor opposite western hillside"
   ],
   "lockedIdentity": [
     "many cats on walls",
@@ -33,7 +36,10 @@
     "ground": [
       "official-bridge.jpg",
       "official-bridge-second.jpg",
-      "real-photo.jpg"
+      "real-photo.jpg",
+      "photographer-concourse-2015.jpg",
+      "photographer-platforms-2015.jpg",
+      "photographer-canopy-2015.jpg"
     ],
     "aerial": [
       "google-satellite-review.jpg"
@@ -61,6 +67,13 @@
       "result": "Continuous open railway corridor parallel to western hillside; bridge crosses above tracks to station. No tracks into hillside. Smaller complete base; exact canopy/house details simplified. Official 2025 bridge photos and satellite independently rechecked.",
       "userAcceptance": "pending",
       "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    },
+    "review05": {
+      "model": "review-v6.png",
+      "result": "self-checked-preview",
+      "notes": "依兩座島式月台、跨站旅客通道及下接月台樓梯重新製作，站房回到山坡對側；保留藍柱與波浪雨棚。歷史照片用於結構核對，非 2026 現況測繪；貓橋與旅客通道接點仍為微縮簡化。",
+      "nativeAnd512": "visually checked",
+      "userAcceptance": "pending"
     }
   }
 }

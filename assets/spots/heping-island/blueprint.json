@@ -60,6 +60,13 @@
       "result": "More elevated view clarifies coplanar zigzag deck and water plane; genuine steep hillside retained. Plan dimensions not surveyed.",
       "userAcceptance": "pending",
       "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    },
+    "review05": {
+      "model": "review-v7.png",
+      "result": "self-checked-preview",
+      "notes": "改為小圓角方形底座，調整觀看方位，木橋由左往右橫跨潮池，橋面保持同一高度，避免向遠方下傾的視覺。",
+      "nativeAnd512": "visually checked",
+      "userAcceptance": "pending"
     }
   }
 }

@@ -1,0 +1,126 @@
+{
+  "exportedAt": "2026-10-21T02:42:29.639Z",
+  "colorPreview": {
+    "saturation": 0.88,
+    "scope": "model-display-only"
+  },
+  "reviews": [
+    {
+      "id": "lukang",
+      "name": "鹿港老街",
+      "status": "adjust",
+      "note": "修正基座的不規則, 要跟其他模型一樣為方形有圓角。",
+      "model": "review-v4.png",
+      "photo": "google-ground-review.jpg",
+      "updatedAt": "2026-10-21T02:33:20.596Z"
+    },
+    {
+      "id": "anping-treehouse",
+      "name": "安平樹屋",
+      "status": "approved",
+      "note": "",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-21T02:34:30.503Z"
+    },
+    {
+      "id": "taipingshan",
+      "name": "太平山",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-21T02:34:43.643Z"
+    },
+    {
+      "id": "huashan-1914",
+      "name": "華山1914文創園區",
+      "status": "approved",
+      "note": "",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-21T02:35:09.842Z"
+    },
+    {
+      "id": "luce-chapel",
+      "name": "路思義教堂",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-21T02:35:56.248Z"
+    },
+    {
+      "id": "houtong",
+      "name": "猴硐貓村",
+      "status": "adjust",
+      "note": "月台設計有問題, 上方的管道其實是月台的通行到～所以是有跨越月台的～月台的設計也不符合真實狀況",
+      "model": "review-v4.png",
+      "photo": "official-bridge-second.jpg",
+      "updatedAt": "2026-10-21T02:38:11.894Z"
+    },
+    {
+      "id": "jinguashi",
+      "name": "金瓜石黃金博物館",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "official-second.jpg",
+      "updatedAt": "2026-10-21T02:38:26.907Z"
+    },
+    {
+      "id": "yinyang-sea",
+      "name": "水湳洞陰陽海",
+      "status": "approved",
+      "note": "",
+      "model": "review-v4.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-21T02:38:40.670Z"
+    },
+    {
+      "id": "tianwei",
+      "name": "田尾公路花園",
+      "status": "adjust",
+      "note": "\"田路花園\" 是錯的, 應該是 \"公路花園\", 有實際照片可以參考",
+      "model": "review-v2.png",
+      "photo": "official-third.jpg",
+      "updatedAt": "2026-10-21T02:40:26.979Z"
+    },
+    {
+      "id": "formosa-boulevard",
+      "name": "美麗島站光之穹頂",
+      "status": "approved",
+      "note": "",
+      "model": "review-v3.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-21T02:40:39.087Z"
+    },
+    {
+      "id": "heping-island",
+      "name": "和平島公園",
+      "status": "adjust",
+      "note": "基座應該是方形有圓角, 請修正。 水平還是有問題, 不應該往遠方向下傾斜",
+      "model": "review-v4.png",
+      "photo": "official-2.jpg",
+      "updatedAt": "2026-10-21T02:41:49.995Z"
+    },
+    {
+      "id": "donggang",
+      "name": "東港華僑市場",
+      "status": "approved",
+      "note": "",
+      "model": "review-v3.png",
+      "photo": "official-3.jpg",
+      "updatedAt": "2026-10-21T02:42:04.504Z"
+    },
+    {
+      "id": "water-flowing-up",
+      "name": "水往上流",
+      "status": "approved",
+      "note": "",
+      "model": "review-v2.png",
+      "photo": "real-photo.jpg",
+      "updatedAt": "2026-10-21T02:42:16.928Z"
+    }
+  ]
+}

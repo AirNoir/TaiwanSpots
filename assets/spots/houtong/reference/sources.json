@@ -56,6 +56,55 @@
         "Cat village WEST/NORTHWEST hillside of station; main rail corridor NE-SW. Cat bridge crosses tracks from village to station east, not village north. Satellite checked2026-10-19."
       ],
       "limitations": "Not metric survey; no calibrated lens correction or Street View capture."
+    },
+    {
+      "local": "photographer-concourse-2015.jpg",
+      "page": "https://bronto0809.pixnet.net/blog/posts/13077802971",
+      "image": "https://pimg.1px.tw/bronto0809/1455862998-2427038619.jpg",
+      "credit": "迷惑龍 / bronto0809, original photographer blog",
+      "capture": "2015-10-25 per author; article published2016-04-06",
+      "accessed": "2026-10-21",
+      "kind": "original real platform/concourse photograph",
+      "usage": "Visual study only; copyright retained, no redistribution license or final texture use asserted. Historical photo not evidence of current2026 elevators.",
+      "observations": [
+        "Real concrete glazed passenger overpass from station upper hall crosses tracks and stairway descends to platform, not a utility pipe."
+      ]
+    },
+    {
+      "local": "photographer-platforms-2015.jpg",
+      "page": "https://bronto0809.pixnet.net/blog/posts/13077802971",
+      "image": "https://pimg.1px.tw/bronto0809/1455863002-3984758080.jpg",
+      "credit": "迷惑龍 / bronto0809, original photographer blog",
+      "capture": "2015-10-25 per author; article published2016-04-06",
+      "accessed": "2026-10-21",
+      "kind": "original real platform/concourse photograph",
+      "usage": "Visual study only; copyright retained, no redistribution license or final texture use asserted. Historical photo not evidence of current2026 elevators.",
+      "observations": [
+        "Two separated island platforms, tracks on both sides, blue tiled columns and concrete canopies."
+      ]
+    },
+    {
+      "local": "photographer-canopy-2015.jpg",
+      "page": "https://bronto0809.pixnet.net/blog/posts/13077802971",
+      "image": "https://pimg.1px.tw/bronto0809/1455862998-908852057.jpg",
+      "credit": "迷惑龍 / bronto0809, original photographer blog",
+      "capture": "2015-10-25 per author; article published2016-04-06",
+      "accessed": "2026-10-21",
+      "kind": "original real platform/concourse photograph",
+      "usage": "Visual study only; copyright retained, no redistribution license or final texture use asserted. Historical photo not evidence of current2026 elevators.",
+      "observations": [
+        "Scalloped/curved concrete canopy fascia and blue columns; overhead electric catenary distinct from pedestrian concourse."
+      ]
     }
-  ]
+  ],
+  "review05Research": {
+    "officialConcourseSource": "https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/tip/tip00H/tipH21/view?tripNo=54d13f7f42494e46b528f84abf2b73ed",
+    "elevatorNews": "https://www.motc.gov.tw/ch/app/news_list/view?id=14&module=news&serno=01bd64c7-e5b9-4e26-a5df-578006b0d33c",
+    "publication": "2026-09-22",
+    "observations": [
+      "Station upper hall and passenger overpass provide platform access; station architecture is not single groundfloor ticketbox.",
+      "Official news confirms station and first/second-platform elevators opened2026-09-22, exact external elevator geometry not verified visually.",
+      "Model is evidence-informed structural miniature combining documented platform forms with2025 catbridge shell; not complete current station survey."
+    ]
+  }
 }

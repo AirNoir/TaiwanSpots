@@ -60,6 +60,13 @@
       "result": "Public garden entrance monument and flower/bike streetscape replace single-shop identity. Three panel columns and flowerarch from official photo, tiny family cycle. Exact rear business adjacency remains simplified/pending; not a measured whole-region map.",
       "userAcceptance": "pending",
       "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    },
+    "review05": {
+      "model": "review-v3.png",
+      "result": "self-checked-preview",
+      "notes": "石牆四字已核對為「公路花園」；直立牌保留「田尾／公路／花園」，其餘景物不變。",
+      "nativeAnd512": "visually checked",
+      "userAcceptance": "pending"
     }
   }
 }
