@@ -307,10 +307,8 @@ export function TaiwanWorld({
 
   // Screen position of a map point under the current (animated) zoom.
   // RN scales about the view centre, then translates.
-  const animatedPos = (p: Pt) => ({
-    x: Animated.add(Animated.multiply(scale, p.x - width / 2), Animated.add(tx, width / 2)),
-    y: Animated.add(Animated.multiply(scale, p.y - height / 2), Animated.add(ty, height / 2)),
-  });
+  const txC = useMemo(() => Animated.add(tx, width / 2), [tx, width]);
+  const tyC = useMemo(() => Animated.add(ty, height / 2), [ty, height]);
 
   // ── ambient motion: drifting fog + breathing lights ───────
   const [drift] = useState(() => new Animated.Value(0));
@@ -431,6 +429,21 @@ export function TaiwanWorld({
     const top = (m: Marker) => (m.kind === 'target' ? 2 : m.kind === 'pending' ? 1 : 0);
     return list.sort((a, b) => top(a) - top(b) || a.at.y - b.at.y);
   }, [spots, geo.positions, collectedIds, regionId, county, countyCounts, zoom.s, width, target]);
+
+  // Animated screen position per marker, built once per marker list rather than on every render.
+  const markerPos = useMemo(
+    () =>
+      new Map(
+        markers.map((m) => [
+          m,
+          {
+            x: Animated.add(Animated.multiply(scale, m.at.x - width / 2), txC),
+            y: Animated.add(Animated.multiply(scale, m.at.y - height / 2), tyC),
+          },
+        ]),
+      ),
+    [markers, scale, txC, tyC, width, height],
+  );
 
   // Final on-screen position once the zoom has settled.
   const screenPos = (p: Pt) => ({
@@ -801,7 +814,7 @@ export function TaiwanWorld({
 
         {/* landmarks, lights and pending pins — repositioned by the zoom, never scaled */}
         {markers.map((m) => {
-          const pos = animatedPos(m.at);
+          const pos = markerPos.get(m)!;
           return (
             <Animated.View
               key={m.spot.id}
