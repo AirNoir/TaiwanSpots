@@ -6,6 +6,7 @@ import {
   Pressable,
   StyleSheet,
   Text,
+  TextInput,
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -19,6 +20,8 @@ import { useAtmosphereOverride, useNight } from '../../src/useAtmosphere';
 import { useLocation } from '../../src/useLocation';
 
 const REGION_FILTERS: (Region | 'all')[] = ['all', 'north', 'central', 'south', 'east'];
+type Owned = 'all' | 'todo' | 'done';
+const OWNED_LABEL: Record<Owned, string> = { all: '全部', todo: '未收藏', done: '已收藏' };
 
 export default function ExploreScreen() {
   const t = useTheme();
@@ -29,20 +32,23 @@ export default function ExploreScreen() {
   const setDevLocation = useStore((s) => s.setDevLocation);
   const { location, isDev, isFallback } = useLocation();
   const [region, setRegion] = useState<Region | 'all'>('all');
+  const [owned, setOwned] = useState<Owned>('all');
+  const [query, setQuery] = useState('');
   const override = useAtmosphereOverride();
   const night = useNight();
 
-  const rows = useMemo(
-    () =>
-      SPOTS.filter((s) => region === 'all' || s.region === region)
-        .map((s) => ({
-          spot: s,
-          dist: distanceMeters(location, s),
-          collected: !!collections[s.id],
-        }))
-        .sort((a, b) => a.dist - b.dist),
-    [location, collections, region]
-  );
+  const rows = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return SPOTS.filter((s) => region === 'all' || s.region === region)
+      .filter((s) => owned === 'all' || (owned === 'done') === !!collections[s.id])
+      .filter((s) => !q || `${s.name} ${s.nameEn} ${s.city}`.toLowerCase().includes(q))
+      .map((s) => ({
+        spot: s,
+        dist: distanceMeters(location, s),
+        collected: !!collections[s.id],
+      }))
+      .sort((a, b) => a.dist - b.dist);
+  }, [location, collections, region, owned, query]);
 
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
@@ -82,6 +88,20 @@ export default function ExploreScreen() {
         </View>
       )}
 
+      <View style={styles.searchBox}>
+        <MaterialCommunityIcons name={'magnify' as any} size={18} color={t.faint} />
+        <TextInput
+          value={query}
+          onChangeText={setQuery}
+          placeholder="搜尋景點、城市"
+          placeholderTextColor={t.faint}
+          style={styles.searchInput}
+          returnKeyType="search"
+          clearButtonMode="while-editing"
+          autoCorrect={false}
+        />
+      </View>
+
       <View style={styles.filterRow}>
         {REGION_FILTERS.map((r) => (
           <Pressable
@@ -95,9 +115,27 @@ export default function ExploreScreen() {
           </Pressable>
         ))}
       </View>
+      <View style={styles.ownedRow}>
+        {(Object.keys(OWNED_LABEL) as Owned[]).map((o) => (
+          <Pressable key={o} onPress={() => setOwned(o)} hitSlop={6} style={[styles.ownedChip, owned === o && styles.ownedChipOn]}>
+            <Text style={[styles.ownedText, owned === o && styles.ownedTextOn]}>{OWNED_LABEL[o]}</Text>
+          </Pressable>
+        ))}
+        <Text style={styles.resultCount}>{rows.length} 個景點</Text>
+      </View>
 
       <FlatList
         data={rows}
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="handled"
+        ListEmptyComponent={
+          <View style={styles.empty}>
+            <MaterialCommunityIcons name={'map-search-outline' as any} size={36} color={t.faint} />
+            <Text style={styles.emptyText}>
+              {owned === 'todo' && !query ? '這裡全部收藏了！' : '找不到符合的景點'}
+            </Text>
+          </View>
+        }
         keyExtractor={(item) => item.spot.id}
         contentContainerStyle={{ padding: 20, paddingTop: 8, paddingBottom: 40 }}
         renderItem={({ item }) => {
@@ -188,6 +226,27 @@ const useStyles = makeStyles((t: Palette) =>
     marginTop: 12,
     marginBottom: 4,
   },
+  searchBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    marginHorizontal: 20,
+    marginTop: 12,
+    paddingHorizontal: 12,
+    borderRadius: 14,
+    backgroundColor: t.card,
+    borderWidth: 1,
+    borderColor: t.cardBorder,
+  },
+  searchInput: { flex: 1, color: t.text, fontSize: 15, paddingVertical: 10 },
+  ownedRow: { flexDirection: 'row', alignItems: 'center', gap: 14, paddingHorizontal: 22, marginTop: 10, marginBottom: 2 },
+  ownedChip: { paddingVertical: 3, borderBottomWidth: 2, borderBottomColor: 'transparent' },
+  ownedChipOn: { borderBottomColor: t.accent },
+  ownedText: { color: t.faint, fontSize: 13, fontWeight: '600' },
+  ownedTextOn: { color: t.text },
+  resultCount: { marginLeft: 'auto', color: t.faint, fontSize: 12 },
+  empty: { alignItems: 'center', gap: 10, paddingTop: 60 },
+  emptyText: { color: t.subtext, fontSize: 14 },
   filterChip: {
     paddingHorizontal: 14,
     paddingVertical: 7,

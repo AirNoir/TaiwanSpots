@@ -842,14 +842,14 @@ export function TaiwanWorld({
               <Text style={styles.backText}>{county ? active.zh : '全台灣'}</Text>
             </Pressable>
             <View style={styles.regionTag} pointerEvents="none">
-              <Text style={[styles.regionName, night && styles.onNight]}>{county ?? active.zh}</Text>
+              <Text style={styles.regionName}>{county ?? active.zh}</Text>
               <Text style={styles.regionCount}>
                 {county
                   ? `${countyCounts.get(county)?.found ?? 0} / ${countyCounts.get(county)?.total ?? 0} 已收藏`
                   : `${active.found} / ${active.total} 已收藏`}
               </Text>
               {weather?.[active.id] && (
-                <Text style={[styles.regionWeather, night && styles.onNightSoft]}>{describeWeather(weather[active.id] as Weather)}</Text>
+                <Text style={styles.regionWeather}>{describeWeather(weather[active.id] as Weather)}</Text>
               )}
             </View>
           </>
@@ -1292,11 +1292,18 @@ const useStyles = makeStyles((t: Palette) =>
     backgroundColor: t.mode === 'dark' ? 'rgba(11,18,32,0.7)' : 'rgba(255,255,255,0.85)',
   },
   backText: { color: t.text, fontSize: 12, fontWeight: '600' },
-  regionTag: { position: 'absolute', right: 10, top: 8, alignItems: 'flex-end' },
+  regionTag: {
+    position: 'absolute',
+    right: 8,
+    top: 8,
+    alignItems: 'flex-end',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 12,
+    backgroundColor: t.mode === 'dark' ? 'rgba(11,18,32,0.7)' : 'rgba(255,255,255,0.85)',
+  },
   regionName: { color: t.text, fontSize: 15, fontWeight: '800' },
   regionCount: { color: t.accent, fontSize: 11, letterSpacing: 1, marginTop: 2 },
-  onNight: { color: '#F4EFE3' },
-  onNightSoft: { color: 'rgba(244,239,227,0.7)' },
   regionWeather: { color: t.subtext, fontSize: 11, marginTop: 2 },
   chips: { flexDirection: 'row', justifyContent: 'center', gap: 6, marginTop: 8, flexWrap: 'wrap' },
   chip: {
