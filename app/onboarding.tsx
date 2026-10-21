@@ -15,7 +15,9 @@ import { TaiwanWorld } from '../src/components/TaiwanWorld';
 import { useStore } from '../src/store';
 import { makeStyles, Palette, useTheme } from '../src/theme';
 
-const { width: SCREEN_W } = Dimensions.get('window');
+const { width: SCREEN_W, height: SCREEN_H } = Dimensions.get('window');
+// The intro map is ~1.7× taller than wide; leave room for the copy and buttons on short phones (SE: 667 pt).
+const INTRO_MAP_W = Math.min(SCREEN_W * 0.56, (SCREEN_H - 380) / 1.7);
 
 const PAGES = [
   {
@@ -85,7 +87,7 @@ export default function OnboardingScreen() {
             ) : (
               <View style={{ marginBottom: 32 }}>
                 <TaiwanWorld
-                  width={SCREEN_W * 0.56}
+                  width={INTRO_MAP_W}
                   collectedIds={new Set(['taipei-101', 'jiufen', 'sun-moon-lake', 'kenting', 'taroko', 'alishan'])}
                   interactive={false}
                 />
