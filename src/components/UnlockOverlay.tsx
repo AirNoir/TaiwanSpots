@@ -14,7 +14,8 @@ import {
   View,
 } from 'react-native';
 import { collectionImage, DIORAMA_BG } from '../data/spotAssets';
-import { Spot } from '../data/spots';
+import { Spot, SPOTS } from '../data/spots';
+import { useActiveCollections } from '../store';
 import { makeStyles, Palette, useTheme } from '../theme';
 
 interface Props {
@@ -28,6 +29,13 @@ const { width: SCREEN_W } = Dimensions.get('window');
 export function UnlockOverlay({ spot, visible, onDone }: Props) {
   const t = useTheme();
   const styles = useStyles();
+  // Progress as it will be once this spot is added (the check-in lands when the overlay closes).
+  const collections = useActiveCollections();
+  const already = !!collections[spot.id];
+  const nth = Object.keys(collections).length + (already ? 0 : 1);
+  const county = spot.city.split('・')[0];
+  const sameCounty = SPOTS.filter((s) => s.region === spot.region && s.city.split('・')[0] === county);
+  const countyGot = sameCounty.filter((s) => collections[s.id]).length + (already ? 0 : 1);
   const size = Math.min(SCREEN_W - 80, 300);
   const { art } = spot;
   const image = collectionImage(spot.id);
@@ -265,6 +273,10 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
             <Text style={styles.name}>{spot.nameEn}</Text>
             <Text style={styles.nameZh}>{spot.name}</Text>
             <Text style={styles.date}>{dateStr}</Text>
+            <Text style={styles.progress}>
+              第 {nth} 個景點 · {county} {countyGot}/{sameCounty.length}
+              {countyGot === sameCounty.length ? ' 全收齊！' : ''}
+            </Text>
           </Animated.View>
 
           <View style={{ height: 76, justifyContent: 'center' }}>
@@ -284,7 +296,8 @@ const useStyles = makeStyles((t: Palette) =>
   StyleSheet.create({
   backdrop: {
     flex: 1,
-    backgroundColor: t.backdrop,
+    // opaque: the page underneath shouldn't ghost through the moment
+    backgroundColor: t.bg,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -310,6 +323,12 @@ const useStyles = makeStyles((t: Palette) =>
     fontSize: 13,
     marginTop: 10,
     letterSpacing: 2,
+  },
+  progress: {
+    color: t.accent,
+    fontSize: 13,
+    fontWeight: '700',
+    marginTop: 8,
   },
   button: {
     backgroundColor: t.accent,

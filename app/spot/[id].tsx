@@ -1,6 +1,6 @@
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   Dimensions,
   Pressable,
@@ -42,6 +42,16 @@ export default function SpotDetailScreen() {
 
   const scrollRef = useDevScroll('spot');
   const [unlocking, setUnlocking] = useState(false);
+  // Dev automation: play the unlock moment from the Metro inspector.
+  useEffect(() => {
+    if (!__DEV__) return;
+    const g = globalThis as any;
+    const play = () => setUnlocking(true);
+    g.__islandiaUnlock = play;
+    return () => {
+      if (g.__islandiaUnlock === play) delete g.__islandiaUnlock;
+    };
+  }, []);
   const [sharing, setSharing] = useState(false);
   const [viewing, setViewing] = useState(false);
 
