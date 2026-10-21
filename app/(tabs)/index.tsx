@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import {
   Dimensions,
   Pressable,
@@ -81,11 +81,22 @@ export default function WorldScreen() {
   }, [collections]);
 
   const latestSpot = latest ? spotById(latest.spotId) : null;
+
+  // Dev automation: lets the Metro inspector scroll this screen for screenshots.
+  const scrollRef = useRef<ScrollView>(null);
+  useEffect(() => {
+    if (!__DEV__) return;
+    const g = globalThis as any;
+    g.__islandiaHomeScroll = (y: number) => scrollRef.current?.scrollTo({ y, animated: false });
+    return () => {
+      delete g.__islandiaHomeScroll;
+    };
+  }, []);
   const mapW = SCREEN_W - 48;
 
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
-      <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
+      <ScrollView ref={scrollRef} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
         <Text style={styles.greeting}>{greeting()}</Text>
         <Text style={styles.subGreeting}>去過的地方,會成為你的世界。</Text>
         <View style={styles.atmosRow}>
@@ -107,7 +118,7 @@ export default function WorldScreen() {
 
         <View style={styles.worldCard}>
           <Text style={styles.worldLabel}>MY TAIWAN WORLD</Text>
-          <TaiwanWorld width={mapW} collectedIds={collectedIds} season={season} weather={weatherByRegion} night={night} />
+          <TaiwanWorld width={mapW} collectedIds={collectedIds} season={season} weather={weatherByRegion} night={night} location={location} />
           <View style={styles.worldStats}>
             <Text style={styles.worldCount}>
               {count} <Text style={styles.worldTotal}>/ {SPOTS.length}</Text>

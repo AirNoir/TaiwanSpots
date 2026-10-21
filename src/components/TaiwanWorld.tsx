@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import {
   Animated,
   Easing,
+  FlatList,
   GestureResponderEvent,
   Image,
   Pressable,
@@ -22,7 +23,8 @@ import Svg, {
   Stop,
 } from 'react-native-svg';
 import { describeWeather, isWet, Season, seasonOf, skyIcon, Weather } from '../atmosphere';
-import { worldToken } from '../data/spotAssets';
+import { collectionThumbnail, DIORAMA_BG, worldToken } from '../data/spotAssets';
+import { distanceMeters, formatDistance, LatLng } from '../geo';
 import { Spot, SPOTS } from '../data/spots';
 import { makeProjector, TAIWAN, WorldDef, worldAspect } from '../data/world';
 import { makeStyles, Palette, seasonTints, useTheme } from '../theme';
@@ -36,8 +38,14 @@ import { lightningLoop } from './lightning';
 // opens Level 3 (the spot page).
 
 type Pt = { x: number; y: number };
-type MarkerKind = 'token' | 'light' | 'pending';
-type Marker = { spot: Spot; kind: MarkerKind; size: number; at: Pt };
+type MarkerKind = 'token' | 'light' | 'pending' | 'thumb' | 'target' | 'cluster';
+type Cluster = { county: string; total: number; found: number };
+type Marker = { spot: Spot; kind: MarkerKind; size: number; at: Pt; cluster?: Cluster };
+
+/** County part of a spot's city label: '台北・信義' → '台北'. */
+const countyOf = (s: Spot) => s.city.split('・')[0];
+const CLUSTER_MIN = 2; // a county with this many spots in a region folds into one bubble
+const CLUSTER = 50;
 
 interface Props {
   width: number;
@@ -50,7 +58,13 @@ interface Props {
   weather?: Record<string, Weather | null>;
   /** After dark: a veil over the map, stars, and brighter landmark lights. */
   night?: boolean;
+  /** Traveller position (on-device only): picks the "next stop" and shows distances. */
+  location?: LatLng;
 }
+
+const PIN = 34; // thumbnail pin diameter inside a region
+const PIN_ON = 46; // selected pin
+const LABEL_H = 16;
 
 const TOP_PAD = 0.1; // room above the north tip for token heads (× width)
 const SLAB = 0.028; // thickness of the display base (× width)
@@ -103,6 +117,7 @@ export function TaiwanWorld({
   season: seasonProp,
   weather,
   night = false,
+  location,
 }: Props) {
   const t = useTheme();
   const C = t.world;
@@ -111,9 +126,50 @@ export function TaiwanWorld({
   const styles = useStyles();
   const router = useRouter();
   const height = worldHeight(width, world);
-  const [regionId, setRegionId] = useState<string | null>(null);
+  const [regionId, setRegionIdRaw] = useState<string | null>(null);
+  // Level 2.5: one county inside the region, opened from its cluster bubble.
+  const [county, setCounty] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const setRegionId = (id: string | null, select: Spot | null = null) => {
+    setRegionIdRaw(id);
+    setCounty(select ? countyOf(select) : null);
+    setSelectedId(select?.id ?? null);
+  };
+  // Dev automation: drive the map from the Metro inspector (see docs/radius-navigation-weather.md).
+  useEffect(() => {
+    if (!__DEV__ || !interactive) return;
+    const g = globalThis as any;
+    g.__islandiaMap = {
+      region: (id: string | null) => {
+        setRegionIdRaw(id);
+        setCounty(null);
+        setSelectedId(null);
+      },
+      county: (c: string | null) => {
+        setCounty(c);
+        setSelectedId(null);
+      },
+      select: (id: string | null) => setSelectedId(id),
+    };
+    return () => {
+      delete g.__islandiaMap;
+    };
+  }, [interactive]);
+  const inFocus = (s: Spot) => s.region === regionId && (!county || countyOf(s) === county);
 
   const spots = useMemo(() => SPOTS.filter((s) => s.worldId === world.id), [world.id]);
+
+  // The closest spot not yet collected: the map's "next stop" flag.
+  const target = useMemo(() => {
+    if (!location) return null;
+    let best: { spot: Spot; dist: number } | null = null;
+    for (const s of spots) {
+      if (collectedIds.has(s.id)) continue;
+      const dist = distanceMeters(location, s);
+      if (!best || dist < best.dist) best = { spot: s, dist };
+    }
+    return best;
+  }, [spots, collectedIds, location]);
 
   const geo = useMemo(() => {
     const project = makeProjector(world, width, width * TOP_PAD);
@@ -193,26 +249,35 @@ export function TaiwanWorld({
   // ── zoom (Level 1 ↔ Level 2) ──────────────────────────────
   const zoom = useMemo(() => {
     const pts = regionId
-      ? spots.filter((s) => s.region === regionId).map((s) => geo.positions[s.id])
+      ? spots
+          .filter((s) => s.region === regionId && (!county || countyOf(s) === county))
+          .map((s) => geo.positions[s.id])
       : [];
     if (!pts.length) return { s: 1, tx: 0, ty: 0 };
-    const pad = width * 0.09;
-    const tokenH = width * TOKEN_L2 * TOKEN_ASPECT; // on-screen, unaffected by zoom
-    const minX = Math.min(...pts.map((p) => p.x)) - pad;
-    const maxX = Math.max(...pts.map((p) => p.x)) + pad;
-    const minY = Math.min(...pts.map((p) => p.y)) - pad;
-    const maxY = Math.max(...pts.map((p) => p.y)) + pad;
+    // Fit the spots into the map below the header row (back button / region name),
+    // with screen-space margins so pins and their labels never touch the edge.
+    const padX = 44;
+    const padTop = 84;
+    const padBottom = 36;
+    const minX = Math.min(...pts.map((p) => p.x));
+    const maxX = Math.max(...pts.map((p) => p.x));
+    const minY = Math.min(...pts.map((p) => p.y));
+    const maxY = Math.max(...pts.map((p) => p.y));
     const s = Math.max(
       1.2,
-      Math.min(MAX_ZOOM, width / (maxX - minX), (height - tokenH) / (maxY - minY)),
+      Math.min(
+        county ? MAX_ZOOM * 4 : MAX_ZOOM,
+        (width - 2 * padX) / Math.max(1, maxX - minX),
+        (height - padTop - padBottom) / Math.max(1, maxY - minY),
+      ),
     );
-    // Centre the spots, then drop them by half a token so the risen landmarks are centred.
+    const midY = padTop + (height - padTop - padBottom) / 2;
     return {
       s,
       tx: s * (width / 2 - (minX + maxX) / 2),
-      ty: s * (height / 2 - (minY + maxY) / 2) + tokenH * 0.45,
+      ty: midY - height / 2 - s * ((minY + maxY) / 2 - height / 2),
     };
-  }, [regionId, spots, geo.positions, width, height]);
+  }, [regionId, county, spots, geo.positions, width, height]);
 
   const [scale] = useState(() => new Animated.Value(1));
   const [tx] = useState(() => new Animated.Value(0));
@@ -278,6 +343,26 @@ export function TaiwanWorld({
     return () => a.stop();
   }, [thunder, flash]);
 
+  // Spots per county in the open region; the cover is the best-known one there.
+  const countyCounts = useMemo(() => {
+    const m = new Map<string, { total: number; found: number; x: number; y: number; cover: Spot }>();
+    if (!regionId) return m;
+    const tierRank = { anchor: 0, regional: 1, local: 2 } as const;
+    for (const s of spots) {
+      if (s.region !== regionId) continue;
+      const c = countyOf(s);
+      const p = geo.positions[s.id];
+      const e = m.get(c) ?? { total: 0, found: 0, x: 0, y: 0, cover: s };
+      e.total += 1;
+      e.found += collectedIds.has(s.id) ? 1 : 0;
+      e.x += p.x;
+      e.y += p.y;
+      if (tierRank[s.worldTier] < tierRank[e.cover.worldTier]) e.cover = s;
+      m.set(c, e);
+    }
+    return m;
+  }, [spots, regionId, geo.positions, collectedIds]);
+
   // ── what sits on the map at this level ────────────────────
   // `size` is the on-screen token width; markers are not scaled by the zoom.
   const markers = useMemo<Marker[]>(() => {
@@ -288,20 +373,94 @@ export function TaiwanWorld({
       const got = collectedIds.has(s.id);
       const size = base * (s.tokenScale ?? 1);
       if (regionId) {
-        if (s.region === regionId) list.push({ spot: s, kind: got ? 'token' : 'pending', size, at });
+        // Inside a region every spot is a picture of itself: the landmark token
+        // once it has one, otherwise its diorama thumbnail (faded until collected).
+        // Crowded counties fold into one bubble until they are opened.
+        if (s.region !== regionId) continue;
+        const c = countyOf(s);
+        if (c !== county && (countyCounts.get(c)?.total ?? 0) >= CLUSTER_MIN) continue;
+        list.push({ spot: s, kind: got && s.worldTier === 'anchor' && worldToken(s.id) ? 'token' : 'thumb', size, at });
+      } else if (target?.spot.id === s.id) {
+        list.push({ spot: s, kind: 'target', size: 0, at });
       } else if (got) {
-        list.push({ spot: s, kind: s.worldTier === 'anchor' ? 'token' : 'light', size, at });
+        list.push({ spot: s, kind: s.worldTier === 'anchor' && worldToken(s.id) ? 'token' : 'light', size, at });
       } else if (s.worldTier === 'anchor') {
         list.push({ spot: s, kind: 'pending', size: 0, at });
       }
     }
+    if (regionId) {
+      for (const [c, info] of countyCounts) {
+        if (c === county || info.total < CLUSTER_MIN) continue;
+        list.push({
+          spot: info.cover,
+          kind: 'cluster',
+          size: CLUSTER,
+          at: { x: info.x / info.total, y: info.y / info.total },
+          cluster: { county: c, total: info.total, found: info.found },
+        });
+      }
+    }
     relax(list, zoom.s, regionId ? 0.4 : 0.3);
-    // Back-to-front by depth; pending pins always on top so they stay tappable.
-    return list.sort((a, b) => Number(a.kind === 'pending') - Number(b.kind === 'pending') || a.at.y - b.at.y);
-  }, [spots, geo.positions, collectedIds, regionId, zoom.s, width]);
+    // Back-to-front by depth; pins and the next-stop flag stay on top so they stay tappable.
+    const top = (m: Marker) => (m.kind === 'target' ? 2 : m.kind === 'pending' ? 1 : 0);
+    return list.sort((a, b) => top(a) - top(b) || a.at.y - b.at.y);
+  }, [spots, geo.positions, collectedIds, regionId, county, countyCounts, zoom.s, width, target]);
+
+  // Final on-screen position once the zoom has settled.
+  const screenPos = (p: Pt) => ({
+    x: zoom.s * (p.x - width / 2) + zoom.tx + width / 2,
+    y: zoom.s * (p.y - height / 2) + zoom.ty + height / 2,
+  });
+
+  // Name labels under region pins, placed greedily by priority and dropped
+  // where they would collide, so a crowded city still reads cleanly.
+  const labels = useMemo(() => {
+    const placed = new Set<string>();
+    if (!regionId) return placed;
+    const boxes: { x0: number; y0: number; x1: number; y1: number }[] = [];
+    const hit = (b: (typeof boxes)[number]) =>
+      boxes.some((o) => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0);
+    const pins = markers.map((m) => {
+      const p = screenPos(m.at);
+      const r = m.kind === 'thumb' ? PIN / 2 : m.kind === 'cluster' ? CLUSTER / 2 + 16 : m.size * 0.35;
+      return { m, p, r };
+    });
+    // pins themselves are obstacles
+    for (const { m, p, r } of pins) {
+      const h = m.kind === 'token' ? m.size * TOKEN_BASE : r;
+      boxes.push({ x0: p.x - r, y0: p.y - (m.kind === 'token' ? h : r), x1: p.x + r, y1: p.y + r });
+    }
+    const rank = ({ m }: (typeof pins)[number]) =>
+      (m.spot.id === selectedId ? 0 : 10) + (m.spot.id === target?.spot.id ? 0 : 5) + (m.spot.worldTier === 'anchor' ? 0 : 2) + (collectedIds.has(m.spot.id) ? 0 : 1);
+    for (const pin of [...pins].sort((a, b) => rank(a) - rank(b))) {
+      if (pin.m.spot.id === selectedId || pin.m.kind === 'cluster') continue; // the callout / bubble names it
+      const w = pin.m.spot.name.length * 10.5 + 10;
+      const b = { x0: pin.p.x - w / 2, y0: pin.p.y + pin.r + 2, x1: pin.p.x + w / 2, y1: pin.p.y + pin.r + 2 + LABEL_H };
+      if (b.x0 < 2 || b.x1 > width - 2 || b.y1 > height - 2) continue;
+      if (hit(b)) continue;
+      boxes.push(b);
+      placed.add(pin.m.spot.id);
+    }
+    return placed;
+    // screenPos depends only on zoom/width/height
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [markers, regionId, selectedId, target, collectedIds, zoom, width, height]);
+
+  const regionSpots = useMemo(() => {
+    if (!regionId) return [];
+    return spots
+      .filter(inFocus)
+      .map((s) => ({ spot: s, got: collectedIds.has(s.id), dist: location ? distanceMeters(location, s) : null }))
+      .sort((a, b) => Number(a.got) - Number(b.got) || (a.dist ?? 0) - (b.dist ?? 0));
+    // inFocus reads regionId and county
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [spots, regionId, county, collectedIds, location]);
 
   const onMapPress = (e: GestureResponderEvent) => {
-    if (regionId) return;
+    if (regionId) {
+      setSelectedId(null);
+      return;
+    }
     const { locationX, locationY } = e.nativeEvent;
     const nearest = regionStats.reduce((best, r) =>
       Math.hypot(r.center.x - locationX, r.center.y - locationY) <
@@ -312,10 +471,27 @@ export function TaiwanWorld({
     setRegionId(nearest.id);
   };
 
-  const onMarkerPress = (spot: Spot) => {
-    if (regionId) router.push(`/spot/${spot.id}`);
-    else setRegionId(spot.region);
+  const openSpot = (spot: Spot) => router.push(`/spot/${spot.id}`);
+
+  // First tap names a spot, second tap opens it.
+  const onMarkerPress = (m: Marker) => {
+    const spot = m.spot;
+    if (!regionId) setRegionId(spot.region, target?.spot.id === spot.id ? spot : null);
+    else if (m.cluster) {
+      setCounty(m.cluster.county);
+      setSelectedId(null);
+    } else if (selectedId === spot.id) openSpot(spot);
+    else setSelectedId(spot.id);
   };
+
+  // Strip cards can point at a spot inside a still-folded county: open that county first.
+  const pickFromStrip = (spot: Spot) => {
+    if (selectedId === spot.id) return openSpot(spot);
+    if (countyOf(spot) !== county && (countyCounts.get(countyOf(spot))?.total ?? 0) >= CLUSTER_MIN) setCounty(countyOf(spot));
+    setSelectedId(spot.id);
+  };
+
+  const selected = regionId ? markers.find((m) => m.spot.id === selectedId) : undefined;
 
   const active = regionStats.find((r) => r.id === regionId);
   // A near-complete collection puts a light on almost every spot; shrink the halos so terrain stays visible.
@@ -552,6 +728,9 @@ export function TaiwanWorld({
           )}
         </Pressable>
 
+        {/* inside a county the terrain is magnified far past its detail: fade it to a quiet backdrop */}
+        {county && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: t.card, opacity: 0.62 }]} />}
+
         {/* night: veil the terrain and weather, leave the landmarks and their lights above it */}
         {night && (
           <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: C.nightVeil }]}>
@@ -574,7 +753,7 @@ export function TaiwanWorld({
             >
               <Pressable
                 disabled={!interactive}
-                onPress={() => onMarkerPress(m.spot)}
+                onPress={() => onMarkerPress(m)}
                 hitSlop={10}
                 accessibilityRole="button"
                 accessibilityLabel={m.spot.name}
@@ -583,24 +762,67 @@ export function TaiwanWorld({
                   <LandmarkToken spot={m.spot} size={m.size} />
                 ) : m.kind === 'light' ? (
                   <Light pulse={pulse} night={night} dim={lightDim} />
+                ) : m.kind === 'thumb' ? (
+                  <ThumbPin
+                    spot={m.spot}
+                    got={collectedIds.has(m.spot.id)}
+                    on={m.spot.id === selectedId}
+                    goal={m.spot.id === target?.spot.id}
+                    pulse={pulse}
+                  />
+                ) : m.kind === 'target' ? (
+                  <TargetFlag spot={m.spot} dist={target?.dist ?? 0} pulse={pulse} flip={m.at.x > width * 0.55} />
                 ) : (
-                  <PendingPin big={!!regionId} />
+                  m.kind === 'cluster' && m.cluster ? (
+                    <ClusterBubble spot={m.spot} cluster={m.cluster} />
+                  ) : (
+                    <PendingPin big={!!regionId} />
+                  )
                 )}
               </Pressable>
+              {labels.has(m.spot.id) && (
+                <View
+                  pointerEvents="none"
+                  style={[styles.pinLabel, { top: (m.kind === 'thumb' ? PIN / 2 : m.size * 0.35) + 2 }]}
+                >
+                  <Text numberOfLines={1} style={[styles.pinLabelText, !collectedIds.has(m.spot.id) && styles.pinLabelFaint]}>
+                    {m.spot.name}
+                  </Text>
+                </View>
+              )}
             </Animated.View>
           );
         })}
 
+        {interactive && selected && (
+          <Callout
+            spot={selected.spot}
+            at={screenPos(selected.at)}
+            pinR={selected.kind === 'thumb' ? PIN_ON / 2 : selected.size * TOKEN_BASE}
+            width={width}
+            height={height}
+            got={collectedIds.has(selected.spot.id)}
+            dist={location ? distanceMeters(location, selected.spot) : null}
+            onOpen={() => openSpot(selected.spot)}
+          />
+        )}
+
         {interactive && active && (
           <>
-            <Pressable style={styles.back} onPress={() => setRegionId(null)} hitSlop={8}>
+            <Pressable
+              style={styles.back}
+              onPress={() => (county ? (setCounty(null), setSelectedId(null)) : setRegionId(null))}
+              hitSlop={8}
+            >
               <MaterialCommunityIcons name={'chevron-left' as any} size={18} color={t.text} />
-              <Text style={styles.backText}>{world.name}</Text>
+              <Text style={styles.backText}>{county ? active.zh : '全台灣'}</Text>
             </Pressable>
             <View style={styles.regionTag} pointerEvents="none">
-              <Text style={styles.regionName}>{active.zh}</Text>
+              <Text style={styles.regionName}>{county ?? active.zh}</Text>
               <Text style={styles.regionCount}>
-                {active.found} / {active.total} discovered
+                {county
+                  ? `${countyCounts.get(county)?.found ?? 0} / ${countyCounts.get(county)?.total ?? 0} 已收藏`
+                  : `${active.found} / ${active.total} 已收藏`}
               </Text>
               {weather?.[active.id] && (
                 <Text style={styles.regionWeather}>{describeWeather(weather[active.id] as Weather)}</Text>
@@ -635,6 +857,256 @@ export function TaiwanWorld({
           })}
         </View>
       )}
+
+      {interactive && !regionId && <Text style={styles.hint}>點一個區域，看看那裡有哪些景點</Text>}
+
+      {interactive && regionId && (
+        <SpotStrip
+          key={regionId}
+          items={regionSpots}
+          selectedId={selectedId}
+          onPress={pickFromStrip}
+          title={county ?? active?.zh ?? ''}
+        />
+      )}
+    </View>
+  );
+}
+
+type StripItem = { spot: Spot; got: boolean; dist: number | null };
+
+/** Every spot of the open region as a scrollable row of cards; picking one names it on the map. */
+function SpotStrip({
+  items,
+  selectedId,
+  onPress,
+  title,
+}: {
+  items: StripItem[];
+  selectedId: string | null;
+  onPress: (s: Spot) => void;
+  title: string;
+}) {
+  const t = useTheme();
+  const styles = useStyles();
+  const ref = React.useRef<FlatList<StripItem>>(null);
+  const todo = items.filter((i) => !i.got).length;
+
+  useEffect(() => {
+    const index = items.findIndex((i) => i.spot.id === selectedId);
+    if (index >= 0) ref.current?.scrollToIndex({ index, viewPosition: 0.5, animated: true });
+  }, [selectedId, items]);
+
+  return (
+    <View style={styles.strip}>
+      <Text style={styles.stripTitle}>
+        {title} · {todo ? `還有 ${todo} 個景點等你收藏` : '全部收藏了'}
+      </Text>
+      <FlatList
+        ref={ref}
+        horizontal
+        data={items}
+        keyExtractor={(i) => i.spot.id}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ gap: 8, paddingHorizontal: 4 }}
+        getItemLayout={(_, index) => ({ length: STRIP_W + 8, offset: (STRIP_W + 8) * index + 4, index })}
+        renderItem={({ item }) => {
+          const on = item.spot.id === selectedId;
+          const thumb = collectionThumbnail(item.spot.id);
+          return (
+            <Pressable
+              onPress={() => onPress(item.spot)}
+              style={[styles.stripCard, on && styles.stripCardOn]}
+              accessibilityRole="button"
+              accessibilityLabel={`${item.spot.name}${item.got ? '，已收藏' : ''}`}
+            >
+              <View style={styles.stripThumb}>
+                {thumb ? (
+                  <Image source={thumb} style={{ width: '100%', height: '100%', opacity: item.got ? 1 : 0.55 }} />
+                ) : (
+                  <MaterialCommunityIcons name={item.spot.art.icon as any} size={26} color={item.spot.art.tint} />
+                )}
+                {item.got && (
+                  <View style={styles.stripCheck}>
+                    <MaterialCommunityIcons name={'check' as any} size={10} color={t.onAccent} />
+                  </View>
+                )}
+              </View>
+              <Text style={styles.stripName} numberOfLines={1}>
+                {item.spot.name}
+              </Text>
+              <Text style={styles.stripMeta} numberOfLines={1}>
+                {item.got ? '已收藏' : item.dist != null ? formatDistance(item.dist) : item.spot.city}
+              </Text>
+            </Pressable>
+          );
+        }}
+      />
+    </View>
+  );
+}
+
+/** A spot's own diorama in a round frame: faded until collected, ringed when it's the next stop. */
+function ThumbPin({ spot, got, on, goal, pulse }: { spot: Spot; got: boolean; on: boolean; goal: boolean; pulse: Animated.Value }) {
+  const t = useTheme();
+  const styles = useStyles();
+  const d = on ? PIN_ON : PIN;
+  const thumb = collectionThumbnail(spot.id);
+  return (
+    <View style={{ width: d, height: d, marginLeft: -d / 2, marginTop: -d / 2 }}>
+      {goal && (
+        <Animated.View
+          style={[
+            styles.goalRing,
+            {
+              width: d + 14,
+              height: d + 14,
+              borderRadius: d,
+              left: -7,
+              top: -7,
+              opacity: pulse.interpolate({ inputRange: [0, 1], outputRange: [0.9, 0.2] }),
+              transform: [{ scale: pulse.interpolate({ inputRange: [0, 1], outputRange: [0.85, 1.15] }) }],
+            },
+          ]}
+        />
+      )}
+      <View
+        style={[
+          styles.thumbPin,
+          { width: d, height: d, borderRadius: d / 2, borderColor: on || goal ? t.accent : got ? '#FFFFFF' : `rgba(${t.world.pin},0.45)` },
+        ]}
+      >
+        {thumb ? (
+          <Image source={thumb} style={{ width: d * 1.25, height: d * 1.25 }} />
+        ) : (
+          <MaterialCommunityIcons name={spot.art.icon as any} size={d * 0.5} color={spot.art.tint} />
+        )}
+        {!got && <View style={[StyleSheet.absoluteFill, styles.thumbFog]} />}
+      </View>
+    </View>
+  );
+}
+
+/** Level 1: a flag over the closest uncollected spot, so there is always somewhere to go next. */
+function TargetFlag({ spot, dist, pulse, flip }: { spot: Spot; dist: number; pulse: Animated.Value; flip: boolean }) {
+  const styles = useStyles();
+  return (
+    <View style={{ marginLeft: -6, marginTop: -6 }}>
+      <Animated.View
+        style={[
+          styles.targetPulse,
+          {
+            opacity: pulse.interpolate({ inputRange: [0, 1], outputRange: [0.7, 0] }),
+            transform: [{ scale: pulse.interpolate({ inputRange: [0, 1], outputRange: [0.6, 2.2] }) }],
+          },
+        ]}
+      />
+      <View style={styles.targetDot} />
+      <View style={[styles.targetTagBox, flip ? { right: 18, alignItems: 'flex-end' } : { left: 18 }]}>
+        <View style={styles.targetTag}>
+          <Text style={styles.targetKicker}>下一站</Text>
+          <Text style={styles.targetName} numberOfLines={1}>
+            {spot.name} · {formatDistance(dist)}
+          </Text>
+        </View>
+      </View>
+    </View>
+  );
+}
+
+/** Name card above the selected pin; tapping it opens the spot. */
+function Callout({
+  spot,
+  at,
+  pinR,
+  width,
+  height,
+  got,
+  dist,
+  onOpen,
+}: {
+  spot: Spot;
+  at: Pt;
+  pinR: number;
+  width: number;
+  height: number;
+  got: boolean;
+  dist: number | null;
+  onOpen: () => void;
+}) {
+  const t = useTheme();
+  const styles = useStyles();
+  const [show] = useState(() => new Animated.Value(0));
+  useEffect(() => {
+    show.setValue(0);
+    Animated.spring(show, { toValue: 1, friction: 7, tension: 90, useNativeDriver: true }).start();
+  }, [spot.id, show]);
+  const W = Math.min(220, width - 16);
+  const H = 64;
+  const left = Math.max(8, Math.min(width - W - 8, at.x - W / 2));
+  // Above the pin when there is room, otherwise below it.
+  const above = at.y - pinR - H - 8 > 0;
+  const top = above ? at.y - pinR - H - 6 : Math.min(height - H - 4, at.y + PIN_ON / 2 + 6);
+  const thumb = collectionThumbnail(spot.id);
+  return (
+    <Animated.View
+      style={[
+        styles.callout,
+        {
+          left,
+          top,
+          width: W,
+          height: H,
+          opacity: show,
+          transform: [{ scale: show.interpolate({ inputRange: [0, 1], outputRange: [0.85, 1] }) }],
+        },
+      ]}
+    >
+      <Pressable onPress={onOpen} style={styles.calloutInner} accessibilityRole="button" accessibilityLabel={`查看${spot.name}`}>
+        <View style={styles.calloutThumb}>
+          {thumb && <Image source={thumb} style={{ width: '100%', height: '100%' }} />}
+        </View>
+        <View style={{ flex: 1, minWidth: 0 }}>
+          <Text style={styles.calloutName} numberOfLines={1}>
+            {spot.name}
+          </Text>
+          <Text style={styles.calloutMeta} numberOfLines={1}>
+            {spot.city}
+            {dist != null ? ` · ${formatDistance(dist)}` : ''}
+          </Text>
+          <Text style={[styles.calloutState, got && { color: t.accent }]}>{got ? '✓ 已收藏' : '尚未收藏'}</Text>
+        </View>
+        <MaterialCommunityIcons name={'chevron-right' as any} size={20} color={t.subtext} />
+      </Pressable>
+    </Animated.View>
+  );
+}
+
+const STRIP_W = 92;
+
+/** A crowded county folded into one bubble: its best-known spot, the county name and progress. */
+function ClusterBubble({ spot, cluster }: { spot: Spot; cluster: Cluster }) {
+  const t = useTheme();
+  const styles = useStyles();
+  const thumb = collectionThumbnail(spot.id);
+  const done = cluster.found === cluster.total;
+  return (
+    <View style={{ width: CLUSTER, height: CLUSTER, marginLeft: -CLUSTER / 2, marginTop: -CLUSTER / 2 }}>
+      <View style={[styles.cluster, { borderColor: done ? t.accent : '#FFFFFF' }]}>
+        {thumb ? (
+          <Image source={thumb} style={{ width: CLUSTER * 1.25, height: CLUSTER * 1.25 }} />
+        ) : (
+          <MaterialCommunityIcons name={spot.art.icon as any} size={CLUSTER * 0.5} color={spot.art.tint} />
+        )}
+      </View>
+      <View style={styles.clusterBadge}>
+        <Text style={styles.clusterBadgeText}>{cluster.total}</Text>
+      </View>
+      <View style={styles.clusterLabelBox} pointerEvents="none">
+        <Text style={styles.clusterLabel} numberOfLines={1}>
+          {cluster.county} <Text style={styles.clusterProgress}>{cluster.found}/{cluster.total}</Text>
+        </Text>
+      </View>
     </View>
   );
 }
@@ -644,7 +1116,8 @@ export function TaiwanWorld({
 // map position.
 function relax(list: Marker[], s: number, spread: number) {
   const pts = list.map((m) => ({ x: m.at.x * s, y: m.at.y * s }));
-  const radius = (m: Marker) => (m.kind === 'pending' ? 16 : m.kind === 'light' ? 6 : m.size * spread);
+  const radius = (m: Marker) =>
+    m.kind === 'thumb' ? PIN / 2 + 1 : m.kind === 'cluster' ? CLUSTER : m.kind === 'target' ? 12 : m.kind === 'pending' ? 16 : m.kind === 'light' ? 6 : m.size * spread;
   for (let iter = 0; iter < 40; iter++) {
     let moved = false;
     for (let i = 0; i < pts.length; i++) {
@@ -806,5 +1279,137 @@ const useStyles = makeStyles((t: Palette) =>
   chipOn: { backgroundColor: t.accentSoft, borderColor: t.accent },
   chipText: { color: t.subtext, fontSize: 11, fontWeight: '600' },
   chipTextOn: { color: t.accent },
+  cluster: {
+    width: CLUSTER,
+    height: CLUSTER,
+    borderRadius: CLUSTER / 2,
+    borderWidth: 3,
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: DIORAMA_BG,
+    shadowColor: '#000',
+    shadowOpacity: 0.25,
+    shadowRadius: 5,
+    shadowOffset: { width: 0, height: 3 },
+  },
+  clusterBadge: {
+    position: 'absolute',
+    right: -4,
+    top: -4,
+    minWidth: 20,
+    height: 20,
+    paddingHorizontal: 5,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: t.accent,
+    borderWidth: 2,
+    borderColor: '#FFFFFF',
+  },
+  clusterBadgeText: { color: t.onAccent, fontSize: 10, fontWeight: '800' },
+  clusterLabelBox: { position: 'absolute', top: CLUSTER + 3, left: -40, width: CLUSTER + 80, alignItems: 'center' },
+  clusterLabel: {
+    color: t.text,
+    fontSize: 12,
+    fontWeight: '800',
+    paddingHorizontal: 7,
+    paddingVertical: 2,
+    borderRadius: 8,
+    overflow: 'hidden',
+    backgroundColor: t.mode === 'dark' ? 'rgba(11,18,32,0.78)' : 'rgba(255,255,255,0.9)',
+  },
+  clusterProgress: { color: t.accent, fontSize: 11, fontWeight: '700' },
+  hint: { color: t.faint, fontSize: 11, textAlign: 'center', marginTop: 8 },
+  pinLabel: { position: 'absolute', left: -60, width: 120, alignItems: 'center' },
+  pinLabelText: {
+    color: t.text,
+    fontSize: 10,
+    fontWeight: '700',
+    paddingHorizontal: 5,
+    paddingVertical: 1,
+    borderRadius: 6,
+    overflow: 'hidden',
+    backgroundColor: t.mode === 'dark' ? 'rgba(11,18,32,0.72)' : 'rgba(255,255,255,0.82)',
+  },
+  pinLabelFaint: { color: t.subtext, fontWeight: '600' },
+  thumbPin: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    borderWidth: 2,
+    backgroundColor: DIORAMA_BG,
+    shadowColor: '#000',
+    shadowOpacity: 0.22,
+    shadowRadius: 3,
+    shadowOffset: { width: 0, height: 2 },
+  },
+  thumbFog: { backgroundColor: t.mode === 'dark' ? 'rgba(20,28,44,0.5)' : 'rgba(242,237,226,0.55)' },
+  goalRing: { position: 'absolute', borderWidth: 2, borderColor: t.accent },
+  targetPulse: { position: 'absolute', width: 12, height: 12, borderRadius: 6, backgroundColor: t.accent },
+  targetDot: { width: 12, height: 12, borderRadius: 6, backgroundColor: t.accent, borderWidth: 2, borderColor: '#FFFFFF' },
+  targetTagBox: { position: 'absolute', top: -12, width: 170, alignItems: 'flex-start' },
+  targetTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 10,
+    backgroundColor: t.accent,
+    maxWidth: 170,
+    shadowColor: '#000',
+    shadowOpacity: 0.18,
+    shadowRadius: 4,
+    shadowOffset: { width: 0, height: 2 },
+  },
+  targetKicker: { color: t.onAccent, fontSize: 8, fontWeight: '800', letterSpacing: 1.5, opacity: 0.85 },
+  targetName: { color: t.onAccent, fontSize: 11, fontWeight: '700' },
+  callout: {
+    position: 'absolute',
+    borderRadius: 16,
+    backgroundColor: t.card,
+    borderWidth: 1,
+    borderColor: t.cardBorder,
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 4 },
+  },
+  calloutInner: { flex: 1, flexDirection: 'row', alignItems: 'center', gap: 10, paddingHorizontal: 8 },
+  calloutThumb: { width: 48, height: 48, borderRadius: 12, overflow: 'hidden', backgroundColor: DIORAMA_BG },
+  calloutName: { color: t.text, fontSize: 14, fontWeight: '800' },
+  calloutMeta: { color: t.subtext, fontSize: 11, marginTop: 1 },
+  calloutState: { color: t.faint, fontSize: 10, fontWeight: '700', marginTop: 2 },
+  strip: { alignSelf: 'stretch', marginTop: 12 },
+  stripTitle: { color: t.subtext, fontSize: 12, fontWeight: '600', marginBottom: 8, marginLeft: 4 },
+  stripCard: {
+    width: STRIP_W,
+    padding: 6,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: t.cardBorder,
+    backgroundColor: t.bg,
+  },
+  stripCardOn: { borderColor: t.accent, backgroundColor: t.accentSoft },
+  stripThumb: {
+    width: STRIP_W - 14,
+    height: STRIP_W - 14,
+    borderRadius: 10,
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: DIORAMA_BG,
+  },
+  stripCheck: {
+    position: 'absolute',
+    right: 4,
+    top: 4,
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: t.accent,
+  },
+  stripName: { color: t.text, fontSize: 12, fontWeight: '700', marginTop: 6 },
+  stripMeta: { color: t.subtext, fontSize: 10, marginTop: 1 },
   }),
 );
