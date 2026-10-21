@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import React, { useMemo } from 'react';
 import {
   Dimensions,
+  Linking,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -109,6 +110,19 @@ export default function WorldScreen() {
             </>
           )}
         </View>
+
+        {isFallback && (
+          <View style={styles.locCard}>
+            <MaterialCommunityIcons name={'map-marker-off-outline' as any} size={20} color={t.accent} />
+            <View style={{ flex: 1 }}>
+              <Text style={styles.locTitle}>定位還沒開啟</Text>
+              <Text style={styles.locBody}>收藏景點需要知道你真的在那裡。距離暫時以台北車站估算。</Text>
+            </View>
+            <Pressable onPress={() => void Linking.openSettings()} hitSlop={8} accessibilityRole="button">
+              <Text style={styles.locBtn}>開啟設定</Text>
+            </Pressable>
+          </View>
+        )}
 
         <View style={styles.worldCard}>
           <Text style={styles.worldLabel}>MY TAIWAN WORLD</Text>
@@ -231,6 +245,18 @@ const useStyles = makeStyles((t: Palette) =>
   subGreeting: { color: t.subtext, fontSize: 14, marginTop: 6 },
   atmosRow: { flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 8, marginBottom: 20 },
   atmosText: { color: t.subtext, fontSize: 12 },
+  locCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    backgroundColor: t.accentSoft,
+    borderRadius: 16,
+    padding: 14,
+    marginBottom: 16,
+  },
+  locTitle: { color: t.text, fontSize: 14, fontWeight: '700' },
+  locBody: { color: t.subtext, fontSize: 12, marginTop: 2, lineHeight: 17 },
+  locBtn: { color: t.accent, fontSize: 13, fontWeight: '700' },
   worldCard: {
     backgroundColor: t.card,
     borderRadius: 24,
