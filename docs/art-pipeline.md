@@ -131,3 +131,11 @@ iOS 與 Android Metro/Hermes 匯出通過，asset map 確認只有 74 張景點 
 ## 其餘 114 張夜間製作（2026-10-19 → 2026-10-20）
 
 本次 user 授權批次完成剩餘圖並在網頁 review。先讀 [製圖規範與踩坑紀錄](art-production-rules.md)，佇列與不可更動的 45 張 App 圖／114 個 runtime WebP SHA-256 在 [overnight-art-progress.json](overnight-art-progress.json)。新圖僅為 review 預覽，不自動套用 App；每張保留真實來源、完整 prompt、未確認事項與目視 QA。移軸玩具感不可用冷漠的衛星俯瞰、誇大的前景或不一致比例代替。
+
+## 130 張定案圖套用 App（2026-10-21）
+
+使用者已將目前 130 張選定圖定案並授權套用 App，先前夜間製作的 runtime 保護限制於本次正式套用範圍解除。依 `asset-review-selections.json` 複製原生選圖至 master；被替換的既有 master 備份至各 collection/archive/master-before-runtime-20261021.png。來源、SHA-256、備份與隱藏清單見 `asset-runtime-promotion-20261021.json`。此為美術選圖定案，不宣稱精確地理測繪 QA 通過。
+
+正式輸出 130 張 1024px day.webp、130 張 512px thumbnail.webp，維持 88% 色調，既有 24 張透明地圖圖標保留，其餘使用通用標記。所有 284 張 runtime 圖片合計約 37.98 MB，不代表安裝檔大小。原圖與比較頁持續保留原色 PNG 加顯示調色，不會重複減色。
+
+目前總清單為159個，130個保持 active，29個未完成景點設 active:false。收藏清單、探索與地圖沿用 SPOTS 篩選，不刪除原資料與舊收藏 id 的解析能力。未開發景點之後可再啟用。

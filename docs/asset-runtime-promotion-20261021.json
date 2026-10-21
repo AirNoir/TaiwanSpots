@@ -1,0 +1,951 @@
+{
+  "date": "2026-10-21",
+  "authorization": "User finalized 130 selected models and requested App promotion; unfinished spots hidden",
+  "active": [
+    "taipei-101",
+    "palace-museum",
+    "jiufen",
+    "tamsui",
+    "dadaocheng",
+    "yehliu",
+    "sun-moon-lake",
+    "cingjing",
+    "gaomei",
+    "rainbow-village",
+    "lukang",
+    "hehuanshan",
+    "alishan",
+    "anping",
+    "chihkan",
+    "pier2",
+    "cijin",
+    "kenting",
+    "taroko",
+    "qingshui-cliff",
+    "qixingtan",
+    "brown-avenue",
+    "sanxiantai",
+    "ruisui",
+    "xiangshan",
+    "longshan-temple",
+    "cks-memorial",
+    "ximending",
+    "shengxing-station",
+    "longteng-bridge",
+    "sanyi-woodcarving",
+    "nanzhuang",
+    "hinoki-village",
+    "fenqihu",
+    "dongshi",
+    "npm-southern",
+    "guishan-island",
+    "waiao",
+    "jiaoxi",
+    "shilin-night-market",
+    "beitou-thermal-valley",
+    "qingtiangang",
+    "maokong",
+    "baishatun",
+    "huoyanshan",
+    "taichung-opera",
+    "miyahara",
+    "wenhua-night-market",
+    "tainan-confucius",
+    "shennong-street",
+    "anping-treehouse",
+    "nccta",
+    "luodong-night-market",
+    "taipingshan",
+    "huashan-1914",
+    "raohe-night-market",
+    "baoan-temple",
+    "fengjia",
+    "shenji-village",
+    "luce-chapel",
+    "chimei-museum",
+    "qigu-salt",
+    "jingzaijiao",
+    "sicao",
+    "jimmy-square",
+    "suao-cold-spring",
+    "pingxi",
+    "shifen-waterfall",
+    "houtong",
+    "jinguashi",
+    "dajia-jenn-lann",
+    "wuqi-port",
+    "xinshe",
+    "guguan",
+    "wushantou",
+    "hayashi",
+    "lotus-pond",
+    "lanyang-museum",
+    "dongdamen",
+    "pine-garden",
+    "yinyang-sea",
+    "wuling-farm",
+    "roundhouse",
+    "british-consulate",
+    "liyu-lake",
+    "bitou-cape",
+    "fulong",
+    "baguashan-buddha",
+    "tianwei",
+    "formosa-boulevard",
+    "sizihwan",
+    "liuhe",
+    "liushidan",
+    "lintianshan",
+    "yingge",
+    "shimen-cave",
+    "keelung-miaokou",
+    "jiji-station",
+    "checheng",
+    "xitou",
+    "moon-world",
+    "meinong",
+    "qishan",
+    "shitiping",
+    "tropic-cancer-hualien",
+    "zhengbin-port",
+    "heping-island",
+    "lin-family-garden",
+    "sun-link-sea",
+    "paper-dome",
+    "formosan-aboriginal-village",
+    "maolin",
+    "dapeng-bay",
+    "xiaoliuqiu",
+    "donggang",
+    "chike-mountain",
+    "tiehua-village",
+    "taitung-forest-park",
+    "shimen-reservoir",
+    "xiaowulai",
+    "hsinchu-chenghuang",
+    "aowanda",
+    "yushan",
+    "beigang-chaotian",
+    "longpan",
+    "maobitou",
+    "hengchun-old-town",
+    "jialulan",
+    "water-flowing-up",
+    "xiaoyeliu"
+  ],
+  "hidden": [
+    "sun-yat-sen-memorial",
+    "wufeng-lin",
+    "nanfangao",
+    "fo-guang-shan",
+    "sanxia-zushi",
+    "wulai",
+    "wanggong",
+    "weiwuying",
+    "mukumugi",
+    "daxi",
+    "duoliang",
+    "lalashan",
+    "eluanbi",
+    "luye-highland",
+    "neiwan",
+    "beipu",
+    "nanliao",
+    "smangus",
+    "gukeng",
+    "xiluo-bridge",
+    "caoling",
+    "wutai",
+    "sichongxi",
+    "nmmba",
+    "houbihu",
+    "zhiben",
+    "jinzun",
+    "green-island",
+    "lanyu"
+  ],
+  "collectionSaturation": 0.88,
+  "sources": [
+    {
+      "id": "xiangshan",
+      "selected": "review-v5.png",
+      "sourceSha256": "40ea05c23991cbef522e9e52c6dd9d80dffb01676f2ab602d41f3640df1e065e",
+      "backup": null
+    },
+    {
+      "id": "palace-museum",
+      "selected": "review-v8.png",
+      "sourceSha256": "7e0061b7d407f84dcf89b9a9dd40a0444d1e13ad10f065ed09fd1b9e161b755a",
+      "backup": null
+    },
+    {
+      "id": "jiufen",
+      "selected": "review-v6.png",
+      "sourceSha256": "d961ead14c682fb39770e7b27b5010f1e702f89d28f6cead7946e36ffe99d4c3",
+      "backup": null
+    },
+    {
+      "id": "sun-moon-lake",
+      "selected": "review-v8.png",
+      "sourceSha256": "a62134e42230c294b8d19d2729396fbe303d2dcc8846675841022d1d62755473",
+      "backup": null
+    },
+    {
+      "id": "qingshui-cliff",
+      "selected": "review-v5.png",
+      "sourceSha256": "bd20a6a432ac12c7229d786608c23da2661641cef343b6218ed1921644159d68",
+      "backup": null
+    },
+    {
+      "id": "tamsui",
+      "selected": "review-v4.png",
+      "sourceSha256": "6fd2db564f09ecc630b20305a1b63c8c16f89f97dee22c03f9ae89955d19906f",
+      "backup": null
+    },
+    {
+      "id": "taipei-101",
+      "selected": "review-v1.png",
+      "sourceSha256": "78d4cfe1fceb4698924ddb3faedcca6be14bdf9d96482fdbf7aed67126a777f9",
+      "backup": null
+    },
+    {
+      "id": "dadaocheng",
+      "selected": "review-v1.png",
+      "sourceSha256": "54ce86957be07c000494b54a682617ad1c898f13ab428a553a865783f28197be",
+      "backup": null
+    },
+    {
+      "id": "yehliu",
+      "selected": "review-v5.png",
+      "sourceSha256": "6494c769463818cbb5a2b96f455b75a6101b6a76fa12ea36443448823915e3eb",
+      "backup": null
+    },
+    {
+      "id": "cingjing",
+      "selected": "review-v3.png",
+      "sourceSha256": "f75056d60413760718e89fb5b86c377eaafe2f06589516ae37a4c0d6a932ef8d",
+      "backup": null
+    },
+    {
+      "id": "gaomei",
+      "selected": "review-v8.png",
+      "sourceSha256": "2cd1b940ae556e2b75950ce10b01d7d7c0683833844430b39088a65cd198f59a",
+      "backup": "assets/spots/gaomei/collection/archive/master-before-runtime-20261021.png"
+    },
+    {
+      "id": "rainbow-village",
+      "selected": "review-v1.png",
+      "sourceSha256": "416a48088af6cc22c7887cccf3c1b71db0a3027d52b2fa03dc86edc726472048",
+      "backup": null
+    },
+    {
+      "id": "lukang",
+      "selected": "review-v5.png",
+      "sourceSha256": "9342ac1797483a8cfb715f3225d73ee849e800ceacabe4c64a1e6c1fe020683c",
+      "backup": "assets/spots/lukang/collection/archive/master-before-runtime-20261021.png"
+    },
+    {
+      "id": "hehuanshan",
+      "selected": "review-v3.png",
+      "sourceSha256": "2e75a9836a4209d61f79db70676a3b19e5ca8d8749f19692a641d03cc5ca874a",
+      "backup": null
+    },
+    {
+      "id": "alishan",
+      "selected": "review-v2.png",
+      "sourceSha256": "63641788617cbecb86d052d2658b217081bbcf6b6ce9a4adc07b0f4be8bd6efd",
+      "backup": null
+    },
+    {
+      "id": "anping",
+      "selected": "review-v1.png",
+      "sourceSha256": "a8124a06abf6536f6d0bf229c4a8d2e19034f8e69f4a022afdb13ce7e160e600",
+      "backup": null
+    },
+    {
+      "id": "chihkan",
+      "selected": "review-v1.png",
+      "sourceSha256": "845472773d9df9ceb2e86becc967595dbc6fc37841bd4c43d521b64bec092c8c",
+      "backup": null
+    },
+    {
+      "id": "pier2",
+      "selected": "review-v3.png",
+      "sourceSha256": "cda10bdc6bd927389d4c5927a78e5251172425e4d41321f418c7414307f92808",
+      "backup": null
+    },
+    {
+      "id": "cijin",
+      "selected": "review-v2.png",
+      "sourceSha256": "398b31ec801bf072a63d7a9e43d59bb7c5fac17016c80d6f89b0ac2550cb0257",
+      "backup": null
+    },
+    {
+      "id": "kenting",
+      "selected": "review-v3.png",
+      "sourceSha256": "9a4a65bab31f87b97a2907185bed0847caef15301c691aea3d982c20c937e33b",
+      "backup": null
+    },
+    {
+      "id": "taroko",
+      "selected": "review-v3.png",
+      "sourceSha256": "43f6df2ef67fb41712f03a62c65383da8998d84277ae672efa1b9a08223837a6",
+      "backup": null
+    },
+    {
+      "id": "qixingtan",
+      "selected": "review-v3.png",
+      "sourceSha256": "2e02991dcca54cd210a02dab6c0cf94e2848260b1eb590491e3401a1d69066b3",
+      "backup": null
+    },
+    {
+      "id": "brown-avenue",
+      "selected": "review-v4.png",
+      "sourceSha256": "4c977c2e34e695c8ffb337efcb597273315b148a1fc7da94aa71eb6ea0697b34",
+      "backup": null
+    },
+    {
+      "id": "sanxiantai",
+      "selected": "review-v5.png",
+      "sourceSha256": "80f39fb6f1653243e3416a90fd1ccf5209703eb05e8edb147154e95b36e30bef",
+      "backup": null
+    },
+    {
+      "id": "ruisui",
+      "selected": "review-v3.png",
+      "sourceSha256": "6485398af38534e91009eff75ae022aa30bf74b4004f42649a797d26b8a0ebc2",
+      "backup": null
+    },
+    {
+      "id": "longshan-temple",
+      "selected": "review-v3.png",
+      "sourceSha256": "6b4e8486acc0bdea3ed4d4811e98d67f79b4fcdc8771ce37bcab3c51d209dc81",
+      "backup": null
+    },
+    {
+      "id": "cks-memorial",
+      "selected": "review-v6.png",
+      "sourceSha256": "b496354bdc91727484bab98a1e2bca182b85950d752884d64042bf5b786c1706",
+      "backup": null
+    },
+    {
+      "id": "ximending",
+      "selected": "review-v2.png",
+      "sourceSha256": "9106bdf3d4948637912cce9006025d20cb675cd4d1012eb868931a67bc839a50",
+      "backup": null
+    },
+    {
+      "id": "shengxing-station",
+      "selected": "review-v4.png",
+      "sourceSha256": "17fe7b9f4b1ce31bb1d89ff116419930c54286033b4bcdc7c4e881b89a0610f6",
+      "backup": null
+    },
+    {
+      "id": "longteng-bridge",
+      "selected": "review-v4.png",
+      "sourceSha256": "5b3ae035bb33ce3d299b7d9eaa8b3975db20ccdb1b011437643d64f43e0ba8be",
+      "backup": null
+    },
+    {
+      "id": "sanyi-woodcarving",
+      "selected": "review-v1.png",
+      "sourceSha256": "ad601865ea32c342c0558401b7f1d0c08e443394031f13aa76da30ff07005e12",
+      "backup": null
+    },
+    {
+      "id": "nanzhuang",
+      "selected": "review-v2.png",
+      "sourceSha256": "5df19b6c4ad4fb3ba34e132bc111e28f07bced68958465af9f46838c413b4d6f",
+      "backup": null
+    },
+    {
+      "id": "hinoki-village",
+      "selected": "review-v2.png",
+      "sourceSha256": "b96d88856f57397e30780a0cc24fc9c9b4b6c8714b24218372c6453a7c0c6904",
+      "backup": null
+    },
+    {
+      "id": "fenqihu",
+      "selected": "review-v5.png",
+      "sourceSha256": "7a40c589b2fb5af71ae7701d4eda9a62bbae5abae9bfb540e2efaa4f1fdfa144",
+      "backup": null
+    },
+    {
+      "id": "dongshi",
+      "selected": "review-v2.png",
+      "sourceSha256": "28db4ebd9c51e0f0d6601f4a00dc5a6066acda977b7e269abbfad7940c1baf8c",
+      "backup": null
+    },
+    {
+      "id": "npm-southern",
+      "selected": "review-v3.png",
+      "sourceSha256": "3bed42dc84391cfb58b4380f6ab96692d29e9dad61f520ab14308e81fcfade3c",
+      "backup": null
+    },
+    {
+      "id": "guishan-island",
+      "selected": "review-v2.png",
+      "sourceSha256": "b7878b45518d672ffdda51ed7801d1950c2965cca2a74e9112705ef5fd8af666",
+      "backup": null
+    },
+    {
+      "id": "waiao",
+      "selected": "review-v1.png",
+      "sourceSha256": "2713400e8c7aeeb576e07c9e27ae1aa981ee30678638445594e71c767bf9e4d4",
+      "backup": null
+    },
+    {
+      "id": "jiaoxi",
+      "selected": "review-v1.png",
+      "sourceSha256": "60bf60721b420c9e6795e922b68af9db80cbfa7ec2b68fb6af162a57b6962aa4",
+      "backup": null
+    },
+    {
+      "id": "shilin-night-market",
+      "selected": "review-v7.png",
+      "sourceSha256": "3edbdb2c588330b559910eed563d008e174b2c511d3c24ef55bf6f1d7cbafc58",
+      "backup": null
+    },
+    {
+      "id": "beitou-thermal-valley",
+      "selected": "review-v1.png",
+      "sourceSha256": "ce2ad9173887437ddb9c81b0a4d427a2afe8fb836f7472e8af930463505ced10",
+      "backup": null
+    },
+    {
+      "id": "qingtiangang",
+      "selected": "review-v2.png",
+      "sourceSha256": "6151357bbe05ca5fa94b1a1b0b7849189ff0ba822e7efd42c006d57d3e77ff10",
+      "backup": null
+    },
+    {
+      "id": "maokong",
+      "selected": "review-v2.png",
+      "sourceSha256": "868645d34e4093fe70fe652ba480a4a3d7d6b5b6b75dc05fca9620d8fc56e981",
+      "backup": null
+    },
+    {
+      "id": "baishatun",
+      "selected": "review-v2.png",
+      "sourceSha256": "ed86569c1b3ea0ed35d1de812cb931bb7362631aa22e7b5d92cf4c31b09dcc04",
+      "backup": null
+    },
+    {
+      "id": "huoyanshan",
+      "selected": "review-v1.png",
+      "sourceSha256": "f3f40243b49dcf89b2f45fbc5ed46d14efd1e31d57ab68e1a1c357424c01113e",
+      "backup": null
+    },
+    {
+      "id": "zhengbin-port",
+      "selected": "review-v1.png",
+      "sourceSha256": "f720395629cdbe91bd4ac6326940cac8481a5a21b8d1cdb36d41b691e827a434",
+      "backup": null
+    },
+    {
+      "id": "huashan-1914",
+      "selected": "review-v3.png",
+      "sourceSha256": "e064a55cb13df954f16d5c9417a70c1e1e85d2d2980b4d17bb7dbca2b4168108",
+      "backup": null
+    },
+    {
+      "id": "shifen-waterfall",
+      "selected": "review-v2.png",
+      "sourceSha256": "0d99d4f0707d03843e3ca1bbc7949bcf701055e24731ce72da90293a5ce0eeaa",
+      "backup": null
+    },
+    {
+      "id": "taichung-opera",
+      "selected": "review-v2.png",
+      "sourceSha256": "e72cd27b32b82fcca2fa9d3147b0ee624a4770fa043cec631ee9329cfb4cc865",
+      "backup": null
+    },
+    {
+      "id": "miyahara",
+      "selected": "review-v1.png",
+      "sourceSha256": "d85c3ca71f5bfa2e04e4af416b08da35e220647784957d039f29c72e2c277e98",
+      "backup": null
+    },
+    {
+      "id": "wenhua-night-market",
+      "selected": "review-v1.png",
+      "sourceSha256": "12c13e4ced83ceb8a9683c70520304a2e70df6dcf5e9ccd484c33682a10c385f",
+      "backup": null
+    },
+    {
+      "id": "tainan-confucius",
+      "selected": "review-v3.png",
+      "sourceSha256": "bf7d3f66eb76031444aba7ba75ae1ab52b63e9317e1acb586b4565402d1fd35d",
+      "backup": null
+    },
+    {
+      "id": "shennong-street",
+      "selected": "review-v1.png",
+      "sourceSha256": "76dcde4f554ad21cd175563e8bdfc0e3498827011688b362c6a5834bf69e63e5",
+      "backup": null
+    },
+    {
+      "id": "anping-treehouse",
+      "selected": "review-v3.png",
+      "sourceSha256": "413dbb89a4ea164fde46395e81dae4c79f89116988ec4737215e7cd52f22775e",
+      "backup": null
+    },
+    {
+      "id": "nccta",
+      "selected": "review-v2.png",
+      "sourceSha256": "5c9a76eec230351e10da475aba3c323fb8b812ff4da892ae5c3ae2746ff908eb",
+      "backup": null
+    },
+    {
+      "id": "luodong-night-market",
+      "selected": "review-v1.png",
+      "sourceSha256": "2c2b82389ed5d97a710d17130780df7857df1a71bda6931edcfdfbbc3e73a27d",
+      "backup": null
+    },
+    {
+      "id": "taipingshan",
+      "selected": "review-v2.png",
+      "sourceSha256": "6d018d49d1730de3cd4fa114737e26aac3354cdfedb7662452dddb50a9513751",
+      "backup": null
+    },
+    {
+      "id": "raohe-night-market",
+      "selected": "review-v3.png",
+      "sourceSha256": "1ab4a6ea07c5d63b0622ea953c211229cbebba3197b98c8493252086cafc1fdd",
+      "backup": null
+    },
+    {
+      "id": "baoan-temple",
+      "selected": "review-v1.png",
+      "sourceSha256": "58683ddc96a9633b776c525d72da68ec514e17debfd4d8c529d6c0f5650e104c",
+      "backup": null
+    },
+    {
+      "id": "fengjia",
+      "selected": "review-v1.png",
+      "sourceSha256": "df0c69443462b79bb24ef0c2766001e44c6127438bc5d19e30710f7cc5b3a175",
+      "backup": null
+    },
+    {
+      "id": "shenji-village",
+      "selected": "review-v1.png",
+      "sourceSha256": "fd7b41e273f7b3710ffdf9245a089cc976c43d3b30b46a37333528c3dffeaeea",
+      "backup": null
+    },
+    {
+      "id": "luce-chapel",
+      "selected": "review-v2.png",
+      "sourceSha256": "1c7bea0876b666d09d7c2cd058a1a2941c6717d1c58009c0b400bfe4dbc002cb",
+      "backup": null
+    },
+    {
+      "id": "chimei-museum",
+      "selected": "review-v3.png",
+      "sourceSha256": "8c0ba0be93b0efdac5bb2df5c09c28dc31377c1ae4bd9e6780b6d8a33178befd",
+      "backup": null
+    },
+    {
+      "id": "qigu-salt",
+      "selected": "review-v2.png",
+      "sourceSha256": "98b6c82713cacc23dd19a8cecdf849143305fb531d28af238de946bfb5397f64",
+      "backup": null
+    },
+    {
+      "id": "jingzaijiao",
+      "selected": "review-v3.png",
+      "sourceSha256": "66e82c16fe85aafe95722c246e8d6ae226eda2bb51caec046e747007787a5194",
+      "backup": null
+    },
+    {
+      "id": "sicao",
+      "selected": "review-v1.png",
+      "sourceSha256": "26b2a48f4feb2481194753354653a8368d37cd1c1a464ff307dd612e105be380",
+      "backup": null
+    },
+    {
+      "id": "jimmy-square",
+      "selected": "review-v1.png",
+      "sourceSha256": "4e70ccf7606e40604e2ee2ed4a132bc749d54d4ca9e9b4635d702992dc9e6d7b",
+      "backup": null
+    },
+    {
+      "id": "suao-cold-spring",
+      "selected": "review-v1.png",
+      "sourceSha256": "9bda65eb7a5cf24c5f33bcb2dd83ec398ea392f5f6c6d02ec9a7e32b34ddfd29",
+      "backup": null
+    },
+    {
+      "id": "pingxi",
+      "selected": "review-v1.png",
+      "sourceSha256": "aeaf6eab4d4e974a1078c4d8a135e47e40cdd8364496328377a79f47d32de2a1",
+      "backup": null
+    },
+    {
+      "id": "houtong",
+      "selected": "review-v11.png",
+      "sourceSha256": "02ad2b0830766af588df5c89d5052c7b10b28988a1114b31d1c163b495df3ee9",
+      "backup": null
+    },
+    {
+      "id": "jinguashi",
+      "selected": "review-v2.png",
+      "sourceSha256": "363073ad64f8d16a89459f9fb8f37e2cc33000be3e89b335d4534945635275a2",
+      "backup": null
+    },
+    {
+      "id": "dajia-jenn-lann",
+      "selected": "review-v2.png",
+      "sourceSha256": "de4ceb861afcfa5c1288d3467f22bf863afe4e27feb8587cbbc549fde130ed21",
+      "backup": null
+    },
+    {
+      "id": "wuqi-port",
+      "selected": "review-v1.png",
+      "sourceSha256": "f361f9fc8a73b94591f1b2cc682ce43b272a691e839c05a138392f2b892d7eb1",
+      "backup": null
+    },
+    {
+      "id": "xinshe",
+      "selected": "review-v1.png",
+      "sourceSha256": "151fa3e5ee2475b7360b5b06915d78d9050add598860d9dc5fe30fa2612ac513",
+      "backup": null
+    },
+    {
+      "id": "guguan",
+      "selected": "review-v2.png",
+      "sourceSha256": "cd5b6c742fcf49c73e7e16489c064bb7999aac097fd2bf6adb4216d74f070ffa",
+      "backup": null
+    },
+    {
+      "id": "wushantou",
+      "selected": "review-v1.png",
+      "sourceSha256": "d488e9589dbfa6226b42cfe5853561ff100272961eb714b7fb7e3708dd476d53",
+      "backup": null
+    },
+    {
+      "id": "hayashi",
+      "selected": "review-v2.png",
+      "sourceSha256": "e857850af6d30fa5cd279770e58f532993cde84829287f2af83f4f61dd4c7290",
+      "backup": null
+    },
+    {
+      "id": "lotus-pond",
+      "selected": "review-v2.png",
+      "sourceSha256": "34846b68d575d03aa9596687addf5368819c21813ecc949628c90a68c01261f4",
+      "backup": null
+    },
+    {
+      "id": "lanyang-museum",
+      "selected": "review-v3.png",
+      "sourceSha256": "b7eb6ad04436086ad267f9a521c56ab7bb3f06d4cc874419fabeeefe655fad08",
+      "backup": null
+    },
+    {
+      "id": "dongdamen",
+      "selected": "review-v2.png",
+      "sourceSha256": "284bfdbe9257ba716a532b08e06919faf2aacce5d26e34d5a1632895b084f9a1",
+      "backup": null
+    },
+    {
+      "id": "pine-garden",
+      "selected": "review-v2.png",
+      "sourceSha256": "a9db0212a7eacfb2d4c78c9c4edec1cb9bd9a9fecb5af97ce761a932f3accd5e",
+      "backup": null
+    },
+    {
+      "id": "yinyang-sea",
+      "selected": "review-v4.png",
+      "sourceSha256": "fa1a471a04484c11b7190f0c3cd2ab106e9ea2ce90561b8caa65061f30eaf350",
+      "backup": null
+    },
+    {
+      "id": "wuling-farm",
+      "selected": "review-v1.png",
+      "sourceSha256": "226fe34df7d93dbf8644380f9174a07ed2d2d8c3f4c9c54a08d6b20a4c8ac8ea",
+      "backup": null
+    },
+    {
+      "id": "roundhouse",
+      "selected": "review-v2.png",
+      "sourceSha256": "b29ff360c92189335519cd0ec8750982ed258cc15ba89cdfa92523f44dc7bded",
+      "backup": null
+    },
+    {
+      "id": "british-consulate",
+      "selected": "review-v2.png",
+      "sourceSha256": "2436da7640d8d5450b7266dab15cf7fb89592d702c21556d5301736111b27398",
+      "backup": null
+    },
+    {
+      "id": "liyu-lake",
+      "selected": "review-v1.png",
+      "sourceSha256": "082336a8a5e8073ebc90ea84afb433b6352fb097837a40e59198d098b882e6f0",
+      "backup": null
+    },
+    {
+      "id": "bitou-cape",
+      "selected": "review-v1.png",
+      "sourceSha256": "6f7c945e6887b6d902d7fa00e3d8dcee2e39cb049082b7db34a59bc909016ce6",
+      "backup": null
+    },
+    {
+      "id": "fulong",
+      "selected": "review-v3.png",
+      "sourceSha256": "cbcf3fa7422a52d71d7f1f4233c745cd6d62a982d5730957abea1ae8d59c8846",
+      "backup": null
+    },
+    {
+      "id": "baguashan-buddha",
+      "selected": "review-v3.png",
+      "sourceSha256": "2acfa3fe995f52789cb8e3db24355b50328ab362495621894af49ada6c52f7a8",
+      "backup": null
+    },
+    {
+      "id": "tianwei",
+      "selected": "review-v3.png",
+      "sourceSha256": "e2eb1b6480e2c139941a42d1e5a6755b0aaf33ff322379bcaa027a1619905fd2",
+      "backup": null
+    },
+    {
+      "id": "formosa-boulevard",
+      "selected": "review-v3.png",
+      "sourceSha256": "dbe6892b425f11e93be47fcb532886fd3a69ed3d4a9f5b9ae18c686fb9d54ed0",
+      "backup": null
+    },
+    {
+      "id": "sizihwan",
+      "selected": "review-v1.png",
+      "sourceSha256": "d94dd02f1c663414f84c07cdb733192559312bf0731fbef20e1029fae725acd9",
+      "backup": null
+    },
+    {
+      "id": "liuhe",
+      "selected": "review-v2.png",
+      "sourceSha256": "8f09744a4edff302141b978009dcc7d48a8bca08596f96e09e257a2c3a3580cc",
+      "backup": null
+    },
+    {
+      "id": "liushidan",
+      "selected": "review-v5.png",
+      "sourceSha256": "c711ae3da1311b64259badf7e5c8f7496308794407a93efb99b1d8809d141e96",
+      "backup": null
+    },
+    {
+      "id": "lintianshan",
+      "selected": "review-v2.png",
+      "sourceSha256": "09314cd1598cde0c520fd79b8aedd7685cd073bcd8e77a13c6e72db4eb935d80",
+      "backup": null
+    },
+    {
+      "id": "yingge",
+      "selected": "review-v1.png",
+      "sourceSha256": "54eb19dbb3819d26325f5a8c78029775d4b32318cb7148c41d52b9e52e2b43d3",
+      "backup": null
+    },
+    {
+      "id": "shimen-cave",
+      "selected": "review-v1.png",
+      "sourceSha256": "6cff42e8cd7bb566794cec17843d7951fad075ee8b9161d6400e3ffc5aa10564",
+      "backup": null
+    },
+    {
+      "id": "keelung-miaokou",
+      "selected": "review-v3.png",
+      "sourceSha256": "c4de52152da6e710ca6c0ac15e5af4449d29b57ad6a7bdad24649112533ed97f",
+      "backup": null
+    },
+    {
+      "id": "jiji-station",
+      "selected": "review-v3.png",
+      "sourceSha256": "3ba17f4a3f59d793cf74dae50e329dc2b3ade4a0eca3434bbd46097d1afb879b",
+      "backup": null
+    },
+    {
+      "id": "checheng",
+      "selected": "review-v2.png",
+      "sourceSha256": "6b0f6ccbdad5c7fda14ca7dd8d5b8ed539714aa5e582912c765f2ec7e81607dc",
+      "backup": null
+    },
+    {
+      "id": "xitou",
+      "selected": "review-v1.png",
+      "sourceSha256": "65772d17e8878dbdd9702281183e9434ab08c0558061beb8fcd98916d0143bb5",
+      "backup": null
+    },
+    {
+      "id": "moon-world",
+      "selected": "review-v2.png",
+      "sourceSha256": "df7bebaf7263fb79530ae57dda9a429f8bf6ddd64779e200933526eeb606623d",
+      "backup": null
+    },
+    {
+      "id": "meinong",
+      "selected": "review-v1.png",
+      "sourceSha256": "b183c3faed05dc7d34b590ffeaed5c86d1cc411f92053f9c90bb3afd607736de",
+      "backup": null
+    },
+    {
+      "id": "qishan",
+      "selected": "review-v1.png",
+      "sourceSha256": "562cbe4f3596aa50731f5d9afed9e13127196afeba4e6093c7205977daef9932",
+      "backup": null
+    },
+    {
+      "id": "shitiping",
+      "selected": "review-v1.png",
+      "sourceSha256": "d57a7fdb32f6405edbbb092fe5699bc5ebfe7e66ef5058f5c88ac6f904ce04e3",
+      "backup": null
+    },
+    {
+      "id": "tropic-cancer-hualien",
+      "selected": "review-v3.png",
+      "sourceSha256": "1dbb432445ff8604d9d97b4335e8fd8531c8fc1ba003441936add43294fa860c",
+      "backup": null
+    },
+    {
+      "id": "heping-island",
+      "selected": "review-v10.png",
+      "sourceSha256": "063ed9c2641f0dc296379f763dd5784e15c35d848de5e068ac9c5d94055237d7",
+      "backup": null
+    },
+    {
+      "id": "lin-family-garden",
+      "selected": "review-v1.png",
+      "sourceSha256": "f87f9fe0e7dfa50d4016676f0a4ce912bdb0828b365df6574ca2bdf6cf35b3c6",
+      "backup": null
+    },
+    {
+      "id": "paper-dome",
+      "selected": "review-v1.png",
+      "sourceSha256": "818b02883268d5fb9f5bf2a00069a377156f20fa95ebed010b15710f52e521f1",
+      "backup": null
+    },
+    {
+      "id": "sun-link-sea",
+      "selected": "review-v1.png",
+      "sourceSha256": "73c64b381c9c3bd46be4d71fcfb8d43cf111b62322103439e9640a3857dc2132",
+      "backup": null
+    },
+    {
+      "id": "formosan-aboriginal-village",
+      "selected": "review-v2.png",
+      "sourceSha256": "47ea08fa285c6d494d9028622aff58570a1cae4f29d3af14a2c6ef842c5ac8b8",
+      "backup": null
+    },
+    {
+      "id": "maolin",
+      "selected": "review-v3.png",
+      "sourceSha256": "18f779153f27512821aff84ad6e9ad1a842a10fb2982d509f85cd55b7ff9534a",
+      "backup": null
+    },
+    {
+      "id": "dapeng-bay",
+      "selected": "review-v2.png",
+      "sourceSha256": "1b1b5b3b8f1ce091da59643ab612cc2635a8ebe80890bb236c52bbe2292353d9",
+      "backup": null
+    },
+    {
+      "id": "xiaoliuqiu",
+      "selected": "review-v1.png",
+      "sourceSha256": "8ce1e679b93c6897d686714bf3275e1f6507a9b96375d137c134b4fa2e983b82",
+      "backup": null
+    },
+    {
+      "id": "donggang",
+      "selected": "review-v3.png",
+      "sourceSha256": "070eb406fb54763c76f6a2e68be9ac9349eb2ec0fa6f081580a1a2d33ac786eb",
+      "backup": null
+    },
+    {
+      "id": "chike-mountain",
+      "selected": "review-v2.png",
+      "sourceSha256": "9f09af9f53bf22c1a03c33c854d0e3f62119b930d25379c0d9e6a151cff24b25",
+      "backup": null
+    },
+    {
+      "id": "tiehua-village",
+      "selected": "review-v3.png",
+      "sourceSha256": "2517e4944618a8000601e7cf3b7af31329c7a955684b3d93b1cd59581a90a790",
+      "backup": null
+    },
+    {
+      "id": "taitung-forest-park",
+      "selected": "review-v1.png",
+      "sourceSha256": "7d087fb229df3d9d3e1ef154616a0761c3f01e903f75e5f309e613d800ec9306",
+      "backup": null
+    },
+    {
+      "id": "shimen-reservoir",
+      "selected": "review-v1.png",
+      "sourceSha256": "8ff8397e36bdf2927131f0cefe99b162b89e4bc3022f0685e15a1e7503c5c6e9",
+      "backup": null
+    },
+    {
+      "id": "xiaowulai",
+      "selected": "review-v1.png",
+      "sourceSha256": "f5341105594769ffeaf8f46ba2ceac4412e01ebefdf049ec28e9a6a474893424",
+      "backup": null
+    },
+    {
+      "id": "hsinchu-chenghuang",
+      "selected": "review-v2.png",
+      "sourceSha256": "014adaaa5c48aafbd95edab141b433890c7c91b0c2d75240816e6898958577eb",
+      "backup": null
+    },
+    {
+      "id": "aowanda",
+      "selected": "review-v3.png",
+      "sourceSha256": "cd65006226f6ec80f18148d92a1fd45d5a58652c20a97fd9f4e527f3d0499425",
+      "backup": null
+    },
+    {
+      "id": "yushan",
+      "selected": "review-v1.png",
+      "sourceSha256": "38e5e58feb477cab9ef4b5c4b0c0fc356b9507fdeb8496e0c5535f92909e8957",
+      "backup": null
+    },
+    {
+      "id": "beigang-chaotian",
+      "selected": "review-v3.png",
+      "sourceSha256": "a1310182578907d30e203a5ffe0de2241216cc03ab833234b31fb80747f854a0",
+      "backup": null
+    },
+    {
+      "id": "longpan",
+      "selected": "review-v2.png",
+      "sourceSha256": "078aa3a1ef1cb54ecb69e35c446257381eec5a57910c7b0ce461e58739df7cac",
+      "backup": null
+    },
+    {
+      "id": "maobitou",
+      "selected": "review-v1.png",
+      "sourceSha256": "d6f894899b99dfc16bb6f3761aad194bf3121e76b3a819596d99a18ddf99593e",
+      "backup": null
+    },
+    {
+      "id": "hengchun-old-town",
+      "selected": "review-v2.png",
+      "sourceSha256": "121c704177459cd3dc71bf4754b0ecf90fe4c99ead5213a17a4751d1eb2dcbd9",
+      "backup": null
+    },
+    {
+      "id": "jialulan",
+      "selected": "review-v1.png",
+      "sourceSha256": "82e53edee41bbeecad68100e3b14b2efa7412ea547e28b2e52966ebe07d46e1f",
+      "backup": null
+    },
+    {
+      "id": "water-flowing-up",
+      "selected": "review-v2.png",
+      "sourceSha256": "3baee7b56d9fee4b305cb28e6fab631c30fb2795a1236ad9d69d363f98441397",
+      "backup": null
+    },
+    {
+      "id": "xiaoyeliu",
+      "selected": "review-v2.png",
+      "sourceSha256": "40041894f3a076af3c9fccf879ac60e19345d279f25457568bb9c5809b948055",
+      "backup": null
+    }
+  ],
+  "worldTokens": "Existing dedicated tokens retained; others use generic markers"
+}

@@ -16,16 +16,58 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     },
     world: require('../../assets/spots/anping/world/landmark.webp'),
   },
+  'anping-treehouse': {
+    collection: {
+      day: require('../../assets/spots/anping-treehouse/collection/day.webp'),
+      thumbnail: require('../../assets/spots/anping-treehouse/collection/thumbnail.webp'),
+    },
+  },
+  'aowanda': {
+    collection: {
+      day: require('../../assets/spots/aowanda/collection/day.webp'),
+      thumbnail: require('../../assets/spots/aowanda/collection/thumbnail.webp'),
+    },
+  },
+  'baguashan-buddha': {
+    collection: {
+      day: require('../../assets/spots/baguashan-buddha/collection/day.webp'),
+      thumbnail: require('../../assets/spots/baguashan-buddha/collection/thumbnail.webp'),
+    },
+  },
   'baishatun': {
     collection: {
       day: require('../../assets/spots/baishatun/collection/day.webp'),
       thumbnail: require('../../assets/spots/baishatun/collection/thumbnail.webp'),
     },
   },
+  'baoan-temple': {
+    collection: {
+      day: require('../../assets/spots/baoan-temple/collection/day.webp'),
+      thumbnail: require('../../assets/spots/baoan-temple/collection/thumbnail.webp'),
+    },
+  },
+  'beigang-chaotian': {
+    collection: {
+      day: require('../../assets/spots/beigang-chaotian/collection/day.webp'),
+      thumbnail: require('../../assets/spots/beigang-chaotian/collection/thumbnail.webp'),
+    },
+  },
   'beitou-thermal-valley': {
     collection: {
       day: require('../../assets/spots/beitou-thermal-valley/collection/day.webp'),
       thumbnail: require('../../assets/spots/beitou-thermal-valley/collection/thumbnail.webp'),
+    },
+  },
+  'bitou-cape': {
+    collection: {
+      day: require('../../assets/spots/bitou-cape/collection/day.webp'),
+      thumbnail: require('../../assets/spots/bitou-cape/collection/thumbnail.webp'),
+    },
+  },
+  'british-consulate': {
+    collection: {
+      day: require('../../assets/spots/british-consulate/collection/day.webp'),
+      thumbnail: require('../../assets/spots/british-consulate/collection/thumbnail.webp'),
     },
   },
   'brown-avenue': {
@@ -35,12 +77,30 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     },
     world: require('../../assets/spots/brown-avenue/world/landmark.webp'),
   },
+  'checheng': {
+    collection: {
+      day: require('../../assets/spots/checheng/collection/day.webp'),
+      thumbnail: require('../../assets/spots/checheng/collection/thumbnail.webp'),
+    },
+  },
   'chihkan': {
     collection: {
       day: require('../../assets/spots/chihkan/collection/day.webp'),
       thumbnail: require('../../assets/spots/chihkan/collection/thumbnail.webp'),
     },
     world: require('../../assets/spots/chihkan/world/landmark.webp'),
+  },
+  'chike-mountain': {
+    collection: {
+      day: require('../../assets/spots/chike-mountain/collection/day.webp'),
+      thumbnail: require('../../assets/spots/chike-mountain/collection/thumbnail.webp'),
+    },
+  },
+  'chimei-museum': {
+    collection: {
+      day: require('../../assets/spots/chimei-museum/collection/day.webp'),
+      thumbnail: require('../../assets/spots/chimei-museum/collection/thumbnail.webp'),
+    },
   },
   'cijin': {
     collection: {
@@ -69,16 +129,64 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     },
     world: require('../../assets/spots/dadaocheng/world/landmark.webp'),
   },
+  'dajia-jenn-lann': {
+    collection: {
+      day: require('../../assets/spots/dajia-jenn-lann/collection/day.webp'),
+      thumbnail: require('../../assets/spots/dajia-jenn-lann/collection/thumbnail.webp'),
+    },
+  },
+  'dapeng-bay': {
+    collection: {
+      day: require('../../assets/spots/dapeng-bay/collection/day.webp'),
+      thumbnail: require('../../assets/spots/dapeng-bay/collection/thumbnail.webp'),
+    },
+  },
+  'dongdamen': {
+    collection: {
+      day: require('../../assets/spots/dongdamen/collection/day.webp'),
+      thumbnail: require('../../assets/spots/dongdamen/collection/thumbnail.webp'),
+    },
+  },
+  'donggang': {
+    collection: {
+      day: require('../../assets/spots/donggang/collection/day.webp'),
+      thumbnail: require('../../assets/spots/donggang/collection/thumbnail.webp'),
+    },
+  },
   'dongshi': {
     collection: {
       day: require('../../assets/spots/dongshi/collection/day.webp'),
       thumbnail: require('../../assets/spots/dongshi/collection/thumbnail.webp'),
     },
   },
+  'fengjia': {
+    collection: {
+      day: require('../../assets/spots/fengjia/collection/day.webp'),
+      thumbnail: require('../../assets/spots/fengjia/collection/thumbnail.webp'),
+    },
+  },
   'fenqihu': {
     collection: {
       day: require('../../assets/spots/fenqihu/collection/day.webp'),
       thumbnail: require('../../assets/spots/fenqihu/collection/thumbnail.webp'),
+    },
+  },
+  'formosa-boulevard': {
+    collection: {
+      day: require('../../assets/spots/formosa-boulevard/collection/day.webp'),
+      thumbnail: require('../../assets/spots/formosa-boulevard/collection/thumbnail.webp'),
+    },
+  },
+  'formosan-aboriginal-village': {
+    collection: {
+      day: require('../../assets/spots/formosan-aboriginal-village/collection/day.webp'),
+      thumbnail: require('../../assets/spots/formosan-aboriginal-village/collection/thumbnail.webp'),
+    },
+  },
+  'fulong': {
+    collection: {
+      day: require('../../assets/spots/fulong/collection/day.webp'),
+      thumbnail: require('../../assets/spots/fulong/collection/thumbnail.webp'),
     },
   },
   'gaomei': {
@@ -88,10 +196,22 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     },
     world: require('../../assets/spots/gaomei/world/landmark.webp'),
   },
+  'guguan': {
+    collection: {
+      day: require('../../assets/spots/guguan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/guguan/collection/thumbnail.webp'),
+    },
+  },
   'guishan-island': {
     collection: {
       day: require('../../assets/spots/guishan-island/collection/day.webp'),
       thumbnail: require('../../assets/spots/guishan-island/collection/thumbnail.webp'),
+    },
+  },
+  'hayashi': {
+    collection: {
+      day: require('../../assets/spots/hayashi/collection/day.webp'),
+      thumbnail: require('../../assets/spots/hayashi/collection/thumbnail.webp'),
     },
   },
   'hehuanshan': {
@@ -101,10 +221,40 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     },
     world: require('../../assets/spots/hehuanshan/world/landmark.webp'),
   },
+  'hengchun-old-town': {
+    collection: {
+      day: require('../../assets/spots/hengchun-old-town/collection/day.webp'),
+      thumbnail: require('../../assets/spots/hengchun-old-town/collection/thumbnail.webp'),
+    },
+  },
+  'heping-island': {
+    collection: {
+      day: require('../../assets/spots/heping-island/collection/day.webp'),
+      thumbnail: require('../../assets/spots/heping-island/collection/thumbnail.webp'),
+    },
+  },
   'hinoki-village': {
     collection: {
       day: require('../../assets/spots/hinoki-village/collection/day.webp'),
       thumbnail: require('../../assets/spots/hinoki-village/collection/thumbnail.webp'),
+    },
+  },
+  'houtong': {
+    collection: {
+      day: require('../../assets/spots/houtong/collection/day.webp'),
+      thumbnail: require('../../assets/spots/houtong/collection/thumbnail.webp'),
+    },
+  },
+  'hsinchu-chenghuang': {
+    collection: {
+      day: require('../../assets/spots/hsinchu-chenghuang/collection/day.webp'),
+      thumbnail: require('../../assets/spots/hsinchu-chenghuang/collection/thumbnail.webp'),
+    },
+  },
+  'huashan-1914': {
+    collection: {
+      day: require('../../assets/spots/huashan-1914/collection/day.webp'),
+      thumbnail: require('../../assets/spots/huashan-1914/collection/thumbnail.webp'),
     },
   },
   'huoyanshan': {
@@ -113,10 +263,40 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
       thumbnail: require('../../assets/spots/huoyanshan/collection/thumbnail.webp'),
     },
   },
+  'jialulan': {
+    collection: {
+      day: require('../../assets/spots/jialulan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/jialulan/collection/thumbnail.webp'),
+    },
+  },
   'jiaoxi': {
     collection: {
       day: require('../../assets/spots/jiaoxi/collection/day.webp'),
       thumbnail: require('../../assets/spots/jiaoxi/collection/thumbnail.webp'),
+    },
+  },
+  'jiji-station': {
+    collection: {
+      day: require('../../assets/spots/jiji-station/collection/day.webp'),
+      thumbnail: require('../../assets/spots/jiji-station/collection/thumbnail.webp'),
+    },
+  },
+  'jimmy-square': {
+    collection: {
+      day: require('../../assets/spots/jimmy-square/collection/day.webp'),
+      thumbnail: require('../../assets/spots/jimmy-square/collection/thumbnail.webp'),
+    },
+  },
+  'jinguashi': {
+    collection: {
+      day: require('../../assets/spots/jinguashi/collection/day.webp'),
+      thumbnail: require('../../assets/spots/jinguashi/collection/thumbnail.webp'),
+    },
+  },
+  'jingzaijiao': {
+    collection: {
+      day: require('../../assets/spots/jingzaijiao/collection/day.webp'),
+      thumbnail: require('../../assets/spots/jingzaijiao/collection/thumbnail.webp'),
     },
   },
   'jiufen': {
@@ -126,12 +306,60 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     },
     world: require('../../assets/spots/jiufen/world/landmark.webp'),
   },
+  'keelung-miaokou': {
+    collection: {
+      day: require('../../assets/spots/keelung-miaokou/collection/day.webp'),
+      thumbnail: require('../../assets/spots/keelung-miaokou/collection/thumbnail.webp'),
+    },
+  },
   'kenting': {
     collection: {
       day: require('../../assets/spots/kenting/collection/day.webp'),
       thumbnail: require('../../assets/spots/kenting/collection/thumbnail.webp'),
     },
     world: require('../../assets/spots/kenting/world/landmark.webp'),
+  },
+  'lanyang-museum': {
+    collection: {
+      day: require('../../assets/spots/lanyang-museum/collection/day.webp'),
+      thumbnail: require('../../assets/spots/lanyang-museum/collection/thumbnail.webp'),
+    },
+  },
+  'lin-family-garden': {
+    collection: {
+      day: require('../../assets/spots/lin-family-garden/collection/day.webp'),
+      thumbnail: require('../../assets/spots/lin-family-garden/collection/thumbnail.webp'),
+    },
+  },
+  'lintianshan': {
+    collection: {
+      day: require('../../assets/spots/lintianshan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/lintianshan/collection/thumbnail.webp'),
+    },
+  },
+  'liuhe': {
+    collection: {
+      day: require('../../assets/spots/liuhe/collection/day.webp'),
+      thumbnail: require('../../assets/spots/liuhe/collection/thumbnail.webp'),
+    },
+  },
+  'liushidan': {
+    collection: {
+      day: require('../../assets/spots/liushidan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/liushidan/collection/thumbnail.webp'),
+    },
+  },
+  'liyu-lake': {
+    collection: {
+      day: require('../../assets/spots/liyu-lake/collection/day.webp'),
+      thumbnail: require('../../assets/spots/liyu-lake/collection/thumbnail.webp'),
+    },
+  },
+  'longpan': {
+    collection: {
+      day: require('../../assets/spots/longpan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/longpan/collection/thumbnail.webp'),
+    },
   },
   'longshan-temple': {
     collection: {
@@ -145,6 +373,18 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
       thumbnail: require('../../assets/spots/longteng-bridge/collection/thumbnail.webp'),
     },
   },
+  'lotus-pond': {
+    collection: {
+      day: require('../../assets/spots/lotus-pond/collection/day.webp'),
+      thumbnail: require('../../assets/spots/lotus-pond/collection/thumbnail.webp'),
+    },
+  },
+  'luce-chapel': {
+    collection: {
+      day: require('../../assets/spots/luce-chapel/collection/day.webp'),
+      thumbnail: require('../../assets/spots/luce-chapel/collection/thumbnail.webp'),
+    },
+  },
   'lukang': {
     collection: {
       day: require('../../assets/spots/lukang/collection/day.webp'),
@@ -152,16 +392,58 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     },
     world: require('../../assets/spots/lukang/world/landmark.webp'),
   },
+  'luodong-night-market': {
+    collection: {
+      day: require('../../assets/spots/luodong-night-market/collection/day.webp'),
+      thumbnail: require('../../assets/spots/luodong-night-market/collection/thumbnail.webp'),
+    },
+  },
+  'maobitou': {
+    collection: {
+      day: require('../../assets/spots/maobitou/collection/day.webp'),
+      thumbnail: require('../../assets/spots/maobitou/collection/thumbnail.webp'),
+    },
+  },
   'maokong': {
     collection: {
       day: require('../../assets/spots/maokong/collection/day.webp'),
       thumbnail: require('../../assets/spots/maokong/collection/thumbnail.webp'),
     },
   },
+  'maolin': {
+    collection: {
+      day: require('../../assets/spots/maolin/collection/day.webp'),
+      thumbnail: require('../../assets/spots/maolin/collection/thumbnail.webp'),
+    },
+  },
+  'meinong': {
+    collection: {
+      day: require('../../assets/spots/meinong/collection/day.webp'),
+      thumbnail: require('../../assets/spots/meinong/collection/thumbnail.webp'),
+    },
+  },
+  'miyahara': {
+    collection: {
+      day: require('../../assets/spots/miyahara/collection/day.webp'),
+      thumbnail: require('../../assets/spots/miyahara/collection/thumbnail.webp'),
+    },
+  },
+  'moon-world': {
+    collection: {
+      day: require('../../assets/spots/moon-world/collection/day.webp'),
+      thumbnail: require('../../assets/spots/moon-world/collection/thumbnail.webp'),
+    },
+  },
   'nanzhuang': {
     collection: {
       day: require('../../assets/spots/nanzhuang/collection/day.webp'),
       thumbnail: require('../../assets/spots/nanzhuang/collection/thumbnail.webp'),
+    },
+  },
+  'nccta': {
+    collection: {
+      day: require('../../assets/spots/nccta/collection/day.webp'),
+      thumbnail: require('../../assets/spots/nccta/collection/thumbnail.webp'),
     },
   },
   'npm-southern': {
@@ -177,12 +459,36 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     },
     world: require('../../assets/spots/palace-museum/world/landmark.webp'),
   },
+  'paper-dome': {
+    collection: {
+      day: require('../../assets/spots/paper-dome/collection/day.webp'),
+      thumbnail: require('../../assets/spots/paper-dome/collection/thumbnail.webp'),
+    },
+  },
   'pier2': {
     collection: {
       day: require('../../assets/spots/pier2/collection/day.webp'),
       thumbnail: require('../../assets/spots/pier2/collection/thumbnail.webp'),
     },
     world: require('../../assets/spots/pier2/world/landmark.webp'),
+  },
+  'pine-garden': {
+    collection: {
+      day: require('../../assets/spots/pine-garden/collection/day.webp'),
+      thumbnail: require('../../assets/spots/pine-garden/collection/thumbnail.webp'),
+    },
+  },
+  'pingxi': {
+    collection: {
+      day: require('../../assets/spots/pingxi/collection/day.webp'),
+      thumbnail: require('../../assets/spots/pingxi/collection/thumbnail.webp'),
+    },
+  },
+  'qigu-salt': {
+    collection: {
+      day: require('../../assets/spots/qigu-salt/collection/day.webp'),
+      thumbnail: require('../../assets/spots/qigu-salt/collection/thumbnail.webp'),
+    },
   },
   'qingshui-cliff': {
     collection: {
@@ -195,6 +501,12 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     collection: {
       day: require('../../assets/spots/qingtiangang/collection/day.webp'),
       thumbnail: require('../../assets/spots/qingtiangang/collection/thumbnail.webp'),
+    },
+  },
+  'qishan': {
+    collection: {
+      day: require('../../assets/spots/qishan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/qishan/collection/thumbnail.webp'),
     },
   },
   'qixingtan': {
@@ -210,6 +522,18 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
       thumbnail: require('../../assets/spots/rainbow-village/collection/thumbnail.webp'),
     },
     world: require('../../assets/spots/rainbow-village/world/landmark.webp'),
+  },
+  'raohe-night-market': {
+    collection: {
+      day: require('../../assets/spots/raohe-night-market/collection/day.webp'),
+      thumbnail: require('../../assets/spots/raohe-night-market/collection/thumbnail.webp'),
+    },
+  },
+  'roundhouse': {
+    collection: {
+      day: require('../../assets/spots/roundhouse/collection/day.webp'),
+      thumbnail: require('../../assets/spots/roundhouse/collection/thumbnail.webp'),
+    },
   },
   'ruisui': {
     collection: {
@@ -237,10 +561,70 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
       thumbnail: require('../../assets/spots/shengxing-station/collection/thumbnail.webp'),
     },
   },
+  'shenji-village': {
+    collection: {
+      day: require('../../assets/spots/shenji-village/collection/day.webp'),
+      thumbnail: require('../../assets/spots/shenji-village/collection/thumbnail.webp'),
+    },
+  },
+  'shennong-street': {
+    collection: {
+      day: require('../../assets/spots/shennong-street/collection/day.webp'),
+      thumbnail: require('../../assets/spots/shennong-street/collection/thumbnail.webp'),
+    },
+  },
+  'shifen-waterfall': {
+    collection: {
+      day: require('../../assets/spots/shifen-waterfall/collection/day.webp'),
+      thumbnail: require('../../assets/spots/shifen-waterfall/collection/thumbnail.webp'),
+    },
+  },
   'shilin-night-market': {
     collection: {
       day: require('../../assets/spots/shilin-night-market/collection/day.webp'),
       thumbnail: require('../../assets/spots/shilin-night-market/collection/thumbnail.webp'),
+    },
+  },
+  'shimen-cave': {
+    collection: {
+      day: require('../../assets/spots/shimen-cave/collection/day.webp'),
+      thumbnail: require('../../assets/spots/shimen-cave/collection/thumbnail.webp'),
+    },
+  },
+  'shimen-reservoir': {
+    collection: {
+      day: require('../../assets/spots/shimen-reservoir/collection/day.webp'),
+      thumbnail: require('../../assets/spots/shimen-reservoir/collection/thumbnail.webp'),
+    },
+  },
+  'shitiping': {
+    collection: {
+      day: require('../../assets/spots/shitiping/collection/day.webp'),
+      thumbnail: require('../../assets/spots/shitiping/collection/thumbnail.webp'),
+    },
+  },
+  'sicao': {
+    collection: {
+      day: require('../../assets/spots/sicao/collection/day.webp'),
+      thumbnail: require('../../assets/spots/sicao/collection/thumbnail.webp'),
+    },
+  },
+  'sizihwan': {
+    collection: {
+      day: require('../../assets/spots/sizihwan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/sizihwan/collection/thumbnail.webp'),
+    },
+  },
+  'suao-cold-spring': {
+    collection: {
+      day: require('../../assets/spots/suao-cold-spring/collection/day.webp'),
+      thumbnail: require('../../assets/spots/suao-cold-spring/collection/thumbnail.webp'),
+    },
+  },
+  'sun-link-sea': {
+    collection: {
+      day: require('../../assets/spots/sun-link-sea/collection/day.webp'),
+      thumbnail: require('../../assets/spots/sun-link-sea/collection/thumbnail.webp'),
     },
   },
   'sun-moon-lake': {
@@ -250,12 +634,36 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     },
     world: require('../../assets/spots/sun-moon-lake/world/landmark.webp'),
   },
+  'taichung-opera': {
+    collection: {
+      day: require('../../assets/spots/taichung-opera/collection/day.webp'),
+      thumbnail: require('../../assets/spots/taichung-opera/collection/thumbnail.webp'),
+    },
+  },
+  'tainan-confucius': {
+    collection: {
+      day: require('../../assets/spots/tainan-confucius/collection/day.webp'),
+      thumbnail: require('../../assets/spots/tainan-confucius/collection/thumbnail.webp'),
+    },
+  },
   'taipei-101': {
     collection: {
       day: require('../../assets/spots/taipei-101/collection/day.webp'),
       thumbnail: require('../../assets/spots/taipei-101/collection/thumbnail.webp'),
     },
     world: require('../../assets/spots/taipei-101/world/landmark.webp'),
+  },
+  'taipingshan': {
+    collection: {
+      day: require('../../assets/spots/taipingshan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/taipingshan/collection/thumbnail.webp'),
+    },
+  },
+  'taitung-forest-park': {
+    collection: {
+      day: require('../../assets/spots/taitung-forest-park/collection/day.webp'),
+      thumbnail: require('../../assets/spots/taitung-forest-park/collection/thumbnail.webp'),
+    },
   },
   'tamsui': {
     collection: {
@@ -271,10 +679,58 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
     },
     world: require('../../assets/spots/taroko/world/landmark.webp'),
   },
+  'tianwei': {
+    collection: {
+      day: require('../../assets/spots/tianwei/collection/day.webp'),
+      thumbnail: require('../../assets/spots/tianwei/collection/thumbnail.webp'),
+    },
+  },
+  'tiehua-village': {
+    collection: {
+      day: require('../../assets/spots/tiehua-village/collection/day.webp'),
+      thumbnail: require('../../assets/spots/tiehua-village/collection/thumbnail.webp'),
+    },
+  },
+  'tropic-cancer-hualien': {
+    collection: {
+      day: require('../../assets/spots/tropic-cancer-hualien/collection/day.webp'),
+      thumbnail: require('../../assets/spots/tropic-cancer-hualien/collection/thumbnail.webp'),
+    },
+  },
   'waiao': {
     collection: {
       day: require('../../assets/spots/waiao/collection/day.webp'),
       thumbnail: require('../../assets/spots/waiao/collection/thumbnail.webp'),
+    },
+  },
+  'water-flowing-up': {
+    collection: {
+      day: require('../../assets/spots/water-flowing-up/collection/day.webp'),
+      thumbnail: require('../../assets/spots/water-flowing-up/collection/thumbnail.webp'),
+    },
+  },
+  'wenhua-night-market': {
+    collection: {
+      day: require('../../assets/spots/wenhua-night-market/collection/day.webp'),
+      thumbnail: require('../../assets/spots/wenhua-night-market/collection/thumbnail.webp'),
+    },
+  },
+  'wuling-farm': {
+    collection: {
+      day: require('../../assets/spots/wuling-farm/collection/day.webp'),
+      thumbnail: require('../../assets/spots/wuling-farm/collection/thumbnail.webp'),
+    },
+  },
+  'wuqi-port': {
+    collection: {
+      day: require('../../assets/spots/wuqi-port/collection/day.webp'),
+      thumbnail: require('../../assets/spots/wuqi-port/collection/thumbnail.webp'),
+    },
+  },
+  'wushantou': {
+    collection: {
+      day: require('../../assets/spots/wushantou/collection/day.webp'),
+      thumbnail: require('../../assets/spots/wushantou/collection/thumbnail.webp'),
     },
   },
   'xiangshan': {
@@ -283,10 +739,40 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
       thumbnail: require('../../assets/spots/xiangshan/collection/thumbnail.webp'),
     },
   },
+  'xiaoliuqiu': {
+    collection: {
+      day: require('../../assets/spots/xiaoliuqiu/collection/day.webp'),
+      thumbnail: require('../../assets/spots/xiaoliuqiu/collection/thumbnail.webp'),
+    },
+  },
+  'xiaowulai': {
+    collection: {
+      day: require('../../assets/spots/xiaowulai/collection/day.webp'),
+      thumbnail: require('../../assets/spots/xiaowulai/collection/thumbnail.webp'),
+    },
+  },
+  'xiaoyeliu': {
+    collection: {
+      day: require('../../assets/spots/xiaoyeliu/collection/day.webp'),
+      thumbnail: require('../../assets/spots/xiaoyeliu/collection/thumbnail.webp'),
+    },
+  },
   'ximending': {
     collection: {
       day: require('../../assets/spots/ximending/collection/day.webp'),
       thumbnail: require('../../assets/spots/ximending/collection/thumbnail.webp'),
+    },
+  },
+  'xinshe': {
+    collection: {
+      day: require('../../assets/spots/xinshe/collection/day.webp'),
+      thumbnail: require('../../assets/spots/xinshe/collection/thumbnail.webp'),
+    },
+  },
+  'xitou': {
+    collection: {
+      day: require('../../assets/spots/xitou/collection/day.webp'),
+      thumbnail: require('../../assets/spots/xitou/collection/thumbnail.webp'),
     },
   },
   'yehliu': {
@@ -295,5 +781,29 @@ export const GENERATED_SPOT_ASSETS: Record<string, SpotAssetSet> = {
       thumbnail: require('../../assets/spots/yehliu/collection/thumbnail.webp'),
     },
     world: require('../../assets/spots/yehliu/world/landmark.webp'),
+  },
+  'yingge': {
+    collection: {
+      day: require('../../assets/spots/yingge/collection/day.webp'),
+      thumbnail: require('../../assets/spots/yingge/collection/thumbnail.webp'),
+    },
+  },
+  'yinyang-sea': {
+    collection: {
+      day: require('../../assets/spots/yinyang-sea/collection/day.webp'),
+      thumbnail: require('../../assets/spots/yinyang-sea/collection/thumbnail.webp'),
+    },
+  },
+  'yushan': {
+    collection: {
+      day: require('../../assets/spots/yushan/collection/day.webp'),
+      thumbnail: require('../../assets/spots/yushan/collection/thumbnail.webp'),
+    },
+  },
+  'zhengbin-port': {
+    collection: {
+      day: require('../../assets/spots/zhengbin-port/collection/day.webp'),
+      thumbnail: require('../../assets/spots/zhengbin-port/collection/thumbnail.webp'),
+    },
   },
 };

@@ -1,26 +1,27 @@
 {
-  "date": "2026-10-19",
-  "scope": "45 user-selected collection images promoted for App preview; not geographic QA approval",
+  "date": "2026-10-21",
+  "scope": "130 user-finalized collection models promoted;29 unfinished spots inactive",
   "unitTests": 8,
   "lint": "pass",
   "typecheck": "pass",
-  "assetsCheck": "159 spots; 0 errors; 477 existing missing-asset warnings",
-  "spotsCheck": "159 spots; 0 errors",
+  "assetsCheck": "159 spots;0 errors;222 warnings",
+  "spotsCheck": "159 spots;0 errors",
   "nativeJsExports": [
     "ios",
     "android"
   ],
-  "exportedSpotImages": 114,
-  "collectionDayImages": 45,
-  "collectionThumbnails": 45,
+  "exportedSpotImages": 284,
+  "collectionDayImages": 130,
+  "collectionThumbnails": 130,
   "existingWorldTokens": 24,
   "allSpotImagesAreWebP": true,
   "noReviewReferenceArchiveMasterBundled": true,
   "selectedReviewSourcesUnchanged": true,
-  "previousMasterBackupsVerified": 25,
+  "previousMasterBackupsVerified": 2,
   "sourceMode": "masters",
   "runtimeSaturation": 0.88,
-  "sourceReviewSaturation": "unchanged; comparison CSS remains 0.88",
-  "runtimeBytes": 16493966,
-  "nativeDeviceRendering": "Not performed this round: Simulator computer-use access not approved. Native Metro/Hermes export verifies packaging only, not installed App UI or device performance."
+  "runtimeBytes": 37979654,
+  "activeSpots": 130,
+  "hiddenSpots": 29,
+  "nativeDeviceRendering": "Not performed this round. Existing Metro8081 remains running; reload installed development App to preview."
 }

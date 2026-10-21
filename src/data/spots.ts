@@ -1069,7 +1069,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'bank', tint: '#C99A2E', deco: ['kite', 'water', 'tree'], sky: ['#7FB2E5', '#CFE6F5'], ground: '#A9B8A0', groundDark: '#86957E' },
   },
   {
@@ -1177,7 +1177,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'home-group', tint: '#8B5A3C', deco: ['drama-masks', 'flower', 'gate'], sky: ['#E3A06B', '#F7DDB4'], ground: '#B89A78', groundDark: '#93775A' },
   },
   {
@@ -1267,7 +1267,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'ferry', tint: '#2F6690', deco: ['fish', 'temple-buddhist', 'anchor'], sky: ['#5AA9E6', '#CDEBF7'], ground: '#E6D3A3', groundDark: '#C2AE7E' },
   },
   {
@@ -1520,7 +1520,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'temple-buddhist', tint: '#C99A2E', deco: ['bell', 'flower', 'stairs'], sky: ['#E3A06B', '#F7DDB4'], ground: '#B89A78', groundDark: '#93775A' },
   },
   {
@@ -1720,7 +1720,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'temple-buddhist', tint: '#B5472F', deco: ['brush', 'bridge', 'water'], sky: ['#E3A06B', '#F7DDB4'], ground: '#B89A78', groundDark: '#93775A' },
   },
   {
@@ -1883,7 +1883,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'waterfall', tint: '#3E7CB1', deco: ['train-variant', 'hot-tub', 'pine-tree'], sky: ['#8FB8C9', '#E1EEF0'], ground: '#5E8F4F', groundDark: '#456E3A' },
   },
   {
@@ -1937,7 +1937,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'lighthouse', tint: '#2E3440', deco: ['fish', 'bridge', 'weather-sunset'], sky: ['#5AA9E6', '#CDEBF7'], ground: '#E6D3A3', groundDark: '#C2AE7E' },
   },
   {
@@ -2045,7 +2045,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'theater', tint: '#8C8C99', deco: ['tree', 'music', 'drama-masks'], sky: ['#7FB2E5', '#CFE6F5'], ground: '#A9B8A0', groundDark: '#86957E' },
   },
   {
@@ -2117,7 +2117,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'water', tint: '#3E9C8F', deco: ['bridge', 'terrain', 'pine-tree'], sky: ['#8FB8C9', '#E1EEF0'], ground: '#5E8F4F', groundDark: '#456E3A' },
   },
   // ── 擴充 Batch 7（docs/spot-roadmap.json）────────────
@@ -2190,7 +2190,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'storefront', tint: '#A0522D', deco: ['bridge', 'water', 'store'], sky: ['#E3A06B', '#F7DDB4'], ground: '#B89A78', groundDark: '#93775A' },
   },
   {
@@ -2388,7 +2388,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'train', tint: '#3E7CB1', deco: ['waves', 'tunnel', 'flower'], sky: ['#5AA9E6', '#CDEBF7'], ground: '#E6D3A3', groundDark: '#C2AE7E' },
   },
   // ── 擴充 Batch 8（docs/spot-roadmap.json）────────────
@@ -2425,7 +2425,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'pine-tree', tint: '#3F6B48', deco: ['weather-fog', 'stairs', 'mushroom'], sky: ['#8FB8C9', '#E1EEF0'], ground: '#5E8F4F', groundDark: '#456E3A' },
   },
   {
@@ -2533,7 +2533,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'lighthouse', tint: '#5A6B7A', deco: ['waves', 'palm-tree', 'grass'], sky: ['#5AA9E6', '#CDEBF7'], ground: '#E6D3A3', groundDark: '#C2AE7E' },
   },
   {
@@ -2659,7 +2659,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'balloon', tint: '#E07A5F', deco: ['tea', 'grass', 'terrain'], sky: ['#6F9FD6', '#D8E8F5'], ground: '#7FAF62', groundDark: '#5E8A47' },
   },
   // ── 擴充 Batch 9（docs/spot-roadmap.json）────────────
@@ -2678,7 +2678,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'train', tint: '#6B4A2E', deco: ['store', 'bridge', 'ticket'], sky: ['#7FB2E5', '#CFE6F5'], ground: '#A9B8A0', groundDark: '#86957E' },
   },
   {
@@ -2696,7 +2696,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'tea', tint: '#8B5A3C', deco: ['temple-buddhist', 'home-group', 'leaf'], sky: ['#E3A06B', '#F7DDB4'], ground: '#B89A78', groundDark: '#93775A' },
   },
   {
@@ -2714,7 +2714,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'kite', tint: '#3E7CB1', deco: ['ferry', 'fish', 'bicycle'], sky: ['#5AA9E6', '#CDEBF7'], ground: '#E6D3A3', groundDark: '#C2AE7E' },
   },
   {
@@ -2732,7 +2732,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'pine-tree', tint: '#3F6B48', deco: ['home-group', 'weather-fog', 'terrain'], sky: ['#8FB8C9', '#E1EEF0'], ground: '#5E8F4F', groundDark: '#456E3A' },
   },
   {
@@ -2750,7 +2750,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'tree', tint: '#4F7A4A', deco: ['coffee', 'bicycle', 'train-variant'], sky: ['#8FB8C9', '#E1EEF0'], ground: '#5E8F4F', groundDark: '#456E3A' },
   },
   {
@@ -2768,7 +2768,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'bridge', tint: '#C8553D', deco: ['water', 'bicycle', 'sprout'], sky: ['#6F9FD6', '#D8E8F5'], ground: '#7FAF62', groundDark: '#5E8A47' },
   },
   {
@@ -2786,7 +2786,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'terrain', tint: '#6E9B4E', deco: ['weather-fog', 'waterfall', 'pine-tree'], sky: ['#8FB8C9', '#E1EEF0'], ground: '#5E8F4F', groundDark: '#456E3A' },
   },
   {
@@ -2804,7 +2804,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'home-group', tint: '#6B6B6B', deco: ['flower', 'terrain', 'weather-fog'], sky: ['#6F9FD6', '#D8E8F5'], ground: '#7FAF62', groundDark: '#5E8A47' },
   },
   {
@@ -2822,7 +2822,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'hot-tub', tint: '#4F7F8A', deco: ['tree', 'water', 'home-variant'], sky: ['#9EC3DD', '#E8F0F2'], ground: '#94B77A', groundDark: '#73935D' },
   },
   {
@@ -2840,7 +2840,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'fishbowl', tint: '#3E7CB1', deco: ['fish', 'waves', 'tortoise'], sky: ['#5AA9E6', '#CDEBF7'], ground: '#E6D3A3', groundDark: '#C2AE7E' },
   },
   {
@@ -2858,7 +2858,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'ferry', tint: '#2F6690', deco: ['fish', 'sail-boat', 'weather-sunset'], sky: ['#5AA9E6', '#CDEBF7'], ground: '#E6D3A3', groundDark: '#C2AE7E' },
   },
   {
@@ -2876,7 +2876,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'hot-tub', tint: '#4F7F8A', deco: ['bridge', 'pine-tree', 'waterfall'], sky: ['#9EC3DD', '#E8F0F2'], ground: '#94B77A', groundDark: '#73935D' },
   },
   {
@@ -2894,7 +2894,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'waves', tint: '#2F6690', deco: ['ferry', 'coffee', 'kayaking'], sky: ['#5AA9E6', '#CDEBF7'], ground: '#E6D3A3', groundDark: '#C2AE7E' },
   },
   {
@@ -2912,7 +2912,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'lighthouse', tint: '#3E7CB1', deco: ['moped', 'waves', 'fish'], sky: ['#5AA9E6', '#CDEBF7'], ground: '#E6D3A3', groundDark: '#C2AE7E' },
   },
   {
@@ -2930,7 +2930,7 @@ export const ALL_SPOTS: Spot[] = [
     worldId: 'taiwan',
     worldTier: 'regional',
     production: 'standard',
-    active: true,
+    active: false,
     art: { icon: 'sail-boat', tint: '#C8553D', deco: ['fish', 'waves', 'home-group'], sky: ['#5AA9E6', '#CDEBF7'], ground: '#E6D3A3', groundDark: '#C2AE7E' },
   },
 ];
