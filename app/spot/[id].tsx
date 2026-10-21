@@ -88,7 +88,8 @@ export default function SpotDetailScreen() {
   }
 
   const radius = checkinRadius(spot);
-  const inRange = dist <= radius;
+  // Without GPS the position is only the Taipei Station fallback: never in range.
+  const inRange = !isFallback && dist <= radius;
   const rarity = rarityMeta[spot.rarity];
   const category = categoryMeta[spot.category];
   const dioramaSize = SCREEN_W - 48;

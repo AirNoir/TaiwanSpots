@@ -140,7 +140,7 @@ export default function ExploreScreen() {
         contentContainerStyle={{ padding: 20, paddingTop: 8, paddingBottom: 40 }}
         renderItem={({ item }) => {
           const { spot, dist, collected } = item;
-          const inRange = dist <= checkinRadius(spot);
+          const inRange = !isFallback && dist <= checkinRadius(spot);
           return (
             <Pressable style={styles.row} onPress={() => router.push(`/spot/${spot.id}`)}>
               <Diorama

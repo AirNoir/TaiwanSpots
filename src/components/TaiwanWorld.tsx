@@ -47,6 +47,11 @@ type Marker = { spot: Spot; kind: MarkerKind; size: number; at: Pt; cluster?: Cl
 const countyOf = (s: Spot) => s.city.split('・')[0];
 const CLUSTER_MIN = 2; // a county with this many spots in a region folds into one bubble
 const CLUSTER = 50;
+// Spots per region:county across the whole game (static data).
+const COUNTY_SIZE = SPOTS.reduce((m, s) => {
+  const k = `${s.region}:${countyOf(s)}`;
+  return m.set(k, (m.get(k) ?? 0) + 1);
+}, new Map<string, number>());
 
 interface Props {
   width: number;
@@ -61,6 +66,8 @@ interface Props {
   night?: boolean;
   /** Traveller position (on-device only): picks the "next stop" and shows distances. */
   location?: LatLng;
+  /** The location is a stand-in (no GPS permission): still pick a next stop, but show no distances. */
+  approximate?: boolean;
 }
 
 const PIN = 34; // thumbnail pin diameter inside a region
@@ -119,6 +126,7 @@ export function TaiwanWorld({
   weather,
   night = false,
   location,
+  approximate = false,
 }: Props) {
   const t = useTheme();
   const C = t.world;
@@ -133,7 +141,9 @@ export function TaiwanWorld({
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const setRegionId = (id: string | null, select: Spot | null = null) => {
     setRegionIdRaw(id);
-    setCounty(select ? countyOf(select) : null);
+    // open the selected spot's county only if that county is folded into a bubble
+    const folded = !!select && (COUNTY_SIZE.get(`${select.region}:${countyOf(select)}`) ?? 0) >= CLUSTER_MIN;
+    setCounty(folded && select ? countyOf(select) : null);
     setSelectedId(select?.id ?? null);
   };
   // Dev automation: drive the map from the Metro inspector (see docs/radius-navigation-weather.md).
@@ -452,7 +462,7 @@ export function TaiwanWorld({
       if (pin.m.spot.id === selectedId || pin.m.kind === 'cluster') continue; // the callout / bubble names it
       const w = pin.m.spot.name.length * 10.5 + 10;
       const { x, y } = pin.p;
-      const g = pin.r + 3;
+      const g = pin.r + (pin.m.spot.id === target?.spot.id ? 9 : 3); // clear the pulsing goal ring
       // below first (reads most naturally), then beside, then above
       const options: [LabelSide, { x0: number; y0: number; x1: number; y1: number }][] = [
         ['below', { x0: x - w / 2, y0: y + g - 1, x1: x + w / 2, y1: y + g - 1 + LABEL_H }],
@@ -477,10 +487,17 @@ export function TaiwanWorld({
     return spots
       .filter(inFocus)
       .map((s) => ({ spot: s, got: collectedIds.has(s.id), dist: location ? distanceMeters(location, s) : null }))
-      .sort((a, b) => Number(a.got) - Number(b.got) || (a.dist ?? 0) - (b.dist ?? 0));
+      // sorted on 100 m steps so a GPS tick doesn't reshuffle the cards under the finger
+      .sort(
+        (a, b) =>
+          Number(a.got) - Number(b.got) ||
+          Math.round((a.dist ?? 0) / 100) - Math.round((b.dist ?? 0) / 100) ||
+          a.spot.id.localeCompare(b.spot.id),
+      )
+      .map((i) => (approximate ? { ...i, dist: null } : i));
     // inFocus reads regionId and county
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [spots, regionId, county, collectedIds, location]);
+  }, [spots, regionId, county, collectedIds, location, approximate]);
 
   const onMapPress = (e: GestureResponderEvent) => {
     if (regionId) {
@@ -811,7 +828,7 @@ export function TaiwanWorld({
                     pulse={pulse}
                   />
                 ) : m.kind === 'target' ? (
-                  <TargetFlag spot={m.spot} dist={target?.dist ?? 0} pulse={pulse} flip={m.at.x > width * 0.55} />
+                  <TargetFlag spot={m.spot} dist={approximate ? null : (target?.dist ?? 0)} pulse={pulse} flip={m.at.x > width * 0.55} />
                 ) : (
                   m.kind === 'cluster' && m.cluster ? (
                     <ClusterBubble spot={m.spot} cluster={m.cluster} />
@@ -823,7 +840,7 @@ export function TaiwanWorld({
               {labels.has(m.spot.id) && (
                 <View
                   pointerEvents="none"
-                  style={labelStyle(labels.get(m.spot.id)!, m.kind === 'thumb' ? PIN / 2 : m.size * 0.35)}
+                  style={labelStyle(labels.get(m.spot.id)!, m.kind === 'thumb' ? PIN / 2 : m.size * 0.35, m.spot.id === target?.spot.id)}
                 >
                   <Text numberOfLines={1} style={[styles.pinLabelText, !collectedIds.has(m.spot.id) && styles.pinLabelFaint]}>
                     {m.spot.name}
@@ -842,7 +859,7 @@ export function TaiwanWorld({
             width={width}
             height={height}
             got={collectedIds.has(selected.spot.id)}
-            dist={location ? distanceMeters(location, selected.spot) : null}
+            dist={location && !approximate ? distanceMeters(location, selected.spot) : null}
             onOpen={() => openSpot(selected.spot)}
           />
         )}
@@ -853,6 +870,8 @@ export function TaiwanWorld({
               style={styles.back}
               onPress={() => (county ? (setCounty(null), setSelectedId(null)) : setRegionId(null))}
               hitSlop={8}
+              accessibilityRole="button"
+              accessibilityLabel={`返回${county ? active.zh : '全台灣'}`}
             >
               <MaterialCommunityIcons name={'chevron-left' as any} size={18} color={t.text} />
               <Text style={styles.backText}>{county ? active.zh : '全台灣'}</Text>
@@ -882,6 +901,9 @@ export function TaiwanWorld({
                 key={r.id}
                 onPress={() => setRegionId(on ? null : r.id)}
                 style={[styles.chip, on && styles.chipOn]}
+                accessibilityRole="button"
+                accessibilityState={{ selected: on }}
+                accessibilityLabel={`${r.zh}，已收藏 ${r.found} / ${r.total}`}
               >
                 <Text style={[styles.chipText, on && styles.chipTextOn]}>
                   {r.zh.replace('台灣', '')} {r.found}/{r.total}
@@ -932,10 +954,19 @@ function SpotStrip({
   const ref = React.useRef<FlatList<StripItem>>(null);
   const todo = items.filter((i) => !i.got).length;
 
+  // Scroll to the picked card when the selection changes — not when distances update.
+  const itemsRef = React.useRef(items);
   useEffect(() => {
-    const index = items.findIndex((i) => i.spot.id === selectedId);
+    itemsRef.current = items;
+  }, [items]);
+  const scrollToSelected = React.useCallback(() => {
+    const index = itemsRef.current.findIndex((i) => i.spot.id === selectedId);
     if (index >= 0) ref.current?.scrollToIndex({ index, viewPosition: 0.5, animated: true });
-  }, [selectedId, items]);
+  }, [selectedId]);
+  useEffect(() => {
+    const frame = requestAnimationFrame(scrollToSelected);
+    return () => cancelAnimationFrame(frame);
+  }, [scrollToSelected]);
 
   return (
     <View style={styles.strip}>
@@ -945,6 +976,7 @@ function SpotStrip({
       <FlatList
         ref={ref}
         horizontal
+        onLayout={scrollToSelected}
         data={items}
         keyExtractor={(i) => i.spot.id}
         showsHorizontalScrollIndicator={false}
@@ -1028,7 +1060,7 @@ function ThumbPin({ spot, got, on, goal, pulse }: { spot: Spot; got: boolean; on
 }
 
 /** Level 1: a flag over the closest uncollected spot, so there is always somewhere to go next. */
-function TargetFlag({ spot, dist, pulse, flip }: { spot: Spot; dist: number; pulse: Animated.Value; flip: boolean }) {
+function TargetFlag({ spot, dist, pulse, flip }: { spot: Spot; dist: number | null; pulse: Animated.Value; flip: boolean }) {
   const styles = useStyles();
   return (
     <View style={{ marginLeft: -6, marginTop: -6 }}>
@@ -1046,7 +1078,8 @@ function TargetFlag({ spot, dist, pulse, flip }: { spot: Spot; dist: number; pul
         <View style={styles.targetTag}>
           <Text style={styles.targetKicker}>下一站</Text>
           <Text style={styles.targetName} numberOfLines={1}>
-            {spot.name} · {formatDistance(dist)}
+            {spot.name}
+            {dist != null ? ` · ${formatDistance(dist)}` : ''}
           </Text>
         </View>
       </View>
@@ -1155,8 +1188,8 @@ type LabelSide = 'below' | 'right' | 'left' | 'above';
 const LABEL_BOX = 140;
 
 /** Positions a name label on one side of a pin of radius r (relative to the pin centre). */
-function labelStyle(side: LabelSide, r: number) {
-  const g = r + 3;
+function labelStyle(side: LabelSide, r: number, goal = false) {
+  const g = r + (goal ? 9 : 3);
   const base = { position: 'absolute' as const, width: LABEL_BOX };
   switch (side) {
     case 'below':

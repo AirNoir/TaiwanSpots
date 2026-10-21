@@ -75,7 +75,7 @@ export default function WorldScreen() {
     [location, collectedIds]
   );
 
-  const nextStop = nearby[0] ? { ...nearby[0], inRange: nearby[0].dist <= checkinRadius(nearby[0].spot) } : null;
+  const nextStop = nearby[0] ? { ...nearby[0], inRange: !isFallback && nearby[0].dist <= checkinRadius(nearby[0].spot) } : null;
 
   const latest = useMemo(() => {
     const list = Object.values(collections).sort(
@@ -112,7 +112,7 @@ export default function WorldScreen() {
 
         <View style={styles.worldCard}>
           <Text style={styles.worldLabel}>MY TAIWAN WORLD</Text>
-          <TaiwanWorld width={mapW} collectedIds={collectedIds} season={season} weather={weatherByRegion} night={night} location={location} />
+          <TaiwanWorld width={mapW} collectedIds={collectedIds} season={season} weather={weatherByRegion} night={night} location={location} approximate={isFallback} />
           <View style={styles.worldStats}>
             <Text style={styles.worldCount}>
               {count} <Text style={styles.worldTotal}>/ {SPOTS.length}</Text>
@@ -127,8 +127,8 @@ export default function WorldScreen() {
             <Pressable
               style={[styles.nextCard, nextStop.inRange && styles.nextCardReady]}
               onPress={() => router.push(`/spot/${nextStop.spot.id}`)}
-              accessibilityRole="button"
-              accessibilityLabel={`下一站 ${nextStop.spot.name}`}
+              // not one grouped element, so screen readers can reach both buttons inside
+              accessible={false}
             >
               <Diorama spot={nextStop.spot} size={104} radius={18} />
               <View style={styles.nextBody}>
@@ -143,15 +143,21 @@ export default function WorldScreen() {
                   {isFallback ? '' : ` · ${formatDistance(nextStop.dist)}`}
                 </Text>
                 <View style={styles.nextActions}>
-                  <View style={[styles.nextBtn, styles.nextBtnPrimary]}>
+                  <Pressable
+                    style={[styles.nextBtn, styles.nextBtnPrimary]}
+                    onPress={() => router.push(`/spot/${nextStop.spot.id}`)}
+                    accessibilityRole="button"
+                    accessibilityLabel={`${nextStop.inRange ? '去收藏' : '查看'}下一站 ${nextStop.spot.name}`}
+                  >
                     <Text style={styles.nextBtnPrimaryText}>{nextStop.inRange ? '去收藏' : '看看'}</Text>
-                  </View>
+                  </Pressable>
                   {!nextStop.inRange && (
                     <Pressable
                       style={styles.nextBtn}
                       onPress={() => void openDirections(nextStop.spot, travelModeFor(nextStop.dist), t.mode)}
                       hitSlop={6}
                       accessibilityRole="button"
+                      accessibilityLabel={`導航到 ${nextStop.spot.name}`}
                     >
                       <MaterialCommunityIcons name={'navigation-variant-outline' as any} size={13} color={t.accent} />
                       <Text style={styles.nextBtnText}>導航</Text>
@@ -175,7 +181,7 @@ export default function WorldScreen() {
               <Text style={styles.nearName}>{spot.name}</Text>
               <Text style={styles.nearCity}>{spot.city}</Text>
             </View>
-            {dist <= checkinRadius(spot) ? (
+            {!isFallback && dist <= checkinRadius(spot) ? (
               <Text style={styles.readyBadge}>可收藏</Text>
             ) : (
               !isFallback && (
