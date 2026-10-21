@@ -19,6 +19,15 @@
         "Main warehouse grid occupies central site, large lawn north, Bade Road south, Xinsheng elevated road east; checked satellite 2026-10-19. Model crops courtyard; unseen rear details simplified."
       ],
       "limitations": "Google ground/360 capture pending; photo lens calibration unknown. No claim of metric survey."
+    },
+    {
+      "local": "supporting/official-site-plan.jpg",
+      "page": "https://www.huashan1914.com/campus-map",
+      "image": "https://files.huashan1914.com/%E8%8F%AF%E5%B1%B1%E5%9C%B0%E5%9C%96_%E5%BA%95%E5%9C%96.jpg",
+      "credit": "Huashan1914 operator",
+      "capture": "Diagram, not photograph; issue date unknown",
+      "accessed": "2026-10-20",
+      "usage": "Reference only, copyright retained; NOT fed to image generator, NOT independent real photo evidence. Observed street label inconsistencies; do not use as measured plan."
     }
   ]
 }

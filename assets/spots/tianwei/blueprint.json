@@ -51,6 +51,15 @@
     "geographic": "Specific photographed Dazhong Nursery frontage east/northeast side of Minzu Road Section1 near Gongyuan Road junction. Road locally NW-SE, not generic north-south. Satellite identifies actual roof/plant frontage. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
     "identity": "pending user review: Actual Dazhong nursery frontage on MinzuRoad, pottedplants/shadehouse/familycycle; no inventedfarmcrossroads or relocatedothergarden. Exact shopdepth/plantstock and historicalsigns pending.",
     "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
-    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction.",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v1.png",
+      "selectedPreview": "review-v2.png",
+      "state": "self-checked-preview",
+      "result": "Public garden entrance monument and flower/bike streetscape replace single-shop identity. Three panel columns and flowerarch from official photo, tiny family cycle. Exact rear business adjacency remains simplified/pending; not a measured whole-region map.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    }
   }
 }

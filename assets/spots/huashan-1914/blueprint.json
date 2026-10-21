@@ -51,6 +51,15 @@
     "geographic": "pending: ground and satellite cross-check collected; Google street/360 capture pending; unseen details simplified",
     "identity": "pending user review: Ivy warehouse courtyard and opposite pale industrial facade recognizable, coherent upright projection and human scale. Roof rear details and individual tree locations simplified; cropped courtyard, not whole park.",
     "style": "self-checked preview: physical Q toy materials, elevated weak perspective, no backdrop; user acceptance pending",
-    "collection": "self-checked preview: full ivory square-style base, 512px subject readable; user acceptance pending"
+    "collection": "self-checked preview: full ivory square-style base, 512px subject readable; user acceptance pending",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v1.png",
+      "selectedPreview": "review-v3.png",
+      "state": "self-checked-preview",
+      "result": "Limited facing pair of ivy-covered true gabled warehouses and pale industrial arcade, no repeated sawtooth factory or invented back connector. Elevated compact model framing improved. Unseen roof depths/individual courtyards simplified.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    }
   }
 }

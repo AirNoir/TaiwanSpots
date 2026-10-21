@@ -58,6 +58,15 @@
     "identity": "pending",
     "style": "pass",
     "collection": "pass",
-    "notes": "2026-10-15 review-v1.png, new collection preview only. Draft zigzag bridge corrected to flowing curved Zhimei Bridge. Real glass/vertical-fin facade and satellite lake/bridge relationship used. Full roof shape, bridge structure and exact bank geometry remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-19 round3 review-v3.png: User correction: https://udn.com/news/story/6885/9545144\nhttps://tlife.thsrc.com.tw/en/article/5942\n角度跟建築似乎跟真實有出入, 主建築後面有個灰色拱形的建築好像都消失了, 水平也不是移軸感 Self-check: Both dark curved solid shell and ribbed glazed wing visible, arched Zhimei Bridge with smooth deck restored; no staircase bridge. Limitations: Both interwoven museum masses and smooth-deck arch bridge; exclude unrelated new construction. Hidden elevations/roof details simplified. Preview only, user acceptance pending; weak-perspective reconstruction, not a calibrated camera/lens correction."
+    "notes": "2026-10-15 review-v1.png, new collection preview only. Draft zigzag bridge corrected to flowing curved Zhimei Bridge. Real glass/vertical-fin facade and satellite lake/bridge relationship used. Full roof shape, bridge structure and exact bank geometry remain pending. User approval pending; formal runtime assets and tokens unchanged. Source acquisition dates are recorded where visible; satellite acquisition dates unavailable. Presentation self-check: coherent square ivory plinth, no boards/hardware, complete visible footprint and miniature material finish; main subject remains legible at 512px. Geographic identity and user acceptance still pending. | 2026-10-19 round3 review-v3.png: User correction: https://udn.com/news/story/6885/9545144\nhttps://tlife.thsrc.com.tw/en/article/5942\n角度跟建築似乎跟真實有出入, 主建築後面有個灰色拱形的建築好像都消失了, 水平也不是移軸感 Self-check: Both dark curved solid shell and ribbed glazed wing visible, arched Zhimei Bridge with smooth deck restored; no staircase bridge. Limitations: Both interwoven museum masses and smooth-deck arch bridge; exclude unrelated new construction. Hidden elevations/roof details simplified. Preview only, user acceptance pending; weak-perspective reconstruction, not a calibrated camera/lens correction.",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v1.png",
+      "selectedPreview": "review-v3.png",
+      "state": "existing-correction-verified",
+      "result": "Imported review refers to v1; current v3 already restores large dark curved solid mass behind ribbed glazed wing and arched smooth-deck bridge with consistent product projection. Source-linked revision documented in blueprint from previous round. Exact exterior details remain pending.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Existing preview rechecked; no new raster generated"
+    }
   }
 }

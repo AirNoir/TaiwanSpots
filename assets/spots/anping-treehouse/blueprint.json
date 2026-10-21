@@ -52,6 +52,15 @@
     "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
     "identity": "pending user review: v1 edge foliage reduced/inset in v2, roofless brick bays, root-wrapped walls and steel stair readable. Exact room grid/roots simplified; no metric plan reconstruction.",
     "style": "self-checked preview: physical Q miniature, elevated weak perspective, warm visitors, no backdrop; not user approved",
-    "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured"
+    "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v2.png",
+      "selectedPreview": "review-v3.png",
+      "state": "self-checked-preview",
+      "result": "Rebuilt finite exterior staircase/platform beside adjacent old plaster/brick wall from primary photo, not imaginary interior roomgrid. Correct two-flight stair and freestanding frame. Unseen warehouse layout excluded.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    }
   }
 }

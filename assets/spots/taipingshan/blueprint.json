@@ -51,6 +51,15 @@
     "geographic": "pending: actual independent ground and satellite checked; Google street/360 capture pending; unobserved details simplified",
     "identity": "pending user review: Stairs rise from low foreground toward upper forest; terraced lodge excerpt and purple maples readable, no invented train. Exact lodge frontage/landings/rails simplified from distant and ground references; not current survey.",
     "style": "self-checked preview: physical Q miniature, elevated weak perspective, warm visitors, no backdrop; not user approved",
-    "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured"
+    "collection": "self-checked preview: square-style ivory base, full frame and contained scene; 512px subject readable; physical square dimensions not measured",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v1.png",
+      "selectedPreview": "review-v2.png",
+      "state": "self-checked-preview",
+      "result": "Landings and lodge terraces horizontal with coherent vertical retaining walls; real ascending stair preserved. Exact lodge footprint remains simplified; user acceptance pending.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    }
   }
 }

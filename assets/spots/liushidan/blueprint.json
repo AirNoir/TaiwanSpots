@@ -51,6 +51,15 @@
     "geographic": "Coastal Range hillside east of East Rift Valley; valley west. Satellite confirms curving ridge roads and cultivated slope patches, exact pavilion identity/footpath footprint in historical photo pending. Two real viewpoints inspected. StreetView360/exactdimensions/captureyears pending.",
     "identity": "pending user review: Historical orange daylily ridge/rocks/path/pavilion crop, no relocated valley. Actual season Aug–Sep; official page says renovation. Exact pavilion identity/footpath steps/plan pending, not measured reconstruction or currentcondition.",
     "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
-    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction.",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v1.png",
+      "selectedPreview": "review-v1.png",
+      "state": "needs-refinement",
+      "result": "Expanded flower-slope crop accomplished, but three attempts retain an oversized chamfer/flat fifth edge at near-right base corner. New candidate NOT selected; original v1 retained pending proper square-base revision. No more repeated identical repair calls this round.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Failed base QA; candidate not selected"
+    }
   }
 }

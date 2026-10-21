@@ -52,6 +52,15 @@
     "geographic": "Independent official ground/land-observation view and satellite checked2026-10-19; exact measurements, Street View/360 and unseen geometry pending.",
     "identity": "pending user review: v2 reduces actual cats while maintaining real2025 gray faceted bridge and hillside/station relation. Cat bridge metal form distinct from domestic animals; exact cat positions/house frontages/platform details simplified.",
     "style": "self-checked preview: physical Q collectible, tactile materials, warm interactions, longlens elevated view, no scenic boards",
-    "collection": "self-checked preview: full square-style small-rounded ivory base, contained scene, coherent groundplane/verticals, readable at512px; not measured geometry"
+    "collection": "self-checked preview: full square-style small-rounded ivory base, contained scene, coherent groundplane/verticals, readable at512px; not measured geometry",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v2.png",
+      "selectedPreview": "review-v4.png",
+      "state": "self-checked-preview",
+      "result": "Continuous open railway corridor parallel to western hillside; bridge crosses above tracks to station. No tracks into hillside. Smaller complete base; exact canopy/house details simplified. Official 2025 bridge photos and satellite independently rechecked.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    }
   }
 }

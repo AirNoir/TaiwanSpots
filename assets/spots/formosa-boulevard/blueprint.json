@@ -52,6 +52,15 @@
     "geographic": "Dome of Light underground B1 central concourse beneath Zhongshan/Zhongzheng junction. Four prayer-hands street entrances at intersection corners are separate surface structures, omitted from underground-only crop. Independent ground/overhead inspected; capture dates unknown, GoogleStreetView360 and exact dimensions/unseen geometry pending.",
     "identity": "pending user review: v2 reduces fisheye/foregroundscale effect. Underground-only architecturalcutaway of stainedglassannularceiling/twocolourcolumns; surfaceentrances not stackedoverit. Intentionalremovedroof section, not actual demolishedstation. Exact interiorplan/ceilingsection curvature/pillarheight/artwork panel fidelity pending; this displaysection is artistic rather than measured.",
     "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
-    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction.",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v2.png",
+      "selectedPreview": "review-v3.png",
+      "state": "self-checked-preview",
+      "result": "Lower near-horizontal longlens architectural cutaway per user exception; flatter visible roof-section edge reduces panorama bulge. Blue/red luminous columns and floor remain aligned. Ceiling artwork is stylized rather than reproduction of every panel.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    }
   }
 }

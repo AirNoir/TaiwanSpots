@@ -51,6 +51,15 @@
     "geographic": "Real photos and independent satellite inspected: Historical seawater pool/openwest bay, green headland inland/east; pavilion a separate north/east rockyheadland outsidecrop. Pooldetail differs across eras, currentconfiguration pending. GoogleStreetView360, dimensions/backside/currentcondition pending.",
     "identity": "pending userreview: Finite historical seawaterpool edge and documented zigzag lowwood footway beside greenrockknoll, not combined with pavilion. Exactdimensions, unseenstructure and smallornaments pending.",
     "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
-    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction.",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v3.png",
+      "selectedPreview": "review-v4.png",
+      "state": "self-checked-preview",
+      "result": "More elevated view clarifies coplanar zigzag deck and water plane; genuine steep hillside retained. Plan dimensions not surveyed.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    }
   }
 }

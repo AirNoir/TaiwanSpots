@@ -74,5 +74,15 @@
       "observations": "Specific photographed Dazhong Nursery frontage east/northeast side of Minzu Road Section1 near Gongyuan Road junction. Road locally NW-SE, not generic north-south. Satellite identifies actual roof/plant frontage."
     }
   ],
-  "lensReview": "Groundwide/fisheye/telephoto projections assessed against other realangle/satellite; scene rebuilt as weakperspective miniature. No calibrated mathematicalundistortion. StreetView360/exactdepths pending."
+  "lensReview": "Groundwide/fisheye/telephoto projections assessed against other realangle/satellite; scene rebuilt as weakperspective miniature. No calibrated mathematicalundistortion. StreetView360/exactdepths pending.",
+  "review04Research": {
+    "page": "https://tourism.chcg.gov.tw/AttractionsContent.aspx?chk=02d9d045-486c-4325-9d3c-a22b2aea5983&id=7&topic=11",
+    "accessed": "2026-10-20",
+    "observations": [
+      "Official text identifies main entrance imagery/bus stop near Provincial1 on MinzuRoadSection1; distinguish this from Chinese-style YixinGarden gateway.",
+      "New crop emphasizes public entrance identity from official-second.jpg, not individual nursery business.",
+      "Existing overhead centered previous nursery, only general street context for entrance; exact public monument coordinates and rear shop adjacency pending."
+    ],
+    "rights": "Official photos visual reference only, no texture reuse; no blanket commercial license."
+  }
 }

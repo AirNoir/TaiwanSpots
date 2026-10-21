@@ -50,6 +50,15 @@
     "geographic": "Sea north of Provincial Highway2 and Shu nantong settlement, nearshore yellow-brown plume blends toward blue offshore; Thirteen Levels smelter inland south and outside selected finite coastal crop. Ground and satellite checked; capture dates unknown, Google Street View/360, exact dimensions/unseen sides pending.",
     "identity": "pending user review: v3 puts viewers inland across road; v2 corrects road/person width and wavebreaker shape. Nearshore ochre plume softly mixes offshore blue, seawall/road landward; no relocated smelter. Plume boundary/time-specific watercolor and exact viewpoint furniture pending.",
     "style": "self-checked preview: tactile physical Q miniature, warm human activity, elevated weak-perspective view, no scenic cards/globe",
-    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction."
+    "collection": "self-checked preview: complete small-rounded square-style ivory base and contained scene; consistent ground/verticals, identifiable main forms at512px. Artistic model, not measured reconstruction.",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v3.png",
+      "selectedPreview": "review-v4.png",
+      "state": "self-checked-preview",
+      "result": "Ocean occupies larger finite crop, broad ochre/blue feathered mixing front clearer; landward viewers, coastal road and seawall relation retained. Plume extent illustrative, not present-day ocean conditions.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    }
   }
 }

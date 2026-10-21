@@ -51,6 +51,15 @@
     "geographic": "Realground and independent satellite visually inspected. Canal and stonewalk along northeast/uphill side of WuxianIndustryRoad, broad NW-SE corridor; Pacific distant east outsidecrop. Apparent uphill flow is opticalillusion, actualwater obeysgravity. Exact dimensions/backside/era and StreetView360 pending.",
     "identity": "pending userreview: Actual 奇觀 stone, narrow irrigationchannel and short parallel stonepath/roadedge only, no field/lake or marketbuilding. Exactdimensions, unseenstructure and smallornaments pending.",
     "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
-    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction.",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v1.png",
+      "selectedPreview": "review-v2.png",
+      "state": "self-checked-preview",
+      "result": "More overhead compact toy composition, no added scenery, channel and road separation retained; full base and canopy contained. Exact surveyed dimensions remain pending.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    }
   }
 }

@@ -53,6 +53,15 @@
     "geographic": "Independent official ground photographs and Google satellite visually checked 2026-10-19; Street View/360 and unobserved back details pending. Not measured photogrammetry.",
     "identity": "pending user review: Curved ochre tiled shells, narrow glazing and small actual cross preserved; grass/path and common-scale visitors. Exact shell curvature/junction and entrance steps require user detail review, not architectural survey.",
     "style": "self-checked preview: physical Q toy materials, elevated weak-perspective view, warm common-scale visitors; no scenic board/globe",
-    "collection": "self-checked preview: full square-style small-rounded ivory base in frame, scene inset and verticals coherent, readable at512px; dimensions not measured; user approval pending"
+    "collection": "self-checked preview: full square-style small-rounded ivory base in frame, scene inset and verticals coherent, readable at512px; dimensions not measured; user approval pending",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v1.png",
+      "selectedPreview": "review-v2.png",
+      "state": "self-checked-preview",
+      "result": "Grounded shell bases and level lawn retained, cross/mullion verticals coherent; authentic curved shell inclination intentionally preserved. Exact shell plan dimensions not surveyed; user acceptance pending.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    }
   }
 }

@@ -51,6 +51,15 @@
     "geographic": "Ground/elevated real photographs and independent satellite reviewed. Actual Huaqiao seafood retail hall north of ChaolongRoad, water/quay to north; fishing auction buildings and southern fishing harbor are separate, not merged at stall feet. StreetView360, exact dimension and current condition pending.",
     "identity": "pending userreview: Explanatory open-top cutaway of a finite seafood aisle with documented counters and dining stools; no invented external facade or boats. Exactdimensions, unseenstructure and smallornaments pending.",
     "style": "self-checked preview: physical Q miniature with tactile materials, elevated cornercamera, warmpeople, no sceniccards/globe",
-    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction."
+    "collection": "self-checked preview: full square smallrounded ivorybase, contained scene, coherentverticals and recognisable512px thumbnail. Artistic model, not measuredreconstruction.",
+    "review04": {
+      "source": "docs/reviews/islandia-art-review-20261020-04.json",
+      "reviewedModel": "review-v1.png",
+      "selectedPreview": "review-v3.png",
+      "state": "self-checked-preview",
+      "result": "Clean reconstructed finite square market cutaway with overhead corner camera, short counters and bounded back wall; no infinite receding aisle. All furniture/people footprint on same floor, real interior finish referenced. Shop positions illustrative within finite interior sample.",
+      "userAcceptance": "pending",
+      "thumbnailCheck": "Visually checked native and 512px rendition for new selected previews"
+    }
   }
 }
