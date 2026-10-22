@@ -98,7 +98,20 @@
 - 需要 development build，不能再用 Expo Go 測試；本機 Xcode 版本不足，development build 走 EAS 雲端。
 - 需要準備：Google Cloud iOS OAuth Client ID、Supabase 專案（URL 與 anon key 放 EAS 環境變數，不進 repo）、Apple Developer 後台開啟 Sign in with Apple。
 
-### 5.4 審核與隱私
+### 5.4 後台專案（Supabase 額度）
+
+- Supabase 免費版只能有 **2 個啟用中的專案**，目前已滿（含 little-steps）。暫停的專案不佔額度、不收費。
+- **Islandia 不和 little-steps 共用專案**：
+  - little-steps 的 `cleanup-anonymous` 會刪掉 30 天沒綁定的訪客帳號，Islandia 的訪客會被一起刪掉；
+  - `delete-account` 會連帶刪掉另一個 App 的帳號；
+  - 兩邊的使用者會混在同一份名單和統計裡，而 little-steps 有兒童資料。
+- 第一階段（買斷）不需要後台，所以現在不用處理。到第二階段時從下面擇一：
+  1. 另一個專案沒在用 → 暫停它，Islandia 開新的免費專案。
+  2. little-steps 已有付費用戶 → 組織升級 Pro（US$25／月，含 US$10 運算額度），Islandia 再加一個專案（約 +US$10／月），合計約 US$35／月。Pro 也讓 little-steps 有每日備份、不會因閒置被暫停。
+  3. 改用 Firebase（免費方案即有匿名、Google、Apple 登入），代價是和 little-steps 維護兩套技術。
+- little-steps 的 `contexts/AuthContext.tsx`（Google／Apple `signInWithIdToken`、匿名登入）可以直接參考移植。
+
+### 5.5 審核與隱私
 
 - 有 Google 登入就必須有 Apple 登入（準則 4.8）。
 - App 內可刪除帳號（準則 5.1.1(v)）。
@@ -131,3 +144,10 @@
 
 - 正式 App 名稱（「Islandia」在 App Store 已被使用）。
 - 是否加入 App Store 小型開發者計畫（影響抽成 15% 或 30%；建議加入）。
+- 第二階段的後台：暫停另一個 Supabase 專案、升級 Pro，或改用 Firebase（見 5.4）。
+
+## 9. 下一步（回到電腦時從這裡開始）
+
+1. 確認 spec 的預設值（免費 10 個、NT$190／早鳥 NT$150、外島 NT$90、成就與 Widget 免費）。
+2. App Store Connect 建立兩個非消耗性商品，RevenueCat 建專案與 entitlement。
+3. 開始第一階段實作；需要 development build（EAS 雲端），Expo Go 之後無法測付款。
