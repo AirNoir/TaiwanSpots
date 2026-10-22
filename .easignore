@@ -54,3 +54,8 @@ docs/
 scratchpad/
 *.blend
 *.glb
+# Diorama masters, review drafts and prompts: the app ships only the .webp exports
+assets/spots/**/*.png
+assets/spots/*/collection/*.txt
+assets/spots/*/collection/rejected/
+assets/spots/*/collection/archive/
