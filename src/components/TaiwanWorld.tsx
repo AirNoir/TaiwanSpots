@@ -41,9 +41,9 @@ import { RealCluster, RealMap } from './RealMap';
 // opens Level 3 (the spot page).
 
 type Pt = { x: number; y: number };
-type MarkerKind = 'token' | 'light' | 'pending' | 'thumb' | 'target' | 'cluster';
+type MarkerKind = 'token' | 'light' | 'thumb' | 'target' | 'cluster';
 type Cluster = { county: string; total: number; found: number };
-type Marker = { spot: Spot; kind: MarkerKind; size: number; at: Pt; cluster?: Cluster };
+type Marker = { spot: Spot; kind: MarkerKind; size: number; at: Pt; cluster?: Cluster; left?: number };
 
 /** County part of a spot's city label: '台北・信義' → '台北'. */
 const countyOf = (s: Spot) => s.city.split('・')[0];
@@ -143,6 +143,8 @@ export function TaiwanWorld({
   // Level 2.5: one county inside the region, opened from its cluster bubble.
   const [county, setCounty] = useState<string | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  // Collector's filter: hide what is already collected on the real map and the strip.
+  const [todoOnly, setTodoOnly] = useState(false);
   const setRegionId = (id: string | null, select: Spot | null = null) => {
     setRegionIdRaw(id);
     // open the selected spot's county only if that county is folded into a bubble
@@ -165,6 +167,7 @@ export function TaiwanWorld({
         setSelectedId(null);
       },
       select: (id: string | null) => setSelectedId(id),
+      todoOnly: (on: boolean) => setTodoOnly(on),
     };
     g.__islandiaMap = api;
     return () => {
@@ -173,6 +176,7 @@ export function TaiwanWorld({
     };
   }, [interactive]);
   const inFocus = (s: Spot) => s.region === regionId && (!county || countyOf(s) === county);
+  const shown = (s: Spot) => !todoOnly || !collectedIds.has(s.id) || s.id === selectedId;
 
   const spots = useMemo(() => SPOTS.filter((s) => s.worldId === world.id), [world.id]);
 
@@ -382,7 +386,7 @@ export function TaiwanWorld({
   // `size` is the on-screen token width; markers are not scaled by the zoom.
   const markers = useMemo<Marker[]>(() => {
     const list: Marker[] = [];
-    const lights = new Map<string, { spot: Spot; n: number; x: number; y: number }>();
+    const lights = new Map<string, { spot: Spot; n: number; left: number; x: number; y: number }>();
     const base = width * (regionId ? TOKEN_L2 : TOKEN_L1);
     for (const s of spots) {
       const at = geo.positions[s.id];
@@ -398,22 +402,28 @@ export function TaiwanWorld({
         list.push({ spot: s, kind: got && s.worldTier === 'anchor' && worldToken(s.id) ? 'token' : 'thumb', size, at });
       } else if (target?.spot.id === s.id) {
         list.push({ spot: s, kind: 'target', size: 0, at });
-      } else if (got && s.worldTier === 'anchor' && worldToken(s.id)) {
-        list.push({ spot: s, kind: 'token', size, at });
-      } else if (got) {
-        // One light per county on the island view, growing with what was collected there.
+      } else {
+        if (got && s.worldTier === 'anchor' && worldToken(s.id)) list.push({ spot: s, kind: 'token', size, at });
+        // One mark per county on the island view: a light growing with what was
+        // collected there, tagged with how many spots are still waiting.
         const key = `${s.region}:${countyOf(s)}`;
-        const l = lights.get(key) ?? { spot: s, n: 0, x: 0, y: 0 };
-        l.n += 1;
+        const l = lights.get(key) ?? { spot: s, n: 0, left: 0, x: 0, y: 0 };
+        if (got) l.n += 1;
+        else l.left += 1;
         l.x += at.x;
         l.y += at.y;
         lights.set(key, l);
-      } else if (s.worldTier === 'anchor') {
-        list.push({ spot: s, kind: 'pending', size: 0, at });
       }
     }
     for (const l of lights.values()) {
-      list.push({ spot: l.spot, kind: 'light', size: Math.min(1.9, 0.75 + Math.sqrt(l.n) * 0.3), at: { x: l.x / l.n, y: l.y / l.n } });
+      const k = l.n + l.left;
+      list.push({
+        spot: l.spot,
+        kind: 'light',
+        size: l.n ? Math.min(1.9, 0.75 + Math.sqrt(l.n) * 0.3) : 0,
+        at: { x: l.x / k, y: l.y / k },
+        left: l.left,
+      });
     }
     // Inside an opened county only its own spots show; the back button returns to the region.
     if (regionId && !county) {
@@ -430,7 +440,7 @@ export function TaiwanWorld({
     }
     relax(list, zoom.s, regionId ? 0.4 : 0.3);
     // Back-to-front by depth; pins and the next-stop flag stay on top so they stay tappable.
-    const top = (m: Marker) => (m.kind === 'target' ? 2 : m.kind === 'pending' ? 1 : 0);
+    const top = (m: Marker) => (m.kind === 'target' ? 2 : m.kind === 'light' ? 1 : 0);
     return list.sort((a, b) => top(a) - top(b) || a.at.y - b.at.y);
   }, [spots, geo.positions, collectedIds, regionId, county, countyCounts, zoom.s, width, target]);
 
@@ -502,7 +512,7 @@ export function TaiwanWorld({
   const regionSpots = useMemo(() => {
     if (!regionId) return [];
     return spots
-      .filter(inFocus)
+      .filter((s) => inFocus(s) && shown(s))
       .map((s) => ({ spot: s, got: collectedIds.has(s.id), dist: location ? distanceMeters(location, s) : null }))
       // sorted on 100 m steps so a GPS tick doesn't reshuffle the cards under the finger
       .sort(
@@ -512,9 +522,9 @@ export function TaiwanWorld({
           a.spot.id.localeCompare(b.spot.id),
       )
       .map((i) => (approximate ? { ...i, dist: null } : i));
-    // inFocus reads regionId and county
+    // inFocus / shown read regionId, county, todoOnly and selectedId
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [spots, regionId, county, collectedIds, location, approximate]);
+  }, [spots, regionId, county, collectedIds, location, approximate, todoOnly, selectedId]);
 
   const onMapPress = (e: GestureResponderEvent) => {
     if (regionId) {
@@ -567,10 +577,11 @@ export function TaiwanWorld({
         ? spots.filter(
             (s) =>
               s.region === regionId &&
-              (county ? countyOf(s) === county : (countyCounts.get(countyOf(s))?.total ?? 0) < CLUSTER_MIN),
+              (county ? countyOf(s) === county : (countyCounts.get(countyOf(s))?.total ?? 0) < CLUSTER_MIN) &&
+              (!todoOnly || !collectedIds.has(s.id) || s.id === selectedId),
           )
         : [],
-    [spots, regionId, county, countyCounts],
+    [spots, regionId, county, countyCounts, todoOnly, collectedIds, selectedId],
   );
   const realClusters = useMemo<RealCluster[]>(() => {
     if (!regionId || county) return [];
@@ -862,7 +873,7 @@ export function TaiwanWorld({
               collectedIds={collectedIds}
               selectedId={selectedId}
               targetId={target?.spot.id ?? null}
-              focusKey={`${regionId}:${county ?? ''}`}
+              focusKey={`${regionId}:${county ?? ''}:${todoOnly}`}
               dark={night || t.mode === 'dark'}
               showsUser={!!location && !approximate}
               onSelect={(s) => {
@@ -885,7 +896,7 @@ export function TaiwanWorld({
           const pos = markerPos.get(m)!;
           return (
             <Animated.View
-              key={m.spot.id}
+              key={`${m.kind}:${m.spot.id}`}
               pointerEvents="box-none"
               style={[styles.anchor, { transform: [{ translateX: pos.x }, { translateY: pos.y }] }]}
             >
@@ -894,12 +905,18 @@ export function TaiwanWorld({
                 onPress={() => onMarkerPress(m)}
                 hitSlop={10}
                 accessibilityRole="button"
-                accessibilityLabel={m.kind === 'cluster' || m.kind === 'light' ? countyLabel(countyOf(m.spot), lang) : spotName(m.spot, lang)}
+                accessibilityLabel={
+                  m.kind === 'light'
+                    ? `${countyLabel(countyOf(m.spot), lang)}${m.left ? ` · ${tr('map.leftA11y', { n: m.left })}` : ''}`
+                    : m.kind === 'cluster'
+                      ? countyLabel(countyOf(m.spot), lang)
+                      : spotName(m.spot, lang)
+                }
               >
                 {m.kind === 'token' ? (
                   <LandmarkToken spot={m.spot} size={m.size} />
                 ) : m.kind === 'light' ? (
-                  <Light pulse={pulse} night={night} dim={m.size} />
+                  <CountyMark pulse={pulse} night={night} dim={m.size} left={m.left ?? 0} />
                 ) : m.kind === 'thumb' ? (
                   <ThumbPin
                     spot={m.spot}
@@ -911,11 +928,7 @@ export function TaiwanWorld({
                 ) : m.kind === 'target' ? (
                   <TargetFlag spot={m.spot} dist={approximate ? null : (target?.dist ?? 0)} pulse={pulse} flip={m.at.x > width * 0.55} />
                 ) : (
-                  m.kind === 'cluster' && m.cluster ? (
-                    <ClusterBubble spot={m.spot} cluster={m.cluster} />
-                  ) : (
-                    <PendingPin big={!!regionId} />
-                  )
+                  m.kind === 'cluster' && m.cluster && <ClusterBubble spot={m.spot} cluster={m.cluster} />
                 )}
               </Pressable>
               {labels.has(m.spot.id) && (
@@ -957,6 +970,24 @@ export function TaiwanWorld({
             >
               <MaterialCommunityIcons name={'chevron-left' as any} size={18} color={t.text} />
               <Text style={styles.backText}>{county ? metaLabel(active, lang) : tr('map.allTaiwan')}</Text>
+            </Pressable>
+            <Pressable
+              style={[styles.todoToggle, todoOnly && styles.todoToggleOn]}
+              onPress={() => {
+                void Haptics.selectionAsync();
+                setTodoOnly((v) => !v);
+              }}
+              hitSlop={6}
+              accessibilityRole="switch"
+              accessibilityState={{ checked: todoOnly }}
+              accessibilityLabel={tr('map.todoOnly')}
+            >
+              <MaterialCommunityIcons
+                name={(todoOnly ? 'checkbox-marked-circle' : 'checkbox-blank-circle-outline') as any}
+                size={14}
+                color={todoOnly ? t.onAccent : t.accent}
+              />
+              <Text style={[styles.todoToggleText, todoOnly && { color: t.onAccent }]}>{tr('map.todoOnly')}</Text>
             </Pressable>
             <View style={styles.regionTag} pointerEvents="none">
               <Text style={styles.regionName}>{county ? countyLabel(county, lang) : metaLabel(active, lang)}</Text>
@@ -1002,7 +1033,9 @@ export function TaiwanWorld({
         </View>
       )}
 
-      {interactive && !regionId && <Text style={styles.hint}>{tr('map.hint')}</Text>}
+      {interactive && !regionId && (
+        <Text style={styles.hint}>{tr(visited.length < spots.length ? 'map.hintLeft' : 'map.hint')}</Text>
+      )}
 
       {interactive && regionId && (
         <SpotStrip
@@ -1305,7 +1338,7 @@ function splitRgba(c: string) {
 function relax(list: Marker[], s: number, spread: number) {
   const pts = list.map((m) => ({ x: m.at.x * s, y: m.at.y * s }));
   const radius = (m: Marker) =>
-    m.kind === 'thumb' ? PIN / 2 + 1 : m.kind === 'cluster' ? CLUSTER : m.kind === 'target' ? 12 : m.kind === 'pending' ? 16 : m.kind === 'light' ? 6 * m.size : m.size * spread;
+    m.kind === 'thumb' ? PIN / 2 + 1 : m.kind === 'cluster' ? CLUSTER : m.kind === 'target' ? 12 : m.kind === 'light' ? Math.max(9, 6 * m.size) : m.size * spread;
   for (let iter = 0; iter < 40; iter++) {
     let moved = false;
     for (let i = 0; i < pts.length; i++) {
@@ -1396,22 +1429,18 @@ function Light({ pulse, night, dim }: { pulse: Animated.Value; night: boolean; d
   );
 }
 
-function PendingPin({ big }: { big: boolean }) {
-  const { pin } = useTheme().world;
-  const d = big ? 14 : 5;
+/** A county on the island view: its light (if anything was collected there) and how many spots remain. */
+function CountyMark({ pulse, night, dim, left }: { pulse: Animated.Value; night: boolean; dim: number; left: number }) {
+  const styles = useStyles();
   return (
-    <View
-      style={{
-        width: d,
-        height: d,
-        marginLeft: -d / 2,
-        marginTop: -d / 2,
-        borderRadius: d,
-        borderWidth: big ? 1.5 : 0,
-        borderColor: `rgba(${pin},0.55)`,
-        backgroundColor: big ? `rgba(${pin},0.12)` : `rgba(${pin},0.35)`,
-      }}
-    />
+    <View>
+      {dim ? <Light pulse={pulse} night={night} dim={dim} /> : <View style={styles.unexplored} />}
+      {left > 0 && (
+        <View pointerEvents="none" style={[styles.leftTag, { left: dim ? 3 + dim * 3 : 4 }]}>
+          <Text style={styles.leftTagText}>{left}</Text>
+        </View>
+      )}
+    </View>
   );
 }
 
@@ -1436,6 +1465,30 @@ const useStyles = makeStyles((t: Palette) =>
   },
   lightHalo: { position: 'absolute', width: 18, height: 18, borderRadius: 9, backgroundColor: t.world.light },
   lightCore: { width: 6, height: 6, borderRadius: 3, backgroundColor: t.world.lightCore },
+  unexplored: {
+    width: 9,
+    height: 9,
+    marginLeft: -4.5,
+    marginTop: -4.5,
+    borderRadius: 5,
+    borderWidth: 1.5,
+    borderColor: `rgba(${t.world.pin},0.7)`,
+    backgroundColor: `rgba(${t.world.pin},0.18)`,
+  },
+  leftTag: {
+    position: 'absolute',
+    top: -17,
+    minWidth: 16,
+    height: 15,
+    paddingHorizontal: 4,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: t.accent,
+    backgroundColor: t.mode === 'dark' ? 'rgba(11,18,32,0.85)' : 'rgba(255,255,255,0.92)',
+  },
+  leftTagText: { color: t.accent, fontSize: 9, fontWeight: '800', fontVariant: ['tabular-nums'] },
   back: {
     position: 'absolute',
     left: 8,
@@ -1449,6 +1502,22 @@ const useStyles = makeStyles((t: Palette) =>
     backgroundColor: t.mode === 'dark' ? 'rgba(11,18,32,0.7)' : 'rgba(255,255,255,0.85)',
   },
   backText: { color: t.text, fontSize: 12, fontWeight: '600' },
+  todoToggle: {
+    position: 'absolute',
+    left: 8,
+    top: 42,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingVertical: 5,
+    paddingHorizontal: 9,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: t.accent,
+    backgroundColor: t.mode === 'dark' ? 'rgba(11,18,32,0.7)' : 'rgba(255,255,255,0.85)',
+  },
+  todoToggleOn: { backgroundColor: t.accent },
+  todoToggleText: { color: t.accent, fontSize: 12, fontWeight: '700' },
   regionTag: {
     position: 'absolute',
     right: 8,
