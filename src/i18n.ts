@@ -160,7 +160,7 @@ const zh = {
   'unseal.count': '{n} 個模型已開箱',
   'unseal.done': '收進護照',
   'share.myTaiwan': '我的台灣',
-  'share.by': '由 Islandia 收藏',
+  'share.by': '由微縮台灣收藏',
   'share.fail': '無法分享',
   'share.unsupported': '這台裝置不支援分享圖片。',
   'share.error': '收藏卡產生失敗，請再試一次。',
@@ -176,7 +176,7 @@ const zh = {
 
   // onboarding
   'onb.1.title': '走過的地方，\n都會留在你的世界。',
-  'onb.1.body': 'Islandia 是一座由真實旅行\n建立起來的微縮台灣。',
+  'onb.1.body': '這是一座由真實旅行\n建立起來的微縮台灣。',
   'onb.2.title': '抵達景點',
   'onb.2.body': '真的去到那裡。',
   'onb.3.title': '留下足跡',

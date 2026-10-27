@@ -11,10 +11,11 @@
     "ios": {
       "supportsTablet": false,
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "Islandia 需要你的位置,才能在你抵達景點時解鎖收藏。",
+        "NSLocationWhenInUseUsageDescription": "Islandia needs your location to unlock a spot when you arrive there.",
         "LSApplicationQueriesSchemes": [
           "comgooglemaps"
-        ]
+        ],
+        "CFBundleAllowMixedLocalizations": true
       },
       "bundleIdentifier": "com.airnoir.islandia",
       "config": {
@@ -52,7 +53,7 @@
           "widgets": [
             {
               "name": "IslandiaWidget",
-              "displayName": "Islandia",
+              "displayName": "微縮台灣",
               "description": "每天一個收藏模型，以及你的收集進度。",
               "ios": {
                 "supportedFamilies": [
@@ -93,6 +94,11 @@
         "projectId": "f4241d2c-ef0d-49e1-8400-55cd1f72a9a9"
       }
     },
-    "owner": "airnoir"
+    "owner": "airnoir",
+    "locales": {
+      "zh-Hant": "./languages/zh-Hant.json",
+      "zh-Hans": "./languages/zh-Hans.json",
+      "en": "./languages/en.json"
+    }
   }
 }

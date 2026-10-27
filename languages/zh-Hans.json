@@ -1,0 +1,6 @@
+{
+  "ios": {
+    "CFBundleDisplayName": "微缩台湾",
+    "NSLocationWhenInUseUsageDescription": "微缩台湾需要你的位置，才能在你抵达景点时解锁收藏。"
+  }
+}

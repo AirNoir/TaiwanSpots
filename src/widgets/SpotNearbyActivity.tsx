@@ -23,7 +23,7 @@ const SpotNearbyActivity = (p: SpotNearbyProps, env: LiveActivityEnvironment) =>
         <Image systemName="mappin.and.ellipse" size={26} color={accent} />
         <VStack alignment="leading" spacing={2}>
           <Text modifiers={[font({ size: 16, weight: 'heavy' }), lineLimit(1)]}>{`你在${p.name}的收藏範圍內`}</Text>
-          <Text modifiers={[font({ size: 13 }), foregroundStyle(sub)]}>打開 Islandia 留下足跡</Text>
+          <Text modifiers={[font({ size: 13 }), foregroundStyle(sub)]}>打開微縮台灣留下足跡</Text>
         </VStack>
         <Spacer />
         <Text modifiers={[font({ size: 13, weight: 'bold', design: 'rounded' }), foregroundStyle(accent)]}>{p.distance}</Text>
@@ -35,7 +35,7 @@ const SpotNearbyActivity = (p: SpotNearbyProps, env: LiveActivityEnvironment) =>
     expandedLeading: <Image systemName="mappin.and.ellipse" size={28} color={accent} />,
     expandedCenter: <Text modifiers={[font({ size: 16, weight: 'heavy' }), lineLimit(1)]}>{p.name}</Text>,
     expandedTrailing: <Text modifiers={[font({ size: 13, weight: 'bold' }), foregroundStyle(accent)]}>{p.distance}</Text>,
-    expandedBottom: <Text modifiers={[font({ size: 13 }), foregroundStyle(sub)]}>已進入收藏範圍・點一下打開 Islandia</Text>,
+    expandedBottom: <Text modifiers={[font({ size: 13 }), foregroundStyle(sub)]}>已進入收藏範圍・點一下打開微縮台灣</Text>,
   };
 };
 

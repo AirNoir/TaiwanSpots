@@ -1,10 +1,10 @@
-# Islandia 隱私權政策 / Privacy Policy
+# 微縮台灣 Islandia 隱私權政策 / Privacy Policy
 
 最後更新：2026-10-15
 
 ## 中文
 
-Islandia（小島收藏室）是一個用定位打卡、收藏台灣景點微縮模型的 App。
+微縮台灣（英文名 Islandia）是一個用定位打卡、收藏台灣景點微縮模型的 App。
 
 **我們收集什麼**
 

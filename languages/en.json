@@ -1,0 +1,6 @@
+{
+  "ios": {
+    "CFBundleDisplayName": "Islandia",
+    "NSLocationWhenInUseUsageDescription": "Islandia needs your location to unlock a spot when you arrive there."
+  }
+}
