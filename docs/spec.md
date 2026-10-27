@@ -168,13 +168,15 @@
 
 新的模型圖加入後要跑 `npm run assets:silhouettes` 再跑 `npm run assets:registry`，否則封存時會退回鎖頭圖示（不會露出原圖）。
 
-### 下一步（需要你在網頁上做）
+### RevenueCat 與 TestFlight（2026-10-27）
 
-1. **App Store Connect → 協議、稅務和銀行業務**：確認「付費 App」協議已生效（沒生效時沙盒也拿不到商品）。順便申請小型開發者計畫。
-2. **RevenueCat**（https://app.revenuecat.com）：
-   1. 建專案，加 iOS App，Bundle ID `com.airnoir.islandia`；
-   2. 依它的指示上傳 App Store Connect 的 In-App Purchase Key（.p8）；
-   3. Products 加 `com.airnoir.islandia.full`；Entitlements 建 `full` 並掛上這個商品；
-   4. 把 **Public iOS SDK key**（`appl_` 開頭）給我。
-3. 我把 key 設成 EAS 環境變數 `EXPO_PUBLIC_REVENUECAT_IOS_KEY`，打一版 TestFlight，用沙盒帳號跑第 6 節的驗收清單。
-4. 第一個內購要和 App 版本一起送審：送審時在版本頁勾選這個商品。
+- RevenueCat 專案「微縮台灣」：iOS App `com.airnoir.islandia`、In-App Purchase Key、App Store Connect API key、商品 `com.airnoir.islandia.full`、entitlement `full`（已掛商品）。不使用 Offering，也不需要 App 專用共享密鑰（SDK 10 走 StoreKit 2）。
+- Public SDK key 已設為 EAS 環境變數 `EXPO_PUBLIC_REVENUECAT_IOS_KEY`（production / preview / development）。這把 key 本來就會放進 App，不是秘密；`sk_` 開頭的 secret key 不能進 App 或 repo。
+- Build 8 是第一個含付費與新名稱的 TestFlight 版本。
+
+### 下一步
+
+1. 確認 App Store Connect「付費 App」協議有效（API 無法查，只能在網頁看）。
+2. App Store Connect →「使用者和存取權限」→「沙盒」→「測試人員」建沙盒帳號（地區台灣）。
+3. 用 Build 8 跑第 6 節第一階段驗收清單。
+4. 第一個內購要和 App 版本一起送審：送審時在版本頁勾選 `com.airnoir.islandia.full`。
