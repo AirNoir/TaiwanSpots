@@ -22,7 +22,7 @@ import { makeStyles, Palette, useTheme } from '../theme';
 interface Props {
   spot: Spot;
   visible: boolean;
-  /** Lands past the free ten without the full version: the silhouette rises instead of the model. */
+  /** Lands past the free five without the full version: the silhouette rises instead of the model. */
   sealed?: boolean;
   onDone: () => void;
 }

@@ -3,7 +3,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Animated, Easing, Image, StyleSheet, View } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
-import { isWet, Season, seasonWash, Sky } from '../atmosphere';
+import { ATMOSPHERE_OVERLAYS, isWet, Season, seasonWash, Sky } from '../atmosphere';
 import { collectionImage, collectionThumbnail, DIORAMA_BG, silhouetteImage } from '../data/spotAssets';
 import { Spot } from '../data/spots';
 import { useTheme } from '../theme';
@@ -15,7 +15,7 @@ interface Props {
   spot: Spot;
   size: number;
   locked?: boolean;
-  /** Collected past the free ten without the full version: only the silhouette shows (spec §3.2). */
+  /** Collected past the free five without the full version: only the silhouette shows (spec §3.2). */
   sealed?: boolean;
   live?: boolean; // subtle "living diorama" motion
   radius?: number;
@@ -29,9 +29,11 @@ export function Diorama({ spot, size, locked = false, sealed = false, live = fal
   if (sealed && !locked && !silhouette) locked = true; // no cut-out yet: never show the real art
   const { art } = spot;
   const br = radius ?? size * 0.12;
-  const wash = !locked && atmosphere ? seasonWash[atmosphere.season] : null;
-  const night = !locked && !!atmosphere?.night;
-  const raining = !locked && live && !!atmosphere?.sky && isWet(atmosphere.sky);
+  // Season wash, night and rain over the model are switched off for now (ATMOSPHERE_OVERLAYS).
+  const fx = !locked && ATMOSPHERE_OVERLAYS;
+  const wash = fx && atmosphere ? seasonWash[atmosphere.season] : null;
+  const night = fx && !!atmosphere?.night;
+  const raining = fx && live && !!atmosphere?.sky && isWet(atmosphere.sky);
 
   const [cloudX] = useState(() => new Animated.Value(0));
   const [bobY] = useState(() => new Animated.Value(0));

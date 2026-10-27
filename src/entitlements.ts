@@ -7,8 +7,8 @@ import { activeCollections, CollectionEntry, useStore } from './store';
 // out from the collection order and the entitlements every time, so a purchase,
 // a restore or a refund changes it everywhere at once.
 
-/** Models that open without the full version: the first ten collected. */
-export const FREE_LIMIT = 10;
+/** Models that open without the full version: the first five collected. */
+export const FREE_LIMIT = 5;
 
 export const ENTITLEMENT_FULL = 'full';
 
@@ -22,7 +22,7 @@ export function hasFull(s: EntitlementState): boolean {
   return s.entitlements.includes(ENTITLEMENT_FULL);
 }
 
-/** Collected spots past the free ten, in collection order. Retired spots don't take a place. */
+/** Collected spots past the free five, in collection order. Retired spots don't take a place. */
 export function sealedList(collections: Record<string, CollectionEntry>, full: boolean): string[] {
   if (full) return [];
   return Object.values(activeCollections(collections))
@@ -42,7 +42,7 @@ export function useSealedSet(): Set<string> {
   return useMemo(() => new Set(sealedList(collections, full)), [collections, full]);
 }
 
-/** Whether the next collection will land sealed (the 11th onwards without the full version). */
+/** Whether the next collection will land sealed (the 6th onwards without the full version). */
 export function nextIsSealed(collections: Record<string, CollectionEntry>, full: boolean): boolean {
   return !full && Object.keys(activeCollections(collections)).length >= FREE_LIMIT;
 }

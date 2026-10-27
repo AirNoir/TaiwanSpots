@@ -16,6 +16,13 @@ export interface Weather {
   fetchedAt: number; // ms since epoch
 }
 
+/**
+ * Draw time of day and weather as overlays (night veil, season wash, clouds, rain,
+ * lightning) on the map and the models. Off for now: they read as cheap next to the
+ * diorama art. Weather is still fetched, named in text and recorded on collections.
+ */
+export const ATMOSPHERE_OVERLAYS = false;
+
 export const SEASONS: Season[] = ['spring', 'summer', 'autumn', 'winter'];
 
 // icon: MaterialCommunityIcons name

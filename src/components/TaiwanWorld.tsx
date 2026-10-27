@@ -23,7 +23,7 @@ import Svg, {
   RadialGradient,
   Stop,
 } from 'react-native-svg';
-import { describeWeather, isWet, Season, seasonOf, skyIcon, Weather } from '../atmosphere';
+import { ATMOSPHERE_OVERLAYS, describeWeather, isWet, Season, seasonOf, skyIcon, Weather } from '../atmosphere';
 import { collectionThumbnail, DIORAMA_BG, worldToken } from '../data/spotAssets';
 import { distanceMeters, formatDistance, LatLng } from '../geo';
 import { countyLabel, labelWidth, metaLabel, spotName, useLang, useT } from '../i18n';
@@ -127,7 +127,7 @@ export function TaiwanWorld({
   world = TAIWAN,
   season: seasonProp,
   weather,
-  night = false,
+  night: nightProp = false,
   location,
   approximate = false,
 }: Props) {
@@ -138,6 +138,10 @@ export function TaiwanWorld({
   const sealedSet = useSealedSet();
   const C = t.world;
   const season = seasonProp ?? seasonOf();
+  // Night veil and weather drawn over the map are switched off for now (ATMOSPHERE_OVERLAYS);
+  // the region's weather is still named in text.
+  const night = ATMOSPHERE_OVERLAYS && nightProp;
+  const skyFx = ATMOSPHERE_OVERLAYS ? weather : undefined;
   const tint = seasonTints[t.mode][season];
   const styles = useStyles();
   const router = useRouter();
@@ -344,7 +348,7 @@ export function TaiwanWorld({
 
   // rain / snow falls only while some region is wet
   const precip =
-    !!weather && Object.values(weather).some((w) => w && (isWet(w.sky) || w.sky === 'snow'));
+    !!skyFx && Object.values(skyFx).some((w) => w && (isWet(w.sky) || w.sky === 'snow'));
   const [fall] = useState(() => new Animated.Value(0));
   useEffect(() => {
     if (!precip) return;
@@ -356,7 +360,7 @@ export function TaiwanWorld({
   }, [precip, fall]);
 
   // lightning flashes over any region in a thunderstorm
-  const thunder = !!weather && Object.values(weather).some((w) => w?.sky === 'thunder');
+  const thunder = !!skyFx && Object.values(skyFx).some((w) => w?.sky === 'thunder');
   const [flash] = useState(() => new Animated.Value(0));
   useEffect(() => {
     if (!thunder) return;
@@ -759,11 +763,11 @@ export function TaiwanWorld({
           </Animated.View>
 
           {/* weather over each region: clouds sit still, rain and snow fall */}
-          {weather && (
+          {skyFx && (
             <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, zoomTransform]}>
               <Svg width={width} height={height}>
                 {regionStats.map((r, ri) => {
-                  const w = weather[r.id];
+                  const w = skyFx[r.id];
                   if (!w || w.sky === 'clear') return null;
                   const n = w.sky === 'cloudy' ? 2 : 3;
                   const op = w.sky === 'cloudy' ? 0.45 : w.sky === 'fog' ? 0.5 : 0.65;
@@ -791,7 +795,7 @@ export function TaiwanWorld({
                 >
                   <Svg width={width} height={height}>
                     {regionStats.map((r, ri) => {
-                      const w = weather[r.id];
+                      const w = skyFx[r.id];
                       if (!w || !(isWet(w.sky) || w.sky === 'snow')) return null;
                       const count = w.sky === 'drizzle' ? 7 : w.sky === 'snow' ? 8 : 12;
                       const len = width * (w.sky === 'drizzle' ? 0.014 : 0.022);
@@ -819,7 +823,7 @@ export function TaiwanWorld({
                 <Animated.View style={[StyleSheet.absoluteFill, { opacity: flash }]}>
                   <Svg width={width} height={height}>
                     {regionStats.map((r) => {
-                      const w = weather[r.id];
+                      const w = skyFx[r.id];
                       if (w?.sky !== 'thunder') return null;
                       const bx = r.center.x + width * 0.02;
                       const by = r.center.y - width * 0.05;
