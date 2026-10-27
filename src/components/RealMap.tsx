@@ -2,7 +2,8 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker, Region } from 'react-native-maps';
-import { collectionThumbnail, DIORAMA_BG } from '../data/spotAssets';
+import { collectionThumbnail, DIORAMA_BG, silhouetteImage } from '../data/spotAssets';
+import { useSealedSet } from '../entitlements';
 import { Spot } from '../data/spots';
 import { countyLabel, labelWidth, spotName, useLang } from '../i18n';
 import { makeStyles, Palette, useTheme } from '../theme';
@@ -60,6 +61,7 @@ export function RealMap({
 }: Props) {
   const ref = useRef<MapView>(null);
   const styles = useStyles();
+  const sealedSet = useSealedSet();
   const [ready, setReady] = useState(false);
 
   const fitTo = useMemo(
@@ -243,19 +245,20 @@ export function RealMap({
     >
       {placedClusters.map((c) => (
         <Marker
-          key={`c:${c.county}`}
+          key={`c:${c.county}:${sealedSet.has(c.cover.id) ? "s" : ""}`}
           coordinate={{ latitude: c.latitude, longitude: c.longitude }}
           anchor={{ x: 0.5, y: 0.5 }}
           tracksViewChanges={tracking}
           onPress={() => onOpenCounty(c.county)}
         >
-          <Bubble cluster={c} />
+          <Bubble cluster={c} sealed={sealedSet.has(c.cover.id)} />
         </Marker>
       ))}
       {spots.map((s) => (
         <Marker
           // iOS keeps an annotation's first frame size: a pin that grows when selected is remounted
-          key={`${s.id}:${s.id === selectedId ? 'on' : ''}`}
+          // (and one that is unsealed by a purchase, since its snapshot doesn't redraw)
+          key={`${s.id}:${s.id === selectedId ? 'on' : ''}:${sealedSet.has(s.id) ? 's' : ''}`}
           coordinate={placed.get(s.id) ?? { latitude: s.latitude, longitude: s.longitude }}
           anchor={{ x: 0.5, y: 0.5 }}
           tracksViewChanges={tracking}
@@ -265,6 +268,7 @@ export function RealMap({
           <Pin
             spot={s}
             got={collectedIds.has(s.id)}
+            sealed={sealedSet.has(s.id)}
             on={s.id === selectedId}
             goal={s.id === targetId}
           />
@@ -294,8 +298,23 @@ export function RealMap({
 
 type LabelSide = 'below' | 'right' | 'left' | 'above';
 
+/** Thumbnail inside a round pin; a sealed collection shows only its tinted silhouette (spec §3.2). */
+export function PinArt({ spotId, size, sealed }: { spotId: string; size: number; sealed: boolean }) {
+  const t = useTheme();
+  const silhouette = sealed ? silhouetteImage(spotId) : null;
+  if (silhouette) {
+    return (
+      <View style={{ width: size, height: size, backgroundColor: t.sealedBg, alignItems: 'center', justifyContent: 'center' }}>
+        <Image source={silhouette} style={{ width: size, height: size, tintColor: t.sealedInk }} />
+      </View>
+    );
+  }
+  const thumb = sealed ? null : collectionThumbnail(spotId);
+  return thumb ? <Image source={thumb} style={{ width: size, height: size }} /> : null;
+}
+
 /** A spot's diorama as a round pin: accent ring while still to collect, white ring and a check once collected. */
-function Pin({ spot, got, on, goal }: { spot: Spot; got: boolean; on: boolean; goal: boolean }) {
+function Pin({ spot, got, sealed, on, goal }: { spot: Spot; got: boolean; sealed: boolean; on: boolean; goal: boolean }) {
   const t = useTheme();
   const styles = useStyles();
   const d = on ? PIN_ON : PIN;
@@ -315,7 +334,7 @@ function Pin({ spot, got, on, goal }: { spot: Spot; got: boolean; on: boolean; g
         ]}
       >
         {thumb ? (
-          <Image source={thumb} style={{ width: d * 1.25, height: d * 1.25 }} />
+          <PinArt spotId={spot.id} size={d * 1.25} sealed={sealed} />
         ) : (
           <MaterialCommunityIcons name={spot.art.icon as any} size={d * 0.5} color={spot.art.tint} />
         )}
@@ -329,7 +348,7 @@ function Pin({ spot, got, on, goal }: { spot: Spot; got: boolean; on: boolean; g
   );
 }
 
-function Bubble({ cluster }: { cluster: RealCluster }) {
+function Bubble({ cluster, sealed }: { cluster: RealCluster; sealed: boolean }) {
   const t = useTheme();
   const styles = useStyles();
   const lang = useLang();
@@ -339,7 +358,7 @@ function Bubble({ cluster }: { cluster: RealCluster }) {
     <View style={{ alignItems: 'center', paddingTop: BUBBLE_LABEL_H }}>
       <View style={{ width: BUBBLE, height: BUBBLE }}>
         <View style={[styles.bubble, { borderColor: done ? '#FFFFFF' : t.accent }]}>
-          {thumb && <Image source={thumb} style={{ width: BUBBLE * 1.25, height: BUBBLE * 1.25 }} />}
+          {thumb && <PinArt spotId={cluster.cover.id} size={BUBBLE * 1.25} sealed={sealed} />}
         </View>
         {/* what is still waiting there; a check once the county is complete */}
         <View style={styles.badge}>

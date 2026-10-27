@@ -69,6 +69,18 @@ interface IslandiaState {
   setThemeMode: (mode: ThemeMode) => void;
   setOnboarded: () => void;
   setDevLocation: (loc: LatLng | null) => void;
+  /** Active RevenueCat entitlements ('full', 'outer_islands'); kept from the last check while offline. */
+  entitlements: string[];
+  setEntitlements: (e: string[]) => void;
+  /** Demo builds: pretend the full version is (true) or isn't (false) bought. Null = the real purchase. */
+  simulatedFull: boolean | null;
+  setSimulatedFull: (v: boolean | null) => void;
+  /** The paywall has been shown at the first sealed collection (it only shows there once). */
+  paywallSeen: boolean;
+  setPaywallSeen: () => void;
+  /** Spots being unsealed right now by the "all open" moment after a purchase. Not persisted. */
+  unsealing: string[] | null;
+  setUnsealing: (ids: string[] | null) => void;
   checkIn: (spotId: string, atmosphere?: Atmosphere) => CollectionEntry;
   /** Dev: collect every active spot (keeps existing entries). */
   unlockAll: () => void;
@@ -90,6 +102,14 @@ export const useStore = create<IslandiaState>()(
       setThemeMode: (mode) => set({ themeMode: mode }),
       setOnboarded: () => set({ onboarded: true }),
       setDevLocation: (loc) => set({ devLocation: loc }),
+      entitlements: [],
+      setEntitlements: (entitlements) => set({ entitlements }),
+      simulatedFull: null,
+      setSimulatedFull: (simulatedFull) => set({ simulatedFull }),
+      paywallSeen: false,
+      setPaywallSeen: () => set({ paywallSeen: true }),
+      unsealing: null,
+      setUnsealing: (unsealing) => set({ unsealing }),
       checkIn: (spotId, atmosphere) => {
         const existing = get().collections[spotId];
         if (existing) return existing;
@@ -119,7 +139,7 @@ export const useStore = create<IslandiaState>()(
         }
         set({ collections, onboarded: true });
       },
-      reset: () => set({ collections: {}, onboarded: false, devLocation: null }),
+      reset: () => set({ collections: {}, onboarded: false, devLocation: null, paywallSeen: false }),
     }),
     {
       name: 'islandia-v1',
@@ -131,6 +151,9 @@ export const useStore = create<IslandiaState>()(
         themeMode: s.themeMode,
         language: s.language,
         atmosphereOverride: s.atmosphereOverride,
+        entitlements: s.entitlements,
+        simulatedFull: s.simulatedFull,
+        paywallSeen: s.paywallSeen,
       }),
       onRehydrateStorage: () => () => {
         useStore.setState({ hydrated: true });

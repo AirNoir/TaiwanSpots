@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import { Appearance } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { startPurchases } from '../src/purchases';
 import { useTheme } from '../src/theme';
 
 // Development only: lets a debugger or automation navigate, e.g. __islandiaRouter.push('/passport').
@@ -15,6 +16,11 @@ export default function RootLayout() {
   useEffect(() => {
     Appearance.setColorScheme(t.mode);
   }, [t.mode]);
+
+  // Entitlements refresh at launch and on every return to the foreground (spec §4).
+  useEffect(() => {
+    startPurchases();
+  }, []);
 
   return (
     <GestureHandlerRootView style={{ flex: 1, backgroundColor: t.bg }}>
@@ -29,6 +35,11 @@ export default function RootLayout() {
         <Stack.Screen name="onboarding" options={{ gestureEnabled: false }} />
         <Stack.Screen
           name="spot/[id]"
+          options={{ presentation: 'modal', contentStyle: { backgroundColor: t.bgElevated } }}
+        />
+        <Stack.Screen name="unseal" options={{ presentation: 'fullScreenModal', animation: 'fade', gestureEnabled: false }} />
+        <Stack.Screen
+          name="paywall"
           options={{ presentation: 'modal', contentStyle: { backgroundColor: t.bgElevated } }}
         />
       </Stack>

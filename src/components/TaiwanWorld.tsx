@@ -31,7 +31,8 @@ import { Spot, SPOTS } from '../data/spots';
 import { makeProjector, TAIWAN, WorldDef, worldAspect } from '../data/world';
 import { makeStyles, Palette, seasonTints, useTheme } from '../theme';
 import { lightningLoop } from './lightning';
-import { RealCluster, RealMap } from './RealMap';
+import { useSealedSet } from '../entitlements';
+import { PinArt, RealCluster, RealMap } from './RealMap';
 
 // Isometric miniature Taiwan (visual spec v0.2 §10–§11).
 // Unvisited land is desaturated and fogged; visited spots bloom colour into
@@ -133,6 +134,8 @@ export function TaiwanWorld({
   const t = useTheme();
   const tr = useT();
   const lang = useLang();
+  // Sealed collections never show their real art on the map: no landmark token, a silhouette pin.
+  const sealedSet = useSealedSet();
   const C = t.world;
   const season = seasonProp ?? seasonOf();
   const tint = seasonTints[t.mode][season];
@@ -399,11 +402,12 @@ export function TaiwanWorld({
         if (s.region !== regionId) continue;
         const c = countyOf(s);
         if (county ? c !== county : (countyCounts.get(c)?.total ?? 0) >= CLUSTER_MIN) continue;
-        list.push({ spot: s, kind: got && s.worldTier === 'anchor' && worldToken(s.id) ? 'token' : 'thumb', size, at });
+        const token = got && !sealedSet.has(s.id) && s.worldTier === 'anchor' && worldToken(s.id);
+        list.push({ spot: s, kind: token ? 'token' : 'thumb', size, at });
       } else if (target?.spot.id === s.id) {
         list.push({ spot: s, kind: 'target', size: 0, at });
       } else {
-        if (got && s.worldTier === 'anchor' && worldToken(s.id)) list.push({ spot: s, kind: 'token', size, at });
+        if (got && !sealedSet.has(s.id) && s.worldTier === 'anchor' && worldToken(s.id)) list.push({ spot: s, kind: 'token', size, at });
         // One mark per county on the island view: a light growing with what was
         // collected there, tagged with how many spots are still waiting.
         const key = `${s.region}:${countyOf(s)}`;
@@ -442,7 +446,7 @@ export function TaiwanWorld({
     // Back-to-front by depth; pins and the next-stop flag stay on top so they stay tappable.
     const top = (m: Marker) => (m.kind === 'target' ? 2 : m.kind === 'light' ? 1 : 0);
     return list.sort((a, b) => top(a) - top(b) || a.at.y - b.at.y);
-  }, [spots, geo.positions, collectedIds, regionId, county, countyCounts, zoom.s, width, target]);
+  }, [spots, geo.positions, collectedIds, sealedSet, regionId, county, countyCounts, zoom.s, width, target]);
 
   // Animated screen position per marker, built once per marker list rather than on every render.
   const markerPos = useMemo(
@@ -921,6 +925,7 @@ export function TaiwanWorld({
                   <ThumbPin
                     spot={m.spot}
                     got={collectedIds.has(m.spot.id)}
+                    sealed={sealedSet.has(m.spot.id)}
                     on={m.spot.id === selectedId}
                     goal={m.spot.id === target?.spot.id}
                     pulse={pulse}
@@ -928,7 +933,7 @@ export function TaiwanWorld({
                 ) : m.kind === 'target' ? (
                   <TargetFlag spot={m.spot} dist={approximate ? null : (target?.dist ?? 0)} pulse={pulse} flip={m.at.x > width * 0.55} />
                 ) : (
-                  m.kind === 'cluster' && m.cluster && <ClusterBubble spot={m.spot} cluster={m.cluster} />
+                  m.kind === 'cluster' && m.cluster && <ClusterBubble spot={m.spot} cluster={m.cluster} sealed={sealedSet.has(m.spot.id)} />
                 )}
               </Pressable>
               {labels.has(m.spot.id) && (
@@ -1069,6 +1074,7 @@ function SpotStrip({
   const tr = useT();
   const lang = useLang();
   const ref = React.useRef<FlatList<StripItem>>(null);
+  const sealedSet = useSealedSet();
   const todo = items.filter((i) => !i.got).length;
 
   // Scroll to the picked card when the selection changes — not when distances update.
@@ -1110,7 +1116,9 @@ function SpotStrip({
               accessibilityLabel={`${spotName(item.spot, lang)}${item.got ? ` · ${tr('map.got')}` : ''}`}
             >
               <View style={styles.stripThumb}>
-                {thumb ? (
+                {thumb && sealedSet.has(item.spot.id) ? (
+                  <PinArt spotId={item.spot.id} size={STRIP_W - 14} sealed />
+                ) : thumb ? (
                   <Image source={thumb} style={{ width: '100%', height: '100%', opacity: item.got ? 1 : 0.55 }} />
                 ) : (
                   <MaterialCommunityIcons name={item.spot.art.icon as any} size={26} color={item.spot.art.tint} />
@@ -1136,7 +1144,21 @@ function SpotStrip({
 }
 
 /** A spot's own diorama in a round frame: faded until collected, ringed when it's the next stop. */
-function ThumbPin({ spot, got, on, goal, pulse }: { spot: Spot; got: boolean; on: boolean; goal: boolean; pulse: Animated.Value }) {
+function ThumbPin({
+  spot,
+  got,
+  sealed,
+  on,
+  goal,
+  pulse,
+}: {
+  spot: Spot;
+  got: boolean;
+  sealed: boolean;
+  on: boolean;
+  goal: boolean;
+  pulse: Animated.Value;
+}) {
   const t = useTheme();
   const styles = useStyles();
   const d = on ? PIN_ON : PIN;
@@ -1166,7 +1188,7 @@ function ThumbPin({ spot, got, on, goal, pulse }: { spot: Spot; got: boolean; on
         ]}
       >
         {thumb ? (
-          <Image source={thumb} style={{ width: d * 1.25, height: d * 1.25 }} />
+          <PinArt spotId={spot.id} size={d * 1.25} sealed={sealed} />
         ) : (
           <MaterialCommunityIcons name={spot.art.icon as any} size={d * 0.5} color={spot.art.tint} />
         )}
@@ -1230,6 +1252,7 @@ function Callout({
   const styles = useStyles();
   const tr = useT();
   const lang = useLang();
+  const sealed = useSealedSet().has(spot.id);
   const [show] = useState(() => new Animated.Value(0));
   useEffect(() => {
     show.setValue(0);
@@ -1258,7 +1281,7 @@ function Callout({
     >
       <Pressable onPress={onOpen} style={styles.calloutInner} accessibilityRole="button" accessibilityLabel={tr('map.view', { name: spotName(spot, lang) })}>
         <View style={styles.calloutThumb}>
-          {thumb && <Image source={thumb} style={{ width: '100%', height: '100%' }} />}
+          {thumb && <PinArt spotId={spot.id} size={48} sealed={sealed} />}
         </View>
         <View style={{ flex: 1, minWidth: 0 }}>
           <Text style={styles.calloutName} numberOfLines={1}>
@@ -1279,7 +1302,7 @@ function Callout({
 const STRIP_W = 92;
 
 /** A crowded county folded into one bubble: its best-known spot, the county name and progress. */
-function ClusterBubble({ spot, cluster }: { spot: Spot; cluster: Cluster }) {
+function ClusterBubble({ spot, cluster, sealed }: { spot: Spot; cluster: Cluster; sealed: boolean }) {
   const t = useTheme();
   const styles = useStyles();
   const lang = useLang();
@@ -1289,7 +1312,7 @@ function ClusterBubble({ spot, cluster }: { spot: Spot; cluster: Cluster }) {
     <View style={{ width: CLUSTER, height: CLUSTER, marginLeft: -CLUSTER / 2, marginTop: -CLUSTER / 2 }}>
       <View style={[styles.cluster, { borderColor: done ? t.accent : '#FFFFFF' }]}>
         {thumb ? (
-          <Image source={thumb} style={{ width: CLUSTER * 1.25, height: CLUSTER * 1.25 }} />
+          <PinArt spotId={spot.id} size={CLUSTER * 1.25} sealed={sealed} />
         ) : (
           <MaterialCommunityIcons name={spot.art.icon as any} size={CLUSTER * 0.5} color={spot.art.tint} />
         )}

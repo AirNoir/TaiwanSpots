@@ -10,7 +10,7 @@ import { GENERATED_SPOT_ASSETS } from './spotAssets.generated';
 export type CollectionVariant = 'day' | 'sunset' | 'night';
 
 export interface SpotAssetSet {
-  collection?: Partial<Record<CollectionVariant | 'thumbnail', ImageSourcePropType>>;
+  collection?: Partial<Record<CollectionVariant | 'thumbnail' | 'silhouette', ImageSourcePropType>>;
   world?: ImageSourcePropType;
 }
 
@@ -29,6 +29,11 @@ export function collectionImage(
 /** 512px thumbnail for grids (spec §14), falling back to the full render. */
 export function collectionThumbnail(spotId: string): ImageSourcePropType | null {
   return GENERATED_SPOT_ASSETS[spotId]?.collection?.thumbnail ?? collectionImage(spotId);
+}
+
+/** White cut-out of the model on transparency, tinted in the app for sealed collections (spec §3.2). */
+export function silhouetteImage(spotId: string): ImageSourcePropType | null {
+  return GENERATED_SPOT_ASSETS[spotId]?.collection?.silhouette ?? null;
 }
 
 /** Transparent landmark token for the world map. Null = render a generic marker. */

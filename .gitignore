@@ -46,3 +46,6 @@ assets/spots/*/reference/realistic-study.png
 assets/spots/*/reference/realistic-token.png
 assets/spots/*/collection/preview-v2.png
 assets/spots/*/collection/preview-cute-v3.png
+
+# Supabase CLI scratch
+supabase/.temp/

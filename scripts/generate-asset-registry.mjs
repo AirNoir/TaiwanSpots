@@ -12,7 +12,7 @@ const spotsDir = join(root, 'assets/spots');
 const outFile = join(root, 'src/data/spotAssets.generated.ts');
 
 const IMAGE = /\.(png|webp|jpe?g|avif)$/i;
-const COLLECTION_VARIANTS = ['day', 'sunset', 'night', 'thumbnail'];
+const COLLECTION_VARIANTS = ['day', 'sunset', 'night', 'thumbnail', 'silhouette'];
 
 function firstImage(dir) {
   if (!existsSync(dir)) return null;

@@ -23,6 +23,7 @@ import { activeCollections, entrySeason, useStore } from '../../src/store';
 import { Palette, categoryMeta, makeStyles, rarityMeta, useTheme } from '../../src/theme';
 import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
 import { DEMO_TOOLS } from '../../src/demo';
+import { nextIsSealed, useHasFull, useSealedSet } from '../../src/entitlements';
 import { metaLabel, spotAltName, spotName, useLang, useT } from '../../src/i18n';
 import { useDevScroll } from '../../src/useDevScroll';
 import { useLocation } from '../../src/useLocation';
@@ -39,6 +40,10 @@ export default function SpotDetailScreen() {
   const collections = useStore((s) => s.collections);
   const checkIn = useStore((s) => s.checkIn);
   const setDevLocation = useStore((s) => s.setDevLocation);
+  const paywallSeen = useStore((s) => s.paywallSeen);
+  const setPaywallSeen = useStore((s) => s.setPaywallSeen);
+  const full = useHasFull();
+  const sealedSet = useSealedSet();
   const { location, isFallback } = useLocation();
 
   const scrollRef = useDevScroll('spot');
@@ -58,6 +63,9 @@ export default function SpotDetailScreen() {
 
   const entry = spot ? collections[spot.id] : undefined;
   const collected = !!entry;
+  const sealed = !!spot && sealedSet.has(spot.id);
+  // Decided before the check-in lands: the 11th collection onwards opens sealed without the full version.
+  const landsSealed = !collected && nextIsSealed(collections, full);
 
   const dist = useMemo(
     () => (spot ? distanceMeters(location, spot) : Infinity),
@@ -97,7 +105,8 @@ export default function SpotDetailScreen() {
   const category = categoryMeta[spot.category];
   const dioramaSize = SCREEN_W - 48;
   // Spots whose art is still pending only have the procedural diorama — nothing to zoom into.
-  const zoomable = collected && !!collectionImage(spot.id);
+  const zoomable = collected && !sealed && !!collectionImage(spot.id);
+  const openPaywall = () => router.push('/paywall');
 
   // A collected diorama keeps the season (and sky) it was collected in; a locked one shows today's.
   const shownSeason = entry && !override.season ? entrySeason(entry) : season;
@@ -112,6 +121,11 @@ export default function SpotDetailScreen() {
   const onUnlockDone = () => {
     checkIn(spot.id, { season, sky: weather?.sky, temperature: weather?.temperature });
     setUnlocking(false);
+    // The paywall shows itself once, at the first sealed collection (spec §3.3).
+    if (landsSealed && !paywallSeen) {
+      setPaywallSeen();
+      openPaywall();
+    }
   };
 
   const onNavigate = () => {
@@ -136,12 +150,20 @@ export default function SpotDetailScreen() {
 
         {/* Collected dioramas open full-screen for a closer look; locked ones stay a mystery. */}
         <Pressable
-          disabled={!zoomable}
-          onPress={() => setViewing(true)}
+          disabled={!zoomable && !sealed}
+          onPress={() => (sealed ? openPaywall() : setViewing(true))}
           accessibilityRole="imagebutton"
-          accessibilityLabel={tr('spot.zoom', { name: spotName(spot, lang) })}
+          accessibilityLabel={sealed ? tr('spot.unseal') : tr('spot.zoom', { name: spotName(spot, lang) })}
         >
-          <Diorama spot={spot} size={dioramaSize} locked={!collected} live={collected} radius={24} atmosphere={atmosphere} />
+          <Diorama
+            spot={spot}
+            size={dioramaSize}
+            locked={!collected}
+            sealed={sealed}
+            live={collected && !sealed}
+            radius={24}
+            atmosphere={atmosphere}
+          />
           {zoomable && (
             <View style={styles.zoomBadge} pointerEvents="none">
               <Ionicons name="expand" size={14} color={t.text} />
@@ -216,10 +238,20 @@ export default function SpotDetailScreen() {
                   : ''}
               </Text>
             </View>
-            <Pressable style={styles.shareBtn} onPress={() => setSharing(true)}>
-              <Ionicons name="share-outline" size={16} color={t.onAccent} />
-              <Text style={styles.shareBtnText}>{tr('spot.share')}</Text>
-            </Pressable>
+            {sealed ? (
+              <>
+                <Text style={styles.sealedNote}>{tr('spot.sealed')}</Text>
+                <Pressable style={styles.shareBtn} onPress={openPaywall} accessibilityRole="button">
+                  <MaterialCommunityIcons name={'package-variant' as any} size={16} color={t.onAccent} />
+                  <Text style={styles.shareBtnText}>{tr('spot.unseal')}</Text>
+                </Pressable>
+              </>
+            ) : (
+              <Pressable style={styles.shareBtn} onPress={() => setSharing(true)}>
+                <Ionicons name="share-outline" size={16} color={t.onAccent} />
+                <Text style={styles.shareBtnText}>{tr('spot.share')}</Text>
+              </Pressable>
+            )}
             <Pressable style={styles.navLink} onPress={onNavigate} accessibilityRole="button">
               <MaterialCommunityIcons name={'navigation-variant-outline' as any} size={14} color={t.subtext} />
               <Text style={styles.navLinkText}>{tr('spot.revisit')}{isFallback ? '' : ` · ${formatDistance(dist)}`}</Text>
@@ -280,7 +312,7 @@ export default function SpotDetailScreen() {
                   accessibilityRole="button"
                   accessibilityLabel={tr('spot.aroundA11y', { name: spotName(s, lang), d: formatDistance(d) })}
                 >
-                  <Diorama spot={s} size={96} radius={14} locked={!collections[s.id]} />
+                  <Diorama spot={s} size={96} radius={14} locked={!collections[s.id]} sealed={sealedSet.has(s.id)} />
                   <Text style={styles.aroundName} numberOfLines={1}>
                     {collections[s.id] ? '✓ ' : ''}
                     {spotName(s, lang)}
@@ -293,9 +325,9 @@ export default function SpotDetailScreen() {
         )}
       </ScrollView>
 
-      <UnlockOverlay spot={spot} visible={unlocking} onDone={onUnlockDone} />
+      <UnlockOverlay spot={spot} visible={unlocking} sealed={landsSealed} onDone={onUnlockDone} />
       {viewing && <DioramaViewer spot={spot} onClose={() => setViewing(false)} />}
-      {collected && entry && (
+      {collected && entry && !sealed && (
         <ShareCardModal
           spot={spot}
           entry={entry}
@@ -311,6 +343,7 @@ export default function SpotDetailScreen() {
 
 const useStyles = makeStyles((t: Palette) =>
   StyleSheet.create({
+  sealedNote: { color: t.subtext, fontSize: 13, marginTop: 10 },
   zoomBadge: {
     position: 'absolute',
     right: 12,

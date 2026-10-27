@@ -12,6 +12,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
 import { Region, SPOTS } from '../../src/data/spots';
+import { useSealedSet } from '../../src/entitlements';
 import { entrySeason, useActiveCollections } from '../../src/store';
 import { metaLabel, spotName, useLang, useT } from '../../src/i18n';
 import { Palette, makeStyles, regionMeta, useTheme } from '../../src/theme';
@@ -27,6 +28,7 @@ export default function PassportScreen() {
   const styles = useStyles();
   const router = useRouter();
   const collections = useActiveCollections();
+  const sealedSet = useSealedSet();
   const override = useAtmosphereOverride();
   const night = useNight();
   const tr = useT();
@@ -111,6 +113,7 @@ export default function PassportScreen() {
                 spot={spot}
                 size={CELL}
                 locked={!collected}
+                sealed={sealedSet.has(spot.id)}
                 radius={16}
                 atmosphere={entry ? { season: override.season ?? entrySeason(entry), night } : undefined}
               />

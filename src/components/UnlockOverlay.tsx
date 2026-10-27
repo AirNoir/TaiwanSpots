@@ -13,7 +13,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import { collectionImage, DIORAMA_BG } from '../data/spotAssets';
+import { collectionImage, DIORAMA_BG, silhouetteImage } from '../data/spotAssets';
 import { Spot, SPOTS } from '../data/spots';
 import { countyLabel, spotAltName, spotName, useLang, useT } from '../i18n';
 import { useActiveCollections } from '../store';
@@ -22,12 +22,14 @@ import { makeStyles, Palette, useTheme } from '../theme';
 interface Props {
   spot: Spot;
   visible: boolean;
+  /** Lands past the free ten without the full version: the silhouette rises instead of the model. */
+  sealed?: boolean;
   onDone: () => void;
 }
 
 const { width: SCREEN_W } = Dimensions.get('window');
 
-export function UnlockOverlay({ spot, visible, onDone }: Props) {
+export function UnlockOverlay({ spot, visible, sealed = false, onDone }: Props) {
   const t = useTheme();
   const styles = useStyles();
   const tr = useT();
@@ -41,7 +43,7 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
   const countyGot = sameCounty.filter((s) => collections[s.id]).length + (already ? 0 : 1);
   const size = Math.min(SCREEN_W - 80, 300);
   const { art } = spot;
-  const image = collectionImage(spot.id);
+  const image = sealed ? silhouetteImage(spot.id) : collectionImage(spot.id);
 
   const [backdrop] = useState(() => new Animated.Value(0));
   const [platform] = useState(() => new Animated.Value(0));
@@ -152,7 +154,7 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
                   {
                     borderRadius: size * 0.12,
                     overflow: 'hidden',
-                    backgroundColor: DIORAMA_BG,
+                    backgroundColor: sealed ? t.sealedBg : DIORAMA_BG,
                     opacity: landmarkOpacity,
                     transform: [
                       {
@@ -168,7 +170,7 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
               >
                 <Image
                   source={image}
-                  style={{ width: '100%', height: '100%' }}
+                  style={{ width: '100%', height: '100%', tintColor: sealed ? t.sealedInk : undefined }}
                   resizeMode="contain"
                 />
               </Animated.View>
@@ -280,6 +282,7 @@ export function UnlockOverlay({ spot, visible, onDone }: Props) {
               {tr('unlock.progress', { n: nth, county: countyLabel(county, lang), got: countyGot, total: sameCounty.length })}
               {countyGot === sameCounty.length ? tr('unlock.complete') : ''}
             </Text>
+            {sealed && <Text style={styles.sealed}>{tr('unlock.sealed')}</Text>}
           </Animated.View>
 
           <View style={{ height: 76, justifyContent: 'center' }}>
@@ -326,6 +329,11 @@ const useStyles = makeStyles((t: Palette) =>
     fontSize: 13,
     marginTop: 10,
     letterSpacing: 2,
+  },
+  sealed: {
+    color: t.subtext,
+    fontSize: 13,
+    marginTop: 8,
   },
   progress: {
     color: t.accent,

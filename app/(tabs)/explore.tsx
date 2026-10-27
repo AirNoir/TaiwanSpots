@@ -15,6 +15,7 @@ import { Region, SPOTS } from '../../src/data/spots';
 import { DEMO_TOOLS } from '../../src/demo';
 import { I18nKey, metaLabel, spotName, useLang, useT } from '../../src/i18n';
 import { checkinRadius, DEV_LOCATIONS, distanceMeters, formatDistance } from '../../src/geo';
+import { useSealedSet } from '../../src/entitlements';
 import { entrySeason, useActiveCollections, useStore } from '../../src/store';
 import { Palette, categoryMeta, makeStyles, rarityMeta, regionMeta, useTheme } from '../../src/theme';
 import { useAtmosphereOverride, useNight } from '../../src/useAtmosphere';
@@ -29,6 +30,7 @@ export default function ExploreScreen() {
   const styles = useStyles();
   const router = useRouter();
   const collections = useActiveCollections();
+  const sealedSet = useSealedSet();
   const devLocation = useStore((s) => s.devLocation);
   const setDevLocation = useStore((s) => s.setDevLocation);
   const { location, isDev, isFallback } = useLocation();
@@ -150,6 +152,7 @@ export default function ExploreScreen() {
                 spot={spot}
                 size={64}
                 locked={!collected}
+                sealed={sealedSet.has(spot.id)}
                 radius={16}
                 atmosphere={collected ? { season: override.season ?? entrySeason(collections[spot.id]), night } : undefined}
               />

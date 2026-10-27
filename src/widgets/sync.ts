@@ -5,6 +5,7 @@ import { useEffect, useMemo } from 'react';
 import { Platform } from 'react-native';
 import { collectionThumbnail } from '../data/spotAssets';
 import { SPOTS, Spot } from '../data/spots';
+import { useSealedSet } from '../entitlements';
 import { checkinRadius, distanceMeters, formatDistance, LatLng } from '../geo';
 import { activeCollections, CollectionEntry, useStore } from '../store';
 import type { IslandiaWidgetProps } from './IslandiaWidget';
@@ -63,9 +64,11 @@ async function sharedImage(directory: string, spotId: string): Promise<string> {
 async function updateWidget(
   m: WidgetsModule,
   collections: Record<string, CollectionEntry>,
+  sealed: Set<string>,
   next: { spot: Spot; dist: number } | null,
 ) {
-  const featured = SPOTS.filter((s) => collections[s.id] && collectionThumbnail(s.id)).sort(
+  // Only opened models rotate through the widget; sealed ones stay hidden (spec §3.2).
+  const featured = SPOTS.filter((s) => collections[s.id] && !sealed.has(s.id) && collectionThumbnail(s.id)).sort(
     (a, b) => collections[a.id].order - collections[b.id].order,
   );
   const base: Omit<IslandiaWidgetProps, 'spotId' | 'name' | 'nameEn' | 'city' | 'image'> = {
@@ -106,6 +109,7 @@ function syncActivity(m: WidgetsModule, here: Spot | null, dist: number) {
 /** Mount once (home screen): keeps the widget timeline and Live Activity current. */
 export function useWidgetSync(location: LatLng, hasFix: boolean) {
   const collections = useStore((s) => s.collections);
+  const sealed = useSealedSet();
 
   const nearest = useMemo(() => {
     if (!hasFix) return null;
@@ -121,10 +125,10 @@ export function useWidgetSync(location: LatLng, hasFix: boolean) {
   const nextKey = nearest ? `${nearest.spot.id}|${widgetDistance(nearest.dist)}` : '';
   useEffect(() => {
     if (!native) return;
-    updateWidget(native, collections, nearest).catch((e) => console.warn('[widget] update failed', e));
+    updateWidget(native, collections, sealed, nearest).catch((e) => console.warn('[widget] update failed', e));
     // nearest is captured through nextKey so small GPS jitter doesn't reload the widget
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [collections, nextKey]);
+  }, [collections, sealed, nextKey]);
 
   const here = nearest && nearest.dist <= checkinRadius(nearest.spot) ? nearest : null;
   useEffect(() => {

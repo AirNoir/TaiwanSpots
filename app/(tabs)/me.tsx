@@ -1,5 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import React, { useMemo } from 'react';
+import { useRouter } from 'expo-router';
+import React, { useMemo, useState } from 'react';
 import {
   Alert,
   Pressable,
@@ -11,6 +12,8 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ACHIEVEMENTS } from '../../src/achievements';
 import { DEMO_TOOLS } from '../../src/demo';
+import { FREE_LIMIT, useHasFull, useSealedSet, withUnseal } from '../../src/entitlements';
+import { purchasesAvailable, restore } from '../../src/purchases';
 import { I18nKey, LangPref, metaLabel, useLang, useT } from '../../src/i18n';
 import { SEASONS, seasonMeta, Sky, skyMeta } from '../../src/atmosphere';
 import { spotById, SPOTS } from '../../src/data/spots';
@@ -64,6 +67,25 @@ export default function MeScreen() {
   const lang = useLang();
   const override = useStore((s) => s.atmosphereOverride);
   const setOverride = useStore((s) => s.setAtmosphereOverride);
+  const router = useRouter();
+  const full = useHasFull();
+  const sealedCount = useSealedSet().size;
+  const simulatedFull = useStore((s) => s.simulatedFull);
+  const [restoring, setRestoring] = useState(false);
+
+  const onRestore = async () => {
+    if (restoring) return;
+    setRestoring(true);
+    const [result, unseal] = await withUnseal(restore);
+    setRestoring(false);
+    if (unseal) router.push('/unseal');
+    else Alert.alert(tr(result === 'restored' ? 'restore.done' : result === 'nothing' ? 'restore.nothing' : 'restore.failed'));
+  };
+
+  const simulate = async (v: boolean | null) => {
+    const [, unseal] = await withUnseal(async () => useStore.getState().setSimulatedFull(v));
+    if (unseal) router.push('/unseal');
+  };
 
   const collected = useMemo(
     () =>
@@ -149,6 +171,65 @@ export default function MeScreen() {
               </View>
             ))}
           </View>
+        )}
+
+        {/* Full version: status, the way to the paywall, and Restore Purchases (spec §3.3).
+            Hidden in store builds that have no purchase set up yet (nothing is sealed there). */}
+        {(purchasesAvailable || DEMO_TOOLS) && (
+          <>
+            <Text style={styles.sectionTitle}>{tr('me.full')}</Text>
+            <View style={styles.fullCard}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <MaterialCommunityIcons
+                  name={(full ? 'check-decagram' : 'package-variant') as any}
+                  size={22}
+                  color={full ? t.success : t.accent}
+                />
+                <Text style={styles.fullStatus}>
+                  {full
+                    ? tr('me.fullOwned')
+                    : sealedCount
+                      ? tr('me.fullSealed', { open: collected.length - sealedCount, n: sealedCount })
+                      : tr('me.fullFree', { open: collected.length, limit: FREE_LIMIT })}
+                </Text>
+              </View>
+              {!full && (
+                <Pressable style={styles.fullBtn} onPress={() => router.push('/paywall')} accessibilityRole="button">
+                  <Text style={styles.fullBtnText}>{tr('me.fullSee')}</Text>
+                </Pressable>
+              )}
+              <Pressable onPress={onRestore} disabled={restoring} hitSlop={8} style={styles.restoreLink} accessibilityRole="button">
+                <Text style={styles.restoreText}>{tr('paywall.restore')}</Text>
+              </Pressable>
+            </View>
+            {DEMO_TOOLS && (
+              <>
+                <Text style={styles.devLabel}>{tr('me.demoPurchase')}</Text>
+                <View style={styles.segment}>
+                  {(
+                    [
+                      [null, 'me.demoPurchase.real'],
+                      [true, 'me.demoPurchase.on'],
+                      [false, 'me.demoPurchase.off'],
+                    ] as const
+                  ).map(([v, label]) => {
+                    const on = simulatedFull === v;
+                    return (
+                      <Pressable
+                        key={String(v)}
+                        style={[styles.segmentItem, on && styles.segmentItemOn]}
+                        onPress={() => void simulate(v)}
+                        accessibilityRole="button"
+                        accessibilityState={{ selected: on }}
+                      >
+                        <Text style={[styles.segmentText, on && styles.segmentTextOn]}>{tr(label)}</Text>
+                      </Pressable>
+                    );
+                  })}
+                </View>
+              </>
+            )}
+          </>
         )}
 
         <Text style={styles.sectionTitle}>{tr('me.achievements')}</Text>
@@ -351,6 +432,24 @@ const useStyles = makeStyles((t: Palette) =>
     paddingVertical: 8,
   },
   catName: { color: t.text, fontSize: 14 },
+  fullCard: {
+    backgroundColor: t.card,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: t.cardBorder,
+    padding: 18,
+  },
+  fullStatus: { color: t.text, fontSize: 15, fontWeight: '600', flex: 1 },
+  fullBtn: {
+    backgroundColor: t.accent,
+    borderRadius: 22,
+    paddingVertical: 12,
+    alignItems: 'center',
+    marginTop: 14,
+  },
+  fullBtnText: { color: t.onAccent, fontSize: 15, fontWeight: '700' },
+  restoreLink: { alignSelf: 'center', marginTop: 12, padding: 4 },
+  restoreText: { color: t.subtext, fontSize: 13, fontWeight: '600', textDecorationLine: 'underline' },
   catCount: { color: t.accent, fontSize: 14, fontWeight: '700' },
   sectionTitle: { color: t.faint, fontSize: 12, letterSpacing: 3, marginTop: 30, marginBottom: 12 },
   achRow: {

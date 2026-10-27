@@ -19,6 +19,7 @@ import { TAIWAN } from '../../src/data/world';
 import { I18nKey, metaLabel, spotName, useLang, useT } from '../../src/i18n';
 import { checkinRadius, distanceMeters, formatDistance, LatLng } from '../../src/geo';
 import { openDirections, travelModeFor } from '../../src/maps';
+import { useSealedSet } from '../../src/entitlements';
 import { entrySeason, useActiveCollections } from '../../src/store';
 import { makeStyles, Palette, useTheme } from '../../src/theme';
 import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
@@ -44,6 +45,7 @@ export default function WorldScreen() {
   const styles = useStyles();
   const router = useRouter();
   const collections = useActiveCollections();
+  const sealedSet = useSealedSet();
   const tr = useT();
   const lang = useLang();
   const { location, isFallback } = useLocation();
@@ -221,6 +223,7 @@ export default function WorldScreen() {
               <Diorama
                 spot={latestSpot}
                 size={SCREEN_W - 80}
+                sealed={sealedSet.has(latestSpot.id)}
                 radius={20}
                 atmosphere={{ season: override.season ?? entrySeason(latest), night }}
               />

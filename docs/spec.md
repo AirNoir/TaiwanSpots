@@ -1,6 +1,6 @@
 # Islandia 產品規格：買斷制、免費體驗、登入
 
-版本 0.1（2026-10-22）。狀態：**已定稿，尚未實作**。
+版本 0.2（2026-10-27）。狀態：**第一階段程式已完成，等 RevenueCat 設定後上線**（見第 9 節）。
 標「預設」的數值是建議值，改這份文件就算改規格。背景討論在 `docs/auth-and-pricing.md`。
 
 ---
@@ -68,7 +68,9 @@
 ### 3.4 TestFlight 與既有使用者
 
 - App 尚未上架，沒有既有付費使用者需要補償。
-- TestFlight 版本：`DEMO_TOOLS` 開啟時「我的」頁的開發區可以切換「模擬已購買／未購買」，方便測試；正式版沒有這個開關。
+- `DEMO_TOOLS` 開啟時（開發、Expo Go、設了 `EXPO_PUBLIC_DEMO_TOOLS=1` 的版本），「我的」頁可以切換「模擬購買：真實／已購買／未購買」；正式版沒有這個開關。
+- **沒有設定 RevenueCat key 的正式版本（例如現在的 TestFlight）一律不封存**，「我的」頁也不顯示完整版區塊：沒有東西可賣時，不能讓人卡在封存。key 一設好，封存規則就生效。
+- Expo Go 裡 RevenueCat 只有預覽模式，視為不能購買；付款要用 EAS 打包的版本測試（沙盒帳號）。
 
 ## 4. 權益（entitlement）
 
@@ -110,6 +112,7 @@
   2. little-steps 已有付費用戶 → 組織升級 Pro（US$25／月，含 US$10 運算額度），Islandia 再加一個專案（約 +US$10／月），合計約 US$35／月。Pro 也讓 little-steps 有每日備份、不會因閒置被暫停。
   3. 改用 Firebase（免費方案即有匿名、Google、Apple 登入），代價是和 little-steps 維護兩套技術。
 - little-steps 的 `contexts/AuthContext.tsx`（Google／Apple `signInWithIdToken`、匿名登入）可以直接參考移植。
+- **已決定並建立（2026-10-27）**：組織已升級 Pro，新專案 `islandia`（ref `cbpljsnzqsucgjiinztk`，東京 ap-northeast-1）。資料庫密碼存在 macOS 鑰匙圈（服務名稱 `supabase-islandia-db`，`security find-generic-password -s supabase-islandia-db -w` 取得），不進 repo。URL 與 anon key 到第二階段再放進 EAS 環境變數。
 
 ### 5.5 審核與隱私
 
@@ -144,10 +147,34 @@
 
 - 正式 App 名稱（「Islandia」在 App Store 已被使用）。
 - 是否加入 App Store 小型開發者計畫（影響抽成 15% 或 30%；建議加入）。
-- 第二階段的後台：暫停另一個 Supabase 專案、升級 Pro，或改用 Firebase（見 5.4）。
+- ~~第二階段的後台~~：已決定用 Supabase Pro 開新專案（見 5.4）。
+- 早鳥價 NT$150：上架日確定後，在 ASC 用「排定價格」設定首月價格。
+- 外島禮包商品：第三階段有內容時再建立（商品 ID 刪除後不能重用，先不佔）。
 
-## 9. 下一步（回到電腦時從這裡開始）
+## 9. 進度與下一步
 
-1. 確認 spec 的預設值（免費 10 個、NT$190／早鳥 NT$150、外島 NT$90、成就與 Widget 免費）。
-2. App Store Connect 建立兩個非消耗性商品，RevenueCat 建專案與 entitlement。
-3. 開始第一階段實作；需要 development build（EAS 雲端），Expo Go 之後無法測付款。
+### 第一階段已完成（2026-10-27）
+
+| 項目 | 位置 |
+|---|---|
+| 權益與封存規則（前 10 個免費、即時計算） | `src/entitlements.ts` |
+| RevenueCat 包裝（啟動、回前景更新、價格、購買、恢復） | `src/purchases.ts` |
+| 剪影：每個模型一張去背遮罩，App 內上色 | `scripts/make-silhouettes.py`（`npm run assets:silhouettes`）→ `collection/silhouette.webp` |
+| 封存呈現：收藏動畫、護照、景點頁、探索、首頁、兩種地圖、Widget | `Diorama` 的 `sealed`、`PinArt`、`widgets/sync.ts` |
+| 付費頁（數量、剪影、StoreKit 價格、購買、恢復、隱私與條款） | `app/paywall.tsx` |
+| 全部開箱動畫（依收藏順序翻牌） | `app/unseal.tsx`、`src/components/UnsealOverlay.tsx` |
+| 「我的」頁完整版區塊、恢復購買、模擬購買開關 | `app/(tabs)/me.tsx` |
+| ASC 商品 `com.airnoir.islandia.full`（ASC id 6827454434）：NT$190、全部地區、中英文說明、審核截圖，狀態 READY_TO_SUBMIT | App Store Connect |
+
+新的模型圖加入後要跑 `npm run assets:silhouettes` 再跑 `npm run assets:registry`，否則封存時會退回鎖頭圖示（不會露出原圖）。
+
+### 下一步（需要你在網頁上做）
+
+1. **App Store Connect → 協議、稅務和銀行業務**：確認「付費 App」協議已生效（沒生效時沙盒也拿不到商品）。順便申請小型開發者計畫。
+2. **RevenueCat**（https://app.revenuecat.com）：
+   1. 建專案，加 iOS App，Bundle ID `com.airnoir.islandia`；
+   2. 依它的指示上傳 App Store Connect 的 In-App Purchase Key（.p8）；
+   3. Products 加 `com.airnoir.islandia.full`；Entitlements 建 `full` 並掛上這個商品；
+   4. 把 **Public iOS SDK key**（`appl_` 開頭）給我。
+3. 我把 key 設成 EAS 環境變數 `EXPO_PUBLIC_REVENUECAT_IOS_KEY`，打一版 TestFlight，用沙盒帳號跑第 6 節的驗收清單。
+4. 第一個內購要和 App 版本一起送審：送審時在版本頁勾選這個商品。

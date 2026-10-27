@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Animated, Easing, Image, StyleSheet, View } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 import { isWet, Season, seasonWash, Sky } from '../atmosphere';
-import { collectionImage, collectionThumbnail, DIORAMA_BG } from '../data/spotAssets';
+import { collectionImage, collectionThumbnail, DIORAMA_BG, silhouetteImage } from '../data/spotAssets';
 import { Spot } from '../data/spots';
 import { useTheme } from '../theme';
 import { lightningLoop } from './lightning';
@@ -15,14 +15,18 @@ interface Props {
   spot: Spot;
   size: number;
   locked?: boolean;
+  /** Collected past the free ten without the full version: only the silhouette shows (spec §3.2). */
+  sealed?: boolean;
   live?: boolean; // subtle "living diorama" motion
   radius?: number;
   /** Season wash over the model; night darkens it under a few stars; rain falls on live dioramas when the sky is wet. */
   atmosphere?: { season: Season; sky?: Sky; night?: boolean };
 }
 
-export function Diorama({ spot, size, locked = false, live = false, radius, atmosphere }: Props) {
+export function Diorama({ spot, size, locked = false, sealed = false, live = false, radius, atmosphere }: Props) {
   const t = useTheme();
+  const silhouette = sealed && !locked ? silhouetteImage(spot.id) : null;
+  if (sealed && !locked && !silhouette) locked = true; // no cut-out yet: never show the real art
   const { art } = spot;
   const br = radius ?? size * 0.12;
   const wash = !locked && atmosphere ? seasonWash[atmosphere.season] : null;
@@ -53,6 +57,19 @@ export function Diorama({ spot, size, locked = false, live = false, radius, atmo
       bob.stop();
     };
   }, [live, cloudX, bobY]);
+
+  if (silhouette) {
+    return (
+      <View style={[styles.box, { width: size, height: size, borderRadius: br, backgroundColor: t.sealedBg }]}>
+        <Image source={silhouette} style={{ width: '100%', height: '100%', tintColor: t.sealedInk }} resizeMode="contain" />
+        {size >= 48 && (
+          <View style={[styles.sealBadge, { width: size * 0.2, height: size * 0.2, borderRadius: size * 0.1, backgroundColor: t.accent }]}>
+            <MaterialCommunityIcons name={'package-variant-closed' as any} size={size * 0.12} color={t.onAccent} />
+          </View>
+        )}
+      </View>
+    );
+  }
 
   // Small cards (Passport grid, lists) use the 512px thumbnail when one exists.
   const image = size <= THUMBNAIL_MAX ? collectionThumbnail(spot.id) : collectionImage(spot.id);
@@ -336,6 +353,13 @@ function Rain({ size, thunder = false }: { size: number; thunder?: boolean }) {
 const styles = StyleSheet.create({
   box: {
     overflow: 'hidden',
+  },
+  sealBadge: {
+    position: 'absolute',
+    right: '6%',
+    bottom: '6%',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   lockBadgeWrap: {
     position: 'absolute',

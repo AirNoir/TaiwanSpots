@@ -69,6 +69,8 @@ export interface Palette {
   locked: string;
   lockedIcon: string;
   lockOverlay: string;
+  sealedBg: string; // card behind a sealed model's silhouette
+  sealedInk: string; // the silhouette itself
   scrim: string; // dark backdrop for the full-screen image viewer (both themes)
   backdrop: string; // themed backdrop for unlock / share overlays
   tabBar: string;
@@ -94,6 +96,8 @@ const dark: Palette = {
   locked: '#141D30',
   lockedIcon: '#8E9AAF',
   lockOverlay: 'rgba(8,12,22,0.25)',
+  sealedBg: '#1A2742',
+  sealedInk: '#40537A',
   scrim: 'rgba(5,9,18,0.95)',
   backdrop: 'rgba(5,9,18,0.96)',
   tabBar: '#0A101D',
@@ -144,6 +148,8 @@ const light: Palette = {
   locked: '#E9E2D4',
   lockedIcon: '#8A8F98',
   lockOverlay: 'rgba(246,241,231,0.35)',
+  sealedBg: '#EDE5D5',
+  sealedInk: '#C7B89C',
   scrim: 'rgba(20,18,14,0.94)',
   backdrop: 'rgba(246,241,231,0.97)',
   tabBar: '#FFFFFF',
