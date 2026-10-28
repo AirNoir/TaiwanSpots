@@ -1,5 +1,7 @@
 # Google 登入：OAuth client 設定步驟
 
+**狀態（2026-10-28）**：全部完成。GCP 專案「微縮台灣」（專案編號 945989250610）的 iOS 與 Web client 已建好；`app.json` plugin、EAS 三個環境的 `EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID`／`EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID`、`.env.local`、Supabase Google provider（Web 在前、iOS 在後、skip nonce check 開）都已回填。Build 11 是第一個含 Google 登入的 TestFlight 版本。Android client 還沒建（第 9 步）。
+
 2026-10-28 依 Google Cloud 說明中心（Google Auth Platform：Get started／Branding／Audience／Clients）、
 Supabase「Login with Google」與 `@react-native-google-signin` 文件核對。
 App 端程式已在 `src/auth.ts`，只差這份設定；Build 10 的 Google 按鈕因此先隱藏。
