@@ -1,6 +1,6 @@
 # 微縮台灣（Islandia）產品規格：買斷制、免費體驗、登入
 
-版本 0.2（2026-10-27）。狀態：**第一階段程式已完成，等 RevenueCat 設定後上線**（見第 9 節）。
+版本 0.3（2026-10-27）。狀態：**第一階段程式已完成，等 RevenueCat 設定後上線**（見第 9 節）。
 標「預設」的數值是建議值，改這份文件就算改規格。背景討論在 `docs/auth-and-pricing.md`。
 
 ---
@@ -96,7 +96,7 @@
 
 ### 5.3 套件與設定
 
-- `@supabase/supabase-js`、`@react-native-google-signin/google-signin`、`expo-apple-authentication`；全部透過 `npx expo install` 安裝。
+- `@supabase/supabase-js`、`react-native-url-polyfill`、`@react-native-google-signin/google-signin`、`expo-apple-authentication`、`expo-crypto`；全部透過 `npx expo install` 安裝（已裝，2026-10-28）。
 - 需要 development build，不能再用 Expo Go 測試；本機 Xcode 版本不足，development build 走 EAS 雲端。
 - 需要準備：Google Cloud iOS OAuth Client ID、Supabase 專案（URL 與 anon key 放 EAS 環境變數，不進 repo）、Apple Developer 後台開啟 Sign in with Apple。
 
@@ -112,7 +112,36 @@
   2. little-steps 已有付費用戶 → 組織升級 Pro（US$25／月，含 US$10 運算額度），Islandia 再加一個專案（約 +US$10／月），合計約 US$35／月。Pro 也讓 little-steps 有每日備份、不會因閒置被暫停。
   3. 改用 Firebase（免費方案即有匿名、Google、Apple 登入），代價是和 little-steps 維護兩套技術。
 - little-steps 的 `contexts/AuthContext.tsx`（Google／Apple `signInWithIdToken`、匿名登入）可以直接參考移植。
+- 匿名帳號的清理：edge function `cleanup-anonymous`（dry_run 預設，`x-cron-secret` 保護），pg_cron 每天 03:30（台灣）呼叫一次刪 30 天沒用的匿名帳號；secret 在 Vault（`cleanup_cron_secret`）與 function secrets（`CLEANUP_CRON_SECRET`），本機鑰匙圈 `supabase-islandia-cleanup-secret` 有一份。
 - **已決定並建立（2026-10-27）**：組織已升級 Pro，新專案 `islandia`（ref `cbpljsnzqsucgjiinztk`，東京 ap-northeast-1）。資料庫密碼存在 macOS 鑰匙圈（服務名稱 `supabase-islandia-db`，`security find-generic-password -s supabase-islandia-db -w` 取得），不進 repo。URL 與 anon key 到第二階段再放進 EAS 環境變數。
+
+### 5.6 實作紀錄（2026-10-28）
+
+| 項目 | 位置 |
+|---|---|
+| Supabase client（URL／publishable key 來自 `EXPO_PUBLIC_SUPABASE_URL`、`EXPO_PUBLIC_SUPABASE_KEY`；沒有就整段關閉） | `src/supabase.ts` |
+| 登入：啟動時匿名、Apple 原生、Google 原生、登出、刪除帳號 | `src/auth.ts` |
+| 同步：拉、合併（同景點取最早、依日期重排 `order`）、推；啟動／登入／收藏後 1.5 秒／回前景超過 5 分鐘 | `src/sync.ts` |
+| 「我的」頁「備份」卡：未綁定顯示 Apple（只有 iOS）與 Google 按鈕；已綁定顯示帳號、最近同步、登出、刪除帳號 | `app/(tabs)/me.tsx` |
+| 資料表 `collections` 與 RLS | `supabase/migrations/20261028000000_collections.sql` |
+| `delete-account`（刪自己；綁定後也用它刪掉舊的匿名帳號）、`cleanup-anonymous` | `supabase/functions/*` |
+| 清理排程（pg_cron + pg_net，secret 在 Vault） | `supabase/migrations/20261028000100_cleanup_schedule.sql` |
+
+和原本 5.1 的差異：
+
+- **綁定不是 `linkIdentity`**。Supabase 的 `linkIdentity` 只走瀏覽器 OAuth，原生拿到的 Apple／Google id token 不能掛到匿名帳號上。所以綁定 = 用 id token 登入另一個（永久）帳號 → 把手機上的收藏和那個帳號的雲端紀錄合併 → 用舊的匿名 session 呼叫 `delete-account` 把匿名帳號刪掉。手機上的收藏永遠是完整的，所以不會掉資料。
+- **Apple 走原生**（`expo-apple-authentication` + `signInWithIdToken`），不是小步腳印的網頁 OAuth：不用 Services ID、不用每 6 個月換一次 secret，Supabase 只要在 Apple provider 的 Client IDs 填 bundle id `com.airnoir.islandia`（已用 Management API 設好）。有帶 nonce（SHA-256 給 Apple、原文給 Supabase）。
+- **Android 不顯示 Apple 登入**（`appleAvailable = Platform.OS === 'ios'`），和小步腳印 2026-09-24 的決定一致。`android.package` 已設為 `com.airnoir.islandia`。
+- 登出用 `scope: 'local'`（不等網路），登出後自動再建一個匿名帳號，收藏留在手機上。
+- Expo Go 沒有 Google 原生模組：`src/auth.ts` 用 try/require 載入，載不到就不顯示 Google 按鈕。
+- Supabase 後台設定（匿名登入、Apple provider）是用 Management API `PATCH /v1/projects/{ref}/config/auth` 設的，token 在 `~/.supabase/access-token`；Google provider 等 OAuth client 建好再設（`external_google_enabled`、`external_google_client_id` 填 iOS 與 Web 兩個 id 以逗號分隔、`external_google_skip_nonce_check: true`）。
+- 用的是新的 publishable key（`sb_publishable_…`），不是舊的 anon JWT（Supabase 2026 年底淘汰）。
+
+還沒做：
+
+1. Google Cloud 的 OAuth client（iOS：bundle id `com.airnoir.islandia`；Web：給 Android 用）。拿到後：`app.json` plugins 加 `["@react-native-google-signin/google-signin", { "iosUrlScheme": "com.googleusercontent.apps.<iOS client id 前段>" }]`、EAS 環境變數 `EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID`／`EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID`、Supabase Google provider。
+2. 真機驗收（Apple／Google 登入在模擬器和 Expo Go 無法測）：第 6 節第二階段清單。
+3. App Store 隱私標籤加「電子郵件」「使用者 ID」「其他使用者內容（收藏紀錄）」，用途 App 功能，不用於追蹤。
 
 ### 5.5 審核與隱私
 
@@ -174,9 +203,15 @@
 - Public SDK key 已設為 EAS 環境變數 `EXPO_PUBLIC_REVENUECAT_IOS_KEY`（production / preview / development）。這把 key 本來就會放進 App，不是秘密；`sk_` 開頭的 secret key 不能進 App 或 repo。
 - Build 8 是第一個含付費與新名稱的 TestFlight 版本。
 
+### 第二階段（登入與備份）進行中（2026-10-28）
+
+程式碼、資料表、edge functions、Supabase 設定都完成，見 5.6。免費名額同日改為 5 個；地圖與模型上的晝夜／天氣遮罩以 `ATMOSPHERE_OVERLAYS` 關閉。
+
+Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一筆改成較早日期後同步，該景點變成 order 1；刪除帳號後雲端使用者與資料清空、App 自動換新匿名帳號再備份。Apple／Google 按鈕在 Expo Go 不會出現（模組不在 Expo Go 裡），要用 TestFlight 或 development build 測。Build 10 = 第一個含登入的版本（Apple + 匿名；Google 尚未設定所以按鈕隱藏）。
+
 ### 下一步
 
-1. 確認 App Store Connect「付費 App」協議有效（API 無法查，只能在網頁看）。
-2. App Store Connect →「使用者和存取權限」→「沙盒」→「測試人員」建沙盒帳號（地區台灣）。
-3. 用 Build 8 跑第 6 節第一階段驗收清單。
+1. Google Cloud 建 iOS 與 Web OAuth client，回填 `app.json`、EAS 環境變數、Supabase Google provider（5.6 第 1 點）。
+2. 出 TestFlight build，真機測 Apple 登入、合併、登出、刪除帳號；Google 等第 1 點完成。
+3. 沙盒購買測試已通過（2026-10-27）；下一個 build 前先在手機「設定 → App Store → 沙盒帳號」清除購買紀錄，才看得到封存。
 4. 第一個內購要和 App 版本一起送審：送審時在版本頁勾選 `com.airnoir.islandia.full`。

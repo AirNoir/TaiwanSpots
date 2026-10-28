@@ -55,10 +55,27 @@ export interface AtmosphereOverride {
   night?: boolean;
 }
 
+/** Who the cloud copy belongs to (docs/spec.md §5). Null until the first sign-in succeeds. */
+export interface Account {
+  id: string;
+  /** A guest account made at first launch: it backs up nothing a new phone could get back. */
+  anonymous: boolean;
+  provider: 'anonymous' | 'apple' | 'google';
+  email: string | null;
+}
+
 interface IslandiaState {
   hydrated: boolean;
   onboarded: boolean;
   collections: Record<string, CollectionEntry>;
+  /** Replaces the passport with the merged local + cloud copy (src/sync.ts). */
+  setCollections: (collections: Record<string, CollectionEntry>) => void;
+  /** Current Supabase user; not persisted, the auth client restores its own session. */
+  account: Account | null;
+  setAccount: (account: Account | null) => void;
+  /** Last successful cloud sync (ISO), shown on the Me tab. */
+  lastSyncAt: string | null;
+  setLastSyncAt: (at: string | null) => void;
   devLocation: LatLng | null;
   themeMode: ThemeMode;
   /** UI language: 'auto' follows the phone (see src/i18n.ts). */
@@ -93,6 +110,11 @@ export const useStore = create<IslandiaState>()(
       hydrated: false,
       onboarded: false,
       collections: {},
+      setCollections: (collections) => set({ collections }),
+      account: null,
+      setAccount: (account) => set({ account }),
+      lastSyncAt: null,
+      setLastSyncAt: (lastSyncAt) => set({ lastSyncAt }),
       devLocation: null,
       themeMode: 'light',
       language: 'auto',
@@ -139,7 +161,7 @@ export const useStore = create<IslandiaState>()(
         }
         set({ collections, onboarded: true });
       },
-      reset: () => set({ collections: {}, onboarded: false, devLocation: null, paywallSeen: false }),
+      reset: () => set({ collections: {}, onboarded: false, devLocation: null, paywallSeen: false, lastSyncAt: null }),
     }),
     {
       name: 'islandia-v1',
@@ -154,6 +176,7 @@ export const useStore = create<IslandiaState>()(
         entitlements: s.entitlements,
         simulatedFull: s.simulatedFull,
         paywallSeen: s.paywallSeen,
+        lastSyncAt: s.lastSyncAt,
       }),
       onRehydrateStorage: () => () => {
         useStore.setState({ hydrated: true });

@@ -3,7 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import { Appearance } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { startAuth } from '../src/auth';
 import { startPurchases } from '../src/purchases';
+import { startSync } from '../src/sync';
 import { useTheme } from '../src/theme';
 
 // Development only: lets a debugger or automation navigate, e.g. __islandiaRouter.push('/passport').
@@ -18,8 +20,12 @@ export default function RootLayout() {
   }, [t.mode]);
 
   // Entitlements refresh at launch and on every return to the foreground (spec §4).
+  // The guest account and passport backup start here too (spec §5): sync first,
+  // so the session the auth client restores finds its listener in place.
   useEffect(() => {
     startPurchases();
+    startSync();
+    startAuth();
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 # 微縮台灣 Islandia 隱私權政策 / Privacy Policy
 
-最後更新：2026-10-15
+最後更新：2026-10-28
 
 ## 中文
 
@@ -10,6 +10,7 @@
 
 - **位置資訊**：只在你打開 App 時使用，用來判斷你是否抵達景點、以及在主畫面 Widget 和鎖定畫面顯示最近的景點距離。位置資料只在你的裝置上計算，不會上傳到任何伺服器。
 - **收藏紀錄**：你解鎖過哪些景點、解鎖時間與順序、當時的季節與天氣，儲存在你的裝置上（以及 App 與 Widget 共用的 App Group 容器）。
+- **帳號與備份**：App 第一次開啟時會在背景建立一個匿名帳號，把你的收藏紀錄備份到我們的雲端（Supabase，資料存放於東京）。你可以在「我的」頁用 Apple 或 Google 帳號登入；此時我們只會收到該帳號提供的電子郵件（Apple 可選擇隱藏）與一組識別碼，用來讓你換手機時找回收藏。備份內容只有上面的收藏紀錄，不含位置。
 
 **天氣查詢**
 
@@ -17,13 +18,13 @@
 
 **我們不做什麼**
 
-- 不建立帳號，不收集姓名、電子郵件或聯絡方式。
+- 不收集姓名或聯絡方式；電子郵件只用來識別你的登入帳號，不寄送郵件、不用於行銷。
 - 不使用第三方分析或廣告 SDK。
-- 除了上述天氣查詢，不把任何資料傳送到我們或第三方的伺服器。
+- 除了上述天氣查詢與收藏備份，不把任何資料傳送到我們或第三方的伺服器。位置資料永遠不上傳。
 
 **資料刪除**
 
-刪除 App 即刪除所有收藏紀錄與位置資料。
+在「我的」頁按「刪除帳號」會立即刪除雲端上的帳號與收藏備份；刪除 App 則刪除裝置上的所有資料。沒有登入過的匿名帳號在 30 天沒有使用後會自動刪除。
 
 **聯絡**
 
@@ -37,6 +38,7 @@ Islandia is an app that unlocks miniature dioramas of Taiwanese landmarks when y
 
 - **Location**: used only while the app is open, to decide whether you have reached a spot and to show the nearest spot on the widget and lock screen. Location is processed on your device and is never uploaded.
 - **Collection progress**: which spots you have unlocked, when, in what order, and the season and weather at the time. Stored on your device and in the App Group container shared with the widget.
+- **Account and backup**: on first launch the app silently creates an anonymous account and backs up your collection progress to our cloud (Supabase, hosted in Tokyo). On the Me tab you can sign in with Apple or Google; we then receive only the email that account shares (Apple lets you hide it) and an identifier, used to bring your passport back on a new phone. The backup holds the collection progress above and nothing else; never your location.
 
 **Weather lookups**
 
@@ -44,13 +46,13 @@ To show current weather for spots and regions, the app queries Open-Meteo (open-
 
 **What we do not do**
 
-- No accounts. No names, emails or contact details.
+- No names or contact details; an email serves only to identify your sign-in account and is never used for mail or marketing.
 - No third-party analytics or advertising SDKs.
-- Apart from the weather lookups above, no data is sent to our servers or to anyone else's.
+- Apart from the weather lookups and the passport backup above, no data is sent to our servers or to anyone else's. Location is never uploaded.
 
 **Deleting your data**
 
-Deleting the app deletes all collection and location data.
+"Delete account" on the Me tab removes the account and its backup from the cloud at once; deleting the app removes everything on the device. Anonymous accounts that never signed in are removed automatically after 30 days of inactivity.
 
 **Contact**
 

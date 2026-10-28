@@ -1,7 +1,9 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import React, { useMemo, useState } from 'react';
+import * as AppleAuthentication from 'expo-apple-authentication';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
+  ActivityIndicator,
   Alert,
   Pressable,
   ScrollView,
@@ -11,6 +13,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ACHIEVEMENTS } from '../../src/achievements';
+import { appleAvailable, deleteAccount, googleAvailable, signInWithApple, signInWithGoogle, signOut } from '../../src/auth';
 import { DEMO_TOOLS } from '../../src/demo';
 import { FREE_LIMIT, useHasFull, useSealedSet, withUnseal } from '../../src/entitlements';
 import { purchasesAvailable, restore } from '../../src/purchases';
@@ -19,7 +22,10 @@ import { SEASONS, seasonMeta, Sky, skyMeta } from '../../src/atmosphere';
 import { spotById, SPOTS } from '../../src/data/spots';
 import { distanceMeters } from '../../src/geo';
 import { useActiveCollections, useStore } from '../../src/store';
+import { cloudAvailable } from '../../src/supabase';
+import { resetEverywhere } from '../../src/sync';
 import { Palette, ThemeMode, categoryMeta, makeStyles, useTheme } from '../../src/theme';
+import { useDevScroll } from '../../src/useDevScroll';
 
 const THEME_OPTIONS: { mode: ThemeMode; label: I18nKey; icon: string }[] = [
   { mode: 'light', label: 'me.theme.light', icon: 'white-balance-sunny' },
@@ -57,7 +63,7 @@ export default function MeScreen() {
   const t = useTheme();
   const styles = useStyles();
   const collections = useActiveCollections();
-  const reset = useStore((s) => s.reset);
+  const scrollRef = useDevScroll('me');
   const unlockAll = useStore((s) => s.unlockAll);
   const themeMode = useStore((s) => s.themeMode);
   const setThemeMode = useStore((s) => s.setThemeMode);
@@ -72,6 +78,55 @@ export default function MeScreen() {
   const sealedCount = useSealedSet().size;
   const simulatedFull = useStore((s) => s.simulatedFull);
   const [restoring, setRestoring] = useState(false);
+  const account = useStore((s) => s.account);
+  const lastSyncAt = useStore((s) => s.lastSyncAt);
+  const [authBusy, setAuthBusy] = useState<'apple' | 'google' | 'out' | 'delete' | null>(null);
+  // Apple's button only where the OS offers Sign in with Apple (never on Android, spec §5.1)
+  const [appleReady, setAppleReady] = useState(false);
+  useEffect(() => {
+    if (appleAvailable) AppleAuthentication.isAvailableAsync().then(setAppleReady, () => setAppleReady(false));
+  }, []);
+
+  const onSignIn = async (provider: 'apple' | 'google') => {
+    if (authBusy) return;
+    setAuthBusy(provider);
+    const result = await (provider === 'apple' ? signInWithApple() : signInWithGoogle());
+    setAuthBusy(null);
+    if (result === 'failed') Alert.alert(tr('auth.failed'));
+  };
+  const onSignOut = () =>
+    Alert.alert(tr('me.signOut.title'), tr('me.signOut.body'), [
+      { text: tr('common.cancel'), style: 'cancel' },
+      {
+        text: tr('me.signOut.confirm'),
+        onPress: () => {
+          setAuthBusy('out');
+          void signOut().finally(() => setAuthBusy(null));
+        },
+      },
+    ]);
+  const onDeleteAccount = () =>
+    Alert.alert(tr('me.deleteAccount.title'), tr('me.deleteAccount.body'), [
+      { text: tr('common.cancel'), style: 'cancel' },
+      {
+        text: tr('me.deleteAccount.confirm'),
+        style: 'destructive',
+        onPress: async () => {
+          setAuthBusy('delete');
+          const ok = await deleteAccount();
+          setAuthBusy(null);
+          if (!ok) Alert.alert(tr('me.deleteAccount.failed'));
+        },
+      },
+    ]);
+  const syncedAt = lastSyncAt
+    ? new Date(lastSyncAt).toLocaleString(lang === 'zh' ? 'zh-TW' : 'en-US', {
+        month: 'numeric',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+      })
+    : null;
 
   const onRestore = async () => {
     if (restoring) return;
@@ -125,7 +180,7 @@ export default function MeScreen() {
 
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
-      <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
+      <ScrollView ref={scrollRef} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
         <View style={styles.avatar}>
           <MaterialCommunityIcons name={'compass-rose' as any} size={40} color={t.accent} />
         </View>
@@ -229,6 +284,70 @@ export default function MeScreen() {
                 </View>
               </>
             )}
+          </>
+        )}
+
+        {cloudAvailable && (
+          <>
+            <Text style={styles.sectionTitle}>{tr('me.backup')}</Text>
+            <View style={styles.fullCard}>
+              {account && !account.anonymous ? (
+                <>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                    <MaterialCommunityIcons name={'cloud-check-outline' as any} size={22} color={t.success} />
+                    <View style={{ flex: 1 }}>
+                      <Text style={styles.fullStatus}>
+                        {tr('me.backup.on', { provider: account.provider === 'apple' ? 'Apple' : 'Google' })}
+                      </Text>
+                      {account.email && <Text style={styles.backupMeta}>{account.email}</Text>}
+                      <Text style={styles.backupMeta}>
+                        {syncedAt ? tr('me.backup.synced', { time: syncedAt }) : tr('me.backup.never')}
+                      </Text>
+                    </View>
+                  </View>
+                  <View style={styles.accountLinks}>
+                    <Pressable onPress={onSignOut} disabled={!!authBusy} hitSlop={8} accessibilityRole="button">
+                      <Text style={styles.restoreText}>{tr('me.signOut')}</Text>
+                    </Pressable>
+                    <Pressable onPress={onDeleteAccount} disabled={!!authBusy} hitSlop={8} accessibilityRole="button">
+                      <Text style={[styles.restoreText, { color: t.danger }]}>{tr('me.deleteAccount')}</Text>
+                    </Pressable>
+                  </View>
+                </>
+              ) : (
+                <>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                    <MaterialCommunityIcons name={'cloud-upload-outline' as any} size={22} color={t.accent} />
+                    <Text style={styles.fullStatus}>{tr('me.backup.off')}</Text>
+                  </View>
+                  {appleReady && (
+                    <AppleAuthentication.AppleAuthenticationButton
+                      buttonType={AppleAuthentication.AppleAuthenticationButtonType.CONTINUE}
+                      buttonStyle={
+                        t.mode === 'dark'
+                          ? AppleAuthentication.AppleAuthenticationButtonStyle.WHITE
+                          : AppleAuthentication.AppleAuthenticationButtonStyle.BLACK
+                      }
+                      cornerRadius={22}
+                      style={styles.appleBtn}
+                      onPress={() => void onSignIn('apple')}
+                    />
+                  )}
+                  {googleAvailable && (
+                    <Pressable
+                      style={styles.googleBtn}
+                      onPress={() => void onSignIn('google')}
+                      disabled={!!authBusy}
+                      accessibilityRole="button"
+                    >
+                      <MaterialCommunityIcons name={'google' as any} size={18} color={t.text} />
+                      <Text style={styles.googleText}>{tr('auth.google')}</Text>
+                    </Pressable>
+                  )}
+                </>
+              )}
+              {authBusy && <ActivityIndicator color={t.accent} style={{ marginTop: 12 }} />}
+            </View>
           </>
         )}
 
@@ -365,7 +484,7 @@ export default function MeScreen() {
             onPress={() =>
               Alert.alert(tr('me.reset.title'), tr('me.reset.body'), [
                 { text: tr('common.cancel'), style: 'cancel' },
-                { text: tr('me.reset.confirm'), style: 'destructive', onPress: reset },
+                { text: tr('me.reset.confirm'), style: 'destructive', onPress: () => void resetEverywhere() },
               ])
             }
           >
@@ -450,6 +569,22 @@ const useStyles = makeStyles((t: Palette) =>
   fullBtnText: { color: t.onAccent, fontSize: 15, fontWeight: '700' },
   restoreLink: { alignSelf: 'center', marginTop: 12, padding: 4 },
   restoreText: { color: t.subtext, fontSize: 13, fontWeight: '600', textDecorationLine: 'underline' },
+  backupMeta: { color: t.subtext, fontSize: 12, marginTop: 2 },
+  accountLinks: { flexDirection: 'row', justifyContent: 'center', gap: 24, marginTop: 14 },
+  appleBtn: { height: 44, marginTop: 14 },
+  googleBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    height: 44,
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: t.cardBorder,
+    backgroundColor: t.bgElevated,
+    marginTop: 10,
+  },
+  googleText: { color: t.text, fontSize: 15, fontWeight: '600' },
   catCount: { color: t.accent, fontSize: 14, fontWeight: '700' },
   sectionTitle: { color: t.faint, fontSize: 12, letterSpacing: 3, marginTop: 30, marginBottom: 12 },
   achRow: {
