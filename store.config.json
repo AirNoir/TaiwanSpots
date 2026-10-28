@@ -26,8 +26,9 @@
         ],
         "releaseNotes": "第一個 TestFlight 版本：159 個景點、淺色與深色主題、模型放大檢視、主畫面 Widget。",
         "promoText": "走到景點就解鎖一座微縮模型，把台灣收進口袋。",
-        "supportUrl": "https://github.com/AirNoir/TaiwanSpots",
-        "privacyPolicyUrl": "https://github.com/AirNoir/TaiwanSpots/blob/main/docs/privacy.md"
+        "marketingUrl": "https://islandia.littlestep.me/",
+        "supportUrl": "https://islandia.littlestep.me/support",
+        "privacyPolicyUrl": "https://islandia.littlestep.me/privacy"
       },
       "en-US": {
         "title": "Islandia: Collect Taiwan",
@@ -47,8 +48,9 @@
         ],
         "releaseNotes": "First TestFlight build: 159 spots, light and dark themes, zoomable dioramas, home-screen widget.",
         "promoText": "Walk to a landmark, unlock its miniature. Put Taiwan in your pocket.",
-        "supportUrl": "https://github.com/AirNoir/TaiwanSpots",
-        "privacyPolicyUrl": "https://github.com/AirNoir/TaiwanSpots/blob/main/docs/privacy.md"
+        "marketingUrl": "https://islandia.littlestep.me/",
+        "supportUrl": "https://islandia.littlestep.me/support",
+        "privacyPolicyUrl": "https://islandia.littlestep.me/privacy"
       }
     },
     "advisory": {

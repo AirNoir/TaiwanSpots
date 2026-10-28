@@ -17,8 +17,8 @@ import { makeStyles, Palette, useTheme } from '../src/theme';
 // Paywall (docs/spec.md §3.3): opened from the first sealed collection, any sealed
 // model, and the Me tab. Never pops up on its own anywhere else.
 
-const PRIVACY_URL = 'https://github.com/AirNoir/TaiwanSpots/blob/main/docs/privacy.md';
-const TERMS_URL = 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/';
+const PRIVACY_URL = 'https://islandia.littlestep.me/privacy';
+const TERMS_URL = 'https://islandia.littlestep.me/terms';
 const PREVIEW = 8;
 
 export default function PaywallScreen() {

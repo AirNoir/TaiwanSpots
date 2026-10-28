@@ -209,9 +209,13 @@
 
 Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一筆改成較早日期後同步，該景點變成 order 1；刪除帳號後雲端使用者與資料清空、App 自動換新匿名帳號再備份。Apple／Google 按鈕在 Expo Go 不會出現（模組不在 Expo Go 裡），要用 TestFlight 或 development build 測。Build 10 = 第一個含登入的版本（Apple + 匿名；Google 尚未設定所以按鈕隱藏）。
 
+### 官網（2026-10-28）
+
+官網 repo `AirNoir/taiwanspots-official-site`，上線於 https://islandia.littlestep.me（小步腳印 `littlestep.me` 的子網域，Cloudflare Workers 純靜態；部署方式見該 repo 的 README）。提供首頁、`/privacy`、`/terms`、`/support`。App 內付費牆的隱私／條款連結（`app/paywall.tsx`）與 `store.config.json` 的 ASC 行銷／支援／隱私 URL 都已改指官網；`docs/privacy.md` 與官網同步（多了「用 Google 帳號登入時」與「App 內購買」兩段）。
+
 ### 下一步
 
-1. Google Cloud 建 iOS 與 Web OAuth client，回填 `app.json`、EAS 環境變數、Supabase Google provider（5.6 第 1 點）。
+1. Google Cloud 建 iOS 與 Web OAuth client，回填 `app.json`、EAS 環境變數、Supabase Google provider（5.6 第 1 點）。同意畫面（Google Auth Platform → Branding）的首頁、隱私權、服務條款填官網的三個網址，Authorized domain 填 `littlestep.me`；先不要上傳 logo（上傳會觸發品牌驗證）。
 2. 出 TestFlight build，真機測 Apple 登入、合併、登出、刪除帳號；Google 等第 1 點完成。
 3. 沙盒購買測試已通過（2026-10-27）；下一個 build 前先在手機「設定 → App Store → 沙盒帳號」清除購買紀錄，才看得到封存。
 4. 第一個內購要和 App 版本一起送審：送審時在版本頁勾選 `com.airnoir.islandia.full`。
