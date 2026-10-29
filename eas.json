@@ -29,10 +29,21 @@
       "ios": {
         "image": "macos-tahoe-26.5-xcode-26.6"
       }
+    },
+    "demo": {
+      "extends": "production",
+      "env": {
+        "EXPO_PUBLIC_DEMO_TOOLS": "1"
+      }
     }
   },
   "submit": {
     "production": {
+      "ios": {
+        "ascAppId": "6822659015"
+      }
+    },
+    "demo": {
       "ios": {
         "ascAppId": "6822659015"
       }

@@ -15,6 +15,7 @@
 npx eas-cli build -p ios --profile production --auto-submit --non-interactive --no-wait
 ```
 
+- 要給示範工具（「我的」頁的模擬購買、傳送到景點、重置、**載入示範護照**）就改用 `--profile demo`（繼承 production，只多 `EXPO_PUBLIC_DEMO_TOOLS=1`，一樣自動送 TestFlight）。送 App Store 審核一律用 `production`，示範工具不會進商店版。
 - 不需要 TTY，在 Claude Code 的 `!` 裡跑也可以。但 `--non-interactive` 不會登入 Apple，所以**不會同步 capability、也不會重做失效的 profile**；`app.json` 動到 entitlement（新 plugin、`usesAppleSignIn`、App Group、Push…）之後的第一次建置，要改用下面「entitlement 有變動時」的跑法。
 - 版本號（buildNumber）由 EAS 遠端自動遞增；改 `app.json` 的 `version` 才會變行銷版本。
 - 看進度：`npx eas-cli build:list --platform ios --limit 3`，或 https://expo.dev/accounts/airnoir/projects/islandia/builds

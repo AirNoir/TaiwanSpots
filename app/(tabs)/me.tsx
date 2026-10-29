@@ -14,7 +14,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ACHIEVEMENTS } from '../../src/achievements';
 import { appleAvailable, deleteAccount, googleAvailable, signInWithApple, signInWithGoogle, signOut } from '../../src/auth';
-import { DEMO_TOOLS } from '../../src/demo';
+import { DEMO_TOOLS, DEMO_TRIP_SIZE, loadDemoPassport } from '../../src/demo';
 import { FREE_LIMIT, useHasFull, useSealedSet, withUnseal } from '../../src/entitlements';
 import { purchasesAvailable, restore } from '../../src/purchases';
 import { I18nKey, LangPref, metaLabel, useLang, useT } from '../../src/i18n';
@@ -477,6 +477,19 @@ export default function MeScreen() {
               <Text style={styles.resetText}>解鎖全部景點（開發用）</Text>
             </Pressable>
           </>
+        )}
+        {DEMO_TOOLS && (
+          <Pressable
+            style={styles.resetBtn}
+            onPress={() =>
+              Alert.alert(tr('me.demoPassport.title'), tr('me.demoPassport.body', { n: DEMO_TRIP_SIZE }), [
+                { text: tr('common.cancel'), style: 'cancel' },
+                { text: tr('me.demoPassport.confirm'), onPress: () => void loadDemoPassport() },
+              ])
+            }
+          >
+            <Text style={styles.resetText}>{tr('me.demoPassport')}</Text>
+          </Pressable>
         )}
         {DEMO_TOOLS && (
           <Pressable
