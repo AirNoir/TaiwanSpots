@@ -8,6 +8,19 @@ import { LatLng } from './geo';
 import type { LangPref } from './i18n';
 import type { ThemeMode } from './theme';
 
+/** A photo kept with a collected spot (src/photos.ts). `file` is relative to the document directory. */
+export interface SpotPhoto {
+  id: string;
+  file: string; // photos/<spotId>/<id>.jpg
+  width: number;
+  height: number;
+  takenAt?: string; // ISO date, when known
+  addedAt: string; // ISO date
+}
+
+/** Photos per spot (docs/spec.md §10). */
+export const PHOTO_LIMIT = 3;
+
 export interface CollectionEntry {
   spotId: string;
   checkedInAt: string; // ISO date
@@ -18,6 +31,8 @@ export interface CollectionEntry {
   season?: Season;
   sky?: Sky;
   temperature?: number;
+  /** Up to PHOTO_LIMIT photos on this phone only; never sent to the cloud (src/sync.ts keeps them through merges). */
+  photos?: SpotPhoto[];
 }
 
 export interface Atmosphere {
@@ -99,6 +114,9 @@ interface IslandiaState {
   unsealing: string[] | null;
   setUnsealing: (ids: string[] | null) => void;
   checkIn: (spotId: string, atmosphere?: Atmosphere) => CollectionEntry;
+  /** Attaches a stored photo to a collected spot; false when the spot is not collected or already has PHOTO_LIMIT. */
+  addPhoto: (spotId: string, photo: SpotPhoto) => boolean;
+  removePhoto: (spotId: string, photoId: string) => void;
   /** Dev: collect every active spot (keeps existing entries). */
   unlockAll: () => void;
   reset: () => void;
@@ -148,6 +166,20 @@ export const useStore = create<IslandiaState>()(
         };
         set({ collections: { ...get().collections, [spotId]: entry } });
         return entry;
+      },
+      addPhoto: (spotId, photo) => {
+        const e = get().collections[spotId];
+        if (!e) return false;
+        const photos = e.photos ?? [];
+        if (photos.length >= PHOTO_LIMIT) return false;
+        set({ collections: { ...get().collections, [spotId]: { ...e, photos: [...photos, photo] } } });
+        return true;
+      },
+      removePhoto: (spotId, photoId) => {
+        const e = get().collections[spotId];
+        if (!e?.photos) return;
+        const photos = e.photos.filter((p) => p.id !== photoId);
+        set({ collections: { ...get().collections, [spotId]: { ...e, photos: photos.length ? photos : undefined } } });
       },
       unlockAll: () => {
         const collections = { ...get().collections };

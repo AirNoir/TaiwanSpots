@@ -57,8 +57,12 @@ export function mergeCollections(
   for (const r of cloud) {
     const mine = merged[r.spot_id];
     if (!mine || Date.parse(r.checked_in_at) < Date.parse(mine.checkedInAt)) {
-      // a cloud-only spot joins at the end for now; the sort below places it by date
-      merged[r.spot_id] = fromRow(r, mine?.order ?? Number.MAX_SAFE_INTEGER);
+      // a cloud-only spot joins at the end for now; the sort below places it by date.
+      // Photos never leave the phone, so the local ones stay with the merged entry.
+      merged[r.spot_id] = {
+        ...fromRow(r, mine?.order ?? Number.MAX_SAFE_INTEGER),
+        ...(mine?.photos?.length ? { photos: mine.photos } : {}),
+      };
     }
   }
   const sorted = Object.values(merged).sort(

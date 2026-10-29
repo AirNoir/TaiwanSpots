@@ -1,6 +1,9 @@
 {
   "ios": {
     "CFBundleDisplayName": "微縮台灣",
-    "NSLocationWhenInUseUsageDescription": "微縮台灣需要你的位置，才能在你抵達景點時解鎖收藏。"
+    "NSLocationWhenInUseUsageDescription": "微縮台灣需要你的位置，才能在你抵達景點時解鎖收藏。",
+    "NSCameraUsageDescription": "微縮台灣需要使用相機，才能在收藏的景點拍一張留念。",
+    "NSPhotoLibraryUsageDescription": "微縮台灣需要讀取相簿，才能列出你在收藏當天拍的照片。",
+    "NSPhotoLibraryAddUsageDescription": "微縮台灣需要寫入相簿，才能把分享卡存到你的照片。"
   }
 }

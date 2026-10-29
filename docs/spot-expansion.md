@@ -21,7 +21,7 @@
 2. **加到 `src/data/spots.ts`**：接在 `ALL_SPOTS` 最後，用 `// ── 擴充 Batch N ──` 註解分隔，格式照 Batch 1。
    - `worldId: 'taiwan'`、`production: 'standard'`、`worldTier: 'regional'`、`active: true`。
    - `checkinRadius`：城市點 250–350、街區/園區 400–500、大範圍自然景點 500–1000、離岸島嶼 1500。
-   - `rarity`：城市好到達 `common`；要開車或轉車 `rare`；山區、離島、需預約 `epic`。不要新增 `legendary`。
+   - `access`（到達難易度；只描述旅程，不評價地方，2026-10-29 由 `rarity` 改名）：市區景點或大眾運輸車站步行可達 `easy`（輕鬆）；要開車、包車或轉車 `moderate`（進階）；高山、離島搭船、需入山證或預約 `hard`（挑戰）。判斷以「沒有車的旅人怎麼到」為準，和景點本身的價值無關。
    - `description`：一句、20–35 字，寫畫面感，標點照現有資料（逗號用半形 `,`）。
    - `art`：procedural fallback（還沒生成圖之前 App 顯示這個）。`icon` / `deco` 必須是存在的 MaterialCommunityIcons 名稱。
 

@@ -74,11 +74,28 @@
       "expo-localization",
       "expo-apple-authentication",
       [
+        "expo-image-picker",
+        {
+          "cameraPermission": "微縮台灣需要使用相機，才能在收藏的景點拍一張留念。",
+          "photosPermission": "微縮台灣需要讀取相簿，才能列出你在收藏當天拍的照片。",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "微縮台灣需要讀取相簿，才能列出你在收藏當天拍的照片。",
+          "savePhotosPermission": "微縮台灣需要寫入相簿，才能把分享卡存到你的照片。",
+          "granularPermissions": ["photo"]
+        }
+      ],
+      [
         "@react-native-google-signin/google-signin",
         {
           "iosUrlScheme": "com.googleusercontent.apps.945989250610-ee8vs9uthccnisheq4b8ermk636fveu8"
         }
-      ]
+      ],
+      "expo-image"
     ],
     "extra": {
       "router": {},

@@ -203,12 +203,18 @@ export function makeStyles<T>(factory: (t: Palette) => T) {
   };
 }
 
-export const rarityMeta: Record<string, { label: string; zh: string; dots: number; color: string }> = {
-  common: { label: 'COMMON', zh: '普通', dots: 1, color: '#9BB0C9' },
-  rare: { label: 'RARE', zh: '稀有', dots: 2, color: '#6FB7F5' },
-  epic: { label: 'EPIC', zh: '史詩', dots: 3, color: '#C08BF5' },
-  legendary: { label: 'LEGENDARY', zh: '傳說', dots: 4, color: '#F5B14C' },
+/** How hard the trip to a spot is. It describes the journey, never the place (docs/spot-expansion.md). */
+export const accessMeta: Record<
+  string,
+  { label: string; zh: string; hint: string; hintZh: string; dots: number; color: string }
+> = {
+  easy: { label: 'EASY', zh: '輕鬆', hint: 'City or public transport', hintZh: '市區或大眾運輸可達', dots: 1, color: '#6FAF8A' },
+  moderate: { label: 'MODERATE', zh: '進階', hint: 'By car or with a transfer', hintZh: '要開車或轉車', dots: 2, color: '#E0A458' },
+  hard: { label: 'CHALLENGING', zh: '挑戰', hint: 'Mountain, boat or permit', hintZh: '登山、搭船或需申請', dots: 3, color: '#D9776B' },
 };
+
+export const accessHint = (m: { hint: string; hintZh: string }, lang: string): string =>
+  lang === 'zh' ? m.hintZh : m.hint;
 
 // icon: MaterialCommunityIcons name
 export const categoryMeta: Record<string, { label: string; zh: string; icon: string }> = {

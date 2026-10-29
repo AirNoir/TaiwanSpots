@@ -17,7 +17,7 @@ import { I18nKey, metaLabel, spotName, useLang, useT } from '../../src/i18n';
 import { checkinRadius, DEV_LOCATIONS, distanceMeters, formatDistance } from '../../src/geo';
 import { useSealedSet } from '../../src/entitlements';
 import { entrySeason, useActiveCollections, useStore } from '../../src/store';
-import { Palette, categoryMeta, makeStyles, rarityMeta, regionMeta, useTheme } from '../../src/theme';
+import { Palette, accessMeta, categoryMeta, makeStyles, regionMeta, useTheme } from '../../src/theme';
 import { useAtmosphereOverride, useNight } from '../../src/useAtmosphere';
 import { useLocation } from '../../src/useLocation';
 
@@ -177,15 +177,15 @@ export default function ExploreScreen() {
                     {metaLabel(categoryMeta[spot.category], lang)} ・ {spot.city}
                   </Text>
                 </View>
-                <View style={styles.rarityRow}>
-                  {Array.from({ length: rarityMeta[spot.rarity].dots }).map((_, i) => (
+                <View style={styles.accessRow}>
+                  {Array.from({ length: accessMeta[spot.access].dots }).map((_, i) => (
                     <View
                       key={i}
-                      style={[styles.rarityDot, { backgroundColor: rarityMeta[spot.rarity].color }]}
+                      style={[styles.accessDot, { backgroundColor: accessMeta[spot.access].color }]}
                     />
                   ))}
-                  <Text style={[styles.rarityLabel, { color: rarityMeta[spot.rarity].color }]}>
-                    {metaLabel(rarityMeta[spot.rarity], lang)}
+                  <Text style={[styles.accessLabel, { color: accessMeta[spot.access].color }]}>
+                    {metaLabel(accessMeta[spot.access], lang)}
                   </Text>
                 </View>
               </View>
@@ -274,9 +274,9 @@ const useStyles = makeStyles((t: Palette) =>
   },
   name: { color: t.text, fontSize: 16, fontWeight: '600' },
   meta: { color: t.subtext, fontSize: 11, marginTop: 3 },
-  rarityRow: { flexDirection: 'row', alignItems: 'center', marginTop: 5, gap: 3 },
-  rarityDot: { width: 5, height: 5, borderRadius: 3 },
-  rarityLabel: { fontSize: 9, letterSpacing: 1.5, marginLeft: 4, fontWeight: '700' },
+  accessRow: { flexDirection: 'row', alignItems: 'center', marginTop: 5, gap: 3 },
+  accessDot: { width: 5, height: 5, borderRadius: 3 },
+  accessLabel: { fontSize: 9, letterSpacing: 1.5, marginLeft: 4, fontWeight: '700' },
   dist: { color: t.subtext, fontSize: 13, fontWeight: '600' },
   inRange: { color: t.success, fontSize: 10, marginTop: 4 },
   }),

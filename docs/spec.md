@@ -218,4 +218,38 @@ Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一�
 1. 已完成（2026-10-28，步驟與狀態見 `docs/google-oauth.md`）：Google Cloud 的 iOS 與 Web OAuth client、`app.json` plugin、EAS 環境變數、Supabase Google provider 都回填，Build 13（2026-10-29）是第一個含 Google 登入的版本。Android client 等出 Android 版再建。
 2. Build 13 到 TestFlight 後真機測：Apple 登入、Google 登入、合併、登出、刪除帳號。
 3. 沙盒購買測試已通過（2026-10-27）；下一個 build 前先在手機「設定 → App Store → 沙盒帳號」清除購買紀錄，才看得到封存。
-4. 第一個內購要和 App 版本一起送審：送審時在版本頁勾選 `com.airnoir.islandia.full`。
+4. 第一個內購要和 App 版本一起送審：送審時在版本頁的 In-App Purchases 區塊勾選 `com.airnoir.islandia.full`。
+5. 照片紀錄（第三階段，2026-10-29 開工）見 §10。
+
+## 10. 照片紀錄（第三階段，2026-10-29）
+
+模型是「這地方長什麼樣」，照片才是「我那天在那裡」。每座景點最多 **3 張**，只存在手機。
+同日也把 `rarity`（普通／稀有／史詩）改成 `access`（到達難易度：輕鬆／進階／挑戰），因為原本的字眼像在評價地方；新規則見 `docs/spot-expansion.md`。
+
+### 10.1 流程
+
+1. 收藏動畫按「加入收藏」後跳出「拍一張留念？」：拍照／今天拍的照片／從相簿選／之後再說。第一次封存的那座會先開付費牆，就不跳這個提示（景點頁隨時可以加）。
+2. 景點頁已收藏區塊下方「我的紀錄」：最多 3 格，點格子全螢幕看（左右滑、刪除）；不足 3 張時有「＋」格，按了出現同一個選單。
+3. 「那天拍的照片」：用 expo-media-library 的 `Query` 依收藏日期（手機時區當天 00:00–24:00）列出照片、新到舊、最多 60 張，勾選後匯入；只有「部分照片」權限時提供「選擇更多照片」。
+4. 分享卡多一種「照片卡」（4:5）：有照片時預設顯示，照片當底、下緣漸層，左下角景點名與日期，右下角小模型加「#序號」戳章；可切回原本的模型卡。兩種都在畫面外以 540 pt 寬排版後截圖，iPhone 3x 輸出 1620 px 寬 JPEG（0.92）；另加「存到相簿」。
+5. 封存（免費 5 座以外、未購買）的景點一樣可以放照片，封印只遮模型。
+
+### 10.2 儲存
+
+- 檔案：`<documentDirectory>/photos/<spotId>/<id>.jpg`（長邊 1920、JPEG 0.85）與 `<id>.t.jpg`（長邊 480，列表用）。都經 expo-image-manipulator 重新編碼，所以不帶原檔的 EXIF／GPS。
+- 紀錄：`CollectionEntry.photos: SpotPhoto[]`（`id`、`file`、`width`、`height`、`takenAt?`、`addedAt`），存在既有的 zustand／AsyncStorage。程式在 `src/photos.ts`、`src/store.ts`。
+- 只存手機，不上雲端（隨 iCloud 整機備份）。`toRow` 不送 photos，`mergeCollections` 合併時保留本機的 photos。登出、刪帳號不影響照片。
+- 之後若要備份到雲端：Supabase Storage 私人 bucket，路徑 `<user_id>/<spot_id>/<photo_id>.jpg`，RLS 以第一層資料夾 = user id，`delete-account` 連 Storage 一起清；屆時要改隱私政策與 App Privacy 標籤（照片、連結到帳號）。
+
+### 10.3 權限與隱私
+
+- iOS：`NSCameraUsageDescription`、`NSPhotoLibraryUsageDescription`、`NSPhotoLibraryAddUsageDescription`，由 expo-image-picker 與 expo-media-library 的 plugin 寫入，三種語言在 `languages/*.json`。
+- 隱私政策（官網與 `docs/privacy.md`）加一句：加入的照片只存在手機，不會上傳。
+- 從小步腳印學到的：他們直接上傳原檔（平均 1.56 MB）、Storage 檔案不會隨資料列自動刪除、bucket 路徑第一層放 user id；這裡先縮圖、先不上雲。
+
+### 10.4 驗收
+
+- 拍照、相簿、那天的照片三條路都能加到 3 張；第 4 張不給加。
+- 刪除後兩個檔案都刪掉（documentDirectory 不留孤兒）。
+- 分享卡照片版輸出寬度 ≥ 1080 px、無 EXIF；「存到相簿」會進相簿。
+- 登出、刪帳號、重新同步後照片仍在；重新安裝後照片消失（預期，手機內儲存）。

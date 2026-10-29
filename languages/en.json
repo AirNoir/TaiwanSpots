@@ -1,6 +1,9 @@
 {
   "ios": {
     "CFBundleDisplayName": "Islandia",
-    "NSLocationWhenInUseUsageDescription": "Islandia needs your location to unlock a spot when you arrive there."
+    "NSLocationWhenInUseUsageDescription": "Islandia needs your location to unlock a spot when you arrive there.",
+    "NSCameraUsageDescription": "Islandia uses the camera to take a photo at the spot you just collected.",
+    "NSPhotoLibraryUsageDescription": "Islandia reads your photo library to show the photos you took on the day you collected a spot.",
+    "NSPhotoLibraryAddUsageDescription": "Islandia saves share cards to your photo library."
   }
 }

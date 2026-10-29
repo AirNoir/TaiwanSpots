@@ -20,7 +20,7 @@ import { spotById, SPOTS } from '../../src/data/spots';
 import { checkinRadius, distanceMeters, formatDistance } from '../../src/geo';
 import { openDirections, travelModeFor } from '../../src/maps';
 import { activeCollections, entrySeason, useStore } from '../../src/store';
-import { Palette, categoryMeta, makeStyles, rarityMeta, useTheme } from '../../src/theme';
+import { Palette, accessHint, accessMeta, categoryMeta, makeStyles, useTheme } from '../../src/theme';
 import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
 import { DEMO_TOOLS } from '../../src/demo';
 import { nextIsSealed, useHasFull, useSealedSet } from '../../src/entitlements';
@@ -101,7 +101,7 @@ export default function SpotDetailScreen() {
   const radius = checkinRadius(spot);
   // Without GPS the position is only the Taipei Station fallback: never in range.
   const inRange = !isFallback && dist <= radius;
-  const rarity = rarityMeta[spot.rarity];
+  const access = accessMeta[spot.access];
   const category = categoryMeta[spot.category];
   const dioramaSize = SCREEN_W - 48;
   // Spots whose art is still pending only have the procedural diorama — nothing to zoom into.
@@ -189,12 +189,12 @@ export default function SpotDetailScreen() {
             <MaterialCommunityIcons name={category.icon as any} size={13} color={t.subtext} />
             <Text style={styles.tagText}>{metaLabel(category, lang)}</Text>
           </View>
-          <View style={[styles.tag, { borderColor: rarity.color }]}>
-            <Text style={[styles.tagText, { color: rarity.color }]}>
-              {Array.from({ length: rarity.dots })
+          <View style={[styles.tag, { borderColor: access.color }]}>
+            <Text style={[styles.tagText, { color: access.color }]}>
+              {Array.from({ length: access.dots })
                 .map(() => '●')
                 .join(' ')}{' '}
-              {metaLabel(rarity, lang)}
+              {metaLabel(access, lang)} · {accessHint(access, lang)}
             </Text>
           </View>
           {/* today's season, and the weather at the spot once it has loaded */}

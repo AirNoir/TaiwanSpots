@@ -1,0 +1,155 @@
+import { Directory, File, Paths } from 'expo-file-system';
+import { ImageManipulator, SaveFormat } from 'expo-image-manipulator';
+import * as ImagePicker from 'expo-image-picker';
+import * as MediaLibrary from 'expo-media-library';
+import { Platform } from 'react-native';
+import { PHOTO_LIMIT, SpotPhoto } from './store';
+
+/**
+ * Photos a traveller attaches to a collected spot (docs/spec.md §10).
+ * They live on the phone only: <documentDirectory>/photos/<spotId>/<id>.jpg
+ * plus a small <id>.t.jpg for lists. Every file is re-encoded here, so
+ * nothing we keep or share carries the original EXIF (and its GPS).
+ */
+export { PHOTO_LIMIT };
+
+const FULL_EDGE = 1920;
+const THUMB_EDGE = 480;
+const FULL_QUALITY = 0.85;
+const THUMB_QUALITY = 0.8;
+
+export interface PickedImage {
+  uri: string;
+  width: number;
+  height: number;
+  /** ISO 8601, when known (camera: now; library: the asset's creation time). */
+  takenAt?: string;
+}
+
+export class PhotoPermissionError extends Error {
+  constructor(public readonly which: 'camera' | 'photos') {
+    super(`${which} permission denied`);
+  }
+}
+
+const spotDir = (spotId: string) => new Directory(Paths.document, 'photos', spotId);
+const thumbName = (file: string) => file.replace(/\.jpg$/, '.t.jpg');
+
+export const photoUri = (p: SpotPhoto): string => new File(Paths.document, p.file).uri;
+export const thumbUri = (p: SpotPhoto): string => new File(Paths.document, thumbName(p.file)).uri;
+
+const newId = () => `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`;
+
+/** JPEG with the long side capped at `edge` px. The result is a fresh bitmap: no metadata survives. */
+async function encode(src: PickedImage, edge: number, quality: number) {
+  const ctx = ImageManipulator.manipulate(src.uri);
+  if (src.width > 0 && src.height > 0 && Math.max(src.width, src.height) > edge) {
+    ctx.resize(src.width >= src.height ? { width: edge } : { height: edge });
+  }
+  const ref = await ctx.renderAsync();
+  try {
+    return await ref.saveAsync({ format: SaveFormat.JPEG, compress: quality });
+  } finally {
+    ref.release();
+  }
+}
+
+/** Stores a picked image for a spot and returns the record to keep in the passport. */
+export async function importPhoto(spotId: string, src: PickedImage): Promise<SpotPhoto> {
+  const dir = spotDir(spotId);
+  dir.create({ idempotent: true, intermediates: true });
+  const id = newId();
+  const full = await encode(src, FULL_EDGE, FULL_QUALITY);
+  const thumb = await encode({ uri: full.uri, width: full.width, height: full.height }, THUMB_EDGE, THUMB_QUALITY);
+  new File(full.uri).move(new File(dir, `${id}.jpg`));
+  new File(thumb.uri).move(new File(dir, `${id}.t.jpg`));
+  return {
+    id,
+    file: `photos/${spotId}/${id}.jpg`,
+    width: full.width,
+    height: full.height,
+    takenAt: src.takenAt,
+    addedAt: new Date().toISOString(),
+  };
+}
+
+export function deletePhotoFiles(p: SpotPhoto): void {
+  for (const f of [new File(Paths.document, p.file), new File(Paths.document, thumbName(p.file))]) {
+    try {
+      if (f.exists) f.delete();
+    } catch {
+      // a missing file is already what we want
+    }
+  }
+}
+
+export async function takePhoto(): Promise<PickedImage | null> {
+  const perm = await ImagePicker.requestCameraPermissionsAsync();
+  if (!perm.granted) throw new PhotoPermissionError('camera');
+  const res = await ImagePicker.launchCameraAsync({ mediaTypes: ['images'], quality: 1, exif: false });
+  const a = res.canceled ? null : res.assets?.[0];
+  if (!a) return null;
+  return { uri: a.uri, width: a.width, height: a.height, takenAt: new Date().toISOString() };
+}
+
+/** The system picker runs out of process on iOS, so it needs no photo-library permission. */
+export async function pickPhotos(limit: number): Promise<PickedImage[]> {
+  const res = await ImagePicker.launchImageLibraryAsync({
+    mediaTypes: ['images'],
+    allowsMultipleSelection: limit > 1,
+    selectionLimit: limit,
+    quality: 1,
+    exif: false,
+  });
+  if (res.canceled || !res.assets) return [];
+  return res.assets.slice(0, limit).map((a) => ({ uri: a.uri, width: a.width, height: a.height }));
+}
+
+export interface DayPhoto {
+  id: string;
+  uri: string;
+  width: number;
+  height: number;
+  takenAt: number | null;
+}
+
+export interface DayPhotos {
+  photos: DayPhoto[];
+  /** iOS "selected photos only": the user can widen the selection with presentLimitedPicker(). */
+  limited: boolean;
+}
+
+/** Library photos taken on that calendar day (phone's time zone), newest first. */
+export async function photosOfDay(date: Date, max = 60): Promise<DayPhotos> {
+  const perm = await MediaLibrary.requestPermissionsAsync(false, ['photo']);
+  if (!perm.granted) throw new PhotoPermissionError('photos');
+  const start = new Date(date);
+  start.setHours(0, 0, 0, 0);
+  const end = new Date(start);
+  end.setDate(end.getDate() + 1);
+  const assets = await new MediaLibrary.Query()
+    .eq(MediaLibrary.AssetField.MEDIA_TYPE, MediaLibrary.MediaType.IMAGE)
+    .gte(MediaLibrary.AssetField.CREATION_TIME, start.getTime())
+    .lt(MediaLibrary.AssetField.CREATION_TIME, end.getTime())
+    .orderBy({ key: MediaLibrary.AssetField.CREATION_TIME, ascending: false })
+    .limit(max)
+    .exe();
+  const infos = await Promise.all(assets.map((a) => a.getInfo()));
+  return {
+    photos: infos.map((i) => ({ id: i.id, uri: i.uri, width: i.width, height: i.height, takenAt: i.creationTime })),
+    limited: perm.accessPrivileges === 'limited',
+  };
+}
+
+export const presentLimitedPicker = (): Promise<void> => MediaLibrary.presentPermissionsPickerAsync(['photo']);
+
+/** A library asset as a PickedImage. iOS hands out ph:// URIs; the manipulator reads them directly. */
+export const dayPhotoToPicked = (p: DayPhoto): PickedImage => ({
+  uri: p.uri,
+  width: p.width,
+  height: p.height,
+  takenAt: p.takenAt ? new Date(p.takenAt).toISOString() : undefined,
+});
+
+/** Camera support is a device matter: simulators and some tablets have none. */
+export const cameraAvailable = (): boolean => Platform.OS === 'ios' || Platform.OS === 'android';

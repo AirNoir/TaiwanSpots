@@ -1,6 +1,9 @@
 {
   "ios": {
     "CFBundleDisplayName": "微缩台湾",
-    "NSLocationWhenInUseUsageDescription": "微缩台湾需要你的位置，才能在你抵达景点时解锁收藏。"
+    "NSLocationWhenInUseUsageDescription": "微缩台湾需要你的位置，才能在你抵达景点时解锁收藏。",
+    "NSCameraUsageDescription": "微缩台湾需要使用相机，才能在收藏的景点拍一张留念。",
+    "NSPhotoLibraryUsageDescription": "微缩台湾需要读取相册，才能列出你在收藏当天拍的照片。",
+    "NSPhotoLibraryAddUsageDescription": "微缩台湾需要写入相册，才能把分享卡存到你的照片。"
   }
 }
