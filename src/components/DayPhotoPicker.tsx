@@ -159,7 +159,7 @@ function Body({ title, emptyText, limit, load, onClose, onPick }: Props) {
             const picked = n >= 0;
             return (
               <Pressable onPress={() => toggle(item.id)} style={styles.tile}>
-                <Image source={{ uri: item.uri }} style={styles.tileImg} contentFit="cover" transition={80} />
+                <Image source={{ uri: item.id }} style={styles.tileImg} contentFit="cover" transition={80} recyclingKey={item.id} />
                 {picked && <View style={styles.tileShade} />}
                 <View style={[styles.check, picked && { backgroundColor: t.accent, borderColor: t.accent }]}>
                   {picked && <Text style={styles.checkText}>{n + 1}</Text>}

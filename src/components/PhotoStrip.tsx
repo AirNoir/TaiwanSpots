@@ -24,6 +24,7 @@ import {
   importPhoto,
   PHOTO_LIMIT,
   PhotoPermissionError,
+  PhotoTimeoutError,
   photosNear,
   photosOfDay,
   pickPhotos,
@@ -113,6 +114,8 @@ export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
         { text: tr('common.cancel'), style: 'cancel' },
         { text: tr('photo.openSettings'), onPress: () => void Linking.openSettings() },
       ]);
+    } else if (e instanceof PhotoTimeoutError) {
+      Alert.alert(tr('photo.icloudSlow'));
     } else {
       Alert.alert(tr('photo.importFailed'));
     }

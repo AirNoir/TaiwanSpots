@@ -65,7 +65,8 @@ async function encode(src: PickedImage, edge: number, quality: number) {
 }
 
 /** Stores a picked image for a spot and returns the record to keep in the passport. */
-export async function importPhoto(spotId: string, src: PickedImage): Promise<SpotPhoto> {
+export async function importPhoto(spotId: string, picked: PickedImage): Promise<SpotPhoto> {
+  const src = await localFile(picked);
   const dir = spotDir(spotId);
   dir.create({ idempotent: true, intermediates: true });
   const id = newId();
@@ -117,8 +118,8 @@ export async function pickPhotos(limit: number): Promise<PickedImage[]> {
 }
 
 export interface DayPhoto {
+  /** The library id: ph://… on iOS, content://… on Android. Also what expo-image shows. */
   id: string;
-  uri: string;
   width: number;
   height: number;
   takenAt: number | null;
@@ -130,7 +131,13 @@ export interface DayPhotos {
   limited: boolean;
 }
 
-/** Library photos taken on that calendar day (phone's time zone), newest first. */
+/**
+ * Library searches read metadata only. Asking for an asset's file (getInfo / getUri) makes iOS
+ * fetch the full-size original, and with iCloud "Optimise Storage" that means downloading every
+ * photo of the day before the grid can show: the sheet spun forever (2026-10-29). The grid shows
+ * library thumbnails through expo-image (ph:// ids), and only the photos the traveller picks are
+ * downloaded, in importPhoto().
+ */
 export async function photosOfDay(date: Date, max = 60): Promise<DayPhotos> {
   const MediaLibrary = mediaLibrary();
   const perm = await MediaLibrary.requestPermissionsAsync(false, ['photo']);
@@ -139,28 +146,22 @@ export async function photosOfDay(date: Date, max = 60): Promise<DayPhotos> {
   start.setHours(0, 0, 0, 0);
   const end = new Date(start);
   end.setDate(end.getDate() + 1);
-  const assets = await new MediaLibrary.Query()
+  const found = await new MediaLibrary.Query()
     .eq(MediaLibrary.AssetField.MEDIA_TYPE, MediaLibrary.MediaType.IMAGE)
     .gte(MediaLibrary.AssetField.CREATION_TIME, start.getTime())
     .lt(MediaLibrary.AssetField.CREATION_TIME, end.getTime())
     .orderBy({ key: MediaLibrary.AssetField.CREATION_TIME, ascending: false })
     .limit(max)
-    .exe();
-  const infos = await Promise.all(assets.map((a) => a.getInfo()));
-  return { photos: infos.map(toDayPhoto), limited: perm.accessPrivileges === 'limited' };
+    .exeForMetadata();
+  return {
+    photos: found.map((m) => ({ id: m.id, width: m.width ?? 0, height: m.height ?? 0, takenAt: m.creationTime })),
+    limited: perm.accessPrivileges === 'limited',
+  };
 }
-
-const toDayPhoto = (i: {
-  id: string;
-  uri: string;
-  width: number;
-  height: number;
-  creationTime: number | null;
-}): DayPhoto => ({ id: i.id, uri: i.uri, width: i.width, height: i.height, takenAt: i.creationTime });
 
 /**
  * Library photos taken within `radiusM` of a point, newest first. Looks through the latest
- * `scan` photos: reading a photo's location is cheap, decoding it is not, so only hits get info.
+ * `scan` photos; location, size and date come from the library's index, nothing is downloaded.
  */
 export async function photosNear(center: LatLng, radiusM: number, max = 60, scan = 1500): Promise<DayPhotos> {
   const MediaLibrary = mediaLibrary();
@@ -180,8 +181,13 @@ export async function photosNear(center: LatLng, radiusM: number, max = 60, scan
       if (l && distanceMeters(center, { latitude: l.latitude, longitude: l.longitude }) <= radiusM) hits.push(a);
     });
   }
-  const infos = await Promise.all(hits.slice(0, max).map((a) => a.getInfo()));
-  return { photos: infos.map(toDayPhoto), limited: perm.accessPrivileges === 'limited' };
+  const photos = await Promise.all(
+    hits.slice(0, max).map(async (a) => {
+      const [shape, takenAt] = await Promise.all([a.getShape().catch(() => null), a.getCreationTime().catch(() => null)]);
+      return { id: a.id, width: shape?.width ?? 0, height: shape?.height ?? 0, takenAt };
+    }),
+  );
+  return { photos, limited: perm.accessPrivileges === 'limited' };
 }
 
 export const presentLimitedPicker = (): Promise<void> => mediaLibrary().presentPermissionsPickerAsync(['photo']);
@@ -195,13 +201,45 @@ export async function saveToLibrary(uri: string): Promise<boolean> {
   return true;
 }
 
-/** A library asset as a PickedImage. iOS hands out ph:// URIs; the manipulator reads them directly. */
+/** A picked library photo. Its file is fetched (from iCloud if need be) only when it is imported. */
 export const dayPhotoToPicked = (p: DayPhoto): PickedImage => ({
-  uri: p.uri,
+  uri: p.id,
   width: p.width,
   height: p.height,
   takenAt: p.takenAt ? new Date(p.takenAt).toISOString() : undefined,
 });
+
+/** How long one photo may take to come down from iCloud before the import gives up. */
+const ORIGINAL_TIMEOUT_MS = 90_000;
+
+export class PhotoTimeoutError extends Error {}
+
+function withTimeout<T>(p: Promise<T>, ms: number): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const timer = setTimeout(() => reject(new PhotoTimeoutError(`timed out after ${ms} ms`)), ms);
+    p.then(
+      (v) => {
+        clearTimeout(timer);
+        resolve(v);
+      },
+      (e) => {
+        clearTimeout(timer);
+        reject(e);
+      },
+    );
+  });
+}
+
+/** Turns a ph:// library id into a readable file (downloading the original when it lives in iCloud). */
+async function localFile(src: PickedImage): Promise<PickedImage> {
+  if (!src.uri.startsWith('ph://')) return src;
+  const asset = new (mediaLibrary().Asset)(src.uri);
+  const [uri, shape] = await withTimeout(
+    Promise.all([asset.getUri(), src.width && src.height ? Promise.resolve(null) : asset.getShape()]),
+    ORIGINAL_TIMEOUT_MS,
+  );
+  return { ...src, uri, width: shape?.width ?? src.width, height: shape?.height ?? src.height };
+}
 
 /** Camera support is a device matter: simulators and some tablets have none. */
 export const cameraAvailable = (): boolean => Platform.OS === 'ios' || Platform.OS === 'android';
