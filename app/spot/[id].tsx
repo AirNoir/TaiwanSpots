@@ -12,6 +12,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../../src/components/Diorama';
 import { DioramaViewer } from '../../src/components/DioramaViewer';
+import { PhotoStrip } from '../../src/components/PhotoStrip';
 import { ShareCardModal } from '../../src/components/ShareCardModal';
 import { UnlockOverlay } from '../../src/components/UnlockOverlay';
 import { describeWeather, seasonMeta, skyIcon, skyName, useWeather } from '../../src/atmosphere';
@@ -48,18 +49,24 @@ export default function SpotDetailScreen() {
 
   const scrollRef = useDevScroll('spot');
   const [unlocking, setUnlocking] = useState(false);
-  // Dev automation: play the unlock moment from the Metro inspector.
+  const [sharing, setSharing] = useState(false);
+  /** Bumped after an unlock so the photo strip offers to keep a photo (spec §10.1). */
+  const [photoRequest, setPhotoRequest] = useState(0);
+  const [viewing, setViewing] = useState(false);
+  // Dev automation from the Metro inspector: play the unlock moment, open the share card, open the photo sheet.
   useEffect(() => {
     if (!__DEV__) return;
     const g = globalThis as any;
     const play = () => setUnlocking(true);
     g.__islandiaUnlock = play;
+    g.__islandiaShare = (on = true) => setSharing(on);
+    g.__islandiaPhotoSheet = () => setPhotoRequest((n) => n + 1);
     return () => {
       if (g.__islandiaUnlock === play) delete g.__islandiaUnlock;
+      delete g.__islandiaShare;
+      delete g.__islandiaPhotoSheet;
     };
   }, []);
-  const [sharing, setSharing] = useState(false);
-  const [viewing, setViewing] = useState(false);
 
   const entry = spot ? collections[spot.id] : undefined;
   const collected = !!entry;
@@ -125,6 +132,9 @@ export default function SpotDetailScreen() {
     if (landsSealed && !paywallSeen) {
       setPaywallSeen();
       openPaywall();
+    } else {
+      // Otherwise this is the moment to keep a photo of (spec §10.1); the strip opens its sheet once.
+      setPhotoRequest((n) => n + 1);
     }
   };
 
@@ -218,6 +228,7 @@ export default function SpotDetailScreen() {
         <Text style={styles.description}>{spot.description}</Text>
 
         {collected && entry ? (
+          <>
           <View style={styles.collectedCard}>
             <Text style={styles.collectedLabel}>{tr('spot.collected')}</Text>
             <Text style={styles.collectedDate}>
@@ -257,6 +268,8 @@ export default function SpotDetailScreen() {
               <Text style={styles.navLinkText}>{tr('spot.revisit')}{isFallback ? '' : ` · ${formatDistance(dist)}`}</Text>
             </Pressable>
           </View>
+          <PhotoStrip spot={spot} entry={entry} openRequest={photoRequest} />
+          </>
         ) : (
           <View style={styles.checkinCard}>
             <Text style={styles.distText}>

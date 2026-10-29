@@ -60,8 +60,8 @@ export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
   const [viewer, setViewer] = useState<number | null>(null);
   const [busy, setBusy] = useState(false);
 
-  // The unlock moment asks once; later requests come from the + tile.
-  const lastRequest = useRef(openRequest);
+  // The unlock moment asks once (the strip mounts with the request already set); later adds come from the + tile.
+  const lastRequest = useRef(0);
   useEffect(() => {
     if (openRequest !== lastRequest.current) {
       lastRequest.current = openRequest;

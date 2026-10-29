@@ -1,9 +1,17 @@
 import { Directory, File, Paths } from 'expo-file-system';
-import { ImageManipulator, SaveFormat } from 'expo-image-manipulator';
-import * as ImagePicker from 'expo-image-picker';
-import * as MediaLibrary from 'expo-media-library';
 import { Platform } from 'react-native';
 import { PHOTO_LIMIT, SpotPhoto } from './store';
+
+/**
+ * The camera, picker and library modules load on first use, not at startup: nothing on the
+ * home screen needs them, and loading them early risked the photo-library prompt before
+ * anyone asked for a photo.
+ */
+/* eslint-disable @typescript-eslint/no-require-imports */
+const mediaLibrary = (): typeof import('expo-media-library') => require('expo-media-library');
+const imagePicker = (): typeof import('expo-image-picker') => require('expo-image-picker');
+const imageManipulator = (): typeof import('expo-image-manipulator') => require('expo-image-manipulator');
+/* eslint-enable @typescript-eslint/no-require-imports */
 
 /**
  * Photos a traveller attaches to a collected spot (docs/spec.md §10).
@@ -42,6 +50,7 @@ const newId = () => `${Date.now().toString(36)}${Math.random().toString(36).slic
 
 /** JPEG with the long side capped at `edge` px. The result is a fresh bitmap: no metadata survives. */
 async function encode(src: PickedImage, edge: number, quality: number) {
+  const { ImageManipulator, SaveFormat } = imageManipulator();
   const ctx = ImageManipulator.manipulate(src.uri);
   if (src.width > 0 && src.height > 0 && Math.max(src.width, src.height) > edge) {
     ctx.resize(src.width >= src.height ? { width: edge } : { height: edge });
@@ -84,6 +93,7 @@ export function deletePhotoFiles(p: SpotPhoto): void {
 }
 
 export async function takePhoto(): Promise<PickedImage | null> {
+  const ImagePicker = imagePicker();
   const perm = await ImagePicker.requestCameraPermissionsAsync();
   if (!perm.granted) throw new PhotoPermissionError('camera');
   const res = await ImagePicker.launchCameraAsync({ mediaTypes: ['images'], quality: 1, exif: false });
@@ -94,7 +104,7 @@ export async function takePhoto(): Promise<PickedImage | null> {
 
 /** The system picker runs out of process on iOS, so it needs no photo-library permission. */
 export async function pickPhotos(limit: number): Promise<PickedImage[]> {
-  const res = await ImagePicker.launchImageLibraryAsync({
+  const res = await imagePicker().launchImageLibraryAsync({
     mediaTypes: ['images'],
     allowsMultipleSelection: limit > 1,
     selectionLimit: limit,
@@ -121,6 +131,7 @@ export interface DayPhotos {
 
 /** Library photos taken on that calendar day (phone's time zone), newest first. */
 export async function photosOfDay(date: Date, max = 60): Promise<DayPhotos> {
+  const MediaLibrary = mediaLibrary();
   const perm = await MediaLibrary.requestPermissionsAsync(false, ['photo']);
   if (!perm.granted) throw new PhotoPermissionError('photos');
   const start = new Date(date);
@@ -141,7 +152,16 @@ export async function photosOfDay(date: Date, max = 60): Promise<DayPhotos> {
   };
 }
 
-export const presentLimitedPicker = (): Promise<void> => MediaLibrary.presentPermissionsPickerAsync(['photo']);
+export const presentLimitedPicker = (): Promise<void> => mediaLibrary().presentPermissionsPickerAsync(['photo']);
+
+/** Add-only access to the photo library, asked for when a card is saved. */
+export async function saveToLibrary(uri: string): Promise<boolean> {
+  const MediaLibrary = mediaLibrary();
+  const perm = await MediaLibrary.requestPermissionsAsync(true);
+  if (!perm.granted) return false;
+  await MediaLibrary.Asset.create(uri);
+  return true;
+}
 
 /** A library asset as a PickedImage. iOS hands out ph:// URIs; the manipulator reads them directly. */
 export const dayPhotoToPicked = (p: DayPhoto): PickedImage => ({
@@ -153,3 +173,9 @@ export const dayPhotoToPicked = (p: DayPhoto): PickedImage => ({
 
 /** Camera support is a device matter: simulators and some tablets have none. */
 export const cameraAvailable = (): boolean => Platform.OS === 'ios' || Platform.OS === 'android';
+
+// Development only: lets a debugger drive the photo pipeline, e.g.
+// __islandiaPhotos.photosOfDay(new Date()).then(r => __islandiaPhotos.importPhoto('jiufen', __islandiaPhotos.dayPhotoToPicked(r.photos[0])))
+if (__DEV__) {
+  (globalThis as any).__islandiaPhotos = { importPhoto, photosOfDay, pickPhotos, takePhoto, dayPhotoToPicked, photoUri, thumbUri, deletePhotoFiles };
+}

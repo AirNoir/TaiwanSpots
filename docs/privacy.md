@@ -1,6 +1,6 @@
 # 微縮台灣 Islandia 隱私權政策 / Privacy Policy
 
-最後更新：2026-10-28 · 正式網址 https://islandia.littlestep.me/privacy（本檔為同步副本）
+最後更新：2026-10-29 · 正式網址 https://islandia.littlestep.me/privacy（本檔為同步副本）
 
 ## 中文
 
@@ -11,6 +11,7 @@
 - **位置資訊**：只在你打開 App 時使用，用來判斷你是否抵達景點、以及在主畫面 Widget 和鎖定畫面顯示最近的景點距離。位置資料只在你的裝置上計算，不會上傳到任何伺服器。
 - **收藏紀錄**：你解鎖過哪些景點、解鎖時間與順序、當時的季節與天氣，儲存在你的裝置上（以及 App 與 Widget 共用的 App Group 容器）。
 - **帳號與備份**：App 第一次開啟時會在背景建立一個匿名帳號，把你的收藏紀錄備份到我們的雲端（Supabase，資料存放於東京）。你可以在「我的」頁用 Apple 或 Google 帳號登入；此時我們只會收到該帳號提供的電子郵件（Apple 可選擇隱藏）與一組識別碼，用來讓你換手機時找回收藏。備份內容只有上面的收藏紀錄，不含位置。
+- **照片**：你在景點頁加入的照片（每座最多 3 張）只儲存在你的手機裡，不會上傳到我們或任何第三方的伺服器，也不包含在雲端備份中。App 存檔時會重新壓縮，不保留原始照片的拍攝位置等中繼資料。相機與相簿權限只在你選擇加照片或存分享卡時才會詢問。
 - **用 Google 帳號登入時**：只向 Google 要求基本的個人資料範圍（電子郵件、識別碼），用來辨識是同一個人、把護照備份綁到你的帳號。不會存取你的 Google 聯絡人、雲端硬碟、日曆或其他 Google 資料，也不會把 Google 帳號資料分享給任何第三方。
 
 **天氣查詢**
@@ -44,6 +45,7 @@ Islandia is an app that unlocks miniature dioramas of Taiwanese landmarks when y
 - **Location**: used only while the app is open, to decide whether you have reached a spot and to show the nearest spot on the widget and lock screen. Location is processed on your device and is never uploaded.
 - **Collection progress**: which spots you have unlocked, when, in what order, and the season and weather at the time. Stored on your device and in the App Group container shared with the widget.
 - **Account and backup**: on first launch the app silently creates an anonymous account and backs up your collection progress to our cloud (Supabase, hosted in Tokyo). On the Me tab you can sign in with Apple or Google; we then receive only the email that account shares (Apple lets you hide it) and an identifier, used to bring your passport back on a new phone. The backup holds the collection progress above and nothing else; never your location.
+- **Photos**: photos you add to a spot (up to 3 each) are stored only on your phone. They are never uploaded to us or to any third party and are not part of the cloud backup. The app re-encodes them when saving, so the original's metadata (such as where it was taken) is not kept. Camera and photo-library access is requested only when you choose to add a photo or save a share card.
 - **When you sign in with Google**: we request only Google's basic profile scopes (email and identifier) to recognise you as the same person and attach the passport backup to your account. We do not access your Google contacts, Drive, Calendar or any other Google data, and never share Google account data with third parties.
 
 **Weather lookups**
