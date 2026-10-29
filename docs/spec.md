@@ -207,7 +207,7 @@
 
 程式碼、資料表、edge functions、Supabase 設定都完成，見 5.6。免費名額同日改為 5 個；地圖與模型上的晝夜／天氣遮罩以 `ATMOSPHERE_OVERLAYS` 關閉。
 
-Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一筆改成較早日期後同步，該景點變成 order 1；刪除帳號後雲端使用者與資料清空、App 自動換新匿名帳號再備份。Apple／Google 按鈕在 Expo Go 不會出現（模組不在 Expo Go 裡），要用 TestFlight 或 development build 測。Build 10 = 第一個含登入的版本（Apple + 匿名；Google 尚未設定所以按鈕隱藏）。Build 11（同日）加上 Google 登入。
+Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一筆改成較早日期後同步，該景點變成 order 1；刪除帳號後雲端使用者與資料清空、App 自動換新匿名帳號再備份。Apple／Google 按鈕在 Expo Go 不會出現（模組不在 Expo Go 裡），要用 TestFlight 或 development build 測。Build 10、11（2026-10-28）都在 Xcode 簽章失敗：provisioning profile 沒有 Sign In with Apple（非互動建置不會同步 capability，原因與修法見 `docs/testflight.md`）。Build 13（2026-10-29）是第一個真的到 TestFlight、含 Apple／Google／匿名登入的版本。
 
 ### 官網（2026-10-28）
 
@@ -215,7 +215,7 @@ Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一�
 
 ### 下一步
 
-1. 已完成（2026-10-28，步驟與狀態見 `docs/google-oauth.md`）：Google Cloud 的 iOS 與 Web OAuth client、`app.json` plugin、EAS 環境變數、Supabase Google provider 都回填，Build 11 是第一個含 Google 登入的版本。Android client 等出 Android 版再建。
-2. 出 TestFlight build，真機測 Apple 登入、合併、登出、刪除帳號；Google 等第 1 點完成。
+1. 已完成（2026-10-28，步驟與狀態見 `docs/google-oauth.md`）：Google Cloud 的 iOS 與 Web OAuth client、`app.json` plugin、EAS 環境變數、Supabase Google provider 都回填，Build 13（2026-10-29）是第一個含 Google 登入的版本。Android client 等出 Android 版再建。
+2. Build 13 到 TestFlight 後真機測：Apple 登入、Google 登入、合併、登出、刪除帳號。
 3. 沙盒購買測試已通過（2026-10-27）；下一個 build 前先在手機「設定 → App Store → 沙盒帳號」清除購買紀錄，才看得到封存。
 4. 第一個內購要和 App 版本一起送審：送審時在版本頁勾選 `com.airnoir.islandia.full`。
