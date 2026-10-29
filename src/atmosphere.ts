@@ -22,6 +22,8 @@ export interface Weather {
  * diorama art. Weather is still fetched, named in text and recorded on collections.
  */
 export const ATMOSPHERE_OVERLAYS = false;
+/** Season and day/night labels (home header, spot tags, "spring variant", share card). Off until the feature ships. */
+export const SEASON_LABELS = false;
 
 export const SEASONS: Season[] = ['spring', 'summer', 'autumn', 'winter'];
 

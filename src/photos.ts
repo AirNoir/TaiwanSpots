@@ -1,5 +1,6 @@
 import { Directory, File, Paths } from 'expo-file-system';
 import { Platform } from 'react-native';
+import { distanceMeters, LatLng } from './geo';
 import { PHOTO_LIMIT, SpotPhoto } from './store';
 
 /**
@@ -146,10 +147,41 @@ export async function photosOfDay(date: Date, max = 60): Promise<DayPhotos> {
     .limit(max)
     .exe();
   const infos = await Promise.all(assets.map((a) => a.getInfo()));
-  return {
-    photos: infos.map((i) => ({ id: i.id, uri: i.uri, width: i.width, height: i.height, takenAt: i.creationTime })),
-    limited: perm.accessPrivileges === 'limited',
-  };
+  return { photos: infos.map(toDayPhoto), limited: perm.accessPrivileges === 'limited' };
+}
+
+const toDayPhoto = (i: {
+  id: string;
+  uri: string;
+  width: number;
+  height: number;
+  creationTime: number | null;
+}): DayPhoto => ({ id: i.id, uri: i.uri, width: i.width, height: i.height, takenAt: i.creationTime });
+
+/**
+ * Library photos taken within `radiusM` of a point, newest first. Looks through the latest
+ * `scan` photos: reading a photo's location is cheap, decoding it is not, so only hits get info.
+ */
+export async function photosNear(center: LatLng, radiusM: number, max = 60, scan = 1500): Promise<DayPhotos> {
+  const MediaLibrary = mediaLibrary();
+  const perm = await MediaLibrary.requestPermissionsAsync(false, ['photo']);
+  if (!perm.granted) throw new PhotoPermissionError('photos');
+  const assets = await new MediaLibrary.Query()
+    .eq(MediaLibrary.AssetField.MEDIA_TYPE, MediaLibrary.MediaType.IMAGE)
+    .orderBy({ key: MediaLibrary.AssetField.CREATION_TIME, ascending: false })
+    .limit(scan)
+    .exe();
+  const hits: typeof assets = [];
+  for (let i = 0; i < assets.length && hits.length < max; i += 100) {
+    const chunk = assets.slice(i, i + 100);
+    const locations = await Promise.all(chunk.map((a) => a.getLocation().catch(() => null)));
+    chunk.forEach((a, k) => {
+      const l = locations[k];
+      if (l && distanceMeters(center, { latitude: l.latitude, longitude: l.longitude }) <= radiusM) hits.push(a);
+    });
+  }
+  const infos = await Promise.all(hits.slice(0, max).map((a) => a.getInfo()));
+  return { photos: infos.map(toDayPhoto), limited: perm.accessPrivileges === 'limited' };
 }
 
 export const presentLimitedPicker = (): Promise<void> => mediaLibrary().presentPermissionsPickerAsync(['photo']);

@@ -11,7 +11,7 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { describeWeather, seasonMeta, skyIcon, useWeather } from '../../src/atmosphere';
+import { describeWeather, SEASON_LABELS, seasonMeta, skyIcon, useWeather } from '../../src/atmosphere';
 import { Diorama } from '../../src/components/Diorama';
 import { TaiwanWorld } from '../../src/components/TaiwanWorld';
 import { SPOTS, spotById } from '../../src/data/spots';
@@ -100,14 +100,18 @@ export default function WorldScreen() {
         <Text style={styles.greeting}>{tr(greetingKey())}</Text>
         <Text style={styles.subGreeting}>{tr('home.tagline')}</Text>
         <View style={styles.atmosRow}>
-          <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={13} color={t.subtext} />
-          <Text style={styles.atmosText}>
-            {metaLabel(seasonMeta[season], lang)}
-            {tr(night ? 'home.night' : 'home.day')}
-          </Text>
+          {SEASON_LABELS && (
+            <>
+              <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={13} color={t.subtext} />
+              <Text style={styles.atmosText}>
+                {metaLabel(seasonMeta[season], lang)}
+                {tr(night ? 'home.night' : 'home.day')}
+              </Text>
+            </>
+          )}
           {hereWeather && (
             <>
-              <Text style={styles.atmosText}>·</Text>
+              {SEASON_LABELS && <Text style={styles.atmosText}>·</Text>}
               <MaterialCommunityIcons name={skyIcon(hereWeather) as any} size={13} color={t.subtext} />
               <Text style={styles.atmosText}>
                 {metaLabel(nearRegion, lang)} {describeWeather(hereWeather, lang)}

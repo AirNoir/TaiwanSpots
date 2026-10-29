@@ -5,7 +5,7 @@ import * as Sharing from 'expo-sharing';
 import React, { useEffect, useRef, useState } from 'react';
 import { Alert, Dimensions, Modal, Pressable, StyleSheet, Text, View } from 'react-native';
 import { captureRef } from 'react-native-view-shot';
-import { seasonMeta, skyName } from '../atmosphere';
+import { SEASON_LABELS, seasonMeta, skyMeta, skyName } from '../atmosphere';
 import { Spot } from '../data/spots';
 import { Lang, metaLabel, spotAltName, spotName, useLang, useT } from '../i18n';
 import { photoUri, saveToLibrary, thumbUri } from '../photos';
@@ -255,9 +255,11 @@ function ShareCard({ spot, entry, photo, totalCollected, totalSpots, lang }: Car
     );
   }
 
-  const variant = `${tr('spot.variant', { season: metaLabel(seasonMeta[season], lang) })}${
-    entry.sky ? ` · ${skyName(entry.sky, lang)}` : ''
-  }`;
+  const variant = SEASON_LABELS
+    ? `${tr('spot.variant', { season: metaLabel(seasonMeta[season], lang) })}${entry.sky ? ` · ${skyName(entry.sky, lang)}` : ''}`
+    : entry.sky
+      ? skyName(entry.sky, lang)
+      : '';
   return (
     <View style={styles.card}>
       <Diorama spot={spot} size={CARD_W - 80} radius={32} atmosphere={{ season, sky: entry.sky }} />
@@ -266,9 +268,16 @@ function ShareCard({ spot, entry, photo, totalCollected, totalSpots, lang }: Car
       <Text style={styles.serial}>{serial}</Text>
       <Text style={styles.meta}>{dateStr}</Text>
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 10 }}>
-        <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={22} color={t.subtext} />
+        {variant !== '' && (
+          <MaterialCommunityIcons
+            name={(SEASON_LABELS ? seasonMeta[season].icon : skyMeta[entry.sky ?? 'clear'].icon) as any}
+            size={22}
+            color={t.subtext}
+          />
+        )}
         <Text style={[styles.meta, { marginTop: 0 }]}>
-          {spot.city} · {variant}
+          {spot.city}
+          {variant ? ` · ${variant}` : ''}
         </Text>
       </View>
       <View style={styles.divider} />

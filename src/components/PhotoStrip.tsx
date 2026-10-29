@@ -7,6 +7,7 @@ import {
   Dimensions,
   Linking,
   Modal,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -14,13 +15,17 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Spot } from '../data/spots';
+import { checkinRadius } from '../geo';
 import { useLang, useT } from '../i18n';
 import {
   cameraAvailable,
+  DayPhotos,
   deletePhotoFiles,
   importPhoto,
   PHOTO_LIMIT,
   PhotoPermissionError,
+  photosNear,
+  photosOfDay,
   pickPhotos,
   PickedImage,
   takePhoto,
@@ -34,6 +39,10 @@ import { PhotoViewer } from './PhotoViewer';
 const { width: SCREEN_W } = Dimensions.get('window');
 const GAP = 8;
 const TILE = Math.floor((SCREEN_W - 48 - GAP * 2) / 3);
+/** How many of the newest library photos "taken near here" looks through. */
+const NEAR_SCAN = 1500;
+
+type Search = 'day' | 'near';
 
 interface Props {
   spot: Spot;
@@ -56,7 +65,7 @@ export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
   const remaining = PHOTO_LIMIT - photos.length;
 
   const [sheet, setSheet] = useState(false);
-  const [dayPicker, setDayPicker] = useState(false);
+  const [search, setSearch] = useState<Search | null>(null);
   const [viewer, setViewer] = useState<number | null>(null);
   const [busy, setBusy] = useState(false);
 
@@ -70,6 +79,24 @@ export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
       if (remaining > 0) setSheet(true);
     }
   }, [openRequest, remaining]);
+
+  // iOS refuses to present a picker while the sheet is still animating away, so each option
+  // runs once the sheet has gone (Modal.onDismiss). Android dismisses synchronously.
+  const afterSheet = useRef<(() => void) | null>(null);
+  const choose = (action: () => void) => {
+    if (Platform.OS === 'ios') {
+      afterSheet.current = action;
+      setSheet(false);
+    } else {
+      setSheet(false);
+      action();
+    }
+  };
+  const onSheetDismissed = () => {
+    const action = afterSheet.current;
+    afterSheet.current = null;
+    action?.();
+  };
 
   const checkedIn = new Date(entry.checkedInAt);
   const sameDay = (a: Date, b: Date) =>
@@ -95,7 +122,8 @@ export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
     if (!picked.length) return;
     setBusy(true);
     try {
-      for (const p of picked.slice(0, PHOTO_LIMIT - (useStore.getState().collections[spot.id]?.photos?.length ?? 0))) {
+      const room = PHOTO_LIMIT - (useStore.getState().collections[spot.id]?.photos?.length ?? 0);
+      for (const p of picked.slice(0, room)) {
         const photo = await importPhoto(spot.id, p);
         if (!addPhoto(spot.id, photo)) deletePhotoFiles(photo);
       }
@@ -106,29 +134,40 @@ export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
     }
   };
 
-  const fromCamera = async () => {
-    setSheet(false);
-    try {
-      const p = await takePhoto();
-      if (p) await store([p]);
-    } catch (e) {
-      explain(e);
-    }
-  };
+  const fromCamera = () =>
+    choose(() => {
+      void (async () => {
+        try {
+          const p = await takePhoto();
+          if (p) await store([p]);
+        } catch (e) {
+          explain(e);
+        }
+      })();
+    });
 
-  const fromLibrary = async () => {
-    setSheet(false);
-    try {
-      await store(await pickPhotos(remaining));
-    } catch (e) {
-      explain(e);
-    }
-  };
+  const fromLibrary = () =>
+    choose(() => {
+      void (async () => {
+        try {
+          await store(await pickPhotos(remaining));
+        } catch (e) {
+          explain(e);
+        }
+      })();
+    });
 
-  const fromThatDay = () => {
-    setSheet(false);
-    setDayPicker(true);
-  };
+  const fromThatDay = () => choose(() => setSearch('day'));
+  const fromNear = () => choose(() => setSearch('near'));
+
+  // Photos within 1.5× the check-in radius (at least 1.5 km): the spot plus the walk around it.
+  const nearRadius = Math.round(checkinRadius(spot) * 1.5);
+  const runSearch = (): Promise<DayPhotos> =>
+    search === 'near'
+      ? photosNear({ latitude: spot.latitude, longitude: spot.longitude }, nearRadius, 60, NEAR_SCAN)
+      : photosOfDay(checkedIn);
+  const searchTitle = search === 'near' ? tr('photo.near') : dayLabel;
+  const searchEmpty = search === 'near' ? tr('photo.noneNear', { n: NEAR_SCAN }) : tr('photo.noneThatDay');
 
   const onDelete = (photo: SpotPhoto) => {
     removePhoto(spot.id, photo.id);
@@ -178,16 +217,21 @@ export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
       </View>
 
       {/* add sheet */}
-      <Modal transparent visible={sheet} animationType="fade" onRequestClose={() => setSheet(false)}>
+      <Modal
+        transparent
+        visible={sheet}
+        animationType="fade"
+        onRequestClose={() => setSheet(false)}
+        onDismiss={onSheetDismissed}
+      >
         <Pressable style={styles.backdrop} onPress={() => setSheet(false)}>
           <Pressable style={[styles.sheet, { paddingBottom: insets.bottom + 12 }]} onPress={() => {}}>
             <Text style={styles.sheetTitle}>{tr('photo.prompt')}</Text>
             <Text style={styles.sheetSub}>{tr('photo.promptSub', { max: PHOTO_LIMIT })}</Text>
-            {cameraAvailable() && (
-              <SheetButton icon="camera-outline" label={tr('photo.camera')} onPress={() => void fromCamera()} />
-            )}
+            {cameraAvailable() && <SheetButton icon="camera-outline" label={tr('photo.camera')} onPress={fromCamera} />}
             <SheetButton icon="calendar-today" label={dayLabel} onPress={fromThatDay} />
-            <SheetButton icon="image-multiple-outline" label={tr('photo.library')} onPress={() => void fromLibrary()} />
+            <SheetButton icon="map-marker-radius-outline" label={tr('photo.near')} onPress={fromNear} />
+            <SheetButton icon="image-multiple-outline" label={tr('photo.library')} onPress={fromLibrary} />
             <Pressable style={styles.later} onPress={() => setSheet(false)}>
               <Text style={styles.laterText}>{tr('photo.later')}</Text>
             </Pressable>
@@ -196,13 +240,14 @@ export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
       </Modal>
 
       <DayPhotoPicker
-        date={checkedIn}
-        title={dayLabel}
+        title={searchTitle}
+        emptyText={searchEmpty}
         limit={remaining}
-        visible={dayPicker}
-        onClose={() => setDayPicker(false)}
+        visible={search !== null}
+        load={runSearch}
+        onClose={() => setSearch(null)}
         onPick={(picked) => {
-          setDayPicker(false);
+          setSearch(null);
           void store(picked);
         }}
       />

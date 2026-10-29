@@ -15,7 +15,7 @@ import { DioramaViewer } from '../../src/components/DioramaViewer';
 import { PhotoStrip } from '../../src/components/PhotoStrip';
 import { ShareCardModal } from '../../src/components/ShareCardModal';
 import { UnlockOverlay } from '../../src/components/UnlockOverlay';
-import { describeWeather, seasonMeta, skyIcon, skyName, useWeather } from '../../src/atmosphere';
+import { describeWeather, SEASON_LABELS, seasonMeta, skyIcon, skyMeta, skyName, useWeather } from '../../src/atmosphere';
 import { collectionImage } from '../../src/data/spotAssets';
 import { spotById, SPOTS } from '../../src/data/spots';
 import { checkinRadius, distanceMeters, formatDistance } from '../../src/geo';
@@ -207,22 +207,28 @@ export default function SpotDetailScreen() {
               {metaLabel(access, lang)} · {accessHint(access, lang)}
             </Text>
           </View>
-          {/* today's season, and the weather at the spot once it has loaded */}
-          <View style={[styles.tag, { flexDirection: 'row', alignItems: 'center', gap: 5 }]}>
-            <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={13} color={t.subtext} />
-            <Text style={styles.tagText}>
-              {metaLabel(seasonMeta[season], lang)}
-              {tr(night ? 'spot.night' : 'spot.day')}
-            </Text>
-            {weather ? (
-              <>
-                <MaterialCommunityIcons name={skyIcon(weather) as any} size={13} color={t.subtext} />
-                <Text style={styles.tagText}>{describeWeather(weather, lang)}</Text>
-              </>
-            ) : night ? (
-              <MaterialCommunityIcons name={'weather-night' as any} size={13} color={t.subtext} />
-            ) : null}
-          </View>
+          {/* the weather at the spot once it has loaded (and, when the feature ships, today's season) */}
+          {(SEASON_LABELS || weather) && (
+            <View style={[styles.tag, { flexDirection: 'row', alignItems: 'center', gap: 5 }]}>
+              {SEASON_LABELS && (
+                <>
+                  <MaterialCommunityIcons name={seasonMeta[season].icon as any} size={13} color={t.subtext} />
+                  <Text style={styles.tagText}>
+                    {metaLabel(seasonMeta[season], lang)}
+                    {tr(night ? 'spot.night' : 'spot.day')}
+                  </Text>
+                </>
+              )}
+              {weather ? (
+                <>
+                  <MaterialCommunityIcons name={skyIcon(weather) as any} size={13} color={t.subtext} />
+                  <Text style={styles.tagText}>{describeWeather(weather, lang)}</Text>
+                </>
+              ) : night ? (
+                <MaterialCommunityIcons name={'weather-night' as any} size={13} color={t.subtext} />
+              ) : null}
+            </View>
+          )}
         </View>
 
         <Text style={styles.description}>{spot.description}</Text>
@@ -236,19 +242,21 @@ export default function SpotDetailScreen() {
                 .toLocaleDateString(lang === 'zh' ? 'zh-TW' : 'en-US', { month: lang === 'zh' ? 'long' : 'short', day: '2-digit', year: 'numeric' })
                 .toUpperCase()}
             </Text>
-            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 6 }}>
-              <MaterialCommunityIcons
-                name={seasonMeta[shownSeason].icon as any}
-                size={13}
-                color={t.subtext}
-              />
-              <Text style={[styles.collectedVariant, { marginTop: 0 }]}>
-                {tr('spot.variant', { season: metaLabel(seasonMeta[shownSeason], lang) })}
-                {entry.sky
-                  ? ` · ${skyName(entry.sky, lang)}${entry.temperature != null ? ` ${entry.temperature}°` : ''}`
-                  : ''}
-              </Text>
-            </View>
+            {(SEASON_LABELS || entry.sky) && (
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 6 }}>
+                <MaterialCommunityIcons
+                  name={(SEASON_LABELS ? seasonMeta[shownSeason].icon : skyMeta[entry.sky ?? 'clear'].icon) as any}
+                  size={13}
+                  color={t.subtext}
+                />
+                <Text style={[styles.collectedVariant, { marginTop: 0 }]}>
+                  {SEASON_LABELS ? tr('spot.variant', { season: metaLabel(seasonMeta[shownSeason], lang) }) : ''}
+                  {entry.sky
+                    ? `${SEASON_LABELS ? ' · ' : ''}${skyName(entry.sky, lang)}${entry.temperature != null ? ` ${entry.temperature}°` : ''}`
+                    : ''}
+                </Text>
+              </View>
+            )}
             {sealed ? (
               <>
                 <Text style={styles.sealedNote}>{tr('spot.sealed')}</Text>

@@ -16,9 +16,9 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useT } from '../i18n';
 import {
   DayPhoto,
+  DayPhotos,
   dayPhotoToPicked,
   PhotoPermissionError,
-  photosOfDay,
   PickedImage,
   presentLimitedPicker,
 } from '../photos';
@@ -30,19 +30,21 @@ const PAD = 12;
 const TILE = Math.floor((W - PAD * 2 - GAP * 2) / 3);
 
 interface Props {
-  /** Calendar day to list (the check-in date). */
-  date: Date;
   title: string;
+  /** Shown when the search finds nothing. */
+  emptyText: string;
   /** How many more photos the spot can take. */
   limit: number;
   visible: boolean;
+  /** Finds the candidates: photos of the check-in day, or photos taken near the spot. */
+  load: () => Promise<DayPhotos>;
   onClose: () => void;
   onPick: (photos: PickedImage[]) => void;
 }
 
 type Status = 'loading' | 'ready' | 'denied' | 'error';
 
-/** Grid of the library photos taken on one day; pick up to `limit` of them. */
+/** Grid of library photos from one search (a day, a place); pick up to `limit` of them. */
 export function DayPhotoPicker(props: Props) {
   return (
     <Modal visible={props.visible} animationType="slide" onRequestClose={props.onClose} presentationStyle="pageSheet">
@@ -51,7 +53,7 @@ export function DayPhotoPicker(props: Props) {
   );
 }
 
-function Body({ date, title, limit, onClose, onPick }: Props) {
+function Body({ title, emptyText, limit, load, onClose, onPick }: Props) {
   const t = useTheme();
   const styles = useStyles();
   const tr = useT();
@@ -61,9 +63,9 @@ function Body({ date, title, limit, onClose, onPick }: Props) {
   const [limited, setLimited] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
 
-  const load = async () => {
+  const run = async () => {
     try {
-      const r = await photosOfDay(date);
+      const r = await load();
       setPhotos(r.photos);
       setLimited(r.limited);
       setStatus('ready');
@@ -73,10 +75,9 @@ function Body({ date, title, limit, onClose, onPick }: Props) {
   };
 
   useEffect(() => {
-    // load() only sets state after awaiting the media library
+    // run() only sets state after awaiting the media library; the sheet runs one fixed search
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    void load();
-    // the sheet lists one fixed day; it reloads only after the limited-library picker
+    void run();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -92,7 +93,7 @@ function Body({ date, title, limit, onClose, onPick }: Props) {
   const widen = async () => {
     await presentLimitedPicker();
     setStatus('loading');
-    await load();
+    await run();
   };
 
   return (
@@ -130,7 +131,7 @@ function Body({ date, title, limit, onClose, onPick }: Props) {
       {status === 'ready' && photos.length === 0 && (
         <View style={styles.center}>
           <MaterialCommunityIcons name={'image-search-outline' as any} size={36} color={t.faint} />
-          <Text style={styles.hint}>{tr('photo.noneThatDay')}</Text>
+          <Text style={styles.hint}>{emptyText}</Text>
           {limited && (
             <Pressable style={styles.linkBtn} onPress={() => void widen()}>
               <Text style={styles.link}>{tr('photo.selectMore')}</Text>

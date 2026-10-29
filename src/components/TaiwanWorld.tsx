@@ -23,7 +23,7 @@ import Svg, {
   RadialGradient,
   Stop,
 } from 'react-native-svg';
-import { ATMOSPHERE_OVERLAYS, describeWeather, isWet, Season, seasonOf, skyIcon, Weather } from '../atmosphere';
+import { ATMOSPHERE_OVERLAYS, describeWeather, isWet, SEASON_LABELS, Season, seasonOf, skyIcon, Weather } from '../atmosphere';
 import { collectionThumbnail, DIORAMA_BG, worldToken } from '../data/spotAssets';
 import { distanceMeters, formatDistance, LatLng } from '../geo';
 import { countyLabel, labelWidth, metaLabel, spotName, useLang, useT } from '../i18n';
@@ -137,7 +137,8 @@ export function TaiwanWorld({
   // Sealed collections never show their real art on the map: no landmark token, a silhouette pin.
   const sealedSet = useSealedSet();
   const C = t.world;
-  const season = seasonProp ?? seasonOf();
+  // Until the seasons feature ships, the island keeps one palette all year (plain summer green).
+  const season: Season = SEASON_LABELS ? (seasonProp ?? seasonOf()) : 'summer';
   // Night veil and weather drawn over the map are switched off for now (ATMOSPHERE_OVERLAYS);
   // the region's weather is still named in text.
   const night = ATMOSPHERE_OVERLAYS && nightProp;
