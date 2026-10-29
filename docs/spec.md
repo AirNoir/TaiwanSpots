@@ -221,7 +221,6 @@ Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一�
 4. 第一個內購要和 App 版本一起送審：送審時在版本頁的 In-App Purchases 區塊勾選 `com.airnoir.islandia.full`。
 5. 照片紀錄（第三階段）手機內的部分已完成（§10），Build 14 是第一個含照片的版本；雲端備份照片未排。
 6. 截圖用的示範護照（2026-10-29）：`src/demo.ts` 的 `loadDemoPassport()`，一年份 38 座（四區四季、各種天氣與到達難度），載入前先登出換成新的匿名帳號，所以不會動到任何人的雲端備份；之後登入某個帳號就會把示範護照備份到那個帳號，當作共用的 demo 登入。入口：「我的」頁示範工具區的「載入示範護照」、深連結 `islandia://dev/demo`（Expo Go：`exp://…/--/dev/demo`）、Metro inspector 的 `__islandiaDemo()`。只在 `--profile demo` 的 TestFlight 版（`EXPO_PUBLIC_DEMO_TOOLS=1`）與開發版出現；Build 15 是第一個 demo 版。
-7. 截圖用的示範護照（2026-10-29）：`src/demo.ts` 的 `loadDemoPassport()`，一年份 38 座（四區四季、各種天氣與到達難度），載入前先登出換成新的匿名帳號，所以不會動到任何人的雲端備份；之後登入某個帳號就會把示範護照備份到那個帳號，當作共用的 demo 登入。入口：「我的」頁示範工具區的「載入示範護照」、深連結 `islandia://dev/demo`（Expo Go：`exp://…/--/dev/demo`）、Metro inspector 的 `__islandiaDemo()`。只在 `--profile demo` 的 TestFlight 版（`EXPO_PUBLIC_DEMO_TOOLS=1`）與開發版出現；Build 15 是第一個 demo 版。
 
 ## 10. 照片紀錄（第三階段，2026-10-29）
 
