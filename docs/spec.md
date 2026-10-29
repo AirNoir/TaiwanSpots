@@ -221,6 +221,9 @@ Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一�
 4. 第一個內購要和 App 版本一起送審：送審時在版本頁的 In-App Purchases 區塊勾選 `com.airnoir.islandia.full`。
 5. 照片紀錄（第三階段）手機內的部分已完成（§10），Build 14 是第一個含照片的版本；雲端備份照片未排。
 6. 截圖用的示範護照（2026-10-29）：`src/demo.ts` 的 `loadDemoPassport()`，一年份 38 座（四區四季、各種天氣與到達難度），載入前先登出換成新的匿名帳號，所以不會動到任何人的雲端備份；之後登入某個帳號就會把示範護照備份到那個帳號，當作共用的 demo 登入。入口：「我的」頁示範工具區的「載入示範護照」、深連結 `islandia://dev/demo`（Expo Go：`exp://…/--/dev/demo`）、Metro inspector 的 `__islandiaDemo()`。只在 `--profile demo` 的 TestFlight 版（`EXPO_PUBLIC_DEMO_TOOLS=1`）與開發版出現；Build 15 是第一個 demo 版。
+   - **demo 帳號**：Google 帳號 airnoir0605@gmail.com（Supabase user `08e69ea4-6538-4021-9091-badc2db1ffbe`）的雲端收藏已直接寫成同一份 38 座示範旅程（2026-10-29，透過 Management API 的 SQL）。任何裝置用它登入就拿到示範護照；本機若有別的收藏會合併進去，要乾淨就先「載入示範護照」再登入，或刪 App 重裝再登入。
+7. 季節與日夜（2026-10-29 決定）：功能與標籤都先不上，`src/atmosphere.ts` 的 `SEASON_LABELS = false` 關掉首頁、景點頁、分享卡的季節／日夜文字，地圖固定夏季配色；天氣仍顯示。資料照常記錄 `season`，之後要開只要把開關打開。
+8. 照片選單（Build 16）：選項在選單關閉後才執行（iOS 不允許一個 Modal 還在關閉時再開相簿選擇器，Build 14 的「從相簿選」因此沒反應）；新增「在這附近拍的照片」（掃最近 1500 張、取距景點 1.5 倍打卡半徑內的）。
 
 ## 10. 照片紀錄（第三階段，2026-10-29）
 
