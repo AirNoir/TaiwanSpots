@@ -216,10 +216,10 @@ Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一�
 ### 下一步
 
 1. 已完成（2026-10-28，步驟與狀態見 `docs/google-oauth.md`）：Google Cloud 的 iOS 與 Web OAuth client、`app.json` plugin、EAS 環境變數、Supabase Google provider 都回填，Build 13（2026-10-29）是第一個含 Google 登入的版本。Android client 等出 Android 版再建。
-2. Build 13 到 TestFlight 後真機測：Apple 登入、Google 登入、合併、登出、刪除帳號。
+2. Build 13（登入）已在 TestFlight；Build 14（2026-10-29，照片紀錄＋到達難易度）已送出。真機測：Apple／Google 登入、合併、登出、刪除帳號；拍照、相簿、那天的照片各加到 3 張、第 4 張不給加；分享卡照片版與「存到相簿」。
 3. 沙盒購買測試已通過（2026-10-27）；下一個 build 前先在手機「設定 → App Store → 沙盒帳號」清除購買紀錄，才看得到封存。
 4. 第一個內購要和 App 版本一起送審：送審時在版本頁的 In-App Purchases 區塊勾選 `com.airnoir.islandia.full`。
-5. 照片紀錄（第三階段，2026-10-29 開工）見 §10。
+5. 照片紀錄（第三階段）手機內的部分已完成（§10），Build 14 是第一個含照片的版本；雲端備份照片未排。
 
 ## 10. 照片紀錄（第三階段，2026-10-29）
 
