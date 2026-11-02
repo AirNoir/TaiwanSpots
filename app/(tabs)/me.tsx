@@ -26,6 +26,7 @@ import { cloudAvailable } from '../../src/supabase';
 import { resetEverywhere } from '../../src/sync';
 import { Palette, ThemeMode, categoryMeta, makeStyles, useTheme } from '../../src/theme';
 import { useDevScroll } from '../../src/useDevScroll';
+import { useLayout } from '../../src/layout';
 
 const THEME_OPTIONS: { mode: ThemeMode; label: I18nKey; icon: string }[] = [
   { mode: 'light', label: 'me.theme.light', icon: 'white-balance-sunny' },
@@ -70,6 +71,7 @@ export default function MeScreen() {
   const language = useStore((s) => s.language);
   const setLanguage = useStore((s) => s.setLanguage);
   const tr = useT();
+  const layout = useLayout();
   const lang = useLang();
   const override = useStore((s) => s.atmosphereOverride);
   const setOverride = useStore((s) => s.setAtmosphereOverride);
@@ -179,8 +181,12 @@ export default function MeScreen() {
   }, [collected]);
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
-      <ScrollView ref={scrollRef} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
+    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
+      <ScrollView
+        ref={scrollRef}
+        contentContainerStyle={[styles.container, { paddingHorizontal: layout.gutter(undefined, 24) }]}
+        showsVerticalScrollIndicator={false}
+      >
         <View style={styles.avatar}>
           <MaterialCommunityIcons name={'compass-rose' as any} size={40} color={t.accent} />
         </View>

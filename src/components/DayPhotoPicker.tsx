@@ -3,13 +3,13 @@ import { Image } from 'expo-image';
 import React, { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
-  Dimensions,
   FlatList,
   Linking,
   Modal,
   Pressable,
   StyleSheet,
   Text,
+  useWindowDimensions,
   View,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -22,12 +22,11 @@ import {
   PickedImage,
   presentLimitedPicker,
 } from '../photos';
+import { gridColumns, tileSize } from '../layout';
 import { makeStyles, Palette, useTheme } from '../theme';
 
-const { width: W } = Dimensions.get('window');
 const GAP = 4;
 const PAD = 12;
-const TILE = Math.floor((W - PAD * 2 - GAP * 2) / 3);
 
 interface Props {
   title: string;
@@ -62,6 +61,11 @@ function Body({ title, emptyText, limit, load, onClose, onPick }: Props) {
   const [photos, setPhotos] = useState<DayPhoto[]>([]);
   const [limited, setLimited] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
+  // A page sheet is narrower than the window on iPad: size the grid from the sheet itself.
+  const window = useWindowDimensions();
+  const [paneW, setPaneW] = useState(window.width);
+  const cols = gridColumns(paneW);
+  const tile = tileSize(paneW - PAD * 2, cols, GAP);
 
   const run = async () => {
     try {
@@ -97,7 +101,7 @@ function Body({ title, emptyText, limit, load, onClose, onPick }: Props) {
   };
 
   return (
-    <View style={[styles.root, { paddingBottom: insets.bottom }]}>
+    <View style={[styles.root, { paddingBottom: insets.bottom }]} onLayout={(e) => setPaneW(e.nativeEvent.layout.width)}>
       <View style={styles.header}>
         <Pressable onPress={onClose} hitSlop={12}>
           <Text style={styles.headerBtn}>{tr('common.cancel')}</Text>
@@ -142,7 +146,8 @@ function Body({ title, emptyText, limit, load, onClose, onPick }: Props) {
       {status === 'ready' && photos.length > 0 && (
         <FlatList
           data={photos}
-          numColumns={3}
+          key={`cols-${cols}`}
+          numColumns={cols}
           keyExtractor={(p) => p.id}
           contentContainerStyle={{ padding: PAD, gap: GAP }}
           columnWrapperStyle={{ gap: GAP }}
@@ -158,7 +163,7 @@ function Body({ title, emptyText, limit, load, onClose, onPick }: Props) {
             const n = selected.indexOf(item.id);
             const picked = n >= 0;
             return (
-              <Pressable onPress={() => toggle(item.id)} style={styles.tile}>
+              <Pressable onPress={() => toggle(item.id)} style={[styles.tile, { width: tile, height: tile }]}>
                 <Image source={{ uri: item.id }} style={styles.tileImg} contentFit="cover" transition={80} recyclingKey={item.id} />
                 {picked && <View style={styles.tileShade} />}
                 <View style={[styles.check, picked && { backgroundColor: t.accent, borderColor: t.accent }]}>
@@ -204,7 +209,7 @@ const useStyles = makeStyles((t: Palette) =>
     linkBtn: { paddingVertical: 6, paddingHorizontal: 12 },
     link: { color: t.accent, fontSize: 14, fontWeight: '700' },
     limitedRow: { alignItems: 'center', gap: 4, paddingVertical: 8, paddingBottom: 12 },
-    tile: { width: TILE, height: TILE, borderRadius: 6, overflow: 'hidden', backgroundColor: t.card },
+    tile: { borderRadius: 6, overflow: 'hidden', backgroundColor: t.card },
     tileImg: { width: '100%', height: '100%' },
     tileShade: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(255,255,255,0.25)' },
     check: {

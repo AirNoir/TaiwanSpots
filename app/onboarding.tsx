@@ -3,11 +3,11 @@ import { useRouter } from 'expo-router';
 import * as Location from 'expo-location';
 import React, { useRef, useState } from 'react';
 import {
-  Dimensions,
   Pressable,
   ScrollView,
   StyleSheet,
   Text,
+  useWindowDimensions,
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -16,9 +16,6 @@ import { useStore } from '../src/store';
 import { makeStyles, Palette, useTheme } from '../src/theme';
 import { I18nKey, useT } from '../src/i18n';
 
-const { width: SCREEN_W, height: SCREEN_H } = Dimensions.get('window');
-// The intro map is ~1.7× taller than wide; leave room for the copy and buttons on short phones (SE: 667 pt).
-const INTRO_MAP_W = Math.min(SCREEN_W * 0.56, (SCREEN_H - 380) / 1.7);
 
 const PAGES = [
   {
@@ -55,6 +52,13 @@ export default function OnboardingScreen() {
   const setOnboarded = useStore((s) => s.setOnboarded);
   const [page, setPage] = useState(0);
   const scrollRef = useRef<ScrollView>(null);
+  const window = useWindowDimensions();
+  // Pages are as wide as the pager itself, measured, so paging stays right after a resize
+  // (iPad Split View, iPhone Duo folding).
+  const [pageW, setPageW] = useState(window.width);
+  // The intro map is ~1.7× taller than wide; leave room for the copy and buttons on short
+  // screens (SE: 667 pt, the iPhone Duo outer display) and don't let it sprawl on iPad.
+  const introMapW = Math.min(pageW * 0.56, (window.height - 380) / 1.7, 420);
 
   const starting = useRef(false);
   const start = async () => {
@@ -76,12 +80,17 @@ export default function OnboardingScreen() {
         horizontal
         pagingEnabled
         showsHorizontalScrollIndicator={false}
+        onLayout={(e) => {
+          const w = e.nativeEvent.layout.width;
+          setPageW(w);
+          scrollRef.current?.scrollTo({ x: page * w, animated: false });
+        }}
         onMomentumScrollEnd={(e) =>
-          setPage(Math.round(e.nativeEvent.contentOffset.x / SCREEN_W))
+          setPage(Math.round(e.nativeEvent.contentOffset.x / pageW))
         }
       >
         {PAGES.map((p) => (
-          <View key={p.key} style={styles.page}>
+          <View key={p.key} style={[styles.page, { width: pageW }]}>
             {p.icon ? (
               <View style={styles.pageIcon}>
                 <MaterialCommunityIcons name={p.icon as any} size={72} color={t.accent} />
@@ -89,7 +98,7 @@ export default function OnboardingScreen() {
             ) : (
               <View style={{ marginBottom: 32 }}>
                 <TaiwanWorld
-                  width={INTRO_MAP_W}
+                  width={introMapW}
                   collectedIds={new Set(['taipei-101', 'jiufen', 'sun-moon-lake', 'kenting', 'taroko', 'alishan'])}
                   interactive={false}
                 />
@@ -115,7 +124,7 @@ export default function OnboardingScreen() {
           <Pressable
             style={styles.next}
             onPress={() => {
-              scrollRef.current?.scrollTo({ x: (page + 1) * SCREEN_W, animated: true });
+              scrollRef.current?.scrollTo({ x: (page + 1) * pageW, animated: true });
               setPage(page + 1);
             }}
           >
@@ -131,7 +140,6 @@ const useStyles = makeStyles((t: Palette) =>
   StyleSheet.create({
   safe: { flex: 1, backgroundColor: t.bg },
   page: {
-    width: SCREEN_W,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 40,
@@ -161,7 +169,7 @@ const useStyles = makeStyles((t: Palette) =>
     marginTop: 16,
     lineHeight: 24,
   },
-  footer: { paddingHorizontal: 32, paddingBottom: 24, alignItems: 'center' },
+  footer: { paddingHorizontal: 32, paddingBottom: 24, alignItems: 'center', width: '100%', maxWidth: 520, alignSelf: 'center' },
   dots: { flexDirection: 'row', gap: 8, marginBottom: 20 },
   dot: { width: 8, height: 8, borderRadius: 4, backgroundColor: t.locked },
   dotActive: { backgroundColor: t.accent, width: 20 },

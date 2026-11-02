@@ -1,6 +1,6 @@
 import * as Haptics from 'expo-haptics';
 import React, { useEffect, useState } from 'react';
-import { Animated, Dimensions, Easing, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Animated, Easing, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { spotById, Spot } from '../data/spots';
 import { useT } from '../i18n';
 import { useStore } from '../store';
@@ -12,7 +12,6 @@ import { Diorama } from './Diorama';
 // Shown as its own full-screen route (app/unseal.tsx): an RN Modal can't present
 // over the paywall's native modal on iOS.
 
-const { width: SCREEN_W } = Dimensions.get('window');
 const MAX_SHOWN = 30;
 
 export function UnsealOverlay({ onDone }: { onDone: () => void }) {
@@ -31,6 +30,7 @@ function Unseal({ ids, onDone }: { ids: string[]; onDone: () => void }) {
   const t = useTheme();
   const styles = useStyles();
   const tr = useT();
+  const { width: SCREEN_W } = useWindowDimensions();
   const spots = ids.map(spotById).filter((s): s is Spot => !!s);
   const shown = spots.slice(0, MAX_SHOWN);
   const cols = shown.length <= 4 ? 2 : shown.length <= 9 ? 3 : shown.length <= 16 ? 4 : 5;

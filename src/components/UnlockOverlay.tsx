@@ -4,7 +4,6 @@ import * as Haptics from 'expo-haptics';
 import React, { useEffect, useState } from 'react';
 import {
   Animated,
-  Dimensions,
   Easing,
   Image,
   Modal,
@@ -12,6 +11,7 @@ import {
   StyleSheet,
   Text,
   View,
+  useWindowDimensions,
 } from 'react-native';
 import { collectionImage, DIORAMA_BG, silhouetteImage } from '../data/spotAssets';
 import { Spot, SPOTS } from '../data/spots';
@@ -27,13 +27,12 @@ interface Props {
   onDone: () => void;
 }
 
-const { width: SCREEN_W } = Dimensions.get('window');
-
 export function UnlockOverlay({ spot, visible, sealed = false, onDone }: Props) {
   const t = useTheme();
   const styles = useStyles();
   const tr = useT();
   const lang = useLang();
+  const { width } = useWindowDimensions();
   // Progress as it will be once this spot is added (the check-in lands when the overlay closes).
   const collections = useActiveCollections();
   const already = !!collections[spot.id];
@@ -41,7 +40,7 @@ export function UnlockOverlay({ spot, visible, sealed = false, onDone }: Props) 
   const county = spot.city.split('・')[0];
   const sameCounty = SPOTS.filter((s) => s.region === spot.region && s.city.split('・')[0] === county);
   const countyGot = sameCounty.filter((s) => collections[s.id]).length + (already ? 0 : 1);
-  const size = Math.min(SCREEN_W - 80, 300);
+  const size = Math.min(width - 80, width >= 600 ? 400 : 300);
   const { art } = spot;
   const image = sealed ? silhouetteImage(spot.id) : collectionImage(spot.id);
 

@@ -9,7 +9,7 @@
     "userInterfaceStyle": "automatic",
     "backgroundColor": "#F6F1E7",
     "ios": {
-      "supportsTablet": false,
+      "supportsTablet": true,
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Islandia needs your location to unlock a spot when you arrive there.",
         "LSApplicationQueriesSchemes": [

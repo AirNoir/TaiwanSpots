@@ -2,7 +2,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React, { useMemo } from 'react';
 import {
-  Dimensions,
   Linking,
   Pressable,
   ScrollView,
@@ -13,7 +12,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { describeWeather, SEASON_LABELS, seasonMeta, skyIcon, useWeather } from '../../src/atmosphere';
 import { Diorama } from '../../src/components/Diorama';
-import { TaiwanWorld } from '../../src/components/TaiwanWorld';
+import { TaiwanWorld, worldHeight } from '../../src/components/TaiwanWorld';
 import { SPOTS, spotById } from '../../src/data/spots';
 import { TAIWAN } from '../../src/data/world';
 import { I18nKey, metaLabel, spotName, useLang, useT } from '../../src/i18n';
@@ -24,10 +23,10 @@ import { entrySeason, useActiveCollections } from '../../src/store';
 import { makeStyles, Palette, useTheme } from '../../src/theme';
 import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
 import { useDevScroll } from '../../src/useDevScroll';
+import { HOME_MAX, useLayout } from '../../src/layout';
 import { useLocation } from '../../src/useLocation';
 import { useWidgetSync } from '../../src/widgets/sync';
 
-const { width: SCREEN_W } = Dimensions.get('window');
 
 // Weather is looked up for these four city centres only — never for the traveller's position.
 const REGION_POINTS: LatLng[] = TAIWAN.regions.map((r) => ({ latitude: r.center[1], longitude: r.center[0] }));
@@ -47,6 +46,7 @@ export default function WorldScreen() {
   const collections = useActiveCollections();
   const sealedSet = useSealedSet();
   const tr = useT();
+  const layout = useLayout();
   const lang = useLang();
   const { location, isFallback } = useLocation();
   useWidgetSync(location, !isFallback);
@@ -92,11 +92,19 @@ export default function WorldScreen() {
 
   const latestSpot = latest ? spotById(latest.spotId) : null;
   const scrollRef = useDevScroll('home');
-  const mapW = SCREEN_W - 48;
+  // Home is one centred column. The map takes its width, but never so tall that the whole
+  // island can't fit on screen (iPad landscape, the short iPhone Duo outer display).
+  const pad = layout.gutter(HOME_MAX, 24);
+  const inner = layout.usable - pad * 2;
+  const mapW = Math.round(Math.min(inner, (layout.height - 220) / worldHeight(1)));
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
-      <ScrollView ref={scrollRef} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
+    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
+      <ScrollView
+        ref={scrollRef}
+        contentContainerStyle={[styles.container, { paddingHorizontal: pad }]}
+        showsVerticalScrollIndicator={false}
+      >
         <Text style={styles.greeting}>{tr(greetingKey())}</Text>
         <Text style={styles.subGreeting}>{tr('home.tagline')}</Text>
         <View style={styles.atmosRow}>
@@ -226,7 +234,7 @@ export default function WorldScreen() {
             >
               <Diorama
                 spot={latestSpot}
-                size={SCREEN_W - 80}
+                size={Math.min(inner - 32, 420)}
                 sealed={sealedSet.has(latestSpot.id)}
                 radius={20}
                 atmosphere={{ season: override.season ?? entrySeason(latest), night }}

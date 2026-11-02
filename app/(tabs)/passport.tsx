@@ -2,7 +2,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React, { useMemo, useState } from 'react';
 import {
-  Dimensions,
   FlatList,
   Pressable,
   StyleSheet,
@@ -16,12 +15,10 @@ import { useSealedSet } from '../../src/entitlements';
 import { entrySeason, useActiveCollections } from '../../src/store';
 import { metaLabel, spotName, useLang, useT } from '../../src/i18n';
 import { Palette, makeStyles, regionMeta, useTheme } from '../../src/theme';
+import { GRID_MAX, gridColumns, tileSize, useLayout } from '../../src/layout';
 import { useAtmosphereOverride, useNight } from '../../src/useAtmosphere';
 
-const { width: SCREEN_W } = Dimensions.get('window');
 const GAP = 12;
-const COLS = 3;
-const CELL = (SCREEN_W - 40 - GAP * (COLS - 1)) / COLS;
 
 export default function PassportScreen() {
   const t = useTheme();
@@ -35,6 +32,11 @@ export default function PassportScreen() {
   const lang = useLang();
   const count = Object.keys(collections).length;
   const pct = Math.round((count / SPOTS.length) * 100);
+  const layout = useLayout();
+  const pad = layout.gutter(GRID_MAX, 20);
+  const gridW = layout.usable - pad * 2;
+  const cols = gridColumns(gridW);
+  const cell = tileSize(gridW, cols, GAP);
 
   const regionProgress = useMemo(() => {
     return (['north', 'central', 'south', 'east'] as const).map((r) => {
@@ -52,13 +54,15 @@ export default function PassportScreen() {
   );
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
+    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
       <FlatList
         data={shown}
         keyExtractor={(s) => s.id}
-        numColumns={COLS}
+        // FlatList can't change numColumns in place; a new key remounts it when the window resizes
+        key={`cols-${cols}`}
+        numColumns={cols}
         columnWrapperStyle={{ gap: GAP }}
-        contentContainerStyle={{ padding: 20, paddingBottom: 40, gap: GAP }}
+        contentContainerStyle={{ paddingHorizontal: pad, paddingTop: 20, paddingBottom: 40, gap: GAP }}
         ListHeaderComponent={
           <View style={{ marginBottom: 12 }}>
             <Text style={styles.title}>{tr('passport.kicker')}</Text>
@@ -105,13 +109,13 @@ export default function PassportScreen() {
           const collected = !!entry;
           return (
             <Pressable
-              style={{ width: CELL }}
+              style={{ width: cell }}
               onPress={() => router.push(`/spot/${spot.id}`)}
             >
               {/* each collection keeps the season it was collected in */}
               <Diorama
                 spot={spot}
-                size={CELL}
+                size={cell}
                 locked={!collected}
                 sealed={sealedSet.has(spot.id)}
                 radius={16}

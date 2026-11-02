@@ -3,7 +3,7 @@ import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Sharing from 'expo-sharing';
 import React, { useEffect, useRef, useState } from 'react';
-import { Alert, Dimensions, Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Alert, Modal, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { captureRef } from 'react-native-view-shot';
 import { SEASON_LABELS, seasonMeta, skyMeta, skyName } from '../atmosphere';
 import { Spot } from '../data/spots';
@@ -23,8 +23,6 @@ interface Props {
 }
 
 type Layout = 'photo' | 'model';
-
-const { width: SCREEN_W, height: SCREEN_H } = Dimensions.get('window');
 
 /**
  * Cards are laid out at CARD_W points and captured at the device scale (1620 px wide on a 3x
@@ -48,6 +46,7 @@ function ShareSheet({ spot, entry, totalCollected, totalSpots, onClose }: Props)
   const tr = useT();
   const lang = useLang();
   const shotRef = useRef<View>(null);
+  const { width: SCREEN_W, height: SCREEN_H } = useWindowDimensions();
   const photos = entry.photos ?? [];
   const [layout, setLayout] = useState<Layout>(photos.length ? 'photo' : 'model');
   const [photoIdx, setPhotoIdx] = useState(0);
@@ -57,7 +56,7 @@ function ShareSheet({ spot, entry, totalCollected, totalSpots, onClose }: Props)
   const photo = photos[Math.min(photoIdx, photos.length - 1)];
   const effective: Layout = layout === 'photo' && photo ? 'photo' : 'model';
   const cardH = effective === 'photo' ? PHOTO_H : modelH;
-  const previewW = Math.min(SCREEN_W - 56, 380, ((SCREEN_H - 300) * CARD_W) / cardH);
+  const previewW = Math.min(SCREEN_W - 56, SCREEN_W >= 600 ? CARD_W : 380, ((SCREEN_H - 300) * CARD_W) / cardH);
   const scale = previewW / CARD_W;
 
   const card = (

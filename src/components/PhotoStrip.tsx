@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import {
   ActivityIndicator,
   Alert,
-  Dimensions,
   Linking,
   Modal,
   Platform,
@@ -37,9 +36,9 @@ import { makeStyles, Palette, useTheme } from '../theme';
 import { DayPhotoPicker } from './DayPhotoPicker';
 import { PhotoViewer } from './PhotoViewer';
 
-const { width: SCREEN_W } = Dimensions.get('window');
 const GAP = 8;
-const TILE = Math.floor((SCREEN_W - 48 - GAP * 2) / 3);
+/** Tiles stop growing here: three photos on an iPad column shouldn't be poster-sized. */
+const TILE_MAX = 180;
 /** How many of the newest library photos "taken near here" looks through. */
 const NEAR_SCAN = 1500;
 
@@ -50,10 +49,12 @@ interface Props {
   entry: CollectionEntry;
   /** Bump this number to open the add sheet from outside (right after the unlock moment). */
   openRequest?: number;
+  /** Width of the column the strip sits in. */
+  width: number;
 }
 
 /** "My photos" under a collected spot: up to PHOTO_LIMIT tiles, an add tile, the viewer and the add sheet. */
-export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
+export function PhotoStrip({ spot, entry, openRequest = 0, width }: Props) {
   const t = useTheme();
   const styles = useStyles();
   const tr = useT();
@@ -63,6 +64,8 @@ export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
   const removePhoto = useStore((s) => s.removePhoto);
 
   const photos = entry.photos ?? [];
+  const tile = Math.min(TILE_MAX, Math.floor((width - GAP * 2) / 3));
+  const tileStyle = { width: tile, height: tile };
   const remaining = PHOTO_LIMIT - photos.length;
 
   const [sheet, setSheet] = useState(false);
@@ -195,7 +198,7 @@ export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
       </View>
       <View style={styles.row}>
         {photos.map((p, i) => (
-          <Pressable key={p.id} style={styles.tile} onPress={() => setViewer(i)}>
+          <Pressable key={p.id} style={[styles.tile, tileStyle]} onPress={() => setViewer(i)}>
             <Image
               source={{ uri: thumbUri(p) }}
               style={styles.tileImg}
@@ -206,7 +209,7 @@ export function PhotoStrip({ spot, entry, openRequest = 0 }: Props) {
           </Pressable>
         ))}
         {remaining > 0 && (
-          <Pressable style={[styles.tile, styles.addTile]} onPress={openSheet} disabled={busy}>
+          <Pressable style={[styles.tile, tileStyle, styles.addTile]} onPress={openSheet} disabled={busy}>
             {busy ? (
               <ActivityIndicator color={t.accent} />
             ) : (
@@ -284,7 +287,7 @@ const useStyles = makeStyles((t: Palette) =>
     title: { color: t.faint, fontSize: 11, letterSpacing: 3, fontWeight: '700' },
     count: { color: t.faint, fontSize: 11, letterSpacing: 1 },
     row: { flexDirection: 'row', gap: GAP },
-    tile: { width: TILE, height: TILE, borderRadius: 14, overflow: 'hidden', backgroundColor: t.card },
+    tile: { borderRadius: 14, overflow: 'hidden', backgroundColor: t.card },
     tileImg: { width: '100%', height: '100%' },
     addTile: {
       borderWidth: 1,
@@ -298,6 +301,10 @@ const useStyles = makeStyles((t: Palette) =>
     addText: { color: t.accent, fontSize: 11, fontWeight: '700' },
     backdrop: { flex: 1, backgroundColor: t.backdrop, justifyContent: 'flex-end' },
     sheet: {
+      // full width on phones; a centred card-width sheet on iPad and the iPhone Duo inner display
+      width: '100%',
+      maxWidth: 560,
+      alignSelf: 'center',
       backgroundColor: t.bgElevated,
       borderTopLeftRadius: 24,
       borderTopRightRadius: 24,

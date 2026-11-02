@@ -1,13 +1,12 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import React, { useState } from 'react';
-import { Alert, Dimensions, FlatList, Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Alert, FlatList, Modal, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLang, useT } from '../i18n';
 import { photoUri } from '../photos';
 import { SpotPhoto } from '../store';
 
-const { width: W, height: H } = Dimensions.get('window');
 
 interface Props {
   photos: SpotPhoto[];
@@ -31,6 +30,8 @@ function Pager({ photos, index, onClose, onDelete }: Omit<Props, 'visible'>) {
   const tr = useT();
   const lang = useLang();
   const insets = useSafeAreaInsets();
+  // Read at render time: the window resizes with Split View and when iPhone Duo folds.
+  const { width: W, height: H } = useWindowDimensions();
   const [current, setCurrent] = useState(Math.min(index, Math.max(photos.length - 1, 0)));
   const photo = photos[Math.min(current, photos.length - 1)];
   if (!photo) return null;

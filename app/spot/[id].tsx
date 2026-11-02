@@ -2,7 +2,6 @@ import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import React, { useEffect, useMemo, useState } from 'react';
 import {
-  Dimensions,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -28,8 +27,7 @@ import { nextIsSealed, useHasFull, useSealedSet } from '../../src/entitlements';
 import { metaLabel, spotAltName, spotName, useLang, useT } from '../../src/i18n';
 import { useDevScroll } from '../../src/useDevScroll';
 import { useLocation } from '../../src/useLocation';
-
-const { width: SCREEN_W } = Dimensions.get('window');
+import { COLUMN_MAX, useLayout } from '../../src/layout';
 
 export default function SpotDetailScreen() {
   const t = useTheme();
@@ -86,6 +84,10 @@ export default function SpotDetailScreen() {
   const season = useSeason();
   const night = useNight(weather);
   const tr = useT();
+  const layout = useLayout();
+  // This page is a sheet: on iPad it is narrower than the window, so it sizes itself from its
+  // own measured width (first frame: the window's column).
+  const [paneW, setPaneW] = useState(() => layout.column());
   const lang = useLang();
 
   // Retired spots (active: false) stay viewable for whoever collected them, but can't be collected anew.
@@ -110,7 +112,11 @@ export default function SpotDetailScreen() {
   const inRange = !isFallback && dist <= radius;
   const access = accessMeta[spot.access];
   const category = categoryMeta[spot.category];
-  const dioramaSize = SCREEN_W - 48;
+  const pad = Math.max(24, (paneW - COLUMN_MAX) / 2);
+  const contentW = paneW - pad * 2;
+  // The model fills the column, but never more than half the screen's height, so the name and
+  // the check-in card stay in view (iPad mini, the iPhone Duo displays, landscape iPad).
+  const dioramaSize = Math.round(Math.min(contentW, layout.height * 0.5));
   // Spots whose art is still pending only have the procedural diorama — nothing to zoom into.
   const zoomable = collected && !sealed && !!collectionImage(spot.id);
   const openPaywall = () => router.push('/paywall');
@@ -150,8 +156,13 @@ export default function SpotDetailScreen() {
     .filter((x) => x.d < 30_000);
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top', 'bottom']}>
-      <ScrollView ref={scrollRef} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
+    <SafeAreaView style={styles.safe} edges={['top', 'bottom', 'left', 'right']}>
+      <ScrollView
+        ref={scrollRef}
+        contentContainerStyle={[styles.container, { paddingHorizontal: pad }]}
+        showsVerticalScrollIndicator={false}
+        onLayout={(e) => setPaneW(e.nativeEvent.layout.width)}
+      >
         <View style={styles.topBar}>
           <Pressable onPress={() => router.back()} hitSlop={12}>
             <Ionicons name="chevron-down" size={26} color={t.subtext} />
@@ -160,6 +171,7 @@ export default function SpotDetailScreen() {
 
         {/* Collected dioramas open full-screen for a closer look; locked ones stay a mystery. */}
         <Pressable
+          style={{ alignSelf: 'center' }}
           disabled={!zoomable && !sealed}
           onPress={() => (sealed ? openPaywall() : setViewing(true))}
           accessibilityRole="imagebutton"
@@ -276,7 +288,7 @@ export default function SpotDetailScreen() {
               <Text style={styles.navLinkText}>{tr('spot.revisit')}{isFallback ? '' : ` · ${formatDistance(dist)}`}</Text>
             </Pressable>
           </View>
-          <PhotoStrip spot={spot} entry={entry} openRequest={photoRequest} />
+          <PhotoStrip spot={spot} entry={entry} openRequest={photoRequest} width={contentW} />
           </>
         ) : (
           <View style={styles.checkinCard}>

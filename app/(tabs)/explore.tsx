@@ -19,6 +19,7 @@ import { useSealedSet } from '../../src/entitlements';
 import { entrySeason, useActiveCollections, useStore } from '../../src/store';
 import { Palette, accessMeta, categoryMeta, makeStyles, regionMeta, useTheme } from '../../src/theme';
 import { useAtmosphereOverride, useNight } from '../../src/useAtmosphere';
+import { useLayout } from '../../src/layout';
 import { useLocation } from '../../src/useLocation';
 
 const REGION_FILTERS: (Region | 'all')[] = ['all', 'north', 'central', 'south', 'east'];
@@ -40,6 +41,7 @@ export default function ExploreScreen() {
   const override = useAtmosphereOverride();
   const night = useNight();
   const tr = useT();
+  const layout = useLayout();
   const lang = useLang();
 
   const rows = useMemo(() => {
@@ -56,7 +58,9 @@ export default function ExploreScreen() {
   }, [location, collections, region, owned, query]);
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
+    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
+      {/* one centred column on iPad and the iPhone Duo inner display */}
+      <View style={{ flex: 1, width: layout.column(), alignSelf: 'center' }}>
       <View style={styles.header}>
         <Text style={styles.title}>{tr('explore.title')}</Text>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 4 }}>
@@ -199,6 +203,7 @@ export default function ExploreScreen() {
           );
         }}
       />
+      </View>
     </SafeAreaView>
   );
 }
