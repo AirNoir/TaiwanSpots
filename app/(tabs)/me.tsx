@@ -27,6 +27,7 @@ import { resetEverywhere } from '../../src/sync';
 import { Palette, ThemeMode, categoryMeta, makeStyles, useTheme } from '../../src/theme';
 import { useDevScroll } from '../../src/useDevScroll';
 import { useLayout } from '../../src/layout';
+import { endTrial, startTrial, useTrying } from '../../src/trial';
 
 const THEME_OPTIONS: { mode: ThemeMode; label: I18nKey; icon: string }[] = [
   { mode: 'light', label: 'me.theme.light', icon: 'white-balance-sunny' },
@@ -72,6 +73,24 @@ export default function MeScreen() {
   const setLanguage = useStore((s) => s.setLanguage);
   const tr = useT();
   const layout = useLayout();
+  const trying = useTrying();
+
+  const onStartTrial = () =>
+    Alert.alert(tr('trial.title'), tr('trial.body'), [
+      { text: tr('common.cancel'), style: 'cancel' },
+      {
+        text: tr('trial.start'),
+        onPress: () => {
+          startTrial();
+          router.navigate('/explore');
+        },
+      },
+    ]);
+  const onEndTrial = () =>
+    Alert.alert(tr('trial.endTitle'), tr('trial.endBody'), [
+      { text: tr('common.cancel'), style: 'cancel' },
+      { text: tr('trial.end'), style: 'destructive', onPress: endTrial },
+    ]);
   const lang = useLang();
   const override = useStore((s) => s.atmosphereOverride);
   const setOverride = useStore((s) => s.setAtmosphereOverride);
@@ -214,6 +233,26 @@ export default function MeScreen() {
             <Text style={styles.statNum}>{journeyKm.toLocaleString()}</Text>
             <Text style={styles.statLabel}>{tr('me.journey')}</Text>
           </View>
+        </View>
+
+        {/* Try mode (src/trial.ts): a check-in without travelling, for newcomers and App Review */}
+        <View style={[styles.fullCard, styles.trialCard, trying && styles.trialCardOn]}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <MaterialCommunityIcons name={'map-marker-radius-outline' as any} size={22} color={t.accent} />
+            <View style={{ flex: 1 }}>
+              <Text style={styles.fullStatus}>{tr('trial.title')}</Text>
+              <Text style={styles.trialSub}>{tr(trying ? 'trial.banner' : 'trial.cta')}</Text>
+            </View>
+          </View>
+          <Pressable
+            style={[styles.fullBtn, trying && styles.trialEndBtn]}
+            onPress={trying ? onEndTrial : onStartTrial}
+            accessibilityRole="button"
+          >
+            <Text style={[styles.fullBtnText, trying && { color: t.accent }]}>
+              {tr(trying ? 'trial.end' : 'trial.start')}
+            </Text>
+          </Pressable>
         </View>
 
         {catCounts.length > 0 && (
@@ -577,6 +616,10 @@ const useStyles = makeStyles((t: Palette) =>
     borderColor: t.cardBorder,
     padding: 18,
   },
+  trialCard: { marginTop: 16 },
+  trialCardOn: { backgroundColor: t.accentSoft, borderColor: t.accent },
+  trialSub: { color: t.subtext, fontSize: 12, marginTop: 2, lineHeight: 17 },
+  trialEndBtn: { backgroundColor: 'transparent', borderWidth: 1, borderColor: t.accent },
   fullStatus: { color: t.text, fontSize: 15, fontWeight: '600', flex: 1 },
   fullBtn: {
     backgroundColor: t.accent,

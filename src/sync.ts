@@ -112,6 +112,8 @@ async function run(): Promise<boolean> {
   if (!supabase) return false;
   // the persisted passport must be loaded first, or the cloud would merge into an empty one
   await whenHydrated();
+  // try mode plays with a sample passport: nothing of it goes to (or comes from) the cloud
+  if (useStore.getState().trial) return false;
   const { data: sessionData } = await supabase.auth.getSession();
   const user = sessionData.session?.user;
   if (!user) return false;
@@ -125,6 +127,10 @@ async function run(): Promise<boolean> {
   const cloudRows = cloud.map((r) => ({ ...r, user_id: user.id }));
 
   const store = useStore.getState();
+  // Try mode may have started while the pull was in flight: its sample passport must neither
+  // take in the cloud copy nor be pushed. (Checked again here, after the await; from this line
+  // to the upsert below the passport is read synchronously, so it is the real one.)
+  if (store.trial) return false;
   const merged = mergeCollections(store.collections, cloudRows);
   if (!same(merged, store.collections)) {
     applyingRemote = true;
@@ -175,7 +181,7 @@ export function startSync() {
   if (!supabase || started) return;
   started = true;
   useStore.subscribe((s, prev) => {
-    if (s.collections === prev.collections || applyingRemote) return;
+    if (s.collections === prev.collections || applyingRemote || s.trial) return;
     if (pushTimer) clearTimeout(pushTimer);
     pushTimer = setTimeout(() => void syncNow(), 1500);
   });

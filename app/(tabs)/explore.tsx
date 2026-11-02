@@ -20,6 +20,7 @@ import { entrySeason, useActiveCollections, useStore } from '../../src/store';
 import { Palette, accessMeta, categoryMeta, makeStyles, regionMeta, useTheme } from '../../src/theme';
 import { useAtmosphereOverride, useNight } from '../../src/useAtmosphere';
 import { useLayout } from '../../src/layout';
+import { TRIAL_PLACES, useTrying } from '../../src/trial';
 import { useLocation } from '../../src/useLocation';
 
 const REGION_FILTERS: (Region | 'all')[] = ['all', 'north', 'central', 'south', 'east'];
@@ -33,6 +34,9 @@ export default function ExploreScreen() {
   const collections = useActiveCollections();
   const sealedSet = useSealedSet();
   const devLocation = useStore((s) => s.devLocation);
+  const trying = useTrying();
+  const trialLocation = useStore((s) => s.trialLocation);
+  const setTrialLocation = useStore((s) => s.setTrialLocation);
   const setDevLocation = useStore((s) => s.setDevLocation);
   const { location, isDev, isFallback } = useLocation();
   const [region, setRegion] = useState<Region | 'all'>('all');
@@ -75,8 +79,35 @@ export default function ExploreScreen() {
         </View>
       </View>
 
+      {/* Try mode (src/trial.ts): pick a sample place to stand in for GPS */}
+      {trying && (
+        <View style={styles.trialCard}>
+          <Text style={styles.trialTitle}>{tr('trial.places')}</Text>
+          <View style={styles.trialRow}>
+            {TRIAL_PLACES.map((p) => {
+              const active =
+                trialLocation?.latitude === p.coord.latitude && trialLocation?.longitude === p.coord.longitude;
+              return (
+                <Pressable
+                  key={p.id}
+                  style={[styles.devChip, active && styles.devChipActive]}
+                  onPress={() => setTrialLocation(p.coord)}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: active }}
+                >
+                  <Text style={[styles.devChipText, active && styles.devChipTextActive]}>
+                    {lang === 'zh' ? p.zh : p.en}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+          <Text style={styles.trialHint}>{tr('trial.hint')}</Text>
+        </View>
+      )}
+
       {/* Demo location presets (dev / demo builds only) */}
-      {DEMO_TOOLS && (
+      {DEMO_TOOLS && !trying && (
         <View style={styles.devRow}>
           {DEV_LOCATIONS.map((d) => {
             const active =
@@ -220,6 +251,17 @@ const useStyles = makeStyles((t: Palette) =>
     paddingHorizontal: 20,
     marginTop: 12,
   },
+  trialCard: {
+    marginHorizontal: 20,
+    marginTop: 12,
+    padding: 12,
+    borderRadius: 16,
+    backgroundColor: t.accentSoft,
+    gap: 8,
+  },
+  trialTitle: { color: t.accent, fontSize: 12, fontWeight: '700', letterSpacing: 1 },
+  trialRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  trialHint: { color: t.subtext, fontSize: 12, lineHeight: 17 },
   devChip: {
     paddingHorizontal: 12,
     paddingVertical: 6,

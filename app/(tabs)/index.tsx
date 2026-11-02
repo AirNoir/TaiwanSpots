@@ -24,6 +24,7 @@ import { makeStyles, Palette, useTheme } from '../../src/theme';
 import { overrideWeather, useAtmosphereOverride, useNight, useSeason } from '../../src/useAtmosphere';
 import { useDevScroll } from '../../src/useDevScroll';
 import { HOME_MAX, useLayout } from '../../src/layout';
+import { useTrying } from '../../src/trial';
 import { useLocation } from '../../src/useLocation';
 import { useWidgetSync } from '../../src/widgets/sync';
 
@@ -47,6 +48,7 @@ export default function WorldScreen() {
   const sealedSet = useSealedSet();
   const tr = useT();
   const layout = useLayout();
+  const trying = useTrying();
   const lang = useLang();
   const { location, isFallback } = useLocation();
   useWidgetSync(location, !isFallback);
@@ -127,6 +129,14 @@ export default function WorldScreen() {
             </>
           )}
         </View>
+
+        {trying && (
+          <Pressable style={styles.trialBanner} onPress={() => router.navigate('/me')} accessibilityRole="button">
+            <MaterialCommunityIcons name={'map-marker-radius-outline' as any} size={16} color={t.accent} />
+            <Text style={styles.trialText}>{tr('trial.banner')}</Text>
+            <Text style={styles.trialLink}>{tr('trial.end')}</Text>
+          </Pressable>
+        )}
 
         {isFallback && (
           <View style={styles.locCard}>
@@ -272,6 +282,18 @@ const useStyles = makeStyles((t: Palette) =>
     padding: 14,
     marginBottom: 16,
   },
+  trialBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    backgroundColor: t.accentSoft,
+    borderRadius: 14,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    marginBottom: 16,
+  },
+  trialText: { color: t.text, fontSize: 12, flex: 1 },
+  trialLink: { color: t.accent, fontSize: 12, fontWeight: '700' },
   locTitle: { color: t.text, fontSize: 14, fontWeight: '700' },
   locBody: { color: t.subtext, fontSize: 12, marginTop: 2, lineHeight: 17 },
   locBtn: { color: t.accent, fontSize: 13, fontWeight: '700' },

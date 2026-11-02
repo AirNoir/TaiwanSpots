@@ -70,6 +70,18 @@ export interface AtmosphereOverride {
   night?: boolean;
 }
 
+/**
+ * Try mode (src/trial.ts): the real passport waits here while a sample one is played with.
+ * Null when not trying.
+ */
+export interface TrialState {
+  saved: Record<string, CollectionEntry>;
+  savedPaywallSeen: boolean;
+  /** Demo builds' pretend purchase, cleared while trying so the real one decides sealing. */
+  savedSimulatedFull: boolean | null;
+  startedAt: string; // ISO date
+}
+
 /** Who the cloud copy belongs to (docs/spec.md §5). Null until the first sign-in succeeds. */
 export interface Account {
   id: string;
@@ -92,6 +104,11 @@ interface IslandiaState {
   lastSyncAt: string | null;
   setLastSyncAt: (at: string | null) => void;
   devLocation: LatLng | null;
+  /** Try mode, see TrialState. Sync and the widgets pause while it is set. */
+  trial: TrialState | null;
+  /** The sample place picked in try mode (stands in for GPS while trying). */
+  trialLocation: LatLng | null;
+  setTrialLocation: (loc: LatLng | null) => void;
   themeMode: ThemeMode;
   /** UI language: 'auto' follows the phone (see src/i18n.ts). */
   language: LangPref;
@@ -134,6 +151,9 @@ export const useStore = create<IslandiaState>()(
       lastSyncAt: null,
       setLastSyncAt: (lastSyncAt) => set({ lastSyncAt }),
       devLocation: null,
+      trial: null,
+      trialLocation: null,
+      setTrialLocation: (trialLocation) => set({ trialLocation }),
       themeMode: 'light',
       language: 'auto',
       setLanguage: (language) => set({ language }),
@@ -193,7 +213,7 @@ export const useStore = create<IslandiaState>()(
         }
         set({ collections, onboarded: true });
       },
-      reset: () => set({ collections: {}, onboarded: false, devLocation: null, paywallSeen: false, lastSyncAt: null }),
+      reset: () => set({ collections: {}, onboarded: false, devLocation: null, trial: null, trialLocation: null, paywallSeen: false, lastSyncAt: null }),
     }),
     {
       name: 'islandia-v1',
@@ -202,6 +222,8 @@ export const useStore = create<IslandiaState>()(
         onboarded: s.onboarded,
         collections: s.collections,
         devLocation: s.devLocation,
+        trial: s.trial,
+        trialLocation: s.trialLocation,
         themeMode: s.themeMode,
         language: s.language,
         atmosphereOverride: s.atmosphereOverride,

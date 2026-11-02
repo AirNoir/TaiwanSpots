@@ -54,6 +54,16 @@ export function UnlockOverlay({ spot, visible, sealed = false, onDone }: Props) 
   const [textOpacity] = useState(() => new Animated.Value(0));
   const [showButton, setShowButton] = useState(false);
 
+  // Dev automation: __islandiaUnlockDone() presses "add to collection" while the overlay is up.
+  useEffect(() => {
+    if (!__DEV__ || !visible) return;
+    const g = globalThis as any;
+    g.__islandiaUnlockDone = onDone;
+    return () => {
+      if (g.__islandiaUnlockDone === onDone) delete g.__islandiaUnlockDone;
+    };
+  }, [visible, onDone]);
+
   useEffect(() => {
     if (!visible) return;
     backdrop.setValue(0);

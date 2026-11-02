@@ -9,6 +9,8 @@ const FALLBACK: LatLng = { latitude: 25.0478, longitude: 121.517 };
 
 export function useLocation(): { location: LatLng; isDev: boolean; isFallback: boolean } {
   const devLocation = useStore((s) => s.devLocation);
+  // try mode (src/trial.ts): the sample place picked on the Explore tab stands in for GPS
+  const trialLocation = useStore((s) => (s.trial ? s.trialLocation : null));
   const [gps, setGps] = useState<LatLng | null>(null);
 
   useEffect(() => {
@@ -34,6 +36,7 @@ export function useLocation(): { location: LatLng; isDev: boolean; isFallback: b
     };
   }, []);
 
+  if (trialLocation) return { location: trialLocation, isDev: true, isFallback: false };
   if (DEMO_TOOLS && devLocation) return { location: devLocation, isDev: true, isFallback: false };
   if (gps) return { location: gps, isDev: false, isFallback: false };
   return { location: FALLBACK, isDev: false, isFallback: true };

@@ -110,6 +110,8 @@ function syncActivity(m: WidgetsModule, here: Spot | null, dist: number) {
 export function useWidgetSync(location: LatLng, hasFix: boolean) {
   const collections = useStore((s) => s.collections);
   const sealed = useSealedSet();
+  // Try mode: the sample passport and the sample place must not reach the home screen or lock screen.
+  const trying = useStore((s) => s.trial !== null);
 
   const nearest = useMemo(() => {
     if (!hasFix) return null;
@@ -124,15 +126,15 @@ export function useWidgetSync(location: LatLng, hasFix: boolean) {
 
   const nextKey = nearest ? `${nearest.spot.id}|${widgetDistance(nearest.dist)}` : '';
   useEffect(() => {
-    if (!native) return;
+    if (!native || trying) return;
     updateWidget(native, collections, sealed, nearest).catch((e) => console.warn('[widget] update failed', e));
     // nearest is captured through nextKey so small GPS jitter doesn't reload the widget
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [collections, sealed, nextKey]);
+  }, [collections, sealed, nextKey, trying]);
 
   const here = nearest && nearest.dist <= checkinRadius(nearest.spot) ? nearest : null;
   useEffect(() => {
-    if (!native) return;
+    if (!native || trying) return;
     try {
       syncActivity(native, here?.spot ?? null, here?.dist ?? 0);
     } catch (e) {
@@ -140,5 +142,5 @@ export function useWidgetSync(location: LatLng, hasFix: boolean) {
     }
     // only restart/end when the spot changes, not on every metre of movement
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [here?.spot.id]);
+  }, [here?.spot.id, trying]);
 }
