@@ -1,38 +1,43 @@
-# App Review：審查備註與送審前的阻礙
+# App Review：怎麼讓審查人員用到打卡
 
-2026-11-02 起草。送審時填在 App Store Connect →（版本頁）App Review Information，`store.config.json` 的 `apple.review` 也要同步（`eas metadata:push` 會覆蓋）。
+2026-11-02。審查備註在 `store.config.json` 的 `apple.review.notes`（`eas metadata:push` 會推到 App Store Connect 的 App Review Information），內容以那裡為準。
 
-## 送審前必須先解決（會被退件）
+## 問題
 
-1. **審查人員沒辦法打卡。** 景點要人到現場（GPS 在打卡半徑內）才能收藏，審查人員在美國，不可能走到九份。Apple 準則 2.1 要求審查人員能用到 App 的主要功能，做不到幾乎一定退件。
-   - `store.config.json` 目前的審查備註寫「用 `islandia://dev/unlock-all` 解鎖全部景點」，**但這個連結在正式版是 no-op**（`app/dev/unlock-all.tsx` 只在 `__DEV__` 生效），照做什麼都不會發生。
-   - 示範護照（`islandia://dev/demo`）也只在 demo／開發版有，正式版同樣不作用。
-2. **審查聯絡資料是假的。** `review.email` 是 `review-contact@example.com`、電話是 `+886 900 000 000`，要換成真的（審查有問題會直接聯絡）。
+景點要人在現場（GPS 在打卡半徑內）才能收藏，審查人員在美國，用不到 App 的主要功能，依準則 2.1 幾乎一定退件。原本的備註寫「用 `islandia://dev/unlock-all` 解鎖」，但那個連結在正式版是 no-op。
 
-### 讓審查人員能體驗打卡：選項（待決定）
+## 解法：公開的「體驗模式」（`src/trial.ts`）
 
-| 做法 | 審查人員體驗 | 風險 |
-|---|---|---|
-| A. 正式版加「審查示範」深連結（例如 `islandia://review?code=…`）：載入示範護照（不含已購買），並讓「探索」頁出現模擬位置（台北車站等），可以真的走一次打卡＋解鎖動畫＋封存／付費流程 | 完整：收藏、解鎖、分享卡、照片、內購都能測 | 連結外流的話，一般使用者也能用模擬位置打卡（只影響自己的收藏）；`code` 只寫在審查備註裡，降低外流 |
-| B. 只附示範影片（App Review Information 可附影片） | 看得到流程，但自己測不到打卡 | Apple 常仍要求可操作的方式，退件機率中等 |
-| C. 只寫說明「需到現場」 | 只能瀏覽地圖、探索、景點頁 | 退件機率高 |
+不做只有審查人員知道的隱藏開關（準則 2.3.1 不允許隱藏、未說明的功能），而是做成每個使用者都看得到的功能：「我的」頁的「體驗模式」卡片，標語「不用出門，先試試打卡」。對一般使用者也有用：還沒出門就能先玩到解鎖。
 
-建議 A（加影片當補充）。做法：沿用 `DEMO_TOOLS` 的元件，改成「建置時開啟（demo 版）或執行時由審查連結開啟」；審查模式載入示範護照時不要設 `simulatedFull`，讓審查人員測到真的內購（沙盒）。
+- 開始：原本的護照收進 `trial.saved`，換成一本有 4 個模型（九份、日月潭、阿里山、墾丁）的體驗護照，打開「探索」頁。
+- 模擬位置：探索頁出現「模擬位置」卡片，6 個地點，每個都在景點的打卡半徑內（2026-11-02 依 `src/data/spots.ts` 算出）：
 
-## 審查備註草稿（英文，等 A 做完後定稿）
+  | 地點 | 可收藏 |
+  |---|---|
+  | 台北信義（預設） | 台北 101、象山 |
+  | 台北西門 | 西門町、龍山寺 |
+  | 台中 | 歌劇院、逢甲 |
+  | 台南 | 赤崁樓、孔廟、神農街、林百貨 |
+  | 高雄 | 駁二、旗津、英國領事館 |
+  | 花蓮 | 東大門 |
 
-> Islandia is a collection game: you unlock a miniature diorama of a Taiwan landmark by checking in with your location when you are physically within the spot's check-in radius. Reviewers outside Taiwan can't reach any spot, so we added a review mode.
->
-> To try the full flow:
-> 1. Open this link on the review device (from Safari or Notes): islandia://review?code=XXXX
-> 2. The app loads a sample passport with 38 collected spots, and the Explore tab shows location presets (Taipei Station, Taichung, Tainan, Hualien).
-> 3. Tap "Taipei Station" in Explore, open a nearby uncollected spot (e.g. Ximending), and tap Check in to see the unlock moment. Past the first five free spots a new model arrives sealed; the paywall offers the one-time "Islandia Full" purchase (com.airnoir.islandia.full), which can be bought or restored in the sandbox.
->
-> Sign-in (Apple / Google) is optional and only used to back up the passport; the app works fully without an account. Location is used only while the app is open and is never sent to our servers or to the weather service. Photos attached to spots stay on the device.
+- 第 1 次打卡：第 5 個免費模型解鎖。第 2 次：模型封存、付費頁出現（真的內購，審查時是沙盒），買了會走「全部開封」。
+- 體驗期間：雲端同步暫停（`src/sync.ts` 在開始時與拉回資料後都會檢查）、主畫面小工具與即時動態不更新、首頁有「體驗模式」橫幅、demo 版的「模擬已購買」暫時清掉。
+- 結束：「我的」頁或首頁橫幅的「結束體驗」。原本的護照、`paywallSeen`、模擬購買設定原樣回來；體驗期間加的照片檔會刪掉；然後恢復同步。
+
+已在模擬器（Expo Go，中文與英文介面）走完整流程：開始 → 台北 101 解鎖第 5 個 → 象山封存＋付費頁 → 護照 6/130 → 結束後回到 38/130。也測過「結束後立刻再開始」：同步不會把雲端資料併進體驗護照。
+
+## 送審前還要你做
+
+1. **審查聯絡資料**：`store.config.json` 的 `apple.review.email`、`phone` 還是假的（`review-contact@example.com`、`+886 900 000 000`），換成審查有問題時能聯絡到你的 email 和電話（電話要含國碼）。
+2. **沙盒測試帳號不用給**：審查人員用他們自己的沙盒帳號測內購。登入是選用的，`demoRequired` 維持 `false`。
+3. **（建議）附一段示範影片**：App Review Information 可附影片，錄一次「開始體驗 → 打卡 → 解鎖」約 30 秒，當作備註的補充。
+4. 內購：版本頁 In-App Purchases 區塊勾選 `com.airnoir.islandia.full`（docs/spec.md §9 第 4 項）。
 
 ## 其他送審檢查
 
-- 內購：版本頁 In-App Purchases 區塊勾選 `com.airnoir.islandia.full`（docs/spec.md §9 第 4 項）。
-- App 隱私問卷：照片只存在手機（不收集）；位置用於 App 功能、不連結身分；登入的 email 用於帳號。要和 `docs/privacy.md`、官網隱私權政策一致。
-- 截圖：iPhone 已備（`store/screenshots/`）；iPad 13 吋要等 iPad 版面在真的 build 上確認後再拍（`docs/ipad-support.md`）。
-- 版本說明：已改成 130 個景點（2026-11-02），與 App 顯示一致（`SPOTS` 只算 `active` 的景點）。
+- App 隱私問卷：照片只存在手機（不收集）；位置用於 App 功能、不存到伺服器；登入的 email 用於帳號。要和 `docs/privacy.md`、官網隱私權政策一致。
+- 截圖：iPhone 已備（`store/screenshots/`）；iPad 13 吋要等 iPad 版在 build 上確認後拍（`docs/ipad-support.md`）。可以考慮加一張體驗模式的截圖。
+- 英文介面下，景點介紹與城市名仍是中文（`src/data/spots.ts` 只有中文描述）。不會因此退件，但英文商店頁的使用者會看到中文。
+- 版本說明：已改成 130 個景點（2026-11-02），與 App 顯示一致。
