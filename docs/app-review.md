@@ -35,13 +35,15 @@
 - 客服管道：官網 support／privacy／terms 改成 support@littlestep.me 和 App 內「回報問題・建議」，不再連到 GitHub（已 deploy）。
 - iPad 13 吋截圖：`store/screenshots/zh-Hant/ipad-13/`，7 張，2064×2752，在 iPad Pro 13" (M4) 模擬器上拍。
 
+- 回報功能的資料表：已在線上（migration `20261103000000_feedback`），2026-11-03 用匿名帳號實測：寫入成功、重複送出被擋、讀不回別人的回報、`status` 固定為 `new`。
+- Build 18（production，含 iPad 版面、體驗模式、回報功能），2026-11-03 開始 build，完成後自動送 TestFlight。
+- `eas metadata:push` 已推：審查備註、聯絡資料、商店文案。年齡分級的新題 `socialMedia`（eas-cli 還不支援，會報錯）改用 ASC API 填 `false`，分級仍是 4+。之後再跑 `metadata:push`，這一步還是會報同樣的錯，可以忽略。
+
 還沒做：
-1. 推 `supabase/migrations/20261103000000_feedback.sql`。沒推之前，App 內回報會顯示「送出失敗」，審查人員可能會按到。
-2. 出新的 build（使用者說了才 build）：要包含 iPad 版面、體驗模式和回報功能，Build 16 都還沒有。
-3. TestFlight 實機測 iPad：直向、橫向、分割畫面（docs/ipad-support.md）。
-4. App Store Connect：上傳 iPad 截圖；版本頁 In-App Purchases 勾選 `com.airnoir.islandia.full`；`eas metadata:push` 推審查備註與聯絡資料。
-5. （建議）附一段約 30 秒的示範影片：開始體驗 → 打卡 → 解鎖。
-6. 審查不用給沙盒帳號，`demoRequired` 維持 `false`。
+1. 使用者在 App Store Connect 上傳 iPad 13 吋截圖（`store/screenshots/zh-Hant/ipad-13/`）。
+2. TestFlight 實機測 Build 18 的 iPad：直向、橫向、分割畫面。
+3. 送審：版本頁選 Build 18，In-App Purchases 勾選 `com.airnoir.islandia.full`（第一個內購要和版本一起送）。
+4. （建議）附一段約 30 秒的示範影片：開始體驗 → 打卡 → 解鎖。
 
 ## 其他送審檢查
 
