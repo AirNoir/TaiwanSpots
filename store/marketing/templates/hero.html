@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;900&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:var(--W);height:var(--H);overflow:hidden;background:#FBF2E7;font-family:'Noto Sans TC',sans-serif}
+.v{position:absolute;inset:0;background:radial-gradient(80% 90% at 50% 45%,rgba(255,255,255,0),rgba(255,255,255,0) 60%,rgba(160,120,60,.08) 100%);pointer-events:none}
+.row{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:flex-end;justify-content:center}
+.row img{display:block;-webkit-mask-image:radial-gradient(closest-side,#000 78%,transparent 100%);mask-image:radial-gradient(closest-side,#000 78%,transparent 100%)}
+.cap{position:absolute;left:0;right:0;text-align:center}
+h1{color:#1E2531;font-weight:900;letter-spacing:.06em}
+p{color:#B8711A;font-weight:500;letter-spacing:.18em}
+</style></head><body><div class="cap" id="cap"><h1 id="h"></h1><p id="s"></p></div><div class="row" id="row"></div><div class="v"></div>
+<script>
+const q=JSON.parse(decodeURIComponent(location.hash.slice(1)));
+const R=document.documentElement.style;R.setProperty('--W',q.W+'px');R.setProperty('--H',q.H+'px');
+const cap=document.getElementById('cap');cap.style.top=q.capTop+'px';
+const h=document.getElementById('h');h.textContent=q.title;h.style.fontSize=q.h1+'px';
+const s=document.getElementById('s');s.textContent=q.sub;s.style.fontSize=q.p+'px';s.style.marginTop=(q.p*.6)+'px';
+const row=document.getElementById('row');row.style.bottom=q.rowBottom+'px';row.style.gap=q.gap+'px';
+q.spots.forEach((id,i)=>{const im=new Image();im.src='/Users/a01-0220-0077/workspace/my-space/TaiwanSpots/assets/spots/'+id+'/collection/day.webp';const z=q.sizes[i];im.style.width=z+'px';im.style.height=z+'px';im.style.marginBottom=(q.lift?.[i]||0)+'px';row.appendChild(im)});
+</script></body></html>
