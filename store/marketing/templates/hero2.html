@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700;900&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:var(--W);height:var(--H);overflow:hidden;font-family:'Noto Sans TC',sans-serif}
+body{position:relative;background:radial-gradient(70% 38% at 50% 92%,rgba(160,210,170,.55),rgba(160,210,170,0) 100%),linear-gradient(180deg,#B9DDF1 0%,#DCEEF4 40%,#F4EEDF 72%,#EFE2C6 100%)}
+.cloud{position:absolute;background:#fff;border-radius:50%;filter:blur(calc(var(--W)*.008));opacity:.8}
+.lm{position:absolute;transform:translate(-50%,-50%);filter:drop-shadow(0 calc(var(--W)*.01) calc(var(--W)*.01) rgba(40,60,80,.25))}
+.cap{position:absolute;left:50%;transform:translate(-50%,-50%);text-align:center;white-space:nowrap}
+h1{color:#1E2531;font-weight:900;letter-spacing:.05em;text-shadow:0 2px 0 rgba(255,255,255,.6)}
+.pill{display:inline-block;padding:.35em 1.2em;border-radius:999px;background:#B8711A;color:#fff;font-weight:700;letter-spacing:.1em}
+</style></head><body>
+<div class="cap" id="cap"><h1 id="h"></h1><div class="pill" id="s"></div></div>
+<script>
+const q=JSON.parse(decodeURIComponent(location.hash.slice(1)));const W=q.W,H=q.H;
+document.documentElement.style.setProperty('--W',W+'px');document.documentElement.style.setProperty('--H',H+'px');
+(q.clouds).forEach(([x,y,w,h])=>{const c=document.createElement('div');c.className='cloud';Object.assign(c.style,{left:x*W+'px',top:y*H+'px',width:w*W+'px',height:h*W+'px'});document.body.appendChild(c)});
+q.lms.forEach(([id,x,y,w])=>{const im=new Image();im.className='lm';im.src=q.A+'/'+id+'/world/landmark.webp';Object.assign(im.style,{left:x*W+'px',top:y*H+'px',width:w*W+'px'});document.body.appendChild(im)});
+const cap=document.getElementById('cap');cap.style.left=q.cx*W+'px';cap.style.top=q.cy*H+'px';
+const h=document.getElementById('h');h.textContent=q.title;h.style.fontSize=q.h1+'px';
+const s=document.getElementById('s');s.textContent=q.sub;s.style.fontSize=q.p+'px';s.style.marginTop=q.p*.7+'px';
+document.body.appendChild(cap);
+</script></body></html>

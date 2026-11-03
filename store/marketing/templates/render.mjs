@@ -9,7 +9,7 @@ for (const j of jobs) {
   await p.evaluate(() => document.fonts.ready);
   await p.waitForFunction(() => [...document.images].every((i) => i.complete && i.naturalWidth));
   await p.waitForTimeout(300);
-  await p.screenshot({ path: j.out, type: 'jpeg', quality: 92 });
+  await p.screenshot({ path: j.out, ...(j.out.endsWith('.png') ? { type: 'png' } : { type: 'jpeg', quality: 92 }) });
   await p.close(); console.log('ok', j.out);
 }
 await b.close();

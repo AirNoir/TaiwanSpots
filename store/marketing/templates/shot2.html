@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:var(--W);height:var(--H);overflow:hidden;font-family:'Noto Sans TC',sans-serif}
+body{position:relative;background:linear-gradient(180deg,var(--c1) 0%,var(--c2) 62%,var(--c3) 100%)}
+.cloud{position:absolute;background:#fff;border-radius:50%;filter:blur(calc(var(--W)*.012));opacity:.75}
+.cap{position:absolute;left:0;right:0;top:calc(var(--H)*.045);text-align:center;padding:0 7%;z-index:3}
+h1{color:#1E2531;font-weight:900;font-size:var(--h1);line-height:1.25;letter-spacing:.04em}
+.pill{display:inline-block;margin-top:calc(var(--H)*.012);padding:.35em 1.1em;border-radius:999px;background:rgba(255,255,255,.72);color:var(--ink);font-weight:700;font-size:var(--p);letter-spacing:.06em}
+.dev{position:absolute;left:50%;transform:translateX(-50%);background:#1A1A1C;padding:var(--bz);border-radius:var(--r);box-shadow:0 50px 100px rgba(40,50,70,.25),0 10px 30px rgba(40,50,70,.15);z-index:1}
+.dev img{display:block;width:var(--sw);border-radius:calc(var(--r) - var(--bz))}
+.deco{position:absolute;z-index:2;filter:drop-shadow(0 calc(var(--W)*.02) calc(var(--W)*.02) rgba(40,50,70,.28))}
+.spark{position:absolute;z-index:2;color:#fff;text-shadow:0 0 30px rgba(255,190,90,.9);font-weight:900}
+</style></head><body>
+<div class="cap"><h1 id="h"></h1><div class="pill" id="s"></div></div>
+<div class="dev" id="d"><img id="i"></div>
+<script>
+const q=JSON.parse(decodeURIComponent(location.hash.slice(1)));
+const R=document.documentElement.style;const W=q.W,H=q.H;
+for(const k of['W','H','h1','p','sw','bz','r'])R.setProperty('--'+k,q[k]+'px');
+for(const k of['c1','c2','c3','ink'])R.setProperty('--'+k,q[k]);
+document.getElementById('h').textContent=q.title;document.getElementById('s').textContent=q.sub;
+document.getElementById('d').style.bottom=q.bottom+'px';document.getElementById('i').src=q.img;
+(q.clouds||[]).forEach(([x,y,w,h])=>{const c=document.createElement('div');c.className='cloud';Object.assign(c.style,{left:x*W+'px',top:y*H+'px',width:w*W+'px',height:h*W+'px'});document.body.appendChild(c)});
+(q.deco||[]).forEach(d=>{const im=new Image();im.className='deco';im.src=q.A+'/'+d.id+'/world/landmark.webp';Object.assign(im.style,{left:d.x*W+'px',top:d.y*H+'px',width:d.w*W+'px',transform:`rotate(${d.rot||0}deg)`});document.body.appendChild(im)});
+(q.sparks||[]).forEach(([x,y,s])=>{const e=document.createElement('div');e.className='spark';e.textContent='✦';Object.assign(e.style,{left:x*W+'px',top:y*H+'px',fontSize:s*W+'px'});document.body.appendChild(e)});
+</script></body></html>
