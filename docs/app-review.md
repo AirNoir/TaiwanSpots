@@ -28,16 +28,24 @@
 
 已在模擬器（Expo Go，中文與英文介面）走完整流程：開始 → 台北 101 解鎖第 5 個 → 象山封存＋付費頁 → 護照 6/130 → 結束後回到 38/130。也測過「結束後立刻再開始」：同步不會把雲端資料併進體驗護照。
 
-## 送審前還要你做
+## 送審前還要做（2026-11-03 更新）
 
-1. **審查聯絡資料**：`store.config.json` 的 `apple.review.email`、`phone` 還是假的（`review-contact@example.com`、`+886 900 000 000`），換成審查有問題時能聯絡到你的 email 和電話（電話要含國碼）。
-2. **沙盒測試帳號不用給**：審查人員用他們自己的沙盒帳號測內購。登入是選用的，`demoRequired` 維持 `false`。
-3. **（建議）附一段示範影片**：App Review Information 可附影片，錄一次「開始體驗 → 打卡 → 解鎖」約 30 秒，當作備註的補充。
-4. 內購：版本頁 In-App Purchases 區塊勾選 `com.airnoir.islandia.full`（docs/spec.md §9 第 4 項）。
+已完成：
+- 審查聯絡資料：`store.config.json` 已填（email、+886 919379159）。
+- 客服管道：官網 support／privacy／terms 改成 support@littlestep.me 和 App 內「回報問題・建議」，不再連到 GitHub（已 deploy）。
+- iPad 13 吋截圖：`store/screenshots/zh-Hant/ipad-13/`，7 張，2064×2752，在 iPad Pro 13" (M4) 模擬器上拍。
+
+還沒做：
+1. 推 `supabase/migrations/20261103000000_feedback.sql`。沒推之前，App 內回報會顯示「送出失敗」，審查人員可能會按到。
+2. 出新的 build（使用者說了才 build）：要包含 iPad 版面、體驗模式和回報功能，Build 16 都還沒有。
+3. TestFlight 實機測 iPad：直向、橫向、分割畫面（docs/ipad-support.md）。
+4. App Store Connect：上傳 iPad 截圖；版本頁 In-App Purchases 勾選 `com.airnoir.islandia.full`；`eas metadata:push` 推審查備註與聯絡資料。
+5. （建議）附一段約 30 秒的示範影片：開始體驗 → 打卡 → 解鎖。
+6. 審查不用給沙盒帳號，`demoRequired` 維持 `false`。
 
 ## 其他送審檢查
 
 - App 隱私問卷：照片只存在手機（不收集）；位置用於 App 功能、不存到伺服器；登入的 email 用於帳號。要和 `docs/privacy.md`、官網隱私權政策一致。
-- 截圖：iPhone 已備（`store/screenshots/`）；iPad 13 吋要等 iPad 版在 build 上確認後拍（`docs/ipad-support.md`）。可以考慮加一張體驗模式的截圖。
+- 截圖：iPhone 和 iPad 13 吋都已備好（`store/screenshots/zh-Hant/`）。可以考慮加一張體驗模式的截圖。
 - 英文介面下，景點介紹與城市名仍是中文（`src/data/spots.ts` 只有中文描述）。不會因此退件，但英文商店頁的使用者會看到中文。
 - 版本說明：已改成 130 個景點（2026-11-02），與 App 顯示一致。

@@ -34,7 +34,7 @@
 
 **聯絡**
 
-有任何問題，請在 App 的「我的」頁按「回報問題・建議」。回報只有我們看得到，不會公開。
+有任何問題，請寄信到 support@littlestep.me，或在 App 的「我的」頁按「回報問題・建議」。回報只有我們看得到，不會公開。
 
 ## English
 
@@ -68,4 +68,4 @@ The full version is sold through Apple's App Store; we never see your payment de
 
 **Contact**
 
-Use "Report a problem or suggest" on the Me tab in the app. Reports are seen only by us and are never public.
+Email support@littlestep.me, or use "Report a problem or suggest" on the Me tab in the app. Reports are seen only by us and are never public.
