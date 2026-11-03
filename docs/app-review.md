@@ -37,7 +37,7 @@
 
 - 回報功能的資料表：已在線上（migration `20261103000000_feedback`），2026-11-03 用匿名帳號實測：寫入成功、重複送出被擋、讀不回別人的回報、`status` 固定為 `new`。
 - Build 18（production，含 iPad 版面、體驗模式、回報功能），2026-11-03 開始 build，完成後自動送 TestFlight。
-- `eas metadata:push` 已推：審查備註、聯絡資料、商店文案。年齡分級的新題 `socialMedia`（eas-cli 還不支援，會報錯）改用 ASC API 填 `false`，分級仍是 4+。之後再跑 `metadata:push`，這一步還是會報同樣的錯，可以忽略。
+- `eas metadata:push` 已推：審查備註、聯絡資料、商店文案。年齡分級的新題 `socialMedia`（eas-cli 還不支援，會報錯）改用 ASC API 填 `false`，分級仍是 4+。填過之後 `metadata:push` 就不再報錯。2026-11-03 起 App 主要語言改為繁體中文（zh-Hant），審查備註改成中英雙語。
 
 還沒做：
 1. 使用者在 App Store Connect 上傳 iPad 13 吋截圖（`store/screenshots/zh-Hant/ipad-13/`）。
