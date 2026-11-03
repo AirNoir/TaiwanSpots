@@ -289,6 +289,14 @@ export default function SpotDetailScreen() {
             </Pressable>
           </View>
           <PhotoStrip spot={spot} entry={entry} openRequest={photoRequest} width={contentW} />
+          <Pressable
+            style={[styles.navLink, { alignSelf: 'center', marginTop: 18 }]}
+            onPress={() => router.push({ pathname: '/feedback', params: { spot: spot.id } })}
+            accessibilityRole="button"
+          >
+            <MaterialCommunityIcons name={'message-alert-outline' as any} size={14} color={t.subtext} />
+            <Text style={styles.navLinkText}>{tr('feedback.spotEntry')}</Text>
+          </Pressable>
           </>
         ) : (
           <View style={styles.checkinCard}>

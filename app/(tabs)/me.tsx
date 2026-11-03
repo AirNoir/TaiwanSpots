@@ -396,6 +396,20 @@ export default function MeScreen() {
           </>
         )}
 
+        {/* Problem reports go to the admin site (app/feedback.tsx), never a public issue tracker */}
+        <Pressable
+          style={[styles.fullCard, { flexDirection: 'row', alignItems: 'center', gap: 10 }]}
+          onPress={() => router.push('/feedback')}
+          accessibilityRole="button"
+        >
+          <MaterialCommunityIcons name={'message-alert-outline' as any} size={22} color={t.accent} />
+          <View style={{ flex: 1 }}>
+            <Text style={styles.fullStatus}>{tr('feedback.entry')}</Text>
+            <Text style={styles.trialSub}>{tr('feedback.entrySub')}</Text>
+          </View>
+          <MaterialCommunityIcons name={'chevron-right' as any} size={20} color={t.faint} />
+        </Pressable>
+
         <Text style={styles.sectionTitle}>{tr('me.achievements')}</Text>
         {ACHIEVEMENTS.map((a) => {
           const done = a.check(collected);

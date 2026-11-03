@@ -76,8 +76,8 @@
     "review": {
       "firstName": "Tyrese",
       "lastName": "Lai",
-      "email": "review-contact@example.com",
-      "phone": "+886 900 000 000",
+      "email": "williams710504@gmail.com",
+      "phone": "+886 919379159",
       "demoRequired": false,
       "notes": "Islandia is a collection game: you unlock a miniature diorama of a Taiwan landmark by checking in with your location while you are within the spot's check-in radius. Reviewers outside Taiwan can't reach a spot, so the app has a Try mode that any user can open.\n\nTo try the full flow:\n1. Finish the short intro (allowing location is optional).\n2. Open the ME tab (rightmost) and tap \"Start trying\" on the Try mode card, then confirm.\n3. The app switches to a sample passport with 4 models and opens Explore, where a \"Simulated location\" card lists sample places. \"Taipei Xinyi\" is preselected.\n4. Open Taipei 101 (marked \"In range\") and tap \"Collect\": the unlock moment plays; tap \"Add to collection\" and the 5th free model joins the passport.\n5. Go back, open Elephant Mountain (also \"In range\") and collect it the same way: past the free five a new model arrives sealed and the paywall offers the one-time purchase \"Islandia Full\" (com.airnoir.islandia.full). It can be bought or restored with a sandbox account; buying it opens every sealed model.\n6. Tap \"End try mode\" on the ME tab (or the banner on the World tab): the sample passport is deleted and the user's own passport comes back.\n\nSign in with Apple / Google is optional and only backs up the passport; the app works fully without an account. Location is used only while the app is open; it is never stored on our servers or sent to the weather service. Photos attached to spots stay on the device."
     },

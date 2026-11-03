@@ -48,6 +48,10 @@ export default function RootLayout() {
           name="paywall"
           options={{ presentation: 'modal', contentStyle: { backgroundColor: t.bgElevated } }}
         />
+        <Stack.Screen
+          name="feedback"
+          options={{ presentation: 'modal', contentStyle: { backgroundColor: t.bgElevated } }}
+        />
       </Stack>
     </GestureHandlerRootView>
   );
