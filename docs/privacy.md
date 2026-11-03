@@ -1,6 +1,6 @@
 # 微縮台灣 Islandia 隱私權政策 / Privacy Policy
 
-最後更新：2026-10-29 · 正式網址 https://islandia.littlestep.me/privacy（本檔為同步副本）
+最後更新：2026-11-03 · 正式網址 https://islandia.littlestep.me/privacy（本檔為同步副本）
 
 ## 中文
 
@@ -13,6 +13,7 @@
 - **帳號與備份**：App 第一次開啟時會在背景建立一個匿名帳號，把你的收藏紀錄備份到我們的雲端（Supabase，資料存放於東京）。你可以在「我的」頁用 Apple 或 Google 帳號登入；此時我們只會收到該帳號提供的電子郵件（Apple 可選擇隱藏）與一組識別碼，用來讓你換手機時找回收藏。備份內容只有上面的收藏紀錄，不含位置。
 - **照片**：你在景點頁加入的照片（每座最多 3 張）只儲存在你的手機裡，不會上傳到我們或任何第三方的伺服器，也不包含在雲端備份中。App 存檔時會重新壓縮，不保留原始照片的拍攝位置等中繼資料。相機與相簿權限只在你選擇加照片或存分享卡時才會詢問。
 - **用 Google 帳號登入時**：只向 Google 要求基本的個人資料範圍（電子郵件、識別碼），用來辨識是同一個人、把護照備份綁到你的帳號。不會存取你的 Google 聯絡人、雲端硬碟、日曆或其他 Google 資料，也不會把 Google 帳號資料分享給任何第三方。
+- **回報問題與建議**：只有在你主動按「回報問題・建議」送出時，我們才會收到：你寫的內容、選填的回覆用電子郵件、相關景點（如有），以及 App 版本、系統版本、裝置類型、語言、是否為完整版、已收藏數量。不含位置、照片或裝置識別碼。存放在 Supabase（東京），只有我們看得到；電子郵件只用來回覆該則回報。
 
 **天氣查詢**
 
@@ -20,9 +21,9 @@
 
 **我們不做什麼**
 
-- 不收集姓名或聯絡方式；電子郵件只用來識別你的登入帳號，不寄送郵件、不用於行銷。
+- 不收集姓名；登入帳號的電子郵件只用來識別帳號，回報時留的電子郵件只用來回覆該則回報，都不用於行銷。
 - 不使用第三方分析或廣告 SDK。
-- 除了上述天氣查詢與收藏備份，不把任何資料傳送到我們或第三方的伺服器。位置資料永遠不上傳。
+- 除了上述天氣查詢、收藏備份與你主動送出的回報，不把任何資料傳送到我們或第三方的伺服器。位置資料永遠不上傳。
 
 **App 內購買**
 
@@ -47,6 +48,7 @@ Islandia is an app that unlocks miniature dioramas of Taiwanese landmarks when y
 - **Account and backup**: on first launch the app silently creates an anonymous account and backs up your collection progress to our cloud (Supabase, hosted in Tokyo). On the Me tab you can sign in with Apple or Google; we then receive only the email that account shares (Apple lets you hide it) and an identifier, used to bring your passport back on a new phone. The backup holds the collection progress above and nothing else; never your location.
 - **Photos**: photos you add to a spot (up to 3 each) are stored only on your phone. They are never uploaded to us or to any third party and are not part of the cloud backup. The app re-encodes them when saving, so the original's metadata (such as where it was taken) is not kept. Camera and photo-library access is requested only when you choose to add a photo or save a share card.
 - **When you sign in with Google**: we request only Google's basic profile scopes (email and identifier) to recognise you as the same person and attach the passport backup to your account. We do not access your Google contacts, Drive, Calendar or any other Google data, and never share Google account data with third parties.
+- **Problem reports and suggestions**: only when you choose to send one from "Report a problem or suggest" do we receive what you wrote, an optional reply email, the related spot (if any), and the app version, OS version, device type, language, whether you have the full version and how many spots you have collected. No location, photos or device identifiers. Stored in Supabase (Tokyo), seen only by us; the email is used only to reply to that report.
 
 **Weather lookups**
 
@@ -54,9 +56,9 @@ To show current weather for spots and regions, the app queries Open-Meteo (open-
 
 **What we do not do**
 
-- No names or contact details; an email serves only to identify your sign-in account and is never used for mail or marketing.
+- No names. A sign-in email serves only to identify your account, and an email left on a report is used only to reply to it; neither is used for marketing.
 - No third-party analytics or advertising SDKs.
-- Apart from the weather lookups and the passport backup above, no data is sent to our servers or to anyone else's. Location is never uploaded.
+- Apart from the weather lookups, the passport backup and reports you choose to send, no data is sent to our servers or to anyone else's. Location is never uploaded.
 
 **In-app purchase**
 
