@@ -235,8 +235,8 @@ export function PhotoStrip({ spot, entry, openRequest = 0, width }: Props) {
             <Text style={styles.sheetTitle}>{tr('photo.prompt')}</Text>
             <Text style={styles.sheetSub}>{tr('photo.promptSub', { max: PHOTO_LIMIT })}</Text>
             {cameraAvailable() && <SheetButton icon="camera-outline" label={tr('photo.camera')} onPress={fromCamera} />}
-            <SheetButton icon="calendar-today" label={dayLabel} onPress={fromThatDay} />
-            <SheetButton icon="map-marker-radius-outline" label={tr('photo.near')} onPress={fromNear} />
+            {Platform.OS === 'ios' && <SheetButton icon="calendar-today" label={dayLabel} onPress={fromThatDay} />}
+            {Platform.OS === 'ios' && <SheetButton icon="map-marker-radius-outline" label={tr('photo.near')} onPress={fromNear} />}
             <SheetButton icon="image-multiple-outline" label={tr('photo.library')} onPress={fromLibrary} />
             <Pressable style={styles.later} onPress={() => setSheet(false)}>
               <Text style={styles.laterText}>{tr('photo.later')}</Text>

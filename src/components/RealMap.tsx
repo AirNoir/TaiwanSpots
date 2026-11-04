@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, Platform, StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker, Region } from 'react-native-maps';
 import { collectionThumbnail, DIORAMA_BG, silhouetteImage } from '../data/spotAssets';
 import { useSealedSet } from '../entitlements';
@@ -39,6 +39,45 @@ const BUBBLE_LABEL_H = 23;
 const LABEL_MAX = 120;
 // room for the header row (back button / place name) and the docked callout
 const EDGE = { top: 90, right: 44, bottom: 96, left: 44 };
+
+// Custom Google Maps styles for Android: muted colors, minimal POI, no traffic icons
+const ANDROID_MAP_STYLE_LIGHT = [
+  { elementType: 'geometry', stylers: [{ color: '#f5f5f5' }] },
+  { elementType: 'labels.icon', stylers: [{ visibility: 'off' }] },
+  { elementType: 'labels.text.fill', stylers: [{ color: '#616161' }] },
+  { elementType: 'labels.text.stroke', stylers: [{ color: '#f5f5f5' }] },
+  { featureType: 'administrative', elementType: 'geometry', stylers: [{ visibility: 'off' }] },
+  { featureType: 'administrative.land_parcel', stylers: [{ visibility: 'off' }] },
+  { featureType: 'administrative.neighborhood', stylers: [{ visibility: 'off' }] },
+  { featureType: 'poi', stylers: [{ visibility: 'off' }] },
+  { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#e8e8e8' }] },
+  { featureType: 'road', elementType: 'labels.icon', stylers: [{ visibility: 'off' }] },
+  { featureType: 'road.arterial', elementType: 'geometry', stylers: [{ color: '#e0e0e0' }] },
+  { featureType: 'road.highway', elementType: 'geometry', stylers: [{ color: '#d6d6d6' }] },
+  { featureType: 'road.local', stylers: [{ visibility: 'simplified' }] },
+  { featureType: 'transit', stylers: [{ visibility: 'off' }] },
+  { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#c9e9f6' }] },
+  { featureType: 'water', elementType: 'labels.text.fill', stylers: [{ color: '#9ca5b3' }] },
+];
+
+const ANDROID_MAP_STYLE_DARK = [
+  { elementType: 'geometry', stylers: [{ color: '#1a1f2e' }] },
+  { elementType: 'labels.icon', stylers: [{ visibility: 'off' }] },
+  { elementType: 'labels.text.fill', stylers: [{ color: '#8a93a6' }] },
+  { elementType: 'labels.text.stroke', stylers: [{ color: '#1a1f2e' }] },
+  { featureType: 'administrative', elementType: 'geometry', stylers: [{ visibility: 'off' }] },
+  { featureType: 'administrative.land_parcel', stylers: [{ visibility: 'off' }] },
+  { featureType: 'administrative.neighborhood', stylers: [{ visibility: 'off' }] },
+  { featureType: 'poi', stylers: [{ visibility: 'off' }] },
+  { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#252d3f' }] },
+  { featureType: 'road', elementType: 'labels.icon', stylers: [{ visibility: 'off' }] },
+  { featureType: 'road.arterial', elementType: 'geometry', stylers: [{ color: '#2a3345' }] },
+  { featureType: 'road.highway', elementType: 'geometry', stylers: [{ color: '#2f3a4f' }] },
+  { featureType: 'road.local', stylers: [{ visibility: 'simplified' }] },
+  { featureType: 'transit', stylers: [{ visibility: 'off' }] },
+  { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#0f1419' }] },
+  { featureType: 'water', elementType: 'labels.text.fill', stylers: [{ color: '#515c6d' }] },
+];
 
 /**
  * The real Apple / Google map behind a region or county: actual streets,
@@ -222,12 +261,21 @@ export function RealMap({
     return () => clearTimeout(id);
   }, [viewKey]);
 
+  const mapProps = Platform.select({
+    ios: {
+      mapType: 'mutedStandard' as const,
+      userInterfaceStyle: (dark ? 'dark' : 'light') as 'dark' | 'light',
+    },
+    android: {
+      customMapStyle: dark ? ANDROID_MAP_STYLE_DARK : ANDROID_MAP_STYLE_LIGHT,
+    },
+  });
+
   return (
     <MapView
       ref={ref}
       style={{ width, height }}
-      mapType="mutedStandard"
-      userInterfaceStyle={dark ? 'dark' : 'light'}
+      {...mapProps}
       pitchEnabled={false}
       rotateEnabled={false}
       showsCompass={false}
