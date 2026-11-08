@@ -2,6 +2,7 @@ import type { AuthError, Session, User } from '@supabase/supabase-js';
 import * as AppleAuthentication from 'expo-apple-authentication';
 import * as Crypto from 'expo-crypto';
 import { AppState, Platform } from 'react-native';
+import { markActive } from './activity';
 import { Account, useStore } from './store';
 import { supabase } from './supabase';
 import { syncNow } from './sync';
@@ -80,13 +81,18 @@ export function startAuth() {
   client.auth.onAuthStateChange((event, session) => {
     // keep this callback synchronous: awaiting the client here deadlocks its lock
     useStore.getState().setAccount(toAccount(session?.user));
-    if (session && (event === 'INITIAL_SESSION' || event === 'SIGNED_IN')) setTimeout(() => void syncNow(), 0);
+    if (session && (event === 'INITIAL_SESSION' || event === 'SIGNED_IN')) {
+      setTimeout(() => {
+        void syncNow();
+        markActive(session.user.id);
+      }, 0);
+    }
   });
   void ensureSession();
   AppState.addEventListener('change', (state) => {
     if (state === 'active') {
       client.auth.startAutoRefresh();
-      void ensureSession();
+      void ensureSession().then((session) => session && markActive(session.user.id));
     } else {
       client.auth.stopAutoRefresh();
     }

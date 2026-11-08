@@ -218,6 +218,8 @@ Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一�
 - App Store 已上架：https://apps.apple.com/tw/app/id6822659015（App ID `6822659015`）。官網首頁的「即將上架」改成連到 App Store 的按鈕，並加了 Safari 智慧橫幅（`apple-itunes-app`）。
 - 營運後台 `islandia-admin`（`~/workspace/my-space/islandia-admin`，Next.js + Supabase service role，架構同 little-steps-admin）：概況（上架資訊、帳號、打卡、收藏、走勢）、景點收藏排行、使用者、問題回報（改狀態、內部備註）。上線於 https://islandia-admin.littlestep.me（Vercel）。
 - 後台要的資料表與 views 在 `supabase/migrations/20261108000000_admin.sql`：`admins`（管理者名單）、`v_admin_users`、`v_admin_spots`、`v_admin_daily`。讀 `auth.users` 的 view 以擁有者權限執行，並對 anon／authenticated revoke。
+- 後台細節比照小步腳印（`20261108000100_admin_activity.sql`）：App 每天第一次開 App／回前景呼叫 `mark_active()`（`src/activity.ts`），記活躍日與裝置（平台、機型、系統、App 版本、語系、是否開發機、是否完整版、手機上的收藏數）；動作事件寫 `app_events`（`src/analytics.ts`：導覽完成、打卡、看付費牆、購買、恢復購買、分享、加照片、開導航）。舊版 App 的帳號從登入 session 的 user agent 推平台。內部帳號可在後台標記，不計入統計。
+- 這些要新版 App（加了 `expo-device`、`expo-application` 原生模組，要重新 build）上架後才會開始累積。上架前要同步更新隱私權政策與 App Store 的 App 隱私問卷（裝置資訊、產品互動）。
 
 ### 下一步
 

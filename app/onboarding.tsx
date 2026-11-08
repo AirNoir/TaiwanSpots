@@ -11,6 +11,7 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { logEvent } from '../src/analytics';
 import { TaiwanWorld } from '../src/components/TaiwanWorld';
 import { useStore } from '../src/store';
 import { makeStyles, Palette, useTheme } from '../src/theme';
@@ -70,6 +71,7 @@ export default function OnboardingScreen() {
       // the app works without location (no check-ins); never trap the user on this page
     }
     setOnboarded();
+    logEvent('onboarding_done');
     router.replace('/(tabs)');
   };
 

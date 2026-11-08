@@ -1,5 +1,6 @@
 import { Directory, File, Paths } from 'expo-file-system';
 import { Platform } from 'react-native';
+import { logEvent } from './analytics';
 import { distanceMeters, LatLng } from './geo';
 import { PHOTO_LIMIT, SpotPhoto } from './store';
 
@@ -74,6 +75,7 @@ export async function importPhoto(spotId: string, picked: PickedImage): Promise<
   const thumb = await encode({ uri: full.uri, width: full.width, height: full.height }, THUMB_EDGE, THUMB_QUALITY);
   new File(full.uri).move(new File(dir, `${id}.jpg`));
   new File(thumb.uri).move(new File(dir, `${id}.t.jpg`));
+  logEvent('photo_added', { spot_id: spotId });
   return {
     id,
     file: `photos/${spotId}/${id}.jpg`,

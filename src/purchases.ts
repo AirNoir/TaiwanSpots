@@ -1,6 +1,7 @@
 import Constants, { ExecutionEnvironment } from 'expo-constants';
 import { AppState, Platform } from 'react-native';
 import Purchases, { CustomerInfo, PRODUCT_CATEGORY, PurchasesStoreProduct } from 'react-native-purchases';
+import { logEvent } from './analytics';
 import { useStore } from './store';
 
 // One-time purchases through RevenueCat (docs/spec.md §2, §4). The public SDK key
@@ -69,8 +70,10 @@ export async function buy(product: PurchasesStoreProduct): Promise<BuyResult> {
   try {
     const { customerInfo } = await Purchases.purchaseStoreProduct(product);
     apply(customerInfo);
+    logEvent('purchase', { result: 'bought' });
     return 'bought';
   } catch (e: any) {
+    logEvent('purchase', { result: e?.userCancelled ? 'cancelled' : 'failed' });
     if (e?.userCancelled) return 'cancelled';
     console.warn('[purchases] purchase failed', e);
     return 'failed';
@@ -84,8 +87,11 @@ export async function restore(): Promise<RestoreResult> {
   try {
     const info = await Purchases.restorePurchases();
     apply(info);
-    return Object.keys(info.entitlements.active).length ? 'restored' : 'nothing';
+    const result = Object.keys(info.entitlements.active).length ? 'restored' : 'nothing';
+    logEvent('restore', { result });
+    return result;
   } catch (e) {
+    logEvent('restore', { result: 'failed' });
     console.warn('[purchases] restore failed', e);
     return 'failed';
   }

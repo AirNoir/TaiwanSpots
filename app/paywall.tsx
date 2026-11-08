@@ -7,6 +7,7 @@ import type { PurchasesStoreProduct } from 'react-native-purchases';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Diorama } from '../src/components/Diorama';
 import { spotById, SPOTS } from '../src/data/spots';
+import { logEvent } from '../src/analytics';
 import { DEMO_TOOLS } from '../src/demo';
 import { FREE_LIMIT, sealedList, useHasFull, withUnseal } from '../src/entitlements';
 import { useT } from '../src/i18n';
@@ -33,6 +34,10 @@ export default function PaywallScreen() {
   const [product, setProduct] = useState<PurchasesStoreProduct | null>(null);
   const [loading, setLoading] = useState(purchasesAvailable);
   const [busy, setBusy] = useState(false);
+
+  useEffect(() => {
+    logEvent('paywall_viewed');
+  }, []);
 
   useEffect(() => {
     if (!purchasesAvailable) return;

@@ -2,6 +2,7 @@ import * as Linking from 'expo-linking';
 import { ActionSheetIOS, Platform } from 'react-native';
 import { Spot } from './data/spots';
 import { I18nKey, resolveLang, translate } from './i18n';
+import { logEvent } from './analytics';
 import { useStore } from './store';
 
 // Hands a spot to the phone's own navigation app; nothing is routed in-app.
@@ -70,9 +71,11 @@ export async function openDirections(
       );
     }
     if (!app) return false;
+    logEvent('directions_opened', { spot_id: spot.id, app, mode });
     return openFirst([directionsUrl(app, spot, mode), webDirectionsUrl(spot, mode)]);
   }
   const d = dest(spot);
+  logEvent('directions_opened', { spot_id: spot.id, app: 'google', mode });
   return openFirst([
     directionsUrl('google', spot, mode),
     `geo:${d}?q=${d}(${encodeURIComponent(spot.name)})`,

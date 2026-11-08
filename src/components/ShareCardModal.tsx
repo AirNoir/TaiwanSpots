@@ -6,6 +6,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Alert, Modal, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { captureRef } from 'react-native-view-shot';
 import { SEASON_LABELS, seasonMeta, skyMeta, skyName } from '../atmosphere';
+import { logEvent } from '../analytics';
 import { Spot } from '../data/spots';
 import { Lang, metaLabel, spotAltName, spotName, useLang, useT } from '../i18n';
 import { photoUri, saveToLibrary, thumbUri } from '../photos';
@@ -95,6 +96,7 @@ function ShareSheet({ spot, entry, totalCollected, totalSpots, onClose }: Props)
         return;
       }
       await Sharing.shareAsync(uri, { mimeType: 'image/jpeg', UTI: 'public.jpeg' });
+      logEvent('share_card', { spot_id: spot.id });
     } catch {
       Alert.alert(tr('share.fail'), tr('share.error'));
     } finally {

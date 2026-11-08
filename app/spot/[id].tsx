@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { logEvent } from '../../src/analytics';
 import { Diorama } from '../../src/components/Diorama';
 import { DioramaViewer } from '../../src/components/DioramaViewer';
 import { PhotoStrip } from '../../src/components/PhotoStrip';
@@ -133,6 +134,7 @@ export default function SpotDetailScreen() {
 
   const onUnlockDone = () => {
     checkIn(spot.id, { season, sky: weather?.sky, temperature: weather?.temperature });
+    logEvent('checkin', { spot_id: spot.id, sealed: landsSealed });
     setUnlocking(false);
     // The paywall shows itself once, at the first sealed collection (spec §3.3).
     if (landsSealed && !paywallSeen) {
