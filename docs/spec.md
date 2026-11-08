@@ -216,7 +216,7 @@ Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一�
 ### 上架與後台（2026-11-08）
 
 - App Store 已上架：https://apps.apple.com/tw/app/id6822659015（App ID `6822659015`）。官網首頁的「即將上架」改成連到 App Store 的按鈕，並加了 Safari 智慧橫幅（`apple-itunes-app`）。
-- 營運後台 `islandia-admin`（`~/workspace/my-space/islandia-admin`，Next.js + Supabase service role，架構同 little-steps-admin）：概況（上架資訊、帳號、打卡、收藏、走勢）、景點收藏排行、使用者、問題回報（改狀態、內部備註）。預定網域 `islandia-admin.littlestep.me`。
+- 營運後台 `islandia-admin`（`~/workspace/my-space/islandia-admin`，Next.js + Supabase service role，架構同 little-steps-admin）：概況（上架資訊、帳號、打卡、收藏、走勢）、景點收藏排行、使用者、問題回報（改狀態、內部備註）。上線於 https://islandia-admin.littlestep.me（Vercel）。
 - 後台要的資料表與 views 在 `supabase/migrations/20261108000000_admin.sql`：`admins`（管理者名單）、`v_admin_users`、`v_admin_spots`、`v_admin_daily`。讀 `auth.users` 的 view 以擁有者權限執行，並對 anon／authenticated revoke。
 
 ### 下一步
