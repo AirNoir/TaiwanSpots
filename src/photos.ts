@@ -139,8 +139,14 @@ export interface DayPhotos {
  * photo of the day before the grid can show: the sheet spun forever (2026-10-29). The grid shows
  * library thumbnails through expo-image (ph:// ids), and only the photos the traveller picks are
  * downloaded, in importPhoto().
+ *
+ * Android: Google Play only allows READ_MEDIA_IMAGES for photo-centric apps. Instead, Android
+ * uses the system photo picker (pickPhotos), which needs no permission. This function is iOS-only.
  */
 export async function photosOfDay(date: Date, max = 60): Promise<DayPhotos> {
+  if (Platform.OS === 'android') {
+    return { photos: [], limited: false };
+  }
   const MediaLibrary = mediaLibrary();
   const perm = await MediaLibrary.requestPermissionsAsync(false, ['photo']);
   if (!perm.granted) throw new PhotoPermissionError('photos');
@@ -164,8 +170,14 @@ export async function photosOfDay(date: Date, max = 60): Promise<DayPhotos> {
 /**
  * Library photos taken within `radiusM` of a point, newest first. Looks through the latest
  * `scan` photos; location, size and date come from the library's index, nothing is downloaded.
+ *
+ * Android: Google Play only allows READ_MEDIA_IMAGES for photo-centric apps. Instead, Android
+ * uses the system photo picker (pickPhotos), which needs no permission. This function is iOS-only.
  */
 export async function photosNear(center: LatLng, radiusM: number, max = 60, scan = 1500): Promise<DayPhotos> {
+  if (Platform.OS === 'android') {
+    return { photos: [], limited: false };
+  }
   const MediaLibrary = mediaLibrary();
   const perm = await MediaLibrary.requestPermissionsAsync(false, ['photo']);
   if (!perm.granted) throw new PhotoPermissionError('photos');
@@ -194,7 +206,10 @@ export async function photosNear(center: LatLng, radiusM: number, max = 60, scan
 
 export const presentLimitedPicker = (): Promise<void> => mediaLibrary().presentPermissionsPickerAsync(['photo']);
 
-/** Add-only access to the photo library, asked for when a card is saved. */
+/**
+ * Add-only access to the photo library, asked for when a card is saved.
+ * Android 10+: writing a file the app created needs no read permission.
+ */
 export async function saveToLibrary(uri: string): Promise<boolean> {
   const MediaLibrary = mediaLibrary();
   const perm = await MediaLibrary.requestPermissionsAsync(true);

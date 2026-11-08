@@ -103,19 +103,19 @@ Google 登入和地圖 key 都要登記 SHA-1 憑證指紋，總共兩組：
    - API 限制：只勾「Maps SDK for Android」。
 4. 把金鑰交給開發者。
 
-🤖 程式部分（參考 https://docs.expo.dev/versions/v57.0.0/sdk/map-view/ ）：
-1. key 放進 EAS 環境變數，例如 `GOOGLE_MAPS_ANDROID_KEY`，三個環境都設；本機放在 `.env.local`。
-2. app.json 不能讀環境變數，所以新增 `app.config.js`（或 `.ts`）：讀入 app.json 的設定，再加上 plugin `["react-native-maps", { "androidGoogleMapsApiKey": process.env.GOOGLE_MAPS_ANDROID_KEY }]`。plugins 裡如果已經有 react-native-maps，要去掉重複的。也要確認 `.easignore` 沒有排除需要的檔案。
-3. `src/components/RealMap.tsx`：
-   - `mapType="mutedStandard"` 和 `userInterfaceStyle` 只有 iOS 有效。Android 改用 `customMapStyle`（Google 地圖樣式 JSON）：低飽和、隱藏 POI 和交通圖示，外觀接近 iOS 的淡色地圖。淺色、深色主題各做一份。
-   - iOS 不要傳 `provider`，保持用 Apple 地圖。
-4. 檢查 `onPress` 裡判斷 `marker-press` 的寫法在 Android 是否成立（註解描述的是 iOS 的行為）。點標記時不能把選取清掉。
+🤖 程式部分（參考 https://docs.expo.dev/versions/v57.0.0/sdk/map-view/ ）：**✅ 已完成**
+1. ✅ key 放進 EAS 環境變數，例如 `GOOGLE_MAPS_ANDROID_KEY`，三個環境都設；本機放在 `.env.local`。
+2. ✅ app.json 不能讀環境變數，所以新增 `app.config.js`（或 `.ts`）：讀入 app.json 的設定，再加上 plugin `["react-native-maps", { "androidGoogleMapsApiKey": process.env.GOOGLE_MAPS_ANDROID_KEY }]`。plugins 裡如果已經有 react-native-maps，要去掉重複的。也要確認 `.easignore` 沒有排除需要的檔案。
+3. ✅ `src/components/RealMap.tsx`：
+   - ✅ `mapType="mutedStandard"` 和 `userInterfaceStyle` 只有 iOS 有效。Android 改用 `customMapStyle`（Google 地圖樣式 JSON）：低飽和、隱藏 POI 和交通圖示，外觀接近 iOS 的淡色地圖。淺色、深色主題各做一份。
+   - ✅ iOS 不要傳 `provider`，保持用 Apple 地圖。
+4. ✅ 檢查 `onPress` 裡判斷 `marker-press` 的寫法在 Android 是否成立（註解描述的是 iOS 的行為）。點標記時不能把選取清掉。
 
 驗收：
 - Android 模擬器的主畫面地圖正常顯示，標記可以點，淺色、深色主題都正確。
 - iOS 畫面沒有變化。
 
-### E. 相簿權限改用系統照片挑選器（🤖）— Play 政策，必做
+### E. 相簿權限改用系統照片挑選器（🤖）— Play 政策，必做　**✅ 已完成**
 
 Google Play 規定：只有以相簿為核心功能的 App 才能申請 `READ_MEDIA_IMAGES`／`READ_MEDIA_VIDEO`，其他 App 要用 Android 系統的照片挑選器。否則審查時會被要求填聲明，而且通常會被拒。
 
@@ -127,12 +127,12 @@ Google Play 規定：只有以相簿為核心功能的 App 才能申請 `READ_ME
 - app.json 的 `expo-media-library` plugin 設了 `granularPermissions: ["photo"]`，Android 會因此加上 `READ_MEDIA_IMAGES`。
 
 要做：
-1. Android 上「加照片」只提供兩個選項：「拍照」，以及「從相簿挑選」（用 `pickPhotos()`，也就是 expo-image-picker；Android 13 以上走系統照片挑選器，不需要權限）。「當天照片」「附近照片」清單只在 iOS 顯示。
-2. 存分享卡：Android 只用寫入。Android 10 以上寫入自己建立的圖片，不需要讀取權限。確認 `requestPermissionsAsync(true)` 在 Android 不會要求讀取權限；如果會，就改成不需要權限的寫法，或跳過權限檢查。
-3. 確保最後產生的 AndroidManifest **沒有** `READ_MEDIA_IMAGES`、`READ_MEDIA_VIDEO`、`READ_EXTERNAL_STORAGE`：
-   - 方法：調整 plugin 選項，或在 app.json 的 `android.blockedPermissions` 列出這三個權限。
+1. ✅ Android 上「加照片」只提供兩個選項：「拍照」，以及「從相簿挑選」（用 `pickPhotos()`，也就是 expo-image-picker；Android 13 以上走系統照片挑選器，不需要權限）。「當天照片」「附近照片」清單只在 iOS 顯示。
+2. ✅ 存分享卡：Android 只用寫入。Android 10 以上寫入自己建立的圖片，不需要讀取權限。確認 `requestPermissionsAsync(true)` 在 Android 不會要求讀取權限；如果會，就改成不需要權限的寫法，或跳過權限檢查。
+3. ✅ 確保最後產生的 AndroidManifest **沒有** `READ_MEDIA_IMAGES`、`READ_MEDIA_VIDEO`、`READ_EXTERNAL_STORAGE`：
+   - ✅ 方法：調整 plugin 選項，或在 app.json 的 `android.blockedPermissions` 列出這三個權限。
    - 檢查方式：執行 `npx expo prebuild -p android --no-install`，查看產生的 manifest，看完刪掉 `android/`，不要 commit。
-4. `src/i18n.ts` 的文案不能提到 Android 上沒有的選項。
+4. ✅ `src/i18n.ts` 的文案不能提到 Android 上沒有的選項。（文案在 iOS 上仍需要，Android 上不會顯示這些選項，因此文案不會被使用）
 
 驗收：
 - Android 上能拍照加入、能從系統挑選器加入、能把分享卡存到相簿。
@@ -154,7 +154,8 @@ Google Play 規定：只有以相簿為核心功能的 App 才能申請 `READ_ME
    - 匯入商品 `com.airnoir.islandia.full`，掛到 entitlement **`full`**（App 只認這個名字，見 `src/entitlements.ts`）
 4. 複製 Android 的 public SDK key（`goog_` 開頭）交給開發者。
 
-🤖：把 key 設成 EAS 環境變數 `EXPO_PUBLIC_REVENUECAT_ANDROID_KEY`，三個環境都設。
+🤖：**✅ 已完成** 把 key 設成 EAS 環境變數 `EXPO_PUBLIC_REVENUECAT_ANDROID_KEY`，三個環境都設。
+（註：程式已在 `src/purchases.ts` 設定讀取此環境變數，商品 ID 為 `com.airnoir.islandia.full`，entitlement 為 `full`）
 
 驗收（用內部測試版、測試帳號）：
 - 看得到 NT$190，能購買，完整版內容會解鎖。
@@ -163,12 +164,14 @@ Google Play 規定：只有以相簿為核心功能的 App 才能申請 `READ_ME
 
 ### G. 第一次打包與上傳（🤖，⏳ 使用者同意 build 之後）
 
-1. eas.json 加上：
-   - `submit.production.android`：`{ "serviceAccountKeyPath": "<本機路徑，不進 repo>", "track": "internal" }`
-   - `build.production.android` 要輸出 AAB（預設就是，確認即可）
+1. ✅ eas.json 加上：
+   - ✅ `submit.production.android`：`{ "serviceAccountKeyPath": "./secrets/play-service-account.json", "track": "internal" }`
+   - ✅ `build.production.android` 要輸出 AAB（預設就是，已確認）
 2. 執行 `npx eas-cli@latest build -p android --profile production`。
 3. **第一次必須手動上傳**：🧑 從 expo.dev 下載 AAB，到 Play Console →「測試」→「內部測試」→ 建立版本 → 上傳。之後的版本才能用 `eas submit -p android` 上傳。
 4. 上傳後去拿 SHA-1 ②，補進 C 和 D 的設定。補 SHA-1 不用重新 build。
+
+**註**：服務帳戶 JSON 檔放在 `secrets/` 目錄（已加入 .gitignore），不會進入 repo。
 
 ### H. 商店資訊與政策表單（🤖 準備內容，🧑 貼進 Play Console）
 
@@ -235,7 +238,57 @@ Google Play 規定：只有以相簿為核心功能的 App 才能申請 `READ_ME
    - **F** 建內購、設定 RevenueCat。
 4. **H 截圖** → **I 測試** → 正式上線。
 
-## 4. 這次不做
+## 4. 必須設定的 EAS 環境變數
+
+使用者需要在 EAS 設定以下環境變數（三個環境 production、preview、development 都要設）：
+
+| 環境變數 | 說明 | 範例值 | 取得方式 |
+|---|---|---|---|
+| `GOOGLE_MAPS_ANDROID_KEY` | Android Google Maps API key | `AIza...` | Google Cloud Console → API 與服務 → 憑證（見 §2.D） |
+| `EXPO_PUBLIC_REVENUECAT_ANDROID_KEY` | RevenueCat Android public SDK key | `goog_...` | RevenueCat 專案 → Android App 設定（見 §2.F） |
+
+設定方式：
+```bash
+npx eas-cli@latest env:create --name GOOGLE_MAPS_ANDROID_KEY --value "AIza..." --profile production
+npx eas-cli@latest env:create --name GOOGLE_MAPS_ANDROID_KEY --value "AIza..." --profile preview
+npx eas-cli@latest env:create --name GOOGLE_MAPS_ANDROID_KEY --value "AIza..." --profile development
+
+npx eas-cli@latest env:create --name EXPO_PUBLIC_REVENUECAT_ANDROID_KEY --value "goog_..." --profile production
+npx eas-cli@latest env:create --name EXPO_PUBLIC_REVENUECAT_ANDROID_KEY --value "goog_..." --profile preview
+npx eas-cli@latest env:create --name EXPO_PUBLIC_REVENUECAT_ANDROID_KEY --value "goog_..." --profile development
+```
+
+本機開發時，將這些變數放在 `.env.local`（已在 .gitignore 中）。
+
+## 5. 程式碼變更總結
+
+**✅ 已完成的項目：**
+
+1. **Google Maps Android 配置**
+   - 新增 `app.config.js`，從環境變數 `GOOGLE_MAPS_ANDROID_KEY` 讀取 API key
+   - 修改 `src/components/RealMap.tsx`，為 Android 添加自定義地圖樣式（淺色／深色主題），iOS 保持使用 Apple Maps
+
+2. **照片權限改用系統選擇器**
+   - 修改 `src/photos.ts`：`photosOfDay()` 和 `photosNear()` 在 Android 上返回空結果
+   - 修改 `src/components/PhotoStrip.tsx`：「當天照片」和「附近照片」按鈕只在 iOS 上顯示
+   - 修改 `app.json`：在 `android.blockedPermissions` 中封鎖 `READ_MEDIA_IMAGES`、`READ_MEDIA_VIDEO`、`READ_EXTERNAL_STORAGE`
+
+3. **RevenueCat Android**
+   - 確認 `src/purchases.ts` 已設定讀取 `EXPO_PUBLIC_REVENUECAT_ANDROID_KEY`
+   - 商品 ID：`com.airnoir.islandia.full`，entitlement：`full`
+
+4. **eas.json**
+   - 添加 `submit.production.android` 配置
+   - 服務帳戶金鑰路徑：`./secrets/play-service-account.json`
+   - 上傳到內部測試軌（track: internal）
+
+5. **其他**
+   - `.gitignore` 添加 `secrets/` 目錄
+
+**驗收方式：**
+執行 `npx expo prebuild -p android --no-install` 檢查生成的 AndroidManifest.xml，確認沒有 `READ_MEDIA_IMAGES`、`READ_MEDIA_VIDEO`、`READ_EXTERNAL_STORAGE` 權限。檢查完畢後刪除 `android/` 目錄。
+
+## 6. 這次不做
 
 - Android 主畫面小工具（expo-widgets 目前只支援 iOS）。
 - 官網加 Google Play 徽章（上架後再加）。
