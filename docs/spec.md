@@ -213,6 +213,12 @@ Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一�
 
 官網 repo `AirNoir/taiwanspots-official-site`，上線於 https://islandia.littlestep.me（小步腳印 `littlestep.me` 的子網域，Cloudflare Workers 純靜態；部署方式見該 repo 的 README）。提供首頁、`/privacy`、`/terms`、`/support`。App 內付費牆的隱私／條款連結（`app/paywall.tsx`）與 `store.config.json` 的 ASC 行銷／支援／隱私 URL 都已改指官網；`docs/privacy.md` 與官網同步（多了「用 Google 帳號登入時」與「App 內購買」兩段）。
 
+### 上架與後台（2026-11-08）
+
+- App Store 已上架：https://apps.apple.com/tw/app/id6822659015（App ID `6822659015`）。官網首頁的「即將上架」改成連到 App Store 的按鈕，並加了 Safari 智慧橫幅（`apple-itunes-app`）。
+- 營運後台 `islandia-admin`（`~/workspace/my-space/islandia-admin`，Next.js + Supabase service role，架構同 little-steps-admin）：概況（上架資訊、帳號、打卡、收藏、走勢）、景點收藏排行、使用者、問題回報（改狀態、內部備註）。預定網域 `islandia-admin.littlestep.me`。
+- 後台要的資料表與 views 在 `supabase/migrations/20261108000000_admin.sql`：`admins`（管理者名單）、`v_admin_users`、`v_admin_spots`、`v_admin_daily`。讀 `auth.users` 的 view 以擁有者權限執行，並對 anon／authenticated revoke。
+
 ### 下一步
 
 1. 已完成（2026-10-28，步驟與狀態見 `docs/google-oauth.md`）：Google Cloud 的 iOS 與 Web OAuth client、`app.json` plugin、EAS 環境變數、Supabase Google provider 都回填，Build 13（2026-10-29）是第一個含 Google 登入的版本。Android client 等出 Android 版再建。
