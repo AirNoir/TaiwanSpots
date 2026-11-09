@@ -211,7 +211,7 @@ Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一�
 
 ### 官網（2026-10-28）
 
-官網 repo `AirNoir/taiwanspots-official-site`，上線於 https://islandia.littlestep.me（小步腳印 `littlestep.me` 的子網域，Cloudflare Workers 純靜態；部署方式見該 repo 的 README）。提供首頁、`/privacy`、`/terms`、`/support`。App 內付費牆的隱私／條款連結（`app/paywall.tsx`）與 `store.config.json` 的 ASC 行銷／支援／隱私 URL 都已改指官網；`docs/privacy.md` 與官網同步（多了「用 Google 帳號登入時」與「App 內購買」兩段）。
+官網 repo `AirNoir/taiwanspots-official-site`，上線於 https://islandia.littlestep.me（小步腳印 `littlestep.me` 的子網域，Cloudflare Workers 純靜態；部署方式見該 repo 的 README，只 push 不會更新線上）。提供首頁、`/privacy`、`/terms`、`/support`、`/delete-account`。2026-11-09 起，這些頁面的副本放在本 repo 的 `site/`（該官網 repo 若讀不到，以 `site/` 為待部署的原稿；上線仍要在官網 repo 執行 `npx wrangler deploy`）。App 內付費牆的隱私／條款連結（`app/paywall.tsx`）與 `store.config.json` 的 ASC 行銷／支援／隱私 URL 都已改指官網；`docs/privacy.md` 與 `site/privacy.html` 同步。
 
 ### 上架與後台（2026-11-08）
 
