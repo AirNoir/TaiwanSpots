@@ -3,5 +3,9 @@
   "compilerOptions": {
     "strict": true
   },
-  "exclude": ["node_modules", "supabase/functions"]
+  "exclude": [
+    "node_modules",
+    "supabase/functions",
+    "store/marketing/video"
+  ]
 }
