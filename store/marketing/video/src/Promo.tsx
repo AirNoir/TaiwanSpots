@@ -10,12 +10,13 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from 'remotion';
+import ALL_RAW from './spots.json';
 
 // Islandia promo v1 — 20 s vertical (1080×1920 @ 30 fps).
 // Story: a sealed silhouette → walk to it on the map → unlock → the island fills up
 // → passport and share card → end card. Palette mirrors the app's light theme (src/theme.ts).
 
-export const PROMO_FRAMES = 600;
+export const PROMO_FRAMES = 630;
 
 const C = {
   bg: '#F6F1E7',
@@ -124,9 +125,9 @@ const T = {
   unlockEnd: 300,
   zoomOut: 300,
   popStart: 322,
-  mapOut: 440,
-  phones: 428,
-  end: 522,
+  mapOut: 470,
+  phones: 458,
+  end: 552,
 };
 
 // --------------------------------------------------------------- pieces -----
@@ -294,7 +295,8 @@ const camAt = (f: number): Cam => {
   const k = a * (1 - b);
   // zoom in log space so the move feels even
   const z = Math.exp(Math.log(CAM_FULL.z) + (Math.log(CAM_NORTH.z) - Math.log(CAM_FULL.z)) * k);
-  return { x: CAM_FULL.x + (CAM_NORTH.x - CAM_FULL.x) * k, y: CAM_FULL.y + (CAM_NORTH.y - CAM_FULL.y) * k, z };
+  const push = interpolate(f, [T.zoomOut + 34, T.mapOut], [1, 1.05], clamp); // slow push-in while the island fills
+  return { x: CAM_FULL.x + (CAM_NORTH.x - CAM_FULL.x) * k, y: CAM_FULL.y + (CAM_NORTH.y - CAM_FULL.y) * k, z: z * push };
 };
 
 const SCREEN_CY = 1080;
@@ -324,8 +326,69 @@ const Token: React.FC<{ spot: Spot; frame: number; reveal: number; size: number 
   );
 };
 
-// Jiufen unlocks when the overlay reveals it; the rest pop in during the zoom-out.
-const revealOf = (i: number) => (i === 0 ? T.unlock + 36 : T.popStart + (i - 1) * 8);
+// All 159 spots. Jiufen unlocks in the overlay; every other spot pops in as one
+// north → south wave during the zoom-out. Spots without art yet show a sealed "?".
+type AnySpot = { id: string; lng: number; lat: number; art: boolean };
+const ALL = ALL_RAW as AnySpot[];
+const FEATURED = new Map(SPOTS.map((s) => [s.id, s]));
+const WAVE = ALL.filter((s) => s.id !== 'jiufen').sort((a, b) => b.lat - a.lat);
+const WAVE_LEN = 84;
+const REVEAL = new Map<string, number>([
+  ['jiufen', T.unlock + 36],
+  ...WAVE.map((s, k) => [s.id, Math.round(T.popStart + (k * WAVE_LEN) / WAVE.length)] as [string, number]),
+]);
+const revealAt = (id: string) => REVEAL.get(id) ?? 0;
+const DRAW = [...ALL].sort((a, b) => b.lat - a.lat); // north first, so southern tokens overlap correctly
+
+const CrowdToken: React.FC<{ s: AnySpot; frame: number; size: number }> = ({ s, frame, size }) => {
+  const { fps } = useVideoConfig();
+  const r = revealAt(s.id);
+  if (frame < r) return null;
+  const pop = spring({ frame: frame - r, fps, config: { damping: 9, stiffness: 170 } });
+  const p = proj(s.lng, s.lat);
+  if (!s.art) {
+    const d = size * 0.6;
+    return (
+      <div
+        style={{
+          position: 'absolute',
+          left: p.x - d / 2,
+          top: p.y - d,
+          width: d,
+          height: d,
+          borderRadius: '50%',
+          background: C.sealedBg,
+          border: `${d * 0.08}px solid ${C.sealedInk}`,
+          boxSizing: 'border-box',
+          color: C.sealedInk,
+          fontFamily: FONT,
+          fontWeight: 900,
+          fontSize: d * 0.6,
+          lineHeight: `${d * 0.84}px`,
+          textAlign: 'center',
+          transform: `scale(${pop})`,
+          transformOrigin: '50% 100%',
+        }}
+      >
+        ?
+      </div>
+    );
+  }
+  return (
+    <Img
+      src={staticFile(`tok/${s.id}.png`)}
+      style={{
+        position: 'absolute',
+        left: p.x - size / 2,
+        top: p.y - size * 0.8,
+        width: size,
+        height: size,
+        transform: `scale(${pop})`,
+        transformOrigin: '50% 80%',
+      }}
+    />
+  );
+};
 
 const MapScene: React.FC = () => {
   const frame = useCurrentFrame();
@@ -340,10 +403,12 @@ const MapScene: React.FC = () => {
   const me = walkAt(walk);
   const arrived = frame >= T.walkEnd;
   const meters = Math.round((1 - walk) * 1280);
-  const collected = SPOTS.filter((_, i) => frame >= revealOf(i)).length;
+  const collected = ALL.filter((s) => frame >= revealAt(s.id)).length;
 
   const dotR = 20 / cam.z;
   const tokBase = 112 / Math.pow(cam.z, 0.6); // big on the full island, sane when zoomed
+  const featSize = tokBase * interpolate(cam.z, [CAM_FULL.z, CAM_NORTH.z], [0.72, 1], clamp);
+  const jiufenSize = featSize * 1.25;
   const pulse = (frame % 30) / 30;
   const pillIn = spring({ frame: frame - T.walkStart + 6, fps, config: { damping: 12 } });
   const pillBump = arrived ? 1 + 0.08 * Math.sin((frame - T.walkEnd) / 2) * interpolate(frame, [T.walkEnd, T.walkEnd + 10], [1, 0], clamp) : 1;
@@ -371,12 +436,12 @@ const MapScene: React.FC = () => {
           <path d={COAST_D} fill={C.slab} transform="translate(0,12)" />
           <path d={COAST_D} fill="url(#land)" stroke={C.landEdge} strokeWidth={2} />
           <g clipPath="url(#island)">
-            {SPOTS.map((s, i) => {
-              const r0 = revealOf(i);
+            {ALL.map((s) => {
+              const r0 = revealAt(s.id);
               if (frame < r0) return null;
               const g = spring({ frame: frame - r0, fps, config: { damping: 30, stiffness: 40 } });
               const p = proj(s.lng, s.lat);
-              return <circle key={s.id} cx={p.x} cy={p.y} r={40 + g * 120} fill="url(#bloom)" />;
+              return <circle key={s.id} cx={p.x} cy={p.y} r={30 + g * 85} fill="url(#bloom)" />;
             })}
             {RIDGES.map((r, i) => (
               <path key={i} d={smoothPath(r.map(([a, b]) => proj(a, b)), false)} stroke={C.ridge} strokeWidth={14} strokeLinecap="round" fill="none" opacity={0.35} />
@@ -392,9 +457,14 @@ const MapScene: React.FC = () => {
             </g>
           ) : null}
         </svg>
-        {SPOTS.map((s, i) => (
-          <Token key={s.id} spot={s} frame={frame} reveal={revealOf(i)} size={(s.id === 'jiufen' ? 1.25 : 1) * tokBase} />
-        ))}
+        {DRAW.map((s) => {
+          const f = FEATURED.get(s.id);
+          return f ? (
+            <Token key={s.id} spot={f} frame={frame} reveal={revealAt(s.id)} size={s.id === 'jiufen' ? jiufenSize : featSize} />
+          ) : (
+            <CrowdToken key={s.id} s={s} frame={frame} size={tokBase * 0.55} />
+          );
+        })}
         {frame >= T.walkStart - 10 && frame < T.zoomOut ? (
           <div style={{ position: 'absolute', left: me.x, top: me.y }}>
             <div
@@ -431,7 +501,7 @@ const MapScene: React.FC = () => {
         <div
           style={{
             position: 'absolute',
-            top: SCREEN_CY + (JIUFEN.y - cam.y) * cam.z - 1.25 * tokBase * 0.82 * cam.z - 90,
+            top: SCREEN_CY + (JIUFEN.y - cam.y) * cam.z - jiufenSize * 0.82 * cam.z - 90,
             left: 540 + (JIUFEN.x - cam.x) * cam.z,
             transform: `translateX(-50%) scale(${pillIn * pillBump})`,
             background: arrived ? C.accent : C.card,
