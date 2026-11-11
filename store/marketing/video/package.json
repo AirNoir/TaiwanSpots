@@ -4,7 +4,8 @@
   "scripts": {
     "assets": "python3 prepare-assets.py",
     "studio": "remotion studio src/index.ts",
-    "render": "remotion render src/index.ts Promo islandia-promo-v1.mp4 --codec=h264 --crf=18"
+    "render": "remotion render src/index.ts Promo out/raw.mp4 --codec=h264 --crf=18 --audio-codec=aac && ffmpeg -v error -y -i out/raw.mp4 -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=7 -c:a aac -b:a 192k -ar 48000 islandia-promo-v1.mp4",
+    "sfx": "python3 make-sfx.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.542",

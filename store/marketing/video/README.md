@@ -1,6 +1,6 @@
 # Islandia promo video (v1)
 
-`islandia-promo-v1.mp4` is 21 s long, 1080×1920 at 30 fps, and has no audio. It is meant for IG Reels, YouTube Shorts and TikTok. Add music inside each platform's editor.
+`islandia-promo-v1.mp4` is 21 s long, 1080×1920 at 30 fps, with music and sound effects, mastered to −14 LUFS. It is meant for IG Reels, YouTube Shorts, TikTok, YouTube and the website. On Reels or TikTok you can mute it and pick in-app music instead.
 
 Built with [Remotion](https://www.remotion.dev). It is self-contained and is not part of the Expo app.
 
@@ -8,8 +8,10 @@ Built with [Remotion](https://www.remotion.dev). It is self-contained and is not
 cd store/marketing/video
 npm install
 npm run assets   # copies app art into public/ (models, silhouettes, screenshots, icon)
+npm run sfx      # synthesises the sound effects into public/sfx/
+# music: put the track at public/music.mp3 (see Music below)
 npm run studio   # preview and scrub in the browser
-npm run render   # writes islandia-promo-v1.mp4
+npm run render   # renders, normalises loudness, writes islandia-promo-v1.mp4
 ```
 
 Storyboard (`src/Promo.tsx`, see `T` for frame timings):
@@ -26,3 +28,11 @@ Storyboard (`src/Promo.tsx`, see `T` for frame timings):
 `src/spots.json` lists every spot (id, lng, lat, art) from `src/data/spots.ts`. Regenerate it when spots or art change; `npm run assets` then cuts map tokens into `public/tok/`.
 
 The walking route is a map animation standing in for real footage. When real first-person walking clips exist, they can replace the map close-up in scene 2.
+
+## Music
+
+The track is "Upbeat Ukulele" by Caldena, from Pixabay (file `caldena-upbeat-ukulele-617550.mp3`). It is used from 0 s and its chorus arrives around 10 s, just as the island starts filling.
+
+The Pixabay Content License allows commercial use without attribution, but it does not allow redistributing the file on its own. For that reason the MP3 is not committed: download it again from Pixabay and save it as `public/music.mp3`.
+
+Sound effects (tap, chime, sparkle, pops, whoosh) are synthesised by `make-sfx.py`, so there is nothing to license. Their cue frames are set in `Soundtrack` in `src/Promo.tsx`.

@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   AbsoluteFill,
+  Html5Audio,
   Easing,
   Img,
   interpolate,
@@ -819,6 +820,37 @@ const EndCard: React.FC = () => {
   );
 };
 
+// -------------------------------------------------------------- sound -------
+
+// Music: public/music.mp3 (Pixabay "Upbeat Ukulele" by Caldena), used from 0 s; its chorus
+// lands around 10 s, right as the island starts filling. SFX are synthesised by make-sfx.py.
+const Sfx: React.FC<{ at: number; src: string; volume?: number }> = ({ at, src, volume = 0.7 }) => (
+  <Sequence from={at} durationInFrames={45}>
+    <Html5Audio src={staticFile(`sfx/${src}`)} volume={volume} />
+  </Sequence>
+);
+
+const Soundtrack: React.FC = () => (
+  <>
+    <Html5Audio
+      src={staticFile('music.mp3')}
+      volume={(f) => interpolate(f, [0, 6, PROMO_FRAMES - 45, PROMO_FRAMES], [0, 0.55, 0.55, 0], clamp)}
+    />
+    <Sfx at={2} src="pop2.wav" volume={0.5} />
+    <Sfx at={T.mapIn} src="whoosh.wav" volume={0.5} />
+    <Sfx at={T.walkEnd} src="chime.wav" volume={0.45} />
+    <Sfx at={T.unlock + 26} src="tap.wav" volume={0.6} />
+    <Sfx at={T.unlock + 33} src="sparkle.wav" volume={0.6} />
+    <Sfx at={T.zoomOut} src="whoosh.wav" volume={0.45} />
+    {WAVE.filter((_, k) => k % 6 === 0).map((s, k) => (
+      <Sfx key={s.id} at={revealAt(s.id)} src={`pop${(k % 3) + 1}.wav`} volume={0.22} />
+    ))}
+    <Sfx at={T.phones} src="whoosh.wav" volume={0.35} />
+    <Sfx at={T.end + 4} src="pop1.wav" volume={0.5} />
+    <Sfx at={T.end + 30} src="chime.wav" volume={0.35} />
+  </>
+);
+
 // --------------------------------------------------------------- root -------
 
 export const Promo: React.FC = () => {
@@ -839,6 +871,7 @@ export const Promo: React.FC = () => {
         <EndCard />
       </Sequence>
 
+      <Soundtrack />
       <Caption text="這是哪裡？" from={4} to={T.hookEnd} />
       <Caption kicker="STEP 1" text="要走到，才看得到" accent="走到" from={T.walkStart - 14} to={T.unlock} />
       <Caption kicker="STEP 2" text="留下足跡，模型開箱" accent="開箱" from={T.unlock + 4} to={T.unlockEnd - 4} />
