@@ -1,4 +1,4 @@
-# Islandia promo video (v1)
+# 微縮台灣 promo video (v1)
 
 `islandia-promo-v1.mp4` is 21 s long, 1080×1920 at 30 fps, with music and sound effects, mastered to −14 LUFS. It is meant for IG Reels, YouTube Shorts, TikTok, YouTube and the website. On Reels or TikTok you can mute it and pick in-app music instead.
 
@@ -23,7 +23,7 @@ Storyboard (`src/Promo.tsx`, see `T` for frame timings):
 | 6.5–10 s | 留下足跡 button press, flash, and the Jiufen diorama is revealed | STEP 2 留下足跡，模型開箱 |
 | 10–15.5 s | Zoom out to all of Taiwan; all 159 spots pop up north → south (130 with art, 29 shown as a sealed ?), terrain blooms green, counter reaches 159 / 159 | STEP 3 收集全台灣 159 座 |
 | 15.3–18.5 s | Passport and share-card screenshots in phone frames | STEP 4 每一座，都記得那一天 |
-| 18.4–21 s | End card: icon, Islandia, subtitle, App Store CTA | — |
+| 18.4–21 s | End card: icon, 微縮台灣, subtitle, App Store search CTA, QR code to the App Store page (art/qr-appstore.png) | — |
 
 `src/spots.json` lists every spot (id, lng, lat, art) from `src/data/spots.ts`. Regenerate it when spots or art change; `npm run assets` then cuts map tokens into `public/tok/`.
 

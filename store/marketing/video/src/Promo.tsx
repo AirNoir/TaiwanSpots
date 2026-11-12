@@ -13,7 +13,7 @@ import {
 } from 'remotion';
 import ALL_RAW from './spots.json';
 
-// Islandia promo v1 — 20 s vertical (1080×1920 @ 30 fps).
+// 微縮台灣 (Islandia) promo v1 — 21 s vertical (1080×1920 @ 30 fps).
 // Story: a sealed silhouette → walk to it on the map → unlock → the island fills up
 // → passport and share card → end card. Palette mirrors the app's light theme (src/theme.ts).
 
@@ -764,6 +764,7 @@ const EndCard: React.FC = () => {
   const name = spring({ frame: frame - 12, fps, config: { damping: 14 } });
   const sub = spring({ frame: frame - 20, fps, config: { damping: 14 } });
   const cta = spring({ frame: frame - 30, fps, config: { damping: 12 } });
+  const qr = spring({ frame: frame - 38, fps, config: { damping: 13 } });
   const vis = interpolate(frame, [0, 10], [0, 1], clamp);
   const floats = [
     { id: 'taipei-101', x: 60, y: 240, s: 240 },
@@ -790,20 +791,20 @@ const EndCard: React.FC = () => {
           />
         );
       })}
-      <div style={{ position: 'absolute', top: 600, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: FONT }}>
+      <div style={{ position: 'absolute', top: 440, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: FONT }}>
         <Img
           src={staticFile('icon.png')}
-          style={{ width: 280, height: 280, borderRadius: 64, boxShadow: '0 30px 60px rgba(80,64,36,0.25)', transform: `scale(${icon})` }}
+          style={{ width: 240, height: 240, borderRadius: 56, boxShadow: '0 30px 60px rgba(80,64,36,0.25)', transform: `scale(${icon})` }}
         />
-        <div style={{ marginTop: 50, fontSize: 120, fontWeight: 800, color: C.ink, letterSpacing: 2, opacity: name, transform: `translateY(${(1 - name) * 40}px)` }}>
-          Islandia
+        <div style={{ marginTop: 36, fontSize: 150, fontWeight: 900, color: C.ink, letterSpacing: 12, lineHeight: 1.1, opacity: name, transform: `translateY(${(1 - name) * 40}px)` }}>
+          微縮台灣
         </div>
         <div style={{ marginTop: 10, fontSize: 52, fontWeight: 700, color: C.sub, opacity: sub, transform: `translateY(${(1 - sub) * 40}px)` }}>
           走到景點，收藏一座小島
         </div>
         <div
           style={{
-            marginTop: 70,
+            marginTop: 50,
             background: C.ink,
             color: '#fff',
             fontSize: 46,
@@ -813,7 +814,27 @@ const EndCard: React.FC = () => {
             transform: `scale(${cta})`,
           }}
         >
-          App Store 免費下載
+          App Store 搜尋「微縮台灣」
+        </div>
+        <div
+          style={{
+            marginTop: 44,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 24,
+            background: C.card,
+            borderRadius: 32,
+            padding: 18,
+            paddingRight: 34,
+            boxShadow: '0 14px 30px rgba(80,64,36,0.16)',
+            transform: `scale(${qr})`,
+          }}
+        >
+          <Img src={staticFile('qr-appstore.png')} style={{ width: 170, height: 170 }} />
+          <div style={{ fontSize: 38, fontWeight: 700, color: C.ink, lineHeight: 1.35 }}>
+            掃描下載
+            <div style={{ fontSize: 30, fontWeight: 600, color: C.sub }}>免費 · iPhone</div>
+          </div>
         </div>
       </div>
     </AbsoluteFill>

@@ -36,4 +36,5 @@ for f in os.listdir(shots):
     if f.endswith('.jpg'):
         shutil.copy(os.path.join(shots, f), f'{OUT}/screens/{f}')
 shutil.copy(f'{ROOT}/assets/brand/islandia-ios-icon-v2-1024.png', f'{OUT}/icon.png')
+shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'art', 'qr-appstore.png'), f'{OUT}/qr-appstore.png')
 print('public/ ready')
