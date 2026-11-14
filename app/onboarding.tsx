@@ -12,7 +12,12 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { logEvent } from '../src/analytics';
+import { SignInButtons } from '../src/components/SignInButtons';
 import { TaiwanWorld } from '../src/components/TaiwanWorld';
+import { DEMO_TOOLS } from '../src/demo';
+import { FREE_LIMIT } from '../src/entitlements';
+import { purchasesAvailable } from '../src/purchases';
+import { cloudAvailable } from '../src/supabase';
 import { useStore } from '../src/store';
 import { makeStyles, Palette, useTheme } from '../src/theme';
 import { I18nKey, useT } from '../src/i18n';
@@ -43,6 +48,11 @@ const PAGES = [
     title: 'onb.4.title' as I18nKey,
     body: 'onb.4.body' as I18nKey,
   },
+  // Free and full, said up front so the first sealed model is no surprise. Only where something
+  // can be sealed (a store build without purchases never seals, src/entitlements.ts).
+  ...(purchasesAvailable || DEMO_TOOLS
+    ? [{ key: 'free', icon: 'package-variant-closed', title: 'onb.5.title' as I18nKey, body: 'onb.5.body' as I18nKey }]
+    : []),
 ];
 
 export default function OnboardingScreen() {
@@ -52,6 +62,7 @@ export default function OnboardingScreen() {
   const router = useRouter();
   const setOnboarded = useStore((s) => s.setOnboarded);
   const [page, setPage] = useState(0);
+  const [signingIn, setSigningIn] = useState(false);
   const scrollRef = useRef<ScrollView>(null);
   const window = useWindowDimensions();
   // Pages are as wide as the pager itself, measured, so paging stays right after a resize
@@ -106,7 +117,7 @@ export default function OnboardingScreen() {
                 />
               </View>
             )}
-            <Text style={styles.title}>{tr(p.title)}</Text>
+            <Text style={styles.title}>{tr(p.title, { limit: FREE_LIMIT })}</Text>
             <Text style={styles.body}>{tr(p.body)}</Text>
           </View>
         ))}
@@ -133,6 +144,18 @@ export default function OnboardingScreen() {
             <Text style={styles.nextText}>{tr('onb.next')}</Text>
           </Pressable>
         )}
+        {/* A returning player (new phone, reinstall) gets the passport back before anything else */}
+        {cloudAvailable &&
+          (signingIn ? (
+            <View style={styles.login}>
+              <Text style={styles.loginHint}>{tr('onb.login.hint')}</Text>
+              <SignInButtons onDone={start} />
+            </View>
+          ) : (
+            <Pressable onPress={() => setSigningIn(true)} hitSlop={8} style={styles.loginLink} accessibilityRole="button">
+              <Text style={styles.loginLinkText}>{tr('onb.login')}</Text>
+            </Pressable>
+          ))}
       </View>
     </SafeAreaView>
   );
@@ -192,5 +215,9 @@ const useStyles = makeStyles((t: Palette) =>
     alignItems: 'center',
   },
   nextText: { color: t.text, fontSize: 16, fontWeight: '600' },
+  loginLink: { marginTop: 16, padding: 4 },
+  loginLinkText: { color: t.subtext, fontSize: 14, fontWeight: '600', textDecorationLine: 'underline', textAlign: 'center' },
+  login: { alignSelf: 'stretch', marginTop: 16 },
+  loginHint: { color: t.subtext, fontSize: 13, textAlign: 'center', lineHeight: 19 },
   }),
 );

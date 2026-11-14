@@ -1,7 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import * as AppleAuthentication from 'expo-apple-authentication';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   ActivityIndicator,
   Alert,
@@ -13,7 +12,8 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ACHIEVEMENTS } from '../../src/achievements';
-import { appleAvailable, deleteAccount, googleAvailable, signInWithApple, signInWithGoogle, signOut } from '../../src/auth';
+import { deleteAccount, signOut } from '../../src/auth';
+import { SignInButtons } from '../../src/components/SignInButtons';
 import { DEMO_TOOLS, DEMO_TRIP_SIZE, loadDemoPassport } from '../../src/demo';
 import { FREE_LIMIT, useHasFull, useSealedSet, withUnseal } from '../../src/entitlements';
 import { purchasesAvailable, restore } from '../../src/purchases';
@@ -101,20 +101,7 @@ export default function MeScreen() {
   const [restoring, setRestoring] = useState(false);
   const account = useStore((s) => s.account);
   const lastSyncAt = useStore((s) => s.lastSyncAt);
-  const [authBusy, setAuthBusy] = useState<'apple' | 'google' | 'out' | 'delete' | null>(null);
-  // Apple's button only where the OS offers Sign in with Apple (never on Android, spec §5.1)
-  const [appleReady, setAppleReady] = useState(false);
-  useEffect(() => {
-    if (appleAvailable) AppleAuthentication.isAvailableAsync().then(setAppleReady, () => setAppleReady(false));
-  }, []);
-
-  const onSignIn = async (provider: 'apple' | 'google') => {
-    if (authBusy) return;
-    setAuthBusy(provider);
-    const result = await (provider === 'apple' ? signInWithApple() : signInWithGoogle());
-    setAuthBusy(null);
-    if (result === 'failed') Alert.alert(tr('auth.failed'));
-  };
+  const [authBusy, setAuthBusy] = useState<'out' | 'delete' | null>(null);
   const onSignOut = () =>
     Alert.alert(tr('me.signOut.title'), tr('me.signOut.body'), [
       { text: tr('common.cancel'), style: 'cancel' },
@@ -235,6 +222,51 @@ export default function MeScreen() {
           </View>
         </View>
 
+        {/* Account first: a returning player who reinstalled looks here to get the passport back */}
+        {cloudAvailable && (
+          <>
+            <Text style={styles.sectionTitle}>{tr('me.backup')}</Text>
+            <View style={styles.fullCard}>
+              {account && !account.anonymous ? (
+                <>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                    <MaterialCommunityIcons name={'cloud-check-outline' as any} size={22} color={t.success} />
+                    <View style={{ flex: 1 }}>
+                      <Text style={styles.fullStatus}>
+                        {tr('me.backup.on', { provider: account.provider === 'apple' ? 'Apple' : 'Google' })}
+                      </Text>
+                      {account.email && <Text style={styles.backupMeta}>{account.email}</Text>}
+                      <Text style={styles.backupMeta}>
+                        {syncedAt ? tr('me.backup.synced', { time: syncedAt }) : tr('me.backup.never')}
+                      </Text>
+                    </View>
+                  </View>
+                  <View style={styles.accountLinks}>
+                    <Pressable onPress={onSignOut} disabled={!!authBusy} hitSlop={8} accessibilityRole="button">
+                      <Text style={styles.restoreText}>{tr('me.signOut')}</Text>
+                    </Pressable>
+                    <Pressable onPress={onDeleteAccount} disabled={!!authBusy} hitSlop={8} accessibilityRole="button">
+                      <Text style={[styles.restoreText, { color: t.danger }]}>{tr('me.deleteAccount')}</Text>
+                    </Pressable>
+                  </View>
+                </>
+              ) : (
+                <>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                    <MaterialCommunityIcons name={'cloud-upload-outline' as any} size={22} color={t.accent} />
+                    <View style={{ flex: 1 }}>
+                      <Text style={styles.fullStatus}>{tr('me.backup.offTitle')}</Text>
+                      <Text style={styles.trialSub}>{tr('me.backup.off')}</Text>
+                    </View>
+                  </View>
+                  <SignInButtons />
+                </>
+              )}
+              {authBusy && <ActivityIndicator color={t.accent} style={{ marginTop: 12 }} />}
+            </View>
+          </>
+        )}
+
         {/* Try mode (src/trial.ts): a check-in without travelling, for newcomers and App Review */}
         <View style={[styles.fullCard, styles.trialCard, trying && styles.trialCardOn]}>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
@@ -294,6 +326,18 @@ export default function MeScreen() {
                 </Text>
               </View>
               {!full && (
+                <View style={styles.tiers}>
+                  <View style={styles.tierRow}>
+                    <Text style={styles.tierName}>{tr('me.tier.free')}</Text>
+                    <Text style={styles.tierBody}>{tr('me.tier.freeBody', { limit: FREE_LIMIT })}</Text>
+                  </View>
+                  <View style={styles.tierRow}>
+                    <Text style={[styles.tierName, { color: t.accent }]}>{tr('me.tier.full')}</Text>
+                    <Text style={styles.tierBody}>{tr('me.tier.fullBody', { total: SPOTS.length })}</Text>
+                  </View>
+                </View>
+              )}
+              {!full && (
                 <Pressable style={styles.fullBtn} onPress={() => router.push('/paywall')} accessibilityRole="button">
                   <Text style={styles.fullBtnText}>{tr('me.fullSee')}</Text>
                 </Pressable>
@@ -332,73 +376,9 @@ export default function MeScreen() {
           </>
         )}
 
-        {cloudAvailable && (
-          <>
-            <Text style={styles.sectionTitle}>{tr('me.backup')}</Text>
-            <View style={styles.fullCard}>
-              {account && !account.anonymous ? (
-                <>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-                    <MaterialCommunityIcons name={'cloud-check-outline' as any} size={22} color={t.success} />
-                    <View style={{ flex: 1 }}>
-                      <Text style={styles.fullStatus}>
-                        {tr('me.backup.on', { provider: account.provider === 'apple' ? 'Apple' : 'Google' })}
-                      </Text>
-                      {account.email && <Text style={styles.backupMeta}>{account.email}</Text>}
-                      <Text style={styles.backupMeta}>
-                        {syncedAt ? tr('me.backup.synced', { time: syncedAt }) : tr('me.backup.never')}
-                      </Text>
-                    </View>
-                  </View>
-                  <View style={styles.accountLinks}>
-                    <Pressable onPress={onSignOut} disabled={!!authBusy} hitSlop={8} accessibilityRole="button">
-                      <Text style={styles.restoreText}>{tr('me.signOut')}</Text>
-                    </Pressable>
-                    <Pressable onPress={onDeleteAccount} disabled={!!authBusy} hitSlop={8} accessibilityRole="button">
-                      <Text style={[styles.restoreText, { color: t.danger }]}>{tr('me.deleteAccount')}</Text>
-                    </Pressable>
-                  </View>
-                </>
-              ) : (
-                <>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-                    <MaterialCommunityIcons name={'cloud-upload-outline' as any} size={22} color={t.accent} />
-                    <Text style={styles.fullStatus}>{tr('me.backup.off')}</Text>
-                  </View>
-                  {appleReady && (
-                    <AppleAuthentication.AppleAuthenticationButton
-                      buttonType={AppleAuthentication.AppleAuthenticationButtonType.CONTINUE}
-                      buttonStyle={
-                        t.mode === 'dark'
-                          ? AppleAuthentication.AppleAuthenticationButtonStyle.WHITE
-                          : AppleAuthentication.AppleAuthenticationButtonStyle.BLACK
-                      }
-                      cornerRadius={22}
-                      style={styles.appleBtn}
-                      onPress={() => void onSignIn('apple')}
-                    />
-                  )}
-                  {googleAvailable && (
-                    <Pressable
-                      style={styles.googleBtn}
-                      onPress={() => void onSignIn('google')}
-                      disabled={!!authBusy}
-                      accessibilityRole="button"
-                    >
-                      <MaterialCommunityIcons name={'google' as any} size={18} color={t.text} />
-                      <Text style={styles.googleText}>{tr('auth.google')}</Text>
-                    </Pressable>
-                  )}
-                </>
-              )}
-              {authBusy && <ActivityIndicator color={t.accent} style={{ marginTop: 12 }} />}
-            </View>
-          </>
-        )}
-
         {/* Problem reports go to the admin site (app/feedback.tsx), never a public issue tracker */}
         <Pressable
-          style={[styles.fullCard, { flexDirection: 'row', alignItems: 'center', gap: 10 }]}
+          style={[styles.fullCard, styles.feedbackCard]}
           onPress={() => router.push('/feedback')}
           accessibilityRole="button"
         >
@@ -631,6 +611,7 @@ const useStyles = makeStyles((t: Palette) =>
     padding: 18,
   },
   trialCard: { marginTop: 16 },
+  feedbackCard: { flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 16 },
   trialCardOn: { backgroundColor: t.accentSoft, borderColor: t.accent },
   trialSub: { color: t.subtext, fontSize: 12, marginTop: 2, lineHeight: 17 },
   trialEndBtn: { backgroundColor: 'transparent', borderWidth: 1, borderColor: t.accent },
@@ -643,24 +624,14 @@ const useStyles = makeStyles((t: Palette) =>
     marginTop: 14,
   },
   fullBtnText: { color: t.onAccent, fontSize: 15, fontWeight: '700' },
+  tiers: { marginTop: 14, gap: 8 },
+  tierRow: { flexDirection: 'row', gap: 10 },
+  tierName: { color: t.subtext, fontSize: 13, fontWeight: '700', width: 52 },
+  tierBody: { color: t.subtext, fontSize: 13, lineHeight: 19, flex: 1 },
   restoreLink: { alignSelf: 'center', marginTop: 12, padding: 4 },
   restoreText: { color: t.subtext, fontSize: 13, fontWeight: '600', textDecorationLine: 'underline' },
   backupMeta: { color: t.subtext, fontSize: 12, marginTop: 2 },
   accountLinks: { flexDirection: 'row', justifyContent: 'center', gap: 24, marginTop: 14 },
-  appleBtn: { height: 44, marginTop: 14 },
-  googleBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-    height: 44,
-    borderRadius: 22,
-    borderWidth: 1,
-    borderColor: t.cardBorder,
-    backgroundColor: t.bgElevated,
-    marginTop: 10,
-  },
-  googleText: { color: t.text, fontSize: 15, fontWeight: '600' },
   catCount: { color: t.accent, fontSize: 14, fontWeight: '700' },
   sectionTitle: { color: t.faint, fontSize: 12, letterSpacing: 3, marginTop: 30, marginBottom: 12 },
   achRow: {
