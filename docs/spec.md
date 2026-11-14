@@ -86,7 +86,7 @@
 1. 首次開啟：不顯示登入畫面，背景以 Supabase **匿名登入**建立帳號；失敗（離線）就純本機使用，之後再試。
 2. 「我的」頁「備份我的收藏」：**使用 Apple 登入**、**使用 Google 登入**兩個按鈕，把匿名帳號綁定（`linkIdentity`）到該身分。
 3. 新手機登入既有帳號：雲端紀錄與手機上的紀錄合併。
-4. 「我的」頁「登出」與「刪除帳號」。刪除會清掉雲端資料，手機上的收藏保留。
+4. 「我的」頁「登出」與「刪除帳號」。登出會換成空白護照（原本的收在手機上，再登入同一帳號就回來）；刪除會清掉雲端資料，手機上的收藏保留。
 
 ### 5.2 同步規則
 
@@ -132,7 +132,7 @@
 - **綁定不是 `linkIdentity`**。Supabase 的 `linkIdentity` 只走瀏覽器 OAuth，原生拿到的 Apple／Google id token 不能掛到匿名帳號上。所以綁定 = 用 id token 登入另一個（永久）帳號 → 把手機上的收藏和那個帳號的雲端紀錄合併 → 用舊的匿名 session 呼叫 `delete-account` 把匿名帳號刪掉。手機上的收藏永遠是完整的，所以不會掉資料。
 - **Apple 走原生**（`expo-apple-authentication` + `signInWithIdToken`），不是小步腳印的網頁 OAuth：不用 Services ID、不用每 6 個月換一次 secret，Supabase 只要在 Apple provider 的 Client IDs 填 bundle id `com.airnoir.islandia`（已用 Management API 設好）。有帶 nonce（SHA-256 給 Apple、原文給 Supabase）。
 - **Android 不顯示 Apple 登入**（`appleAvailable = Platform.OS === 'ios'`），和小步腳印 2026-09-24 的決定一致。`android.package` 已設為 `com.airnoir.islandia`。
-- 登出用 `scope: 'local'`（不等網路），登出後自動再建一個匿名帳號，收藏留在手機上。
+- 登出用 `scope: 'local'`（不等網路），登出後自動再建一個匿名帳號。登出前先同步，再把護照收到 `shelved[userId]`（含照片），新的匿名帳號從空白護照開始，所以換登別的帳號不會把上一個帳號的收藏併進去（2026-11-14 修正；之前會合併，曾把 39 座灌進新登入的帳號）。再登入同一個帳號時，把收著的護照和這段期間訪客收的合併回來（`mergeLocal`），再跟雲端同步。
 - Expo Go 沒有 Google 原生模組：`src/auth.ts` 用 try/require 載入，載不到就不顯示 Google 按鈕。
 - Supabase 後台設定（匿名登入、Apple provider）是用 Management API `PATCH /v1/projects/{ref}/config/auth` 設的，token 在 `~/.supabase/access-token`；Google provider 等 OAuth client 建好再設（`external_google_enabled`、`external_google_client_id` 填 iOS 與 Web 兩個 id 以逗號分隔、`external_google_skip_nonce_check: true`）。
 - 用的是新的 publishable key（`sb_publishable_…`），不是舊的 anon JWT（Supabase 2026 年底淘汰）。
@@ -253,7 +253,7 @@ Expo Go 模擬器已驗證：啟動即匿名登入並推 130 筆；雲端把一�
 
 - 檔案：`<documentDirectory>/photos/<spotId>/<id>.jpg`（長邊 1920、JPEG 0.85）與 `<id>.t.jpg`（長邊 480，列表用）。都經 expo-image-manipulator 重新編碼，所以不帶原檔的 EXIF／GPS。
 - 紀錄：`CollectionEntry.photos: SpotPhoto[]`（`id`、`file`、`width`、`height`、`takenAt?`、`addedAt`），存在既有的 zustand／AsyncStorage。程式在 `src/photos.ts`、`src/store.ts`。
-- 只存手機，不上雲端（隨 iCloud 整機備份）。`toRow` 不送 photos，`mergeCollections` 合併時保留本機的 photos。登出、刪帳號不影響照片。
+- 只存手機，不上雲端（隨 iCloud 整機備份）。`toRow` 不送 photos，`mergeCollections` 合併時保留本機的 photos。登出時照片跟著護照收起來，再登入同一個帳號就回來；刪帳號不影響照片。
 - 之後若要備份到雲端：Supabase Storage 私人 bucket，路徑 `<user_id>/<spot_id>/<photo_id>.jpg`，RLS 以第一層資料夾 = user id，`delete-account` 連 Storage 一起清；屆時要改隱私政策與 App Privacy 標籤（照片、連結到帳號）。
 
 ### 10.3 權限與隱私

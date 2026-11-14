@@ -5,7 +5,8 @@ import { AppState, Platform } from 'react-native';
 import { markActive } from './activity';
 import { Account, useStore } from './store';
 import { supabase } from './supabase';
-import { syncNow } from './sync';
+import { mergeLocal, syncNow } from './sync';
+import { endTrial } from './trial';
 
 // Sign-in (docs/spec.md §5.1). Every install gets a guest (anonymous) account in
 // the background at first launch. Binding to Apple or Google signs into that
@@ -112,6 +113,13 @@ async function switchAccount(signIn: IdTokenSignIn): Promise<SignInResult> {
     console.warn('[auth] sign-in failed', error?.message);
     return 'failed';
   }
+  // this account's passport from its last sign-out on this phone, with the guest's spots since
+  const shelf = useStore.getState().unshelve(data.session.user.id);
+  if (Object.keys(shelf).length > 0) {
+    const store = useStore.getState();
+    if (store.trial) endTrial();
+    store.setCollections(mergeLocal(shelf, useStore.getState().collections));
+  }
   await syncNow();
   if (before?.user.is_anonymous && before.user.id !== data.session.user.id) void dropGuest(before.access_token);
   return 'done';
@@ -178,9 +186,17 @@ async function forgetGoogle() {
   }
 }
 
-/** Leaves the account; the passport stays on the phone and a new guest account takes over. */
+/**
+ * Leaves the account and starts a new guest account with an empty passport, so the next
+ * account signed in here doesn't take in this one's spots. The passport is backed up first
+ * and also kept on the phone (the shelf), photos included, for when this account comes back.
+ */
 export async function signOut(): Promise<boolean> {
   if (!supabase) return false;
+  const user = (await supabase.auth.getSession()).data.session?.user;
+  if (useStore.getState().trial) endTrial();
+  // best effort: offline, the shelf still has everything
+  if (user && !user.is_anonymous) await syncNow();
   await forgetGoogle();
   // local only: a global sign-out waits on the network and can hang the UI
   const { error } = await supabase.auth.signOut({ scope: 'local' });
@@ -188,7 +204,8 @@ export async function signOut(): Promise<boolean> {
     console.warn('[auth] sign-out failed', error.message);
     return false;
   }
-  useStore.getState().setLastSyncAt(null);
+  if (user && !user.is_anonymous) useStore.getState().shelve(user.id);
+  else useStore.getState().setLastSyncAt(null);
   await ensureSession();
   return true;
 }

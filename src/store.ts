@@ -100,6 +100,16 @@ interface IslandiaState {
   /** Current Supabase user; not persisted, the auth client restores its own session. */
   account: Account | null;
   setAccount: (account: Account | null) => void;
+  /**
+   * Passports of accounts that signed out on this phone, by user id. Signing out hands the
+   * phone a fresh guest passport, so the next account doesn't take in this one's spots;
+   * signing back in brings it back with its photos (src/auth.ts).
+   */
+  shelved: Record<string, Record<string, CollectionEntry>>;
+  /** Moves the passport to the shelf under this user and starts an empty one. */
+  shelve: (userId: string) => void;
+  /** Takes this user's passport off the shelf (empty when there is none). */
+  unshelve: (userId: string) => Record<string, CollectionEntry>;
   /** Last successful cloud sync (ISO), shown on the Me tab. */
   lastSyncAt: string | null;
   setLastSyncAt: (at: string | null) => void;
@@ -148,6 +158,14 @@ export const useStore = create<IslandiaState>()(
       setCollections: (collections) => set({ collections }),
       account: null,
       setAccount: (account) => set({ account }),
+      shelved: {},
+      shelve: (userId) =>
+        set((s) => ({ shelved: { ...s.shelved, [userId]: s.collections }, collections: {}, lastSyncAt: null })),
+      unshelve: (userId) => {
+        const { [userId]: passport = {}, ...rest } = get().shelved;
+        set({ shelved: rest });
+        return passport;
+      },
       lastSyncAt: null,
       setLastSyncAt: (lastSyncAt) => set({ lastSyncAt }),
       devLocation: null,
@@ -221,6 +239,7 @@ export const useStore = create<IslandiaState>()(
       partialize: (s) => ({
         onboarded: s.onboarded,
         collections: s.collections,
+        shelved: s.shelved,
         devLocation: s.devLocation,
         trial: s.trial,
         trialLocation: s.trialLocation,

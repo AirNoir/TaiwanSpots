@@ -1,6 +1,6 @@
 import { AppState } from 'react-native';
 import type { Season, Sky } from './atmosphere';
-import { CollectionEntry, useStore } from './store';
+import { CollectionEntry, PHOTO_LIMIT, useStore } from './store';
 import { supabase } from './supabase';
 
 // Passport backup (docs/spec.md §5.2). The phone keeps the real passport; the
@@ -65,6 +65,32 @@ export function mergeCollections(
       };
     }
   }
+  return renumber(merged);
+}
+
+/**
+ * Two passports on this phone as one: the one an account left behind at sign-out and the
+ * guest's since then. Earliest check-in per spot; photos from both are kept.
+ */
+export function mergeLocal(
+  a: Record<string, CollectionEntry>,
+  b: Record<string, CollectionEntry>,
+): Record<string, CollectionEntry> {
+  const merged: Record<string, CollectionEntry> = { ...a };
+  for (const id in b) {
+    const mine = merged[id];
+    const theirs = b[id];
+    const first = !mine || Date.parse(theirs.checkedInAt) < Date.parse(mine.checkedInAt) ? theirs : mine;
+    const photos = [...(mine?.photos ?? []), ...(theirs.photos ?? [])]
+      .filter((p, i, all) => all.findIndex((q) => q.id === p.id) === i)
+      .slice(0, PHOTO_LIMIT);
+    merged[id] = { ...first, photos: photos.length ? photos : undefined };
+  }
+  return renumber(merged);
+}
+
+/** Collection order follows the dates. */
+function renumber(merged: Record<string, CollectionEntry>): Record<string, CollectionEntry> {
   const sorted = Object.values(merged).sort(
     (a, b) =>
       Date.parse(a.checkedInAt) - Date.parse(b.checkedInAt) || a.order - b.order || a.spotId.localeCompare(b.spotId),
